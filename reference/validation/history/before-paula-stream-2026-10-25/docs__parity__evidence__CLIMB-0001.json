@@ -1,0 +1,14 @@
+{
+  "id": "CLIMB-0001",
+  "date": "2026-10-25",
+  "status": "candidate_code_derived_partial",
+  "full_original_parity": false,
+  "summary": "Bruce net dispatch/contact poses follow frozen code:12800 ready-input cases and866 sequential contact/history steps; room5 grip and horizontal4/6px with no wait corrected.390 controls on two68000 launches. Original USS retained; natural play/full actor/timing parity remain open.",
+  "artifacts": [
+    {
+      "path": "reference/validation/climb-delivery.json",
+      "sha256": "dc96dc86de22f7a90a8917fbe4ec540c6f08d5a3a5d0a832c9a287550503f63c",
+      "size_bytes": 22907
+    }
+  ]
+}

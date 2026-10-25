@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Bruce Lee A500 OCS (512+512)",
+      "type": "amiga",
+      "request": "launch",
+      "preLaunchTask": "amiga: compile",
+      "config": "A500",
+      "chipmem": "512k",
+      "slowmem": "512k",
+      "fastmem": "0",
+      "program": "${workspaceFolder}/amiga/out/bruce_amiga",
+      "kickstart": "${workspaceFolder}/../harrierattackreloaded/.tools/Amiga/Kick/Kickstart1.3.rom",
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

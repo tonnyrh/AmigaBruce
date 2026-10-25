@@ -1,0 +1,91 @@
+{
+  "status": "passed_indexed_source_extraction",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "room_count": 20,
+  "charset_banks": 4,
+  "pixel_scaling": "Each C64 multicolor pair becomes two horizontal pixels; no resampling",
+  "palette": "16 explicit OCS12-bit entries; C64 analog RGB is represented, not certified",
+  "raster_source": "$48EA-$49BA, color pointers$480B, raster pointers$4833; active-display origin51",
+  "images": [
+    {
+      "path": "assets/c64/rooms-v1/room-01.png",
+      "sha256": "01be6d8a9eed7a644ccfb084ad138eed369c1420ab04bc664e4e0d944e79a102"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-02.png",
+      "sha256": "21ef4ea583f0480bd005c1bb563134778c23cb4324d16f83e69cdf97804d981d"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-03.png",
+      "sha256": "0e735072ac53abec263991007b92e5b3f1e9d1019f7d4d915eb30b12d747d83c"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-04.png",
+      "sha256": "415c9cb0dd49655b82ffc12508b1c8abff3861c0b1eab349e059a0834d6e1e8f"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-05.png",
+      "sha256": "ebbbb0da8a03750b9e9750af05d77da6db8dc9c2417735aa2fb545b8eb25ddea"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-06.png",
+      "sha256": "0cf1f14db580c7e473a2ba82a8ac11a62e99aa12c9424e55eaff288e0d0e6344"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-07.png",
+      "sha256": "28581c9c9cbf09433db59773787cdbab108454b4edc66d4f237d4502150adfab"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-08.png",
+      "sha256": "eb2850cb9940834181ddddd19217313349b2cf42532012808896f03a0561a29e"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-09.png",
+      "sha256": "ad7f91a28a70fecc41a51813d35cf870ad296305c7cab4d045a1ca76e36b227f"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-10.png",
+      "sha256": "e4bf8d683a43814a1cd4c08361243542447c20201b88566ffd3f2be83298b5f5"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-11.png",
+      "sha256": "b69c3d6212d4958ca559ce86afcd2ab3d36b79f117b41fdd7854fd35ba30a6ca"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-12.png",
+      "sha256": "7615c2def596b354b1d9d0c90afd1c7dee5bf9a209ccd4ed36fc9a2738cb465b"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-13.png",
+      "sha256": "f4066f78199c4a6aeb90633fca5a5907487f699fcdac91de120c8a9f88d0b917"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-14.png",
+      "sha256": "e46a73ee4652039d047ba2ddb2836173a94fd1e7229792874529c7884a7f7e97"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-15.png",
+      "sha256": "894029612ce37d7b00970bc2d365261410a15e565856b38779d0f6a3ca31ac45"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-16.png",
+      "sha256": "d8fa537a2678c73e650c2064c863c4b1de3a42de170e182597b6acea581177be"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-17.png",
+      "sha256": "a2cd2a36a3d8b6976be9e7fe81418345b71cf191e2d667334c0570cdf58f9bed"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-18.png",
+      "sha256": "bbee15040c0e6eee377490d6fabec6e092b699dad49a285ecae83dc1c5969403"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-19.png",
+      "sha256": "bafb45af2b603bf77c4d37d573fcc3b9ddd085f57668f93c2a1101547e54b24c"
+    },
+    {
+      "path": "assets/c64/rooms-v1/room-20.png",
+      "sha256": "48c70d4b2db426d89a7b210ec143e54c386786fb609c7529a14fb8295d59e934"
+    }
+  ]
+}

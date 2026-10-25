@@ -1,0 +1,97 @@
+{
+  "status": "candidate_trace_derived_provisional",
+  "primary_edition_verified": false,
+  "coordinate_seam": "x=2*C64_$9E-24; y=C64_$A1; sampled direction from previous boundary feeds one core step",
+  "rules": [
+    {
+      "name": "logic_cadence",
+      "value": "three PAL fields; nominal 58968 CPU cycles",
+      "evidence": "MACHINE-0001;MACHINE-0002",
+      "scope": "captured first-room scenarios; native Amiga input phase remains open"
+    },
+    {
+      "name": "ground_walk",
+      "value": "4 pixels per step; 6 after seven moving steps",
+      "evidence": "MACHINE-0001/right",
+      "scope": "ground without wall contact"
+    },
+    {
+      "name": "ground_reversal",
+      "value": "first reverse step retains previous speed; walking phase restarts after it",
+      "evidence": "MACHINE-0001/reverse",
+      "scope": "captured ground reversal"
+    },
+    {
+      "name": "standing_jump",
+      "value": "four zero vertical steps, then -4,-2,-2,-2,-2,+2,+2,+2,+2,+2,+2 pixels",
+      "evidence": "MACHINE-0001/standing-jump;held-jump",
+      "scope": "captured flat-ground spawn, no overhead collision"
+    },
+    {
+      "name": "held_standing_jump",
+      "value": "next windup starts two steps after reaching the floor",
+      "evidence": "MACHINE-0001/held-jump",
+      "scope": "captured continuous up input; full input-edge rules remain open"
+    },
+    {
+      "name": "moving_jump",
+      "value": "no horizontal movement on selection step; thereafter 4 pixels per step in locked direction",
+      "evidence": "MACHINE-0001/moving-jump",
+      "scope": "trajectory before landing only; landing still differs"
+    },
+    {
+      "name": "net_attachment",
+      "value": "central net caught with feet at y186 against visual bottom y164; selection step holds position",
+      "evidence": "MACHINE-0002/central-climb;central-climb-down",
+      "scope": "one central X position; full attachment bounds not certified"
+    },
+    {
+      "name": "net_action_interval",
+      "value": "three waiting steps between movement actions",
+      "evidence": "MACHINE-0002/central-climb;central-climb-down",
+      "scope": "captured vertical climb"
+    },
+    {
+      "name": "net_vertical_speed",
+      "value": "3 pixels per action; 4 after seven actions; reversal restarts action phase",
+      "evidence": "MACHINE-0002/central-climb;central-climb-down",
+      "scope": "captured up/down action sequence; top exit not certified"
+    },
+    {
+      "name": "net_detach_fall",
+      "value": "first downward displacement 1 pixel, then 2 per step",
+      "evidence": "MACHINE-0002/central-climb-down",
+      "scope": "captured release below the net, not every ledge"
+    },
+    {
+      "name": "room_geometry",
+      "value": "approximate authored rectangles from observed R01; only central blue region treated as climbable",
+      "evidence": "CANDIDATE-0001;MACHINE-0001;MACHINE-0002",
+      "scope": "blockout, not extracted pixel collision masks"
+    },
+    {
+      "name": "left_boundary",
+      "value": "logical x4 reached before wall reaction",
+      "evidence": "MACHINE-0001/left",
+      "scope": "current core clamps; original recoil is not implemented"
+    },
+    {
+      "name": "net_top_exit_and_held_jump",
+      "value": "visual net starts y104; standing surface y101; retain three waiting steps at exit, then repeated jumps while up held",
+      "evidence": "MACHINE-0003/central-top-held",
+      "scope": "all181 captured positions match; release/repress input-phase difference remains open"
+    },
+    {
+      "name": "upper_right_surface",
+      "value": "standing height y98; measured x198,y101 launch lands x250,y98 without modified jump curve",
+      "evidence": "MACHINE-0004/upper-jump-early",
+      "scope": "specific ledge crossing; exact edge masks and native input phase remain open"
+    },
+    {
+      "name": "prone_ground",
+      "value": "down selects target posture26; one waiting logic step; no ground movement with down+right; release stands and up starts jump",
+      "evidence": "MACHINE-0004/prone-hold-release;prone-direction;prone-jump",
+      "scope": "logical target posture and X/Y; sprite timing and combat hitboxes remain open"
+    }
+  ]
+}

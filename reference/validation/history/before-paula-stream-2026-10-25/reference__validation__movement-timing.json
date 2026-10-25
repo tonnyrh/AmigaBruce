@@ -1,0 +1,144 @@
+{
+  "status": "movement_duration_comparison",
+  "primary_edition_verified": false,
+  "full_movement_parity": false,
+  "clock_config_sha256": "6dfc85f3dc314ba009d3dfaea4cde99e0a3c7f0a9febb54905c86564c477d86b",
+  "runtime_sha256": "dda5d781f04f25f2f12d9503c82af6281e8a4b7dadd48503fcf9f6172ea998f0",
+  "reference_sources": [
+    {
+      "path": "reference/traces/MACHINE-0001/right.csv",
+      "sha256": "a274eab025c78d697e1552c20d433e46caf6913ac5197a79357b052ffe4c1565"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/summary.json",
+      "sha256": "afcaab6dccf3825250f7d79ae5d415ed67b23d8f12ecb7be4c30f71d1fb89946"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/standing-jump.csv",
+      "sha256": "2cf815bae1b03fe6cf643438bef3173d6ee7225e96571843fe6d521de9b308e2"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/summary.json",
+      "sha256": "afcaab6dccf3825250f7d79ae5d415ed67b23d8f12ecb7be4c30f71d1fb89946"
+    },
+    {
+      "path": "reference/traces/MACHINE-0007/mid-net-left-fall.csv",
+      "sha256": "9ffb1c304b7e3ee4d241cf3e878c623413fdecb9410c85cc3bcf1242e14db5e1"
+    },
+    {
+      "path": "reference/traces/MACHINE-0007/summary.json",
+      "sha256": "f4603bf0c11d410921e77cf9f513ec3440e734271667dfb9c5d61d431d5e782e"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "tools/compare_movement_timing.py",
+      "sha256": "72fd1c54238f2c9fc943b95c0a8c12085812d1f24ff95ab31aa659a1c238f5c4"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "8bc906ea43c98fb058b8c4f1b1ae326fab573924a551aecf600f5c0ea8f6dc32"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "sha256": "3ac538f765aa7bcdeac150dbd8e5ef29b67dfd343a00339d87daa54464cdb8a8"
+    }
+  ],
+  "method": "C64 CPU-history cycles between logical target events; A500 CIA TOD ticks read at equal events; no debugger/host wall time or fitted time shift",
+  "limitations": [
+    "A500 CIA time resolution is one video field",
+    "This is logical movement timing, not measured controller-to-screen latency",
+    "Known collision and moving-jump landing discrepancies remain open"
+  ],
+  "actions": [
+    {
+      "id": "walk",
+      "description": "Gange x32 til x98",
+      "c64_start_tick": 2,
+      "c64_end_tick": 15,
+      "c64_cpu_cycles": 766585,
+      "c64_duration_ms": 778.0629851570366,
+      "amiga_runs": [
+        {
+          "hardware_fields": 39,
+          "pal_lines_per_field": 313,
+          "duration_ms_from_fields": 781.2435947497742,
+          "delta_ms_from_c64": 3.1806095927375964,
+          "timer_resolution_ms": 20.031887044866004,
+          "within_one_field_resolution": true
+        },
+        {
+          "hardware_fields": 39,
+          "pal_lines_per_field": 313,
+          "duration_ms_from_fields": 781.2435947497742,
+          "delta_ms_from_c64": 3.1806095927375964,
+          "timer_resolution_ms": 20.031887044866004,
+          "within_one_field_resolution": true
+        }
+      ]
+    },
+    {
+      "id": "jump",
+      "description": "St\u00e5ende hopp: satsvalg til f\u00f8rste retur til y196",
+      "c64_start_tick": 2,
+      "c64_end_tick": 16,
+      "c64_cpu_cycles": 825556,
+      "c64_duration_ms": 837.916950859073,
+      "amiga_runs": [
+        {
+          "hardware_fields": 42,
+          "pal_lines_per_field": 313,
+          "duration_ms_from_fields": 841.3392558843722,
+          "delta_ms_from_c64": 3.4223050252991243,
+          "timer_resolution_ms": 20.031887044866004,
+          "within_one_field_resolution": true
+        },
+        {
+          "hardware_fields": 42,
+          "pal_lines_per_field": 313,
+          "duration_ms_from_fields": 841.3392558843722,
+          "delta_ms_from_c64": 3.4223050252991243,
+          "timer_resolution_ms": 20.031887044866004,
+          "within_one_field_resolution": true
+        }
+      ]
+    },
+    {
+      "id": "fall",
+      "description": "Fritt fall y138 til y196",
+      "c64_start_tick": 98,
+      "c64_end_tick": 127,
+      "c64_cpu_cycles": 1709956,
+      "c64_duration_ms": 1735.5589658644321,
+      "amiga_runs": [
+        {
+          "hardware_fields": 87,
+          "pal_lines_per_field": 313,
+          "duration_ms_from_fields": 1742.7741729033423,
+          "delta_ms_from_c64": 7.215207038910194,
+          "timer_resolution_ms": 20.031887044866004,
+          "within_one_field_resolution": true
+        },
+        {
+          "hardware_fields": 87,
+          "pal_lines_per_field": 313,
+          "duration_ms_from_fields": 1742.7741729033423,
+          "delta_ms_from_c64": 7.215207038910194,
+          "timer_resolution_ms": 20.031887044866004,
+          "within_one_field_resolution": true
+        }
+      ]
+    }
+  ],
+  "all_within_timer_resolution": true,
+  "clock_rate_models": [
+    {
+      "amiga_pal_lines": 313,
+      "c64_logic_step_ms": 59.85092078339667,
+      "amiga_logic_step_ms": 60.09566113459801,
+      "relative_duration_difference_percent": 0.40891660144557473,
+      "estimated_duration_difference_ms_per_reference_minute": 245.34996086734483
+    }
+  ],
+  "exact_clock_rate_parity": false
+}

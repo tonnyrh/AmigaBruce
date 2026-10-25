@@ -1,0 +1,343 @@
+{
+  "date": "2026-10-25",
+  "status": "verified_scoped_source_contacts_and_room_edges",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "full_c64_game_parity": false,
+  "natural_playthrough": false,
+  "source_object_cases": 29,
+  "pixel_contact_cases": 24860,
+  "bruce_mask_count": 35,
+  "source_rooms": 20,
+  "native_fixture_launches": 2,
+  "native_fixture_failure": 0,
+  "all_source_rooms_rendered_on_native": false,
+  "object_pose_scope": [
+    "idle facing without net",
+    "punch state17",
+    "prone state26"
+  ],
+  "r01_east_min_x": 300,
+  "r02_upper_arrival": [
+    6,
+    98
+  ],
+  "r02_lower_arrival": [
+    8,
+    146
+  ],
+  "native_replay": "6000 fields per launch; original CPU object states injected separately",
+  "realtime_gate_passed": false,
+  "cli_chip_reserve_passed": false,
+  "all_room_native_rerun": false,
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "b4dcc436dee734676a2e707dacc0a8e0b2235d13e2a624e175c0aa2dbf92dc73",
+      "size_bytes": 212864
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "1361db830d87013c7c66a4592521e7ef652f3b542c170fa74ae3fe0a6748b9cd",
+      "size_bytes": 901120
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "86c688652f3bf397721858e5685e4b4f538fac97c929f0d445b561dc8a5cf8ce",
+      "path": "amiga/source_audio.h"
+    },
+    {
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+      "path": "core/source_audio.c"
+    },
+    {
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+      "path": "core/source_audio.h"
+    },
+    {
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e",
+      "path": "core/source_audio_data.h"
+    },
+    {
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
+    },
+    {
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
+    },
+    {
+      "sha256": "e233890b1700200efe0eb3757e3ac1a95f221a2007c2218784099b1a9ba61275",
+      "path": "tools/build_c64_audio.py"
+    },
+    {
+      "sha256": "2d60ad95acc412288a4e3f005573379b643d7fec453fdf331b9d5e318874ff4f",
+      "path": "assets/audio/c64-equivalent-v1/manifest.json"
+    },
+    {
+      "sha256": "fc1020350cc4c0106f05b463928fbc2e8067bf5dbcb2cf546506c5328cd9c89b",
+      "path": "assets/audio/c64-equivalent-v1/waveforms.pcm"
+    },
+    {
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027",
+      "path": "amiga/intro_audio.h"
+    },
+    {
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b",
+      "path": "amiga/intro_audio_data.h"
+    },
+    {
+      "sha256": "4f82259133a4d75dbd9dcb8dd7a1cab5fc8028c822c58a3f528e27d3dfe92e00",
+      "path": "tools/build_intro_audio.py"
+    },
+    {
+      "sha256": "1360629bc7b7a2fc884ece4c9e2294524583427aa1256aa7ecb008bce154a0c5",
+      "path": "tools/verify_intro_audio.py"
+    },
+    {
+      "sha256": "7c07beb139d0fefb6656f45d6be3b343a4b72bb835665bc682c1518f1c9765af",
+      "path": "assets/audio/intro-v1/manifest.json"
+    },
+    {
+      "sha256": "c7e1678bba5ef6245b38f00aaee9bbaf00add7e900a45633935a8afddd3df845",
+      "path": "assets/audio/intro-v1/generation.json"
+    },
+    {
+      "sha256": "e8eaa692c067dc62fd1ed4621d776ebf03878d54f36779eceb782aca2ec4c930",
+      "path": "assets/audio/intro-v1/kiai-source_0.wav"
+    },
+    {
+      "sha256": "163f224b2a7149be20473045b728cafdd9523594f66715ee315abc3f20fa5a40",
+      "path": "amiga/main.c"
+    },
+    {
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f",
+      "path": "amiga/fighter_art_data.h"
+    },
+    {
+      "sha256": "4e534017bb7b769ae5f8d6f96f2064582f965b8b8f3d9aa884767c55cc3367b2",
+      "path": "amiga/fighter_dma_data.h"
+    },
+    {
+      "sha256": "8282019910f73e054f395b88cdf350fd8398afa778c0dc1f5146a254786d4d44",
+      "path": "tools/build_fighter_dma.py"
+    },
+    {
+      "sha256": "d2b8f39a6aa42266fb0335b8fa9b448b2599aa1a3dcc2047a866591cca272d75",
+      "path": "assets/graphics/v2/fighter-dma-manifest.json"
+    },
+    {
+      "sha256": "453db965e35960f4c11dd0fd0d10bc7e307f21043f88a97cc96806abbcbbe30a",
+      "path": "tools/build_fighter_art.py"
+    },
+    {
+      "sha256": "6fd38603173a9146dfb0001b8588f60d7bd14ee20f3976e53734563abc1ba8c5",
+      "path": "assets/graphics/v2/bruce-source.png"
+    },
+    {
+      "sha256": "cee9876cc5247150ecd0af19bc9d53b2902789182783e9f6932e5b595dd50be5",
+      "path": "assets/graphics/v2/ninja-source.png"
+    },
+    {
+      "sha256": "a6f8bf31c506037bf5abce0d2eaa73dcfcbdba011335846c859153dfc111ae0f",
+      "path": "assets/graphics/v2/yamo-green-source-v3.png"
+    },
+    {
+      "sha256": "c18bbfae24a1ef32946d04e4a905378dfa53ff87d65b9c5b2fb9c2612a8e2745",
+      "path": "assets/graphics/v2/yamo-green-v3-generation.json"
+    },
+    {
+      "sha256": "f35d89387d3b5c5ff1138b7e5af28b152a7ecb06d6b5b0e9e6aa0b25b7ea8e5b",
+      "path": "assets/graphics/v2/generation.json"
+    },
+    {
+      "sha256": "36c7587cb7add4e056fcbd149a3f46b075ae73b9499b3cddce77ec08d87a092a",
+      "path": "assets/graphics/v1/mountains-indexed.png"
+    },
+    {
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d",
+      "path": "amiga/room_background_data.h"
+    },
+    {
+      "sha256": "7e80968319342af8eb5e11edf70eba45934400a2ef132c7e77150f282f61e771",
+      "path": "tools/build_room_backgrounds.py"
+    },
+    {
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751",
+      "path": "amiga/runtime.c"
+    },
+    {
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291",
+      "path": "amiga/start.s"
+    },
+    {
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28",
+      "path": "tests/contact_fixture.h"
+    },
+    {
+      "sha256": "f892fa8332934dcbb62342a6650f06a5b5a08b9d1c616381de36a92a4b13af72",
+      "path": "core/game.c"
+    },
+    {
+      "sha256": "92fd500b9ef7828c40b60847b2b842204c9dbe8fc5854e438a021cc5f46242f8",
+      "path": "core/game.h"
+    },
+    {
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404",
+      "path": "core/presentation.c"
+    },
+    {
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445",
+      "path": "core/presentation.h"
+    },
+    {
+      "sha256": "2390a242feb1638288149e3610ed034d42254296da2c5d4d4200f8a68e1b4e10",
+      "path": "core/combat.c"
+    },
+    {
+      "sha256": "1001f3fcd4b5c4da12cd9cbc3d8be47d12dd823a191ea43a64e68ca5cad532ea",
+      "path": "core/combat.h"
+    },
+    {
+      "sha256": "d1fe1721368f1541f48fdc4a056f481a9130a1d4daccc918358a4c66a45042e7",
+      "path": "core/rooms.c"
+    },
+    {
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "path": "core/rooms.h"
+    },
+    {
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "path": "core/room_data.h"
+    },
+    {
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059",
+      "path": "core/room_geometry.h"
+    },
+    {
+      "sha256": "58195b68a16e923897ba3798f0c49370165108d46136d14ab9fa692abdd3288a",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "d6652793b4a40de55278acb2a20f49dd952f35a7e5799d259732f7543d532fa4",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "d850f8cd6c6f948d1f96b348a6ec4fb9b5f399e249ba85da653864b572a23e9a",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "6524df82e671b07effb8ec6b5fa8bfef4633d3178711905bcdeb73e35324cdb6",
+      "path": "tools/build_c64_rooms.py"
+    },
+    {
+      "sha256": "a5f598461d0bb1776bcee9d415b64fc84006a75da44f3e817cfcfa28294e56af",
+      "path": "assets/c64/rooms-v1/manifest.json"
+    },
+    {
+      "sha256": "b373e036b51f383eaba2e312a9e6d6018cd768021d2589eafce45840a34235dd",
+      "path": "tests/room_fixture.h"
+    },
+    {
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b",
+      "path": "tests/gate_fixture.h"
+    },
+    {
+      "sha256": "8d1cf629b908a4a576c06a31a2aea30db5015ba5c8ef6251fff5c3fe8ef79e5a",
+      "path": "test-amiga.ps1"
+    },
+    {
+      "sha256": "f20ef446e660ac545754f400977f1766269419615dfa0c13c72ff3a6b65f3e5e",
+      "path": "amiga-build.ps1"
+    },
+    {
+      "sha256": "619829f98516fd7090eb1ee73d6da28b12e2759fc58388fd51ea36031a96f298",
+      "path": "amiga-run.ps1"
+    },
+    {
+      "sha256": "5eee92bd8b71f3d091fa9ede5f40673a6242427df2ddeb256c2916ee455c7c25",
+      "path": "tools/preview_planar.py"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "reference/analysis/contact-audit-2026-10-25/report.json",
+      "sha256": "5b09e7466c9d33dcc95981fbccbcb6bebfa60f633038669f9ef568713821ded4"
+    },
+    {
+      "path": "reference/analysis/contact-audit-2026-10-25/source-disassembly.txt",
+      "sha256": "e67f07e93d03c55208611e0dddcdec9504dbe7d686ae6d37a71c286b48c6b6e0"
+    },
+    {
+      "path": "reference/validation/c64-room-runtime.json",
+      "sha256": "ea1ee7392a819787304ac1bb3d7c7291d611cdb97261c02096ecd1300f6ff509"
+    },
+    {
+      "path": "reference/validation/c64-core.json",
+      "sha256": "0e45a8d6e514d0744962afb47a3070ea920974a32b14ffd48efb7e962c5f2854"
+    },
+    {
+      "path": "reference/validation/source-audio-delivery.json",
+      "sha256": "efd663f3118991d12ee96415ebd8cc861a19e3a373948084d4a70391cace566f"
+    },
+    {
+      "path": "tools/verify_c64_contacts.py",
+      "sha256": "857282ac044e9f4f4ef83d2e36f50a744250003caae1170f240c8ae37274439e"
+    },
+    {
+      "path": "tests/contact_fixture.h",
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28"
+    },
+    {
+      "path": "tests/contact_bridge.c",
+      "sha256": "8d0271902971be7117dac14c181ac618fab8006e69d086a804a8f4ef288f5ba9"
+    },
+    {
+      "path": "docs/C64_CONTACTS.md",
+      "sha256": "f31c21fa668fcf020be184b45155d3d3213fa6a91c072fab64e6199cc67ebfef"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "eefb4f6c2028cba3d114265beaa18da4313b787111523da60a90fb49906cd759"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "sha256": "0bf00b4f92966e5a2c5e76d772e2dc47051dd7c9fa3bdd3e9616c9ef06dbd245"
+    },
+    {
+      "path": "docs/TEST_AUDIT_2026-10-25.md",
+      "sha256": "8459a292317f269210ba27efe421a0524050f9d87c89e7c0c89c3c6fc6d644cc"
+    },
+    {
+      "path": "docs/parity/evidence/ROOM-RUNTIME-0001.json",
+      "sha256": "18ef681eb595e63de1e1e1406e11807dd2bd5b2797d85b422b8758882f08716c"
+    },
+    {
+      "path": "docs/parity/evidence/TEST-AUDIT-0001.json",
+      "sha256": "17b7299a206a38b04c1848a9cd556610b2c576f1dbd2c7e548659f5dc12b20e3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f04d6792dbd2b64b77f35964acbf18f33b5ebf484f6c3e5f1bfe968be5687497"
+    },
+    {
+      "path": "tools/verify_contact_delivery.py",
+      "sha256": "515b806d219468363aad2f9b7f1c175018fc4d67c14053203609ac617e428f50"
+    },
+    {
+      "path": "tools/verify_c64_candidate.py",
+      "sha256": "a9431ccc40041daba529a4cc7a1a6504fc56f3f9fb21008b765061092f68ea4a"
+    }
+  ],
+  "limitations": [
+    "Walk/jump/climb/reaction pose timing remains on existing adapter",
+    "Support/landing motor and full source movement history remain open",
+    "Perceived exit presentation not measured in natural play",
+    "Strict A500 timing/Chip reserve reported independently"
+  ]
+}

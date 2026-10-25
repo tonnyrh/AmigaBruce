@@ -1,0 +1,2 @@
+# Evidence manifests hash exact file bytes, including original line endings.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

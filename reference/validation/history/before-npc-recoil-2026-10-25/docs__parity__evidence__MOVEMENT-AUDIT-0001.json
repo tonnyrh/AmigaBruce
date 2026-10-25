@@ -1,0 +1,14 @@
+{
+  "id": "MOVEMENT-AUDIT-0001",
+  "date": "2026-10-25",
+  "status": "candidate_code_derived_partial",
+  "full_original_parity": false,
+  "summary": "Source black-contact/history kernel, kick phases/masks, open jump/fall phases and Bruce helper bounds corrected.500 actual6502 history fixtures,480 pixel/kick fixtures over20rooms,54 sequential jump steps;70 small fixtures pass on two68000 launches. Full actor/history bridge, landing, combat and strict A500 gates remain open.",
+  "artifacts": [
+    {
+      "path": "reference/validation/movement-delivery.json",
+      "sha256": "6958eaced355a75a204c563ec818db32898be464268ba860fe91cdb1d2d4a77f",
+      "size_bytes": 24853
+    }
+  ]
+}

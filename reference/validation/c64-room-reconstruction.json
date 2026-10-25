@@ -1,0 +1,903 @@
+{
+  "date": "2026-10-24",
+  "status": "passed_static_loader_and_pixel_contact_reconstruction",
+  "primary_edition_verified": false,
+  "native_hardware_emulated": false,
+  "amiga_runtime_changed": false,
+  "full_room_parity": false,
+  "room_count": 20,
+  "loader_comparisons": 20,
+  "uniform_contact_checks": 20,
+  "pose_contact_checks": 3000,
+  "used_static_tile_count": 276,
+  "tile_catalog": {
+    "path": "reference/validation/room-tile-catalog.json",
+    "sha256": "2040ae9a0a260e5a715fa01d0dc7c4e9df3fc83d25eb2b6fe893c838fe83966e"
+  },
+  "uniform_contact_probes": [
+    {
+      "color": 8,
+      "pixel_code": 0,
+      "flags": 0,
+      "body_flags": 0
+    },
+    {
+      "color": 8,
+      "pixel_code": 1,
+      "flags": 1,
+      "body_flags": 1
+    },
+    {
+      "color": 8,
+      "pixel_code": 2,
+      "flags": 2,
+      "body_flags": 2
+    },
+    {
+      "color": 8,
+      "pixel_code": 3,
+      "flags": 8,
+      "body_flags": 8
+    },
+    {
+      "color": 14,
+      "pixel_code": 0,
+      "flags": 0,
+      "body_flags": 0
+    },
+    {
+      "color": 14,
+      "pixel_code": 1,
+      "flags": 1,
+      "body_flags": 1
+    },
+    {
+      "color": 14,
+      "pixel_code": 2,
+      "flags": 2,
+      "body_flags": 2
+    },
+    {
+      "color": 14,
+      "pixel_code": 3,
+      "flags": 4,
+      "body_flags": 4
+    },
+    {
+      "color": 12,
+      "pixel_code": 0,
+      "flags": 0,
+      "body_flags": 0
+    },
+    {
+      "color": 12,
+      "pixel_code": 1,
+      "flags": 1,
+      "body_flags": 1
+    },
+    {
+      "color": 12,
+      "pixel_code": 2,
+      "flags": 2,
+      "body_flags": 2
+    },
+    {
+      "color": 12,
+      "pixel_code": 3,
+      "flags": 4,
+      "body_flags": 4
+    },
+    {
+      "color": 9,
+      "pixel_code": 0,
+      "flags": 0,
+      "body_flags": 0
+    },
+    {
+      "color": 9,
+      "pixel_code": 1,
+      "flags": 1,
+      "body_flags": 1
+    },
+    {
+      "color": 9,
+      "pixel_code": 2,
+      "flags": 2,
+      "body_flags": 2
+    },
+    {
+      "color": 9,
+      "pixel_code": 3,
+      "flags": 4,
+      "body_flags": 4
+    },
+    {
+      "color": 15,
+      "pixel_code": 0,
+      "flags": 0,
+      "body_flags": 0
+    },
+    {
+      "color": 15,
+      "pixel_code": 1,
+      "flags": 1,
+      "body_flags": 1
+    },
+    {
+      "color": 15,
+      "pixel_code": 2,
+      "flags": 2,
+      "body_flags": 2
+    },
+    {
+      "color": 15,
+      "pixel_code": 3,
+      "flags": 4,
+      "body_flags": 4
+    }
+  ],
+  "rooms": [
+    {
+      "room": 1,
+      "charset": "0xa000",
+      "default_color": 14,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 16350,
+      "semantic_pixel_counts": {
+        "0": 44364,
+        "1": 4856,
+        "2": 10592,
+        "4": 852,
+        "8": 3336
+      },
+      "black_attribute_cells": 218,
+      "trigger_cell_counts": {
+        "door5: $2E89 dispatch / $30D4 conditions": 1,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 6,
+        "door2: $2E89 dispatch / $30D4 conditions": 1,
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 6,
+      "current_net_rectangles": 1,
+      "current_claimed_surface_pixels": 792,
+      "current_surface_pixels_without_class1_or8_within2px": 40,
+      "current_net_rectangle_area": 1440,
+      "current_net_rect_pixels_without_class4": 720,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x3642",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "bc744b3cee05d3651c109245f73f61c5a344bd58b69835af1a7bbeafb714f707"
+    },
+    {
+      "room": 2,
+      "charset": "0xa000",
+      "default_color": 14,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 16841,
+      "semantic_pixel_counts": {
+        "0": 40412,
+        "1": 5080,
+        "2": 13972,
+        "4": 344,
+        "8": 4192
+      },
+      "black_attribute_cells": 259,
+      "trigger_cell_counts": {
+        "door4: $2E89 dispatch / $30D4 conditions": 1,
+        "door5: $2E89 dispatch / $30D4 conditions": 1,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 6,
+        "door2: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 8,
+      "current_net_rectangles": 1,
+      "current_claimed_surface_pixels": 800,
+      "current_surface_pixels_without_class1_or8_within2px": 16,
+      "current_net_rectangle_area": 512,
+      "current_net_rect_pixels_without_class4": 360,
+      "init_entry": "0x33f6",
+      "loop_entry": "0x3679",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "215fc7b3ec8ba75d07b296fecd2f999d98e8219d951f561a09da888cf102e594"
+    },
+    {
+      "room": 3,
+      "charset": "0xa000",
+      "default_color": 14,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 17147,
+      "semantic_pixel_counts": {
+        "0": 39608,
+        "1": 5228,
+        "2": 14000,
+        "4": 832,
+        "8": 4332
+      },
+      "black_attribute_cells": 268,
+      "trigger_cell_counts": {
+        "door4: $2E89 dispatch / $30D4 conditions": 1,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 10
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 38,
+      "current_net_rectangles": 1,
+      "current_claimed_surface_pixels": 1016,
+      "current_surface_pixels_without_class1_or8_within2px": 68,
+      "current_net_rectangle_area": 1536,
+      "current_net_rect_pixels_without_class4": 784,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x36a6",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "99d6f7b14d43c19c6d50b09fa913eee42edd8f0caa6671e74e2c961e5e53b4fd"
+    },
+    {
+      "room": 4,
+      "charset": "0xa000",
+      "default_color": 14,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 16138,
+      "semantic_pixel_counts": {
+        "0": 40868,
+        "1": 3444,
+        "2": 15120,
+        "4": 1152,
+        "8": 3416
+      },
+      "black_attribute_cells": 134,
+      "trigger_cell_counts": {
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 2,
+        "door4: $2E89 dispatch / $30D4 conditions": 1,
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 14
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 23,
+      "current_net_rectangles": 2,
+      "current_claimed_surface_pixels": 392,
+      "current_surface_pixels_without_class1_or8_within2px": 0,
+      "current_net_rectangle_area": 2048,
+      "current_net_rect_pixels_without_class4": 1024,
+      "init_entry": "0x33fc",
+      "loop_entry": "0x3702",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "85193d9064839100a56fab1d2d19530c7b3fa9c27ee19e7db2283096e7ab8997"
+    },
+    {
+      "room": 5,
+      "charset": "0xa000",
+      "default_color": 12,
+      "cells": 440,
+      "tail_cells": 2,
+      "loader_instructions": 17167,
+      "semantic_pixel_counts": {
+        "0": 42924,
+        "1": 2720,
+        "2": 3488,
+        "4": 4656,
+        "8": 10212
+      },
+      "black_attribute_cells": 250,
+      "trigger_cell_counts": {
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 12,
+        "conditional actor state$17 on flag4, $310C; not generic net ID": 20,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 2,
+        "door2: $2E89 dispatch / $30D4 conditions": 1,
+        "door3: $2E89 dispatch / $30D4 conditions": 4
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 27,
+      "current_net_rectangles": 3,
+      "current_claimed_surface_pixels": 608,
+      "current_surface_pixels_without_class1_or8_within2px": 0,
+      "current_net_rectangle_area": 8704,
+      "current_net_rect_pixels_without_class4": 4048,
+      "init_entry": "0x3402",
+      "loop_entry": "0x3760",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "f212b946e03696a94f59bbd2e297f696e1b1269d2ef27a0e6efe29d20eaab5e5"
+    },
+    {
+      "room": 6,
+      "charset": "0xa000",
+      "default_color": 12,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 16387,
+      "semantic_pixel_counts": {
+        "0": 44380,
+        "1": 7064,
+        "2": 4916,
+        "4": 1920,
+        "8": 5720
+      },
+      "black_attribute_cells": 180,
+      "trigger_cell_counts": {
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 3,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 10,
+        "conditional actor state$17 on flag4, $310C; not generic net ID": 10,
+        "door3: $2E89 dispatch / $30D4 conditions": 1,
+        "door4: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 41,
+      "current_net_rectangles": 1,
+      "current_claimed_surface_pixels": 536,
+      "current_surface_pixels_without_class1_or8_within2px": 0,
+      "current_net_rectangle_area": 3792,
+      "current_net_rect_pixels_without_class4": 1900,
+      "init_entry": "0x3428",
+      "loop_entry": "0x38ab",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "176b07dbeb404ddc0c98b1c73a25ac14552870f08b6ebe6dcd5817db66958a0f"
+    },
+    {
+      "room": 7,
+      "charset": "0xa000",
+      "default_color": 12,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 17108,
+      "semantic_pixel_counts": {
+        "0": 42756,
+        "1": 3116,
+        "2": 6832,
+        "4": 3456,
+        "8": 7840
+      },
+      "black_attribute_cells": 260,
+      "trigger_cell_counts": {
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 6,
+        "conditional actor state$17 on flag4, $310C; not generic net ID": 28,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 8,
+        "door2: $2E89 dispatch / $30D4 conditions": 1,
+        "stateful contact/color trigger $306B; not a simple platform": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 22,
+      "current_net_rectangles": 2,
+      "current_claimed_surface_pixels": 1088,
+      "current_surface_pixels_without_class1_or8_within2px": 178,
+      "current_net_rectangle_area": 6080,
+      "current_net_rect_pixels_without_class4": 3240,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x39aa",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "6af678da44e4eb52d560cf644b874e05b51606b30a400d00a90bb8425239b17e"
+    },
+    {
+      "room": 8,
+      "charset": "0xa000",
+      "default_color": 15,
+      "cells": 440,
+      "tail_cells": 2,
+      "loader_instructions": 16991,
+      "semantic_pixel_counts": {
+        "0": 46196,
+        "1": 2776,
+        "2": 4336,
+        "8": 10692
+      },
+      "black_attribute_cells": 323,
+      "trigger_cell_counts": {
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 13,
+        "stateful contact/color trigger $306B; not a simple platform": 5,
+        "door3: $2E89 dispatch / $30D4 conditions": 1,
+        "door4: $2E89 dispatch / $30D4 conditions": 1,
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 31
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 42,
+      "current_net_rectangles": 0,
+      "current_claimed_surface_pixels": 1032,
+      "current_surface_pixels_without_class1_or8_within2px": 12,
+      "current_net_rectangle_area": 0,
+      "current_net_rect_pixels_without_class4": 0,
+      "init_entry": "0x3461",
+      "loop_entry": "0x39c3",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "2eb4f92f0c14257295c233f541f3d2afd37e1dcdc7e02c9a79de5df5f09f1dd1"
+    },
+    {
+      "room": 9,
+      "charset": "0xa000",
+      "default_color": 10,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 16375,
+      "semantic_pixel_counts": {
+        "0": 47572,
+        "1": 2116,
+        "2": 784,
+        "4": 7008,
+        "8": 6520
+      },
+      "black_attribute_cells": 163,
+      "trigger_cell_counts": {
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 16,
+        "conditional actor state$17 on flag4, $310C; not generic net ID": 60,
+        "door2: $2E89 dispatch / $30D4 conditions": 1,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 4,
+        "door3: $2E89 dispatch / $30D4 conditions": 1,
+        "door4: $2E89 dispatch / $30D4 conditions": 1,
+        "door5: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 19,
+      "current_net_rectangles": 7,
+      "current_claimed_surface_pixels": 248,
+      "current_surface_pixels_without_class1_or8_within2px": 0,
+      "current_net_rectangle_area": 23264,
+      "current_net_rect_pixels_without_class4": 16408,
+      "init_entry": "0x3478",
+      "loop_entry": "0x3ad4",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "5441c9f09f7443a195da42dc2899a9ea5b035cff127cd7fbdad44b6a5c094df3"
+    },
+    {
+      "room": 10,
+      "charset": "0xa000",
+      "default_color": 10,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 16407,
+      "semantic_pixel_counts": {
+        "0": 45556,
+        "1": 3800,
+        "2": 924,
+        "4": 6944,
+        "8": 6776
+      },
+      "black_attribute_cells": 175,
+      "trigger_cell_counts": {
+        "conditional actor state$17 on flag4, $310C; not generic net ID": 89,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 5,
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 35,
+        "door2: $2E89 dispatch / $30D4 conditions": 1,
+        "door3: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 19,
+      "current_net_rectangles": 6,
+      "current_claimed_surface_pixels": 432,
+      "current_surface_pixels_without_class1_or8_within2px": 2,
+      "current_net_rectangle_area": 36560,
+      "current_net_rect_pixels_without_class4": 29512,
+      "init_entry": "0x348f",
+      "loop_entry": "0x3bb2",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "17e02cae0793489079143b8e25ef711068055336549fe2446ed87e599ca9e355"
+    },
+    {
+      "room": 11,
+      "charset": "0xa800",
+      "default_color": 9,
+      "cells": 440,
+      "tail_cells": 2,
+      "loader_instructions": 16214,
+      "semantic_pixel_counts": {
+        "0": 43800,
+        "1": 2880,
+        "2": 7564,
+        "4": 2576,
+        "8": 7180
+      },
+      "black_attribute_cells": 126,
+      "trigger_cell_counts": {
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 3,
+        "door3: $2E89 dispatch / $30D4 conditions": 1,
+        "stateful contact/color trigger $306B; not a simple platform": 7,
+        "door2: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 22,
+      "current_net_rectangles": 4,
+      "current_claimed_surface_pixels": 992,
+      "current_surface_pixels_without_class1_or8_within2px": 76,
+      "current_net_rectangle_area": 512,
+      "current_net_rect_pixels_without_class4": 512,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x3c90",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "17d3c1c8d711c7a95ee6bd96fdfb7ab39c2d98a09fe2658358c38ece0adf9040"
+    },
+    {
+      "room": 12,
+      "charset": "0xa800",
+      "default_color": 11,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 15957,
+      "semantic_pixel_counts": {
+        "0": 37820,
+        "1": 1824,
+        "2": 13048,
+        "4": 4608,
+        "8": 6700
+      },
+      "black_attribute_cells": 184,
+      "trigger_cell_counts": {
+        "conditional actor state$17 on flag4, $310C; not generic net ID": 73,
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 47,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 3,
+        "stateful contact/color trigger $306B; not a simple platform": 4,
+        "door3: $2E89 dispatch / $30D4 conditions": 4,
+        "door4: $2E89 dispatch / $30D4 conditions": 4,
+        "door5: $2E89 dispatch / $30D4 conditions": 4,
+        "door2: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 19,
+      "current_net_rectangles": 6,
+      "current_claimed_surface_pixels": 680,
+      "current_surface_pixels_without_class1_or8_within2px": 48,
+      "current_net_rectangle_area": 10272,
+      "current_net_rect_pixels_without_class4": 6000,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x3cc0",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "3f97e8795e72e1ec797788274d804e087a6b6e283768fcfb0612acba392507ab"
+    },
+    {
+      "room": 13,
+      "charset": "0xa800",
+      "default_color": 9,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 16079,
+      "semantic_pixel_counts": {
+        "0": 38768,
+        "1": 3524,
+        "2": 12240,
+        "4": 2240,
+        "8": 7228
+      },
+      "black_attribute_cells": 119,
+      "trigger_cell_counts": {
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 3,
+        "stateful contact/color trigger $306B; not a simple platform": 6,
+        "door3: $2E89 dispatch / $30D4 conditions": 1,
+        "door4: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 23,
+      "current_net_rectangles": 8,
+      "current_claimed_surface_pixels": 832,
+      "current_surface_pixels_without_class1_or8_within2px": 36,
+      "current_net_rectangle_area": 1280,
+      "current_net_rect_pixels_without_class4": 1280,
+      "init_entry": "0x34bd",
+      "loop_entry": "0x3e4c",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "3301902016f5986e8a2c1f60797bd2f36a8914eaba7095b5c815cdfad27f5a06"
+    },
+    {
+      "room": 14,
+      "charset": "0xa800",
+      "default_color": 10,
+      "cells": 440,
+      "tail_cells": 2,
+      "loader_instructions": 15157,
+      "semantic_pixel_counts": {
+        "0": 50840,
+        "1": 4192,
+        "2": 2352,
+        "4": 288,
+        "8": 6328
+      },
+      "black_attribute_cells": 172,
+      "trigger_cell_counts": {
+        "door2: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 10,
+      "current_net_rectangles": 0,
+      "current_claimed_surface_pixels": 1096,
+      "current_surface_pixels_without_class1_or8_within2px": 4,
+      "current_net_rectangle_area": 0,
+      "current_net_rect_pixels_without_class4": 0,
+      "init_entry": "0x34c3",
+      "loop_entry": "0x3e7c",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "6b1aec4c90033f6bd5f4aeb3c7e49ff9225522640788e89fc5edfd71f75c7fe5"
+    },
+    {
+      "room": 15,
+      "charset": "0xa800",
+      "default_color": 9,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 15997,
+      "semantic_pixel_counts": {
+        "0": 41124,
+        "1": 3572,
+        "2": 10488,
+        "4": 2080,
+        "8": 6736
+      },
+      "black_attribute_cells": 118,
+      "trigger_cell_counts": {
+        "door3: $2E89 dispatch / $30D4 conditions": 1,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 4,
+        "stateful contact/color trigger $306B; not a simple platform": 4,
+        "door4: $2E89 dispatch / $30D4 conditions": 1,
+        "door5: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 19,
+      "current_net_rectangles": 3,
+      "current_claimed_surface_pixels": 872,
+      "current_surface_pixels_without_class1_or8_within2px": 34,
+      "current_net_rectangle_area": 640,
+      "current_net_rect_pixels_without_class4": 640,
+      "init_entry": "0x358d",
+      "loop_entry": "0x3ecc",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "413a62beb8e74670c8adaf4031267f96bd992a9d0d43fc86eaedc8a786da95ab"
+    },
+    {
+      "room": 16,
+      "charset": "0xa800",
+      "default_color": 12,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 15051,
+      "semantic_pixel_counts": {
+        "0": 47520,
+        "1": 3088,
+        "2": 8528,
+        "4": 1232,
+        "8": 3632
+      },
+      "black_attribute_cells": 123,
+      "trigger_cell_counts": {
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 6,
+        "door2: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 22,
+      "current_net_rectangles": 0,
+      "current_claimed_surface_pixels": 840,
+      "current_surface_pixels_without_class1_or8_within2px": 96,
+      "current_net_rectangle_area": 0,
+      "current_net_rect_pixels_without_class4": 0,
+      "init_entry": "0x3593",
+      "loop_entry": "0x3ee6",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "1751a1882c269b571b9359d218754f44073ff12f0c77a060c10840e12074ce9a"
+    },
+    {
+      "room": 17,
+      "charset": "0xa800",
+      "default_color": 9,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 15781,
+      "semantic_pixel_counts": {
+        "0": 41248,
+        "1": 2904,
+        "2": 10360,
+        "4": 1792,
+        "8": 7696
+      },
+      "black_attribute_cells": 133,
+      "trigger_cell_counts": {
+        "R17-specific contact: $2EEA/$2FD6": 8,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 2,
+        "stateful contact/color trigger $306B; not a simple platform": 6,
+        "door3: $2E89 dispatch / $30D4 conditions": 1,
+        "door4: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 21,
+      "current_net_rectangles": 0,
+      "current_claimed_surface_pixels": 984,
+      "current_surface_pixels_without_class1_or8_within2px": 46,
+      "current_net_rectangle_area": 0,
+      "current_net_rect_pixels_without_class4": 0,
+      "init_entry": "0x359f",
+      "loop_entry": "0x3f5b",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "7260df9ffdc985955e4b97450efb03b5cd79c21837bd829e56056b27a1a403b1"
+    },
+    {
+      "room": 18,
+      "charset": "0xa800",
+      "default_color": 15,
+      "cells": 440,
+      "tail_cells": 2,
+      "loader_instructions": 15715,
+      "semantic_pixel_counts": {
+        "0": 48900,
+        "1": 3328,
+        "2": 4940,
+        "4": 2112,
+        "8": 4720
+      },
+      "black_attribute_cells": 129,
+      "trigger_cell_counts": {
+        "door3: $2E89 dispatch / $30D4 conditions": 1,
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 18,
+        "door2: $2E89 dispatch / $30D4 conditions": 1,
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 2
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 47,
+      "current_net_rectangles": 0,
+      "current_claimed_surface_pixels": 1168,
+      "current_surface_pixels_without_class1_or8_within2px": 190,
+      "current_net_rectangle_area": 0,
+      "current_net_rect_pixels_without_class4": 0,
+      "init_entry": "0x35c4",
+      "loop_entry": "0x3f71",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "100343dd8a815de6c6468e8ca80ae0cdc19729e9d8e2e482bc38953020b3aebe"
+    },
+    {
+      "room": 19,
+      "charset": "0xb000",
+      "default_color": 14,
+      "cells": 440,
+      "tail_cells": 2,
+      "loader_instructions": 15444,
+      "semantic_pixel_counts": {
+        "0": 38796,
+        "1": 4080,
+        "2": 17228,
+        "4": 2220,
+        "8": 1676
+      },
+      "black_attribute_cells": 63,
+      "trigger_cell_counts": {
+        "lantern: pixel contact flag2 required, $2EB1/$2F04": 7,
+        "door5: $2E89 dispatch / $30D4 conditions": 6,
+        "door4: $2E89 dispatch / $30D4 conditions": 9,
+        "conditional actor state$17 on flag4, $310C; not generic net ID": 1,
+        "door2: $2E89 dispatch / $30D4 conditions": 1
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 18,
+      "current_net_rectangles": 5,
+      "current_claimed_surface_pixels": 352,
+      "current_surface_pixels_without_class1_or8_within2px": 184,
+      "current_net_rectangle_area": 1024,
+      "current_net_rect_pixels_without_class4": 1024,
+      "init_entry": "0x35fa",
+      "loop_entry": "0x3cdc",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "75c8c59d1fc50826b8318ace4488376a53bce7ff1cb2a40be28e245fd7afcad1"
+    },
+    {
+      "room": 20,
+      "charset": "0xa800",
+      "default_color": 15,
+      "cells": 440,
+      "tail_cells": 0,
+      "loader_instructions": 16626,
+      "semantic_pixel_counts": {
+        "0": 29104,
+        "1": 3764,
+        "2": 11776,
+        "4": 1892,
+        "8": 17464
+      },
+      "black_attribute_cells": 178,
+      "trigger_cell_counts": {
+        "hazard dispatch: flag2 required, $2EC1-$2F01/$304B": 10
+      },
+      "cpu_contact_checks": 150,
+      "current_platform_spans": 49,
+      "current_net_rectangles": 7,
+      "current_claimed_surface_pixels": 528,
+      "current_surface_pixels_without_class1_or8_within2px": 64,
+      "current_net_rectangle_area": 3200,
+      "current_net_rect_pixels_without_class4": 3200,
+      "init_entry": "0x425f",
+      "loop_entry": "0x4272",
+      "dynamic_state_reconstructed": false,
+      "editor_packed_stream_identical": true,
+      "tile_stream_sha256": "c20c75c10ec15b4462afe50fb6b5941d54ee9261c99bbbe341f38e60c2e27c2f"
+    }
+  ],
+  "coordinate_system": "C64 active display320x200; tile field begins y24; x actor left, y actor bottom+1; Amiga adds HUD32",
+  "limitations": [
+    "Static room stream and source collision silhouettes only; room init/loop mutations and IRQ raster palette are not reproduced",
+    "Surface proximity and rectangle occupancy are diagnostics, not pass/fail gameplay parity",
+    "Original glyph images and full cell maps stay in ignored .reference; no new game artwork shipped",
+    "Current Amiga motor still uses authored/tile-top blockouts"
+  ],
+  "source_projects": [
+    {
+      "path": ".reference/upstream/bruce",
+      "commit": "25cf80529f91db064692a9cba9a4621b31828fd5"
+    },
+    {
+      "path": ".reference/upstream/bruce-lee",
+      "commit": "b0d8b616bcf18d4bf78b5f5e3ebe3c17d5392030"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "tools/c64_room_model.py",
+      "sha256": "69e3c81f6b425697d8e461f3207fd269356fbf145c49492ebf2a2e6c223f1e61"
+    },
+    {
+      "path": "tools/audit_c64_room_model.py",
+      "sha256": "d0b3ed4cde5592479df85d37c31ad9ab6400d63505a669ea5a95c9f15447008f"
+    },
+    {
+      "path": ".reference/c64/work/untrained-memory.bin",
+      "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+    },
+    {
+      "path": ".reference/upstream/bruce/decompress.go",
+      "sha256": "94dd00939ef84afbc5565550ea1784ee1674c293fc3d8f635110364d15e2d08b"
+    },
+    {
+      "path": ".reference/upstream/bruce/README.md",
+      "sha256": "b7c90ca159adc87845ccc02eae75eca70f4aab5265f8d17791bf932e8bc6c859"
+    },
+    {
+      "path": ".reference/upstream/bruce/brucelee_ida_dis.txt",
+      "sha256": "db8aa5209f1fec388b10e80ed5befda46272fbfd21e6550855bb10d67a7eb76a"
+    },
+    {
+      "path": ".reference/upstream/bruce-lee/README.md",
+      "sha256": "01052adb32f31277bed84390c1d9f91a7d733279156fe00cbb326b28127115e5"
+    },
+    {
+      "path": ".reference/upstream/bruce-lee/src/scenes.ts",
+      "sha256": "463af9c6ca9aa847d48798fa90b190087dac202adebb6cc45a989567c00a4e05"
+    },
+    {
+      "path": ".reference/upstream/bruce-lee/src/sprites/Background.ts",
+      "sha256": "f50e2b198942087cd51829779cc4120e4b8ec493164ff059b8c74500273676ac"
+    },
+    {
+      "path": "tools/build_room_geometry.py",
+      "sha256": "6fdd9e2a0cce671956ecb9b9eea21d6380b2546e2882a3d939e7400365dafe29"
+    },
+    {
+      "path": "tools/build_room_backgrounds.py",
+      "sha256": "7e80968319342af8eb5e11edf70eba45934400a2ef132c7e77150f282f61e771"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "06ea019584dc8217e92ebb3eb669866f2e5eb1880041abba67a317b90b49bf82"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "reference/validation/room-blockouts.json",
+      "sha256": "2b20eeabbdcb1775ed5d1636c5e3134980aaed78b94b052a2eb3a11b653bbc9e"
+    }
+  ],
+  "local_preview": {
+    "path": ".reference/c64/room-reconstruction/comparison.png",
+    "sha256": "01a276723e27af51acf3f44113d8e185331a9548ac3967c2cbb71e29a349b27c"
+  }
+}

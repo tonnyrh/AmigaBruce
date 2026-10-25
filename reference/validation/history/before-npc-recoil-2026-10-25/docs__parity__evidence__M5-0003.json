@@ -1,0 +1,16 @@
+{
+  "id": "M5-0003",
+  "date": "2026-10-24",
+  "status": "green_yamo_hud_candidate_not_complete",
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "summary": "Green-skinned heavier Yamo generated using built-in image_gen; shared16-color OCS palette; named segmented KAGE/YAMO/BRUCE bars; unchanged core rules; five fresh native runs passed.",
+  "artifacts": [
+    {
+      "path": "reference/validation/history/before-bruce-intro-visual-candidate.json",
+      "size_bytes": 17413,
+      "sha256": "f7922f65d07b037aec67f19b531113fcb9b291145359a8818911fb984fcf9d2d"
+    }
+  ],
+  "historical": true
+}

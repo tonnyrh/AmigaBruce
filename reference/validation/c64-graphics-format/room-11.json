@@ -1,0 +1,13 @@
+{
+  "valid": true,
+  "errors": [],
+  "corrections": [],
+  "profile": "playfield",
+  "width": 320,
+  "height": 200,
+  "colors": 16,
+  "transparent_index": null,
+  "input_sha256": "b69c3d6212d4958ca559ce86afcd2ab3d36b79f117b41fdd7854fd35ba30a6ca",
+  "output_sha256": null,
+  "ilbm_sha256": null
+}

@@ -1,0 +1,61 @@
+#ifndef BRUCE_GAME_H
+#define BRUCE_GAME_H
+#include "source_wall.h"
+
+/* All coordinates are screen pixels in the original 320x200 playfield.
+ * Prototype rules remain explicitly provisional until candidate traces pass. */
+typedef signed short BlCoord;
+enum { BL_LEFT=1, BL_RIGHT=2, BL_UP=4, BL_DOWN=8, BL_FIRE=16 };
+enum { BL_GROUND, BL_AIR, BL_CLIMB };
+enum { BL_ATTACK_NONE, BL_PUNCH, BL_FLYING_KICK };
+enum { BL_CONTACT_NONE, BL_CONTACT_PUNCH, BL_CONTACT_KICK, BL_CONTACT_FALL };
+typedef struct { BlCoord x0, x1, y; } BlPlatform;
+typedef struct { BlCoord x0, x1, y0, y1, exit_y; } BlClimbable;
+typedef struct {
+    const BlPlatform *platforms;
+    const BlClimbable *climbables;
+    unsigned short platform_count, climbable_count;
+} BlGeometry;
+typedef struct {
+    BlCoord x, y;              /* Q4 source sprite-left / bottom+1, not centre */
+    BlCoord previous_x, previous_y;
+    BlCoord velocity_y;
+    unsigned short step;
+    unsigned char state, facing, last_input, jump_phase, walk_steps, jump_cooldown;
+    /* jump_phase254 = completed jump/counter0;255 = free-fall state14. */
+    unsigned char climb_wait, climb_steps,climb_state; /* source BF0..4 on net */
+    unsigned char prone, prone_wait;
+    unsigned char attack, attack_phase, attack_recovery;
+    signed char climb_direction;
+    signed char jump_direction;
+    unsigned char room;
+    BlSourceWall wall;
+} BlGame;
+/* Passive combat laboratory only: values are NOT measured enemy rules. */
+typedef struct {
+    BlCoord x,y;
+    unsigned char health,invulnerable,respawn;
+    unsigned short hits;
+    unsigned short stomps;
+} BlTarget;
+
+extern const BlPlatform bl_platforms[];
+extern const unsigned short bl_platform_count;
+extern const BlClimbable bl_climbables[];
+extern const unsigned short bl_climbable_count;
+const BlGeometry *bl_geometry(const BlGame *game);
+void bl_reset(BlGame *game);
+void bl_step(BlGame *game, unsigned char input);
+void bl_step_npc(BlGame *game,unsigned char input);
+/* Separate observed direction and later fire read; ordinary input uses both. */
+void bl_step_phased(BlGame *game, unsigned char input, unsigned char attack_input);
+int bl_x(const BlGame *game);
+int bl_y(const BlGame *game);
+/* Record displacement made by the still separate combat-reaction adapter. */
+void bl_record_recoil(BlGame *game,int pixels);
+void bl_target_reset(BlTarget *target);
+void bl_target_step(BlTarget *target,const BlGame *game);
+int bl_attack_overlaps(const BlGame *game,int x,int feet,int prone);
+int bl_contact_kind(const BlGame *game,int x,int feet,int prone);
+
+#endif

@@ -1,0 +1,17 @@
+{
+  "status": "source_equivalent_paula_audio_verified_scoped",
+  "date": "2026-10-25",
+  "actor_logic_fully_ported": false,
+  "full_m2_parity": false,
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_playthrough_verified": false,
+  "primary_edition_verified": false,
+  "all_room_realtime_gate_passed": false,
+  "all_room_native_rerun_after_actor_changes": false,
+  "artifact": {
+    "path": "reference/validation/source-audio-delivery.json",
+    "sha256": "356fb1e11ee83c5a32ea550846c66228510d9416282960d14800d9f81276f06f",
+    "size_bytes": 19461
+  }
+}

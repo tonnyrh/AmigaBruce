@@ -1,0 +1,131 @@
+{
+  "capture_id": "MACHINE-0005",
+  "status": "candidate_full_machine_replay",
+  "primary_edition_verified": false,
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "profile": "VICE 3.10 x64sc PAL C64 MOS6569R3; sound disabled; IO Simulation on port 1",
+  "input": "active-low joystick lines via VICE IO Simulation device 37, zero-based port 0",
+  "boundary": "$1BCE before keyboard parser; last executed instruction $1BCC",
+  "warmup_idle_steps": 8,
+  "repetitions": 2,
+  "scenarios": [
+    {
+      "name": "fire-tap",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "1a89a1a5252e4e1409b1f41a4faf3531cea1bf38c484b655e3dfa53752666151",
+      "min_step_cycles": 58964,
+      "max_step_cycles": 58972,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "fire-hold",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "67d53e0b9bf236b2576cf9740c82c540731415d4647f3498ad78d448edb8c534",
+      "min_step_cycles": 58964,
+      "max_step_cycles": 58972,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "right-fire",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "c54c28bb8c68283104fe59dfb2756721eeba80b0ebe1a4c30b6261a6a48a4c27",
+      "min_step_cycles": 58850,
+      "max_step_cycles": 59073,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        54
+      ],
+      "y_range": [
+        193,
+        196
+      ]
+    },
+    {
+      "name": "up-fire",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "786d5698a0efd184792e685e1e26a9a0b68567aff72c7bbbe90e6f88a00c69ab",
+      "min_step_cycles": 58958,
+      "max_step_cycles": 58975,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        184,
+        196
+      ]
+    },
+    {
+      "name": "down-fire",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "3d358804ff6a5829792eeac8c614be8681fbaa2c1423607c06da4f8ec6fae4f1",
+      "min_step_cycles": 58958,
+      "max_step_cycles": 58973,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "moving-fire",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "fb63d5587b38da7b0bb0c8b213446ed8a87afd11019cced50f1ea3e90e981862",
+      "min_step_cycles": 58854,
+      "max_step_cycles": 59076,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        58
+      ],
+      "y_range": [
+        193,
+        196
+      ]
+    }
+  ],
+  "recorder_sources": [
+    {
+      "path": "tools/vice_binary.py",
+      "sha256": "91eded222cb7e6d11ddd8e59762ecf028fd7ca490bc915915a4c7714c7366fb4"
+    },
+    {
+      "path": "tools/capture_c64_movement.py",
+      "sha256": "e770d70671f697234ec04531721e8144abfb1bc25b11ae23fc75ef486929a2c8"
+    },
+    {
+      "path": "capture-c64.ps1",
+      "sha256": "69ed4c3397a15dd73f52f0025468dce34cbc68482e5d1fcc36e8c4acd0a7c676"
+    }
+  ],
+  "input_program_sha256": "05c83836e8a5d0a8aa228becfdecbd4688fb4d5ecba6512b75b2cb41b39064b9"
+}

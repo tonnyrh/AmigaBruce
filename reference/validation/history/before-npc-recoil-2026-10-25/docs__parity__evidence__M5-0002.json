@@ -1,0 +1,16 @@
+{
+  "id": "M5-0002",
+  "date": "2026-10-24",
+  "status": "animation_candidate_not_complete",
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "summary": "New AI atlases, four alternating climb phases, run/attack phases and Ninja bamboo staff; current OCS/memory/runtime checks passed.",
+  "artifacts": [
+    {
+      "path": "reference/validation/history/before-green-yamo-visual-candidate.json",
+      "size_bytes": 10992,
+      "sha256": "2a4ec6a4b958fcf94eb7a5cddc17eed04a216efdf862cc3da2bf8d3286c25379"
+    }
+  ],
+  "historical": true
+}

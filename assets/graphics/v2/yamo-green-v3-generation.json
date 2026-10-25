@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-24",
+  "generator": "built-in image_gen",
+  "seed": null,
+  "variant": "yamo-green-v3",
+  "edit_target": "assets/graphics/v2/yamo-source.png",
+  "appearance_reference": ".reference/art/user-yamo-2026-10-24.png",
+  "reference_role": "User-provided green-skinned heavy Yamo appearance and named health HUD; no game rules copied",
+  "prompt": "Use case: precise-object-edit. Edit target: image1, the entire sixteen-pose Yamo animation atlas. Image2 is appearance reference ONLY: the plump GREEN-SKINNED enemy next to the hero on the upper platform. Correct image1 character in ALL16 poses: Yamo must have green SKIN (face, chest, belly, arms, hands, legs and back), a broad heavy sumo build, noticeably round protruding belly, wide chest, thick forearms and thighs, squat neck and round head. Exposed bare chest/belly, short very dark green trunks with black belt, dark shoes. No tan/peach human skin anywhere. Deep green shadows, bright leaf-green skin, small yellow-green highlights, black/navy outlines. Keep matching crisp Amiga pixel-art style with very few flat colors. Preserve EXACT1536x1024 canvas and FOUR columns FOUR rows, same cell spacing, existing camera, ground baselines and pose identities. Keep every pose wholly inside its own cell with transparent margins; do not stretch him taller. Row1 four RUN frames. Row2 four CLIMB frames alternating both sides. Row3 idle guard, punch wind-up, fully extended punch, recovery. Row4 kick preparation, full flying side-kick with exactly two legs, kick recovery, horizontal prone. Increase thickness and belly width rather than height. Truly transparent background everywhere outside character, including holes between limbs. No text, frames, labels, grid lines, scenery, glow or other characters. Do not copy reference scenery or HUD; only green-skinned stocky character identity.",
+  "output": "assets/graphics/v2/yamo-green-source-v3.png"
+}

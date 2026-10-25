@@ -1,0 +1,620 @@
+{
+  "date": "2026-10-25",
+  "status": "passed_original_cpu_vs_native_object_pass",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "cases": [
+    {
+      "case": 1,
+      "room": 1,
+      "x": 296,
+      "y": 98,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 1,
+      "transition": false,
+      "result": [
+        0,
+        296,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 2,
+      "room": 1,
+      "x": 298,
+      "y": 98,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 1,
+      "transition": false,
+      "result": [
+        0,
+        298,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 3,
+      "room": 1,
+      "x": 300,
+      "y": 98,
+      "movement_x": 0,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 1,
+      "transition": false,
+      "result": [
+        0,
+        300,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 4,
+      "room": 1,
+      "x": 300,
+      "y": 98,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 1,
+      "transition": true,
+      "result": [
+        1,
+        6,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 5,
+      "room": 1,
+      "x": 302,
+      "y": 98,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 1,
+      "transition": true,
+      "result": [
+        1,
+        6,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 6,
+      "room": 1,
+      "x": 300,
+      "y": 98,
+      "movement_x": -2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 1,
+      "transition": false,
+      "result": [
+        0,
+        300,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 7,
+      "room": 1,
+      "x": 300,
+      "y": 75,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 2,
+      "transition": false,
+      "result": [
+        0,
+        300,
+        75,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 8,
+      "room": 1,
+      "x": 300,
+      "y": 76,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 0,
+      "transition": true,
+      "result": [
+        1,
+        6,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 9,
+      "room": 1,
+      "x": 300,
+      "y": 107,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 11,
+      "transition": true,
+      "result": [
+        1,
+        6,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 10,
+      "room": 1,
+      "x": 300,
+      "y": 108,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 11,
+      "transition": false,
+      "result": [
+        0,
+        300,
+        108,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    },
+    {
+      "case": 11,
+      "room": 1,
+      "x": 300,
+      "y": 123,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 10,
+      "transition": false,
+      "result": [
+        0,
+        300,
+        123,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    },
+    {
+      "case": 12,
+      "room": 1,
+      "x": 300,
+      "y": 124,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 10,
+      "transition": true,
+      "result": [
+        1,
+        8,
+        146,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    },
+    {
+      "case": 13,
+      "room": 1,
+      "x": 300,
+      "y": 155,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 11,
+      "transition": true,
+      "result": [
+        1,
+        8,
+        146,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 14,
+      "room": 1,
+      "x": 300,
+      "y": 156,
+      "movement_x": 2,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 11,
+      "transition": false,
+      "result": [
+        0,
+        300,
+        156,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    },
+    {
+      "case": 15,
+      "room": 2,
+      "x": 8,
+      "y": 98,
+      "movement_x": -2,
+      "source_state": 0,
+      "facing": 0,
+      "source_pose": 0,
+      "contact": 1,
+      "transition": false,
+      "result": [
+        1,
+        8,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 16,
+      "room": 2,
+      "x": 6,
+      "y": 98,
+      "movement_x": -2,
+      "source_state": 0,
+      "facing": 0,
+      "source_pose": 0,
+      "contact": 1,
+      "transition": true,
+      "result": [
+        0,
+        298,
+        98,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 17,
+      "room": 2,
+      "x": 6,
+      "y": 146,
+      "movement_x": -2,
+      "source_state": 0,
+      "facing": 0,
+      "source_pose": 0,
+      "contact": 3,
+      "transition": true,
+      "result": [
+        0,
+        296,
+        146,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 18,
+      "room": 1,
+      "x": 238,
+      "y": 108,
+      "movement_x": 0,
+      "source_state": 17,
+      "facing": 0,
+      "source_pose": 4,
+      "contact": 2,
+      "transition": false,
+      "result": [
+        0,
+        238,
+        108,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    },
+    {
+      "case": 19,
+      "room": 1,
+      "x": 248,
+      "y": 108,
+      "movement_x": 0,
+      "source_state": 17,
+      "facing": 0,
+      "source_pose": 4,
+      "contact": 0,
+      "transition": false,
+      "result": [
+        0,
+        248,
+        108,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 20,
+      "room": 1,
+      "x": 238,
+      "y": 108,
+      "movement_x": 0,
+      "source_state": 17,
+      "facing": 1,
+      "source_pose": 6,
+      "contact": 3,
+      "transition": false,
+      "result": [
+        0,
+        238,
+        108,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    },
+    {
+      "case": 21,
+      "room": 1,
+      "x": 248,
+      "y": 109,
+      "movement_x": 0,
+      "source_state": 17,
+      "facing": 1,
+      "source_pose": 6,
+      "contact": 9,
+      "transition": false,
+      "result": [
+        0,
+        248,
+        109,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 22,
+      "room": 1,
+      "x": 244,
+      "y": 108,
+      "movement_x": 0,
+      "source_state": 26,
+      "facing": 0,
+      "source_pose": 64,
+      "contact": 8,
+      "transition": false,
+      "result": [
+        0,
+        244,
+        108,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 23,
+      "room": 1,
+      "x": 236,
+      "y": 115,
+      "movement_x": 0,
+      "source_state": 26,
+      "facing": 0,
+      "source_pose": 64,
+      "contact": 10,
+      "transition": false,
+      "result": [
+        0,
+        236,
+        115,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    },
+    {
+      "case": 24,
+      "room": 1,
+      "x": 244,
+      "y": 108,
+      "movement_x": 0,
+      "source_state": 26,
+      "facing": 1,
+      "source_pose": 66,
+      "contact": 8,
+      "transition": false,
+      "result": [
+        0,
+        244,
+        108,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 25,
+      "room": 1,
+      "x": 236,
+      "y": 115,
+      "movement_x": 0,
+      "source_state": 26,
+      "facing": 1,
+      "source_pose": 66,
+      "contact": 10,
+      "transition": false,
+      "result": [
+        0,
+        236,
+        115,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    },
+    {
+      "case": 26,
+      "room": 1,
+      "x": 242,
+      "y": 108,
+      "movement_x": 0,
+      "source_state": 0,
+      "facing": 0,
+      "source_pose": 0,
+      "contact": 11,
+      "transition": false,
+      "result": [
+        0,
+        242,
+        108,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    },
+    {
+      "case": 27,
+      "room": 1,
+      "x": 238,
+      "y": 121,
+      "movement_x": 0,
+      "source_state": 0,
+      "facing": 0,
+      "source_pose": 0,
+      "contact": 8,
+      "transition": false,
+      "result": [
+        0,
+        238,
+        121,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 28,
+      "room": 1,
+      "x": 238,
+      "y": 108,
+      "movement_x": 0,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 9,
+      "transition": false,
+      "result": [
+        0,
+        238,
+        108,
+        0,
+        0
+      ],
+      "sound_requests": []
+    },
+    {
+      "case": 29,
+      "room": 1,
+      "x": 248,
+      "y": 108,
+      "movement_x": 0,
+      "source_state": 0,
+      "facing": 1,
+      "source_pose": 2,
+      "contact": 11,
+      "transition": false,
+      "result": [
+        0,
+        248,
+        108,
+        1,
+        125
+      ],
+      "sound_requests": [
+        142
+      ]
+    }
+  ],
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "source_order": [
+    "$2780 pose",
+    "$5212 pixel contact",
+    "$2E39 objects",
+    "$2F8E transition boundary"
+  ],
+  "limitations": [
+    "Actor states, coordinates and direction latches are injected",
+    "Only constant idle/punch/prone poses integrated in this change",
+    "Walk/jump/climb/reaction pose timing and full movement history remain open"
+  ]
+}

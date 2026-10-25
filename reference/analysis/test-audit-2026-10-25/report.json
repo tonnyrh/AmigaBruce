@@ -1,0 +1,4973 @@
+{
+  "date": "2026-10-25",
+  "status": "passed_controlled_source_cpu_fixtures",
+  "source": {
+    "path": ".reference/c64/work/untrained-memory.bin",
+    "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+  },
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "vic_collision_simulated": false,
+  "amiga_implementation_verified": false,
+  "fixture_count": 61,
+  "fixtures": [
+    {
+      "name": "T03_no_VIC_latch_no_hit",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 0,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          17,
+          0,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 17
+    },
+    {
+      "name": "T03_punch_no_counter_gate_0",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          3,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T03_punch_no_counter_gate_1",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 1,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          3,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T03_punch_no_counter_gate_4",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 4,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          3,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T03_punch_no_counter_gate_20",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 20,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          3,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T03_punch_and_kick_both_register",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 12,
+            "facing": 0,
+            "counter": 9,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          9,
+          133,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          29,
+          17,
+          36
+        ],
+        "state": [
+          19,
+          15,
+          0
+        ],
+        "counter": [
+          12,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          4,
+          0
+        ],
+        "flags": [
+          9,
+          133,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1182
+    },
+    {
+      "name": "T02_attacker_state_5",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 135,
+            "state": 5,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          5,
+          0,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          135,
+          150,
+          40
+        ]
+      },
+      "instructions": 252
+    },
+    {
+      "name": "T02_attacker_state_6",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 135,
+            "state": 6,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          6,
+          0,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          135,
+          150,
+          40
+        ]
+      },
+      "instructions": 252
+    },
+    {
+      "name": "T02_attacker_state_7",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 135,
+            "state": 7,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          7,
+          0,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          135,
+          150,
+          40
+        ]
+      },
+      "instructions": 252
+    },
+    {
+      "name": "T02_attacker_state_14",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 135,
+            "state": 14,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          144,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          15,
+          36
+        ],
+        "state": [
+          14,
+          27,
+          0
+        ],
+        "counter": [
+          0,
+          8,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          144,
+          0
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          135,
+          150,
+          40
+        ]
+      },
+      "instructions": 1063
+    },
+    {
+      "name": "T02_fall_victim_state_12",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 135,
+            "state": 14,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 12,
+            "facing": 0,
+            "counter": 12,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          14,
+          12,
+          0
+        ],
+        "counter": [
+          0,
+          12,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          135,
+          150,
+          40
+        ]
+      },
+      "instructions": 276
+    },
+    {
+      "name": "T02_fall_victim_state_13",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 135,
+            "state": 14,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 13,
+            "facing": 0,
+            "counter": 12,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          14,
+          13,
+          0
+        ],
+        "counter": [
+          0,
+          12,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          135,
+          150,
+          40
+        ]
+      },
+      "instructions": 276
+    },
+    {
+      "name": "T02_fall_victim_state_17",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 135,
+            "state": 14,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 17,
+            "facing": 0,
+            "counter": 12,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          4,
+          1,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          33,
+          20,
+          36
+        ],
+        "state": [
+          15,
+          0,
+          0
+        ],
+        "counter": [
+          4,
+          24,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          0,
+          4,
+          0
+        ],
+        "flags": [
+          4,
+          1,
+          0
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          135,
+          150,
+          40
+        ]
+      },
+      "instructions": 366
+    },
+    {
+      "name": "T02_fall_victim_state_22",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 135,
+            "state": 14,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 22,
+            "facing": 0,
+            "counter": 12,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          144,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          15,
+          36
+        ],
+        "state": [
+          14,
+          27,
+          0
+        ],
+        "counter": [
+          0,
+          8,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          144,
+          0
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          135,
+          150,
+          40
+        ]
+      },
+      "instructions": 1058
+    },
+    {
+      "name": "T02_fall_height_9",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 141,
+            "state": 14,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          14,
+          0,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          141,
+          150,
+          40
+        ]
+      },
+      "instructions": 259
+    },
+    {
+      "name": "T02_fall_height_10",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 140,
+            "state": 14,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          144,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          15,
+          36
+        ],
+        "state": [
+          14,
+          27,
+          0
+        ],
+        "counter": [
+          0,
+          8,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          144,
+          0
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          140,
+          150,
+          40
+        ]
+      },
+      "instructions": 1063
+    },
+    {
+      "name": "T07_sai_counter_0",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 60,
+            "y": 150,
+            "state": 22,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 19,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          2,
+          0,
+          1
+        ],
+        "facing": [
+          0,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          36,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          34,
+          36,
+          36
+        ],
+        "state": [
+          15,
+          0,
+          0
+        ],
+        "counter": [
+          3,
+          0,
+          24
+        ],
+        "facing": [
+          0,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          4
+        ],
+        "flags": [
+          2,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          68,
+          150,
+          60
+        ],
+        "y": [
+          150,
+          40,
+          150
+        ]
+      },
+      "instructions": 330
+    },
+    {
+      "name": "T07_sai_counter_7",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 60,
+            "y": 150,
+            "state": 22,
+            "facing": 1,
+            "counter": 7,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 19,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          2,
+          0,
+          1
+        ],
+        "facing": [
+          0,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          36,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          34,
+          36,
+          36
+        ],
+        "state": [
+          15,
+          0,
+          0
+        ],
+        "counter": [
+          3,
+          0,
+          24
+        ],
+        "facing": [
+          0,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          4
+        ],
+        "flags": [
+          2,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          68,
+          150,
+          60
+        ],
+        "y": [
+          150,
+          40,
+          150
+        ]
+      },
+      "instructions": 330
+    },
+    {
+      "name": "T07_sai_counter_8",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 60,
+            "y": 150,
+            "state": 22,
+            "facing": 1,
+            "counter": 8,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 19,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          36,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          36,
+          36
+        ],
+        "state": [
+          0,
+          0,
+          22
+        ],
+        "counter": [
+          0,
+          0,
+          8
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          68,
+          150,
+          60
+        ],
+        "y": [
+          150,
+          40,
+          150
+        ]
+      },
+      "instructions": 244
+    },
+    {
+      "name": "T07_sai_raw_distance_3",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 63,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 60,
+            "y": 150,
+            "state": 22,
+            "facing": 1,
+            "counter": 7,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 19,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          36,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          36,
+          36
+        ],
+        "state": [
+          0,
+          0,
+          22
+        ],
+        "counter": [
+          0,
+          0,
+          7
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          63,
+          150,
+          60
+        ],
+        "y": [
+          150,
+          40,
+          150
+        ]
+      },
+      "instructions": 266
+    },
+    {
+      "name": "T07_sai_raw_distance_4",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 64,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 60,
+            "y": 150,
+            "state": 22,
+            "facing": 1,
+            "counter": 7,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 19,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          2,
+          0,
+          1
+        ],
+        "facing": [
+          0,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          36,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          34,
+          36,
+          36
+        ],
+        "state": [
+          15,
+          0,
+          0
+        ],
+        "counter": [
+          3,
+          0,
+          24
+        ],
+        "facing": [
+          0,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          4
+        ],
+        "flags": [
+          2,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          64,
+          150,
+          60
+        ],
+        "y": [
+          150,
+          40,
+          150
+        ]
+      },
+      "instructions": 330
+    },
+    {
+      "name": "T07_sai_raw_distance_-4",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 56,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 60,
+            "y": 150,
+            "state": 22,
+            "facing": 1,
+            "counter": 7,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 19,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          36,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          36,
+          36
+        ],
+        "state": [
+          0,
+          0,
+          22
+        ],
+        "counter": [
+          0,
+          0,
+          7
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          56,
+          150,
+          60
+        ],
+        "y": [
+          150,
+          40,
+          150
+        ]
+      },
+      "instructions": 267
+    },
+    {
+      "name": "T11_immune_victim_state_24",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 24,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          17,
+          24,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 224
+    },
+    {
+      "name": "T11_immune_victim_state_26",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 26,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          17,
+          26,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 226
+    },
+    {
+      "name": "T11_immune_victim_state_15",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 15,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          17,
+          15,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 228
+    },
+    {
+      "name": "T11_immune_victim_state_19",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 19,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          17,
+          19,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 230
+    },
+    {
+      "name": "T11_immune_victim_state_25",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 25,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          17,
+          25,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 232
+    },
+    {
+      "name": "T11_immune_victim_state_27",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 27,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          20,
+          36
+        ],
+        "state": [
+          17,
+          27,
+          0
+        ],
+        "counter": [
+          0,
+          0,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          0,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 224
+    },
+    {
+      "name": "T13_punch_initial_health_3",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 3,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          3,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          0,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          3,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T13_punch_initial_health_2",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 2,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          2,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          255,
+          36
+        ],
+        "state": [
+          0,
+          19,
+          0
+        ],
+        "counter": [
+          3,
+          12,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 2580
+    },
+    {
+      "name": "T02_terminal_fall_candidate_anomaly",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 135,
+            "state": 14,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 4,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          0,
+          144,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          4,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          125,
+          36
+        ],
+        "state": [
+          14,
+          27,
+          0
+        ],
+        "counter": [
+          0,
+          8,
+          0
+        ],
+        "facing": [
+          1,
+          1,
+          1
+        ],
+        "wait": [
+          0,
+          0,
+          0
+        ],
+        "flags": [
+          0,
+          144,
+          0
+        ],
+        "allowance": [
+          1,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          135,
+          150,
+          40
+        ]
+      },
+      "instructions": 59563,
+      "anomaly": "Repeated fall subtraction after negative health; needs full-machine/edition investigation"
+    },
+    {
+      "name": "T13_hit_does_not_move_coordinates_in_resolver",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          3,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T03_successful_Bruce_strike_recovery_age_0",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 0,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          3,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T03_successful_Bruce_strike_recovery_age_24",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 24,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          3,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T03_successful_Bruce_strike_recovery_age_25",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 25,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          8,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T03_successful_Bruce_strike_recovery_age_31",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 31,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          8,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1090
+    },
+    {
+      "name": "T03_successful_Bruce_strike_recovery_age_32",
+      "entry": "$29C3",
+      "inputs": {
+        "actors": [
+          {
+            "x": 60,
+            "y": 150,
+            "state": 17,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          },
+          {
+            "x": 68,
+            "y": 150,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 20,
+            "allowance": 2
+          },
+          {
+            "x": 150,
+            "y": 40,
+            "state": 0,
+            "facing": 1,
+            "counter": 0,
+            "health": 36,
+            "allowance": 2
+          }
+        ],
+        "vic_d01e": 15,
+        "actor_mapping": [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "age_0088": 32,
+        "round_0040": 0
+      },
+      "collected": {
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "health_before_apply": [
+          36,
+          20,
+          36
+        ]
+      },
+      "after": {
+        "health": [
+          36,
+          17,
+          36
+        ],
+        "state": [
+          0,
+          15,
+          0
+        ],
+        "counter": [
+          10,
+          4,
+          0
+        ],
+        "facing": [
+          1,
+          0,
+          1
+        ],
+        "wait": [
+          4,
+          0,
+          0
+        ],
+        "flags": [
+          1,
+          132,
+          0
+        ],
+        "allowance": [
+          2,
+          2,
+          2
+        ],
+        "x": [
+          60,
+          68,
+          150
+        ],
+        "y": [
+          150,
+          150,
+          40
+        ]
+      },
+      "instructions": 1088
+    },
+    {
+      "name": "T01_free_fall_input_15",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 14,
+        "counter": 0,
+        "whole_contact": 0,
+        "body_contact": 0,
+        "input": 15,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 152,
+        "state": 14,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 87
+    },
+    {
+      "name": "T01_free_fall_input_11",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 14,
+        "counter": 0,
+        "whole_contact": 0,
+        "body_contact": 0,
+        "input": 11,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 152,
+        "state": 14,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 87
+    },
+    {
+      "name": "T01_free_fall_input_7",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 14,
+        "counter": 0,
+        "whole_contact": 0,
+        "body_contact": 0,
+        "input": 7,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 152,
+        "state": 14,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 87
+    },
+    {
+      "name": "T01_free_fall_input_10",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 14,
+        "counter": 0,
+        "whole_contact": 0,
+        "body_contact": 0,
+        "input": 10,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 152,
+        "state": 14,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 87
+    },
+    {
+      "name": "T01_free_fall_input_6",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 14,
+        "counter": 0,
+        "whole_contact": 0,
+        "body_contact": 0,
+        "input": 6,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 152,
+        "state": 14,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 87
+    },
+    {
+      "name": "T01_first_unsupported_step",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 0,
+        "body_contact": 0,
+        "input": 7,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 151,
+        "state": 14,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 68
+    },
+    {
+      "name": "T06_left_limit_is_checked_before_decrement",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 1,
+        "body_contact": 0,
+        "input": 11,
+        "facing": 1,
+        "x": 13,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 12,
+        "y": 150,
+        "state": 0,
+        "counter": 0,
+        "facing": 0,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 120
+    },
+    {
+      "name": "T06_right_limit_is_checked_before_increment",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 1,
+        "body_contact": 0,
+        "input": 7,
+        "facing": 1,
+        "x": 162,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 163,
+        "y": 150,
+        "state": 0,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 122
+    },
+    {
+      "name": "T09_running_jump_ignores_new_direction_11",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 7,
+        "counter": 9,
+        "whole_contact": 0,
+        "body_contact": 0,
+        "input": 11,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 62,
+        "y": 150,
+        "state": 7,
+        "counter": 8,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 101
+    },
+    {
+      "name": "T09_running_jump_ignores_new_direction_7",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 7,
+        "counter": 9,
+        "whole_contact": 0,
+        "body_contact": 0,
+        "input": 7,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 62,
+        "y": 150,
+        "state": 7,
+        "counter": 8,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 101
+    },
+    {
+      "name": "T09_running_jump_ignores_new_direction_15",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 7,
+        "counter": 9,
+        "whole_contact": 0,
+        "body_contact": 0,
+        "input": 15,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 62,
+        "y": 150,
+        "state": 7,
+        "counter": 8,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 101
+    },
+    {
+      "name": "T10_jump_catches_net_input_15",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 7,
+        "counter": 9,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 15,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 150,
+        "state": 0,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 63
+    },
+    {
+      "name": "T10_jump_catches_net_input_7",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 7,
+        "counter": 9,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 7,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 150,
+        "state": 0,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 63
+    },
+    {
+      "name": "T10_jump_catches_net_input_6",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 7,
+        "counter": 9,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 6,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 150,
+        "state": 0,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 63
+    },
+    {
+      "name": "T10_diagonal_on_net_stops_10",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 10,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 150,
+        "state": 0,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 77
+    },
+    {
+      "name": "T10_diagonal_on_net_stops_6",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 6,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 150,
+        "state": 0,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 79
+    },
+    {
+      "name": "T10_diagonal_on_net_stops_9",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 9,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 150,
+        "state": 0,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 69
+    },
+    {
+      "name": "T10_diagonal_on_net_stops_5",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 5,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 150,
+        "state": 0,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 72
+    },
+    {
+      "name": "T10_single_axis_net_input_14",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 14,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 147,
+        "state": 1,
+        "counter": 0,
+        "facing": 1,
+        "wait": 3,
+        "obstruction_tries": 2
+      },
+      "instructions": 140
+    },
+    {
+      "name": "T10_single_axis_net_input_13",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 13,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 60,
+        "y": 153,
+        "state": 2,
+        "counter": 0,
+        "facing": 1,
+        "wait": 3,
+        "obstruction_tries": 2
+      },
+      "instructions": 127
+    },
+    {
+      "name": "T10_single_axis_net_input_11",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 11,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 58,
+        "y": 150,
+        "state": 3,
+        "counter": 0,
+        "facing": 0,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 121
+    },
+    {
+      "name": "T10_single_axis_net_input_7",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 0,
+        "counter": 0,
+        "whole_contact": 4,
+        "body_contact": 0,
+        "input": 7,
+        "facing": 1,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 62,
+        "y": 150,
+        "state": 4,
+        "counter": 0,
+        "facing": 1,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 123
+    },
+    {
+      "name": "T13_sai_hurt_first_movement",
+      "entry": "$1C5B",
+      "inputs": {
+        "state": 15,
+        "counter": 3,
+        "whole_contact": 1,
+        "body_contact": 0,
+        "input": 15,
+        "facing": 0,
+        "x": 60,
+        "y": 150,
+        "previous": null,
+        "animation": 0
+      },
+      "after": {
+        "x": 62,
+        "y": 150,
+        "state": 15,
+        "counter": 2,
+        "facing": 0,
+        "wait": 0,
+        "obstruction_tries": 2
+      },
+      "instructions": 121
+    },
+    {
+      "name": "T14_new_life_prefix",
+      "entry": "$181B",
+      "stop": "$1838",
+      "inputs": {
+        "game_active": 1,
+        "lives": 2,
+        "health": [
+          255,
+          15,
+          3
+        ],
+        "enemy_timers": [
+          77,
+          88
+        ]
+      },
+      "after": {
+        "lives": 1,
+        "health": [
+          36,
+          36,
+          36
+        ],
+        "enemy_timers": [
+          0,
+          0
+        ]
+      },
+      "instructions": 11,
+      "limitation": "Only death prefix; does not execute the interlude, room reload, multiplayer or Game Over"
+    }
+  ],
+  "disassembly": {
+    "path": "reference/analysis/test-audit-2026-10-25/source-disassembly.txt",
+    "sha256": "7c6282b9ecdc47d3e1481168425375d3aafb3d100d52e4fec1f311f1edf83dc4"
+  },
+  "code_ranges": [
+    {
+      "start": "$10D0",
+      "end_exclusive": "$10E0",
+      "sha256": "cd21805fa7382d107eb877804479e055eca46c140d70a18c9f672f19dbccda82"
+    },
+    {
+      "start": "$15C2",
+      "end_exclusive": "$15CD",
+      "sha256": "e9ff51470621dcc7ec019dd06d6f0bb76be262341bc2868beafc9e4a5cb4240c"
+    },
+    {
+      "start": "$1C5B",
+      "end_exclusive": "$1FC4",
+      "sha256": "6c07cb3eb519a67cdd897598d9f8177013d743e1dc12494d0cd707e91496a250"
+    },
+    {
+      "start": "$2008",
+      "end_exclusive": "$2180",
+      "sha256": "ca40e40ec42d9747823befe29b587b360740284dd78d5ae9aca9b08d7d92cad0"
+    },
+    {
+      "start": "$240E",
+      "end_exclusive": "$24B3",
+      "sha256": "813970caca4753a9000584d8344a6b7e4655cacecba4e1888097728e02a2f865"
+    },
+    {
+      "start": "$2780",
+      "end_exclusive": "$29C3",
+      "sha256": "e2718dccd8468891b7f47d1bf292470c9e7cb8eaf84641a92983c611f1a196e3"
+    },
+    {
+      "start": "$29C3",
+      "end_exclusive": "$2C70",
+      "sha256": "03399d6c4a396766cd2123beaee0854fa94737e17f6d52fd6d4ec7e53e6e368f"
+    },
+    {
+      "start": "$1818",
+      "end_exclusive": "$188E",
+      "sha256": "004f4379649c1c06b0ac0f24fec4b7320d2094432806f688cb2404aea3237412"
+    },
+    {
+      "start": "$179E",
+      "end_exclusive": "$17E2",
+      "sha256": "39518527d74f345e717ae650ea809d9e9288dcfe26734c84bb0cbe4953129521"
+    },
+    {
+      "start": "$1BC2",
+      "end_exclusive": "$1C39",
+      "sha256": "3c8204c3bba522ea3edc5972acac6d63fe14d5f92e44c63b0299b9169914c230"
+    },
+    {
+      "start": "$3A6F",
+      "end_exclusive": "$3A7C",
+      "sha256": "c31a9e7d6b21598f4f5da506f87ae0b973fd1341cd2dcf199720a1a2ca10b903"
+    }
+  ],
+  "limitations": [
+    "VIC latch, actor mapping, state and contact classes are injected inputs",
+    "No full IRQ, input sampling or natural transition sequence is emulated",
+    "Source branches establish conditional rules; fixtures only check their interpretation"
+  ],
+  "source_files": [
+    {
+      "path": "tools/audit_c64_tests.py",
+      "sha256": "c7abac722fca36ad664af3864bf2409429080f8f0606ae14aa14add5d41b006c"
+    }
+  ]
+}

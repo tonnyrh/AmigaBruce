@@ -1,0 +1,96 @@
+{
+  "capture_id": "M4-0002",
+  "date": "2026-10-24",
+  "status": "twenty_room_inspection_candidate",
+  "full_m4_parity": false,
+  "natural_completion_available": false,
+  "inspection_room_count": 20,
+  "background_cache_slots": 2,
+  "original_pixels_shipped": false,
+  "production_ai_art_integrated": false,
+  "limits": [
+    "Rooms3-20 use provisional tile-top geometry, not original pixel collision",
+    "Natural reachability, dynamic gates, bridges, traps and completion remain open",
+    "Known T02/T03/T06/T10 movement and contact discrepancies remain in active tests",
+    "Enemy reset on death implemented; lantern reset rule on death is not certified",
+    "No physical A500 certification"
+  ],
+  "artifacts": [
+    {
+      "path": "docs/M4_ROOM_EXPLORER.md",
+      "sha256": "d1f64ec9de020988fb558db487d0ee77ac30103503ca15ea212942fefb37de03"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "11e3700ff080159aef6920f8cc971aebdad3dc978adfb4bb73f76b8a9a67cea9"
+    },
+    {
+      "path": "docs/AMIGA_ART_PIPELINE.md",
+      "sha256": "55039b3623f77912f008c8afc7de6fea4f8a060e21a12bb8ab55ee48b95b3c4f"
+    },
+    {
+      "path": "docs/images/rooms20-layout.png",
+      "sha256": "d4e5f9015198e15fe15233ddb4e607efa88932a71b0e34943e59c2e232f17d31"
+    },
+    {
+      "path": "docs/images/room-tour.png",
+      "sha256": "54d2ec345811a6fb9063762f48d2edba616653db0dd3c292fc00ddf3d8ba1060"
+    },
+    {
+      "path": "reference/validation/room-blockouts.json",
+      "sha256": "2b20eeabbdcb1775ed5d1636c5e3134980aaed78b94b052a2eb3a11b653bbc9e"
+    },
+    {
+      "path": "reference/validation/room-backgrounds.json",
+      "sha256": "fac0b88eef61fa37348b3a4c24c798a3de8aab243d95405a2e4973a298a034ca"
+    },
+    {
+      "path": "reference/validation/art-inventory.json",
+      "sha256": "47b679b6d802f1f60edbcd02117d663423164e6f917c85b55a1c81151d2f92e0"
+    },
+    {
+      "path": "reference/validation/m3-core.json",
+      "sha256": "78dea1d8e3911d896d35e3fc43b25e686f37113e58d13b1fc1b14ff70ba0fe89"
+    },
+    {
+      "path": "reference/validation/a500-room-tour.json",
+      "sha256": "7f218e31099acf625a83d6acbc59b69610a958e23aa8c6eb05d7b7b09e5d5cee"
+    },
+    {
+      "path": "reference/validation/a500-m3-combat.json",
+      "sha256": "aa0820ef42e381f5199fda908b174b0a2fa1347d547ce12aa4c9d6b01b33f1ac"
+    },
+    {
+      "path": "reference/validation/a500-m4-rooms.json",
+      "sha256": "a7cb74b4e3e497565804fe6eb69e53b38a39f0f6687b069e9a406f9f4ae2d0de"
+    },
+    {
+      "path": "reference/validation/a500-enemy-edges.json",
+      "sha256": "a2ab80477354bbf2813b40756b2ccecb862217bf9afb6ce85a4208592d7390b9"
+    },
+    {
+      "path": "reference/validation/a500-repeat-launch.json",
+      "sha256": "4991033debc3727f19d21925d5a09fb34aaa532a781751aa48c6662bd22293a4"
+    },
+    {
+      "path": "reference/validation/a500-adf-boot.json",
+      "sha256": "e58a9dd65d8acfa72f8ac0934d68778e90a9a36002936f07a9a7fffae7562681"
+    },
+    {
+      "path": "reference/validation/a500-soak.json",
+      "sha256": "dda5d781f04f25f2f12d9503c82af6281e8a4b7dadd48503fcf9f6172ea998f0"
+    },
+    {
+      "path": "reference/validation/movement-timing.json",
+      "sha256": "ab5a5d9baec7ac6d6d4932dce8b2e3cb2348cb299093bdf0f2755c306b859a6c"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "sha256": "b9ba54cbdbe6d3b14165ea535bd887b44fc56c8a66130ad887ab53fe82b51840"
+    },
+    {
+      "path": "tools/verify_expansion.py",
+      "sha256": "04ed268fb789f72b4b66f4c57c09063c47d24e21d42c21181769e62d838f2aa6"
+    }
+  ]
+}

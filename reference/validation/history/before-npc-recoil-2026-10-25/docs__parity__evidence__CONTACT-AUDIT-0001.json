@@ -1,0 +1,13 @@
+{
+  "id": "CONTACT-AUDIT-0001",
+  "date": "2026-10-25",
+  "status": "candidate_code_derived_partial",
+  "full_original_parity": false,
+  "summary": "Actual6502 pose/pixel/object pipeline:29 injected fixtures;24860 contacts/35masks/20rooms; constant idle/punch/prone object masks and pickup sound corrected. R01 east minimumX300 retained; exact arrivals/returns checked. Two68000 fixture launches; phase-dependent actor and strict A500 gates remain open.",
+  "artifacts": [
+    {
+      "path": "reference/validation/contact-delivery.json",
+      "sha256": "e473ac66f76eb670851b8d2bd078edc7c560c735728dbbf96e2d22f423e6cf96"
+    }
+  ]
+}

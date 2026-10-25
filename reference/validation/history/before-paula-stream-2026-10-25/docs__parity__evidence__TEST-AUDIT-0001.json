@@ -1,0 +1,25 @@
+{
+  "id": "TEST-AUDIT-0001",
+  "date": "2026-10-25",
+  "status": "candidate_code_derived_partial",
+  "full_original_parity": false,
+  "summary": "Historical T01-T18 source review:61 controlled6502fixtures and targeted net/input/combat-order fixes. Its native build is superseded by MOVEMENT-AUDIT-0001; full actor/life/contact and strict A500 gates remain open. The movement audit separately corrects jump/kick/fall phases and black-contact history.",
+  "artifacts": [
+    {
+      "path": "reference/validation/test-audit.json",
+      "sha256": "8c8274ab34bc40b955c579d3275c5d10dcb4e5b8927a9bb8cc6d7cea955c940a",
+      "size_bytes": 12239
+    },
+    {
+      "path": "reference/analysis/test-audit-2026-10-25/report.json",
+      "sha256": "12228acf3c19ddb0075517b528918ced1e76c62303c1e0f0547334212de9162d",
+      "size_bytes": 91098
+    },
+    {
+      "path": "docs/TEST_AUDIT_2026-10-25.md",
+      "sha256": "6cb8ab1cf8cb482fd18d3edf094beb85ac7c7eea9e3e0b2bded4e661ba36e19a",
+      "size_bytes": 13668
+    }
+  ],
+  "native_build_superseded_by": "MOVEMENT-AUDIT-0001"
+}

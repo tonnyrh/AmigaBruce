@@ -1,0 +1,17 @@
+{
+  "status": "verified_scoped_npc_recoil_history_and_room2_regression",
+  "date": "2026-10-25",
+  "actor_logic_fully_ported": false,
+  "full_m2_parity": false,
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_playthrough_verified": false,
+  "primary_edition_verified": false,
+  "all_room_realtime_gate_passed": false,
+  "all_room_native_rerun_after_actor_changes": false,
+  "enhanced_art_active": false,
+  "artifact": {
+    "path": "reference/validation/npc-recoil-delivery.json",
+    "sha256": "cd5c90bce2a69ecc95f7f0f5f358eccbaf13f35f6586be334f8b104ad134de19"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "capture_id": "COMBAT-0001",
+  "date": "2026-10-20",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_replayed_not_primary_verified",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008",
+    "SRC-010"
+  ],
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "parity_ids": [
+    "PAR-007",
+    "PAR-014",
+    "PAR-015",
+    "PAR-016"
+  ],
+  "scenarios": 4,
+  "samples": 1452,
+  "limitations": [
+    "Retail identity unverified",
+    "No natural fall-contact hit in combat routes",
+    "Amiga target geometry and damage are provisional",
+    "Ninja/Yamo AI not implemented"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/traces/COMBAT-0001.json",
+      "sha256": "df8dab9a0794bf4fb7848d592c2fadb62f4b79f0edfac08b88118e7b08f39e7b"
+    },
+    {
+      "path": "reference/scenarios/COMBAT-0001.json",
+      "sha256": "0fa3863afbda7bb145d9c1b7b1b3b4c068df3b0cc7358f51061a4dec7bfedb8e"
+    }
+  ]
+}

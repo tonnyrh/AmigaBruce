@@ -1,0 +1,25 @@
+{
+  "id": "ROOM-RUNTIME-0001",
+  "date": "2026-10-25",
+  "status": "candidate_code_derived_partial",
+  "summary": "Movement audit refresh:20inits/2560loops/24860pixel contacts over35Bruce masks/640door gates plus29complete object passes match actual source CPU fixtures. Earlier all-room native rendering is historical; current native scope covers70movement fixtures,29object fixtures and R01 combat replay. Full actor/natural-play parity and strict A500 timing/memory remain open.",
+  "full_original_parity": false,
+  "artifacts": [
+    {
+      "path": "reference/validation/history/before-test-audit-2026-10-25/reference/validation/c64-candidate.json",
+      "size_bytes": 5566,
+      "sha256": "b795996c094e84b8541c0dc94989dd6a043542985a90252a1bbe0f9dcbe08e21"
+    },
+    {
+      "path": "reference/validation/c64-room-runtime.json",
+      "sha256": "429b8e12115399e3c7e05e5f51ab87a987085a4148b0e921b2f5030d4e43fdc7",
+      "size_bytes": 11580
+    },
+    {
+      "path": "reference/analysis/contact-audit-2026-10-25/report.json",
+      "sha256": "5b09e7466c9d33dcc95981fbccbcb6bebfa60f633038669f9ef568713821ded4",
+      "size_bytes": 10983
+    }
+  ],
+  "native_build_superseded_by": "MOVEMENT-AUDIT-0001"
+}

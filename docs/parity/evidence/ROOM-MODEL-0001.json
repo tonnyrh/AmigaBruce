@@ -1,0 +1,27 @@
+{
+  "id": "ROOM-MODEL-0001",
+  "date": "2026-10-24",
+  "status": "source_audit_and_static_reference_model",
+  "full_m4_parity": false,
+  "amiga_runtime_changed": false,
+  "primary_evidence": "Frozen C64 instruction bytes, room streams, attributes, charset and init/loop pointer tables",
+  "supplementary_checks": "CPU model comparisons only; not original-machine or timing certification",
+  "next_work": "Trace room init/loop routines and replace provisional Amiga geometry; graphics and audio deferred",
+  "artifacts": [
+    {
+      "path": "reference/validation/c64-room-code.json",
+      "size_bytes": 5017,
+      "sha256": "476d9bacd64e2b08b86c47c036b2eea2dc18e79d6c557f5bca8a5fd5db54d2a7"
+    },
+    {
+      "path": "reference/validation/c64-room-reconstruction.json",
+      "size_bytes": 30234,
+      "sha256": "64eeab0c361eb289061a3f4a20ce56a596bbd6804206cc2ef968627972301f03"
+    },
+    {
+      "path": "reference/validation/room-tile-catalog.json",
+      "size_bytes": 129958,
+      "sha256": "2040ae9a0a260e5a715fa01d0dc7c4e9df3fc83d25eb2b6fe893c838fe83966e"
+    }
+  ]
+}

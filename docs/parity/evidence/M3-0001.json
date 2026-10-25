@@ -1,0 +1,84 @@
+{
+  "capture_id": "M3-0001",
+  "date": "2026-10-20",
+  "status": "playable_m3_candidate_runtime_validated",
+  "primary_edition_verified": false,
+  "full_m3_parity": false,
+  "parity_ids": [
+    "PAR-014",
+    "PAR-015",
+    "PAR-016",
+    "PAR-017"
+  ],
+  "limits": [
+    "Entire C64 combat routes still differ; every mismatch recorded",
+    "Collision masks, full reaction trajectories, original death/respawn/lives and enemy room exits remain open; reaction counters and retreat instructions are checked against frozen candidate memory",
+    "Runtime performance measured in WinUAE A500 profile; no physical A500 certification"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/validation/a500-m3-combat.json",
+      "sha256": "aa0820ef42e381f5199fda908b174b0a2fa1347d547ce12aa4c9d6b01b33f1ac"
+    },
+    {
+      "path": "reference/validation/m3-core.json",
+      "sha256": "78dea1d8e3911d896d35e3fc43b25e686f37113e58d13b1fc1b14ff70ba0fe89"
+    },
+    {
+      "path": "reference/validation/candidate-combat.json",
+      "sha256": "7e0ced79faf6c33ddba8713b9602b6bccc4b596e9420e3bc948d3dcf13f4a703"
+    },
+    {
+      "path": "reference/validation/movement-timing.json",
+      "sha256": "ab5a5d9baec7ac6d6d4932dce8b2e3cb2348cb299093bdf0f2755c306b859a6c"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "sha256": "b9ba54cbdbe6d3b14165ea535bd887b44fc56c8a66130ad887ab53fe82b51840"
+    },
+    {
+      "path": "docs/M3_COMBAT.md",
+      "sha256": "c534d50c6bf0ce894072c04d2ea918be133ddd9a6b87f1b6293a12ef2b83ba8b"
+    },
+    {
+      "path": "docs/images/m3-combat.png",
+      "sha256": "4a86b97c8f919a0090417e0fc69eb8d3b669454214304477d8211a2f3bd90231"
+    },
+    {
+      "path": "reference/validation/candidate-combat-reactions.json",
+      "sha256": "ad74dc215e8ee16b40b836ce1e376e3dc9e65703c9d596e14e04445b37605f0a"
+    },
+    {
+      "path": "reference/validation/candidate-wall-escape.json",
+      "sha256": "167c333282b2055e679cd1baf3dd994198ace703d90163fe5afadd97452b3e73"
+    },
+    {
+      "path": "docs/WALL_ESCAPE.md",
+      "sha256": "e720dd4ca4707c222eb9e96d8b38cc89a5a93fc4dd554a66e62fe200fb4417e6"
+    },
+    {
+      "path": "docs/parity/evidence/AIR-COMBAT-0001.json",
+      "sha256": "240f01b08d298f8e306e60af99c0d12d98be797de5eebb7bcfa0ed25bf07e69c"
+    },
+    {
+      "path": "reference/traces/ENEMY-EDGE-0001.json",
+      "sha256": "e4ec6b4b03728104de0120822674771749edf46ea1e3b5427a11a9550192adba"
+    },
+    {
+      "path": "reference/validation/enemy-room-edges.json",
+      "sha256": "c4276cbef05dceade6a5aa11b6f830678666912ce32e6bb1c4f48600a85933fe"
+    },
+    {
+      "path": "docs/parity/evidence/ENEMY-EDGE-0001.md",
+      "sha256": "5640653343d60cb1f59e88ba750c8af3ca5e111c95b43c5e0962ed9734be56dc"
+    },
+    {
+      "path": "reference/validation/a500-enemy-edges.json",
+      "sha256": "a2ab80477354bbf2813b40756b2ccecb862217bf9afb6ce85a4208592d7390b9"
+    },
+    {
+      "path": "docs/images/enemy-edge.png",
+      "sha256": "e1fc30f5ee447947f96c038eb170f743a3dbabbc169859d1721f7de4ca189b22"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+START 276 hit=7
+0 x=280 y=146 stun=11 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=284 y=146 stun=10 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=288 y=146 stun=9 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+3 x=292 y=146 stun=8 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+4 x=296 y=146 stun=7 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+5 x=300 y=146 stun=6 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+6 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 278 hit=7
+0 x=282 y=146 stun=11 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=286 y=146 stun=10 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=290 y=146 stun=9 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+3 x=294 y=146 stun=8 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+4 x=298 y=146 stun=7 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+5 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 280 hit=7
+0 x=284 y=146 stun=11 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=288 y=146 stun=10 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=292 y=146 stun=9 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+3 x=296 y=146 stun=8 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+4 x=300 y=146 stun=7 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+5 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 282 hit=7
+0 x=286 y=146 stun=11 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=290 y=146 stun=10 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=294 y=146 stun=9 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+3 x=298 y=146 stun=8 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+4 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 284 hit=7
+0 x=288 y=146 stun=11 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=292 y=146 stun=10 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=296 y=146 stun=9 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+3 x=300 y=146 stun=8 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+4 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 286 hit=7
+0 x=290 y=146 stun=11 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=294 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=298 y=146 stun=9 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+3 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 288 hit=7
+0 x=292 y=146 stun=11 wall=0 count=0 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=296 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=300 y=146 stun=9 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+3 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 290 hit=7
+0 x=294 y=146 stun=11 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=298 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 292 hit=7
+0 x=296 y=146 stun=11 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=300 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 294 hit=7
+0 x=298 y=146 stun=11 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=302 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 296 hit=7
+0 x=300 y=146 stun=11 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=304 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 298 hit=7
+0 x=302 y=146 stun=11 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=306 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 300 hit=7
+0 x=304 y=146 stun=11 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=308 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 302 hit=7
+0 x=306 y=146 stun=11 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=310 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0
+START 304 hit=7
+0 x=308 y=146 stun=11 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+1 x=312 y=146 stun=10 wall=24 count=64 curR=0 oldR=0 transition=0 player=24,98 active=1
+2 x=274 y=146 stun=0 wall=0 count=0 curR=0 oldR=0 transition=1 player=24,98 active=0

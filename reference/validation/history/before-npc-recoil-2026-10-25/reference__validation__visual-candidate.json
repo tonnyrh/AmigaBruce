@@ -1,0 +1,18 @@
+{
+  "status": "verified_source_climbing_and_scoped_room5_regression",
+  "date": "2026-10-25",
+  "actor_logic_fully_ported": false,
+  "full_m2_parity": false,
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_playthrough_verified": false,
+  "primary_edition_verified": false,
+  "all_room_realtime_gate_passed": false,
+  "all_room_native_rerun_after_actor_changes": false,
+  "enhanced_art_active": false,
+  "artifact": {
+    "path": "reference/validation/climb-delivery.json",
+    "sha256": "a5420ac9357b69313c3ca3ef93b0685221edfc804dff73086cc58a932285d6fd",
+    "size_bytes": 22597
+  }
+}

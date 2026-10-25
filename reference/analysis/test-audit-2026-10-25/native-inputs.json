@@ -1,0 +1,250 @@
+{
+  "source_files": [
+    {
+      "path": "amiga/intro_audio.h",
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027",
+      "size_bytes": 881
+    },
+    {
+      "path": "amiga/intro_audio_data.h",
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b",
+      "size_bytes": 47121
+    },
+    {
+      "path": "tools/build_intro_audio.py",
+      "sha256": "4f82259133a4d75dbd9dcb8dd7a1cab5fc8028c822c58a3f528e27d3dfe92e00",
+      "size_bytes": 5593
+    },
+    {
+      "path": "tools/verify_intro_audio.py",
+      "sha256": "1360629bc7b7a2fc884ece4c9e2294524583427aa1256aa7ecb008bce154a0c5",
+      "size_bytes": 3946
+    },
+    {
+      "path": "assets/audio/intro-v1/manifest.json",
+      "sha256": "7c07beb139d0fefb6656f45d6be3b343a4b72bb835665bc682c1518f1c9765af",
+      "size_bytes": 930
+    },
+    {
+      "path": "assets/audio/intro-v1/generation.json",
+      "sha256": "c7e1678bba5ef6245b38f00aaee9bbaf00add7e900a45633935a8afddd3df845",
+      "size_bytes": 1018
+    },
+    {
+      "path": "assets/audio/intro-v1/kiai-source_0.wav",
+      "sha256": "e8eaa692c067dc62fd1ed4621d776ebf03878d54f36779eceb782aca2ec4c930",
+      "size_bytes": 76878
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "9f23ba6842887eacc43a9d61f6fcb9a59869ef2920f8be198df5aa55d8daa1f9",
+      "size_bytes": 56412
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f",
+      "size_bytes": 70387
+    },
+    {
+      "path": "amiga/fighter_dma_data.h",
+      "sha256": "4e534017bb7b769ae5f8d6f96f2064582f965b8b8f3d9aa884767c55cc3367b2",
+      "size_bytes": 118036
+    },
+    {
+      "path": "tools/build_fighter_dma.py",
+      "sha256": "8282019910f73e054f395b88cdf350fd8398afa778c0dc1f5146a254786d4d44",
+      "size_bytes": 5884
+    },
+    {
+      "path": "assets/graphics/v2/fighter-dma-manifest.json",
+      "sha256": "d2b8f39a6aa42266fb0335b8fa9b448b2599aa1a3dcc2047a866591cca272d75",
+      "size_bytes": 938
+    },
+    {
+      "path": "tools/build_fighter_art.py",
+      "sha256": "453db965e35960f4c11dd0fd0d10bc7e307f21043f88a97cc96806abbcbbe30a",
+      "size_bytes": 6743
+    },
+    {
+      "path": "assets/graphics/v2/bruce-source.png",
+      "sha256": "6fd38603173a9146dfb0001b8588f60d7bd14ee20f3976e53734563abc1ba8c5",
+      "size_bytes": 813563
+    },
+    {
+      "path": "assets/graphics/v2/ninja-source.png",
+      "sha256": "cee9876cc5247150ecd0af19bc9d53b2902789182783e9f6932e5b595dd50be5",
+      "size_bytes": 767921
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-source-v3.png",
+      "sha256": "a6f8bf31c506037bf5abce0d2eaa73dcfcbdba011335846c859153dfc111ae0f",
+      "size_bytes": 1787039
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-v3-generation.json",
+      "sha256": "c18bbfae24a1ef32946d04e4a905378dfa53ff87d65b9c5b2fb9c2612a8e2745",
+      "size_bytes": 1920
+    },
+    {
+      "path": "assets/graphics/v2/generation.json",
+      "sha256": "f35d89387d3b5c5ff1138b7e5af28b152a7ecb06d6b5b0e9e6aa0b25b7ea8e5b",
+      "size_bytes": 8164
+    },
+    {
+      "path": "assets/graphics/v1/mountains-indexed.png",
+      "sha256": "36c7587cb7add4e056fcbd149a3f46b075ae73b9499b3cddce77ec08d87a092a",
+      "size_bytes": 4464
+    },
+    {
+      "path": "amiga/combat_audio.h",
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10",
+      "size_bytes": 1764
+    },
+    {
+      "path": "amiga/combat_audio_data.h",
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0",
+      "size_bytes": 8082
+    },
+    {
+      "path": "amiga/room_background_data.h",
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d",
+      "size_bytes": 370050
+    },
+    {
+      "path": "tools/build_room_backgrounds.py",
+      "sha256": "7e80968319342af8eb5e11edf70eba45934400a2ef132c7e77150f282f61e771",
+      "size_bytes": 5548
+    },
+    {
+      "path": "amiga/runtime.c",
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751",
+      "size_bytes": 3762
+    },
+    {
+      "path": "amiga/start.s",
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291",
+      "size_bytes": 69
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "9e56a92b48f22fcb4de94e80c7ee6a758ba255b926048538e04a848639db54ee",
+      "size_bytes": 12347
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "34d0316b757016a1c2058912aeb32a5a5d9e7ec56f272a988b8157f446c22087",
+      "size_bytes": 2274
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404",
+      "size_bytes": 1925
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445",
+      "size_bytes": 913
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "987ba0c4dcd419d7ece2f6ffc1d7d8782f6dd28c9e09049a2ce7de08f276f7d6",
+      "size_bytes": 9237
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "1001f3fcd4b5c4da12cd9cbc3d8be47d12dd823a191ea43a64e68ca5cad532ea",
+      "size_bytes": 1003
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "d80a8b6d5726689b7d171644c3b5d47ba6d12b61e9d15b965b7d23f7353f42aa",
+      "size_bytes": 6690
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "size_bytes": 1686
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "size_bytes": 2887
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059",
+      "size_bytes": 10018
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "50f5c290af85409528cf8959a4ab4153ecfc92883d107f5ef706b495052e41f1",
+      "size_bytes": 53018
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "8d89c11088f2e7a29d5fa9eeaefe222de6780da191ba8cdc1c2fc3f371ab79a8",
+      "size_bytes": 3415
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "d850f8cd6c6f948d1f96b348a6ec4fb9b5f399e249ba85da653864b572a23e9a",
+      "size_bytes": 76549
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616",
+      "size_bytes": 155268
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "bc61c58f063f2306ef51e6f0c4411dbdc5bf7082a12771afaac93229070216e0",
+      "size_bytes": 12877
+    },
+    {
+      "path": "assets/c64/rooms-v1/manifest.json",
+      "sha256": "a5f598461d0bb1776bcee9d415b64fc84006a75da44f3e817cfcfa28294e56af",
+      "size_bytes": 4590
+    },
+    {
+      "path": "tests/room_fixture.h",
+      "sha256": "b373e036b51f383eaba2e312a9e6d6018cd768021d2589eafce45840a34235dd",
+      "size_bytes": 579
+    },
+    {
+      "path": "tests/gate_fixture.h",
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b",
+      "size_bytes": 2561
+    },
+    {
+      "path": "test-amiga.ps1",
+      "sha256": "41965defcdb48e6f96722bdee1bbb301652a2ce3981a0d4b3c32dc5a430c338a",
+      "size_bytes": 16639
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "b5af8ca2e7a06a900a8e59a2c61cfd553ae00656d1511a63f6f2cb55d5661155",
+      "size_bytes": 3421
+    },
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "619829f98516fd7090eb1ee73d6da28b12e2759fc58388fd51ea36031a96f298",
+      "size_bytes": 3538
+    },
+    {
+      "path": "tools/preview_planar.py",
+      "sha256": "5eee92bd8b71f3d091fa9ede5f40673a6242427df2ddeb256c2916ee455c7c25",
+      "size_bytes": 1667
+    }
+  ],
+  "executable": {
+    "path": "amiga/out/bruce_test.exe",
+    "sha256": "6054fe0fbaea42aa853fdb40cf0c5690a4564db9186a8f7683e8fba03f2ca7f2",
+    "size_bytes": 211224
+  },
+  "adf": {
+    "path": "amiga/out/bruce_test.adf",
+    "sha256": "f178de4cb18946d3d58b5deeafc45623e387502aa053816ef70b3f0921568b5e",
+    "size_bytes": 901120
+  },
+  "scope": "Current compiled runtime inputs during owned test-amiga.ps1 run; runner also checks inputs before gates"
+}

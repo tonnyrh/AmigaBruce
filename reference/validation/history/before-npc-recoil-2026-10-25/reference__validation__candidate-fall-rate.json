@@ -1,0 +1,157 @@
+{
+  "capture_id": "MACHINE-0007",
+  "status": "candidate_free_fall_rate_only",
+  "full_route_parity": false,
+  "primary_edition_verified": false,
+  "trace_sha256": "9ffb1c304b7e3ee4d241cf3e878c623413fdecb9410c85cc3bcf1242e14db5e1",
+  "summary_sha256": "f4603bf0c11d410921e77cf9f513ec3440e734271667dfb9c5d61d431d5e782e",
+  "pixels_per_logic_step": 2,
+  "pal_fields_per_logic_step": 3,
+  "pixels_per_second_at_50hz": 33.333333333333336,
+  "positive_free_fall_intervals": [
+    {
+      "tick": 99,
+      "dy": 2
+    },
+    {
+      "tick": 100,
+      "dy": 2
+    },
+    {
+      "tick": 101,
+      "dy": 2
+    },
+    {
+      "tick": 102,
+      "dy": 2
+    },
+    {
+      "tick": 103,
+      "dy": 2
+    },
+    {
+      "tick": 104,
+      "dy": 2
+    },
+    {
+      "tick": 105,
+      "dy": 2
+    },
+    {
+      "tick": 106,
+      "dy": 2
+    },
+    {
+      "tick": 107,
+      "dy": 2
+    },
+    {
+      "tick": 108,
+      "dy": 2
+    },
+    {
+      "tick": 109,
+      "dy": 2
+    },
+    {
+      "tick": 110,
+      "dy": 2
+    },
+    {
+      "tick": 111,
+      "dy": 2
+    },
+    {
+      "tick": 112,
+      "dy": 2
+    },
+    {
+      "tick": 113,
+      "dy": 2
+    },
+    {
+      "tick": 114,
+      "dy": 2
+    },
+    {
+      "tick": 115,
+      "dy": 2
+    },
+    {
+      "tick": 116,
+      "dy": 2
+    },
+    {
+      "tick": 117,
+      "dy": 2
+    },
+    {
+      "tick": 118,
+      "dy": 2
+    },
+    {
+      "tick": 119,
+      "dy": 2
+    },
+    {
+      "tick": 120,
+      "dy": 2
+    },
+    {
+      "tick": 121,
+      "dy": 2
+    },
+    {
+      "tick": 122,
+      "dy": 2
+    },
+    {
+      "tick": 123,
+      "dy": 2
+    },
+    {
+      "tick": 124,
+      "dy": 2
+    },
+    {
+      "tick": 125,
+      "dy": 2
+    },
+    {
+      "tick": 126,
+      "dy": 2
+    },
+    {
+      "tick": 127,
+      "dy": 2
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "Net exit horizontal geometry differs from prototype",
+    "Upper-ledge route does not fall in candidate; it stops on collision geometry at y102",
+    "No death/landing mask certification"
+  ],
+  "source_files": [
+    {
+      "path": "tools/measure_fall.py",
+      "sha256": "afac79629b96c0f1f4ae484da20541599f21e1764f3a926e74ba94b685e82778"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "06ea019584dc8217e92ebb3eb669866f2e5eb1880041abba67a317b90b49bf82"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "tests/core_test.c",
+      "sha256": "eb34ade1f8d9573a5f2e77f2ea1e2964ebc7d54239d0ff1a3ed1b4a29291e940"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "5df96f67a55d3afb7f3125f4d61bb43caeb879d1faae4e841a05a74f29dda6fd"
+    }
+  ]
+}

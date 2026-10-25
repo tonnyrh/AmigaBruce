@@ -1,0 +1,278 @@
+{
+  "inspected_on": "2026-10-18",
+  "source": "User-provided local files; download origin and edition unknown",
+  "primary_reference_changed": false,
+  "files": [
+    {
+      "filename": "Bruce Lee Return Of Fury.d64",
+      "size_bytes": 174848,
+      "sha256": "b4c7266f82bc9e9843d9d6bec051209cc357c262398cc8c8ae0c2fe9a4bf1e73",
+      "edition_status": "unverified",
+      "boot_status": "not_run",
+      "disk_label": "MEGASTYLE",
+      "disk_id": "2019",
+      "directory": [
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "n       c",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "cc p p        b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b              b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b              b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b  :        .  b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b  b        b  b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "cc{c       {cc",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b        b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "!        :",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "cc",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "BRUCE LEE R.O.F.",
+          "type_byte": 130,
+          "blocks": 138
+        },
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": ":",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": ".  [BY]  b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "cc{cc`ccccc{cc",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "!        }",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "}",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "c          b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b           {cc",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b           !  b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b  .           b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b  b           b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "``{ p   p     b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "}        .",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "cc{c`cccccc{cc",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "b [2019] !",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": ":",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "cc",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "MANCAVE TEASER",
+          "type_byte": 130,
+          "blocks": 23
+        },
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        },
+        {
+          "name": "",
+          "type_byte": 128,
+          "blocks": 0
+        }
+      ]
+    },
+    {
+      "filename": "bruce_lee.t64",
+      "size_bytes": 79288,
+      "sha256": "36800f5bddbd6da7b516b8acad74b01954c4cdb4265448a1064f6b113dbb2b99",
+      "edition_status": "unverified",
+      "boot_status": "not_run",
+      "header_signature": "C64 tape image file",
+      "tape_label": "ASS PRESENTS:",
+      "header_used_entries": 2,
+      "entries": [
+        {
+          "name": "BRUCE LEE+",
+          "entry_type": 1,
+          "file_type": 130,
+          "load_address": "$0801",
+          "end_address": "$A617",
+          "data_offset": 128
+        },
+        {
+          "name": "BRUCE LEE CRAZY",
+          "entry_type": 1,
+          "file_type": 130,
+          "load_address": "$0801",
+          "end_address": "$9F23",
+          "data_offset": 40598
+        }
+      ]
+    },
+    {
+      "filename": "bruce_lee_ii.d64",
+      "size_bytes": 174848,
+      "sha256": "1594d6e3125b47b243d6dd0d6e1ca509c00c454923668b7c35135502fd32f768",
+      "edition_status": "unverified",
+      "boot_status": "not_run",
+      "disk_label": "ASS PRESENTS:",
+      "disk_id": "",
+      "directory": [
+        {
+          "name": "BRUCE LEE II+",
+          "type_byte": 130,
+          "blocks": 42
+        },
+        {
+          "name": "BRUCELEE II-IFFL",
+          "type_byte": 130,
+          "blocks": 233
+        }
+      ]
+    },
+    {
+      "filename": "brucelee.d64",
+      "size_bytes": 174848,
+      "sha256": "f2587c65054edd9e9aa90b1f48ca651f16a5b89e73c5772c9373e27ea2b86b26",
+      "edition_status": "unverified",
+      "boot_status": "not_run",
+      "disk_label": "ASS PRESENTS:",
+      "disk_id": "",
+      "directory": [
+        {
+          "name": "BRUCE LEE R.O.F+",
+          "type_byte": 130,
+          "blocks": 195
+        }
+      ]
+    }
+  ]
+}

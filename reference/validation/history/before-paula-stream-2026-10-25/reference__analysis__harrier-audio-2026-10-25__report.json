@@ -1,0 +1,343 @@
+{
+  "date": "2026-10-25",
+  "status": "read_only_backend_code_review_and_parameter_arithmetic",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "game_code_changed": false,
+  "native_recording_made": false,
+  "harrier_executed": false,
+  "harrier_root": "C:/vscode/_EXT/harrierattackreloaded",
+  "harrier_commit": "79989f690d43aa3539a2c5f575517cee1ddbcd5a",
+  "harrier_worktree_clean_at_review": true,
+  "paula_clock_used": 3546895,
+  "metrics": [
+    {
+      "sequence": "title",
+      "source_fields": 1155,
+      "audible_parameter_fields": 1918,
+      "block_duration_above_20ms_fields": 0,
+      "longest_constant_parameter_block": {
+        "milliseconds": 8.426525172016651,
+        "zero_based_field": 1,
+        "channel": 0,
+        "offset": 640,
+        "length_bytes": 32,
+        "period": 934,
+        "volume": 64
+      }
+    },
+    {
+      "sequence": "$80",
+      "source_fields": 2,
+      "audible_parameter_fields": 1,
+      "block_duration_above_20ms_fields": 1,
+      "longest_constant_parameter_block": {
+        "milliseconds": 63.514707934686534,
+        "zero_based_field": 0,
+        "channel": 0,
+        "offset": 1232,
+        "length_bytes": 1024,
+        "period": 220,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$81",
+      "source_fields": 33,
+      "audible_parameter_fields": 32,
+      "block_duration_above_20ms_fields": 0,
+      "longest_constant_parameter_block": {
+        "milliseconds": 17.8905775333073,
+        "zero_based_field": 0,
+        "channel": 0,
+        "offset": 584,
+        "length_bytes": 32,
+        "period": 1983,
+        "volume": 4
+      }
+    },
+    {
+      "sequence": "$82",
+      "source_fields": 13,
+      "audible_parameter_fields": 12,
+      "block_duration_above_20ms_fields": 0,
+      "longest_constant_parameter_block": {
+        "milliseconds": 0.9924173114794771,
+        "zero_based_field": 0,
+        "channel": 0,
+        "offset": 624,
+        "length_bytes": 16,
+        "period": 220,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$83",
+      "source_fields": 7,
+      "audible_parameter_fields": 6,
+      "block_duration_above_20ms_fields": 6,
+      "longest_constant_parameter_block": {
+        "milliseconds": 18920.165384089465,
+        "zero_based_field": 1,
+        "channel": 0,
+        "offset": 1232,
+        "length_bytes": 1024,
+        "period": 65535,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$84",
+      "source_fields": 22,
+      "audible_parameter_fields": 21,
+      "block_duration_above_20ms_fields": 21,
+      "longest_constant_parameter_block": {
+        "milliseconds": 18920.165384089465,
+        "zero_based_field": 20,
+        "channel": 0,
+        "offset": 1232,
+        "length_bytes": 1024,
+        "period": 65535,
+        "volume": 13
+      }
+    },
+    {
+      "sequence": "$85",
+      "source_fields": 7,
+      "audible_parameter_fields": 6,
+      "block_duration_above_20ms_fields": 6,
+      "longest_constant_parameter_block": {
+        "milliseconds": 151.28048617170793,
+        "zero_based_field": 0,
+        "channel": 0,
+        "offset": 1232,
+        "length_bytes": 1024,
+        "period": 524,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$86",
+      "source_fields": 6,
+      "audible_parameter_fields": 5,
+      "block_duration_above_20ms_fields": 5,
+      "longest_constant_parameter_block": {
+        "milliseconds": 18920.165384089465,
+        "zero_based_field": 0,
+        "channel": 0,
+        "offset": 1232,
+        "length_bytes": 1024,
+        "period": 65535,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$87",
+      "source_fields": 9,
+      "audible_parameter_fields": 8,
+      "block_duration_above_20ms_fields": 0,
+      "longest_constant_parameter_block": {
+        "milliseconds": 3.978691221476813,
+        "zero_based_field": 0,
+        "channel": 0,
+        "offset": 24,
+        "length_bytes": 32,
+        "period": 441,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$88",
+      "source_fields": 21,
+      "audible_parameter_fields": 10,
+      "block_duration_above_20ms_fields": 0,
+      "longest_constant_parameter_block": {
+        "milliseconds": 1.8765709162521023,
+        "zero_based_field": 14,
+        "channel": 0,
+        "offset": 528,
+        "length_bytes": 32,
+        "period": 208,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$89",
+      "source_fields": 2,
+      "audible_parameter_fields": 1,
+      "block_duration_above_20ms_fields": 0,
+      "longest_constant_parameter_block": {
+        "milliseconds": 0.9924173114794771,
+        "zero_based_field": 0,
+        "channel": 0,
+        "offset": 232,
+        "length_bytes": 16,
+        "period": 220,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$8A",
+      "source_fields": 80,
+      "audible_parameter_fields": 62,
+      "block_duration_above_20ms_fields": 5,
+      "longest_constant_parameter_block": {
+        "milliseconds": 33.78729846809674,
+        "zero_based_field": 16,
+        "channel": 0,
+        "offset": 696,
+        "length_bytes": 32,
+        "period": 3745,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$8B",
+      "source_fields": 15,
+      "audible_parameter_fields": 14,
+      "block_duration_above_20ms_fields": 8,
+      "longest_constant_parameter_block": {
+        "milliseconds": 302.56097234341587,
+        "zero_based_field": 13,
+        "channel": 0,
+        "offset": 1232,
+        "length_bytes": 1024,
+        "period": 1048,
+        "volume": 13
+      }
+    },
+    {
+      "sequence": "$8C",
+      "source_fields": 15,
+      "audible_parameter_fields": 14,
+      "block_duration_above_20ms_fields": 0,
+      "longest_constant_parameter_block": {
+        "milliseconds": 6.315382891233036,
+        "zero_based_field": 13,
+        "channel": 0,
+        "offset": 752,
+        "length_bytes": 32,
+        "period": 700,
+        "volume": 13
+      }
+    },
+    {
+      "sequence": "$8D",
+      "source_fields": 104,
+      "audible_parameter_fields": 103,
+      "block_duration_above_20ms_fields": 103,
+      "longest_constant_parameter_block": {
+        "milliseconds": 856.0050410288435,
+        "zero_based_field": 0,
+        "channel": 0,
+        "offset": 1232,
+        "length_bytes": 1024,
+        "period": 2965,
+        "volume": 21
+      }
+    },
+    {
+      "sequence": "$8E",
+      "source_fields": 27,
+      "audible_parameter_fields": 26,
+      "block_duration_above_20ms_fields": 0,
+      "longest_constant_parameter_block": {
+        "milliseconds": 3.978691221476813,
+        "zero_based_field": 13,
+        "channel": 0,
+        "offset": 80,
+        "length_bytes": 32,
+        "period": 441,
+        "volume": 13
+      }
+    }
+  ],
+  "interpretation": "Constant-parameter block durations, not measured reload latency. The old active block, subsequent period writes, remaining samples and OCS DMA scheduling determine actual latency.",
+  "findings": [
+    "Harrier PCM/MOD retriggers separate DMA off and on across service calls, then queue loop/silence after latch delay",
+    "Harrier MOD uses four exclusive channels; Bruce uses three persistent source-derived voices",
+    "Harrier current frameCounter increments in polled WaitVbl, not an independent VBL interrupt",
+    "Bruce rewrites LC/LEN while DMA continues; native parameter signatures do not measure block adoption",
+    "Bruce offline preview changes wave immediately and does not model OCS DMA reload state",
+    "Do not copy Harrier effect priorities, retrigger guards, tempo percentages or one-field note gap into C64 rules"
+  ],
+  "hardware_reference": {
+    "title": "Commodore Amiga Hardware Reference Manual, chapter 5",
+    "url": "https://www.theflatnet.de/pub/cbm/amiga/AmigaDevDocs/hard_5.html",
+    "sections": [
+      "Stopping the Audio DMA",
+      "Joining Tones",
+      "The Audio State Machine"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "C:/vscode/_EXT/harrierattackreloaded/amiga/main.c",
+      "sha256": "9753e3ccf28e2112c523668eaf28b079876729825e78619aa8f5feb9c785b3ab"
+    },
+    {
+      "path": "C:/vscode/_EXT/harrierattackreloaded/amiga/audio_refinement_tests.h",
+      "sha256": "dad605da5b5644eae58341185b76233d0f1d35289e0f69edd491b0555a41eeb6"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "86c688652f3bf397721858e5685e4b4f538fac97c929f0d445b561dc8a5cf8ce"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "efb12f47cf5a69a26a76fd208f1fdfc0928600d927baaebe65de384d039e0e49"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "tools/verify_source_audio.py",
+      "sha256": "6e258232a3900a0cc10920aa7fe2b2545bbf79ac47d91c00316f02b12cc44f91"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/source-registers.json",
+      "sha256": "c7776d8c23319721287da67b25cd6e910a41c8e8a436b97fbe83c25c6fda758d"
+    },
+    {
+      "path": "tools/compare_harrier_audio.py",
+      "sha256": "6e811253a12fe78760733d7f5f8a86507d1e6da3fd8bb1545b634c793239300a"
+    },
+    {
+      "path": "docs/HARRIER_AUDIO_REVIEW.md",
+      "sha256": "657bca9855a93e4cdb481ce4b4deb61fce735dd396c3e05c070f369dcbc9c240"
+    }
+  ],
+  "transient_parameter_renderer": {
+    "path": ".tmp/source-audio-test/audio.dll",
+    "sha256": "434cadcd43f9ad97e6d6f384fa33c5c9e222498a3553de27eaa6390b7f610b7a"
+  },
+  "existing_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "8fc286808d059a945c7a6b1dfe3f2ea9409edccc6453b4541b8ada5a6102d32f"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "024bd15caa2b416f97b1eada2abb51c23f7ae62ea5f4fd1905e1fcfb384e473f"
+    }
+  ],
+  "limitations": [
+    "No new audible/native result or whole-game parity claim",
+    "Standalone effects use controlled reset states; inherited and concurrent SFX remain separate cases",
+    "Period clipping and 50Hz envelope/wave approximations are existing conversion limits",
+    "Harrier comments do not replace C64 machine code or Commodore hardware documentation"
+  ]
+}

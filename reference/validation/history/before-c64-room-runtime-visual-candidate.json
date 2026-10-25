@@ -1,0 +1,705 @@
+{
+  "date": "2026-10-24",
+  "status": "passed_scoped_bruce_startup_candidate_v4_loading_art_pending",
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_completion_available": false,
+  "original_pixels_shipped": false,
+  "generated_graphics_present": true,
+  "poses": 48,
+  "poses_per_actor": 16,
+  "frame_size": [
+    48,
+    26
+  ],
+  "anchor": [
+    24,
+    25
+  ],
+  "palette_colors": 16,
+  "ocs_rgb_bits": 12,
+  "runtime_climb_reflection": "Bruce phases6/7 reflect reach/transfer phases4/5; gameplay facing unchanged",
+  "cpu_planar_cache_bytes": 74880,
+  "packed_fighter_bytes": 29952,
+  "explicit_combat_chip_bytes": 172228,
+  "cpu_stamp_chip_bytes": 0,
+  "combat_max_work_lines": 304,
+  "native_runs": [
+    {
+      "report": "a500-m3-combat.json",
+      "execution": "ADF boot",
+      "frames": [
+        6000
+      ],
+      "max_work_lines": 304,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 267072,
+      "max_room_load_fields": 0
+    },
+    {
+      "report": "a500-gates.json",
+      "execution": "filesystem CLI, two consecutive launches",
+      "frames": [
+        900,
+        900
+      ],
+      "max_work_lines": 213,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 265952,
+      "max_room_load_fields": 22
+    },
+    {
+      "report": "a500-m4-rooms.json",
+      "execution": "ADF boot",
+      "frames": [
+        900
+      ],
+      "max_work_lines": 218,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 267072,
+      "max_room_load_fields": 2
+    },
+    {
+      "report": "a500-room-tour.json",
+      "execution": "ADF boot",
+      "frames": [
+        7200
+      ],
+      "max_work_lines": 229,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 267072,
+      "max_room_load_fields": 26
+    }
+  ],
+  "native_run_count": 5,
+  "manual_new_art_acceptance": false,
+  "c64_opening_conditions_source_checked": true,
+  "c64_opening_animation_timing_certified": false,
+  "known_unsuccessful_attempts": [
+    {
+      "status": "failed_then_fixed",
+      "frame": 700,
+      "max_work_lines": 371,
+      "report": {
+        "path": "reference/validation/history/animation-v2-first-combat-failure.txt",
+        "size_bytes": 1390,
+        "sha256": "c10793828e805cfaaba86d50bf53e691103040ce092c8cb780fcca8551ce7b34"
+      },
+      "fix": "Replace CPU edge shifts with OCS pre-shift and restore only occupied art bounds; final6000-field replay passed"
+    },
+    {
+      "status": "failed_harness_limit_corrected",
+      "reason": "Whole loading stage228 PAL fields was incorrectly limited to audio-only duration; voice is2.402sec, preparation continues with silent reload",
+      "reports": [
+        {
+          "path": "reference/validation/history/bruce-intro-first-load-check-1.txt",
+          "size_bytes": 1561,
+          "sha256": "1dfacb637b87069cc076bf9deefe5300cff21e0425baef6b0920d2dd2d1124ee"
+        },
+        {
+          "path": "reference/validation/history/bruce-intro-first-load-check-2.txt",
+          "size_bytes": 1561,
+          "sha256": "1dfacb637b87069cc076bf9deefe5300cff21e0425baef6b0920d2dd2d1124ee"
+        }
+      ],
+      "fix": "Test loading stage118..600fields separately from sample length/period; two fresh CLI launches passed"
+    }
+  ],
+  "historical_inputs_not_current": [
+    "reference/validation/history/before-animation-v2-a500-soak.json",
+    "reference/validation/history/before-animation-v2-a500-m3-debug.json",
+    "reference/validation/history/visual-candidate-before-animation-v2.json",
+    "reference/validation/history/before-green-yamo-visual-candidate.json",
+    "reference/validation/history/before-bruce-intro-visual-candidate.json"
+  ],
+  "scope": "Green Yamo identity and named health HUD. All core logic hashes unchanged; five fresh A500 runs share current art/render sources. Complete M4/M5 and natural completion remain open.",
+  "artifacts": [
+    {
+      "path": "docs/ANIMATION_AND_OPENINGS_2026-10-24.md",
+      "size_bytes": 7167,
+      "sha256": "1f5dcd505066824f2ccb21b79c8927b1f4a25fbe610570f12f03713191ba5b04"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "size_bytes": 5654,
+      "sha256": "32fd3f96d3f58fe824671cff3afcf823859482cc794e0d969bf8d6f213a4337e"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "size_bytes": 7731,
+      "sha256": "93e211b026df298cc4a370c0af8ffaea218351cc555e0c007dd3adeebb4897f4"
+    },
+    {
+      "path": "docs/AMIGA_ART_PIPELINE.md",
+      "size_bytes": 3974,
+      "sha256": "c42a75afb080dd2ac90b8b453385e8ecb08fe96034b0cc2414780aea95a5bf33"
+    },
+    {
+      "path": "docs/reference/SOURCES.md",
+      "size_bytes": 3402,
+      "sha256": "f9dd14f34650996924948559d12249652fd34aa5f9d81fb00a4d8aeb0a5599dc"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "size_bytes": 10042,
+      "sha256": "c0a055026332c8a21f79e571de493f8bad71feddbb4aca95b8544156b9a2ab1f"
+    },
+    {
+      "path": "assets/graphics/v2/generation.json",
+      "size_bytes": 8164,
+      "sha256": "f35d89387d3b5c5ff1138b7e5af28b152a7ecb06d6b5b0e9e6aa0b25b7ea8e5b"
+    },
+    {
+      "path": "assets/graphics/v2/bruce-source.png",
+      "size_bytes": 813563,
+      "sha256": "6fd38603173a9146dfb0001b8588f60d7bd14ee20f3976e53734563abc1ba8c5"
+    },
+    {
+      "path": "assets/graphics/v2/ninja-source.png",
+      "size_bytes": 767921,
+      "sha256": "cee9876cc5247150ecd0af19bc9d53b2902789182783e9f6932e5b595dd50be5"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-source.png",
+      "size_bytes": 1602924,
+      "sha256": "bfc1a94c775f4d60e7d74b95245ac214193222bf50254049419f916c4bfe7507"
+    },
+    {
+      "path": "assets/graphics/v2/fighters-manifest.json",
+      "size_bytes": 23199,
+      "sha256": "e17b8c4dab2c3a441e000a16585d37dfaa0a0f21988b410eb0e8420b835fc408"
+    },
+    {
+      "path": "assets/graphics/v2/fighters-indexed.png",
+      "size_bytes": 5476,
+      "sha256": "becb73b5a721e854ea42c9cd27836ad82fddc540df5a9bd4e70e46799d4bc304"
+    },
+    {
+      "path": "assets/graphics/v2/fighters.validation.json",
+      "size_bytes": 302,
+      "sha256": "c15e6c0d86a3e5ef657f8b185aba876a5c58f78d00ba8e5b66a5a428c7fcb617"
+    },
+    {
+      "path": "assets/graphics/v2/run.gif",
+      "size_bytes": 10457,
+      "sha256": "9f5840585c91fd7b949927372b90a3eda23c70fddb61467202772bcc61aac9d4"
+    },
+    {
+      "path": "assets/graphics/v2/climb.gif",
+      "size_bytes": 9864,
+      "sha256": "e77c458712a36ac11f409032b0a942b1ca3e26e582387e614c53d527a42c6ad7"
+    },
+    {
+      "path": "assets/graphics/v2/attacks.gif",
+      "size_bytes": 24738,
+      "sha256": "ee4322901302f5c10f8fbedce25c4fa1f469af6befe2877f20c2779e512b959a"
+    },
+    {
+      "path": "amiga/main.c",
+      "size_bytes": 52766,
+      "sha256": "b9bd4c8cd585dfe9d7459e63001b5abf762a5da863ba96db068934f1d7592def"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "size_bytes": 70387,
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f"
+    },
+    {
+      "path": "core/presentation.c",
+      "size_bytes": 1925,
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "size_bytes": 913,
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/rooms.c",
+      "size_bytes": 8454,
+      "sha256": "1660440a8a93a885632a90720ff443ba96342b568b969d17f7c4512964507b7d"
+    },
+    {
+      "path": "core/rooms.h",
+      "size_bytes": 1686,
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "tests/gate_fixture.h",
+      "size_bytes": 2561,
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b"
+    },
+    {
+      "path": "tests/rooms_test.c",
+      "size_bytes": 8872,
+      "sha256": "35e34cc445edf02f8a01c4cf68304a350b979f68eaf4c3f5540cc5e50626471d"
+    },
+    {
+      "path": "tests/visual_test.c",
+      "size_bytes": 2265,
+      "sha256": "b6065fd1077322ebaf02bcdb3bdba7af4c2021acf8c2c2d826e135ef06dff976"
+    },
+    {
+      "path": "tools/build_fighter_art.py",
+      "size_bytes": 6743,
+      "sha256": "453db965e35960f4c11dd0fd0d10bc7e307f21043f88a97cc96806abbcbbe30a"
+    },
+    {
+      "path": "tools/preview_fighter_animation.py",
+      "size_bytes": 1343,
+      "sha256": "85bb22ef515ff6d50a955fa685bbf4a4daba6c42776a9b6c7e95e508016ded99"
+    },
+    {
+      "path": "tools/analyze_c64_openings.py",
+      "size_bytes": 4144,
+      "sha256": "4ead361818dc0f45b4f58f47170a0e56f30331b6e48aca50a9b844e015c983a1"
+    },
+    {
+      "path": "tools/verify_visual_candidate.py",
+      "size_bytes": 5295,
+      "sha256": "82fb72085a977095ada4ed29287a4b1bc6c3193029113e265736519f04a8ff03"
+    },
+    {
+      "path": "tools/verify_combat_audio.py",
+      "size_bytes": 2455,
+      "sha256": "404b69f6a12cde6e39965ce513af5501f2147479ad6147ca195c0634fb61eade"
+    },
+    {
+      "path": "docs/images/m3-combat.png",
+      "size_bytes": 14914,
+      "sha256": "d2a2e85373548c4b4d4bd1a58a69f2e69b3df4cde99c590cba0fde2a7920a20b"
+    },
+    {
+      "path": "docs/images/m4-gates.png",
+      "size_bytes": 14789,
+      "sha256": "8fc8373860a14e366cb3a228fa72f92cbf3eb1a507e96e1b06ab35583373b10a"
+    },
+    {
+      "path": "docs/images/m4-rooms.png",
+      "size_bytes": 14470,
+      "sha256": "6140ab266a678872bb629c2e1167e7720ed894ed49da54765f043f6188f0a036"
+    },
+    {
+      "path": "docs/images/room-tour.png",
+      "size_bytes": 15220,
+      "sha256": "bde49c6e78775f4cf3c383c6a3fe04f85906461abd5d95c8c9517d82ebc34c67"
+    },
+    {
+      "path": "reference/validation/m3-core.json",
+      "size_bytes": 3498,
+      "sha256": "9c8e6d5c3828343e8a32e4d33a71d13b0c84e060e4241a0aa3229086be774f94"
+    },
+    {
+      "path": "reference/validation/candidate-openings.json",
+      "size_bytes": 3988,
+      "sha256": "0f27cff687831707315be9a4960052010f0972afcef4c61a1c69604a47e7a43f"
+    },
+    {
+      "path": "reference/validation/candidate-combat.json",
+      "size_bytes": 625983,
+      "sha256": "e18939753293d68437427c71ac538df08bd75ae5f420f22d44770c78e4d3a4e3"
+    },
+    {
+      "path": "reference/validation/candidate-movement.json",
+      "size_bytes": 14196,
+      "sha256": "c6be3566584cf2d85f9348a127e963c6ed5e5515746f080561b56f9bf262de5c"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "size_bytes": 6594,
+      "sha256": "cb5f8c90c4b50e15cb7ce2015cc74a90873072fe8046cd54e293f1ad550265ed"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "size_bytes": 198304,
+      "sha256": "d0ffd360bfc8094f2cb67e7b58ddacb33e49504b7b476e9fae81ba433efa8ecd"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "size_bytes": 901120,
+      "sha256": "4a170405af2090e0b247a2470cb72db2961e83b757b5c04f24541a489277541d"
+    },
+    {
+      "path": "reference/validation/a500-m3-combat.json",
+      "size_bytes": 8711,
+      "sha256": "c2bd5a779b18047ea530c7cbf64d04da12e3df26f51a8bb4a07117b394af0c9a"
+    },
+    {
+      "path": "reference/validation/a500-gates.json",
+      "size_bytes": 11390,
+      "sha256": "473f30083a734a8a296e998ded6016ee944cd641aa48d72bf1a1dd5b560d3c0a"
+    },
+    {
+      "path": "reference/validation/a500-m4-rooms.json",
+      "size_bytes": 8693,
+      "sha256": "b987d4fe4b05bf9849d967566e622a7c23cd0c703c898c40db7c4fe45fde32cf"
+    },
+    {
+      "path": "reference/validation/a500-room-tour.json",
+      "size_bytes": 8710,
+      "sha256": "4cdc1f88c885dc535e77c98f7b27395270d012835e5c2fb8279758a1b51fe308"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 3251,
+      "sha256": "fec5cfad537b8eb74e30b3d5c1f5971d481501ac8ef6400f947d8aa1d76ef219"
+    },
+    {
+      "path": "docs/YAMO_AND_HEALTH_HUD.md",
+      "size_bytes": 2776,
+      "sha256": "3c5784652fc03f66e498d3198cf63bd6511562c7fc86d3d9acb64d9d820ac159"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-source-v3.png",
+      "size_bytes": 1787039,
+      "sha256": "a6f8bf31c506037bf5abce0d2eaa73dcfcbdba011335846c859153dfc111ae0f"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-v3-generation.json",
+      "size_bytes": 1920,
+      "sha256": "c18bbfae24a1ef32946d04e4a905378dfa53ff87d65b9c5b2fb9c2612a8e2745"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-preview.png",
+      "size_bytes": 1301,
+      "sha256": "66f576f9244bea081779add96c918681124855b0e78cde91e23d930d1ae32b84"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "size_bytes": 2725,
+      "sha256": "10bb254bcccf869c5002ffa8de39db5cdd543ebdd88dcfc7129c5c5faae83f53"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "size_bytes": 13994,
+      "sha256": "364b62833f0b1d8595be96e6672c0b43b7ad26b4edae49978d526b29f68aae77"
+    },
+    {
+      "path": "docs/BRUCE_STARTUP.md",
+      "size_bytes": 4623,
+      "sha256": "7f03233d12f54adcf20e66146d3e016c5c40ce9adfd536c26b0c180e3a152f42"
+    },
+    {
+      "path": "docs/PROTOTYPE.md",
+      "size_bytes": 6812,
+      "sha256": "327ed4651ab7e42d58506c67658738ebdbc8892248656cc6ccd24c228d28dfcb"
+    },
+    {
+      "path": "tools/build_intro_audio.py",
+      "size_bytes": 5593,
+      "sha256": "4f82259133a4d75dbd9dcb8dd7a1cab5fc8028c822c58a3f528e27d3dfe92e00"
+    },
+    {
+      "path": "tools/verify_intro_audio.py",
+      "size_bytes": 3946,
+      "sha256": "1360629bc7b7a2fc884ece4c9e2294524583427aa1256aa7ecb008bce154a0c5"
+    },
+    {
+      "path": "amiga/intro_audio.h",
+      "size_bytes": 881,
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027"
+    },
+    {
+      "path": "amiga/intro_audio_data.h",
+      "size_bytes": 47121,
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b"
+    },
+    {
+      "path": "assets/audio/intro-v1/generation.json",
+      "size_bytes": 1018,
+      "sha256": "c7e1678bba5ef6245b38f00aaee9bbaf00add7e900a45633935a8afddd3df845"
+    },
+    {
+      "path": "assets/audio/intro-v1/manifest.json",
+      "size_bytes": 930,
+      "sha256": "7c07beb139d0fefb6656f45d6be3b343a4b72bb835665bc682c1518f1c9765af"
+    },
+    {
+      "path": "assets/audio/intro-v1/kiai-source_0.wav",
+      "size_bytes": 76878,
+      "sha256": "e8eaa692c067dc62fd1ed4621d776ebf03878d54f36779eceb782aca2ec4c930"
+    },
+    {
+      "path": "assets/audio/intro-v1/kiai-source_1.wav",
+      "size_bytes": 76878,
+      "sha256": "8b2b867a16799731bfb286cedb9c225419da2aa56ee7a9cf6967c69d8d24300d"
+    },
+    {
+      "path": "assets/audio/intro-v1/kiai-paula.wav",
+      "size_bytes": 26504,
+      "sha256": "a582ac70fad86c58cfc284329f617c16940835f3d2c07aadc9bbc5f4a14bd216"
+    },
+    {
+      "path": "reference/validation/intro-codec-audit.json",
+      "size_bytes": 560,
+      "sha256": "0e3cc5a32846aecfec8b74188bf2e6ac629a77d18f4d4a4eb57d4cbc2c7390e9"
+    },
+    {
+      "path": "docs/parity/evidence/M5-0003.json",
+      "size_bytes": 622,
+      "sha256": "bf0531fba81822db110052630d54423034ad5164f4c0513c63369bb9c8379923"
+    },
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 3160,
+      "sha256": "5bad1588d340ee6d6beb28aacabeeedcb7665f037573e4d74c79b3b71c20701c"
+    },
+    {
+      "path": "docs/ROOM_RECONSTRUCTION.md",
+      "size_bytes": 6972,
+      "sha256": "a00c37bfc302c55706083d757e79b29be2d0b1313908c473fff0e31d80d74cad"
+    },
+    {
+      "path": "tools/c64_room_model.py",
+      "size_bytes": 6294,
+      "sha256": "69e3c81f6b425697d8e461f3207fd269356fbf145c49492ebf2a2e6c223f1e61"
+    },
+    {
+      "path": "tools/audit_c64_room_model.py",
+      "size_bytes": 11576,
+      "sha256": "d0b3ed4cde5592479df85d37c31ad9ab6400d63505a669ea5a95c9f15447008f"
+    },
+    {
+      "path": "tools/inspect_c64_room_code.py",
+      "size_bytes": 3852,
+      "sha256": "a3883d31be07e021b18e8db005b18dea4578fe374a434313bae041142e4ed7d2"
+    },
+    {
+      "path": "reference/validation/c64-room-code.json",
+      "size_bytes": 5017,
+      "sha256": "476d9bacd64e2b08b86c47c036b2eea2dc18e79d6c557f5bca8a5fd5db54d2a7"
+    },
+    {
+      "path": "reference/validation/c64-room-reconstruction.json",
+      "size_bytes": 30234,
+      "sha256": "64eeab0c361eb289061a3f4a20ce56a596bbd6804206cc2ef968627972301f03"
+    },
+    {
+      "path": "reference/validation/room-tile-catalog.json",
+      "size_bytes": 129958,
+      "sha256": "2040ae9a0a260e5a715fa01d0dc7c4e9df3fc83d25eb2b6fe893c838fe83966e"
+    }
+  ],
+  "candidate_variant": "bruce_title_and_one_shot_kiai",
+  "core_logic_hashes_unchanged_from_v2": true,
+  "health_hud": {
+    "labels_left_to_right": [
+      "KAGE",
+      "YAMO",
+      "BRUCE"
+    ],
+    "segments": 8,
+    "normalized_for_display": true,
+    "gameplay_health": {
+      "ninja": 7,
+      "yamo": 20,
+      "bruce": 36
+    }
+  },
+  "appearance_reference_inputs": [
+    {
+      "path": "assets/graphics/v2/yamo-source.png",
+      "size_bytes": 1602924,
+      "sha256": "bfc1a94c775f4d60e7d74b95245ac214193222bf50254049419f916c4bfe7507"
+    },
+    {
+      "path": ".reference/art/user-yamo-2026-10-24.png",
+      "size_bytes": 458930,
+      "sha256": "73e15fd60226bb694072c541c9093501af99172cc618c6ce58cfaa88ec5b8279"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "amiga/intro_audio.h",
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027"
+    },
+    {
+      "path": "amiga/intro_audio_data.h",
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b"
+    },
+    {
+      "path": "tools/build_intro_audio.py",
+      "sha256": "4f82259133a4d75dbd9dcb8dd7a1cab5fc8028c822c58a3f528e27d3dfe92e00"
+    },
+    {
+      "path": "tools/verify_intro_audio.py",
+      "sha256": "1360629bc7b7a2fc884ece4c9e2294524583427aa1256aa7ecb008bce154a0c5"
+    },
+    {
+      "path": "assets/audio/intro-v1/manifest.json",
+      "sha256": "7c07beb139d0fefb6656f45d6be3b343a4b72bb835665bc682c1518f1c9765af"
+    },
+    {
+      "path": "assets/audio/intro-v1/generation.json",
+      "sha256": "c7e1678bba5ef6245b38f00aaee9bbaf00add7e900a45633935a8afddd3df845"
+    },
+    {
+      "path": "assets/audio/intro-v1/kiai-source_0.wav",
+      "sha256": "e8eaa692c067dc62fd1ed4621d776ebf03878d54f36779eceb782aca2ec4c930"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "b9bd4c8cd585dfe9d7459e63001b5abf762a5da863ba96db068934f1d7592def"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f"
+    },
+    {
+      "path": "tools/build_fighter_art.py",
+      "sha256": "453db965e35960f4c11dd0fd0d10bc7e307f21043f88a97cc96806abbcbbe30a"
+    },
+    {
+      "path": "assets/graphics/v2/bruce-source.png",
+      "sha256": "6fd38603173a9146dfb0001b8588f60d7bd14ee20f3976e53734563abc1ba8c5"
+    },
+    {
+      "path": "assets/graphics/v2/ninja-source.png",
+      "sha256": "cee9876cc5247150ecd0af19bc9d53b2902789182783e9f6932e5b595dd50be5"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-source-v3.png",
+      "sha256": "a6f8bf31c506037bf5abce0d2eaa73dcfcbdba011335846c859153dfc111ae0f"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-v3-generation.json",
+      "sha256": "c18bbfae24a1ef32946d04e4a905378dfa53ff87d65b9c5b2fb9c2612a8e2745"
+    },
+    {
+      "path": "assets/graphics/v2/generation.json",
+      "sha256": "f35d89387d3b5c5ff1138b7e5af28b152a7ecb06d6b5b0e9e6aa0b25b7ea8e5b"
+    },
+    {
+      "path": "assets/graphics/v1/mountains-indexed.png",
+      "sha256": "36c7587cb7add4e056fcbd149a3f46b075ae73b9499b3cddce77ec08d87a092a"
+    },
+    {
+      "path": "amiga/combat_audio.h",
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10"
+    },
+    {
+      "path": "amiga/combat_audio_data.h",
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0"
+    },
+    {
+      "path": "amiga/room_background_data.h",
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d"
+    },
+    {
+      "path": "tools/build_room_backgrounds.py",
+      "sha256": "7e80968319342af8eb5e11edf70eba45934400a2ef132c7e77150f282f61e771"
+    },
+    {
+      "path": "amiga/runtime.c",
+      "sha256": "748abb674d581035b4568df307f4058786e893d5e85897d7831fa5dbad004916"
+    },
+    {
+      "path": "amiga/start.s",
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "06ea019584dc8217e92ebb3eb669866f2e5eb1880041abba67a317b90b49bf82"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "dd847ec6678dd3782a71de9f59e3d7ee42b337140623520a76ccb3b294ab34f0"
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "e6441e3bb7f2ef220c7bfb34aefa1bdcb99edcad6e4531b61da40ec5fff3940e"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "89d4074a5d1667945ac2e04f3b3caeb63384eb3e508436fc3f275062233e7716"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "1660440a8a93a885632a90720ff443ba96342b568b969d17f7c4512964507b7d"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "tests/room_fixture.h",
+      "sha256": "b373e036b51f383eaba2e312a9e6d6018cd768021d2589eafce45840a34235dd"
+    },
+    {
+      "path": "tests/gate_fixture.h",
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "sha256": "364b62833f0b1d8595be96e6672c0b43b7ad26b4edae49978d526b29f68aae77"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "10bb254bcccf869c5002ffa8de39db5cdd543ebdd88dcfc7129c5c5faae83f53"
+    },
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "5b862c08419d1fc8a4a6065841328a9f2d3f6efad8a24148c941adb12553f5ca"
+    },
+    {
+      "path": "tools/preview_planar.py",
+      "sha256": "79773fe768cc1e63a324dddff3865e8708cfc854dcc309188712a5b61d5a93bb"
+    }
+  ],
+  "game_title": "Bruce",
+  "loading_illustration_implemented": false,
+  "manual_intro_listening_accepted": false,
+  "core_logic_hashes_unchanged_from_v3": true,
+  "intro_audio": {
+    "generator": "local AudioGen medium",
+    "source": "assets/audio/intro-v1/kiai-source_0.wav",
+    "source_sha256": "e8eaa692c067dc62fd1ed4621d776ebf03878d54f36779eceb782aca2ec4c930",
+    "rate": 11025,
+    "paula_period": 322,
+    "actual_pal_rate": 11015.201863354037,
+    "codec": "4-bit IMA ADPCM, zero initial predictor/index, high nibble first",
+    "samples": 26460,
+    "duration_seconds": 2.402134824966626,
+    "packed_bytes": 13230,
+    "decoded_bytes": 26460,
+    "extra_chip_bytes": 0,
+    "runtime_storage": "second 40960-byte game framebuffer, reused before first game frame",
+    "original_audio_used": false,
+    "speech_or_exact_syllables_certified": false,
+    "manual_listening_accepted": false,
+    "packed_sha256": "98f9579627a9b69796b69df9b562f5addf9022d31169343c63f462f0525cdc4e",
+    "decoded_sha256": "478b72955cdbf0c3d40bd745c7f2b46f32e58c9cb113c1c9a9b5c5eda9d270c9",
+    "conversion_snr_db": 17.618523295175216
+  },
+  "intro_codec_independent_check": "reference/validation/intro-codec-audit.json",
+  "intro_loading_fields": [
+    228,
+    228,
+    228,
+    233,
+    228
+  ],
+  "project_priority": "C64 source data and disassembly first; graphics/audio lower priority",
+  "analysis_only_room_reconstruction": "reference/validation/c64-room-reconstruction.json",
+  "room_model_integrated_in_runtime": false
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-24",
+  "status": "passed_static_candidate_source_checks",
+  "openings": [
+    {
+      "room": "R02",
+      "trigger": "R01/R02/R03 remaining all zero; R07 remaining nonzero",
+      "source_loop": "$3679-$36A5",
+      "door": 3,
+      "cells": [
+        19,
+        20,
+        21
+      ],
+      "row": 12,
+      "target": "R06",
+      "arrival": [
+        64,
+        50
+      ],
+      "opening_strings": [
+        18,
+        17,
+        16,
+        15
+      ]
+    },
+    {
+      "room": "R03",
+      "trigger": "R07 remaining zero",
+      "source_loop": "$36AE-$36CF",
+      "door": 5,
+      "cells": [
+        39
+      ],
+      "row": 11,
+      "target": "R04",
+      "arrival": [
+        8,
+        196
+      ]
+    },
+    {
+      "room": "R06",
+      "trigger": "R07 remaining zero AND R06 lamp2 or lamp4 collected (zero-based)",
+      "source_loop": "$38E8-$3915",
+      "door": 5,
+      "cells": [
+        35
+      ],
+      "row": 2,
+      "target": "R02",
+      "arrival": [
+        152,
+        102
+      ]
+    },
+    {
+      "room": "R06",
+      "trigger": "R06 lamp6 collected (zero-based)",
+      "source_loop": "$38CB-$38E8",
+      "door": 2,
+      "cells": [
+        0
+      ],
+      "row": 11,
+      "target": "R05",
+      "arrival": [
+        288,
+        81
+      ]
+    }
+  ],
+  "tile_contact_source": "$2E89/$2F51/$30D4: no direction-button gate for these interior tiles",
+  "primary_edition_verified": false,
+  "native_c64_opening_timing_certified": false,
+  "implementation_limits": [
+    "Amiga opens immediately; original four-stage hatch animation timing is not reproduced yet",
+    "Source conditions and destination tables verified; complete natural route and exact tile masks still need play testing",
+    "Other dynamic rooms, hazards, moving objects and completion remain open"
+  ],
+  "comparison_repo": {
+    "url": "https://github.com/jzielinski47/bruce-lee",
+    "commit": "b0d8b616bcf18d4bf78b5f5e3ebe3c17d5392030",
+    "authority": "Atari-based browser reconstruction, not C64 source",
+    "corroboration": "scenes.ts room1 key22 door; Door.ts compares total collected lanterns",
+    "used_for_c64_destinations": false
+  },
+  "c64_disassembly_commit": "25cf80529f91db064692a9cba9a4621b31828fd5",
+  "source_files": [
+    {
+      "path": ".reference/c64/work/untrained-memory.bin",
+      "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+    },
+    {
+      "path": ".reference/upstream/bruce/brucelee_ida_dis.txt",
+      "sha256": "db8aa5209f1fec388b10e80ed5befda46272fbfd21e6550855bb10d67a7eb76a"
+    },
+    {
+      "path": ".reference/upstream/bruce-lee/README.md",
+      "sha256": "01052adb32f31277bed84390c1d9f91a7d733279156fe00cbb326b28127115e5"
+    },
+    {
+      "path": ".reference/upstream/bruce-lee/src/scenes.ts",
+      "sha256": "463af9c6ca9aa847d48798fa90b190087dac202adebb6cc45a989567c00a4e05"
+    },
+    {
+      "path": ".reference/upstream/bruce-lee/src/sprites/Door.ts",
+      "sha256": "54ac6cc16d624e57aa3a39b74ca96e7b2717c7a8c7552651bb77fbb9672160b8"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "1660440a8a93a885632a90720ff443ba96342b568b969d17f7c4512964507b7d"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "tests/gate_fixture.h",
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b"
+    },
+    {
+      "path": "tests/rooms_test.c",
+      "sha256": "35e34cc445edf02f8a01c4cf68304a350b979f68eaf4c3f5540cc5e50626471d"
+    },
+    {
+      "path": "tools/analyze_c64_openings.py",
+      "sha256": "4ead361818dc0f45b4f58f47170a0e56f30331b6e48aca50a9b844e015c983a1"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "capture_id": "WALL-0001",
+  "checks_passed": true,
+  "full_combat_parity": false,
+  "primary_edition_verified": false,
+  "setup": "320 idle steps from frozen warmed baseline, then 90 escape steps; x>=64 is reporting threshold",
+  "alignment": "Previous boundary joystick sample -> one core step; one step equals three PAL fields",
+  "limitations": [
+    "One left floor corner in room zero; other walls and enemy phases are untested",
+    "Amiga escape durations are nominal host-core step conversions, not new A500 route timer measurements",
+    "Identical input prefix does not produce identical C64/core health or actor trajectories",
+    "This demonstrates escape routes, not general immunity or full enemy parity"
+  ],
+  "scenarios": [
+    {
+      "scenario": "wall-idle",
+      "c64": {
+        "start": [
+          1,
+          8,
+          196,
+          32
+        ],
+        "end": [
+          1,
+          8,
+          196,
+          21
+        ],
+        "first_x64_tick": null,
+        "escape_logic_steps": null,
+        "nominal_escape_ms_range": null,
+        "max_x": 8
+      },
+      "amiga_core": {
+        "start": [
+          1,
+          4,
+          196,
+          22
+        ],
+        "end": [
+          1,
+          4,
+          196,
+          1
+        ],
+        "first_x64_tick": null,
+        "escape_logic_steps": null,
+        "nominal_escape_ms_range": null,
+        "max_x": 4
+      }
+    },
+    {
+      "scenario": "wall-jump-right",
+      "c64": {
+        "start": [
+          1,
+          8,
+          196,
+          32
+        ],
+        "end": [
+          1,
+          136,
+          185,
+          23
+        ],
+        "first_x64_tick": 335,
+        "escape_logic_steps": 15,
+        "nominal_escape_ms_range": [
+          897.76381175095,
+          897.76381175095
+        ],
+        "max_x": 136
+      },
+      "amiga_core": {
+        "start": [
+          1,
+          4,
+          196,
+          22
+        ],
+        "end": [
+          1,
+          240,
+          189,
+          9
+        ],
+        "first_x64_tick": 344,
+        "escape_logic_steps": 24,
+        "nominal_escape_ms_range": [
+          1437.6878932136417,
+          1442.295867230352
+        ],
+        "max_x": 240
+      }
+    },
+    {
+      "scenario": "wall-duck-then-jump-right",
+      "c64": {
+        "start": [
+          1,
+          8,
+          196,
+          32
+        ],
+        "end": [
+          1,
+          148,
+          185,
+          30
+        ],
+        "first_x64_tick": 355,
+        "escape_logic_steps": 35,
+        "nominal_escape_ms_range": [
+          2094.7822274188834,
+          2094.7822274188834
+        ],
+        "max_x": 148
+      },
+      "amiga_core": {
+        "start": [
+          1,
+          4,
+          196,
+          22
+        ],
+        "end": [
+          1,
+          208,
+          190,
+          9
+        ],
+        "first_x64_tick": 354,
+        "escape_logic_steps": 34,
+        "nominal_escape_ms_range": [
+          2036.7245153859926,
+          2043.2524785763324
+        ],
+        "max_x": 208
+      }
+    },
+    {
+      "scenario": "wall-walk-right",
+      "c64": {
+        "start": [
+          1,
+          8,
+          196,
+          32
+        ],
+        "end": [
+          1,
+          294,
+          196,
+          25
+        ],
+        "first_x64_tick": 332,
+        "escape_logic_steps": 12,
+        "nominal_escape_ms_range": [
+          718.21104940076,
+          718.21104940076
+        ],
+        "max_x": 302
+      },
+      "amiga_core": {
+        "start": [
+          1,
+          4,
+          196,
+          22
+        ],
+        "end": [
+          1,
+          314,
+          196,
+          9
+        ],
+        "first_x64_tick": 341,
+        "escape_logic_steps": 21,
+        "nominal_escape_ms_range": [
+          1257.9769065619366,
+          1262.008883826558
+        ],
+        "max_x": 314
+      }
+    }
+  ],
+  "source_files": [
+    {
+      "path": "reference/traces/WALL-0001.json",
+      "sha256": "fd6513e9c8bd7e9861b15e1c53edcc6633096ff24dae01e2622de0af9317d295"
+    },
+    {
+      "path": "reference/timing-clocks.json",
+      "sha256": "6dfc85f3dc314ba009d3dfaea4cde99e0a3c7f0a9febb54905c86564c477d86b"
+    },
+    {
+      "path": "tools/compare_wall_escape.py",
+      "sha256": "b76454f674e7d3b8f87207018fce531180e15d2e9388f0bf3533627b3cdd3a08"
+    },
+    {
+      "path": "tests/combat_trace.c",
+      "sha256": "e664cb25360c0a01b1721373ce89e692033967777a949d003b71c0a3790aa762"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "06ea019584dc8217e92ebb3eb669866f2e5eb1880041abba67a317b90b49bf82"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "dd847ec6678dd3782a71de9f59e3d7ee42b337140623520a76ccb3b294ab34f0"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "e6441e3bb7f2ef220c7bfb34aefa1bdcb99edcad6e4531b61da40ec5fff3940e"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "89d4074a5d1667945ac2e04f3b3caeb63384eb3e508436fc3f275062233e7716"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "511584f5bd7ba4155b28d0982207ba0e9c1a2a266216088e5b500921de2a8d89"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "f2aacb45945e4a6811f12d9bc2d29502b64abd5418c5da574e3b446a286944bc"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    }
+  ]
+}

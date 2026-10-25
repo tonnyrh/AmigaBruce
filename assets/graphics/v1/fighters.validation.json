@@ -1,0 +1,13 @@
+{
+  "valid": true,
+  "errors": [],
+  "corrections": [],
+  "profile": "generic",
+  "width": 224,
+  "height": 78,
+  "colors": 16,
+  "transparent_index": 0,
+  "input_sha256": "724c833375c270ec050c896f8835815d7cea83e8bc69e198a0157b50f88cd635",
+  "output_sha256": null,
+  "ilbm_sha256": null
+}

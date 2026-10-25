@@ -1,0 +1,151 @@
+{
+  "original_pixels_used": false,
+  "roundtrip_passed": true,
+  "common_packed_bytes": 9821,
+  "total_packed_bytes": 117554,
+  "rooms": [
+    {
+      "room": 1,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 5406,
+      "sha256": "6e8bd570ee23ee8ef20c793a70b09d340568a28611ced0adaba75df7221eeeae"
+    },
+    {
+      "room": 2,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 4871,
+      "sha256": "00166ec844ee7c16f08a8351ec7b6b61bdc305bf0bcd54cba4b672fbdf26dc6b"
+    },
+    {
+      "room": 3,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 3992,
+      "sha256": "6ed983bf6a547bda1a65cd5a4ba566ef853e26ab7574b5faecafc88adc5c20cd"
+    },
+    {
+      "room": 4,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 3567,
+      "sha256": "0066bff119627912f84bd96d3c31f5d5b7bd008cd6b36b7289eaf959c32b646f"
+    },
+    {
+      "room": 5,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 8440,
+      "sha256": "0c85693cddb76c302b3dd81e2c12565479675802ac91c7f904a94894013f2b47"
+    },
+    {
+      "room": 6,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 5243,
+      "sha256": "879a81acdcc4509f3791b507f5540da8912e6694d1cb5c2215530f9d8d183b88"
+    },
+    {
+      "room": 7,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 6292,
+      "sha256": "6e69ffda1ca1933535af6c34147cc410288bb4155f9f7cc06543b0e713b76ae9"
+    },
+    {
+      "room": 8,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 2862,
+      "sha256": "b05827b55d3746dc5667f79c3173975d35d5d90fd051e662cef2969da55044ea"
+    },
+    {
+      "room": 9,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 14256,
+      "sha256": "9b38ddb0129d75c0ee7f1684219dd8d306ecb4dc1e5da6766ce866eab644b63c"
+    },
+    {
+      "room": 10,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 15143,
+      "sha256": "4a6870fb8386ef3f527f704dbb5c8ec5c4939dc5eafed98ea344658a7d41f3e1"
+    },
+    {
+      "room": 11,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 3332,
+      "sha256": "d84490dda31667b7eaced25f022a9627f651240675da78792fea0bd7cf214585"
+    },
+    {
+      "room": 12,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 9446,
+      "sha256": "116648128c5e2a9a29c0fdaad4950c9c9dd4235b0c541029e2b5ee4c5b6318f0"
+    },
+    {
+      "room": 13,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 3869,
+      "sha256": "5cf02d0592ac1251d6f5f4e6f5385b1c0af59f7b18366c462fff78f45e368e1a"
+    },
+    {
+      "room": 14,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 1868,
+      "sha256": "21d4ca36c1f28f3e85a3157856507bda6e9b28b0b8fde757d0dc29cce4a542de"
+    },
+    {
+      "room": 15,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 2851,
+      "sha256": "694271bd70b1841e1899dc9473f1e96ece4f77ea8b51d7472e7066c943b07899"
+    },
+    {
+      "room": 16,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 2329,
+      "sha256": "e188bab28f596a023e3fc69791bfa3c8c6a15d2911e1819157d10d0b68074306"
+    },
+    {
+      "room": 17,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 2447,
+      "sha256": "8cca5899959510bbcbaaa6d71f613bc76a012c27fdefcc9083fa1e54f40d25db"
+    },
+    {
+      "room": 18,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 3050,
+      "sha256": "1c6addca1622a590a78b6201ef08df9d2f54da2292ccf6bc149829f0aeab4d2b"
+    },
+    {
+      "room": 19,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 2563,
+      "sha256": "42de6ed808359427573f0615ee4fb3cd37f2eaed3d779eb465d46dffb20d9782"
+    },
+    {
+      "room": 20,
+      "unpacked_bytes": 40960,
+      "packed_bytes": 5906,
+      "sha256": "60f0aaea850f93677dd2fcc50729507ea117f4588723c17683d164755ec6b881"
+    }
+  ],
+  "generated_sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d",
+  "source_files": [
+    {
+      "path": "tools/build_room_backgrounds.py",
+      "sha256": "7e80968319342af8eb5e11edf70eba45934400a2ef132c7e77150f282f61e771"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "06ea019584dc8217e92ebb3eb669866f2e5eb1880041abba67a317b90b49bf82"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "reference/validation/room-blockouts.json",
+      "sha256": "2b20eeabbdcb1775ed5d1636c5e3134980aaed78b94b052a2eb3a11b653bbc9e"
+    },
+    {
+      "path": "assets/graphics/v1/mountains-indexed.png",
+      "sha256": "36c7587cb7add4e056fcbd149a3f46b075ae73b9499b3cddce77ec08d87a092a"
+    }
+  ]
+}

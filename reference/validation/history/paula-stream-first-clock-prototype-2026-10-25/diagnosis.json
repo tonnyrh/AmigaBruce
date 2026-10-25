@@ -1,0 +1,10 @@
+{
+  "status": "failed_prototype_not_delivery",
+  "first_run_frames": 6000,
+  "largest_chip_block": 44448,
+  "required": 49152,
+  "audio_missed_fields": 95,
+  "max_audio_gap": 30,
+  "second_run_stopped": true,
+  "reason": "Test snapshot spilled from slow RAM into Chip; full source loading was not yet an explicit pause"
+}

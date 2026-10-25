@@ -1,0 +1,14 @@
+{
+  "id": "SPRITES-0001",
+  "date": "2026-10-25",
+  "status": "candidate_code_derived_partial",
+  "full_original_parity": false,
+  "summary": "210 source components composed through actual6502 copy/position into210 pose/facing images;17280 source pose cases and211680 source/DMA pixels checked.324 selector fixtures on two68000 launches; source DMA FNV matches. Native actor bridge and full gameplay/timing remain open.",
+  "artifacts": [
+    {
+      "path": "reference/validation/c64-sprites-delivery.json",
+      "sha256": "8b35ff7bc87190ff4b60859e15a30e2ae16602f02ca14f7b8b0508bc223603ba",
+      "size_bytes": 21804
+    }
+  ]
+}

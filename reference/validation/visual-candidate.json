@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-25",
+  "status": "implemented_host_checked_native_validation_pending",
+  "artifact": {
+    "path": "reference/validation/paula-stream-delivery.json",
+    "sha256": "510dd4f62b56102b85251b5f0ee8b6571fe830c61221116180392b793fa2d43d"
+  },
+  "native_validation_complete": false,
+  "actor_logic_fully_ported": false,
+  "full_m2_parity": false,
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_playthrough_verified": false,
+  "primary_edition_verified": false,
+  "all_room_realtime_gate_passed": false,
+  "all_room_native_rerun_after_actor_changes": false,
+  "enhanced_art_active": false
+}

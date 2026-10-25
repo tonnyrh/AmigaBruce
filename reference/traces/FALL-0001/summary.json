@@ -1,0 +1,131 @@
+{
+  "capture_id": "FALL-0001",
+  "status": "candidate_full_machine_replay",
+  "primary_edition_verified": false,
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "profile": "VICE 3.10 x64sc PAL C64 MOS6569R3; sound disabled; IO Simulation on port 1",
+  "input": "active-low joystick lines via VICE IO Simulation device 37, zero-based port 0",
+  "boundary": "$1BCE before keyboard parser; last executed instruction $1BCC",
+  "warmup_idle_steps": 8,
+  "repetitions": 2,
+  "scenarios": [
+    {
+      "name": "ledge-held",
+      "samples": 185,
+      "identical_replays": 2,
+      "sha256": "7ae181ee845d9ada59c84b3408fc5c30463ea215c6607246ab821ecaa7935c79",
+      "min_step_cycles": 58359,
+      "max_step_cycles": 59465,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        150
+      ],
+      "y_range": [
+        101,
+        196
+      ]
+    },
+    {
+      "name": "ledge-reverse",
+      "samples": 185,
+      "identical_replays": 2,
+      "sha256": "227904b1c275c1bad6227a9a5099796fd47d69b49d3e5bc8d110d267ab0e5371",
+      "min_step_cycles": 58359,
+      "max_step_cycles": 59465,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        116
+      ],
+      "y_range": [
+        101,
+        196
+      ]
+    },
+    {
+      "name": "ledge-released",
+      "samples": 185,
+      "identical_replays": 2,
+      "sha256": "43034439927aa66ce5831674cae759577066fb0da5c76285044efd19ca8f5e5f",
+      "min_step_cycles": 58359,
+      "max_step_cycles": 59465,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        116
+      ],
+      "y_range": [
+        101,
+        196
+      ]
+    },
+    {
+      "name": "net-held",
+      "samples": 131,
+      "identical_replays": 2,
+      "sha256": "b3e354203244870e02d9566ea5984a1bfdf5a5e99fbce8624310e0b908ac17e7",
+      "min_step_cycles": 58473,
+      "max_step_cycles": 59407,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        91
+      ],
+      "y_range": [
+        137,
+        196
+      ]
+    },
+    {
+      "name": "net-reverse",
+      "samples": 131,
+      "identical_replays": 2,
+      "sha256": "b25a40e6a4d3a3258db579bd1ddb0c5c2d1b9b1cde48b407b549be5220348e9d",
+      "min_step_cycles": 58473,
+      "max_step_cycles": 59407,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        91
+      ],
+      "y_range": [
+        137,
+        196
+      ]
+    },
+    {
+      "name": "net-released",
+      "samples": 131,
+      "identical_replays": 2,
+      "sha256": "0ddbdeb7add54def1cb16a4a21105ac288d9de1eed27e5e4b31c6316c2c7e7af",
+      "min_step_cycles": 58473,
+      "max_step_cycles": 59407,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        91
+      ],
+      "y_range": [
+        137,
+        196
+      ]
+    }
+  ],
+  "recorder_sources": [
+    {
+      "path": "tools/vice_binary.py",
+      "sha256": "91eded222cb7e6d11ddd8e59762ecf028fd7ca490bc915915a4c7714c7366fb4"
+    },
+    {
+      "path": "tools/capture_c64_movement.py",
+      "sha256": "e770d70671f697234ec04531721e8144abfb1bc25b11ae23fc75ef486929a2c8"
+    },
+    {
+      "path": "capture-c64.ps1",
+      "sha256": "69ed4c3397a15dd73f52f0025468dce34cbc68482e5d1fcc36e8c4acd0a7c676"
+    }
+  ],
+  "input_program_sha256": "2252af0e39731cbfa3a6c0b591c687ba5b31c02992a1e15c7b61b09f02da3d99"
+}

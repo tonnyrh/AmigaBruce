@@ -1,0 +1,58 @@
+{
+  "capture_id": "MACHINE-0006",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_replayed_not_primary_verified",
+  "date": "2026-10-19",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008",
+    "SRC-010"
+  ],
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "parity_ids": [
+    "PAR-005",
+    "PAR-013"
+  ],
+  "scenarios": 6,
+  "game_seam_observations": 294,
+  "limitations": [
+    "Retail identity unverified",
+    "Not Amiga intra-field input parity",
+    "C64 damage and enemy hitboxes still unmeasured",
+    "Existing diagonal-jump landing discrepancy retained"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/traces/MACHINE-0006/diagonal-fire-from-idle.csv",
+      "sha256": "539e11afa88cebea70380e247617120b11ccffd1c4c68e7fa3b07e6d64e42816"
+    },
+    {
+      "path": "reference/traces/MACHINE-0006/short-fire-tap.csv",
+      "sha256": "0b7af6494e0927bf785b394b96eebe6e1dbdc6c630e548823591839bca6aa242"
+    },
+    {
+      "path": "reference/traces/MACHINE-0006/summary.json",
+      "sha256": "88badb35c9314aab5d05e55c48198eb662022fff908ba8eb65471df31b62ab41"
+    },
+    {
+      "path": "reference/traces/MACHINE-0006/walk-five-fire.csv",
+      "sha256": "7fb3ebae292c0eb98eeadef41fe5e0d9bf7381e9037ece06734c0a0c642284ff"
+    },
+    {
+      "path": "reference/traces/MACHINE-0006/walk-four-fire.csv",
+      "sha256": "ea69d461a90699e85d87460416fb071a599657183c0ad030aad2d8d8f78d3ecf"
+    },
+    {
+      "path": "reference/traces/MACHINE-0006/walk-six-fire.csv",
+      "sha256": "1de026fa53488181fbc1bc7704709a97f2540e32945cffe2e93a1b34a26dcf48"
+    },
+    {
+      "path": "reference/traces/MACHINE-0006/walk-two-fire.csv",
+      "sha256": "75efff9960166326ee7bcdc3eb886b4ab02d64eb2612031b83a926f4088d59e5"
+    },
+    {
+      "path": "reference/scenarios/MACHINE-0006.json",
+      "sha256": "e6283540ff395534119e6a9bfd976dc00b951019d79879fcc357b96ab639a363"
+    }
+  ]
+}

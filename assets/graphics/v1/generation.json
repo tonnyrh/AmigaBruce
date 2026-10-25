@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-24",
+  "tool": "built-in image_gen",
+  "seed": null,
+  "seed_note": "The built-in tool did not expose a seed. Preserve source PNG bytes for reproducible conversion.",
+  "reference": ".reference/c64/work/room1-visible.png",
+  "reference_role": "identity and overall scenery inspiration, not an exact composite sprite/pose source",
+  "c64_frame_by_frame_mapping_complete": false,
+  "fighters_prompt": "Create a production sprite atlas for an Amiga 500 OCS side-view Bruce Lee martial arts game. Reference image is identity and scale inspiration ONLY; draw new refined pixel artwork, not a screenshot. EXACT GRID: seven equally spaced columns by three equally spaced rows, no lines, no labels, no text. Transparent background. Every cell same size, figures within each cell, generous empty margins, no overlapping cells. Row1: Yamo, stocky muscular green-clad sumo brawler, bare head. Row2: black/navy masked Ninja with small silver sai weapon. Row3: Bruce, slim black-haired martial artist in yellow trousers with bare upper torso. All three rows FACE RIGHT except climbing poses face the wall/back view. Seven columns in each row, in this exact order: 1 standing guard; 2 wide running stride; 3 standing extended straight punch; 4 flying side kick with torso reclined backward and exactly TWO legs, one extended right and the other tucked; 5 climbing a wall with left hand raised and right knee raised (Ninja instead shows extended forward sai strike); 6 lying fully horizontal on ground; 7 climbing wall with right hand raised and left knee raised. This is tiny pixel art intended for a 32x26 pixel cell at runtime. Crisp low resolution forms, readable silhouettes, no antialiasing, no soft shadows. Each standing figure around 22 pixels tall after downsampling, same fixed foot baseline near bottom of every cell; prone should remain short and wide, not upright. Shared 16-color palette: dark blue-black outlines, muted blue gray, warm skin tan, bright yellow Bruce trousers, green Yamo clothes, silver-white weapon. Preserve the character identities from reference but improve anatomy and shading. No background scene, no scenery, no logo or caption.",
+  "reference_sha256": "e924463442630064fe43da2bfba526ac5027150d541e2901019025729bb0ca3d",
+  "mountains_prompt_path": "assets/graphics/v1/mountains-prompt.txt",
+  "source_files": [
+    {
+      "path": "assets/graphics/v1/fighters-source.png",
+      "sha256": "4dcaf346cf8b1607d9e9c66087c14b0d24c63c55236389400725441571125a92"
+    },
+    {
+      "path": "assets/graphics/v1/mountains-source.png",
+      "sha256": "96ea412a0ecd650663c63722060e6ade718f6e355dddf1bf9596efe0344122ce"
+    },
+    {
+      "path": "assets/graphics/v1/mountains-prompt.txt",
+      "sha256": "d406fc06caf822126dd6c0e80fc718cd4de969e09eb7b5ed44eb47a7dbf9d9ec"
+    }
+  ]
+}

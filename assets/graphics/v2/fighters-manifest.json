@@ -1,0 +1,1147 @@
+{
+  "generator": "built-in image_gen",
+  "exact_c64_sprite_composition": false,
+  "original_pixels_shipped": false,
+  "packed_bytes": 29952,
+  "width": 48,
+  "height": 26,
+  "poses_per_actor": 16,
+  "palette_ocs": [
+    17,
+    291,
+    837,
+    1383,
+    2475,
+    3294,
+    4095,
+    1963,
+    565,
+    855,
+    1128,
+    2916,
+    3512,
+    4069,
+    1204,
+    355
+  ],
+  "frames": [
+    {
+      "actor": "yamo",
+      "pose": 0,
+      "source_pose": 0,
+      "source_rect": [
+        0,
+        0,
+        420,
+        280
+      ],
+      "source_anchor": [
+        265,
+        270
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "c12f5783854c6497b3f689749d508dafd30c3ec977e6707e29579f4a5f7f590b"
+    },
+    {
+      "actor": "yamo",
+      "pose": 1,
+      "source_pose": 1,
+      "source_rect": [
+        420,
+        0,
+        800,
+        280
+      ],
+      "source_anchor": [
+        210,
+        270
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "3c9b5330b48a44572bcc721cf3108ca0a491d480db1a577af0fef6a8e13628e3"
+    },
+    {
+      "actor": "yamo",
+      "pose": 2,
+      "source_pose": 2,
+      "source_rect": [
+        800,
+        0,
+        1160,
+        280
+      ],
+      "source_anchor": [
+        160,
+        270
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "f959abb4b3b0bc220b9924735d9070b769b8bf77d377afa76def79f9486adfd7"
+    },
+    {
+      "actor": "yamo",
+      "pose": 3,
+      "source_pose": 3,
+      "source_rect": [
+        1160,
+        0,
+        1536,
+        280
+      ],
+      "source_anchor": [
+        180,
+        270
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "a94731ba2b2977140177f1f32d6a7b905fea4863e566104e5431896e6c9a94a9"
+    },
+    {
+      "actor": "yamo",
+      "pose": 4,
+      "source_pose": 4,
+      "source_rect": [
+        0,
+        280,
+        420,
+        550
+      ],
+      "source_anchor": [
+        270,
+        258
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "49bddb51ea1ff0b4823213ebf6630ee1256079e10825243f32212f584796c572"
+    },
+    {
+      "actor": "yamo",
+      "pose": 5,
+      "source_pose": 5,
+      "source_rect": [
+        420,
+        280,
+        800,
+        550
+      ],
+      "source_anchor": [
+        197,
+        258
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "e101e08062e388193fa9d0e2b177f2f7cec6153be5b3c167135a571b1e6b878e"
+    },
+    {
+      "actor": "yamo",
+      "pose": 6,
+      "source_pose": 6,
+      "source_rect": [
+        800,
+        280,
+        1160,
+        550
+      ],
+      "source_anchor": [
+        143,
+        258
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "b183c7bcf6f960591e3677310eacba9101e9d10f3abe3e9e289e6b06090f464e"
+    },
+    {
+      "actor": "yamo",
+      "pose": 7,
+      "source_pose": 7,
+      "source_rect": [
+        1160,
+        280,
+        1536,
+        550
+      ],
+      "source_anchor": [
+        138,
+        258
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "0f44bac6136e551bf5d7eb53589e075c6f371581ae07ed78eaff214219a21e37"
+    },
+    {
+      "actor": "yamo",
+      "pose": 8,
+      "source_pose": 8,
+      "source_rect": [
+        0,
+        550,
+        420,
+        786
+      ],
+      "source_anchor": [
+        250,
+        236
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "10a54a4c35cd133644b9e630f999456afa01f835afb93a08a94e60c4bdf3e96e"
+    },
+    {
+      "actor": "yamo",
+      "pose": 9,
+      "source_pose": 9,
+      "source_rect": [
+        420,
+        550,
+        800,
+        786
+      ],
+      "source_anchor": [
+        180,
+        236
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "718f4b00d9cf0887caa95a89adc18e1b8dbfbdb7001d4170d47414975e427634"
+    },
+    {
+      "actor": "yamo",
+      "pose": 10,
+      "source_pose": 10,
+      "source_rect": [
+        800,
+        550,
+        1160,
+        786
+      ],
+      "source_anchor": [
+        120,
+        236
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "7da2495b0bc59ece6db6c18ed6768b86194ef25df8efe1568543e2a5c5919d98"
+    },
+    {
+      "actor": "yamo",
+      "pose": 11,
+      "source_pose": 11,
+      "source_rect": [
+        1160,
+        550,
+        1536,
+        786
+      ],
+      "source_anchor": [
+        140,
+        236
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "701e3e906b72f24a4d951078ca2d2a80ef217f2e2a5274e12cb3ad3cced36d38"
+    },
+    {
+      "actor": "yamo",
+      "pose": 12,
+      "source_pose": 12,
+      "source_rect": [
+        0,
+        786,
+        420,
+        1024
+      ],
+      "source_anchor": [
+        235,
+        222
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "131cc470073bf724895475ab4eb3c3d820daefc8a0c77bf60e82ca108143b2a5"
+    },
+    {
+      "actor": "yamo",
+      "pose": 13,
+      "source_pose": 13,
+      "source_rect": [
+        420,
+        786,
+        800,
+        1024
+      ],
+      "source_anchor": [
+        125,
+        222
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "4c4bb601bf313b9c8e0697267d8d44933e9ba1fbe99ba94ebeee3d5f5fe8eb01"
+    },
+    {
+      "actor": "yamo",
+      "pose": 14,
+      "source_pose": 14,
+      "source_rect": [
+        800,
+        786,
+        1080,
+        1024
+      ],
+      "source_anchor": [
+        160,
+        222
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "ded4e1e2d700a4a4a52ff6bf1cf58ffb2fb9e799f68759cd17699b182c37f737"
+    },
+    {
+      "actor": "yamo",
+      "pose": 15,
+      "source_pose": 15,
+      "source_rect": [
+        1090,
+        786,
+        1536,
+        1024
+      ],
+      "source_anchor": [
+        205,
+        206
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "7f613afb487b80cba3b133d57d6bf60a63427a8d1d23a20f5435b9299cfda2f0"
+    },
+    {
+      "actor": "ninja",
+      "pose": 0,
+      "source_pose": 0,
+      "source_rect": [
+        0,
+        0,
+        390,
+        282
+      ],
+      "source_anchor": [
+        235,
+        265
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "a819b6aaef407861ebd0222ce3e32a66ade170878e91bd8fd64ecdd870ef194a"
+    },
+    {
+      "actor": "ninja",
+      "pose": 1,
+      "source_pose": 1,
+      "source_rect": [
+        390,
+        0,
+        780,
+        282
+      ],
+      "source_anchor": [
+        235,
+        265
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "86f4acf9fa76762cf4a5e27906fcbd5f439768586a51d51db398e9118c64a212"
+    },
+    {
+      "actor": "ninja",
+      "pose": 2,
+      "source_pose": 2,
+      "source_rect": [
+        780,
+        0,
+        1170,
+        282
+      ],
+      "source_anchor": [
+        235,
+        265
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "ae6fe00ed2c0d8e54065ec97b8a2e921d0278b9d6898552b9d99adebd57b4f94"
+    },
+    {
+      "actor": "ninja",
+      "pose": 3,
+      "source_pose": 3,
+      "source_rect": [
+        1170,
+        0,
+        1558,
+        282
+      ],
+      "source_anchor": [
+        235,
+        265
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "edd7717e94266d299c3223eec71e2c41ee25278bc2722fb0d300a0252f9ad4da"
+    },
+    {
+      "actor": "ninja",
+      "pose": 4,
+      "source_pose": 4,
+      "source_rect": [
+        0,
+        282,
+        390,
+        538
+      ],
+      "source_anchor": [
+        225,
+        246
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "382d736c25b63bcc1e0bd2696c28371b33ce82378e5a37171dc4fc5e1079f3e4"
+    },
+    {
+      "actor": "ninja",
+      "pose": 5,
+      "source_pose": 5,
+      "source_rect": [
+        390,
+        282,
+        780,
+        538
+      ],
+      "source_anchor": [
+        225,
+        246
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "8a04f67efadd05c9c16b56c9b54e5fb53d4667746e0e3b1ba9e07de472acd423"
+    },
+    {
+      "actor": "ninja",
+      "pose": 6,
+      "source_pose": 6,
+      "source_rect": [
+        780,
+        282,
+        1170,
+        538
+      ],
+      "source_anchor": [
+        225,
+        246
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "14667ea2b494b0867c7628aa9f5dd4b26fafb269be20585ad76aaa0b1dc2336b"
+    },
+    {
+      "actor": "ninja",
+      "pose": 7,
+      "source_pose": 7,
+      "source_rect": [
+        1170,
+        282,
+        1558,
+        538
+      ],
+      "source_anchor": [
+        225,
+        246
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "a39f3e5770c7e35ba78b397463dc8dae6aef9d3643a9fa1fb9fc32bfaa3dddd7"
+    },
+    {
+      "actor": "ninja",
+      "pose": 8,
+      "source_pose": 8,
+      "source_rect": [
+        0,
+        538,
+        390,
+        767
+      ],
+      "source_anchor": [
+        225,
+        213
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "ed85c1f7d54806ea024690545b8e9313b870b6862e426d6c3bde67dbe6fe0ea2"
+    },
+    {
+      "actor": "ninja",
+      "pose": 9,
+      "source_pose": 9,
+      "source_rect": [
+        390,
+        538,
+        780,
+        767
+      ],
+      "source_anchor": [
+        210,
+        213
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "0cf161bd4491f1f65735a3fb5cd62151abd85c0d7c81afc9b22afa2b5ccf5772"
+    },
+    {
+      "actor": "ninja",
+      "pose": 10,
+      "source_pose": 10,
+      "source_rect": [
+        780,
+        538,
+        1170,
+        767
+      ],
+      "source_anchor": [
+        175,
+        213
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "376976832223ddf9f3c4ccd39ec1f0884ab399ac29c3358a6b55983976dd747f"
+    },
+    {
+      "actor": "ninja",
+      "pose": 11,
+      "source_pose": 11,
+      "source_rect": [
+        1170,
+        538,
+        1558,
+        767
+      ],
+      "source_anchor": [
+        225,
+        213
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "82b53e828fc6cd29b926481f171df97b060d8828d59580d9857a720fc38ba8ea"
+    },
+    {
+      "actor": "ninja",
+      "pose": 12,
+      "source_pose": 12,
+      "source_rect": [
+        0,
+        767,
+        390,
+        1010
+      ],
+      "source_anchor": [
+        230,
+        213
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "4b05bf43d5eefc748960a9a2f74221ddc01c4814b3554398927b4cdd29636bf1"
+    },
+    {
+      "actor": "ninja",
+      "pose": 13,
+      "source_pose": 13,
+      "source_rect": [
+        390,
+        767,
+        780,
+        1010
+      ],
+      "source_anchor": [
+        150,
+        213
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "3ae1c03b4fedafb8b2570115fff786ab24be80c17a81a32652cf6a8a70de5732"
+    },
+    {
+      "actor": "ninja",
+      "pose": 14,
+      "source_pose": 14,
+      "source_rect": [
+        780,
+        767,
+        1090,
+        1010
+      ],
+      "source_anchor": [
+        230,
+        213
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "72d86a48f085696c56b1db249174110894b3bba2adbf8f09b6949eacedbaf307"
+    },
+    {
+      "actor": "ninja",
+      "pose": 15,
+      "source_pose": 15,
+      "source_rect": [
+        1090,
+        767,
+        1558,
+        1010
+      ],
+      "source_anchor": [
+        240,
+        213
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "0ad556340e56b4226fa2ba7d734042c3f2777c1f4fc5a403b9952fbbe841beea"
+    },
+    {
+      "actor": "bruce",
+      "pose": 0,
+      "source_pose": 0,
+      "source_rect": [
+        0,
+        0,
+        350,
+        294
+      ],
+      "source_anchor": [
+        190,
+        286
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "b89fd2ef635cbece364990316a346c3808ffe081c8895acc64c85678b6147048"
+    },
+    {
+      "actor": "bruce",
+      "pose": 1,
+      "source_pose": 1,
+      "source_rect": [
+        350,
+        0,
+        700,
+        294
+      ],
+      "source_anchor": [
+        190,
+        286
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "291ac2f678c1795d1b1976e30e24148f57e61e55edb622037ddaff94b400f365"
+    },
+    {
+      "actor": "bruce",
+      "pose": 2,
+      "source_pose": 2,
+      "source_rect": [
+        700,
+        0,
+        1050,
+        294
+      ],
+      "source_anchor": [
+        190,
+        286
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "b1f945d33f264ea19d8af12e40da8b1a770cf2a682b4a7fbdc2866fc38d8add6"
+    },
+    {
+      "actor": "bruce",
+      "pose": 3,
+      "source_pose": 3,
+      "source_rect": [
+        1050,
+        0,
+        1402,
+        294
+      ],
+      "source_anchor": [
+        190,
+        286
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "a9797ec14d3619f02ff54be03b7e8e9b479a4923c215ae9ec1245bdf0670012f"
+    },
+    {
+      "actor": "bruce",
+      "pose": 4,
+      "source_pose": 4,
+      "source_rect": [
+        0,
+        294,
+        350,
+        584
+      ],
+      "source_anchor": [
+        185,
+        278
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "9e7beffe0313d3727ee5ffd98a36a4b38e395f52c8cdee4aa15324a57c67446b"
+    },
+    {
+      "actor": "bruce",
+      "pose": 5,
+      "source_pose": 5,
+      "source_rect": [
+        350,
+        294,
+        700,
+        584
+      ],
+      "source_anchor": [
+        185,
+        278
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "f8afbf21ad46dc132ff8224cb5a30f7dc7b4eb0628e390634fffd9a150aa3c09"
+    },
+    {
+      "actor": "bruce",
+      "pose": 6,
+      "source_pose": 4,
+      "source_rect": [
+        0,
+        294,
+        350,
+        584
+      ],
+      "source_anchor": [
+        185,
+        278
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": true,
+      "sha256": "9e7beffe0313d3727ee5ffd98a36a4b38e395f52c8cdee4aa15324a57c67446b"
+    },
+    {
+      "actor": "bruce",
+      "pose": 7,
+      "source_pose": 5,
+      "source_rect": [
+        350,
+        294,
+        700,
+        584
+      ],
+      "source_anchor": [
+        185,
+        278
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": true,
+      "sha256": "f8afbf21ad46dc132ff8224cb5a30f7dc7b4eb0628e390634fffd9a150aa3c09"
+    },
+    {
+      "actor": "bruce",
+      "pose": 8,
+      "source_pose": 8,
+      "source_rect": [
+        0,
+        584,
+        350,
+        870
+      ],
+      "source_anchor": [
+        190,
+        268
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "ad4051ef53109924dbec8fa6ac21d1b7a64ffffd3274ebcee90811e79b6d557b"
+    },
+    {
+      "actor": "bruce",
+      "pose": 9,
+      "source_pose": 9,
+      "source_rect": [
+        350,
+        584,
+        700,
+        870
+      ],
+      "source_anchor": [
+        180,
+        268
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "8a211ddd5d2b058f2a8a3079e8deb2c209e52d293bb9440e514403434d4ddaf8"
+    },
+    {
+      "actor": "bruce",
+      "pose": 10,
+      "source_pose": 10,
+      "source_rect": [
+        700,
+        584,
+        1050,
+        870
+      ],
+      "source_anchor": [
+        170,
+        268
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "e0d249f9a5560a13dad1a3c32722a9d3ae321f58eaf135a7d48815bb7745ff16"
+    },
+    {
+      "actor": "bruce",
+      "pose": 11,
+      "source_pose": 11,
+      "source_rect": [
+        1050,
+        584,
+        1402,
+        870
+      ],
+      "source_anchor": [
+        190,
+        268
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "d8c76eaef727a25f44b946816d5e12ccf7c247169b6cb96371a091849595b272"
+    },
+    {
+      "actor": "bruce",
+      "pose": 12,
+      "source_pose": 12,
+      "source_rect": [
+        0,
+        870,
+        350,
+        1122
+      ],
+      "source_anchor": [
+        180,
+        234
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "1e96bbdc09a95032f27def6bf5bae7970e9ac75304471e96b0bb87aa69595eb0"
+    },
+    {
+      "actor": "bruce",
+      "pose": 13,
+      "source_pose": 13,
+      "source_rect": [
+        350,
+        870,
+        700,
+        1122
+      ],
+      "source_anchor": [
+        125,
+        234
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "0410c7f5d8225547c0fee84945d1c9049e42beea07996d88d74a666d7542cd1e"
+    },
+    {
+      "actor": "bruce",
+      "pose": 14,
+      "source_pose": 14,
+      "source_rect": [
+        700,
+        870,
+        1010,
+        1122
+      ],
+      "source_anchor": [
+        185,
+        234
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "334fc47281eb67b478396f15b1388df0af323fab7d13a7fa0f5c0e3a102dbfc0"
+    },
+    {
+      "actor": "bruce",
+      "pose": 15,
+      "source_pose": 15,
+      "source_rect": [
+        1010,
+        870,
+        1402,
+        1122
+      ],
+      "source_anchor": [
+        190,
+        234
+      ],
+      "anchor": [
+        24,
+        25
+      ],
+      "width": 48,
+      "height": 26,
+      "opposite_side_runtime_reflection": false,
+      "sha256": "fcc59a103886e3f58eff5bbf3eb16ce2d1ceff142abb65eb87f244d50b277ba1"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "assets/graphics/v2/yamo-green-source-v3.png",
+      "sha256": "a6f8bf31c506037bf5abce0d2eaa73dcfcbdba011335846c859153dfc111ae0f"
+    },
+    {
+      "path": "assets/graphics/v2/ninja-source.png",
+      "sha256": "cee9876cc5247150ecd0af19bc9d53b2902789182783e9f6932e5b595dd50be5"
+    },
+    {
+      "path": "assets/graphics/v2/bruce-source.png",
+      "sha256": "6fd38603173a9146dfb0001b8588f60d7bd14ee20f3976e53734563abc1ba8c5"
+    }
+  ]
+}

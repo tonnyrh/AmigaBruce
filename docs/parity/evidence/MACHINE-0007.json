@@ -1,0 +1,44 @@
+{
+  "capture_id": "MACHINE-0007",
+  "date": "2026-10-20",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_replayed_not_primary_verified",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008",
+    "SRC-010"
+  ],
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "parity_ids": [
+    "PAR-007",
+    "PAR-014",
+    "PAR-015",
+    "PAR-016"
+  ],
+  "scenarios": 2,
+  "samples": 352,
+  "limitations": [
+    "Retail identity unverified",
+    "No natural fall-contact hit in combat routes",
+    "Amiga target geometry and damage are provisional",
+    "Ninja/Yamo AI not implemented"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/traces/MACHINE-0007/mid-net-left-fall.csv",
+      "sha256": "9ffb1c304b7e3ee4d241cf3e878c623413fdecb9410c85cc3bcf1242e14db5e1"
+    },
+    {
+      "path": "reference/traces/MACHINE-0007/summary.json",
+      "sha256": "f4603bf0c11d410921e77cf9f513ec3440e734271667dfb9c5d61d431d5e782e"
+    },
+    {
+      "path": "reference/traces/MACHINE-0007/upper-ledge-fall.csv",
+      "sha256": "34dfb5c55baba5153010ca97e19c21dd317686a6608d19bdb494d0f574d2595e"
+    },
+    {
+      "path": "reference/scenarios/MACHINE-0007.json",
+      "sha256": "923f8488c6c8bb71266bf7463c41b4f1c1194b85b8c1a9eb74cca0155aef6317"
+    }
+  ]
+}

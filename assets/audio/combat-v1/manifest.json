@@ -1,0 +1,65 @@
+{
+  "generator": "local AudioGen medium",
+  "rate": 8000,
+  "codec": "4-bit logarithmic PCM, decoded to signed 8-bit for Paula",
+  "packed_bytes": 2000,
+  "chip_bytes": 4004,
+  "variants": [
+    {
+      "name": "punch_0",
+      "offset": 0,
+      "samples": 800,
+      "duration_ms": 100,
+      "source_start_sample": 270,
+      "source_rate": 16000,
+      "source_sha256": "399fad8247c1b826e570ad32e03074bb07329944354904a6777a067dadc0cb9b",
+      "packed_sha256": "4f19fd2bf4aa8adc1bc88eb01dfbfe849f9517020687e7a393d6c504d8a0fce3",
+      "peak": 120,
+      "rms": 24.736562008492612
+    },
+    {
+      "name": "punch_1",
+      "offset": 800,
+      "samples": 800,
+      "duration_ms": 100,
+      "source_start_sample": 2008,
+      "source_rate": 16000,
+      "source_sha256": "5bdc4489f86d79fdace21f9a2747c5119a79cecc4b537e62f291648c3a31f218",
+      "packed_sha256": "c0fdc0a77b672ceca69d042378217999fb1471000983846318a4d8775129405f",
+      "peak": 120,
+      "rms": 25.34168995943246
+    },
+    {
+      "name": "kick_0",
+      "offset": 1600,
+      "samples": 1200,
+      "duration_ms": 150,
+      "source_start_sample": 409,
+      "source_rate": 16000,
+      "source_sha256": "f5eca0517c485b3638d7bae0c3ef611091670929050ac2f31525b7c3610bc76a",
+      "packed_sha256": "80785102bb49140025d77a62d17ee2777dba06f825031dce91fb100bf8a10cb7",
+      "peak": 120,
+      "rms": 35.32852954766162
+    },
+    {
+      "name": "kick_1",
+      "offset": 2800,
+      "samples": 1200,
+      "duration_ms": 150,
+      "source_start_sample": 2255,
+      "source_rate": 16000,
+      "source_sha256": "e5f80d8859ef02beb44f18ed2b7ccccf776f28ffd1eae9b18c7d207cf7496853",
+      "packed_sha256": "f4aaa051174b130471bc4195cb75148666ff071435fdec8983edcd7cbf285033",
+      "peak": 82,
+      "rms": 37.79803786794582
+    }
+  ],
+  "runtime_pitch_periods": [
+    422,
+    432,
+    443,
+    454,
+    465
+  ],
+  "original_audio_used": false
+}

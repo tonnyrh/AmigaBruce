@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-22",
+  "primary": {
+    "id": "c64-1984-pal-rakki-s0",
+    "title": "Bruce Lee",
+    "platform": "C64",
+    "year": 1984,
+    "video_standard": "PAL",
+    "region": "UK",
+    "publisher_as_catalogued": "Datasoft Inc., U.S. Gold Ltd.",
+    "source_id": "SRC-001",
+    "catalogue_url": "https://preservation64.de/index.php?title=Bruce_Lee&oldid=49459",
+    "file_page_url": "https://preservation64.de/index.php?title=File:BruceLee_rakki_s0.g64&oldid=23978",
+    "download_url": "https://preservation64.de/images/8/89/BruceLee_rakki_s0.g64",
+    "filename": "BruceLee_rakki_s0.g64",
+    "original_path": ".reference/c64/original/BruceLee_rakki_s0.g64",
+    "working_path": ".reference/c64/work/BruceLee_rakki_s0.g64",
+    "sha256": null,
+    "size_bytes": null,
+    "acquisition_status": "blocked_http_401",
+    "edition_verification_status": "catalogue_only",
+    "boot_status": "not_run",
+    "blocker": "2026-10-18: public file page available; binary download returned HTTP 401. Authorized local copy or archive access required.",
+    "redistribute": false
+  },
+  "secondary": {
+    "id": "c64-editor-5k3105",
+    "source_id": "SRC-002",
+    "url": "https://github.com/5k3105/bruce",
+    "commit": "25cf80529f91db064692a9cba9a4621b31828fd5",
+    "local_path": ".reference/upstream/bruce",
+    "license_status": "no_root_license_file_found_review_required",
+    "relationship_to_primary": "unverified",
+    "use": "analysis_only_not_gameplay_oracle",
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "b7c90ca159adc87845ccc02eae75eca70f4aab5265f8d17791bf932e8bc6c859",
+        "size_bytes": 2919
+      },
+      {
+        "path": "const.go",
+        "sha256": "0b2454f5b8758e350e9ff20e76a874269a97324d9efba8896cb59dbfe4d24919",
+        "size_bytes": 2973
+      },
+      {
+        "path": "mementry_notes.txt",
+        "sha256": "ca14ab7e4b150d842af0af34cb58beeb002d1b2153418b0a85c94182114996d6",
+        "size_bytes": 2148
+      },
+      {
+        "path": "brucelee_ida_dis.txt",
+        "sha256": "db8aa5209f1fec388b10e80ed5befda46272fbfd21e6550855bb10d67a7eb76a",
+        "size_bytes": 2293356
+      },
+      {
+        "path": "original_data/EnemyEntry",
+        "sha256": "3118c00f6b5cab52b8e84765337737665f799b4fbef9b80540b014d84fa56a6f",
+        "size_bytes": 22
+      },
+      {
+        "path": "original_data/HeaderData",
+        "sha256": "2330acba8ec9acf702f181686b9a867fd698b75a9953639a73b617b4c9d3a271",
+        "size_bytes": 102
+      },
+      {
+        "path": "original_data/HeaderPointers",
+        "sha256": "0423a14e25920780fa73e0c9e30c3cd76756bd464dc7e1777453ff3cf088db15",
+        "size_bytes": 42
+      },
+      {
+        "path": "original_data/LanternCounts",
+        "sha256": "e88981ac648cf0c4a3956c4f1c716c59fb7cd1906fd077e6df0e9a3c01307085",
+        "size_bytes": 22
+      },
+      {
+        "path": "original_data/LanternData",
+        "sha256": "866ce244aa95e7dbed45c34c13626c4c3c0b56ddf1c696e3c0e50be5fb992714",
+        "size_bytes": 388
+      },
+      {
+        "path": "original_data/LanternPointers",
+        "sha256": "77d91e6a0240239dd0f4b9d719ea8fd7747aba89618e64f69347571febe2a742",
+        "size_bytes": 42
+      },
+      {
+        "path": "original_data/LanternRecs.record",
+        "sha256": "1775b4063faa2c739f7c866ff840d4c44628070e9704b4825dcda019bcc66223",
+        "size_bytes": 99
+      },
+      {
+        "path": "original_data/LevelData",
+        "sha256": "d1fc9cf76ce352bb70fa7d25e10e83f27f4e67dae55773da22f1e544e59c2bb6",
+        "size_bytes": 6279
+      },
+      {
+        "path": "original_data/LevelNextDoors",
+        "sha256": "ab17595b4605675751d86a4215bb6427c805a2967a37bdfc7b05a3752fd7c867",
+        "size_bytes": 82
+      },
+      {
+        "path": "original_data/LevelPointers",
+        "sha256": "5050c03b704d698d079ae4dac12c256cbaf00e13a53585c452f691c5b7744429",
+        "size_bytes": 42
+      },
+      {
+        "path": "original_data/SpriteDoors",
+        "sha256": "301726405072d7198165590b8c72ff8c70c26c72ed014522c68743d90981a406",
+        "size_bytes": 162
+      },
+      {
+        "path": "original_data/WaitTimes",
+        "sha256": "8d3243919168bf8257d5d92738106fc5e8d3fb646cdc312ab8fd6b565f0d511c",
+        "size_bytes": 30
+      },
+      {
+        "path": "map_original/lantern1",
+        "sha256": "7d73c068db379f0411084475684b1df67f6f5d9fcda95528dda24a5637ef98a5",
+        "size_bytes": 25
+      },
+      {
+        "path": "map_original/lantern10",
+        "sha256": "d7f728b6d3e334cb13ed1b7d9d303a727c23ca6b7af1ccf08884e02dc02fc6b2",
+        "size_bytes": 21
+      },
+      {
+        "path": "map_original/lantern11",
+        "sha256": "4083a03ac0db5a4897237c2fc403d4e73377b4c9ea77635145dfa9b69c927d7c",
+        "size_bytes": 13
+      },
+      {
+        "path": "map_original/lantern12",
+        "sha256": "a8f1d34c9c0d27c238a733405bb899790015c048619595e7940752da79852c28",
+        "size_bytes": 13
+      },
+      {
+        "path": "map_original/lantern13",
+        "sha256": "e322e8eb2de101114ad69c8a59b214fb56440fc6ed2b8f96a8fe7a11535b552c",
+        "size_bytes": 13
+      },
+      {
+        "path": "map_original/lantern14",
+        "sha256": "646b2567984a9cdb58007a0b01e3bb373fd30743712760fc5b6bb9c9c71034ac",
+        "size_bytes": 5
+      },
+      {
+        "path": "map_original/lantern15",
+        "sha256": "5d359591b8ac175bcb01a7291d744b6c0219b21dc3d5be01fd7d78251dc5ca01",
+        "size_bytes": 17
+      },
+      {
+        "path": "map_original/lantern16",
+        "sha256": "02fada8972ddb46f4b743728545d66585e2bceb1642d56c0265fd47395102edd",
+        "size_bytes": 25
+      },
+      {
+        "path": "map_original/lantern17",
+        "sha256": "90e4b4f90174d66e7d39a8807bc8bcd16ffe695af14bfc7588f50bc0f3c93021",
+        "size_bytes": 9
+      },
+      {
+        "path": "map_original/lantern18",
+        "sha256": "650842acd0f74d48c700aaa0eb2ef0c99f11a284a0e5ae6c323e79c1475e5396",
+        "size_bytes": 9
+      },
+      {
+        "path": "map_original/lantern19",
+        "sha256": "751cb05db027e063ca9c33a8445bfb499ed4711f4f4016d916cf38baaed93207",
+        "size_bytes": 10
+      },
+      {
+        "path": "map_original/lantern2",
+        "sha256": "79ebf0b014fddd144b4a1e9b9b059bf990100d56fdd7f924553bc545fb17474e",
+        "size_bytes": 25
+      },
+      {
+        "path": "map_original/lantern3",
+        "sha256": "2242d3f9ce87a28fa1d989f37660df394a8ad0bf3a233fcdc64bd3a56fc48341",
+        "size_bytes": 41
+      },
+      {
+        "path": "map_original/lantern4",
+        "sha256": "aa4b1ff450aea487aed0950a57c41f6d0c41d60fe464b1ebbe7681f6b4628682",
+        "size_bytes": 9
+      },
+      {
+        "path": "map_original/lantern5",
+        "sha256": "659629efdc9f8d2a6d958d8db498882c2e61a56183cf4adc31c79d84230a8787",
+        "size_bytes": 9
+      },
+      {
+        "path": "map_original/lantern6",
+        "sha256": "0fb241541e1cabb0d8a05773328ba3ce6c20eea74fd41bcd889a797b528f2419",
+        "size_bytes": 41
+      },
+      {
+        "path": "map_original/lantern7",
+        "sha256": "97c1574d5e07a74daf462cea16727afc39d538af42ef9ea84e043644aa5c872a",
+        "size_bytes": 33
+      },
+      {
+        "path": "map_original/lantern8",
+        "sha256": "4f390755854d3355559a53e8e7129db7a1e6094606eba93648c7b85f9ec2b1aa",
+        "size_bytes": 53
+      },
+      {
+        "path": "map_original/lantern9",
+        "sha256": "201fcd4b3fde0e6edf0c1f516d5490c967e2466d7f2db7920c259f7b5e89ee7a",
+        "size_bytes": 17
+      },
+      {
+        "path": "map_original/level1",
+        "sha256": "bc744b3cee05d3651c109245f73f61c5a344bd58b69835af1a7bbeafb714f707",
+        "size_bytes": 272
+      },
+      {
+        "path": "map_original/level10",
+        "sha256": "17e02cae0793489079143b8e25ef711068055336549fe2446ed87e599ca9e355",
+        "size_bytes": 327
+      },
+      {
+        "path": "map_original/level11",
+        "sha256": "17d3c1c8d711c7a95ee6bd96fdfb7ab39c2d98a09fe2658358c38ece0adf9040",
+        "size_bytes": 372
+      },
+      {
+        "path": "map_original/level12",
+        "sha256": "3f97e8795e72e1ec797788274d804e087a6b6e283768fcfb0612acba392507ab",
+        "size_bytes": 247
+      },
+      {
+        "path": "map_original/level13",
+        "sha256": "3301902016f5986e8a2c1f60797bd2f36a8914eaba7095b5c815cdfad27f5a06",
+        "size_bytes": 387
+      },
+      {
+        "path": "map_original/level14",
+        "sha256": "6b1aec4c90033f6bd5f4aeb3c7e49ff9225522640788e89fc5edfd71f75c7fe5",
+        "size_bytes": 128
+      },
+      {
+        "path": "map_original/level15",
+        "sha256": "413a62beb8e74670c8adaf4031267f96bd992a9d0d43fc86eaedc8a786da95ab",
+        "size_bytes": 366
+      },
+      {
+        "path": "map_original/level16",
+        "sha256": "1751a1882c269b571b9359d218754f44073ff12f0c77a060c10840e12074ce9a",
+        "size_bytes": 168
+      },
+      {
+        "path": "map_original/level17",
+        "sha256": "7260df9ffdc985955e4b97450efb03b5cd79c21837bd829e56056b27a1a403b1",
+        "size_bytes": 305
+      },
+      {
+        "path": "map_original/level18",
+        "sha256": "100343dd8a815de6c6468e8ca80ae0cdc19729e9d8e2e482bc38953020b3aebe",
+        "size_bytes": 259
+      },
+      {
+        "path": "map_original/level19",
+        "sha256": "75c8c59d1fc50826b8318ace4488376a53bce7ff1cb2a40be28e245fd7afcad1",
+        "size_bytes": 336
+      },
+      {
+        "path": "map_original/level2",
+        "sha256": "215fc7b3ec8ba75d07b296fecd2f999d98e8219d951f561a09da888cf102e594",
+        "size_bytes": 309
+      },
+      {
+        "path": "map_original/level20",
+        "sha256": "c20c75c10ec15b4462afe50fb6b5941d54ee9261c99bbbe341f38e60c2e27c2f",
+        "size_bytes": 416
+      },
+      {
+        "path": "map_original/level3",
+        "sha256": "99d6f7b14d43c19c6d50b09fa913eee42edd8f0caa6671e74e2c961e5e53b4fd",
+        "size_bytes": 351
+      },
+      {
+        "path": "map_original/level4",
+        "sha256": "85193d9064839100a56fab1d2d19530c7b3fa9c27ee19e7db2283096e7ab8997",
+        "size_bytes": 382
+      },
+      {
+        "path": "map_original/level5",
+        "sha256": "f212b946e03696a94f59bbd2e297f696e1b1269d2ef27a0e6efe29d20eaab5e5",
+        "size_bytes": 359
+      },
+      {
+        "path": "map_original/level6",
+        "sha256": "176b07dbeb404ddc0c98b1c73a25ac14552870f08b6ebe6dcd5817db66958a0f",
+        "size_bytes": 347
+      },
+      {
+        "path": "map_original/level7",
+        "sha256": "6af678da44e4eb52d560cf644b874e05b51606b30a400d00a90bb8425239b17e",
+        "size_bytes": 330
+      },
+      {
+        "path": "map_original/level8",
+        "sha256": "2eb4f92f0c14257295c233f541f3d2afd37e1dcdc7e02c9a79de5df5f09f1dd1",
+        "size_bytes": 234
+      },
+      {
+        "path": "map_original/level9",
+        "sha256": "5441c9f09f7443a195da42dc2899a9ea5b035cff127cd7fbdad44b6a5c094df3",
+        "size_bytes": 384
+      }
+    ]
+  },
+  "emulator": {
+    "preferred_executable": "x64sc",
+    "availability": "downloaded_project_local",
+    "version": "3.10",
+    "executable_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+    "profile": "VICE -default -model c64; MOS6569R3, 63 cycles/line, 312 lines; PRG autostart injection mode 1; warp during inspection; not a field-timing baseline",
+    "settings_path": null,
+    "rom_hashes": [
+      {
+        "path": ".reference/tools/vice/GTK3VICE-3.10-win64/C64/kernal-901227-03.bin",
+        "sha256": "83c60d47047d7beab8e5b7bf6f67f80daa088b7a6a27de0d7e016f6484042721"
+      },
+      {
+        "path": ".reference/tools/vice/GTK3VICE-3.10-win64/C64/basic-901226-01.bin",
+        "sha256": "89878cea0a268734696de11c4bae593eaaa506465d2029d619c0e0cbccdfa62d"
+      },
+      {
+        "path": ".reference/tools/vice/GTK3VICE-3.10-win64/C64/chargen-901225-01.bin",
+        "sha256": "fd0d53b8480e86163ac98998976c72cc58d5dd8eb824ed7b829774e74213b420"
+      }
+    ],
+    "baseline_snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+    "executable_path": ".reference/tools/vice/GTK3VICE-3.10-win64/bin/x64sc.exe"
+  },
+  "analysis_candidate": {
+    "id": "c64-local-t64-remember-no-trainers",
+    "source_id": "SRC-007",
+    "container_path": ".reference/c64/original/bruce_lee.t64",
+    "container_sha256": "36800f5bddbd6da7b516b8acad74b01954c4cdb4265448a1064f6b113dbb2b99",
+    "container_entry": "BRUCE LEE+",
+    "working_prg_path": ".reference/c64/work/bruce-lee-plus.prg",
+    "working_prg_sha256": "207dbe8e5924a85da20a33b129c54cd2ad3ea848e73436a1ad1117010feaa740",
+    "acquisition": "user_provided_local_media",
+    "download_origin": "unknown",
+    "edition": "Remember crack/trainer; original release identity unverified",
+    "boot_status": "observed_original_game_menu_and_first_room",
+    "unlimited_lives": false,
+    "opponents_cannot_hit": false,
+    "trainer_patch_sites_observed": {
+      "1826": "c62830",
+      "2fe5": "e62820",
+      "3155": "e62820",
+      "29e2": "034cf2",
+      "29f7": "034c07"
+    },
+    "baseline_snapshot_path": ".reference/c64/work/movement-baseline.vsf",
+    "baseline_snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+    "analysis_bootstrap": "Debugger PC redirects past crack intro ($28F3), documentation RUN/STOP branch ($2FEE), title fire poll ($C54D), and original menu start branch ($08FC); trainer N,N through keyboard buffer. No gameplay code patched by us.",
+    "timing_status": "33 movement scenarios /2548 seam observations; 1452 additional combat observations. Long free fall verified at two pixels per three PAL fields. Retail identity, full collision geometry and Amiga intra-field input remain open.",
+    "audio_status": "not_validated; sound disabled and SID errors observed during snapshot restores",
+    "redistribute": false,
+    "movement_captures": [
+      "MACHINE-0001",
+      "MACHINE-0002",
+      "MACHINE-0003",
+      "MACHINE-0004",
+      "MACHINE-0005",
+      "MACHINE-0006",
+      "MACHINE-0007"
+    ],
+    "input_phase_captures": [
+      "PHASE-0001",
+      "PHASE-0002"
+    ],
+    "combat_captures": [
+      "COMBAT-0001"
+    ],
+    "enemy_edge_captures": [
+      "ENEMY-EDGE-0001"
+    ]
+  }
+}

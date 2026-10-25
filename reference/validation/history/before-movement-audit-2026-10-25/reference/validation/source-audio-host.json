@@ -1,0 +1,127 @@
+{
+  "status": "passed_scoped_source_audio_controls",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "source_cpu_fields_compared": 7540,
+  "sfx_ids": 15,
+  "queue_priority_scenarios": 20,
+  "music_frames_compared": 2309,
+  "chip_bytes": 2260,
+  "old_chip_bytes": 4004,
+  "source_timing_and_registers_match": true,
+  "sid_analog_emulation": false,
+  "paula_parameters_checked": true,
+  "previews": [
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-80.wav",
+      "sha256": "3146bfde5f5468f553059ce2b9f0e1fcacfa45fceb236b59c2c1afbc02e17939"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-81.wav",
+      "sha256": "95e4644e504707690cf3ea1a66beca1ed38ea53c4973a6d07da3d1a897abaa24"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-82.wav",
+      "sha256": "a46a34d6873c4716dec7b10f1894f69e32f7e9744ce053706512e1c6648a4618"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-83.wav",
+      "sha256": "558e581140e1535137d1ee860f8397e48941663a5948a54f915d713a6113676b"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-84.wav",
+      "sha256": "6b3bcd62fbf0f3dcc1cfdc55c3e3dc5241e23d96b687a8668b0f7ecb959a36fb"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-85.wav",
+      "sha256": "0e5fc0cd51c523629757f742147b6531f2dc3fc34261c829c733b6a7f409c944"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-86.wav",
+      "sha256": "1a045357c8cbf4c82692eadacbd2d95955182f2e52582492dc8aaf8caa83cef0"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-87.wav",
+      "sha256": "ef9f6bac5d619a6940ceaad55db58014e9a410a91137e742f7ebc80a5b3dd62d"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-88.wav",
+      "sha256": "66fe276474ce2b3535f83b579eba4a96500bbdb5c14929eea41a5f0e0bab5f4f"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-89.wav",
+      "sha256": "f813bf40e6b38ead17f04aa14a847cedcd646c09d5ac27f6eccd46c2a2d57918"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-8a.wav",
+      "sha256": "880958c23ddeb47b8cb49a2c16ba8923c19efe34da693c09078eb8cd22714434"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-8b.wav",
+      "sha256": "e11f2ff0ec9b14b0a9d9afa63ea5c86e1a1917a31e26d908ba764183c6233188"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-8c.wav",
+      "sha256": "a88ce23f84df51b0c02a0c7e9345922b47c013f27c4aeb8ba216168bcd1ff937"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-8d.wav",
+      "sha256": "a183896adb5ed621a1af09f2dcce496361915f7084bee1f3e233a72fddd6240f"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effect-8e.wav",
+      "sha256": "5d83666200aa95fac4a74b0e2abe6af6f0f0fdcbf2687900cf14bdaf5226acbc"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/effects-amiga.wav",
+      "sha256": "0a16454a263c03e7c5994a2dc7d804d6411e5d686a3f8f8407ac42af57bdd315"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/title-amiga.wav",
+      "sha256": "742ac6747dd95fd953e1b5f18d793e402f6881aca8837636be311305ed8b3183"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "tools/build_c64_audio.py",
+      "sha256": "e233890b1700200efe0eb3757e3ac1a95f221a2007c2218784099b1a9ba61275"
+    },
+    {
+      "path": "tools/verify_source_audio.py",
+      "sha256": "88cfa1cff3334c4601229981fa1766d164cac05f8fcf0a27f442c2dda12be428"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "58195b68a16e923897ba3798f0c49370165108d46136d14ab9fa692abdd3288a"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "d6652793b4a40de55278acb2a20f49dd952f35a7e5799d259732f7543d532fa4"
+    },
+    {
+      "path": "test-source-audio.ps1",
+      "sha256": "00d4853b04bc2c5c3c4d93940f22f9ea6f988aa8affeec1ed9f6016796f06619"
+    }
+  ]
+}

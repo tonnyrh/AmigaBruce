@@ -1,0 +1,8 @@
+{
+  "reproduced_cases": 15,
+  "trigger": "R02 Yamo kick at Y146; X276..304; room re-entry after2..6 steps",
+  "controlled_state": true,
+  "natural_playthrough": false,
+  "combat_c_before_sha256": "5a506aaef094602ff4f46651903fd4c04731aba12c9227ec4b16f72e1ddf8d95",
+  "frozen_source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+}

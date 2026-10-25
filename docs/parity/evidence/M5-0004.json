@@ -1,0 +1,15 @@
+{
+  "id": "M5-0004",
+  "date": "2026-10-24",
+  "status": "bruce_startup_candidate_loading_illustration_pending",
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "summary": "Bruce game title and ADF label; new local AudioGen kiai,4-bit IMA ADPCM decoded into existing back bitmap, no additional Chip allocation; five fresh native runs passed; loading illustration and listening approval pending.",
+  "artifacts": [
+    {
+      "path": "reference/validation/history/before-c64-room-runtime-visual-candidate.json",
+      "size_bytes": 24619,
+      "sha256": "e08d2695005f044a093c62079f6781d849a4b4bc367e4a956ab4d19f255180b1"
+    }
+  ]
+}

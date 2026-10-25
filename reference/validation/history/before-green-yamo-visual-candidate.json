@@ -1,0 +1,328 @@
+{
+  "date": "2026-10-24",
+  "status": "passed_scoped_animation_and_openings_candidate_v2",
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_completion_available": false,
+  "original_pixels_shipped": false,
+  "generated_graphics_present": true,
+  "poses": 48,
+  "poses_per_actor": 16,
+  "frame_size": [
+    48,
+    26
+  ],
+  "anchor": [
+    24,
+    25
+  ],
+  "palette_colors": 16,
+  "ocs_rgb_bits": 12,
+  "runtime_climb_reflection": "Bruce phases6/7 reflect reach/transfer phases4/5; gameplay facing unchanged",
+  "cpu_planar_cache_bytes": 74880,
+  "packed_fighter_bytes": 29952,
+  "explicit_combat_chip_bytes": 172228,
+  "cpu_stamp_chip_bytes": 0,
+  "combat_max_work_lines": 300,
+  "native_runs": [
+    {
+      "report": "a500-m3-combat.json",
+      "execution": "ADF boot",
+      "frames": [
+        6000
+      ],
+      "max_work_lines": 300,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 267072,
+      "max_room_load_fields": 0
+    },
+    {
+      "report": "a500-gates.json",
+      "execution": "filesystem CLI, two consecutive launches",
+      "frames": [
+        900,
+        900
+      ],
+      "max_work_lines": 213,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 265952,
+      "max_room_load_fields": 22
+    },
+    {
+      "report": "a500-m4-rooms.json",
+      "execution": "ADF boot",
+      "frames": [
+        900
+      ],
+      "max_work_lines": 219,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 267072,
+      "max_room_load_fields": 2
+    },
+    {
+      "report": "a500-room-tour.json",
+      "execution": "ADF boot",
+      "frames": [
+        7200
+      ],
+      "max_work_lines": 232,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 267072,
+      "max_room_load_fields": 26
+    }
+  ],
+  "native_run_count": 5,
+  "manual_new_art_acceptance": false,
+  "c64_opening_conditions_source_checked": true,
+  "c64_opening_animation_timing_certified": false,
+  "known_unsuccessful_attempts": [
+    {
+      "status": "failed_then_fixed",
+      "frame": 700,
+      "max_work_lines": 371,
+      "report": {
+        "path": "reference/validation/history/animation-v2-first-combat-failure.txt",
+        "size_bytes": 1390,
+        "sha256": "c10793828e805cfaaba86d50bf53e691103040ce092c8cb780fcca8551ce7b34"
+      },
+      "fix": "Replace CPU edge shifts with OCS pre-shift and restore only occupied art bounds; final6000-field replay passed"
+    }
+  ],
+  "historical_inputs_not_current": [
+    "reference/validation/history/before-animation-v2-a500-soak.json",
+    "reference/validation/history/before-animation-v2-a500-m3-debug.json",
+    "reference/validation/history/visual-candidate-before-animation-v2.json"
+  ],
+  "scope": "Four fresh native profiles including repeat CLI cleanup; older passive-lab/debug reports are historical. Complete natural route, other room dynamics and full C64 parity remain open.",
+  "artifacts": [
+    {
+      "path": "docs/ANIMATION_AND_OPENINGS_2026-10-24.md",
+      "size_bytes": 6869,
+      "sha256": "bdf74eea18b3a3a0f5e7c084dd1497d4f267508e73dd195c3b2b8b9580a677b9"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "size_bytes": 4820,
+      "sha256": "67689fe3680fc7b643e4cb3a471a35399a56d69eee8604346ec8fbb7a69a55f0"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "size_bytes": 6711,
+      "sha256": "78476de9694eebb33da4d490456c64499ecc4c9488289fe82cd061b457ad8268"
+    },
+    {
+      "path": "docs/AMIGA_ART_PIPELINE.md",
+      "size_bytes": 3588,
+      "sha256": "13e983722288b8e7e70d35f0f67d672e204d9b3e3e135e387fc891158d52ca6f"
+    },
+    {
+      "path": "docs/reference/SOURCES.md",
+      "size_bytes": 3402,
+      "sha256": "f9dd14f34650996924948559d12249652fd34aa5f9d81fb00a4d8aeb0a5599dc"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "size_bytes": 10042,
+      "sha256": "c0a055026332c8a21f79e571de493f8bad71feddbb4aca95b8544156b9a2ab1f"
+    },
+    {
+      "path": "assets/graphics/v2/generation.json",
+      "size_bytes": 8164,
+      "sha256": "f35d89387d3b5c5ff1138b7e5af28b152a7ecb06d6b5b0e9e6aa0b25b7ea8e5b"
+    },
+    {
+      "path": "assets/graphics/v2/bruce-source.png",
+      "size_bytes": 813563,
+      "sha256": "6fd38603173a9146dfb0001b8588f60d7bd14ee20f3976e53734563abc1ba8c5"
+    },
+    {
+      "path": "assets/graphics/v2/ninja-source.png",
+      "size_bytes": 767921,
+      "sha256": "cee9876cc5247150ecd0af19bc9d53b2902789182783e9f6932e5b595dd50be5"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-source.png",
+      "size_bytes": 1602924,
+      "sha256": "bfc1a94c775f4d60e7d74b95245ac214193222bf50254049419f916c4bfe7507"
+    },
+    {
+      "path": "assets/graphics/v2/fighters-manifest.json",
+      "size_bytes": 23190,
+      "sha256": "f722e622ea4d54183b1a13f37a4cdf8d2d87b9154e0506d01b7e62bf947baf60"
+    },
+    {
+      "path": "assets/graphics/v2/fighters-indexed.png",
+      "size_bytes": 5372,
+      "sha256": "fe0df2c40454a9560bbc9bbdd354b92ba7494b925e00f67d1f6b89af97543750"
+    },
+    {
+      "path": "assets/graphics/v2/fighters.validation.json",
+      "size_bytes": 302,
+      "sha256": "9697179d88f85047ac73233d090bfef184b4be179a5994e0be9a3cdddb7c0e31"
+    },
+    {
+      "path": "assets/graphics/v2/run.gif",
+      "size_bytes": 9843,
+      "sha256": "5ec6de35c385e2da2b3a0e03aa0eb0ec2c07286818c7a04f68c9fdff408e3e63"
+    },
+    {
+      "path": "assets/graphics/v2/climb.gif",
+      "size_bytes": 9388,
+      "sha256": "b09eed8c2330061a1c551decda1615154eb4170e9999b4496d75466228879472"
+    },
+    {
+      "path": "assets/graphics/v2/attacks.gif",
+      "size_bytes": 23679,
+      "sha256": "c9bcb3bf18e170f8f0a1be9560e6083b9e79ec0fc7f200ea81ec2c0e0c4c2383"
+    },
+    {
+      "path": "amiga/main.c",
+      "size_bytes": 49434,
+      "sha256": "644ed01629fa0f8aaca2fe9704d0e673ea536c2488f049067ec9ce51ceafe9db"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "size_bytes": 69452,
+      "sha256": "76d2a605ff6bfa15abfd60fc1fa3a3695ea4cc78c875bcfdc074eb1a823a18dd"
+    },
+    {
+      "path": "core/presentation.c",
+      "size_bytes": 1925,
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "size_bytes": 913,
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/rooms.c",
+      "size_bytes": 8454,
+      "sha256": "1660440a8a93a885632a90720ff443ba96342b568b969d17f7c4512964507b7d"
+    },
+    {
+      "path": "core/rooms.h",
+      "size_bytes": 1686,
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "tests/gate_fixture.h",
+      "size_bytes": 2561,
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b"
+    },
+    {
+      "path": "tests/rooms_test.c",
+      "size_bytes": 8872,
+      "sha256": "35e34cc445edf02f8a01c4cf68304a350b979f68eaf4c3f5540cc5e50626471d"
+    },
+    {
+      "path": "tests/visual_test.c",
+      "size_bytes": 2265,
+      "sha256": "b6065fd1077322ebaf02bcdb3bdba7af4c2021acf8c2c2d826e135ef06dff976"
+    },
+    {
+      "path": "tools/build_fighter_art.py",
+      "size_bytes": 5456,
+      "sha256": "f81e2ff4553ec74b964e9cd1984df57895675c044a7b27760a01f90d7e450104"
+    },
+    {
+      "path": "tools/preview_fighter_animation.py",
+      "size_bytes": 1343,
+      "sha256": "85bb22ef515ff6d50a955fa685bbf4a4daba6c42776a9b6c7e95e508016ded99"
+    },
+    {
+      "path": "tools/analyze_c64_openings.py",
+      "size_bytes": 4144,
+      "sha256": "4ead361818dc0f45b4f58f47170a0e56f30331b6e48aca50a9b844e015c983a1"
+    },
+    {
+      "path": "tools/verify_visual_candidate.py",
+      "size_bytes": 5144,
+      "sha256": "73011c2f2f76f24100e00cf36771c48939d89431781a48c33db16ffb4c9e062c"
+    },
+    {
+      "path": "tools/verify_combat_audio.py",
+      "size_bytes": 2455,
+      "sha256": "404b69f6a12cde6e39965ce513af5501f2147479ad6147ca195c0634fb61eade"
+    },
+    {
+      "path": "docs/images/m3-combat.png",
+      "size_bytes": 14815,
+      "sha256": "be4c18ec506e0a548ac70e469cf48c0185cd99d2dd5dfaa86894586dd8f25d44"
+    },
+    {
+      "path": "docs/images/m4-gates.png",
+      "size_bytes": 14707,
+      "sha256": "c84729bd8f458431c13b38cd9e26ab12b1342f63d662c5ebb06035a030e3ca1a"
+    },
+    {
+      "path": "docs/images/m4-rooms.png",
+      "size_bytes": 14395,
+      "sha256": "df18f9afff8984e3c478a6c8f9f8adbb2a1b56c91181f7eb93b0ae581dc6b10b"
+    },
+    {
+      "path": "docs/images/room-tour.png",
+      "size_bytes": 15142,
+      "sha256": "ac9d29cfa4c325b1a417efb34155b09e0580d376d142f88e4b3d65c5f2d92d31"
+    },
+    {
+      "path": "reference/validation/m3-core.json",
+      "size_bytes": 3498,
+      "sha256": "9c8e6d5c3828343e8a32e4d33a71d13b0c84e060e4241a0aa3229086be774f94"
+    },
+    {
+      "path": "reference/validation/candidate-openings.json",
+      "size_bytes": 3988,
+      "sha256": "0f27cff687831707315be9a4960052010f0972afcef4c61a1c69604a47e7a43f"
+    },
+    {
+      "path": "reference/validation/candidate-combat.json",
+      "size_bytes": 625983,
+      "sha256": "e18939753293d68437427c71ac538df08bd75ae5f420f22d44770c78e4d3a4e3"
+    },
+    {
+      "path": "reference/validation/candidate-movement.json",
+      "size_bytes": 14196,
+      "sha256": "c6be3566584cf2d85f9348a127e963c6ed5e5515746f080561b56f9bf262de5c"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "size_bytes": 5278,
+      "sha256": "c4d922c1421b2a40841c1667fb5b07a1310dd9ad3dee1e30c2302fb154cd91d5"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "size_bytes": 183320,
+      "sha256": "31821e0da8a1c4f876a03637b3eee3f4c64265712ce023cf56ba85622f7929ed"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "size_bytes": 901120,
+      "sha256": "725d25795514ef4022cbc1eea881c8d4b72eff6addbfc7e76edf8209df963435"
+    },
+    {
+      "path": "reference/validation/a500-m3-combat.json",
+      "size_bytes": 7266,
+      "sha256": "abbc1089d11ddf7f5b6c5ab66b8e1f9baed241c5e01c163e514a0ea5dd319377"
+    },
+    {
+      "path": "reference/validation/a500-gates.json",
+      "size_bytes": 9708,
+      "sha256": "10271b5b177313320d837f18dec17e7ce0f677124fb3f1b4f671d18cbeac2c5b"
+    },
+    {
+      "path": "reference/validation/a500-m4-rooms.json",
+      "size_bytes": 7248,
+      "sha256": "32e0c363dcb2d6a8aa1d5af6b090d908adb8044edce297f4423e84de01b7f2dc"
+    },
+    {
+      "path": "reference/validation/a500-room-tour.json",
+      "size_bytes": 7265,
+      "sha256": "ef351d2313c11cc2236353468cc5086d77ff3de70555f8c1658299db86135fc4"
+    }
+  ]
+}

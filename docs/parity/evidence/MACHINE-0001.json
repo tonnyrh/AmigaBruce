@@ -1,0 +1,71 @@
+{
+  "capture_id": "MACHINE-0001",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_replayed_not_primary_verified",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008",
+    "SRC-010"
+  ],
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "parity_ids": [
+    "PAR-003",
+    "PAR-004",
+    "PAR-006",
+    "PAR-009"
+  ],
+  "input_sampling_phase": "$1BCE before keyboard parser; last executed instruction $1BCC",
+  "measurement_method": "Native active-low joystick IO Simulation through CIA; two identical full-machine captures; CPU-history clocks; no gameplay RAM/register writes",
+  "coordinate_definition": "C64 $9E halfpixel position, $A1 vertical position; core seam x=2*C64_x-24, y=C64_y",
+  "limitations": [
+    "Remember candidate, retail identity unverified",
+    "Registered snapshot bootstrap skips crack/menu branches",
+    "Logic-seam X/Y comparison does not certify internal states or Amiga input phase",
+    "SID audio not validated"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/traces/MACHINE-0001/climb-down.csv",
+      "sha256": "b94ed4d67288eb0ffb8b0e76eb4f5ff9092909cca3eec0ed1dc7703c54b98c35"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/climb.csv",
+      "sha256": "a90fdbc4519cbcc3cecff6f6d43eca893fd4705a8ccfdcf9eea384064b378742"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/held-jump.csv",
+      "sha256": "7c494fe970c491c8ce2e5ab8613a97110700b62186ffe2cbcd50b09cd0ccfd32"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/idle.csv",
+      "sha256": "e12bb82dbf89d599465c7c209a06a274f99ab45dfe8e0d59b80a1a7006b3f71f"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/left.csv",
+      "sha256": "a770be4266a94bff720790947184f754995900fc98d71713110655176813e29b"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/moving-jump.csv",
+      "sha256": "baa717bec0463c56f49594a57e04e06edb2239028c3b56d8be208ccca60402ce"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/reverse.csv",
+      "sha256": "9dc0ba7f6653705502aff56c4224aaf775f44f9e066f20498fec618eda283b8c"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/right.csv",
+      "sha256": "a274eab025c78d697e1552c20d433e46caf6913ac5197a79357b052ffe4c1565"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/standing-jump.csv",
+      "sha256": "2cf815bae1b03fe6cf643438bef3173d6ee7225e96571843fe6d521de9b308e2"
+    },
+    {
+      "path": "reference/traces/MACHINE-0001/summary.json",
+      "sha256": "afcaab6dccf3825250f7d79ae5d415ed67b23d8f12ecb7be4c30f71d1fb89946"
+    }
+  ],
+  "scenarios": 9,
+  "samples": 441
+}

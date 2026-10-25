@@ -1,0 +1,151 @@
+{
+  "date": "2026-10-24",
+  "build": "normal_visual_and_playability_candidate_v1",
+  "test_control": false,
+  "inspection_room_selection_available": true,
+  "full_m4_parity": false,
+  "artifacts": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "size_bytes": 159336,
+      "sha256": "6f930ff032e6b53f5d94da028ca5bff8d3aafad770bea2120aaa86988be26b3f"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "size_bytes": 901120,
+      "sha256": "0dcd7b6b33cc0de14c9a1448324c1d1e0a7eafd90f24bc0afc43ce7c146b52df"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "amiga/main.c",
+      "size_bytes": 44433,
+      "sha256": "8ed88f9ddaed63201f924ec071b1cfead1317f51439adaa25c49b0ef05291d82"
+    },
+    {
+      "path": "amiga/room_background_data.h",
+      "size_bytes": 370050,
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d"
+    },
+    {
+      "path": "amiga/runtime.c",
+      "size_bytes": 1427,
+      "sha256": "748abb674d581035b4568df307f4058786e893d5e85897d7831fa5dbad004916"
+    },
+    {
+      "path": "amiga/start.s",
+      "size_bytes": 69,
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291"
+    },
+    {
+      "path": "core/game.c",
+      "size_bytes": 13250,
+      "sha256": "06ea019584dc8217e92ebb3eb669866f2e5eb1880041abba67a317b90b49bf82"
+    },
+    {
+      "path": "core/game.h",
+      "size_bytes": 2265,
+      "sha256": "dd847ec6678dd3782a71de9f59e3d7ee42b337140623520a76ccb3b294ab34f0"
+    },
+    {
+      "path": "core/presentation.c",
+      "size_bytes": 859,
+      "sha256": "da9d239e0d598addae729247eb6d565a55652daf86601bb387e304e911e8efd1"
+    },
+    {
+      "path": "core/presentation.h",
+      "size_bytes": 469,
+      "sha256": "1be3f0bfe09fcf2d98d8d45e801017c291b2e05a7c1eb6da2cd77a048d612413"
+    },
+    {
+      "path": "core/combat.c",
+      "size_bytes": 8710,
+      "sha256": "e6441e3bb7f2ef220c7bfb34aefa1bdcb99edcad6e4531b61da40ec5fff3940e"
+    },
+    {
+      "path": "core/combat.h",
+      "size_bytes": 932,
+      "sha256": "89d4074a5d1667945ac2e04f3b3caeb63384eb3e508436fc3f275062233e7716"
+    },
+    {
+      "path": "core/rooms.c",
+      "size_bytes": 5911,
+      "sha256": "511584f5bd7ba4155b28d0982207ba0e9c1a2a266216088e5b500921de2a8d89"
+    },
+    {
+      "path": "core/rooms.h",
+      "size_bytes": 1340,
+      "sha256": "f2aacb45945e4a6811f12d9bc2d29502b64abd5418c5da574e3b446a286944bc"
+    },
+    {
+      "path": "core/room_data.h",
+      "size_bytes": 2887,
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "size_bytes": 10018,
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "size_bytes": 2664,
+      "sha256": "d58502a172b0982a941c3dd9431895f816bf6b80763633a372575a0ac428209f"
+    },
+    {
+      "path": "amiga-run.ps1",
+      "size_bytes": 3396,
+      "sha256": "5b862c08419d1fc8a4a6065841328a9f2d3f6efad8a24148c941adb12553f5ca"
+    },
+    {
+      "path": "tools/build_room_backgrounds.py",
+      "size_bytes": 5548,
+      "sha256": "7e80968319342af8eb5e11edf70eba45934400a2ef132c7e77150f282f61e771"
+    },
+    {
+      "path": "amiga/combat_audio.h",
+      "size_bytes": 1764,
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10"
+    },
+    {
+      "path": "amiga/combat_audio_data.h",
+      "size_bytes": 8082,
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "size_bytes": 20385,
+      "sha256": "a59ecf81f89ade2d0c7c28233b2f8c7fc469f772ec49424055eba3d13ac22921"
+    },
+    {
+      "path": "tools/build_fighter_art.py",
+      "size_bytes": 4383,
+      "sha256": "67b1f880d8ff7c306eec1e59ba3d6ada9e4d01bc32c31e48d25223fde28a5b70"
+    },
+    {
+      "path": "assets/graphics/v1/fighters-source.png",
+      "size_bytes": 888707,
+      "sha256": "4dcaf346cf8b1607d9e9c66087c14b0d24c63c55236389400725441571125a92"
+    },
+    {
+      "path": "assets/graphics/v1/mountains-indexed.png",
+      "size_bytes": 4464,
+      "sha256": "36c7587cb7add4e056fcbd149a3f46b075ae73b9499b3cddce77ec08d87a092a"
+    }
+  ],
+  "runtime_check": {
+    "status": "rebuilt_launched_scoped_native_regressions_passed",
+    "process_started_for_project": true,
+    "process_id": 36964,
+    "normal_visual_inspection": "Not verified through Windows UI: access denied. Native exported room2,room20 and combat framebuffers inspected.",
+    "input_method": "Normal joystick; F1/F2 inspection, Escape exit; no gameplay input injected by agent",
+    "observations": [
+      "6000-field ADF combat passed:zero missed fields,max276 work raster lines;69 sounds with69 silence reloads;host combat outcomes match",
+      "900-field ADF known-room route and7200-field all20-room ADF tour passed",
+      "Two900-field CLI movement launches and two900-field CLI combat-renderer launches passed; Chip/expansion memory before launch stable",
+      "CPU stamp buffers used0 Chip bytes; explicit Chip170948; largest remaining Chip268352 in combat profile",
+      "Normal optimized executable rebuilt and launched; c/start refreshed from identical executable bytes"
+    ],
+    "limitations": "Candidate only: manual retest of footprint/net grip and artwork required. Natural progression,traps,dynamic gates,T02/T03 and full C64 parity remain open. Shared background and first21 poses are not the complete final tile/animation library. No physical A500 certification."
+  }
+}

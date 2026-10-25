@@ -1,0 +1,60 @@
+{
+  "capture_id": "MACHINE-0004",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_replayed_not_primary_verified",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008",
+    "SRC-010"
+  ],
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "parity_ids": [
+    "PAR-002",
+    "PAR-005",
+    "PAR-006",
+    "PAR-009",
+    "PAR-010"
+  ],
+  "input_sampling_phase": "$1BCE before keyboard parser; last executed instruction $1BCC",
+  "measurement_method": "Native active-low joystick IO Simulation through CIA; two identical full-machine captures; CPU-history clocks; no gameplay RAM/register writes",
+  "coordinate_definition": "C64 $9E halfpixel position, $A1 vertical position; core seam x=2*C64_x-24, y=C64_y",
+  "limitations": [
+    "Remember candidate, retail identity unverified",
+    "Registered snapshot bootstrap skips crack/menu branches",
+    "Logic-seam X/Y comparison does not certify internal states or Amiga input phase",
+    "SID audio not validated"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/traces/MACHINE-0004/net-top-down.csv",
+      "sha256": "bce67303298c8cded6632eda6eaa989bf951b028e0ffdc5259837360e7f918d8"
+    },
+    {
+      "path": "reference/traces/MACHINE-0004/prone-direction.csv",
+      "sha256": "6bba942d564c79e1c6145724bdbd59bc498c039e189775c99302d8ad49f127f1"
+    },
+    {
+      "path": "reference/traces/MACHINE-0004/prone-hold-release.csv",
+      "sha256": "767dfd9b0316c7c799c35265328d4271d73e6914cd4b15e335b4e983103ff9be"
+    },
+    {
+      "path": "reference/traces/MACHINE-0004/prone-jump.csv",
+      "sha256": "29fad673a275b95ddd33f33aeaaa8af4adf7e9f84bbdfcf4c8944e30e1845f8b"
+    },
+    {
+      "path": "reference/traces/MACHINE-0004/summary.json",
+      "sha256": "db80f0fa55bd2065168e1726b1fe3d6352e3fe88af5fb8ed7a26a9be58290bc3"
+    },
+    {
+      "path": "reference/traces/MACHINE-0004/upper-jump-early.csv",
+      "sha256": "38959d2484b0fb75ed2ba0e26bf527074abbb742325c3063e7a79baed03024dc"
+    },
+    {
+      "path": "reference/traces/MACHINE-0004/upper-jump-edge.csv",
+      "sha256": "01d9eccfcc4c958a51717b65ec4eb109a273e095ddf77025270f5fecfea72f70"
+    }
+  ],
+  "scenarios": 6,
+  "samples": 643
+}

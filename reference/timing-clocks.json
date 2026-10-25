@@ -1,0 +1,16 @@
+{
+ "c64_pal_cpu_hz": 985248,
+ "c64_cycles_per_line": 63,
+ "c64_lines_per_field": 312,
+ "amiga_pal_cck_hz": 3546895,
+ "amiga_cck_per_line": 227,
+ "amiga_lines_per_field": "read VPOSR LOF for runtime mode; 312 or 313",
+ "allowed_quantization_fields": 1,
+ "sources": [
+  {"title":"VICE C64 timing definitions", "url":"https://github.com/VICE-Team/svn-mirror/blob/main/vice/src/c64/c64.h"},
+  {"title":"WinUAE chipset clock and PAL dimensions", "url":"https://github.com/tonioni/WinUAE/blob/master/include/custom.h"},
+  {"title":"WinUAE short/long field frequency calculation", "url":"https://github.com/tonioni/WinUAE/blob/master/custom.cpp"}
+ ],
+ "checked_on":"2026-10-20",
+ "limitations":"Nominal emulator hardware clocks, not a stopwatch calibration of a physical machine or host display. Millisecond conversion of CIA TOD field counts has one-field granularity."
+}

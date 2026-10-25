@@ -1,0 +1,39 @@
+{
+  "status": "static_instruction_sites_verified_in_registered_snapshot",
+  "primary_edition_verified": false,
+  "runtime_fall_hit_observed": false,
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "regions": [
+    {
+      "start": 5570,
+      "end": 5580,
+      "sha256": "e9ff51470621dcc7ec019dd06d6f0bb76be262341bc2868beafc9e4a5cb4240c"
+    },
+    {
+      "start": 10691,
+      "end": 11299,
+      "sha256": "f58075bbfc57ab5d3898c44dd2af80cc070d794e925703efe8806c794944ac00"
+    }
+  ],
+  "checks_passed": true,
+  "facts": [
+    "Falling-attacker branch compares victim minus attacker feet with ten",
+    "Contact allowance at $4F45,Y is read before registering falling contact",
+    "Fall-contact damage path subtracts five from $D1,X",
+    "IRQ refresh loads two into three actor contact allowances"
+  ],
+  "source_files": [
+    {
+      "path": "tools/inspect_c64_contact.py",
+      "sha256": "86ecf15c2070d0522b505fc020d6d46f7e2ac234372f3bcf2ccd44448c1ac37a"
+    },
+    {
+      "path": "tools/vice_binary.py",
+      "sha256": "91eded222cb7e6d11ddd8e59762ecf028fd7ca490bc915915a4c7714c7366fb4"
+    },
+    {
+      "path": "inspect-c64-contact.ps1",
+      "sha256": "2053ec89e8243e5e3b957f26e96a46d5fbc1d06ff82ee25ee34fc0155a3c8048"
+    }
+  ]
+}

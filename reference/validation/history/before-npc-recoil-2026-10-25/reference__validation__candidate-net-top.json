@@ -1,0 +1,298 @@
+{
+  "capture_id": "MACHINE-0003",
+  "status": "candidate_position_regression",
+  "primary_edition_verified": false,
+  "full_m2_parity": false,
+  "alignment": "previous boundary sampled_direction -> one core step; x=2*C64_x-24; y=C64_y",
+  "comparison": "exact integer positions; no tolerance or fitted offset",
+  "core_sha256": "06ea019584dc8217e92ebb3eb669866f2e5eb1880041abba67a317b90b49bf82",
+  "trace_summary_sha256": "04b7294a4285ebfea8b7e229baaf82f564157930a2753d3e52d63491d668e0e0",
+  "source_files": [
+    {
+      "path": "core/game.c",
+      "sha256": "06ea019584dc8217e92ebb3eb669866f2e5eb1880041abba67a317b90b49bf82"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "dd847ec6678dd3782a71de9f59e3d7ee42b337140623520a76ccb3b294ab34f0"
+    },
+    {
+      "path": "tests/core_trace.c",
+      "sha256": "237f3d571a104d8191a9ba184ad7e1402a4023c7720e7f3c3bb32c483706b70b"
+    },
+    {
+      "path": "tools/compare_movement.py",
+      "sha256": "7daf5f2a2c386d278950d8bfc661a1db520695c64edfda0fac926b3a3ebccc0b"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "5df96f67a55d3afb7f3125f4d61bb43caeb879d1faae4e841a05a74f29dda6fd"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "central-top-held",
+      "samples": 181,
+      "exact_position_matches": 181,
+      "gate_through_tick": 180,
+      "gate_passed": true,
+      "differences": []
+    },
+    {
+      "name": "central-top-release",
+      "samples": 181,
+      "exact_position_matches": 159,
+      "gate_through_tick": 132,
+      "gate_passed": true,
+      "differences": [
+        {
+          "tick": 137,
+          "expected": [
+            158,
+            97
+          ],
+          "actual": [
+            158,
+            101
+          ]
+        },
+        {
+          "tick": 138,
+          "expected": [
+            158,
+            95
+          ],
+          "actual": [
+            158,
+            97
+          ]
+        },
+        {
+          "tick": 139,
+          "expected": [
+            158,
+            93
+          ],
+          "actual": [
+            158,
+            95
+          ]
+        },
+        {
+          "tick": 140,
+          "expected": [
+            158,
+            91
+          ],
+          "actual": [
+            158,
+            93
+          ]
+        },
+        {
+          "tick": 141,
+          "expected": [
+            158,
+            89
+          ],
+          "actual": [
+            158,
+            91
+          ]
+        },
+        {
+          "tick": 142,
+          "expected": [
+            158,
+            91
+          ],
+          "actual": [
+            158,
+            89
+          ]
+        },
+        {
+          "tick": 143,
+          "expected": [
+            158,
+            93
+          ],
+          "actual": [
+            158,
+            91
+          ]
+        },
+        {
+          "tick": 144,
+          "expected": [
+            158,
+            95
+          ],
+          "actual": [
+            158,
+            93
+          ]
+        },
+        {
+          "tick": 145,
+          "expected": [
+            158,
+            97
+          ],
+          "actual": [
+            158,
+            95
+          ]
+        },
+        {
+          "tick": 146,
+          "expected": [
+            158,
+            99
+          ],
+          "actual": [
+            158,
+            97
+          ]
+        },
+        {
+          "tick": 147,
+          "expected": [
+            158,
+            101
+          ],
+          "actual": [
+            158,
+            99
+          ]
+        },
+        {
+          "tick": 153,
+          "expected": [
+            158,
+            97
+          ],
+          "actual": [
+            158,
+            101
+          ]
+        },
+        {
+          "tick": 154,
+          "expected": [
+            158,
+            95
+          ],
+          "actual": [
+            158,
+            97
+          ]
+        },
+        {
+          "tick": 155,
+          "expected": [
+            158,
+            93
+          ],
+          "actual": [
+            158,
+            95
+          ]
+        },
+        {
+          "tick": 156,
+          "expected": [
+            158,
+            91
+          ],
+          "actual": [
+            158,
+            93
+          ]
+        },
+        {
+          "tick": 157,
+          "expected": [
+            158,
+            89
+          ],
+          "actual": [
+            158,
+            91
+          ]
+        },
+        {
+          "tick": 158,
+          "expected": [
+            158,
+            91
+          ],
+          "actual": [
+            158,
+            89
+          ]
+        },
+        {
+          "tick": 159,
+          "expected": [
+            158,
+            93
+          ],
+          "actual": [
+            158,
+            91
+          ]
+        },
+        {
+          "tick": 160,
+          "expected": [
+            158,
+            95
+          ],
+          "actual": [
+            158,
+            93
+          ]
+        },
+        {
+          "tick": 161,
+          "expected": [
+            158,
+            97
+          ],
+          "actual": [
+            158,
+            95
+          ]
+        },
+        {
+          "tick": 162,
+          "expected": [
+            158,
+            99
+          ],
+          "actual": [
+            158,
+            97
+          ]
+        },
+        {
+          "tick": 163,
+          "expected": [
+            158,
+            101
+          ],
+          "actual": [
+            158,
+            99
+          ]
+        }
+      ]
+    }
+  ],
+  "regression_gates_passed": true
+}

@@ -1,0 +1,469 @@
+{
+  "source_sha256": "4dcaf346cf8b1607d9e9c66087c14b0d24c63c55236389400725441571125a92",
+  "generator": "built-in image_gen",
+  "exact_c64_sprite_composition": false,
+  "original_pixels_shipped": false,
+  "packed_bytes": 8736,
+  "chip_allocation_change": 0,
+  "palette_ocs": [
+    17,
+    291,
+    837,
+    1383,
+    2475,
+    3294,
+    4095,
+    1963,
+    565,
+    855,
+    1128,
+    2916,
+    3512,
+    4069,
+    1204,
+    355
+  ],
+  "frames": [
+    {
+      "actor": "yamo",
+      "pose": 0,
+      "source_rect": [
+        0,
+        0,
+        230,
+        350
+      ],
+      "source_anchor": [
+        120,
+        327
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "f28ab41bf262b3f3d45f7656dc4230afb67fb62faa636c3543783db42697935e"
+    },
+    {
+      "actor": "yamo",
+      "pose": 1,
+      "source_rect": [
+        230,
+        0,
+        480,
+        350
+      ],
+      "source_anchor": [
+        350,
+        327
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "b6dd6c80978342abcdc6ffb35232924c6549b5ff15ef254a2430c5863b084f4a"
+    },
+    {
+      "actor": "yamo",
+      "pose": 2,
+      "source_rect": [
+        480,
+        0,
+        710,
+        350
+      ],
+      "source_anchor": [
+        550,
+        327
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "ec0c094cff56429a356e014008f1c8e906709b32f523ce502d939b2360030171"
+    },
+    {
+      "actor": "yamo",
+      "pose": 3,
+      "source_rect": [
+        710,
+        0,
+        995,
+        350
+      ],
+      "source_anchor": [
+        800,
+        327
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "132da7b345047936b56c8a1e98210c804237f0aec409855946e94916e2e9804f"
+    },
+    {
+      "actor": "yamo",
+      "pose": 4,
+      "source_rect": [
+        995,
+        0,
+        1170,
+        350
+      ],
+      "source_anchor": [
+        1080,
+        327
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "c4b4c2085d8c6252b2ebd2c88dd12685406d93bb13efdb745d3eb1298cfe546a"
+    },
+    {
+      "actor": "yamo",
+      "pose": 5,
+      "source_rect": [
+        1170,
+        0,
+        1470,
+        350
+      ],
+      "source_anchor": [
+        1320,
+        327
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "782a24b3351f1e196aa4b427b31bb4976e1386bbba75e4c216292de1bee94bb4"
+    },
+    {
+      "actor": "yamo",
+      "pose": 6,
+      "source_rect": [
+        1470,
+        0,
+        1659,
+        350
+      ],
+      "source_anchor": [
+        1550,
+        327
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "2c115debabbf34ac1d2067b1c333d34760d47eb6df2ee7b38a062004e22892c6"
+    },
+    {
+      "actor": "ninja",
+      "pose": 0,
+      "source_rect": [
+        0,
+        350,
+        230,
+        640
+      ],
+      "source_anchor": [
+        120,
+        613
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "009a648fa23cdd0dd971ca8e1ace865fbad00c94766c5fa1dd6753f64f7592be"
+    },
+    {
+      "actor": "ninja",
+      "pose": 1,
+      "source_rect": [
+        230,
+        350,
+        480,
+        640
+      ],
+      "source_anchor": [
+        350,
+        613
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "e9b38ae43340783bfa365f76c71f042300eeae816bcbff3b46e42297e5e0a917"
+    },
+    {
+      "actor": "ninja",
+      "pose": 2,
+      "source_rect": [
+        480,
+        350,
+        710,
+        640
+      ],
+      "source_anchor": [
+        550,
+        613
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "096cdae8a6ca5bf0048e64f24857c980aedbe65bfbc881b8115a0861259457b6"
+    },
+    {
+      "actor": "ninja",
+      "pose": 3,
+      "source_rect": [
+        710,
+        350,
+        995,
+        640
+      ],
+      "source_anchor": [
+        800,
+        613
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "10688d86c3be312a46cfa9b6a1c096c6034d8c5e06563e65fee4e461e050f789"
+    },
+    {
+      "actor": "ninja",
+      "pose": 4,
+      "source_rect": [
+        995,
+        350,
+        1170,
+        640
+      ],
+      "source_anchor": [
+        1080,
+        613
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "f9d25d1be4a09d65eb639da6f5f355f71260f2e570c375edfad6c2b6250d2e8f"
+    },
+    {
+      "actor": "ninja",
+      "pose": 5,
+      "source_rect": [
+        1170,
+        520,
+        1470,
+        640
+      ],
+      "source_anchor": [
+        1320,
+        613
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "fb7f1920e452a0e3e11a7fc5fe1e6b90ca370a648956647120033e8d1156f751"
+    },
+    {
+      "actor": "ninja",
+      "pose": 6,
+      "source_rect": [
+        1470,
+        350,
+        1659,
+        640
+      ],
+      "source_anchor": [
+        1550,
+        613
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "1e8a1691ab3de1672d725d25bf0d897a3818fafe42a65d191fd4bd4dc705db50"
+    },
+    {
+      "actor": "bruce",
+      "pose": 0,
+      "source_rect": [
+        0,
+        640,
+        230,
+        948
+      ],
+      "source_anchor": [
+        120,
+        900
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "9bf292faf81ea487539c3780e8a775bd375ddc955fec0da35e9140dd1dd7e61f"
+    },
+    {
+      "actor": "bruce",
+      "pose": 1,
+      "source_rect": [
+        230,
+        640,
+        480,
+        948
+      ],
+      "source_anchor": [
+        350,
+        900
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "97826458bc8d063a49499faf1747985482137b6544947d9544aa81fadb61db3b"
+    },
+    {
+      "actor": "bruce",
+      "pose": 2,
+      "source_rect": [
+        480,
+        640,
+        710,
+        948
+      ],
+      "source_anchor": [
+        550,
+        900
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "0580715a5ab3def7c1329c7bbe77e7205f1fb9125bffa760974e56919a468578"
+    },
+    {
+      "actor": "bruce",
+      "pose": 3,
+      "source_rect": [
+        710,
+        640,
+        995,
+        948
+      ],
+      "source_anchor": [
+        800,
+        900
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "82c38b86c70922bbd46e7bc7bb077619ce6ec969f2af6baabe631b3b50e0fa78"
+    },
+    {
+      "actor": "bruce",
+      "pose": 4,
+      "source_rect": [
+        995,
+        640,
+        1170,
+        948
+      ],
+      "source_anchor": [
+        1080,
+        900
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "54bbd97b428f0eea3a29e820434e0784c91c84bdf162a9394f3e69643a220c8b"
+    },
+    {
+      "actor": "bruce",
+      "pose": 5,
+      "source_rect": [
+        1170,
+        640,
+        1470,
+        948
+      ],
+      "source_anchor": [
+        1320,
+        900
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "504fb96a42b785d15141c3ad488d68a1506183191bd0b836cb16326a23267654"
+    },
+    {
+      "actor": "bruce",
+      "pose": 6,
+      "source_rect": [
+        1470,
+        640,
+        1659,
+        948
+      ],
+      "source_anchor": [
+        1550,
+        900
+      ],
+      "anchor": [
+        16,
+        25
+      ],
+      "width": 32,
+      "height": 26,
+      "sha256": "924410a60396f5ce7f207d06e9867fcd48f77402de3c16e7e518dcbd9dbbfc61"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "NPC-RECOIL-0001",
+  "date": "2026-10-25",
+  "status": "candidate_code_derived_partial",
+  "full_original_parity": false,
+  "summary": "NPC motion/recoil history and recovery ownership corrected;192 original6502 helper cases,1000 NPC wall histories,24 native R02 regressions on two A500 launches. Full actor/contact/AI and timing parity remain open.",
+  "artifacts": [
+    {
+      "path": "reference/validation/npc-recoil-delivery.json",
+      "sha256": "cd5c90bce2a69ecc95f7f0f5f358eccbaf13f35f6586be334f8b104ad134de19"
+    }
+  ]
+}

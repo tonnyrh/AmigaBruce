@@ -1,0 +1,97 @@
+﻿{
+    "date":  "2026-10-25",
+    "status":  "passed_source_room_integration_and_host_combat_replay",
+    "natural_playthrough":  false,
+    "c64_combat_parity":  false,
+    "output":  [
+                   "PASS source-audited T10 diagonal stop/input-independent net catch and T13 assignment then one recoil update (actor adapter scope)",
+                   "PASS all20 source-room entries and confirmed T01 free-fall control",
+                   "PASS source-animated R02 hatch to R06, exact arrival and persistent lamps",
+                   "PASS source final-room timer, next round and reset of original lamp counts",
+                   "PASS R19 source projectile bits/contact and source death branch",
+                   "AUDIO_6000 source_audio_hash=120093689 source_music_hash=2708371906 source_sfx_request_mask=32767 source_audio_chip_bytes=2260",
+                   "M3_6000 combat_hits=62 enemy_defeats=6 enemy_spawns=10 player_deaths=2 player_respawns=2 final_x=4 final_y=196"
+               ],
+    "source_files":  [
+                         {
+                             "sha256":  "f892fa8332934dcbb62342a6650f06a5b5a08b9d1c616381de36a92a4b13af72",
+                             "path":  "core/game.c"
+                         },
+                         {
+                             "sha256":  "92fd500b9ef7828c40b60847b2b842204c9dbe8fc5854e438a021cc5f46242f8",
+                             "path":  "core/game.h"
+                         },
+                         {
+                             "sha256":  "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404",
+                             "path":  "core/presentation.c"
+                         },
+                         {
+                             "sha256":  "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445",
+                             "path":  "core/presentation.h"
+                         },
+                         {
+                             "sha256":  "2390a242feb1638288149e3610ed034d42254296da2c5d4d4200f8a68e1b4e10",
+                             "path":  "core/combat.c"
+                         },
+                         {
+                             "sha256":  "1001f3fcd4b5c4da12cd9cbc3d8be47d12dd823a191ea43a64e68ca5cad532ea",
+                             "path":  "core/combat.h"
+                         },
+                         {
+                             "sha256":  "d80a8b6d5726689b7d171644c3b5d47ba6d12b61e9d15b965b7d23f7353f42aa",
+                             "path":  "core/rooms.c"
+                         },
+                         {
+                             "sha256":  "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+                             "path":  "core/rooms.h"
+                         },
+                         {
+                             "sha256":  "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+                             "path":  "core/room_data.h"
+                         },
+                         {
+                             "sha256":  "772a713ec317c689fb3aaf4bf0ea3ed589fd964b11f4b91ab28583653b52419e",
+                             "path":  "core/c64_rooms.c"
+                         },
+                         {
+                             "sha256":  "a5a3b9935a48aee098d314f426eb7c98ab56e4d11fbc24d74ab2d48b9dce5e9c",
+                             "path":  "core/c64_rooms.h"
+                         },
+                         {
+                             "sha256":  "d850f8cd6c6f948d1f96b348a6ec4fb9b5f399e249ba85da653864b572a23e9a",
+                             "path":  "core/c64_room_data.h"
+                         },
+                         {
+                             "sha256":  "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616",
+                             "path":  "core/c64_room_programs.h"
+                         },
+                         {
+                             "sha256":  "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+                             "path":  "core/c64_sfx.h"
+                         },
+                         {
+                             "sha256":  "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+                             "path":  "core/c64_sound_data.h"
+                         },
+                         {
+                             "sha256":  "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+                             "path":  "core/source_audio.c"
+                         },
+                         {
+                             "sha256":  "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+                             "path":  "core/source_audio.h"
+                         },
+                         {
+                             "sha256":  "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e",
+                             "path":  "core/source_audio_data.h"
+                         },
+                         {
+                             "sha256":  "680d5447aefe7b34bb47e064c323b523a77bfbf1af1b14d3eee8ba82981c0aec",
+                             "path":  "tests/c64_rooms_test.c"
+                         },
+                         {
+                             "sha256":  "4af33f17febefe31b121aa2954a8a982de12b955571a8b054f14d9223d494115",
+                             "path":  "test-core.ps1"
+                         }
+                     ]
+}

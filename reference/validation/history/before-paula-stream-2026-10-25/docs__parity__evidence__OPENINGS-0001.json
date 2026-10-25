@@ -1,0 +1,27 @@
+{
+  "id": "OPENINGS-0001",
+  "date": "2026-10-24",
+  "status": "candidate_source_checks_and_amiga_regression_passed",
+  "primary_edition_verified": false,
+  "full_m4_parity": false,
+  "natural_full_playthrough_verified": false,
+  "c64_opening_timing_verified": false,
+  "summary": "R02 hatch, R03 east, R06 upper return and lower west conditions verified against frozen candidate instructions and tables. Native injected-setup route confirms3 transitions and31 pickups.",
+  "artifacts": [
+    {
+      "path": "reference/validation/candidate-openings.json",
+      "size_bytes": 3988,
+      "sha256": "0f27cff687831707315be9a4960052010f0972afcef4c61a1c69604a47e7a43f"
+    },
+    {
+      "path": "reference/validation/history/before-green-yamo-a500-gates.json",
+      "size_bytes": 9708,
+      "sha256": "10271b5b177313320d837f18dec17e7ce0f677124fb3f1b4f671d18cbeac2c5b"
+    },
+    {
+      "path": "reference/validation/m3-core.json",
+      "size_bytes": 3498,
+      "sha256": "9c8e6d5c3828343e8a32e4d33a71d13b0c84e060e4241a0aa3229086be774f94"
+    }
+  ]
+}

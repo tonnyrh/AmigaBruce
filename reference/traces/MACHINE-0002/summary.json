@@ -1,0 +1,62 @@
+{
+  "capture_id": "MACHINE-0002",
+  "status": "candidate_full_machine_replay",
+  "primary_edition_verified": false,
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "profile": "VICE 3.10 x64sc PAL C64 MOS6569R3; sound disabled; IO Simulation on port 1",
+  "input": "active-low joystick lines via VICE IO Simulation device 37, zero-based port 0",
+  "boundary": "$1BCE before keyboard parser; last executed instruction $1BCC",
+  "warmup_idle_steps": 8,
+  "repetitions": 2,
+  "scenarios": [
+    {
+      "name": "central-climb",
+      "samples": 81,
+      "identical_replays": 2,
+      "sha256": "8380f5950f69bec700c55771bc1f1dc77e0f0645305afcf7832a9cf40bc98fc0",
+      "min_step_cycles": 58907,
+      "max_step_cycles": 59028,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        91
+      ],
+      "y_range": [
+        161,
+        196
+      ]
+    },
+    {
+      "name": "central-climb-down",
+      "samples": 81,
+      "identical_replays": 2,
+      "sha256": "85a4ebc56d4bc2adc08d97c857e360f4f39d34d4b4e4a23db24d2f0db2df3755",
+      "min_step_cycles": 58907,
+      "max_step_cycles": 59028,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        91
+      ],
+      "y_range": [
+        177,
+        196
+      ]
+    }
+  ],
+  "recorder_sources": [
+    {
+      "path": "tools/vice_binary.py",
+      "sha256": "91eded222cb7e6d11ddd8e59762ecf028fd7ca490bc915915a4c7714c7366fb4"
+    },
+    {
+      "path": "tools/capture_c64_movement.py",
+      "sha256": "e770d70671f697234ec04531721e8144abfb1bc25b11ae23fc75ef486929a2c8"
+    },
+    {
+      "path": "capture-c64.ps1",
+      "sha256": "69ed4c3397a15dd73f52f0025468dce34cbc68482e5d1fcc36e8c4acd0a7c676"
+    }
+  ]
+}

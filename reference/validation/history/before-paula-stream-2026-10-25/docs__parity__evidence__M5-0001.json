@@ -1,0 +1,16 @@
+{
+  "id": "M5-0001",
+  "date": "2026-10-24",
+  "status": "first_visual_candidate_not_complete",
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "summary": "21 AI-generated actor poses and shared mountain background; OCS16 palette; fixed anchors; occupied-row renderer; footprint/net candidates; scoped A500 checks passed.",
+  "artifacts": [
+    {
+      "path": "reference/validation/history/visual-candidate-before-animation-v2.json",
+      "size_bytes": 7068,
+      "sha256": "322d18c9ffe2af03281981a40d036c7bf4ef048240fe86f6993bec1dfa47fdff"
+    }
+  ],
+  "historical": true
+}

@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "errors": [],
+  "corrections": [
+    "box downscale",
+    "indexed palette quantization",
+    "OCS 12-bit palette snap"
+  ],
+  "profile": "playfield",
+  "width": 320,
+  "height": 200,
+  "colors": 16,
+  "transparent_index": null,
+  "input_sha256": "96ea412a0ecd650663c63722060e6ade718f6e355dddf1bf9596efe0344122ce",
+  "output_sha256": "36c7587cb7add4e056fcbd149a3f46b075ae73b9499b3cddce77ec08d87a092a",
+  "ilbm_sha256": null
+}

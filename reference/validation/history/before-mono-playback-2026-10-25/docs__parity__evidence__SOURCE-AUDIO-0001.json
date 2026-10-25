@@ -1,0 +1,14 @@
+{
+  "id": "SOURCE-AUDIO-0001",
+  "date": "2026-10-25",
+  "status": "candidate_code_derived_partial",
+  "full_original_parity": false,
+  "summary": "Source title score and15 SFX sequences converted to compact Paula voices.7540 controlled source fields match native decoder; two A500 parameter replays match host. Analog SID/complete actor parity and strict A500 gates remain open.",
+  "artifacts": [
+    {
+      "path": "reference/validation/source-audio-delivery.json",
+      "sha256": "e21f55e5f5640fdae56d2f972693d6b79a9139408c347c3405aec44a693124cd",
+      "size_bytes": 20992
+    }
+  ]
+}

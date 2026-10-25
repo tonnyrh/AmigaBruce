@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-24",
+  "status": "failed_not_a_release_pass",
+  "fixture": "combat6000",
+  "frames_completed": 5146,
+  "first_missed_frame": 5145,
+  "max_work_lines": 318,
+  "max_field_gap": 2,
+  "restored_os": true,
+  "source_identity": "pre_occupied_row_renderer; diagnostic observation only; no retrospective source hash claimed",
+  "follow_up": "Retest full route after restricting DMA copy/blit to occupied rows"
+}

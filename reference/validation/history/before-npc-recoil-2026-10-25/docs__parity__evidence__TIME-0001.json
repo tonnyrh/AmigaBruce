@@ -1,0 +1,35 @@
+{
+  "capture_id": "TIME-0001",
+  "date": "2026-10-20",
+  "status": "emulated_movement_duration_measured",
+  "primary_edition_verified": false,
+  "parity_ids": [
+    "PAR-003",
+    "PAR-004",
+    "PAR-006",
+    "PAR-007"
+  ],
+  "limitations": [
+    "One-field A500 timer granularity",
+    "Logical event timing only; no physical input-to-display latency",
+    "Clock-model long-term difference remains open"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/validation/movement-timing.json",
+      "sha256": "f88cb5b7f1d4486888470c6b9fd3bf7eb7615112b23540123e55104525a2c84e"
+    },
+    {
+      "path": "reference/validation/a500-soak.json",
+      "sha256": "ee6693aef3a5ecd085d8388a4eed3772df0a80b9d548994c1b0bd2a1541dc3eb"
+    },
+    {
+      "path": "reference/timing-clocks.json",
+      "sha256": "6dfc85f3dc314ba009d3dfaea4cde99e0a3c7f0a9febb54905c86564c477d86b"
+    },
+    {
+      "path": "docs/MOVEMENT_TIMING.md",
+      "sha256": "21c003c8b6e430912682c711c4896d34c8aa4ee76c7f5b5b6ec7c52ac7845e5c"
+    }
+  ]
+}

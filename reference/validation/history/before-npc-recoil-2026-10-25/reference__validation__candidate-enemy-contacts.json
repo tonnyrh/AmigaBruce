@@ -1,0 +1,127 @@
+{
+  "capture_id": "COMBAT-0001",
+  "primary_edition_verified": false,
+  "full_combat_parity": false,
+  "trace_sha256": "df8dab9a0794bf4fb7848d592c2fadb62f4b79f0edfac08b88118e7b08f39e7b",
+  "repetitions": 2,
+  "observations": 1452,
+  "first_active_health": {
+    "bruce": 36,
+    "yamo": 20,
+    "ninja": 7
+  },
+  "contacts": [
+    {
+      "scenario": "idle-contact",
+      "tick": 246,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "idle-contact",
+      "tick": 290,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "idle-contact",
+      "tick": 333,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "up-held-contact",
+      "tick": 246,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "up-held-contact",
+      "tick": 293,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "up-held-contact",
+      "tick": 336,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "moving-jump-contact",
+      "tick": 237,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "moving-jump-contact",
+      "tick": 278,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "moving-jump-contact",
+      "tick": 321,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "net-drop-contact",
+      "tick": 221,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "net-drop-contact",
+      "tick": 265,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "net-drop-contact",
+      "tick": 309,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "net-drop-contact",
+      "tick": 353,
+      "victim": 0,
+      "flags": 2,
+      "damage": 2
+    },
+    {
+      "scenario": "net-drop-contact",
+      "tick": 364,
+      "victim": 0,
+      "flags": 8,
+      "damage": 7
+    }
+  ],
+  "fall_hits_observed": 0,
+  "passed": true,
+  "limitations": [
+    "No natural falling-contact hit observed in these four routes",
+    "Jumping alone did not damage enemies in held-up route",
+    "Amiga passive target keeps provisional damage and geometry",
+    "Ninja/Yamo AI exists as an unverified M3 candidate; see candidate-combat.json"
+  ],
+  "source_files": [
+    {
+      "path": "tools/analyze_c64_combat.py",
+      "sha256": "34bd0bab4d67c7c6701e75164065148a4f064f013a02660c3072b79bc6bfaf94"
+    }
+  ]
+}

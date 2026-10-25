@@ -1,0 +1,42 @@
+{
+  "adapter_ground_decisions": 588,
+  "artifacts": [
+    {
+      "path": "reference/analysis/ai-audit-2026-10-25/report.json",
+      "sha256": "5644b0087f0066d33306080285f209f4875328c5582d727e18e2d185474dbfc2",
+      "size_bytes": 3221784
+    },
+    {
+      "path": "reference/analysis/ai-audit-2026-10-25/source-disassembly.txt",
+      "sha256": "eb1b51f7827f8e518994a7542207914cb9971fa9e0953c60caa4a1e22d7a4b38",
+      "size_bytes": 26349
+    },
+    {
+      "path": "docs/C64_AI.md",
+      "sha256": "8d39497dc471e02aede72f1bc892a005fd59890a5fd164e67daec6cf410cadf9",
+      "size_bytes": 11233
+    },
+    {
+      "path": "tools/audit_c64_ai.py",
+      "sha256": "85fedea43f3565e3bb3b4d72afc20ea133f674e821db54e55cf0a8fcb99e09ca",
+      "size_bytes": 23007
+    },
+    {
+      "path": "tests/ai_adapter_bridge.c",
+      "sha256": "d72ea0a47ab050379e3ba1d124a481a96794b73995844ee69051fc42bd28e6f9",
+      "size_bytes": 2312
+    },
+    {
+      "path": "test-c64-ai.ps1",
+      "sha256": "e7d00c34980e3275c07cd7550d3292cf80ddf6a34f14a199a3c9002fc68912c0",
+      "size_bytes": 1377
+    }
+  ],
+  "date": "2026-10-25",
+  "engine_modified": false,
+  "fixture_count": 4578,
+  "full_original_parity": false,
+  "id": "AI-AUDIT-0001",
+  "status": "candidate_code_derived_partial",
+  "summary": "Actual6502 Kage/Yamo AI audit:4578 controlled fixtures,588 ordinary ground choices agree with isolated adapter requests;59 retained counter/support/sai discrepancies plus clock/spawn/entry/door gaps. Engine and EXE/ADF unchanged; no full physics, natural-play or native AI certification."
+}

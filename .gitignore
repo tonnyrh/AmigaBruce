@@ -1,0 +1,7 @@
+# Local reference media, upstream checkouts and capture evidence.
+/.reference/
+/.tmp/
+__pycache__/
+*.pyc
+/amiga/out/
+/amiga/obj/

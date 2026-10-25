@@ -1,0 +1,45 @@
+{
+  "status": "analysis_only",
+  "cpu": "py65 1.2.0 NMOS6502",
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "hardware_emulated": false,
+  "entry": "$1BCE",
+  "stop": "$1C32",
+  "scenarios": [
+    {
+      "name": "idle",
+      "samples": 48,
+      "trace_sha256": "bd6e98bbcdb7496c09948911d74d94d64641bf90bbb0acd3c0d13225934afddd"
+    },
+    {
+      "name": "right",
+      "samples": 48,
+      "trace_sha256": "6bb5919d362c8d6205c6617e00ccee89d8d9e6c6c559ebcb6f3810a1f2c27e13"
+    },
+    {
+      "name": "left",
+      "samples": 48,
+      "trace_sha256": "bd846c32a8dd767a5979077e9718bcacc489d293a22c10ecb25d51fde38e05b0"
+    },
+    {
+      "name": "up",
+      "samples": 48,
+      "trace_sha256": "3b5d975c65dc5a79e540d8cecdcd5292ea579dbf95b74d36811743caf6eb8aee"
+    },
+    {
+      "name": "jump-right",
+      "samples": 48,
+      "trace_sha256": "24029fc0f0158e18e8c40e8f052d957d39ebb7c4d1401931d81f629b21eeb3de"
+    },
+    {
+      "name": "jump-left",
+      "samples": 48,
+      "trace_sha256": "feded259ff35cde06f11c14ad0daee61993e75186c9a087216511b5d0076fd41"
+    },
+    {
+      "name": "down",
+      "samples": 48,
+      "trace_sha256": "f86ea3fb3ad334e37705463eb890b5b09d012009770d16e2d8533f3ff12a18c7"
+    }
+  ]
+}

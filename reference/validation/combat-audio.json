@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-24",
+  "status": "generated_integrated_native_checked_awaiting_listening",
+  "packed_bytes": 2000,
+  "chip_bytes": 4004,
+  "variant_count": 4,
+  "pcm_rate": 8000,
+  "source": "local AudioGen medium",
+  "subjective_audio_approval": "accepted_for_now_by_user_2026-10-24",
+  "physical_hardware_test": false,
+  "artifacts": [
+    {
+      "path": "assets/audio/combat-v1/manifest.json",
+      "size_bytes": 1977,
+      "sha256": "c6deac93d5e53249aa400e1a08e281eee4f9ba297e38beb416a028bade2d77ae"
+    },
+    {
+      "path": "amiga/combat_audio.h",
+      "size_bytes": 1764,
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10"
+    },
+    {
+      "path": "amiga/combat_audio_data.h",
+      "size_bytes": 8082,
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0"
+    },
+    {
+      "path": "tools/build_combat_audio.py",
+      "size_bytes": 4129,
+      "sha256": "475f0aae0836e312ef9f74169451d833cc1c7b4e7b8ec85cae5acb8308d37249"
+    },
+    {
+      "path": "tools/verify_combat_audio.py",
+      "size_bytes": 2463,
+      "sha256": "89fc37175c356505834ba39ade22cb030ee8bc8c0ab67f328318da13a838c489"
+    },
+    {
+      "path": "docs/COMBAT_AUDIO.md",
+      "size_bytes": 3846,
+      "sha256": "e2911fd2128896fb43a323da6983072785eddcb4eb7ad9c8946d750aa9306578"
+    },
+    {
+      "path": "reference/validation/a500-m3-combat.json",
+      "size_bytes": 5860,
+      "sha256": "8797a0bd9b48de6a15f779c485315187261289aa1b8a37689472b48ccceef8d7"
+    },
+    {
+      "path": "reference/validation/a500-repeat-launch.json",
+      "size_bytes": 7950,
+      "sha256": "8541ca49306dc2075c0155577b1f90e648d7989a1fd70831a727de3bfd2b8bab"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "size_bytes": 4736,
+      "sha256": "c0fb01ffb45457073ae34f8599f7d53df2549b183202483c2f5a7cbef30be545"
+    }
+  ],
+  "latest_candidate_evidence": "reference/validation/visual-candidate.json",
+  "artifact_records_scope": "original audio delivery; older signatures preserved, latest native sources in visual candidate"
+}

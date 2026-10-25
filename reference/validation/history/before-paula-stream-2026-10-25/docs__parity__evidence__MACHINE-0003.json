@@ -1,0 +1,44 @@
+{
+  "capture_id": "MACHINE-0003",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_replayed_not_primary_verified",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008",
+    "SRC-010"
+  ],
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "parity_ids": [
+    "PAR-003",
+    "PAR-005",
+    "PAR-006",
+    "PAR-008",
+    "PAR-010"
+  ],
+  "input_sampling_phase": "$1BCE before keyboard parser; last executed instruction $1BCC",
+  "measurement_method": "Native active-low joystick IO Simulation through CIA; two identical full-machine captures; CPU-history clocks; no gameplay RAM/register writes",
+  "coordinate_definition": "C64 $9E halfpixel position, $A1 vertical position; core seam x=2*C64_x-24, y=C64_y",
+  "limitations": [
+    "Remember candidate, retail identity unverified",
+    "Registered snapshot bootstrap skips crack/menu branches",
+    "Logic-seam X/Y comparison does not certify internal states or Amiga input phase",
+    "SID audio not validated"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/traces/MACHINE-0003/central-top-held.csv",
+      "sha256": "02c73dd91060aca74592ee896bfa193913bf0aa7387d51c6d9c46602f16cad7d"
+    },
+    {
+      "path": "reference/traces/MACHINE-0003/central-top-release.csv",
+      "sha256": "ca28228b7cf11be53cd79edeb823a3930ef97a44b0aa7720d829d604d326f980"
+    },
+    {
+      "path": "reference/traces/MACHINE-0003/summary.json",
+      "sha256": "04b7294a4285ebfea8b7e229baaf82f564157930a2753d3e52d63491d668e0e0"
+    }
+  ],
+  "scenarios": 2,
+  "samples": 362
+}

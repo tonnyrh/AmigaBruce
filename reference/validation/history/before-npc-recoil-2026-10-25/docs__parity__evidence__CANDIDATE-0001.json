@@ -1,0 +1,42 @@
+{
+  "capture_id": "CANDIDATE-0001",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_observed_not_primary_verified",
+  "container_sha256": "36800f5bddbd6da7b516b8acad74b01954c4cdb4265448a1064f6b113dbb2b99",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "observations": [
+    "Original menu shows F3 one/two players, F5 computer/opponent, F7 start",
+    "Trainer prompts for unlimited lives and invulnerability answered N,N",
+    "First room visible in VICE; engine room is an approximate blockout"
+  ],
+  "artifacts": [
+    {
+      "path": ".reference/c64/work/original-menu.png",
+      "sha256": "4c582b17228a7db103489156b2372846c66cacfe4a884cb03c5bdb00034a1f19"
+    },
+    {
+      "path": ".reference/c64/work/trainer-options.png",
+      "sha256": "a3cdda3efb408c15dbd335672426a50ae876d6a358a431c82ad099799deb4949"
+    },
+    {
+      "path": ".reference/c64/work/trainer-second.png",
+      "sha256": "c0b37abe776833472c3323648282e19248fb3daffca1c7efb9d7feee73e84ee4"
+    },
+    {
+      "path": ".reference/c64/work/room1-visible.png",
+      "sha256": "e924463442630064fe43da2bfba526ac5027150d541e2901019025729bb0ca3d"
+    },
+    {
+      "path": ".reference/c64/work/movement-baseline.vsf",
+      "sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23"
+    }
+  ],
+  "excluded": [
+    "CAP-0001 movement CSVs: incorrect PC boundaries; not accepted as timing or parity evidence"
+  ],
+  "limitations": [
+    "Debugger bootstrap redirects documented in manifest",
+    "Release identity and full input/timing/IRQ behavior unverified",
+    "Screenshot display API pads four missing trailing border bytes"
+  ]
+}

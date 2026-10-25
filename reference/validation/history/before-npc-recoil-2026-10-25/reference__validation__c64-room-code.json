@@ -1,0 +1,192 @@
+{
+  "date": "2026-10-24",
+  "status": "passed_frozen_binary_instruction_checks",
+  "instructions_executed": 0,
+  "primary_edition_verified": false,
+  "full_room_logic_reconstructed": false,
+  "checks": [
+    {
+      "address": "$09DC",
+      "size": 3,
+      "sha256": "67acd80eac6129e15d329a19b83b9ee6c231ddb4cdbc7e5d3e036316b8b735e8",
+      "meaning": "Room-dependent initial attribute table"
+    },
+    {
+      "address": "$0AAF",
+      "size": 3,
+      "sha256": "75f7a6d019d15ed786260be9e0338211ea95b7115af0a579fe7bc19a30142b36",
+      "meaning": "Room pointer low table"
+    },
+    {
+      "address": "$0AB4",
+      "size": 3,
+      "sha256": "750b5497bcd5e9d9cc98327c06fbdec4080f9b363c114fd70befbeb80e191136",
+      "meaning": "Room pointer high table"
+    },
+    {
+      "address": "$0AEA",
+      "size": 6,
+      "sha256": "4243e623ccde0fd2143766bd18193696f87c14e77fb3333b80714bc7b9ee86e2",
+      "meaning": "Upper character; OR80; lower character"
+    },
+    {
+      "address": "$0B5F",
+      "size": 11,
+      "sha256": "33be9d6857fbddaa75142a20e536a4a11b2adc880169e7c4ea199e447eb7cb78",
+      "meaning": "Black attribute written to both halves; strip attribute from ID"
+    },
+    {
+      "address": "$1C42",
+      "size": 15,
+      "sha256": "0906eab6b665449a2624f9e2ae142f49c2b45061dd12e6fd522e2df251eac332",
+      "meaning": "R14 object-coordinate Y exception"
+    },
+    {
+      "address": "$33BD",
+      "size": 13,
+      "sha256": "494c386dd63bdd422c74d304be08482b3041e9f3d24249c6ae2bc592f46a2744",
+      "meaning": "Init dispatch by pushing table address then RTS"
+    },
+    {
+      "address": "$3A6F",
+      "size": 13,
+      "sha256": "c31a9e7d6b21598f4f5da506f87ae0b973fd1341cd2dcf199720a1a2ca10b903",
+      "meaning": "Room loop dispatch by pushing table address then RTS"
+    },
+    {
+      "address": "$55D7",
+      "size": 6,
+      "sha256": "0923006365bcf02836ba5afe44af552e950da1858e46c574da1846425647c422",
+      "meaning": "Per-character color low3 bits select classification"
+    },
+    {
+      "address": "$5590",
+      "size": 27,
+      "sha256": "8175644805009c7367f8356cbb3518864f7b61655ddd9c91206a099f7423e54e",
+      "meaning": "Four class bits assembled into actor B6"
+    },
+    {
+      "address": "$304B",
+      "size": 7,
+      "sha256": "9d74fd5c5271ee9cd8099125e69ccb39c03c69c7973e90fd4bc7781d8629f3bc",
+      "meaning": "R19 exception in hazard dispatch"
+    }
+  ],
+  "room_programs": [
+    {
+      "room": 1,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x3642"
+    },
+    {
+      "room": 2,
+      "init_entry": "0x33f6",
+      "loop_entry": "0x3679"
+    },
+    {
+      "room": 3,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x36a6"
+    },
+    {
+      "room": 4,
+      "init_entry": "0x33fc",
+      "loop_entry": "0x3702"
+    },
+    {
+      "room": 5,
+      "init_entry": "0x3402",
+      "loop_entry": "0x3760"
+    },
+    {
+      "room": 6,
+      "init_entry": "0x3428",
+      "loop_entry": "0x38ab"
+    },
+    {
+      "room": 7,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x39aa"
+    },
+    {
+      "room": 8,
+      "init_entry": "0x3461",
+      "loop_entry": "0x39c3"
+    },
+    {
+      "room": 9,
+      "init_entry": "0x3478",
+      "loop_entry": "0x3ad4"
+    },
+    {
+      "room": 10,
+      "init_entry": "0x348f",
+      "loop_entry": "0x3bb2"
+    },
+    {
+      "room": 11,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x3c90"
+    },
+    {
+      "room": 12,
+      "init_entry": "0x33f5",
+      "loop_entry": "0x3cc0"
+    },
+    {
+      "room": 13,
+      "init_entry": "0x34bd",
+      "loop_entry": "0x3e4c"
+    },
+    {
+      "room": 14,
+      "init_entry": "0x34c3",
+      "loop_entry": "0x3e7c"
+    },
+    {
+      "room": 15,
+      "init_entry": "0x358d",
+      "loop_entry": "0x3ecc"
+    },
+    {
+      "room": 16,
+      "init_entry": "0x3593",
+      "loop_entry": "0x3ee6"
+    },
+    {
+      "room": 17,
+      "init_entry": "0x359f",
+      "loop_entry": "0x3f5b"
+    },
+    {
+      "room": 18,
+      "init_entry": "0x35c4",
+      "loop_entry": "0x3f71"
+    },
+    {
+      "room": 19,
+      "init_entry": "0x35fa",
+      "loop_entry": "0x3cdc"
+    },
+    {
+      "room": 20,
+      "init_entry": "0x425f",
+      "loop_entry": "0x4272"
+    }
+  ],
+  "source_files": [
+    {
+      "path": ".reference/c64/work/untrained-memory.bin",
+      "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+    },
+    {
+      "path": "tools/inspect_c64_room_code.py",
+      "sha256": "a3883d31be07e021b18e8db005b18dea4578fe374a434313bae041142e4ed7d2"
+    }
+  ],
+  "listing": {
+    "path": ".reference/c64/room-reconstruction/room-code.txt",
+    "sha256": "1ae744092d5735ab49ac3fc12b1b07de1d4b709db1ddd76a5c2396a552c011ff"
+  },
+  "next_work": "Trace all room init/loop branches and mutations before replacing provisional Amiga geometry"
+}

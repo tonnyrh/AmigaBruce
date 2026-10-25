@@ -1,0 +1,436 @@
+{
+  "date": "2026-10-25",
+  "status": "passed_native_c_vs_source_cpu_fixtures",
+  "rooms": 20,
+  "source_loop_calls": 2560,
+  "source_animation_calls": 160,
+  "animation_cache_checks": [
+    {
+      "room": 1,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 2,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 3,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 4,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 5,
+      "cache_bytes": 20480,
+      "source_phases": 8,
+      "block_draws": 16,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 6,
+      "cache_bytes": 20480,
+      "source_phases": 8,
+      "block_draws": 16,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 7,
+      "cache_bytes": 34816,
+      "source_phases": 8,
+      "block_draws": 24,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 8,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 9,
+      "cache_bytes": 104448,
+      "source_phases": 8,
+      "block_draws": 120,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 10,
+      "cache_bytes": 87040,
+      "source_phases": 8,
+      "block_draws": 184,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 11,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 12,
+      "cache_bytes": 52224,
+      "source_phases": 8,
+      "block_draws": 64,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 13,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 14,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 15,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 16,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 17,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 18,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 19,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 20,
+      "cache_bytes": 18432,
+      "source_phases": 8,
+      "block_draws": 35,
+      "max_presentation_parts": 2
+    }
+  ],
+  "contact_checks": 1860,
+  "door_gate_checks": 640,
+  "indexed_room_images_compared": 20,
+  "dynamic_room_images_compared": 40,
+  "checks": [
+    {
+      "room": 1,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 1,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 2,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 2,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 3,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 3,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 4,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 4,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 5,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 5,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 6,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 6,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 7,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 7,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 8,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 8,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 9,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 9,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 10,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 10,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 11,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 11,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 12,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 12,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 13,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 13,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 14,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 14,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 15,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 15,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 16,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 16,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 17,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 17,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 18,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 18,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 19,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 19,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 20,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 20,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    }
+  ],
+  "natural_playthrough": false,
+  "hardware_parity": false,
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_files": [
+    {
+      "sha256": "50f5c290af85409528cf8959a4ab4153ecfc92883d107f5ef706b495052e41f1",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "8d89c11088f2e7a29d5fa9eeaefe222de6780da191ba8cdc1c2fc3f371ab79a8",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "d850f8cd6c6f948d1f96b348a6ec4fb9b5f399e249ba85da653864b572a23e9a",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "bc61c58f063f2306ef51e6f0c4411dbdc5bf7082a12771afaac93229070216e0",
+      "path": "tools/build_c64_rooms.py"
+    },
+    {
+      "sha256": "77e79f3b235948a42c06b3685e5c3bed512bd47f3bcfa5cd81220787b11d3dbf",
+      "path": "tools/verify_c64_room_runtime.py"
+    },
+    {
+      "sha256": "8beae2974d86968d7245e279fc00bcbafd135850392bfb45827ef2478096ed81",
+      "path": "tools/c64_room_model.py"
+    },
+    {
+      "sha256": "e2d441d8ef20845513c3aaffecf48a51076649dd1f3915711f7ec10d7d617081",
+      "path": "tools/rip_c64_room_graphics.py"
+    },
+    {
+      "sha256": "9100976cffce8a0a6e176bb3a1f521ee4377571e58b69bb6030e7af48b51ac2f",
+      "path": "test-c64-rooms.ps1"
+    }
+  ]
+}

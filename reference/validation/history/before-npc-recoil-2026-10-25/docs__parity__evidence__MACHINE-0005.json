@@ -1,0 +1,58 @@
+{
+  "capture_id": "MACHINE-0005",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_replayed_not_primary_verified",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008",
+    "SRC-010"
+  ],
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "parity_ids": [
+    "PAR-013",
+    "PAR-016"
+  ],
+  "measurement_method": "Native joystick IO Simulation; two identical full-machine repetitions; logical attack targets and positions only",
+  "limitations": [
+    "Retail identity unverified",
+    "No enemy health or hitbox measurements",
+    "Running transition and release input phase still differ"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/traces/MACHINE-0005/down-fire.csv",
+      "sha256": "3d358804ff6a5829792eeac8c614be8681fbaa2c1423607c06da4f8ec6fae4f1"
+    },
+    {
+      "path": "reference/traces/MACHINE-0005/fire-hold.csv",
+      "sha256": "67d53e0b9bf236b2576cf9740c82c540731415d4647f3498ad78d448edb8c534"
+    },
+    {
+      "path": "reference/traces/MACHINE-0005/fire-tap.csv",
+      "sha256": "1a89a1a5252e4e1409b1f41a4faf3531cea1bf38c484b655e3dfa53752666151"
+    },
+    {
+      "path": "reference/traces/MACHINE-0005/moving-fire.csv",
+      "sha256": "fb63d5587b38da7b0bb0c8b213446ed8a87afd11019cced50f1ea3e90e981862"
+    },
+    {
+      "path": "reference/traces/MACHINE-0005/right-fire.csv",
+      "sha256": "c54c28bb8c68283104fe59dfb2756721eeba80b0ebe1a4c30b6261a6a48a4c27"
+    },
+    {
+      "path": "reference/traces/MACHINE-0005/summary.json",
+      "sha256": "0e08116b8a46ba1a87d18ce98bb6f7880674cbe27e3aaad8dee5e073fdb8a0d1"
+    },
+    {
+      "path": "reference/traces/MACHINE-0005/up-fire.csv",
+      "sha256": "786d5698a0efd184792e685e1e26a9a0b68567aff72c7bbbe90e6f88a00c69ab"
+    },
+    {
+      "path": "reference/scenarios/MACHINE-0005.json",
+      "sha256": "05c83836e8a5d0a8aa228becfdecbd4688fb4d5ecba6512b75b2cb41b39064b9"
+    }
+  ],
+  "scenarios": 6,
+  "samples": 294
+}

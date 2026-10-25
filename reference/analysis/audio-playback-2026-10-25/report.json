@@ -1,0 +1,266 @@
+{
+  "status": "verified_three_voice_mix_in_archived_pre_npc_recoil_build",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "sid_analog_emulation": false,
+  "natural_playthrough": false,
+  "game_audio_code_changed": false,
+  "source_music_fields": 1155,
+  "source_voice_metrics": [
+    {
+      "paula_channel": 0,
+      "active_fields": 970,
+      "nonzero_pcm_fields": 970,
+      "first_active_field": 1,
+      "minimum_hz": 118.673,
+      "maximum_hz": 316.687,
+      "first_active_seconds_at_50hz": 0.02
+    },
+    {
+      "paula_channel": 1,
+      "active_fields": 338,
+      "nonzero_pcm_fields": 338,
+      "first_active_field": 385,
+      "minimum_hz": 316.687,
+      "maximum_hz": 3016.067,
+      "first_active_seconds_at_50hz": 7.7
+    },
+    {
+      "paula_channel": 2,
+      "active_fields": 610,
+      "nonzero_pcm_fields": 610,
+      "first_active_field": 129,
+      "minimum_hz": 316.687,
+      "maximum_hz": 947.354,
+      "first_active_seconds_at_50hz": 2.58
+    }
+  ],
+  "native_captures": [
+    {
+      "name": "paula-0",
+      "diagnostic_channel_mask": 1,
+      "complete_source_loops_minimum": 1,
+      "pcm_packets": 1845,
+      "live_seconds": 36.94141666666667,
+      "peak": 7679,
+      "rms": 3395.274,
+      "left_right_identical": true,
+      "avi_header": [
+        1,
+        1,
+        44100,
+        88200,
+        2,
+        16
+      ],
+      "method": "Unconverted PCM passthrough rewrapped as live stereo48000; PAL packet sizes verified",
+      "native_capture": {
+        "path": ".tmp/audio-playback-mixed/output_1.avi",
+        "sha256": "72feee5431b24b50b1d6e8b2b7696c32ce7143cc17d5380d39283669e8edcd1e",
+        "size_bytes": 7139328
+      },
+      "wav": {
+        "path": "reference/analysis/audio-playback-2026-10-25/title-native-paula-0.wav",
+        "sha256": "b8c1a4333a882fcca44a2acb28362d1d58cb1340504c4e4d4fec0c808336d674",
+        "size_bytes": 4992044
+      }
+    },
+    {
+      "name": "paula-1",
+      "diagnostic_channel_mask": 2,
+      "complete_source_loops_minimum": 1,
+      "pcm_packets": 1299,
+      "live_seconds": 26.01925,
+      "peak": 7680,
+      "rms": 2756.962,
+      "left_right_identical": true,
+      "avi_header": [
+        1,
+        1,
+        44100,
+        88200,
+        2,
+        16
+      ],
+      "method": "Unconverted PCM passthrough rewrapped as live stereo48000; PAL packet sizes verified",
+      "native_capture": {
+        "path": ".tmp/audio-playback-mixed/output_2.avi",
+        "sha256": "fe7368bb445b68ff9366800af5fbbd10e56da55e24827fa4f43ff6a1250080d0",
+        "size_bytes": 5029376
+      },
+      "wav": {
+        "path": "reference/analysis/audio-playback-2026-10-25/title-native-paula-1.wav",
+        "sha256": "352532f67428176047b739508cbceec365d674ad0c66ed701923bac53ae5b247",
+        "size_bytes": 4992044
+      }
+    },
+    {
+      "name": "paula-2",
+      "diagnostic_channel_mask": 4,
+      "complete_source_loops_minimum": 1,
+      "pcm_packets": 1300,
+      "live_seconds": 26.024583333333332,
+      "peak": 7680,
+      "rms": 3432.443,
+      "left_right_identical": true,
+      "avi_header": [
+        1,
+        1,
+        44100,
+        88200,
+        2,
+        16
+      ],
+      "method": "Unconverted PCM passthrough rewrapped as live stereo48000; PAL packet sizes verified",
+      "native_capture": {
+        "path": ".tmp/audio-playback-mixed/output_3.avi",
+        "sha256": "b4abafad40db19e4506009d7da30ae8330b45d5053a81bce5f64e5fc5ec98715",
+        "size_bytes": 5030400
+      },
+      "wav": {
+        "path": "reference/analysis/audio-playback-2026-10-25/title-native-paula-2.wav",
+        "sha256": "026bea38f60bc8f8db34f43ef517bec09acaab744cc3c758274ce76487d1ac0c",
+        "size_bytes": 4992044
+      }
+    },
+    {
+      "name": "mixed",
+      "diagnostic_channel_mask": 7,
+      "complete_source_loops_minimum": 1,
+      "pcm_packets": 1299,
+      "live_seconds": 26.0045625,
+      "peak": 22143,
+      "rms": 5237.666,
+      "left_right_identical": true,
+      "avi_header": [
+        1,
+        1,
+        44100,
+        88200,
+        2,
+        16
+      ],
+      "method": "Unconverted PCM passthrough rewrapped as live stereo48000; PAL packet sizes verified",
+      "native_capture": {
+        "path": ".tmp/audio-playback-mixed/output_4.avi",
+        "sha256": "55fcc3c70c602f73175133916b05f94ff9bb03ae5b6dd27d4a8893afbf471adb",
+        "size_bytes": 5026304
+      },
+      "wav": {
+        "path": "reference/analysis/audio-playback-2026-10-25/title-native-mixed.wav",
+        "sha256": "4e668346f458de3dc194b308aef026e645a267585ecff3f7d9a3d940169eeda8",
+        "size_bytes": 4992044
+      }
+    }
+  ],
+  "normal_binary": {
+    "path": "reference/validation/history/before-npc-recoil-2026-10-25/amiga__out__bruce_amiga.exe",
+    "sha256": "de16a2551d2948527f9970faaebc621c026f8d58c777caba69fdd88e2f4a14a1",
+    "size_bytes": 191376
+  },
+  "normal_adf": {
+    "path": "reference/validation/history/before-npc-recoil-2026-10-25/amiga__out__bruce_amiga.adf",
+    "sha256": "4edf961338a17d02954ba2ecd570cd62ee43a33f57caa90673da0646193b8755",
+    "size_bytes": 901120
+  },
+  "emulator": {
+    "path": ".tmp/audio-playback-mixed/winuae64.exe",
+    "sha256": "f3e55700fd811cd543fdfebf6c3221cfaa3d385828f110c6d3eb534c64503123",
+    "size_bytes": 29372368
+  },
+  "capture_config": {
+    "path": ".tmp/audio-playback-mixed/capture.uae",
+    "sha256": "cc575252a0a4c8c8549639b5fc8e64a1215007f88cb5bde20698a9cfd8b91561",
+    "size_bytes": 932
+  },
+  "output_profile": {
+    "path": "amiga/out/bruce-a500.uae",
+    "sha256": "f46d3760097aec240e57aa6dcd02abfd26c8e787aa022985a8c5716d27ede99a",
+    "size_bytes": 801
+  },
+  "music_clock": {
+    "native_fields": 1444,
+    "host_seconds": 28.9704669,
+    "fields_per_host_second": 49.843863579568335,
+    "method": "Normal executable counter sampled through IPC; monotonic host QPC",
+    "measurement_files": [
+      {
+        "path": "reference/analysis/audio-playback-2026-10-25/title-clock-a.json",
+        "sha256": "830837faa65e357a16cd93879611155101574de07eae65913f0ade8c857cd292",
+        "size_bytes": 685
+      },
+      {
+        "path": "reference/analysis/audio-playback-2026-10-25/title-clock-b.json",
+        "sha256": "0d88242337e4e14cd56606fd3e50631c81cbb638a3e4b8afa3b162d341f2fa6f",
+        "size_bytes": 141
+      }
+    ]
+  },
+  "user_feedback": {
+    "hard_pan_to_mono": "Effects reported present; some timbres odd",
+    "music": "User still suspected a missing voice before corrected stereo mix"
+  },
+  "limitations": [
+    "Diagnostic channel muting in owned emulator, not natural game input",
+    "Source/native outputs are audible; exact waveform/ADSR timing parity is not certified",
+    "Native parameter regression still tests only120 title fields",
+    "Rare long DMA waveform transitions and rendering-induced audio delays remain open",
+    "Converted earlier AVI takes have mismatched format and are excluded",
+    "Captured executable/main source are archived before NPC recoil repair; this is not a new audio capture of that later build. Transient host DLL may have been rebuilt; its recorded hash is provenance only."
+  ],
+  "source_files": [
+    {
+      "path": "reference/validation/history/before-npc-recoil-2026-10-25/tools__audit_audio_playback.py",
+      "sha256": "21bc46ff88947de3164110c65cfa5c128fada2108a8ad86caee8dbb35b5e6d09",
+      "size_bytes": 9093
+    },
+    {
+      "path": "reference/validation/history/before-paula-stream-2026-10-25/amiga-run.ps1",
+      "sha256": "391a4e7b62a1ae7e2363c88ee412500157751154bfe6010086253b533bc47f81",
+      "size_bytes": 3940
+    },
+    {
+      "path": "reference/validation/history/before-npc-recoil-2026-10-25/amiga__main.c",
+      "sha256": "668f890e651163142a6cb2a36876424b38f8e78f37571080ab69af626085da42",
+      "size_bytes": 58879
+    },
+    {
+      "path": "reference/validation/history/before-paula-stream-2026-10-25/amiga__source_audio.h",
+      "sha256": "86c688652f3bf397721858e5685e4b4f538fac97c929f0d445b561dc8a5cf8ce",
+      "size_bytes": 2183
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+      "size_bytes": 3622
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+      "size_bytes": 743
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/source-registers.json",
+      "sha256": "c7776d8c23319721287da67b25cd6e910a41c8e8a436b97fbe83c25c6fda758d",
+      "size_bytes": 105916
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/waveforms.pcm",
+      "sha256": "fc1020350cc4c0106f05b463928fbc2e8067bf5dbcb2cf546506c5328cd9c89b",
+      "size_bytes": 2260
+    }
+  ],
+  "live_log": {
+    "path": ".tmp/audio-playback-mixed/winuaelog.txt",
+    "sha256": "c81a2716dcecdc1d74dd2ca394d1689d179708e416794e185a0fb91e530459eb",
+    "size_bytes": 13213
+  },
+  "host_library": {
+    "path": ".tmp/source-audio-test/audio.dll",
+    "sha256": "2042fe289f42fd746063c6295b45f69b131aed1de485a5d2cbf9704da1a0be13",
+    "size_bytes": 184832
+  },
+  "historical_build": true,
+  "superseded_by": "reference/validation/paula-stream-delivery.json",
+  "host_library_is_transient_provenance": true
+}

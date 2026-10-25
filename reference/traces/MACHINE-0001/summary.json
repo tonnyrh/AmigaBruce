@@ -1,0 +1,181 @@
+{
+  "capture_id": "MACHINE-0001",
+  "status": "candidate_full_machine_replay",
+  "primary_edition_verified": false,
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "profile": "VICE 3.10 x64sc PAL C64 MOS6569R3; sound disabled; IO Simulation on port 1",
+  "input": "active-low joystick lines via VICE IO Simulation device 37, zero-based port 0",
+  "boundary": "$1BCE before keyboard parser; last executed instruction $1BCC",
+  "warmup_idle_steps": 8,
+  "repetitions": 2,
+  "scenarios": [
+    {
+      "name": "idle",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "e12bb82dbf89d599465c7c209a06a274f99ab45dfe8e0d59b80a1a7006b3f71f",
+      "min_step_cycles": 58964,
+      "max_step_cycles": 58972,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "right",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "a274eab025c78d697e1552c20d433e46caf6913ac5197a79357b052ffe4c1565",
+      "min_step_cycles": 58907,
+      "max_step_cycles": 59028,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        115
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "left",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "a770be4266a94bff720790947184f754995900fc98d71713110655176813e29b",
+      "min_step_cycles": 58958,
+      "max_step_cycles": 58974,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        14,
+        26
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "standing-jump",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "2cf815bae1b03fe6cf643438bef3173d6ee7225e96571843fe6d521de9b308e2",
+      "min_step_cycles": 58958,
+      "max_step_cycles": 58973,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        184,
+        196
+      ]
+    },
+    {
+      "name": "moving-jump",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "baa717bec0463c56f49594a57e04e06edb2239028c3b56d8be208ccca60402ce",
+      "min_step_cycles": 58907,
+      "max_step_cycles": 59028,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        77
+      ],
+      "y_range": [
+        185,
+        196
+      ]
+    },
+    {
+      "name": "reverse",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "9dc0ba7f6653705502aff56c4224aaf775f44f9e066f20498fec618eda283b8c",
+      "min_step_cycles": 58907,
+      "max_step_cycles": 59028,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        25,
+        55
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "climb",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "a90fdbc4519cbcc3cecff6f6d43eca893fd4705a8ccfdcf9eea384064b378742",
+      "min_step_cycles": 58907,
+      "max_step_cycles": 59028,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        52
+      ],
+      "y_range": [
+        184,
+        196
+      ]
+    },
+    {
+      "name": "climb-down",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "b94ed4d67288eb0ffb8b0e76eb4f5ff9092909cca3eec0ed1dc7703c54b98c35",
+      "min_step_cycles": 58907,
+      "max_step_cycles": 59028,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        52
+      ],
+      "y_range": [
+        184,
+        196
+      ]
+    },
+    {
+      "name": "held-jump",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "7c494fe970c491c8ce2e5ab8613a97110700b62186ffe2cbcd50b09cd0ccfd32",
+      "min_step_cycles": 58958,
+      "max_step_cycles": 58972,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        184,
+        196
+      ]
+    }
+  ],
+  "recorder_sources": [
+    {
+      "path": "tools/vice_binary.py",
+      "sha256": "91eded222cb7e6d11ddd8e59762ecf028fd7ca490bc915915a4c7714c7366fb4"
+    },
+    {
+      "path": "tools/capture_c64_movement.py",
+      "sha256": "e770d70671f697234ec04531721e8144abfb1bc25b11ae23fc75ef486929a2c8"
+    },
+    {
+      "path": "capture-c64.ps1",
+      "sha256": "69ed4c3397a15dd73f52f0025468dce34cbc68482e5d1fcc36e8c4acd0a7c676"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "capture_id": "M4-0001",
+  "date": "2026-10-21",
+  "status": "first_playable_m4_slice",
+  "full_m4_parity": false,
+  "primary_edition_verified": false,
+  "implemented_room_count": 2,
+  "extracted_room_count": 20,
+  "limits": [
+    "M4 is not complete: remaining18 rooms, original traps/bridges, modes and completion remain open",
+    "Room2 geometry is a blockout; native return is four logic steps earlier",
+    "First pickup and arrival coordinates are regression gates; entire trajectories and later pickup differences retained",
+    "Only explicit framebuffer capture and two buffer copies per room load are excluded from ordinary one-field runtime gate",
+    "Extra post-edge jump allowance removed; ground support is required at takeoff. Full movement parity remains open."
+  ],
+  "artifacts": [
+    {
+      "path": "docs/M4_ROOMS.md",
+      "sha256": "11294e3d7cecbe086d96de7861e39cde2db07c6456c8b8ca4286782edc8310fc"
+    },
+    {
+      "path": "reference/validation/candidate-rooms.json",
+      "sha256": "d06ffb17c031164dde741dd7658fae32bdf8de41671730092e3a0e6ab5bb83da"
+    },
+    {
+      "path": "reference/validation/candidate-room-routes.json",
+      "sha256": "db5e2d08d8ad855fc93f08d6d709a00ed586d345b922c828303e670dd9c42ed4"
+    },
+    {
+      "path": "reference/validation/a500-m4-rooms.json",
+      "sha256": "a7cb74b4e3e497565804fe6eb69e53b38a39f0f6687b069e9a406f9f4ae2d0de"
+    },
+    {
+      "path": "reference/validation/a500-m3-combat.json",
+      "sha256": "aa0820ef42e381f5199fda908b174b0a2fa1347d547ce12aa4c9d6b01b33f1ac"
+    },
+    {
+      "path": "reference/validation/m3-core.json",
+      "sha256": "78dea1d8e3911d896d35e3fc43b25e686f37113e58d13b1fc1b14ff70ba0fe89"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "sha256": "b9ba54cbdbe6d3b14165ea535bd887b44fc56c8a66130ad887ab53fe82b51840"
+    },
+    {
+      "path": "docs/images/m4-rooms.png",
+      "sha256": "f476c83d4fe041800b52d6f002d3947b7f50aef8551404e086e1674e456aaebe"
+    },
+    {
+      "path": "reference/traces/ROOM-0001.json",
+      "sha256": "9093f6cdfb6db6a27e97085c4dcf44d956ad7ae1bc71dfc4c8c7a3d4cce8b421"
+    },
+    {
+      "path": "reference/traces/ROOM-0002.json",
+      "sha256": "2d13616ad29d4b4fd2607730399e455ed1cec80cf8e9594dffb8d5bda701f74f"
+    },
+    {
+      "path": "reference/traces/ROOM-0003.json",
+      "sha256": "e3d9f07922ec475b1558adaa4986226fb123589199415129cd8e555535e98229"
+    }
+  ]
+}

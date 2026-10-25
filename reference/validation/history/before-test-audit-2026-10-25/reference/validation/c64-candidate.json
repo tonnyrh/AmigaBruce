@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-25",
+  "status": "source_rooms_implemented_a500_realtime_gate_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "room_count": 20,
+  "original_room_pixels_shipped": true,
+  "existing_amiga_actor_art_present": true,
+  "full_m2_parity": false,
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_playthrough_verified": false,
+  "all_room_realtime_gate_passed": false,
+  "all_chip_reserve_targets_passed": false,
+  "every_field_has_new_image": false,
+  "presentation_policy": "Retain the displayed image when rendering would delay the next PAL field; source logic continues. Room loads are measured separately.",
+  "actor_logic_fully_ported": false,
+  "source_cpu_loop_calls": 2560,
+  "source_contact_checks": 1860,
+  "native_runs": [
+    {
+      "report": "a500-c64-rooms-diagnostic.json",
+      "frames": 7200,
+      "max_work_lines": 804,
+      "chip_largest_loaded": 70304,
+      "room_load_max_gap": 284,
+      "held_image_fields": 327,
+      "drawn_image_fields": 6873,
+      "max_held_image_streak": 2,
+      "collection_only": true,
+      "missed_fields": 76,
+      "chip_reserve_target": 65536,
+      "chip_reserve_target_met": true,
+      "max_period_gap": 3
+    },
+    {
+      "report": "a500-c64-combat-diagnostic.json",
+      "frames": 6000,
+      "max_work_lines": 371,
+      "chip_largest_loaded": 28224,
+      "room_load_max_gap": 98,
+      "held_image_fields": 122,
+      "drawn_image_fields": 5878,
+      "max_held_image_streak": 1,
+      "collection_only": true,
+      "missed_fields": 8,
+      "chip_reserve_target": 49152,
+      "chip_reserve_target_met": false,
+      "max_period_gap": 2
+    },
+    {
+      "report": "a500-c64-combat-diagnostic.json",
+      "frames": 6000,
+      "max_work_lines": 371,
+      "chip_largest_loaded": 28224,
+      "room_load_max_gap": 98,
+      "held_image_fields": 122,
+      "drawn_image_fields": 5878,
+      "max_held_image_streak": 1,
+      "collection_only": true,
+      "missed_fields": 8,
+      "chip_reserve_target": 49152,
+      "chip_reserve_target_met": false,
+      "max_period_gap": 2
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/c64/rooms-v1/manifest.json",
+      "size_bytes": 4590,
+      "sha256": "a5f598461d0bb1776bcee9d415b64fc84006a75da44f3e817cfcfa28294e56af"
+    },
+    {
+      "path": "assets/c64/rooms-v1/graphics-validation.json",
+      "size_bytes": 3475,
+      "sha256": "1c0f67a91fcd13d0db58c4fa2e900084e0b665495d7e160ee19b2dacde3af07f"
+    },
+    {
+      "path": "reference/validation/c64-room-runtime.json",
+      "size_bytes": 9666,
+      "sha256": "d7e0ab1edbc7457c550753abd97ea67348e1407be2cce647a71954d13e8706a0"
+    },
+    {
+      "path": "reference/validation/c64-core.json",
+      "size_bytes": 2648,
+      "sha256": "31ab5d345baab95b97a2f42ffa377a3ad64b3656766cb06ecd4b7be4b7bf9aeb"
+    },
+    {
+      "path": "reference/validation/a500-c64-rooms-diagnostic.json",
+      "size_bytes": 11099,
+      "sha256": "7aed99fe578c8d73dc1af5f8e43024ad6922e5e79a33b4a6a5f46d1c96aa6358"
+    },
+    {
+      "path": "reference/validation/a500-c64-combat-diagnostic.json",
+      "size_bytes": 15695,
+      "sha256": "f53c738c2b42962154f8dae5261cfd3f282db189b18d6d4bda8569e92aff16d2"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "size_bytes": 7834,
+      "sha256": "76a061f5c91a9392fb403f724b776d2384451555a8d78c26221175bee448cfa6"
+    },
+    {
+      "path": "tools/verify_c64_candidate.py",
+      "size_bytes": 9661,
+      "sha256": "d5e6b7266582fe09c1c36236f2a95778233d89437a9b1d56f3d09e4c597a9942"
+    },
+    {
+      "path": "reference/validation/c64-stack-frames.json",
+      "size_bytes": 2312,
+      "sha256": "30b4579e13bccf56aa2ab2e6c4bc051f7a3e7fc07a81c8809d86a9bc11cb6b26"
+    },
+    {
+      "path": "tools/collect_c64_native_replay.py",
+      "size_bytes": 4305,
+      "sha256": "ea119ffa11cfb1afbacd046debe0c68bdf439cc1151efebc5bcb4bea11306c61"
+    },
+    {
+      "path": "reference/validation/c64-replay-1.txt",
+      "size_bytes": 2154,
+      "sha256": "94da83f8b6461cc883d5a2f0392660d478efef40f6a4c1d92e1f056234eb4103"
+    },
+    {
+      "path": "reference/validation/c64-replay-2.txt",
+      "size_bytes": 2154,
+      "sha256": "e4ee26e2ef571330fa6a39c4be2d1b6a18ffd73e0018a86669c55971fcf865e9"
+    },
+    {
+      "path": "amiga/out/validated/source-rooms.exe",
+      "size_bytes": 211788,
+      "sha256": "d339cc02e4db31c87b82eb611dcb03503d4e651e53f6c62d1e41f75945959030"
+    },
+    {
+      "path": "amiga/out/validated/source-rooms.adf",
+      "size_bytes": 901120,
+      "sha256": "58c67627c22b8f381131fcbae82dc3ad74fe0e55e22b2637953ef8563bf3029f"
+    },
+    {
+      "path": "amiga/out/validated/source-combat.exe",
+      "size_bytes": 211468,
+      "sha256": "16e857bda05c4ce27c963e4fabc8509a4eae1cde99ae95ccf8d4a8393bdfc3f3"
+    },
+    {
+      "path": "amiga/out/validated/source-combat.adf",
+      "size_bytes": 901120,
+      "sha256": "6fdda6a1b5bf728538178298a315ecbb7eda97796d3fe057a2e6e8cd9b404f67"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "size_bytes": 198644,
+      "sha256": "8231a240051a83b5ab7c081805bd2b66c13a2bf3ed758485c2b8ebfc8e4fdf30"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "size_bytes": 901120,
+      "sha256": "be6c55ec8c22e6dda74063d1cd6cd91978b32cebc2a459836cfc78053de7fe0b"
+    }
+  ]
+}

@@ -1,0 +1,518 @@
+{
+  "date": "2026-10-24",
+  "status": "passed_scoped_green_yamo_hud_candidate_v3",
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_completion_available": false,
+  "original_pixels_shipped": false,
+  "generated_graphics_present": true,
+  "poses": 48,
+  "poses_per_actor": 16,
+  "frame_size": [
+    48,
+    26
+  ],
+  "anchor": [
+    24,
+    25
+  ],
+  "palette_colors": 16,
+  "ocs_rgb_bits": 12,
+  "runtime_climb_reflection": "Bruce phases6/7 reflect reach/transfer phases4/5; gameplay facing unchanged",
+  "cpu_planar_cache_bytes": 74880,
+  "packed_fighter_bytes": 29952,
+  "explicit_combat_chip_bytes": 172228,
+  "cpu_stamp_chip_bytes": 0,
+  "combat_max_work_lines": 304,
+  "native_runs": [
+    {
+      "report": "a500-m3-combat.json",
+      "execution": "ADF boot",
+      "frames": [
+        6000
+      ],
+      "max_work_lines": 304,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 267072,
+      "max_room_load_fields": 0
+    },
+    {
+      "report": "a500-gates.json",
+      "execution": "filesystem CLI, two consecutive launches",
+      "frames": [
+        900,
+        900
+      ],
+      "max_work_lines": 213,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 265952,
+      "max_room_load_fields": 23
+    },
+    {
+      "report": "a500-m4-rooms.json",
+      "execution": "ADF boot",
+      "frames": [
+        900
+      ],
+      "max_work_lines": 218,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 267072,
+      "max_room_load_fields": 2
+    },
+    {
+      "report": "a500-room-tour.json",
+      "execution": "ADF boot",
+      "frames": [
+        7200
+      ],
+      "max_work_lines": 229,
+      "missed_frames": 0,
+      "canvas_residue_bytes": 0,
+      "min_largest_chip_block": 267072,
+      "max_room_load_fields": 26
+    }
+  ],
+  "native_run_count": 5,
+  "manual_new_art_acceptance": false,
+  "c64_opening_conditions_source_checked": true,
+  "c64_opening_animation_timing_certified": false,
+  "known_unsuccessful_attempts": [
+    {
+      "status": "failed_then_fixed",
+      "frame": 700,
+      "max_work_lines": 371,
+      "report": {
+        "path": "reference/validation/history/animation-v2-first-combat-failure.txt",
+        "size_bytes": 1390,
+        "sha256": "c10793828e805cfaaba86d50bf53e691103040ce092c8cb780fcca8551ce7b34"
+      },
+      "fix": "Replace CPU edge shifts with OCS pre-shift and restore only occupied art bounds; final6000-field replay passed"
+    }
+  ],
+  "historical_inputs_not_current": [
+    "reference/validation/history/before-animation-v2-a500-soak.json",
+    "reference/validation/history/before-animation-v2-a500-m3-debug.json",
+    "reference/validation/history/visual-candidate-before-animation-v2.json",
+    "reference/validation/history/before-green-yamo-visual-candidate.json"
+  ],
+  "scope": "Green Yamo identity and named health HUD. All core logic hashes unchanged; five fresh A500 runs share current art/render sources. Complete M4/M5 and natural completion remain open.",
+  "artifacts": [
+    {
+      "path": "docs/ANIMATION_AND_OPENINGS_2026-10-24.md",
+      "size_bytes": 7167,
+      "sha256": "1f5dcd505066824f2ccb21b79c8927b1f4a25fbe610570f12f03713191ba5b04"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "size_bytes": 4966,
+      "sha256": "74f25dd0e65a00b6e33f0379010c6058ad2cc5fceca8c54647aa38d940f02b7b"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "size_bytes": 6868,
+      "sha256": "dcb2aa5adecf4cffe146beb28123d216b9e6f2cdbb922d0515cf5a510f1e3242"
+    },
+    {
+      "path": "docs/AMIGA_ART_PIPELINE.md",
+      "size_bytes": 3974,
+      "sha256": "c42a75afb080dd2ac90b8b453385e8ecb08fe96034b0cc2414780aea95a5bf33"
+    },
+    {
+      "path": "docs/reference/SOURCES.md",
+      "size_bytes": 3402,
+      "sha256": "f9dd14f34650996924948559d12249652fd34aa5f9d81fb00a4d8aeb0a5599dc"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "size_bytes": 10042,
+      "sha256": "c0a055026332c8a21f79e571de493f8bad71feddbb4aca95b8544156b9a2ab1f"
+    },
+    {
+      "path": "assets/graphics/v2/generation.json",
+      "size_bytes": 8164,
+      "sha256": "f35d89387d3b5c5ff1138b7e5af28b152a7ecb06d6b5b0e9e6aa0b25b7ea8e5b"
+    },
+    {
+      "path": "assets/graphics/v2/bruce-source.png",
+      "size_bytes": 813563,
+      "sha256": "6fd38603173a9146dfb0001b8588f60d7bd14ee20f3976e53734563abc1ba8c5"
+    },
+    {
+      "path": "assets/graphics/v2/ninja-source.png",
+      "size_bytes": 767921,
+      "sha256": "cee9876cc5247150ecd0af19bc9d53b2902789182783e9f6932e5b595dd50be5"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-source.png",
+      "size_bytes": 1602924,
+      "sha256": "bfc1a94c775f4d60e7d74b95245ac214193222bf50254049419f916c4bfe7507"
+    },
+    {
+      "path": "assets/graphics/v2/fighters-manifest.json",
+      "size_bytes": 23199,
+      "sha256": "e17b8c4dab2c3a441e000a16585d37dfaa0a0f21988b410eb0e8420b835fc408"
+    },
+    {
+      "path": "assets/graphics/v2/fighters-indexed.png",
+      "size_bytes": 5476,
+      "sha256": "becb73b5a721e854ea42c9cd27836ad82fddc540df5a9bd4e70e46799d4bc304"
+    },
+    {
+      "path": "assets/graphics/v2/fighters.validation.json",
+      "size_bytes": 302,
+      "sha256": "c15e6c0d86a3e5ef657f8b185aba876a5c58f78d00ba8e5b66a5a428c7fcb617"
+    },
+    {
+      "path": "assets/graphics/v2/run.gif",
+      "size_bytes": 10457,
+      "sha256": "9f5840585c91fd7b949927372b90a3eda23c70fddb61467202772bcc61aac9d4"
+    },
+    {
+      "path": "assets/graphics/v2/climb.gif",
+      "size_bytes": 9864,
+      "sha256": "e77c458712a36ac11f409032b0a942b1ca3e26e582387e614c53d527a42c6ad7"
+    },
+    {
+      "path": "assets/graphics/v2/attacks.gif",
+      "size_bytes": 24738,
+      "sha256": "ee4322901302f5c10f8fbedce25c4fa1f469af6befe2877f20c2779e512b959a"
+    },
+    {
+      "path": "amiga/main.c",
+      "size_bytes": 50043,
+      "sha256": "45dd3b62eb065ccc22a374e42e4e635f177b31e56a0a312ebf582c0b80b7e562"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "size_bytes": 70387,
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f"
+    },
+    {
+      "path": "core/presentation.c",
+      "size_bytes": 1925,
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "size_bytes": 913,
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/rooms.c",
+      "size_bytes": 8454,
+      "sha256": "1660440a8a93a885632a90720ff443ba96342b568b969d17f7c4512964507b7d"
+    },
+    {
+      "path": "core/rooms.h",
+      "size_bytes": 1686,
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "tests/gate_fixture.h",
+      "size_bytes": 2561,
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b"
+    },
+    {
+      "path": "tests/rooms_test.c",
+      "size_bytes": 8872,
+      "sha256": "35e34cc445edf02f8a01c4cf68304a350b979f68eaf4c3f5540cc5e50626471d"
+    },
+    {
+      "path": "tests/visual_test.c",
+      "size_bytes": 2265,
+      "sha256": "b6065fd1077322ebaf02bcdb3bdba7af4c2021acf8c2c2d826e135ef06dff976"
+    },
+    {
+      "path": "tools/build_fighter_art.py",
+      "size_bytes": 6743,
+      "sha256": "453db965e35960f4c11dd0fd0d10bc7e307f21043f88a97cc96806abbcbbe30a"
+    },
+    {
+      "path": "tools/preview_fighter_animation.py",
+      "size_bytes": 1343,
+      "sha256": "85bb22ef515ff6d50a955fa685bbf4a4daba6c42776a9b6c7e95e508016ded99"
+    },
+    {
+      "path": "tools/analyze_c64_openings.py",
+      "size_bytes": 4144,
+      "sha256": "4ead361818dc0f45b4f58f47170a0e56f30331b6e48aca50a9b844e015c983a1"
+    },
+    {
+      "path": "tools/verify_visual_candidate.py",
+      "size_bytes": 5295,
+      "sha256": "82fb72085a977095ada4ed29287a4b1bc6c3193029113e265736519f04a8ff03"
+    },
+    {
+      "path": "tools/verify_combat_audio.py",
+      "size_bytes": 2455,
+      "sha256": "404b69f6a12cde6e39965ce513af5501f2147479ad6147ca195c0634fb61eade"
+    },
+    {
+      "path": "docs/images/m3-combat.png",
+      "size_bytes": 14996,
+      "sha256": "f440f856354f32fe05ec47ffc154de0a84b064a351d891b980312605ce458282"
+    },
+    {
+      "path": "docs/images/m4-gates.png",
+      "size_bytes": 14871,
+      "sha256": "f9fa06c885e400a7ea7d806312d70b707a3e52b0f7987fb0891f7cd8ce0c313e"
+    },
+    {
+      "path": "docs/images/m4-rooms.png",
+      "size_bytes": 14553,
+      "sha256": "c9856985b21b398144534d9dc68d9c7f109a47a7993b0bbd5029bb377aca8d36"
+    },
+    {
+      "path": "docs/images/room-tour.png",
+      "size_bytes": 15301,
+      "sha256": "c0665e5338a8207dfd2f9126720d3b09090ec26516a20619d6a7e50b9e03dd66"
+    },
+    {
+      "path": "reference/validation/m3-core.json",
+      "size_bytes": 3498,
+      "sha256": "9c8e6d5c3828343e8a32e4d33a71d13b0c84e060e4241a0aa3229086be774f94"
+    },
+    {
+      "path": "reference/validation/candidate-openings.json",
+      "size_bytes": 3988,
+      "sha256": "0f27cff687831707315be9a4960052010f0972afcef4c61a1c69604a47e7a43f"
+    },
+    {
+      "path": "reference/validation/candidate-combat.json",
+      "size_bytes": 625983,
+      "sha256": "e18939753293d68437427c71ac538df08bd75ae5f420f22d44770c78e4d3a4e3"
+    },
+    {
+      "path": "reference/validation/candidate-movement.json",
+      "size_bytes": 14196,
+      "sha256": "c6be3566584cf2d85f9348a127e963c6ed5e5515746f080561b56f9bf262de5c"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "size_bytes": 5444,
+      "sha256": "4c1904f44f296f6592f05f282f8f804f4457e3de2a5271d3d8637418f8c2805e"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "size_bytes": 183576,
+      "sha256": "8497595ab80fc92a2d8e6e7fbb302b0516f994aabef6e6d42da9640dba8461d0"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "size_bytes": 901120,
+      "sha256": "cd01d19e6bb871b41c69cf6554ba33ccd18474760b79a981b31eded5cc7a2f80"
+    },
+    {
+      "path": "reference/validation/a500-m3-combat.json",
+      "size_bytes": 7441,
+      "sha256": "9a51d65bbaba20e54bc23ea12bc57041f7bc8e5fa25d876fc152d083fd81d959"
+    },
+    {
+      "path": "reference/validation/a500-gates.json",
+      "size_bytes": 9883,
+      "sha256": "57b5691e422a835393e2b91454bdfa4e48cf58b2ec4e8e8da06db86f83431571"
+    },
+    {
+      "path": "reference/validation/a500-m4-rooms.json",
+      "size_bytes": 7423,
+      "sha256": "c4bdb367b5b2e458ba8b0f0e4279c6b71e0b9ce511d904c0219b4c592bf6ac07"
+    },
+    {
+      "path": "reference/validation/a500-room-tour.json",
+      "size_bytes": 7440,
+      "sha256": "62abb1535560dc2c800d79d577208ddc2e089e761e14107fe4a8eb4dd4bdedbc"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 2752,
+      "sha256": "2ee9c267f74857e1a7734048dd6a03e28d33215f40fccee3a481f4f1d9184ea8"
+    },
+    {
+      "path": "docs/YAMO_AND_HEALTH_HUD.md",
+      "size_bytes": 2601,
+      "sha256": "aa26895c68ba6ea63888140b112c755871e5767741ee5e4543eda171a07736ca"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-source-v3.png",
+      "size_bytes": 1787039,
+      "sha256": "a6f8bf31c506037bf5abce0d2eaa73dcfcbdba011335846c859153dfc111ae0f"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-v3-generation.json",
+      "size_bytes": 1920,
+      "sha256": "c18bbfae24a1ef32946d04e4a905378dfa53ff87d65b9c5b2fb9c2612a8e2745"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-preview.png",
+      "size_bytes": 1301,
+      "sha256": "66f576f9244bea081779add96c918681124855b0e78cde91e23d930d1ae32b84"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "size_bytes": 2739,
+      "sha256": "80edc999c02438004e21909150d8e070ad54eabcfa3d66df83b5453e8228758b"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "size_bytes": 13044,
+      "sha256": "a27a13a05d711b28a8e8e2df5a30a06b141313ce983aecbaf69b8d1fcaa65d9d"
+    }
+  ],
+  "candidate_variant": "green_yamo_and_named_health_hud",
+  "core_logic_hashes_unchanged_from_v2": true,
+  "health_hud": {
+    "labels_left_to_right": [
+      "KAGE",
+      "YAMO",
+      "BRUCE"
+    ],
+    "segments": 8,
+    "normalized_for_display": true,
+    "gameplay_health": {
+      "ninja": 7,
+      "yamo": 20,
+      "bruce": 36
+    }
+  },
+  "appearance_reference_inputs": [
+    {
+      "path": "assets/graphics/v2/yamo-source.png",
+      "size_bytes": 1602924,
+      "sha256": "bfc1a94c775f4d60e7d74b95245ac214193222bf50254049419f916c4bfe7507"
+    },
+    {
+      "path": ".reference/art/user-yamo-2026-10-24.png",
+      "size_bytes": 458930,
+      "sha256": "73e15fd60226bb694072c541c9093501af99172cc618c6ce58cfaa88ec5b8279"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "45dd3b62eb065ccc22a374e42e4e635f177b31e56a0a312ebf582c0b80b7e562"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f"
+    },
+    {
+      "path": "tools/build_fighter_art.py",
+      "sha256": "453db965e35960f4c11dd0fd0d10bc7e307f21043f88a97cc96806abbcbbe30a"
+    },
+    {
+      "path": "assets/graphics/v2/bruce-source.png",
+      "sha256": "6fd38603173a9146dfb0001b8588f60d7bd14ee20f3976e53734563abc1ba8c5"
+    },
+    {
+      "path": "assets/graphics/v2/ninja-source.png",
+      "sha256": "cee9876cc5247150ecd0af19bc9d53b2902789182783e9f6932e5b595dd50be5"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-source-v3.png",
+      "sha256": "a6f8bf31c506037bf5abce0d2eaa73dcfcbdba011335846c859153dfc111ae0f"
+    },
+    {
+      "path": "assets/graphics/v2/yamo-green-v3-generation.json",
+      "sha256": "c18bbfae24a1ef32946d04e4a905378dfa53ff87d65b9c5b2fb9c2612a8e2745"
+    },
+    {
+      "path": "assets/graphics/v2/generation.json",
+      "sha256": "f35d89387d3b5c5ff1138b7e5af28b152a7ecb06d6b5b0e9e6aa0b25b7ea8e5b"
+    },
+    {
+      "path": "assets/graphics/v1/mountains-indexed.png",
+      "sha256": "36c7587cb7add4e056fcbd149a3f46b075ae73b9499b3cddce77ec08d87a092a"
+    },
+    {
+      "path": "amiga/combat_audio.h",
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10"
+    },
+    {
+      "path": "amiga/combat_audio_data.h",
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0"
+    },
+    {
+      "path": "amiga/room_background_data.h",
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d"
+    },
+    {
+      "path": "tools/build_room_backgrounds.py",
+      "sha256": "7e80968319342af8eb5e11edf70eba45934400a2ef132c7e77150f282f61e771"
+    },
+    {
+      "path": "amiga/runtime.c",
+      "sha256": "748abb674d581035b4568df307f4058786e893d5e85897d7831fa5dbad004916"
+    },
+    {
+      "path": "amiga/start.s",
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "06ea019584dc8217e92ebb3eb669866f2e5eb1880041abba67a317b90b49bf82"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "dd847ec6678dd3782a71de9f59e3d7ee42b337140623520a76ccb3b294ab34f0"
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "e6441e3bb7f2ef220c7bfb34aefa1bdcb99edcad6e4531b61da40ec5fff3940e"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "89d4074a5d1667945ac2e04f3b3caeb63384eb3e508436fc3f275062233e7716"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "1660440a8a93a885632a90720ff443ba96342b568b969d17f7c4512964507b7d"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "tests/room_fixture.h",
+      "sha256": "b373e036b51f383eaba2e312a9e6d6018cd768021d2589eafce45840a34235dd"
+    },
+    {
+      "path": "tests/gate_fixture.h",
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "sha256": "a27a13a05d711b28a8e8e2df5a30a06b141313ce983aecbaf69b8d1fcaa65d9d"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "80edc999c02438004e21909150d8e070ad54eabcfa3d66df83b5453e8228758b"
+    },
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "5b862c08419d1fc8a4a6065841328a9f2d3f6efad8a24148c941adb12553f5ca"
+    },
+    {
+      "path": "tools/preview_planar.py",
+      "sha256": "79773fe768cc1e63a324dddff3865e8708cfc854dcc309188712a5b61d5a93bb"
+    }
+  ]
+}

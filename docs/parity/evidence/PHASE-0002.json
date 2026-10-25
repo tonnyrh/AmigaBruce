@@ -1,0 +1,30 @@
+{
+  "capture_id": "PHASE-0002",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_replayed_not_primary_verified",
+  "date": "2026-10-19",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008",
+    "SRC-010"
+  ],
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "parity_ids": [
+    "PAR-005",
+    "PAR-013"
+  ],
+  "scenarios": 6,
+  "game_seam_observations": 294,
+  "limitations": [
+    "Retail identity unverified",
+    "Not Amiga intra-field input parity",
+    "C64 damage and enemy hitboxes still unmeasured",
+    "Existing diagonal-jump landing discrepancy retained"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/traces/PHASE-0002.json",
+      "sha256": "7646dc47c061cab61e2553db72b3683e189836be5466c3dc801a8421cdc70ef6"
+    }
+  ]
+}

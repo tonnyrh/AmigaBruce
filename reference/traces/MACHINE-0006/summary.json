@@ -1,0 +1,131 @@
+{
+  "capture_id": "MACHINE-0006",
+  "status": "candidate_full_machine_replay",
+  "primary_edition_verified": false,
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "profile": "VICE 3.10 x64sc PAL C64 MOS6569R3; sound disabled; IO Simulation on port 1",
+  "input": "active-low joystick lines via VICE IO Simulation device 37, zero-based port 0",
+  "boundary": "$1BCE before keyboard parser; last executed instruction $1BCC",
+  "warmup_idle_steps": 8,
+  "repetitions": 2,
+  "scenarios": [
+    {
+      "name": "walk-two-fire",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "75efff9960166326ee7bcdc3eb886b4ab02d64eb2612031b83a926f4088d59e5",
+      "min_step_cycles": 58918,
+      "max_step_cycles": 59025,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        34
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "walk-four-fire",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "ea69d461a90699e85d87460416fb071a599657183c0ad030aad2d8d8f78d3ecf",
+      "min_step_cycles": 58849,
+      "max_step_cycles": 59072,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        46
+      ],
+      "y_range": [
+        193,
+        196
+      ]
+    },
+    {
+      "name": "walk-five-fire",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "7fb3ebae292c0eb98eeadef41fe5e0d9bf7381e9037ece06734c0a0c642284ff",
+      "min_step_cycles": 58849,
+      "max_step_cycles": 59076,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        46
+      ],
+      "y_range": [
+        193,
+        196
+      ]
+    },
+    {
+      "name": "walk-six-fire",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "1de026fa53488181fbc1bc7704709a97f2540e32945cffe2e93a1b34a26dcf48",
+      "min_step_cycles": 58852,
+      "max_step_cycles": 59071,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        50
+      ],
+      "y_range": [
+        193,
+        196
+      ]
+    },
+    {
+      "name": "diagonal-fire-from-idle",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "539e11afa88cebea70380e247617120b11ccffd1c4c68e7fa3b07e6d64e42816",
+      "min_step_cycles": 58958,
+      "max_step_cycles": 58975,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        54
+      ],
+      "y_range": [
+        185,
+        196
+      ]
+    },
+    {
+      "name": "short-fire-tap",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "0b7af6494e0927bf785b394b96eebe6e1dbdc6c630e548823591839bca6aa242",
+      "min_step_cycles": 58964,
+      "max_step_cycles": 58972,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    }
+  ],
+  "recorder_sources": [
+    {
+      "path": "tools/vice_binary.py",
+      "sha256": "91eded222cb7e6d11ddd8e59762ecf028fd7ca490bc915915a4c7714c7366fb4"
+    },
+    {
+      "path": "tools/capture_c64_movement.py",
+      "sha256": "e770d70671f697234ec04531721e8144abfb1bc25b11ae23fc75ef486929a2c8"
+    },
+    {
+      "path": "capture-c64.ps1",
+      "sha256": "69ed4c3397a15dd73f52f0025468dce34cbc68482e5d1fcc36e8c4acd0a7c676"
+    }
+  ],
+  "input_program_sha256": "e6283540ff395534119e6a9bfd976dc00b951019d79879fcc357b96ab639a363"
+}

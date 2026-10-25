@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-24",
+  "status": "passed_scoped_visual_and_playability_candidate",
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_completion_available": false,
+  "original_pixels_shipped": false,
+  "generated_graphics_present": true,
+  "poses": 21,
+  "palette_colors": 16,
+  "ocs_rgb_bits": 12,
+  "candidate_support_half_width": 6,
+  "manual_footprint_net_acceptance": false,
+  "explicit_combat_chip_bytes": 170948,
+  "cpu_stamp_chip_bytes": 0,
+  "combat_max_work_lines": 276,
+  "native_runs": [
+    {
+      "report": "a500-m3-combat.json",
+      "execution": "ADF boot",
+      "frames": [
+        6000
+      ],
+      "max_work_lines": 276,
+      "missed_frames": 0
+    },
+    {
+      "report": "a500-m4-rooms.json",
+      "execution": "ADF boot",
+      "frames": [
+        900
+      ],
+      "max_work_lines": 217,
+      "missed_frames": 0
+    },
+    {
+      "report": "a500-room-tour.json",
+      "execution": "ADF boot",
+      "frames": [
+        7200
+      ],
+      "max_work_lines": 222,
+      "missed_frames": 0
+    },
+    {
+      "report": "a500-soak.json",
+      "execution": "filesystem CLI, two consecutive launches",
+      "frames": [
+        900,
+        900
+      ],
+      "max_work_lines": 300,
+      "missed_frames": 0
+    },
+    {
+      "report": "a500-m3-debug.json",
+      "execution": "filesystem CLI, two consecutive launches",
+      "frames": [
+        900,
+        900
+      ],
+      "max_work_lines": 272,
+      "missed_frames": 0
+    }
+  ],
+  "known_unsuccessful_attempts": [
+    "Two early host-startup timeouts; not counted as passes",
+    "Full-height renderer missed one field at5145; replaced by occupied-row renderer and full route retested",
+    "Legacy360-field route missed fall coverage after wider net grip; gate retained and900-field route passed"
+  ],
+  "scope": "Current scoped validator only; older milestone reports and unrerun legacy verifier inputs remain historical.",
+  "artifacts": [
+    {
+      "path": "docs/NEXT_CANDIDATE_2026-10-24.md",
+      "size_bytes": 6522,
+      "sha256": "87d4d1fc23af3a51c42c78419e8966d55bc519157b8d9fe378ab8068659eea77"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "size_bytes": 4290,
+      "sha256": "b205b59f246df51a41274843237ab5cce96daced67035a515561315b27e89305"
+    },
+    {
+      "path": "docs/AMIGA_ART_PIPELINE.md",
+      "size_bytes": 3204,
+      "sha256": "36012651256c8951ba2f3dcfa00f6f786e962dcede59f57ce2b3876738555422"
+    },
+    {
+      "path": "assets/graphics/v1/generation.json",
+      "size_bytes": 2845,
+      "sha256": "54887e25098e3a644a88889c215dc173cb85df0181ad46bb44e182937996759b"
+    },
+    {
+      "path": "assets/graphics/v1/mountains-prompt.txt",
+      "size_bytes": 1061,
+      "sha256": "d406fc06caf822126dd6c0e80fc718cd4de969e09eb7b5ed44eb47a7dbf9d9ec"
+    },
+    {
+      "path": "assets/graphics/v1/fighters-manifest.json",
+      "size_bytes": 8647,
+      "sha256": "38bbb6d8f3cc31710a76c791a1fb545a0b5119aaa174f7d4270f6984f140390d"
+    },
+    {
+      "path": "assets/graphics/v1/fighters-indexed.png",
+      "size_bytes": 2533,
+      "sha256": "724c833375c270ec050c896f8835815d7cea83e8bc69e198a0157b50f88cd635"
+    },
+    {
+      "path": "assets/graphics/v1/mountains-indexed.png",
+      "size_bytes": 4464,
+      "sha256": "36c7587cb7add4e056fcbd149a3f46b075ae73b9499b3cddce77ec08d87a092a"
+    },
+    {
+      "path": "assets/graphics/v1/fighters.validation.json",
+      "size_bytes": 302,
+      "sha256": "02b0f1844f325bbd64544cb0ecb5d46cf53bdb3a2f403b34e35b6337ff142c7c"
+    },
+    {
+      "path": "assets/graphics/v1/mountains.validation.json",
+      "size_bytes": 464,
+      "sha256": "6dce9aa3fd78da24dda5a5590a5beaee4ee3fbfb5ba2fa3404d003572dde9854"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "size_bytes": 20385,
+      "sha256": "a59ecf81f89ade2d0c7c28233b2f8c7fc469f772ec49424055eba3d13ac22921"
+    },
+    {
+      "path": "amiga/room_background_data.h",
+      "size_bytes": 370050,
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d"
+    },
+    {
+      "path": "tools/build_fighter_art.py",
+      "size_bytes": 4383,
+      "sha256": "67b1f880d8ff7c306eec1e59ba3d6ada9e4d01bc32c31e48d25223fde28a5b70"
+    },
+    {
+      "path": "tools/build_room_backgrounds.py",
+      "size_bytes": 5548,
+      "sha256": "7e80968319342af8eb5e11edf70eba45934400a2ef132c7e77150f282f61e771"
+    },
+    {
+      "path": "tools/verify_visual_candidate.py",
+      "size_bytes": 3640,
+      "sha256": "9653bea6e9ad35992583d29edba7af4429742aceac1d3154f5753ebc01fe0f4a"
+    },
+    {
+      "path": "docs/images/m3-repeat.png",
+      "size_bytes": 15005,
+      "sha256": "25abe88a70b12bde9ac03df1dff1d2a302c57ac89b3b994bd6c629ba8d9ff033"
+    },
+    {
+      "path": "docs/images/m4-rooms.png",
+      "size_bytes": 14306,
+      "sha256": "7afcd1f952b15cdd6435cbc70ac8f117337b510eff358a48793a7cd4c39ca54c"
+    },
+    {
+      "path": "docs/images/room-tour.png",
+      "size_bytes": 15193,
+      "sha256": "b5a79450095677ed60868b6a2d5c059fcd7b91b17edecd190c738e932dd10f97"
+    },
+    {
+      "path": "reference/validation/m3-core.json",
+      "size_bytes": 3277,
+      "sha256": "57a9d7d76af1e046ac5d18ef07ad0e48ab47bca09788c447460f2c043efb6d5f"
+    },
+    {
+      "path": "reference/validation/candidate-combat.json",
+      "size_bytes": 625983,
+      "sha256": "a626c5df9a592ef898f3d76ab7d41dedca5d089013980a05c74875cecbe690b1"
+    },
+    {
+      "path": "reference/validation/candidate-movement.json",
+      "size_bytes": 14196,
+      "sha256": "c6be3566584cf2d85f9348a127e963c6ed5e5515746f080561b56f9bf262de5c"
+    },
+    {
+      "path": "reference/validation/fall-control.json",
+      "size_bytes": 19832,
+      "sha256": "2ab39ccabfc2d27229f0939982f853fca4479742606cbf871217e7e9698ae3a8"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "size_bytes": 5704,
+      "sha256": "bd179be658f5adca0abd5f26b7dcb521c82c229c396ffbf7b5af293f50ee8890"
+    },
+    {
+      "path": "reference/validation/a500-m3-combat.json",
+      "size_bytes": 6764,
+      "sha256": "88b74a64d81a87f9b49f8914fc409dbcd39b08a246556070478d52805c1a7d75"
+    },
+    {
+      "path": "reference/validation/a500-m4-rooms.json",
+      "size_bytes": 6483,
+      "sha256": "4f4a6c07a08ae14af16a5d4792f444c6315cef8fffa8dee21f07b0977ce00ea6"
+    },
+    {
+      "path": "reference/validation/a500-room-tour.json",
+      "size_bytes": 6501,
+      "sha256": "95231409c075a0a76088199050bf034cb77855bb1c1c536a594cd9a87f5e1b10"
+    },
+    {
+      "path": "reference/validation/a500-soak.json",
+      "size_bytes": 8625,
+      "sha256": "bf90931ff54af6eaaa0e28b9d4ba2047b73e4f44b9511acab97444fe3c736593"
+    },
+    {
+      "path": "reference/validation/a500-m3-debug.json",
+      "size_bytes": 8792,
+      "sha256": "5963973be4613fc0e4001c60240cbda331b7d713bb3d27f567f8efcd10a9b299"
+    }
+  ]
+}

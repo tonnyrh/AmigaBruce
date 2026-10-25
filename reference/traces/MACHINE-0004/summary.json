@@ -1,0 +1,131 @@
+{
+  "capture_id": "MACHINE-0004",
+  "status": "candidate_full_machine_replay",
+  "primary_edition_verified": false,
+  "snapshot_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+  "emulator_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+  "profile": "VICE 3.10 x64sc PAL C64 MOS6569R3; sound disabled; IO Simulation on port 1",
+  "input": "active-low joystick lines via VICE IO Simulation device 37, zero-based port 0",
+  "boundary": "$1BCE before keyboard parser; last executed instruction $1BCC",
+  "warmup_idle_steps": 8,
+  "repetitions": 2,
+  "scenarios": [
+    {
+      "name": "upper-jump-early",
+      "samples": 179,
+      "identical_replays": 2,
+      "sha256": "38959d2484b0fb75ed2ba0e26bf527074abbb742325c3063e7a79baed03024dc",
+      "min_step_cycles": 58359,
+      "max_step_cycles": 59465,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        137
+      ],
+      "y_range": [
+        90,
+        196
+      ]
+    },
+    {
+      "name": "upper-jump-edge",
+      "samples": 180,
+      "identical_replays": 2,
+      "sha256": "01d9eccfcc4c958a51717b65ec4eb109a273e095ddf77025270f5fecfea72f70",
+      "min_step_cycles": 58359,
+      "max_step_cycles": 59465,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        114
+      ],
+      "y_range": [
+        101,
+        196
+      ]
+    },
+    {
+      "name": "prone-hold-release",
+      "samples": 49,
+      "identical_replays": 2,
+      "sha256": "767dfd9b0316c7c799c35265328d4271d73e6914cd4b15e335b4e983103ff9be",
+      "min_step_cycles": 58958,
+      "max_step_cycles": 58974,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "prone-direction",
+      "samples": 33,
+      "identical_replays": 2,
+      "sha256": "6bba942d564c79e1c6145724bdbd59bc498c039e189775c99302d8ad49f127f1",
+      "min_step_cycles": 58958,
+      "max_step_cycles": 58973,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        196,
+        196
+      ]
+    },
+    {
+      "name": "prone-jump",
+      "samples": 41,
+      "identical_replays": 2,
+      "sha256": "29fad673a275b95ddd33f33aeaaa8af4adf7e9f84bbdfcf4c8944e30e1845f8b",
+      "min_step_cycles": 58958,
+      "max_step_cycles": 58973,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        26
+      ],
+      "y_range": [
+        184,
+        196
+      ]
+    },
+    {
+      "name": "net-top-down",
+      "samples": 161,
+      "identical_replays": 2,
+      "sha256": "bce67303298c8cded6632eda6eaa989bf951b028e0ffdc5259837360e7f918d8",
+      "min_step_cycles": 58359,
+      "max_step_cycles": 59465,
+      "phase_corrected_cycles_per_step": 58968,
+      "x_range": [
+        26,
+        91
+      ],
+      "y_range": [
+        101,
+        196
+      ]
+    }
+  ],
+  "recorder_sources": [
+    {
+      "path": "tools/vice_binary.py",
+      "sha256": "91eded222cb7e6d11ddd8e59762ecf028fd7ca490bc915915a4c7714c7366fb4"
+    },
+    {
+      "path": "tools/capture_c64_movement.py",
+      "sha256": "e770d70671f697234ec04531721e8144abfb1bc25b11ae23fc75ef486929a2c8"
+    },
+    {
+      "path": "capture-c64.ps1",
+      "sha256": "69ed4c3397a15dd73f52f0025468dce34cbc68482e5d1fcc36e8c4acd0a7c676"
+    }
+  ],
+  "input_program_sha256": "e0d5a9dd6c70831c54daec6f3452432a70edfcf5d974d299a915c40ca1bbf736"
+}
