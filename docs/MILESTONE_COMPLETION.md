@@ -78,13 +78,13 @@ De optimaliserte løkkene `$26A0/$52AD/$537E`, kontaktklassene `$5431–$55AA`
 og klassebyttene `$55E6/$5658/$56CA` bevarer scratch-RAM, stack,
 selvmodifiserte operander og sluttflagg. Ikke-lokal retur beholdes.
 De nye hjelperne, inkludert binær kontaktadresseforberedelse `$530A`, er
-sammenlignet bytevis med936 230 faktiske C64-instruksjoner i3 304 tilfeller;
-se [nyeste rapport](CONTACT_REGISTERS_OPTIMIZATION.md).224 forløp
+sammenlignet bytevis med2 003 606 faktiske C64-instruksjoner i3 560 tilfeller;
+se [nyeste rapport](NATIVE_ENGINE_OPTIMIZATION.md).480 forløp
 kontrollerer også registertilstanden ved alle servicepunkter.
 Aktivbitten i visningen følger nå `$17BE/$2588/$25EF AND #$01`.
 768 projeksjonstilfeller kontrollerer dette mot de faktiske bytene.
 
-Siste native kjøring:53/53 RAM-/registerkontroller bestått,1 200
+Før native motorløftet bestod kjøringen53/53 RAM-/registerkontroller bestått,1 200
 repriseløkker/400 logiske steg, ingen kilde-, lyd-, DMA-, bilde- eller
 aritmetikkfeil, og korrekt tilbakeføring til AmigaOS. Største ledige
 Chip-blokk er52 632 byte. Dette er en 68000/OCS/KS1.3-kjøring med512+512KiB.
@@ -116,3 +116,6 @@ En konkret presentasjonsrest er Game Over-IRQen `$152C/$154C`, som kaller
 musikkrutinen `$E006`. Den nye feltgrensen håndterer ventingen, mens native
 lyd-/visningsovergangen må avstemmes samlet med denne rasterkjeden. Dette
 er en kjent M5-rest, ikke en uavklart kamp- eller livsregel.
+
+Nyeste native kontakt-/objekt-/poengløft med målt ytelse og gjeldende native
+kontroller er beskrevet i [NATIVE_ENGINE_OPTIMIZATION.md](NATIVE_ENGINE_OPTIMIZATION.md).

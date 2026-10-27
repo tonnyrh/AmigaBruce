@@ -36,7 +36,7 @@ def main():
         if trace:lib.bl_contact_trace_enable()
         for _ in range(200000):
             if cpu.pc==0xffff:break
-            if trace and cpu.pc==0x5380 and not(cpu.y&7):
+            if trace and (cpu.pc==0x5214 or (cpu.pc==0x5380 and not(cpu.y&7))):
                 observed.append([cpu.a,cpu.x,cpu.y,cpu.p&1,(cpu.p>>1)&1,cpu.p>>7,(cpu.p>>6)&1,(cpu.p>>3)&1,cpu.sp,(cpu.p>>2)&1])
             cpu.step();instructions+=1
         else:raise AssertionError((label,'source escaped',hex(cpu.pc)))
@@ -108,6 +108,18 @@ def main():
             m[operand:operand+2]=pointer.to_bytes(2,'little')
             if pointer>=0xa000:m[pointer:pointer+32]=rng.randbytes(32)
         check(m,0x537e,f'rows/services/{case}',251,trace=True)
+    # Whole original driver, all actor-enable combinations, every pixel
+    # alignment, and independently varied source masks/room cells. These
+    # are injected controls, not natural room playthroughs.
+    for active,phase,offset in itertools.product(range(8),range(4),range(8)):
+        m=bytearray(source);m[0x29]=(active+phase+offset)%20;m[0x7c]=0xa0
+        m[0x8c78:0x8fe8]=rng.randbytes(880);m[0xd878:0xdbe8]=rng.randbytes(880)
+        for actor in range(3):
+            m[0x95+actor]=((active>>actor)&1)|rng.choice([0,0x40,0x80])
+            m[0x9e+actor]=12+4*(5+actor*10)+phase
+            m[0xa1+actor]=29+8*(2+actor*7)+offset
+            m[0x4f4e+actor]=rng.randrange(42)
+        check(m,0x5212,f'driver/{active}/{phase}/{offset}',decimal=0,trace=True)
     files=['core/c64_rooms.c','core/c64_rooms.h','core/source_perf.h','core/c64_actor_programs.h',
         'tools/build_c64_rooms.py','tests/source_contact_bridge.c','tools/verify_source_contact.py','test-source-contact.ps1']
     report=dict(status='passed_original_byte_contact_controls',source_sha256=SHA,checks=sum(counts.values()),

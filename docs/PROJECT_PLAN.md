@@ -204,3 +204,6 @@ meny/to spillere venter på de beskrevne manuelle nytestene.
 
 Tidligere milepæltekst er [arkivert](history/PROJECT_PLAN_M4_CANDIDATE_2026-10-24.md).
 Den er historikk for grafikk, romgeometri og antall spillbare rom.
+
+Optimaliseringsløftet etter `milestone/c64-source-2026-10-27` dokumenteres i
+[NATIVE_ENGINE_OPTIMIZATION.md](NATIVE_ENGINE_OPTIMIZATION.md). Sanntidsporten står fortsatt åpen.

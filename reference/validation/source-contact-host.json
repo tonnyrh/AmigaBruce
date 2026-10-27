@@ -1,8 +1,8 @@
 {
   "status": "passed_original_byte_contact_controls",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
-  "checks": 3304,
-  "instructions": 936230,
+  "checks": 3560,
+  "instructions": 2003606,
   "entries": {
     "$52AD": 128,
     "$530A": 736,
@@ -11,16 +11,17 @@
     "$55E6": 96,
     "$5658": 96,
     "$56CA": 96,
-    "$537E": 704
+    "$537E": 704,
+    "$5212": 256
   },
-  "service_register_cases": 224,
+  "service_register_cases": 480,
   "edition_verified": false,
   "natural_playthrough": false,
   "raster_exact": false,
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "a5e7f17802665dd0e744d484a917d83450960bd8cd7e1a6e2d8508417ee1e0f9"
+      "sha256": "765d1c55eb7ac22a3cdfdeb74659ef3ae66261d83b15992c5e964edf1ce0c6e5"
     },
     {
       "path": "core/c64_rooms.h",
@@ -32,11 +33,11 @@
     },
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "18483251ba1f8fdb4d8340738ec9819cfc890052b0830d8853c0ecf7e2b4bc60"
+      "sha256": "779479168f174c3ae8220006c9424118284920d89440421d49c592442809fd19"
     },
     {
       "path": "tools/build_c64_rooms.py",
-      "sha256": "9feef76b04bee26cd5224720da4048b4bfa773ce8f63d002dcea62dd99a99cf0"
+      "sha256": "5a60c61898697ffd545857f2f62155aa679a269f6208ccb4f68af015eba2e286"
     },
     {
       "path": "tests/source_contact_bridge.c",
@@ -44,7 +45,7 @@
     },
     {
       "path": "tools/verify_source_contact.py",
-      "sha256": "22afe9e5e254e226bcc30e6099c0be7a118667923cd76fbf013f08c330c400d3"
+      "sha256": "d522a61611e7730ecf584d95d1b63b8be99a65ba13d6c0d38521dedc38ae3855"
     },
     {
       "path": "test-source-contact.ps1",

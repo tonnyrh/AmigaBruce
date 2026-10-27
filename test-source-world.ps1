@@ -19,7 +19,15 @@ $paths=@('amiga-build.ps1','amiga-run.ps1','test-source-world.ps1','test-c64-act
     'tools/audit_c64_actor_chain.py','tools/audit_c64_world.py')
 $paths+=@(Get-ChildItem (Join-Path $taskRoot 'core'),(Join-Path $taskRoot 'amiga') -File | Where-Object {$_.Extension -in '.c','.h','.s'} | ForEach-Object {$_.FullName.Substring($taskRoot.Length+1).Replace('\','/')})
 $identity=@($paths | Sort-Object -Unique | ForEach-Object {@{path=$_;sha256=(Get-FileHash (Join-Path $taskRoot $_)).Hash.ToLower()}})
-$build=@('exe','elf','adf') | ForEach-Object {$p="amiga/out/bruce_test.$_";@{path=$p;sha256=(Get-FileHash (Join-Path $taskRoot $p)).Hash.ToLower()}}
+# Keep tested artifacts independent of subsequent performance builds in out/.
+$buildId=(Get-FileHash (Join-Path $taskRoot 'amiga/out/bruce_test.exe')).Hash.ToLower().Substring(0,12)
+$adfId=(Get-FileHash (Join-Path $taskRoot 'amiga/out/bruce_test.adf')).Hash.ToLower().Substring(0,12)
+$archive="reference/analysis/actor-chain-2026-10-26/native-builds/$buildId-$adfId"
+New-Item -ItemType Directory -Force (Join-Path $taskRoot $archive) | Out-Null
+$build=@('exe','elf','adf') | ForEach-Object {
+    $source="amiga/out/bruce_test.$_";$p="$archive/bruce_test.$_"
+    Copy-Item -LiteralPath (Join-Path $taskRoot $source) -Destination (Join-Path $taskRoot $p) -Force
+    @{path=$p;sha256=(Get-FileHash (Join-Path $taskRoot $p)).Hash.ToLower()}}
 & (Join-Path $taskRoot 'amiga-run.ps1') -Autotest -TestRuns 1 -EmulatorPath $EmulatorPath -EmulatorIni $EmulatorIni
 $owned=[int](Get-Content (Join-Path $taskRoot '.tmp/winuae-test.pid'))
 $reportPath=Join-Path $taskRoot 'amiga/out/autotest-1.txt'
@@ -35,6 +43,11 @@ try{
     }
     if($run['parity'] -ne 'PROVISIONAL'){throw 'Source world native test timed out'}
     foreach($item in $identity){if((Get-FileHash (Join-Path $taskRoot $item.path)).Hash.ToLower() -ne $item.sha256){throw "Source changed during test: $($item.path)"}}
+    foreach($item in $build){
+        $live=Join-Path $taskRoot ('amiga/out/'+[IO.Path]::GetFileName($item.path))
+        if((Get-FileHash (Join-Path $taskRoot $item.path)).Hash.ToLower() -ne $item.sha256 -or
+           (Get-FileHash $live).Hash.ToLower() -ne $item.sha256){throw 'Test binary changed during native run'}
+    }
     $failures=@()
     foreach($key in @('source_actor_fixture_failure','c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors','c64_render_mismatches','capture_fault','vic_compare_errors')){
         if($run[$key] -ne '0'){$failures+="$key=$($run[$key])"}

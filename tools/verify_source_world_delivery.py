@@ -23,13 +23,26 @@ def verify():
     assert vic['status']=='passed_field_sampled_pixel_and_latch_controls' and vic['calls']==6485
     assert not vic['original_raster_verified'];identities(vic['source_files'])
     contact=read('reference/validation/source-contact-host.json')
-    assert contact['status']=='passed_original_byte_contact_controls' and contact['checks']==3304
-    assert contact['service_register_cases']==224
+    assert contact['status']=='passed_original_byte_contact_controls' and contact['checks']==3560
+    assert contact['service_register_cases']==480
     assert contact['source_sha256']==source and not contact['natural_playthrough'];identities(contact['source_files'])
+    objects=read('reference/validation/source-object-host.json')
+    assert objects['status']=='passed_original_object_handler_boundaries' and objects['checks']==65536
+    assert objects['instructions']==2473160 and len(objects['targets'])==11
+    assert objects['driver_checks']==480 and objects['driver_instructions']==194645
+    scores=read('reference/validation/source-score-host.json')
+    assert scores['status']=='passed_original_decimal_score_loops' and scores['checks']==2852
+    assert scores['instructions']==1791056 and scores['entry_status_patterns']==64
+    for report in (objects,scores):
+        assert report['source_sha256']==source and not report['natural_playthrough'];identities(report['source_files'])
     visibility=read('reference/validation/source-visibility-host.json')
     assert visibility['status']=='passed_original_active_bit_projection' and visibility['checks']==768
     assert visibility['source_sha256']==source and visibility['source_ram_unchanged_except_injected_flags']
     identities(visibility['source_files'])
+    boot=read('reference/validation/source-native-boot.json')
+    assert boot['status']=='passed_owned_cli_adf_smoke' and not boot['natural_playthrough']
+    assert boot['settings']==dict(cpu_model='68000',cpu_speed='real',chipset='ocs',chipmem_size='1',bogomem_size='2',fastmem_size='0',ntsc='false')
+    identities([boot['binary'],boot['adf']]+boot['artifacts'])
     native_visibility=read('reference/validation/source-visibility-native.json')
     assert native_visibility['status']=='passed_owned_native_visibility_lifecycle'
     assert native_visibility['controlled_injection'] and not native_visibility['natural_playthrough']
@@ -55,6 +68,8 @@ def main():
         proofs=[FOLDER+'/'+name for name in ('report.json','translation.json','integrated-controls.json','native-fixture.json','native-final.txt')]
         proofs += ['tools/audit_normal_source_clock.py',FOLDER+'/normal-clock.json','reference/validation/source-world-native.json','docs/MILESTONE_COMPLETION.md','docs/ACTIVE_TESTS.md','docs/PROJECT_PLAN.md','docs/parity/register.csv','tools/verify_source_world_delivery.py','test-parity.ps1','README.md']
         proofs += ['reference/validation/source-vic-host.json','docs/AMIGA_OPTIMIZATION_PLAN.md','docs/AMIGA_OPTIMIZATION_REPORT.md']
+        proofs += ['reference/validation/source-native-boot.json']
+        proofs += ['reference/validation/source-object-host.json','reference/validation/source-score-host.json','docs/NATIVE_ENGINE_OPTIMIZATION.md']
         proofs += ['reference/validation/source-contact-host.json','docs/CONTACT_OPTIMIZATION.md','docs/VIC_NATIVE_OPTIMIZATION.md']
         proofs += ['reference/validation/source-visibility-native.json','reference/validation/source-visibility-host.json','reference/analysis/yamo-r02-2026-10-27/snapshot.json','reference/analysis/yamo-r02-2026-10-27/source-memory.bin','tools/inspect_source_snapshot.py','docs/YAMO_VISIBILITY_PERFORMANCE.md','docs/CONTACT_REGISTERS_OPTIMIZATION.md']
         normal=[artifact('amiga/out/bruce_amiga.'+suffix) for suffix in ('exe','elf','adf')]

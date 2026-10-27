@@ -1,0 +1,28 @@
+{
+  "label": "native-engine-room2",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "ed6fc7f71bcb4a483f5831043527ab6a5aba298b6ce101835e45c2c2705ef4bb"
+  },
+  "source_room": 2,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    354880,
+    354920,
+    354960,
+    355000
+  ],
+  "source_music_fields": 722,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/native-engine-room2.bpl",
+      "sha256": "f5c9f5d38895dacd6ba6c93be36143f13f2bf0fc6dcb31652a798960a75ae96f"
+    },
+    {
+      "path": "docs/images/session-native-engine-room2.png",
+      "sha256": "15db1e95ed4b79349d37f1d50a7caf4b5c6bf80ee30163ab8a1cded0d606efd8"
+    }
+  ]
+}

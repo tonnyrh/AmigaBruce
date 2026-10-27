@@ -15,12 +15,19 @@ def main():
     reports={};identities={};paths=[FOLDER+'/baseline/manifest.json']
     for label in ['before-profile','before-timing','after-profile','after-timing',
                   'contact-before-profile','contact-before-timing','contact-after-profile','contact-after-timing','present-after-timing',
-                  'contact-breakdown-profile','vic-final-timing','visibility-final-all-timing','visibility-final-none-timing','rows-before-profile','rows-after-profile','rows-local-o2-timing']:
+                  'contact-breakdown-profile','vic-final-timing','visibility-final-all-timing','visibility-final-none-timing','rows-before-profile','rows-after-profile','rows-local-o2-timing',
+                  'native-driver-object-final-timing','native-score-final-timing','native-score-final-profile',
+                  'native-object-pass-final-timing','native-object-pass-final-profile','native-object-pass-equal-steps-timing']:
         folder=FOLDER+'/'+label;ident=read(folder+'/identity.json');identities[label]=ident
         for binary in ident['build']:check(binary,folder+'/'+Path(binary['path']).name)
         for key in ['c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors']:assert ident['run'][key]=='0'
         if label in ('contact-breakdown-profile','vic-final-timing'):assert ident['run']['vic_compare_errors']=='0'
-        assert ident['run']['frames']=='360' and ident['run']['source_world_steps']=='360'
+        expected_frames='370' if label=='native-object-pass-equal-steps-timing' else '360'
+        expected_steps='350' if label=='native-object-pass-final-timing' else '360'
+        assert ident['run']['frames']==expected_frames and ident['run']['source_world_steps']==expected_steps
+        if label=='native-object-pass-final-timing':
+            rejected=folder+'/rejected-comparison.json';paths.append(rejected)
+            assert read(rejected)['status']=='excluded_unequal_source_step_comparison'
         assert ident['run']['source_perf_test']=='1' and not ident['controlled']
         if ident['profile']:assert ident['run']['perf_errors']=='0'
         reports[label]=read(folder+'/native.json')
@@ -69,7 +76,8 @@ def main():
     assert int(lr['source_clock_elapsed'])<int(fr['source_clock_elapsed'])
     assert latest['source_files']==solo['source_files']
     rows=identities['rows-local-o2-timing'];rr=rows['run']
-    for source_file in rows['source_files']:check(source_file)
+    # Rows are a historical stage; current source identity is bound below to
+    # the final native pass, while its measured binaries remain hash checked.
     assert rr['vic_compare_errors']=='0' and rr['drawn_image_fields']=='360'
     assert int(rr['source_clock_elapsed'])<int(lr['source_clock_elapsed'])
     assert int(rr['source_clock_missed'])<int(lr['source_clock_missed'])
@@ -78,6 +86,23 @@ def main():
     assert ra['average_exclusive']<rb['average_exclusive']
     for label in ('rows-before-profile','rows-after-profile'):
         assert all(row['calls']==0 for row in reports[label]['profile'] if row['name'].startswith('contact_'))
+    native=identities['native-object-pass-equal-steps-timing'];nr=native['run']
+    driver=identities['native-driver-object-final-timing']['run']
+    score=identities['native-score-final-timing']['run']
+    for source_file in native['source_files']:check(source_file)
+    assert native['source_files']==identities['native-object-pass-final-profile']['source_files']
+    assert int(driver['source_clock_elapsed'])<int(rr['source_clock_elapsed'])
+    assert int(score['source_clock_elapsed'])<int(driver['source_clock_elapsed'])
+    assert int(nr['source_clock_elapsed'])<int(score['source_clock_elapsed'])
+    assert int(nr['source_clock_missed'])<int(score['source_clock_missed'])<int(rr['source_clock_missed'])
+    for run in (driver,score,nr):
+        assert run['presentation_hold_fields']=='3' and run['vic_compare_errors']=='0'
+        assert int(run['drawn_image_fields'])+int(run['held_image_fields'])==int(run['frames'])
+        assert int(run['max_held_image_streak'])<=3 and int(run['chip_largest_loaded'])>=49152
+    nb={x['name']:x for x in reports['rows-after-profile']['profile']}
+    na={x['name']:x for x in reports['native-object-pass-final-profile']['profile']}
+    assert na['game']['average_exclusive']<nb['game']['average_exclusive']
+    assert na['objects']['average_exclusive']<nb['objects']['average_exclusive']
     snapshot=FOLDER+'/rows-baseline'
     for entry in read(snapshot+'/manifest.json')['files']:check(entry,snapshot+'/'+entry['path'])
     paths.append(snapshot+'/manifest.json')
@@ -85,13 +110,14 @@ def main():
         'reference/validation/source-world-delivery.json','reference/validation/source-world-native.json',
         'reference/validation/source-vic-host.json','reference/validation/source-contact-host.json',
         'docs/CONTACT_OPTIMIZATION.md','docs/VIC_NATIVE_OPTIMIZATION.md',
+        'docs/NATIVE_ENGINE_OPTIMIZATION.md','reference/validation/source-object-host.json','reference/validation/source-score-host.json',
         'core/source_perf.h','amiga/vic_compare.s','docs/YAMO_VISIBILITY_PERFORMANCE.md','docs/CONTACT_REGISTERS_OPTIMIZATION.md',
         'reference/validation/source-visibility-host.json',
         FOLDER+'/actor-o2-candidate-timing/rejected.json',
         'tools/verify_source_optimization.py','tools/summarize_source_performance.py','test-source-performance.ps1']
     path='reference/validation/source-optimization.json'
     if a.record:
-        report=dict(date='2026-10-27',status='measured_local_contact_registers_realtime_open',
+        report=dict(date='2026-10-27',status='measured_native_contact_objects_score_realtime_open',
             method='Separate native actual-PAL source-contact/VIC/presentation pilots; idle-input invincible room1, historical pairs preserved',
             first_pilot=dict(old_active_fields=old,new_active_fields=new,active_time_reduction_percent=round((old-new)*100/old,3),
                 old_vic_mean_lines=old_vic['average_exclusive'],new_vic_mean_lines=new_vic['average_exclusive']),
@@ -110,6 +136,14 @@ def main():
             local_contact_registers=dict(old_active_fields=int(lr['source_clock_elapsed']),new_active_fields=int(rr['source_clock_elapsed']),
                 old_row_mean_lines=rb['average_exclusive'],new_row_mean_lines=ra['average_exclusive'],
                 old_audio_missed=int(lr['source_clock_missed']),new_audio_missed=int(rr['source_clock_missed'])),
+            native_engine_round=dict(checkpoint='26fb6d1724640d53fd84160fa55b65dafd1c7f38',
+                old_active_fields=int(rr['source_clock_elapsed']),new_active_fields=int(nr['source_clock_elapsed']),
+                measured_elapsed_reduction_percent=round((int(rr['source_clock_elapsed'])-int(nr['source_clock_elapsed']))*100/int(rr['source_clock_elapsed']),3),
+                old_outer_loops=int(rr['frames']),new_outer_loops=int(nr['frames']),source_steps=360,
+                old_audio_missed=int(rr['source_clock_missed']),new_audio_missed=int(nr['source_clock_missed']),
+                drawn_images=int(nr['drawn_image_fields']),held_images=int(nr['held_image_fields']),
+                old_game_mean_lines=nb['game']['average_exclusive'],new_game_mean_lines=na['game']['average_exclusive'],
+                old_objects_mean_lines=nb['objects']['average_exclusive'],new_objects_mean_lines=na['objects']['average_exclusive']),
             edition_verified=False,natural_playthrough=False,all_rooms_profiled=False,realtime_accepted=False,
             artifacts=[item(x) for x in paths],
             limits=['Single benchmark pair; source-field/input phases differ as actual execution time changes',
@@ -123,5 +157,6 @@ def main():
         assert report['m68k_vic_round']['new_active_fields']==int(fr['source_clock_elapsed'])
         assert report['visibility_contact_round']['new_active_fields']==int(lr['source_clock_elapsed'])
         assert report['local_contact_registers']['new_active_fields']==int(rr['source_clock_elapsed'])
-    print(f'PASS local contact registers: {lr["source_clock_elapsed"]}->{rr["source_clock_elapsed"]} measured PAL fields; real-time remains open')
+        assert report['native_engine_round']['new_active_fields']==int(nr['source_clock_elapsed'])
+    print(f'PASS native motor round: {rr["source_clock_elapsed"]}->{nr["source_clock_elapsed"]} measured PAL fields; real-time remains open')
 if __name__=='__main__':main()

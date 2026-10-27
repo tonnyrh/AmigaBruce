@@ -134,3 +134,6 @@ Tilgjengelig T64-kandidat verifiseres med
 En valgt original registreres med
 `python tools/c64_reference.py register "C:/path/to/BruceLee_rakki_s0.g64"`.
 Kommandoen beregner identitet, men bekrefter ikke utgave eller spilloppførsel.
+
+Nyeste ytelsesrunde: [native kontakt, objekter og poeng](docs/NATIVE_ENGINE_OPTIMIZATION.md).
+Git-merke før løftet: `milestone/c64-source-2026-10-27` (`26fb6d1`).

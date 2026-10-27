@@ -282,3 +282,5 @@ Gjennomfør OP0 og én målt pilot fra OP1 eller OP2. Lever profilrapport,
 uendret kildeutfall, dokumentert faktisk gevinst og ny prioritering.
 Deretter tas neste største kostnad. Ingen bred omskriving eller ny kunst/
 lydproduksjon starter før denne arbeidsmåten har vist at den virker.
+
+Gjeldende større native motorløft: [rutiner, målinger og kontroller](NATIVE_ENGINE_OPTIMIZATION.md).

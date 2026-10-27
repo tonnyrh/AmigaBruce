@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "status": "measured_local_contact_registers_realtime_open",
+  "status": "measured_native_contact_objects_score_realtime_open",
   "method": "Separate native actual-PAL source-contact/VIC/presentation pilots; idle-input invincible room1, historical pairs preserved",
   "first_pilot": {
     "old_active_fields": 4690,
@@ -47,6 +47,23 @@
     "new_row_mean_lines": 36.21,
     "old_audio_missed": 207,
     "new_audio_missed": 176
+  },
+  "native_engine_round": {
+    "checkpoint": "26fb6d1724640d53fd84160fa55b65dafd1c7f38",
+    "old_active_fields": 2014,
+    "new_active_fields": 1688,
+    "measured_elapsed_reduction_percent": 16.187,
+    "old_outer_loops": 360,
+    "new_outer_loops": 370,
+    "source_steps": 360,
+    "old_audio_missed": 176,
+    "new_audio_missed": 16,
+    "drawn_images": 322,
+    "held_images": 48,
+    "old_game_mean_lines": 263.219,
+    "new_game_mean_lines": 111.011,
+    "old_objects_mean_lines": 111.083,
+    "new_objects_mean_lines": 62.619
   },
   "edition_verified": false,
   "natural_playthrough": false,
@@ -250,6 +267,82 @@
       "sha256": "ca32f993acf1dea30a8f3fca7db2d6a5de3cdec948562c23ed33a5cfdd6f9e42"
     },
     {
+      "path": "reference/analysis/optimization-2026-10-27/native-driver-object-final-timing/identity.json",
+      "sha256": "6c8266c79bdd85a23917640cfbd6572f2347c5f264b812345be731281c9d05f6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-driver-object-final-timing/native.txt",
+      "sha256": "4f79f7a7bf0d216a6383f1f2cc03628027c977c80d4dc54e8da320cca44e504e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-driver-object-final-timing/native.json",
+      "sha256": "edc02eb0d03a62d03077e9b9c46dcc7417a7fc9c005663730b1acb19944fe865"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-score-final-timing/identity.json",
+      "sha256": "d4a6dd91e3591e14bdfa245c8834f41d0b5c4a77fd2099b814d1b4d6d91254e0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-score-final-timing/native.txt",
+      "sha256": "d1de7d0f26590826931a6658101448770e83e1fee0cf62fd52785cba390a7f8c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-score-final-timing/native.json",
+      "sha256": "a5d06628a3786ab81c32b96bdafd9b777d5e94af63aa4daa831b0c52a741c4a5"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-score-final-profile/identity.json",
+      "sha256": "ba0d175fbb110b24977b2714b91c701e6ace2199676d859c53a2ed11ef49e526"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-score-final-profile/native.txt",
+      "sha256": "9f36e2254b786870dd93f7c72a6ed6964f9d3de276c80130a20fa846b6144096"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-score-final-profile/native.json",
+      "sha256": "96e607d5c7aeeb261bdb771cfd1eb870f7f0e2f39b7f5a39a50befcda35abb4e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-final-timing/rejected-comparison.json",
+      "sha256": "e58411aeec2785802ef70d2a6780f46236787236f3e030bc01aa1d2468b901e8"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-final-timing/identity.json",
+      "sha256": "abd4967c93d3e0eb06956eb338307db3a32783891cd9355d89b622dfb3479d68"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-final-timing/native.txt",
+      "sha256": "729999f864ed7c856448b48e97a5be03275b0f3b34f5deea8e246f5dc3397819"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-final-timing/native.json",
+      "sha256": "e9b2122f8fba1fdc43f31a2b33aebccd31e2135d0ee483af88953abf108d7c90"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-final-profile/identity.json",
+      "sha256": "45bc8f5e5abbcb96f85c7f7917ddda4ae722900bd58cbebb54041d5039d1aad0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-final-profile/native.txt",
+      "sha256": "4d001328098bb333747fcc21fbf067cbaaf48977356481acf396642113bcd70a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-final-profile/native.json",
+      "sha256": "7756b498b89bc25da6a78e6627c44034b308ed022fd68c03510c89fec4a10c41"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-equal-steps-timing/identity.json",
+      "sha256": "8fef3b6f1fe3d3fc5a1f07d1582d7bf0dd47b8cdf02de2e8510b245352ed5ef6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-equal-steps-timing/native.txt",
+      "sha256": "39eedaca1858d18b0b98b6ad10d98952c4e0f9d93515dae4f0081670d36ef5aa"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/native-object-pass-equal-steps-timing/native.json",
+      "sha256": "d7219bb9925a4cf43fbf842f6f72112ae89c595a99a6ee772d719bd4bc4f8669"
+    },
+    {
       "path": "reference/analysis/optimization-2026-10-27/contact-baseline/manifest.json",
       "sha256": "b1e45a4dbb17235fb34def8438f9ce0d8bd5d1a154794090afeb28c4a7e71eb7"
     },
@@ -271,23 +364,23 @@
     },
     {
       "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
-      "sha256": "7c43859b3872c91385e57b7b9cef8da04a262b8ea1166c4e3f464d1859e4a09a"
+      "sha256": "cb2d774b49e49f2a1d6068ba0d7258b121f0d59289488430a4e6f9ba24229fdf"
     },
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "b87b7857d9a5db3d498b324c6cdf1a9ff47095619f0d008edec4e78080162446"
+      "sha256": "7ce6141283d388a41d5c95e88e87a44909cc1b70edc6edeee773a7508bdd3123"
     },
     {
       "path": "reference/validation/source-world-native.json",
-      "sha256": "4b401e7a1e93e4ee5936e2e88f4e716a663f73fb4236f9259387182a01f1ffb8"
+      "sha256": "08ed7c0fe0a672908c3dd333c12d1c18865cac89dc60ae3c7b67a7978e3808e8"
     },
     {
       "path": "reference/validation/source-vic-host.json",
-      "sha256": "77cada8e07e7c9d29532606b5df2f089b4b08590039f9af4833e3a7529c38708"
+      "sha256": "b8af1dd9a92b5185c0181fedb523eee5c4ec1b235519de276ce7e34f0ac0bc28"
     },
     {
       "path": "reference/validation/source-contact-host.json",
-      "sha256": "f6c3ad7dc3d0a0a0af56a8b5f933e7c69b76ebfb399f97a08283b876a5d5b9b5"
+      "sha256": "b74bdbb5500a72556fa827779c0748291076d2c6f98fc6d07255a60aaa691d68"
     },
     {
       "path": "docs/CONTACT_OPTIMIZATION.md",
@@ -296,6 +389,18 @@
     {
       "path": "docs/VIC_NATIVE_OPTIMIZATION.md",
       "sha256": "950e173491222814bd33c2c92f9c1b984ab41069e8bbdfddd5749d8261400786"
+    },
+    {
+      "path": "docs/NATIVE_ENGINE_OPTIMIZATION.md",
+      "sha256": "00fa40aafb88d929ec3000febf23eea16addf5cf98417ab247b1f9aaa16341af"
+    },
+    {
+      "path": "reference/validation/source-object-host.json",
+      "sha256": "e98c4bb3839d6cd22bc89f90ff763c996d93c123f60fd906c126fab39f3c9bb9"
+    },
+    {
+      "path": "reference/validation/source-score-host.json",
+      "sha256": "030519c0940f3dc3970562ae799343b045f193276bc778f12437e8e2946bd6f7"
     },
     {
       "path": "core/source_perf.h",
@@ -311,11 +416,11 @@
     },
     {
       "path": "docs/CONTACT_REGISTERS_OPTIMIZATION.md",
-      "sha256": "77af1f6ef33987d991f1c999e3d354a4a69a88a2bec1c794d95b6401c75ce61d"
+      "sha256": "01e9465000b2198ea6997f6c700c599c0983d560936e699a4acee8d5e2b52d82"
     },
     {
       "path": "reference/validation/source-visibility-host.json",
-      "sha256": "b9cdb514ac731f926ec02e31fecaa9d923968f7738634ff968672317be4867af"
+      "sha256": "a87c0c7d176900d1c99e8fe4e31dee5bb3d7809e3b997300e34ba490e8d19fe9"
     },
     {
       "path": "reference/analysis/optimization-2026-10-27/actor-o2-candidate-timing/rejected.json",
@@ -323,7 +428,7 @@
     },
     {
       "path": "tools/verify_source_optimization.py",
-      "sha256": "efa9a420006e77885dfc2af2d8a40548854723c953735a36226492a51ed3dfde"
+      "sha256": "bf5cd938cdbea6ce3cf2cb22d8822bccbc694fb56b2b182594026b64fa62a81e"
     },
     {
       "path": "tools/summarize_source_performance.py",

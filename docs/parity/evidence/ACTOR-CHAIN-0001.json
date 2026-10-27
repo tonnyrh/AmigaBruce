@@ -22,11 +22,11 @@
   "artifacts": [
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "b87b7857d9a5db3d498b324c6cdf1a9ff47095619f0d008edec4e78080162446"
+      "sha256": "7ce6141283d388a41d5c95e88e87a44909cc1b70edc6edeee773a7508bdd3123"
     },
     {
       "path": "docs/MILESTONE_COMPLETION.md",
-      "sha256": "c1008c145a84d47deacebd367e4c6209ac6b52e04ed0950d1ec6c47822740a07"
+      "sha256": "223064275395e1eb404d1444180b6cfce1597108360e7487d7d2d52a63d0e88f"
     }
   ],
   "limitations": [

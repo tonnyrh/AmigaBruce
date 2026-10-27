@@ -645,7 +645,7 @@ static void source_contact_pointers(void){
 #if defined(__m68k__) && defined(__GNUC__)
 __attribute__((optimize("O2")))
 #endif
-static void source_contact_rows(void){
+static unsigned char source_contact_rows_inner(void){
     unsigned char value,aa=a,xx=x,yy=m[0x52],cc=c,zz=(unsigned char)(yy==0),nn=(unsigned char)((yy&128)!=0);
     unsigned short lane0=W(0x5381),lane1=W(0x539b),lane2=W(0x53b5);
     for(;;){
@@ -678,13 +678,153 @@ static void source_contact_rows(void){
             a=aa;x=xx;y=yy;c=1;z=1;n=0;source_contact_frame(0x542b);
             if(m[0x50]<3)source_contact_classes();else actor_code(0x5431);
             a=m[0x100 + (unsigned char)++sp];a=m[0x100 + (unsigned char)++sp];NZ(a);
-            actor_code(0x52a4);return;
+            return 1; /* $542C/$542D discard this row frame; driver advances actor. */
         }
         cc=yy>=m[0x4f3a];zz=(unsigned char)(yy==m[0x4f3a]);nn=(unsigned char)(((unsigned char)(yy-m[0x4f3a])&128)!=0);
-        if(zz){a=aa;x=xx;y=yy;c=cc;z=zz;n=nn;m[0x52]=yy;sp+=2;return;}
+        if(zz){a=aa;x=xx;y=yy;c=cc;z=zz;n=nn;m[0x52]=yy;sp+=2;return 0;}
     }
 }
 #undef CONTACT_LANE
+static void source_contact_rows(void){
+    if(source_contact_rows_inner())actor_code(0x52a4);
+}
+/* $31D5-$31F3 / $32EE-$330C: 24 binary shifts and decimal doubling
+ * produce four packed-BCD bytes. Both callers clear the decimal buffer.
+ * PHP/PLP retain all entry flags; the popped status byte remains in RAM. */
+#if defined(__m68k__) && defined(__GNUC__)
+__attribute__((optimize("O2")))
+#endif
+static void source_score_decimal(void){
+    unsigned long value=((unsigned long)m[0x4398]<<16)|((unsigned long)m[0x4399]<<8)|m[0x439a],quotient;
+    unsigned char digit,pair,part;
+    m[0x100+sp]=(unsigned char)(0x30|c|(z<<1)|(actor_i<<2)|(d<<3)|(v<<6)|(n<<7));
+    for(part=4;part--;){
+        quotient=value/100;pair=(unsigned char)(value-quotient*100);digit=pair/10;
+        m[0x439b+part]=(unsigned char)((digit<<4)|(pair-digit*10));value=quotient;
+    }
+    m[0x4398]=m[0x4399]=m[0x439a]=0;a=m[0x439b];x=y=255;
+}
+/* $2E89-$2EE9: ordered object dispatch. Fold intermediate CMP flags;
+ * publish exactly the last executed comparison at each original branch.
+ * $53 is still shifted on every eligible cell, including empty cells. */
+static unsigned short source_object_classify(void){
+    unsigned char value=a,threshold,old;unsigned short target;
+    if(value==5){threshold=5;target=0x2f7b;}
+    else if(value==2){threshold=2;target=0x2f3c;}
+    else if(value==3){threshold=3;target=0x2f51;}
+    else if(value==4){threshold=4;target=0x2f66;}
+    else if(value==0x62){threshold=0x62;target=0x310c;}
+    else if(value==0x2d){threshold=0x2d;target=0x2eea;}
+    else if(value==0x2e){threshold=0x2e;target=0x2eea;}
+    else{
+        old=m[0x53];m[0x53]=(unsigned char)(old<<1);
+        if(!m[0x53]){c=old>>7;NZ(m[0x53]);return 0x2ee9;}
+        if(value==0x13){threshold=0x13;target=0x2f04;}
+        else if(value==0x14){threshold=0x14;target=0x2f04;}
+        else if(value==0x31){threshold=0x31;target=0x2f04;}
+        else if(value==0x64){threshold=0x64;target=0x2f01;}
+        else if(value==0x66){threshold=0x66;target=0x2efa;}
+        else if(value==0x0f){threshold=0x0f;target=0x2f01;}
+        else if(value==0x40){threshold=0x40;target=0x2f01;}
+        else if(value!=0x57 && value<0x54){threshold=0x54;target=0x2ee9;}
+        else if(value!=0x57 && value<0x5b){threshold=0x5b;target=0x2f01;}
+        else if(value>=0x71 && value<0x7d){threshold=0x7d;target=0x2f01;}
+        else{threshold=0x60;target=value==0x60?0x2ef7:0x2ee9;}
+    }
+    c=value>=threshold;NZ((unsigned char)(value-threshold));return target;
+}
+/* $55AB-$55C4 has no service/alias seam inside its fixed 72-byte
+ * clear. Preserve final DEX flags, A=0 and the source RTS frame. */
+SOURCE_INLINE void source_contact_clear(void){
+    unsigned char at;for(at=0;at<72;at++)m[0x4eed+at]=0;
+    a=0;x=255;NZ(x);sp+=2;
+}
+/* Native object pass ($2E39-$2E88), keeping the original handler for each
+ * source cell and each non-local lifetime/room return. Empty cells do not
+ * need a recursive trip through the large actor entry dispatcher. */
+SOURCE_INLINE unsigned char source_object_returned(unsigned short expected){
+    return (unsigned char)(!transition_pending && !actor_delay_pending && !actor_gameover_pending &&
+        !actor_reset_pending && !actor_irq_stop && !source_fault && actor_return==expected);
+}
+static unsigned char source_object_row(void){
+    unsigned short target;
+    a=m[(unsigned char)(0xe9+x)];x=a;NZ(x);source_contact_frame(0x2e73);
+    m[4]=m[0x4338+x];m[5]=m[0x434c+x];m[8]=m[0x4360+x];m[9]=m[0x4374+x];
+    a=m[0x100];NZ(a);if(a){m[8]=0;a=0xce;m[9]=a;NZ(a);}sp+=2;
+    x=m[0x51];NZ(x);y=m[(unsigned char)(0xe6+x)];NZ(y);a=2;m[0x4c]=a;NZ(a);
+    for(;;){
+        a=(unsigned char)(m[(unsigned short)(W(4)+y)]&127);NZ(a);
+        source_contact_frame(0x2e82);target=source_object_classify();
+        if(target==0x2ee9){sp+=2;actor_return=source_stack_return();}
+        else{actor_code(target);if(!source_object_returned(0x2e83))return 0;}
+        ++y;NZ(y);--m[0x4c];NZ(m[0x4c]);
+        if(n){sp+=2;actor_return=source_stack_return();return 1;}
+    }
+}
+#if defined(__m68k__) && defined(__GNUC__)
+__attribute__((optimize("O2")))
+#endif
+static unsigned char source_object_driver(void){
+    a=0;m[0x100]=0;x=2;NZ(x);
+    for(;;){
+        m[0x51]=x;a=(unsigned char)(m[(unsigned char)(0x95+x)]&1);NZ(a);
+        if(a){
+            a=m[(unsigned char)(0xbf+x)];c=a>=25;NZ((unsigned char)(a-25));
+            if(!z){
+                c=a>=23;NZ((unsigned char)(a-23));
+                if(z){source_contact_frame(0x2e54);actor_code(0x2e10);if(!source_object_returned(0x2e55))return 0;}
+                a=(unsigned char)(m[(unsigned char)(0xb6+x)]&2);m[0x53]=a;NZ(a);
+                source_contact_frame(0x2e5d);actor_code(0x1c39);if(!source_object_returned(0x2e5e))return 0;
+                source_contact_frame(0x2e60);if(!source_object_row() || !source_object_returned(0x2e61))return 0;
+                x=m[0x51];NZ(x);++m[(unsigned char)(0xe9+x)];NZ(m[(unsigned char)(0xe9+x)]);
+                source_contact_frame(0x2e67);if(!source_object_row() || !source_object_returned(0x2e68))return 0;
+            }
+        }
+        x=(unsigned char)(m[0x51]-1);NZ(x);if(n){sp+=2;return 1;}
+    }
+}
+/* $5212-$52AC, binary path. Keep the actual mask/table order and all JSR
+ * bytes. A completed foot mask discards only its row frame, then continues
+ * the same driver frame with the next actor ($542C -> $52A4).
+ * Services occur at the original $5214 and row checkpoints. */
+#if defined(__m68k__) && defined(__GNUC__)
+__attribute__((optimize("O2")))
+#endif
+static void source_contact_driver(void){
+    static const unsigned short pointer_return[4]={0x5273,0x5282,0x5291,0x52a0};
+    static const unsigned short row_return[4]={0x5276,0x5285,0x5294,0x52a3};
+    unsigned char part;
+    x=2;NZ(x);
+    for(;;){
+        if(actor_world_enabled && io_service)io_service();
+        m[0x50]=x;a=(unsigned char)(m[(unsigned char)(0x95+x)]&1);NZ(a);
+        if(a){
+            a=m[(unsigned char)(0x9e + x)];c=1;sbc(12);
+            m[(unsigned char)(0xe6+x)]=a;a&=3;m[0x1b]=a;NZ(a);
+            a=m[(unsigned char)(0xa1+x)];c=1;sbc(29);
+            m[(unsigned char)(0xe9+x)]=a;a&=7;m[0x1c]=a;NZ(a);
+            x=m[0x4f4e + x];NZ(x);a=m[0x1167+x];m[0x52cc]=a;
+            a=m[0x1239+x];m[0x52cd]=a;NZ(a);
+            source_contact_frame(0x5247);PERF_BEGIN(BL_PERF_ALIGN);
+            source_contact_align();PERF_END(BL_PERF_ALIGN);
+            a=m[0x1c];c=0;adc(21);m[0x4f39]=a;c=1;sbc(6);m[0x4f38]=a;
+            source_contact_frame(0x5258);source_contact_clear();
+            x=m[0x50];a=m[(unsigned char)(0xe6+x)];a>>=2;m[(unsigned char)(0xe6+x)]=a;
+            a=m[(unsigned char)(0xe9+x)];c=(a>>2)&1;a>>=3;m[(unsigned char)(0xe9+x)]=a;
+            y=0;m[0x52]=0;
+            for(part=0;part<4;part++){
+                if(part){x=m[0x50];NZ(x);++m[(unsigned char)(0xe9+x)];NZ(m[(unsigned char)(0xe9+x)]);}
+                a=(unsigned char)((part+1)*8);m[0x4f3a]=a;NZ(a);
+                source_contact_frame(pointer_return[part]);source_contact_pointers();
+                source_contact_frame(row_return[part]);PERF_BEGIN(BL_PERF_ROWS);
+                if(source_contact_rows_inner()){PERF_END(BL_PERF_ROWS);break;}
+                PERF_END(BL_PERF_ROWS);
+            }
+        }
+        x=(unsigned char)(m[0x50]-1);NZ(x);
+        if(n){sp+=2;return;}
+    }
+}
 #include "c64_actor_programs.h"
 /* IRQ I/O seam. The two source fragments retain all source timer, palette,
  * quota and input-mode work. CIA keyboard scanning is replaced only by the

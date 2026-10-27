@@ -1,0 +1,112 @@
+{
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "original_raster_phase_verified": false,
+  "method": "Owned normal68000 run: actual PAL clock stamp versus source87/88 room clock; debugger reads, no source-memory injection",
+  "binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "ed6fc7f71bcb4a483f5831043527ab6a5aba298b6ce101835e45c2c2705ef4bb"
+  },
+  "samples": [
+    {
+      "clock_before": 3915,
+      "clock_after": 3916,
+      "age": 2371,
+      "epoch": 1,
+      "active_flags": [
+        1,
+        129,
+        65
+      ],
+      "actor_states": [
+        0,
+        0,
+        0
+      ],
+      "spawn_events": 2,
+      "steps": 517,
+      "fault": 0,
+      "waiting": 0
+    },
+    {
+      "clock_before": 3997,
+      "clock_after": 4002,
+      "age": 2454,
+      "epoch": 1,
+      "active_flags": [
+        1,
+        129,
+        65
+      ],
+      "actor_states": [
+        0,
+        0,
+        22
+      ],
+      "spawn_events": 2,
+      "steps": 535,
+      "fault": 0,
+      "waiting": 0
+    },
+    {
+      "clock_before": 4111,
+      "clock_after": 4116,
+      "age": 2568,
+      "epoch": 1,
+      "active_flags": [
+        1,
+        129,
+        65
+      ],
+      "actor_states": [
+        0,
+        0,
+        0
+      ],
+      "spawn_events": 2,
+      "steps": 557,
+      "fault": 0,
+      "waiting": 0
+    },
+    {
+      "clock_before": 4235,
+      "clock_after": 4240,
+      "age": 2693,
+      "epoch": 1,
+      "active_flags": [
+        1,
+        129,
+        65
+      ],
+      "actor_states": [
+        0,
+        0,
+        22
+      ],
+      "spawn_events": 2,
+      "steps": 581,
+      "fault": 0,
+      "waiting": 0
+    }
+  ],
+  "pairs": [
+    {
+      "source_fields": 83,
+      "clock_min": 81,
+      "clock_max": 87,
+      "source_steps": 18
+    },
+    {
+      "source_fields": 114,
+      "clock_min": 109,
+      "clock_max": 119,
+      "source_steps": 22
+    },
+    {
+      "source_fields": 125,
+      "clock_min": 119,
+      "clock_max": 129,
+      "source_steps": 24
+    }
+  ]
+}

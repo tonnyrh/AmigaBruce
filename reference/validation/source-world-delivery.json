@@ -16,15 +16,15 @@
   "artifacts": [
     {
       "path": "reference/analysis/actor-chain-2026-10-26/report.json",
-      "sha256": "41a53fbaca6306d572fc87aa444b8f729e0a894390c0fb2dbd877bdd29f11b89"
+      "sha256": "36f9351b7feb7d68cc620104c90c77cc57f9232d9b9a4d95ce3199fde657567c"
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
-      "sha256": "0b99efaddcec307cdca1f67bd6a7d927f07911a5ac8bde2d4df8e4ed5c00129d"
+      "sha256": "9f851e6e1f5156308fa782d41821b9e3a027e9f5c8e512797eee77435ee5ca95"
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
-      "sha256": "82d2adab53d273a1a8bdb6b7c17d8e89bfeae90dc0da667c40767791842527b6"
+      "sha256": "401e876cb97945d71142861978644830d04912f4cc190edd51b92cb6a77a36f0"
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/native-fixture.json",
@@ -32,7 +32,7 @@
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/native-final.txt",
-      "sha256": "6efe5118cc22f472b03158f564237374eda0b0c6bf80c62c1b0b56634bc7bbf4"
+      "sha256": "4f7d477a8056280b8520308575ef9f691b29da51b0ded96b929f908c4c2bb0a2"
     },
     {
       "path": "tools/audit_normal_source_clock.py",
@@ -40,23 +40,23 @@
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
-      "sha256": "b1e8c4d10264656a0923833259eae6b3c05b6abdf5d5bfff837b4d9594427fed"
+      "sha256": "430eb90b707af60e38a1a1dc38fef167f6c056cb53eae37ae3a761981c3c4878"
     },
     {
       "path": "reference/validation/source-world-native.json",
-      "sha256": "4b401e7a1e93e4ee5936e2e88f4e716a663f73fb4236f9259387182a01f1ffb8"
+      "sha256": "08ed7c0fe0a672908c3dd333c12d1c18865cac89dc60ae3c7b67a7978e3808e8"
     },
     {
       "path": "docs/MILESTONE_COMPLETION.md",
-      "sha256": "c1008c145a84d47deacebd367e4c6209ac6b52e04ed0950d1ec6c47822740a07"
+      "sha256": "223064275395e1eb404d1444180b6cfce1597108360e7487d7d2d52a63d0e88f"
     },
     {
       "path": "docs/ACTIVE_TESTS.md",
-      "sha256": "c7c3a1e9376ed5c3878d9b28e09acc4033432750960c86f81a4e0a425be2a4c1"
+      "sha256": "9b3e8a60d5d8a53df07b99bcc96773d16dddf42bc98a5e0a9a6d509512677625"
     },
     {
       "path": "docs/PROJECT_PLAN.md",
-      "sha256": "56cdbec3b1fde2d9d7f87cd1ebef550ca80efe4f17ffc8abc5585ee2a2979d3e"
+      "sha256": "ef7aa9dec9dc3b6615b53f47e12b95551dc030c16ecafb05cc8cf9c97801b488"
     },
     {
       "path": "docs/parity/register.csv",
@@ -64,31 +64,47 @@
     },
     {
       "path": "tools/verify_source_world_delivery.py",
-      "sha256": "c303317a2bea364f7b223f173cc0f709e61a86540c4e653cf9d658208ef13f1f"
+      "sha256": "81a48331ae0353a4ffc24f8d8f81451a374dcb1af48feaee509701979d045aff"
     },
     {
       "path": "test-parity.ps1",
-      "sha256": "d99333c2ebb86504eb6f803cda394c0719477f72faa8689391541af28cdc58bc"
+      "sha256": "05d0c35f99a36b6445bf81a153c5de03f83edd4a02a1556c35859e2059ab8b43"
     },
     {
       "path": "README.md",
-      "sha256": "aa633a667e2c465f3c9afe553e45ed58d9a9483b1196f038241eb4ac7923907f"
+      "sha256": "9b165de773f0ca798ede9f7e7cf894a939fc163fb8da9625f4ba4b0c73629721"
     },
     {
       "path": "reference/validation/source-vic-host.json",
-      "sha256": "77cada8e07e7c9d29532606b5df2f089b4b08590039f9af4833e3a7529c38708"
+      "sha256": "b8af1dd9a92b5185c0181fedb523eee5c4ec1b235519de276ce7e34f0ac0bc28"
     },
     {
       "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
-      "sha256": "7c43859b3872c91385e57b7b9cef8da04a262b8ea1166c4e3f464d1859e4a09a"
+      "sha256": "cb2d774b49e49f2a1d6068ba0d7258b121f0d59289488430a4e6f9ba24229fdf"
     },
     {
       "path": "docs/AMIGA_OPTIMIZATION_REPORT.md",
       "sha256": "acb5723372d0b3c91f3ac660a1db18ae3b434b24469e98cafd35690699c8531d"
     },
     {
+      "path": "reference/validation/source-native-boot.json",
+      "sha256": "2f4982bfde5189f2790ff8c1ed1886545e7686f8bfedb2cbcd02080b3ca6f60b"
+    },
+    {
+      "path": "reference/validation/source-object-host.json",
+      "sha256": "e98c4bb3839d6cd22bc89f90ff763c996d93c123f60fd906c126fab39f3c9bb9"
+    },
+    {
+      "path": "reference/validation/source-score-host.json",
+      "sha256": "030519c0940f3dc3970562ae799343b045f193276bc778f12437e8e2946bd6f7"
+    },
+    {
+      "path": "docs/NATIVE_ENGINE_OPTIMIZATION.md",
+      "sha256": "00fa40aafb88d929ec3000febf23eea16addf5cf98417ab247b1f9aaa16341af"
+    },
+    {
       "path": "reference/validation/source-contact-host.json",
-      "sha256": "f6c3ad7dc3d0a0a0af56a8b5f933e7c69b76ebfb399f97a08283b876a5d5b9b5"
+      "sha256": "b74bdbb5500a72556fa827779c0748291076d2c6f98fc6d07255a60aaa691d68"
     },
     {
       "path": "docs/CONTACT_OPTIMIZATION.md",
@@ -100,11 +116,11 @@
     },
     {
       "path": "reference/validation/source-visibility-native.json",
-      "sha256": "fc1a1706e1ef607628e232382b1df4e671fa32f17d4b4a8cc8844767846272ef"
+      "sha256": "5344eed54c88bdb1629da801177671597e10f63a676d46661f03784879cb3c08"
     },
     {
       "path": "reference/validation/source-visibility-host.json",
-      "sha256": "b9cdb514ac731f926ec02e31fecaa9d923968f7738634ff968672317be4867af"
+      "sha256": "a87c0c7d176900d1c99e8fe4e31dee5bb3d7809e3b997300e34ba490e8d19fe9"
     },
     {
       "path": "reference/analysis/yamo-r02-2026-10-27/snapshot.json",
@@ -124,21 +140,21 @@
     },
     {
       "path": "docs/CONTACT_REGISTERS_OPTIMIZATION.md",
-      "sha256": "77af1f6ef33987d991f1c999e3d354a4a69a88a2bec1c794d95b6401c75ce61d"
+      "sha256": "01e9465000b2198ea6997f6c700c599c0983d560936e699a4acee8d5e2b52d82"
     }
   ],
   "normal_build": [
     {
       "path": "amiga/out/bruce_amiga.exe",
-      "sha256": "03a17d43c8d6e5f7ced1537f49cb11650689852595fd8f5c4c099d03733075e1"
+      "sha256": "ed6fc7f71bcb4a483f5831043527ab6a5aba298b6ce101835e45c2c2705ef4bb"
     },
     {
       "path": "amiga/out/bruce_amiga.elf",
-      "sha256": "6072f000297cc3c305a6b709473a5a703bad7a980dd00ee0b1a7b2b7899b8e75"
+      "sha256": "0d0b4d8901663f132cb7cc7820f47d38d7434ed74ab8ba839a04b3078fb813e2"
     },
     {
       "path": "amiga/out/bruce_amiga.adf",
-      "sha256": "191fac30d412e1a77934f4f69b477719a634b751742128556810ebc3ea0e589e"
+      "sha256": "3b15ac0057472bdbea371663da786e2910670579eefc3430f249845028cf1711"
     }
   ],
   "open_gates": [

@@ -105,3 +105,5 @@ hovedkjedens resterende arbeid og objektpasset `$2E39` mer presist, og
 spesialisere bare en dokumentert varm rutine. Lydrapporten legger de første
 forsinkelsene i spillsteget; feltservice og lydtiming må fortsatt løses
 uten å hoppe over kildeoppdateringer eller slakke sanntidskravet.
+
+Gjeldende større native motorløft: [rutiner, målinger og kontroller](NATIVE_ENGINE_OPTIMIZATION.md).

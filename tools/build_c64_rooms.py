@@ -51,6 +51,7 @@ def translate(memory, roots, *, actors=False):
                 if actors:entries.add(pc+size)
         elif op not in ('rts','brk'):
             pending.append(pc+size)
+    if actors:entries.update((0x2ee9,0x2eea,0x2ef7,0x2efa,0x2f01,0x2f04))
     def addr(mode,o):
         if mode in ('abs','zpg'): return f'0x{o:04x}'
         if mode=='abx': return f'(unsigned short)(0x{o:04x}+x)'
@@ -107,6 +108,16 @@ def translate(memory, roots, *, actors=False):
         if pc==0x104b:lines.append('if(!d){source_movers();'+return_helper+'return;}')
         if pc==0x2509:lines.append('source_sound();'+return_helper+'return;')
         if actors and pc==0x26a0:lines.append('if(!d && m[0xe0+x]<32){PERF_BEGIN(BL_PERF_SPRITE_COPY);source_sprite_copy();PERF_END(BL_PERF_SPRITE_COPY);'+return_helper+'return;}')
+        if actors and pc==0x2e39:lines.append('if(source_object_driver()){'+return_helper+'}return;')
+        if actors and pc==0x2e6e:lines.append('source_object_row();return;')
+        if actors and pc==0x55ab:lines.append('source_contact_clear();'+return_helper+'return;')
+        if actors and pc in (0x31d5,0x32ee):
+            end=0x31f4 if pc==0x31d5 else 0x330d
+            lines.append(f'if(!(m[0x439b]|m[0x439c]|m[0x439d]|m[0x439e])){{source_score_decimal();goto L{end:04x};}}')
+        if actors and pc==0x2e89:
+            targets=(0x2ee9,0x2eea,0x2ef7,0x2efa,0x2f01,0x2f04,0x2f3c,0x2f51,0x2f66,0x2f7b,0x310c)
+            lines.append('switch(source_object_classify()){'+''.join(f'case 0x{target:04x}:goto L{target:04x};' for target in targets)+'default:source_fault=0x2e89;return;}')
+        if actors and pc==0x5212:lines.append('if(!d){source_contact_driver();'+return_helper+'return;}')
         if actors and pc==0x530a:lines.append('if(!d){source_contact_pointers();'+return_helper+'return;}')
         if actors and pc==0x52ad:lines.append('if(m[0x1b]<4 && m[0x1c]<8){PERF_BEGIN(BL_PERF_ALIGN);source_contact_align();PERF_END(BL_PERF_ALIGN);'+return_helper+'return;}')
         if actors and pc==0x537e:lines.append('PERF_BEGIN(BL_PERF_ROWS);source_contact_rows();PERF_END(BL_PERF_ROWS);'+return_helper+'return;')

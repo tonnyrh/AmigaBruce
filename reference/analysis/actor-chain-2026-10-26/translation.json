@@ -506,6 +506,12 @@
     "$2E83",
     "$2E89",
     "$2EA9",
+    "$2EE9",
+    "$2EEA",
+    "$2EF7",
+    "$2EFA",
+    "$2F01",
+    "$2F04",
     "$2F0A",
     "$2F0D",
     "$2F13",
@@ -863,6 +869,11 @@
     "$D01E": "Field-sampled source VIC sprite opaque-pixel latch, cleared on read; not raster-exact"
   },
   "decoded_helpers": {
+    "$2E39/$2E6E": "Native actor/object cell pass; original cell handlers and non-local room/lifetime boundaries",
+    "$55AB": "Fixed class-buffer clear with source final flags and frame",
+    "$31D5/$32EE": "Native 24-bit score to packed BCD with source scratch, saved status byte and final registers",
+    "$2E89": "Ordered native object dispatch; exact final comparison and shift flags at original handler boundaries",
+    "$5212": "Binary native contact driver; original per-actor service, JSR frames and non-local row completion",
     "$26A0": "Source sprite bitmap copy with scratch/flags/stack",
     "$52AD": "Source contact-mask alignment with scratch/flags/stack",
     "$530A": "Binary contact address preparation; ordered reads, exact internal JSR bytes and final arithmetic flags",
@@ -873,7 +884,7 @@
   "generated": [
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "18483251ba1f8fdb4d8340738ec9819cfc890052b0830d8853c0ecf7e2b4bc60"
+      "sha256": "779479168f174c3ae8220006c9424118284920d89440421d49c592442809fd19"
     },
     {
       "path": "core/c64_actor_data.h",

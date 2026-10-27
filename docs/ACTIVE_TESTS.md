@@ -13,6 +13,8 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
   feltkadens og lydservice; [68000-runden](VIC_NATIVE_OPTIMIZATION.md) og
   [kontaktforberedelsen](YAMO_VISIBILITY_PERFORMANCE.md) og
   [lokale kontaktregistre](CONTACT_REGISTERS_OPTIMIZATION.md) reduserer målt tid.
+  [Native kontakt-/objekt-/poengløft](NATIVE_ENGINE_OPTIMIZATION.md) fortsetter
+  fra den pushede milepælen med nye helrutinekontroller og målinger.
   Normal klokkeprøve er fortsatt tregere enn tre felt per steg. Kontroller
   synlig framdrift også under naturlig spilling.
 - VIC-PHASE: kontroller naturlige samtidige treff og spritekontakt ved kanter.

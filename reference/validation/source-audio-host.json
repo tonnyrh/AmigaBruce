@@ -121,7 +121,7 @@
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "a5e7f17802665dd0e744d484a917d83450960bd8cd7e1a6e2d8508417ee1e0f9"
+      "sha256": "765d1c55eb7ac22a3cdfdeb74659ef3ae66261d83b15992c5e964edf1ce0c6e5"
     },
     {
       "path": "core/c64_rooms.h",

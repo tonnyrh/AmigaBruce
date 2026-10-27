@@ -1,0 +1,7 @@
+{
+  "status": "excluded_unequal_source_step_comparison",
+  "frames": 360,
+  "source_steps": 350,
+  "reason": "Faster native work let ten outer loops await the next source field; not comparable with 360-step baseline",
+  "replacement": "native-object-pass-equal-steps-timing"
+}

@@ -432,6 +432,12 @@ case 0x2e74:goto L2e74;
 case 0x2e83:goto L2e83;
 case 0x2e89:goto L2e89;
 case 0x2ea9:goto L2ea9;
+case 0x2ee9:goto L2ee9;
+case 0x2eea:goto L2eea;
+case 0x2ef7:goto L2ef7;
+case 0x2efa:goto L2efa;
+case 0x2f01:goto L2f01;
+case 0x2f04:goto L2f04;
 case 0x2f0a:goto L2f0a;
 case 0x2f0d:goto L2f0d;
 case 0x2f13:goto L2f13;
@@ -12242,6 +12248,7 @@ goto L2e38;
 L2e38:; /* $2E38 */
 sp+=2;actor_return=source_stack_return();return;
 L2e39:; /* $2E39 */
+if(source_object_driver()){actor_return=source_stack_return();}return;
 a=0x00;NZ(a);
 goto L2e3b;
 L2e3b:; /* $2E3B */
@@ -12316,6 +12323,7 @@ goto L2e6d;
 L2e6d:; /* $2E6D */
 sp+=2;actor_return=source_stack_return();return;
 L2e6e:; /* $2E6E */
+source_object_row();return;
 a=m[(unsigned char)(0xe9 + x)];NZ(a);
 goto L2e70;
 L2e70:; /* $2E70 */
@@ -12357,6 +12365,7 @@ goto L2e88;
 L2e88:; /* $2E88 */
 sp+=2;actor_return=source_stack_return();return;
 L2e89:; /* $2E89 */
+switch(source_object_classify()){case 0x2ee9:goto L2ee9;case 0x2eea:goto L2eea;case 0x2ef7:goto L2ef7;case 0x2efa:goto L2efa;case 0x2f01:goto L2f01;case 0x2f04:goto L2f04;case 0x2f3c:goto L2f3c;case 0x2f51:goto L2f51;case 0x2f66:goto L2f66;case 0x2f7b:goto L2f7b;case 0x310c:goto L310c;default:source_fault=0x2e89;return;}
 c=a>=0x05;NZ((unsigned char)(a-0x05));
 goto L2e8b;
 L2e8b:; /* $2E8B */
@@ -13517,6 +13526,7 @@ L31d2:; /* $31D2 */
 address=0x439e;m[address]=a;
 goto L31d5;
 L31d5:; /* $31D5 */
+if(!(m[0x439b]|m[0x439c]|m[0x439d]|m[0x439e])){source_score_decimal();goto L31f4;}
 m[0x100 + sp--]=(unsigned char)(0x30|c|(z<<1)|(d<<3)|(v<<6)|(n<<7)|(actor_i<<2));
 goto L31d6;
 L31d6:; /* $31D6 */
@@ -13909,6 +13919,7 @@ L32eb:; /* $32EB */
 address=0x439e;m[address]=a;
 goto L32ee;
 L32ee:; /* $32EE */
+if(!(m[0x439b]|m[0x439c]|m[0x439d]|m[0x439e])){source_score_decimal();goto L330d;}
 m[0x100 + sp--]=(unsigned char)(0x30|c|(z<<1)|(d<<3)|(v<<6)|(n<<7)|(actor_i<<2));
 goto L32ef;
 L32ef:; /* $32EF */
@@ -19401,6 +19412,7 @@ goto L50e5;
 L50e5:; /* $50E5 */
 sp+=2;actor_return=source_stack_return();return;
 L5212:; /* $5212 */
+if(!d){source_contact_driver();actor_return=source_stack_return();return;}
 x=0x02;NZ(x);
 goto L5214;
 L5214:; /* $5214 */
@@ -20562,6 +20574,7 @@ goto L55aa;
 L55aa:; /* $55AA */
 sp+=2;actor_return=source_stack_return();return;
 L55ab:; /* $55AB */
+source_contact_clear();actor_return=source_stack_return();return;
 a=0x00;NZ(a);
 goto L55ad;
 L55ad:; /* $55AD */

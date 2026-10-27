@@ -7,6 +7,8 @@ if(!$LegacyBlockout){
     & python (Join-Path $PSScriptRoot 'tools/audit_c64_world.py')
     if($LASTEXITCODE){throw 'Integrated C64 source world comparison failed'}
     & (Join-Path $PSScriptRoot 'test-source-contact.ps1')
+    & (Join-Path $PSScriptRoot 'test-source-object.ps1')
+    & (Join-Path $PSScriptRoot 'test-source-score.ps1')
     & (Join-Path $PSScriptRoot 'test-source-visibility.ps1')
     & (Join-Path $PSScriptRoot 'test-source-vic.ps1')
     & (Join-Path $PSScriptRoot 'test-source-audio.ps1')
