@@ -2,60 +2,60 @@
   "status": "passed_owned_cli_adf_smoke",
   "binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "ed6fc7f71bcb4a483f5831043527ab6a5aba298b6ce101835e45c2c2705ef4bb"
+    "sha256": "664212239f6e9ee102a0ef78303390dc1baab565223b9fae96dd52eadec0c195"
   },
   "adf": {
     "path": "amiga/out/bruce_amiga.adf",
-    "sha256": "3b15ac0057472bdbea371663da786e2910670579eefc3430f249845028cf1711"
+    "sha256": "0f3335b3f451c6721947d0fbcf8671d8f4c8174f4ec274f6098f9943e2026440"
   },
   "artifacts": [
     {
-      "path": "reference/analysis/session-walls-2026-10-25/native-engine-menu.json",
-      "sha256": "11d66ab933c9ed52de6ff0637759cc19343bff1d50ce89674d9ec87484e6b1f5"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-cli.json",
+      "sha256": "6d8ace7b9934bdd5bace0ee6d310d6739c5627a9148d1378fd51b67eabacb619"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/native-engine-menu.bpl",
+      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-cli.bpl",
       "sha256": "1411859a37b2718d65fb7b2b04be374e5b717069fb9edc7a4e1ee1bc32741774"
     },
     {
-      "path": "docs/images/session-native-engine-menu.png",
+      "path": "docs/images/session-contact-kernel-cli.png",
       "sha256": "284eedf3a2429051fc885fb9cbfaa8905b6dbf5c1d9b0f7ddf4ca2409d06293b"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/native-engine-room2.json",
-      "sha256": "0d422b6bd1a72ecd807358cbdc48fc2ae5493499e78a786da3247c9e4652d7e8"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-room2.json",
+      "sha256": "221c51edf74f09b9ba0e21a73d000bf0bcb794c38cb772d277340348ef7bd3eb"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/native-engine-room2.bpl",
-      "sha256": "f5c9f5d38895dacd6ba6c93be36143f13f2bf0fc6dcb31652a798960a75ae96f"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-room2.bpl",
+      "sha256": "45316ec5b03b6a104260739d0f197f55866eb1286524cfd7ae9b17f03980c860"
     },
     {
-      "path": "docs/images/session-native-engine-room2.png",
-      "sha256": "15db1e95ed4b79349d37f1d50a7caf4b5c6bf80ee30163ab8a1cded0d606efd8"
+      "path": "docs/images/session-contact-kernel-room2.png",
+      "sha256": "dad5e72d18775bb83c20cc2fd2a434c2a6d79f4952747cf97cf3cdf76990f3f0"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/native-engine-adf.json",
-      "sha256": "3be0da8a25c74d0f431bb66edeb932664958fb2c2abdb78a3ae90b02759205dc"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-adf.json",
+      "sha256": "cce4c40545eb10371ec78906891109aa8706460a8ed1bbc3305cca1fd835854a"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/native-engine-adf.bpl",
-      "sha256": "efcf965c807cf95228a083cf509f0f2cfd86ab380e8a51ac10fd57661cb51657"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-adf.bpl",
+      "sha256": "1411859a37b2718d65fb7b2b04be374e5b717069fb9edc7a4e1ee1bc32741774"
     },
     {
-      "path": "docs/images/session-native-engine-adf.png",
-      "sha256": "dc79a49aec11c79cab228977ec10fcf403189a76a600c3253fecc89a12682ab8"
+      "path": "docs/images/session-contact-kernel-adf.png",
+      "sha256": "284eedf3a2429051fc885fb9cbfaa8905b6dbf5c1d9b0f7ddf4ca2409d06293b"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/native-engine-early-clock.json",
-      "sha256": "3cc53d0092ec6841047d8a406aefd5e514e85abedad9fd362caa3550f5076cad"
+      "path": "reference/analysis/optimization-2026-10-27/contact-kernel-early-clock.json",
+      "sha256": "4bce86e52a6f6f6a5feba5de943c7c868670ea15a45496338ac126955826570e"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/native-engine-late-clock.json",
-      "sha256": "430eb90b707af60e38a1a1dc38fef167f6c056cb53eae37ae3a761981c3c4878"
+      "path": "reference/analysis/optimization-2026-10-27/contact-kernel-late-clock.json",
+      "sha256": "d4f6669264f49919e1e2f5e9c009b44705bb8bf560b1ae0a91bdc7a98ea6830a"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/native-engine-adf-clock.json",
-      "sha256": "c197e78119458726634d89c060098e6b205be78b8f2ce963b717c6e5b19f0c81"
+      "path": "reference/analysis/optimization-2026-10-27/contact-kernel-adf-clock.json",
+      "sha256": "d976f0b5f8ddc02ba7e13ae83d71bb60b8b4f2fa388e4d79ce0cfe38d5b93881"
     }
   ],
   "settings": {
@@ -67,7 +67,7 @@
     "fastmem_size": "0",
     "ntsc": "false"
   },
-  "method": "Own normal CLI and actual ADF boot, menu/new game and source-clock samples; bitplanes read from running Amiga",
+  "method": "Own final normal CLI and actual ADF boot; menu/new game, room1/2, source-clock samples and bitplanes",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "natural_playthrough": false,
   "physical_a500": false

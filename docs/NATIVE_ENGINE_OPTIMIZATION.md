@@ -163,3 +163,5 @@ stack- og servicekontroller, før større cacheendringer vurderes. VIC- og
 spritepublisering må fortsatt oppdage enhver relevant bitmap-/bank-/peker-
 endring. Å anta uendret bitmap fordi en figur står stille er ikke en gyldig
 optimalisering. Den testede leveransen her beholdes som nytt sammenligningspunkt.
+
+Videreført med [kontakt-/VIC-kjerner](CONTACT_KERNEL_OPTIMIZATION.md), inkludert eksakt spillstegstopp og fortsatt åpne lyd-/tidsporter.

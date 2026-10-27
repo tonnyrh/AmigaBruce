@@ -65,6 +65,16 @@ def main():
     m=bytearray(65536);m[0xdd00]=3;m[0xd018]=0x10;m[0xd015]=3
     m[0x7f8]=m[0x7f9]=128;m[0x2000]=128;seed(m);check(m);check(m)
     write(m,0x2000,0);check(m);check(m);write(m,0x2000,128);check(m)
+    # Exact rectangle-cache key transitions. Cached zero/contact results
+    # must respond to size/high-X changes; unchanged geometry must still
+    # detect bitmap mutations and reaccumulate a cleared VIC latch.
+    for first in range(8):
+        second=(first+1)%8;left=1<<first;right=1<<second
+        m=bytearray(65536);m[0xdd00]=3;m[0xd018]=0x10;m[0xd015]=left|right
+        m[0x7f8+first]=m[0x7f8+second]=128;m[0x2000:0x203f]=bytes([255])*63
+        m[0xd000+2*second]=24;seed(m);check(m);check(m)
+        for address,value in [(0xd01d,left),(0xd01d,0),(0xd000+2*second,0),(0xd001+2*second,21),(0xd017,left),(0xd017,0),(0xd001+2*second,0),(0xd010,right),(0xd010,0),(0x2000,0),(0x2000,255),(0xd015,left),(0xd015,left|right)]:
+            write(m,address,value);check(m);check(m)
     files=['core/c64_rooms.c','core/c64_rooms.h','core/source_perf.h','tests/source_vic_bridge.c','tools/verify_source_vic.py','test-source-vic.ps1']
     report=dict(status='passed_field_sampled_pixel_and_latch_controls',calls=calls,
         natural_playthrough=False,original_raster_verified=False,source_files=[dict(path=p,

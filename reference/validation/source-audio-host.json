@@ -121,11 +121,11 @@
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "765d1c55eb7ac22a3cdfdeb74659ef3ae66261d83b15992c5e964edf1ce0c6e5"
+      "sha256": "ca0621136aeb41e621479b48e1b687cfaf33b25bd55df8b08793bc6bc7d920ac"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "f3ede2c2062517f6adc6db8db414d46dfebc176a6445d87fcb2cbe0790702045"
+      "sha256": "4f0302d76f62bbfbfc229dc15ae3ffdf5fbe202a980c0f7999e25e242b5531d3"
     },
     {
       "path": "test-source-audio.ps1",

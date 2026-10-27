@@ -16,7 +16,7 @@
   "artifacts": [
     {
       "path": "reference/analysis/actor-chain-2026-10-26/report.json",
-      "sha256": "36f9351b7feb7d68cc620104c90c77cc57f9232d9b9a4d95ce3199fde657567c"
+      "sha256": "60847bc82e1510acd0faf414e8db85d60309a53f8d4f3376e4e5f3a30d00831e"
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
@@ -24,7 +24,7 @@
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
-      "sha256": "401e876cb97945d71142861978644830d04912f4cc190edd51b92cb6a77a36f0"
+      "sha256": "754a521114ca67b88b1934ea43009284457f36e78c6084073b9fe294291e1395"
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/native-fixture.json",
@@ -32,7 +32,7 @@
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/native-final.txt",
-      "sha256": "4f7d477a8056280b8520308575ef9f691b29da51b0ded96b929f908c4c2bb0a2"
+      "sha256": "66a08df1f1ee552f687a2ec4b0f7c5e68a43ee9ad957e00fd25a2f7bc3a411ea"
     },
     {
       "path": "tools/audit_normal_source_clock.py",
@@ -40,11 +40,11 @@
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
-      "sha256": "430eb90b707af60e38a1a1dc38fef167f6c056cb53eae37ae3a761981c3c4878"
+      "sha256": "d4f6669264f49919e1e2f5e9c009b44705bb8bf560b1ae0a91bdc7a98ea6830a"
     },
     {
       "path": "reference/validation/source-world-native.json",
-      "sha256": "08ed7c0fe0a672908c3dd333c12d1c18865cac89dc60ae3c7b67a7978e3808e8"
+      "sha256": "bf019e33772833e067b31ff3ffe9015e5dcb37c600325bf9f0a254b8ba8927e5"
     },
     {
       "path": "docs/MILESTONE_COMPLETION.md",
@@ -52,7 +52,7 @@
     },
     {
       "path": "docs/ACTIVE_TESTS.md",
-      "sha256": "9b3e8a60d5d8a53df07b99bcc96773d16dddf42bc98a5e0a9a6d509512677625"
+      "sha256": "467fb8700e18d482cc9e108cae43cce29e071737dc7ec2fe55daed0ea84a244b"
     },
     {
       "path": "docs/PROJECT_PLAN.md",
@@ -64,7 +64,7 @@
     },
     {
       "path": "tools/verify_source_world_delivery.py",
-      "sha256": "81a48331ae0353a4ffc24f8d8f81451a374dcb1af48feaee509701979d045aff"
+      "sha256": "478665885b79c7a42f1807062e7b1929f784d7a20427899a9956e3ad2e7b839e"
     },
     {
       "path": "test-parity.ps1",
@@ -72,15 +72,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "9b165de773f0ca798ede9f7e7cf894a939fc163fb8da9625f4ba4b0c73629721"
+      "sha256": "96d563d7a714db2cc3a4314c6ab2ecdeb09cbe04159873b0c7db3cc3dece3897"
     },
     {
       "path": "reference/validation/source-vic-host.json",
-      "sha256": "b8af1dd9a92b5185c0181fedb523eee5c4ec1b235519de276ce7e34f0ac0bc28"
+      "sha256": "a6d0c31a73a69dd5878678bd4a8a2a66b324a90ef0464a4441bced9e5bc9a053"
     },
     {
       "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
-      "sha256": "cb2d774b49e49f2a1d6068ba0d7258b121f0d59289488430a4e6f9ba24229fdf"
+      "sha256": "0cce41ecde6917ec110dc8b90cd57d3b94433458520f45c83411efed651f536c"
     },
     {
       "path": "docs/AMIGA_OPTIMIZATION_REPORT.md",
@@ -88,23 +88,27 @@
     },
     {
       "path": "reference/validation/source-native-boot.json",
-      "sha256": "2f4982bfde5189f2790ff8c1ed1886545e7686f8bfedb2cbcd02080b3ca6f60b"
+      "sha256": "120228e8d97df1fe1a6b25b2388234312dc9fdade8e9439fc056170d03eaf526"
     },
     {
       "path": "reference/validation/source-object-host.json",
-      "sha256": "e98c4bb3839d6cd22bc89f90ff763c996d93c123f60fd906c126fab39f3c9bb9"
+      "sha256": "08a6630f984026ea604afd0702e0c731c817ecf937301576ceeb957a633d92f5"
     },
     {
       "path": "reference/validation/source-score-host.json",
-      "sha256": "030519c0940f3dc3970562ae799343b045f193276bc778f12437e8e2946bd6f7"
+      "sha256": "08943f0539048088160e6e413767b30b1dda7c376ccc9235fe65838f8a62278c"
     },
     {
       "path": "docs/NATIVE_ENGINE_OPTIMIZATION.md",
-      "sha256": "00fa40aafb88d929ec3000febf23eea16addf5cf98417ab247b1f9aaa16341af"
+      "sha256": "e2502afb9c30e9d8f2705db0687f38289e7355ca5e33855c6f9c1ecfb043fc8b"
+    },
+    {
+      "path": "docs/CONTACT_KERNEL_OPTIMIZATION.md",
+      "sha256": "eb964bbb238d5bfc3d59f78f235ee8929fa0e2379aaecbe4ada438356b698e85"
     },
     {
       "path": "reference/validation/source-contact-host.json",
-      "sha256": "b74bdbb5500a72556fa827779c0748291076d2c6f98fc6d07255a60aaa691d68"
+      "sha256": "42350907c5df33fe59752bcd6a0ab528bb4cdbe5f97d1e35dc585194d004c598"
     },
     {
       "path": "docs/CONTACT_OPTIMIZATION.md",
@@ -116,11 +120,11 @@
     },
     {
       "path": "reference/validation/source-visibility-native.json",
-      "sha256": "5344eed54c88bdb1629da801177671597e10f63a676d46661f03784879cb3c08"
+      "sha256": "d5fb310d6963b8172152a080b3c38d7b380ba9c0fa704e055902775627cb120a"
     },
     {
       "path": "reference/validation/source-visibility-host.json",
-      "sha256": "a87c0c7d176900d1c99e8fe4e31dee5bb3d7809e3b997300e34ba490e8d19fe9"
+      "sha256": "01d694a17f37526af2bcd65fbb7248b07a92e514121f2c8750a2f57138bd1019"
     },
     {
       "path": "reference/analysis/yamo-r02-2026-10-27/snapshot.json",
@@ -146,15 +150,15 @@
   "normal_build": [
     {
       "path": "amiga/out/bruce_amiga.exe",
-      "sha256": "ed6fc7f71bcb4a483f5831043527ab6a5aba298b6ce101835e45c2c2705ef4bb"
+      "sha256": "664212239f6e9ee102a0ef78303390dc1baab565223b9fae96dd52eadec0c195"
     },
     {
       "path": "amiga/out/bruce_amiga.elf",
-      "sha256": "0d0b4d8901663f132cb7cc7820f47d38d7434ed74ab8ba839a04b3078fb813e2"
+      "sha256": "46a2ae45d75740acb912370ef98f24032fde448732d3e4e4c58988692145cd78"
     },
     {
       "path": "amiga/out/bruce_amiga.adf",
-      "sha256": "3b15ac0057472bdbea371663da786e2910670579eefc3430f249845028cf1711"
+      "sha256": "0f3335b3f451c6721947d0fbcf8671d8f4c8174f4ec274f6098f9943e2026440"
     }
   ],
   "open_gates": [

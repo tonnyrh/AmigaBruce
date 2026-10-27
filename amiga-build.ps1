@@ -1,9 +1,12 @@
 #Requires -Version 5.1
 [CmdletBinding()]
-param([ValidateRange(0,3)][int]$PerfEnemies=3,[switch]$Autotest,[switch]$SourceWorldTest,[switch]$SourcePerfTest,[switch]$SourceProfile,[switch]$CollectFrameDrops,[switch]$CombatTest,[switch]$RoomsTest,[switch]$EnemyEdgeTest,[switch]$RoomTour,[switch]$GateTest,[switch]$RoomLoadTest,[switch]$RoomLoadBaseline,[switch]$ElectricTest,[ValidateRange(0,19)][int]$TestStartRoom=0,[ValidateRange(0,2000)][int]$CombatWarmupSteps=0,[ValidateRange(360,30000)][int]$TestFrames=360)
+param([ValidateRange(0,3)][int]$PerfEnemies=3,[ValidateRange(0,30000)][int]$PerfSourceSteps=0,[switch]$Autotest,[switch]$SourceWorldTest,[switch]$SourcePerfTest,[switch]$SourceProfile,[switch]$CollectFrameDrops,[switch]$CombatTest,[switch]$RoomsTest,[switch]$EnemyEdgeTest,[switch]$RoomTour,[switch]$GateTest,[switch]$RoomLoadTest,[switch]$RoomLoadBaseline,[switch]$ElectricTest,[ValidateRange(0,19)][int]$TestStartRoom=0,[ValidateRange(0,2000)][int]$CombatWarmupSteps=0,[ValidateRange(360,30000)][int]$TestFrames=360)
 $ErrorActionPreference='Stop'
+if($PerfSourceSteps -and !$SourcePerfTest){throw 'PerfSourceSteps requires SourcePerfTest'}
 if($RoomsTest -or $EnemyEdgeTest -or $RoomTour -or $GateTest -or $RoomLoadTest){$CombatTest=$true}
 $taskRoot=$PSScriptRoot
+& python (Join-Path $taskRoot 'tools/build_contact_class_kernel.py')
+if($LASTEXITCODE){throw 'Source contact class kernel generation failed'}
 & python (Join-Path $taskRoot 'tools/build_c64_audio.py')
 if($LASTEXITCODE){throw 'Source audio extraction failed'}
 & python (Join-Path $taskRoot 'tools/build_c64_sprites.py')
@@ -24,7 +27,7 @@ $out=Join-Path $taskRoot 'amiga/out'
 New-Item -ItemType Directory -Force $out | Out-Null
 $flags=@('-m68000','-O2','-g','-nostdlib','-ffreestanding','-fno-builtin','-fno-tree-loop-distribute-patterns','-fomit-frame-pointer','-ffunction-sections','-fdata-sections','-Wall','-Wextra','-Wno-volatile-register-var','-Wno-array-bounds')
 $flags += if($Autotest){'-DBL_AUTOTEST=1'}else{'-DBL_AUTOTEST=0'}
-if($SourcePerfTest){if(!$Autotest){throw 'SourcePerfTest requires Autotest'};$SourceWorldTest=$true;$flags+='-DBL_SOURCE_PERF_TEST=1';$flags+="-DBL_SOURCE_PERF_ENEMIES=$PerfEnemies"}
+if($SourcePerfTest){if(!$Autotest){throw 'SourcePerfTest requires Autotest'};$SourceWorldTest=$true;$flags+='-DBL_SOURCE_PERF_TEST=1';$flags+="-DBL_SOURCE_PERF_ENEMIES=$PerfEnemies";$flags+="-DBL_SOURCE_PERF_STEPS=$PerfSourceSteps"}
 if($SourceWorldTest){if(!$Autotest){throw 'SourceWorldTest requires Autotest'};$flags+='-DBL_SOURCE_WORLD_TEST=1';$flags+='-DBL_COMBAT_TEST=1';$flags+='-DBL_COLLECT_FRAME_DROPS=1'}
 if($SourceProfile){$flags+='-DBL_C64_PROFILE=1'}
 if($CollectFrameDrops){if(!$Autotest -or (!$RoomTour -and !$CombatTest)){throw 'CollectFrameDrops requires an autotest room tour or combat replay'};$flags+='-DBL_COLLECT_FRAME_DROPS=1'}
@@ -38,7 +41,7 @@ if($RoomTour){$flags+='-DBL_ROOM_TOUR=1'}
 if($GateTest){$flags+='-DBL_GATE_TEST=1'}
 if($RoomLoadTest){if(!$Autotest){throw 'RoomLoadTest requires Autotest'};$flags+='-DBL_ROOM_LOAD_TEST=1'}
 if($RoomLoadBaseline){if(!$RoomLoadTest){throw 'RoomLoadBaseline requires RoomLoadTest'};$flags+='-DBL_ROOM_REUSE=0'}
-$sources=@('amiga/start.s','amiga/vic_compare.s','amiga/main.c','amiga/runtime.c','core/game.c','core/source_wall.c','core/source_climb.c','core/presentation.c','core/c64_sprites.c','core/combat.c','core/rooms.c','core/session.c','core/c64_rooms.c','core/source_audio.c','core/source_dma.c')
+$sources=@('amiga/start.s','amiga/vic_compare.s','amiga/contact_rows.s','amiga/main.c','amiga/runtime.c','core/game.c','core/source_wall.c','core/source_climb.c','core/presentation.c','core/c64_sprites.c','core/combat.c','core/rooms.c','core/session.c','core/c64_rooms.c','core/source_audio.c','core/source_dma.c')
 $objects=@()
 foreach($source in $sources){
     $obj=Join-Path $out ([IO.Path]::GetFileNameWithoutExtension($source)+'.o')

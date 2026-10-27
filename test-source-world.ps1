@@ -15,7 +15,7 @@ if(!$SkipBuild){
     & (Join-Path $taskRoot 'amiga-build.ps1') -Autotest -SourceWorldTest -TestFrames $TestFrames
 }
 $paths=@('amiga-build.ps1','amiga-run.ps1','test-source-world.ps1','test-c64-actors.ps1','tests/source_actor_fixture.h',
-    'tools/build_source_actor_fixture.py','tools/build_c64_actors.py','tools/build_c64_rooms.py',
+    'tools/build_source_actor_fixture.py','tools/build_contact_class_kernel.py','tools/build_c64_actors.py','tools/build_c64_rooms.py',
     'tools/audit_c64_actor_chain.py','tools/audit_c64_world.py')
 $paths+=@(Get-ChildItem (Join-Path $taskRoot 'core'),(Join-Path $taskRoot 'amiga') -File | Where-Object {$_.Extension -in '.c','.h','.s'} | ForEach-Object {$_.FullName.Substring($taskRoot.Length+1).Replace('\','/')})
 $identity=@($paths | Sort-Object -Unique | ForEach-Object {@{path=$_;sha256=(Get-FileHash (Join-Path $taskRoot $_)).Hash.ToLower()}})
@@ -49,10 +49,11 @@ try{
            (Get-FileHash $live).Hash.ToLower() -ne $item.sha256){throw 'Test binary changed during native run'}
     }
     $failures=@()
-    foreach($key in @('source_actor_fixture_failure','c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors','c64_render_mismatches','capture_fault','vic_compare_errors')){
+    foreach($key in @('source_actor_fixture_failure','c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors','contact_kernel_errors','c64_render_mismatches','capture_fault','vic_compare_errors')){
         if($run[$key] -ne '0'){$failures+="$key=$($run[$key])"}
     }
     if($run['source_actor_fixture_cases'] -ne '53'){$failures+='Missing53 source controls'}
+    if($run['contact_kernel_cases'] -ne '198'){$failures+='Missing198 native contact kernel controls'}
     if($run['source_world_test'] -ne '1' -or $run['frames'] -ne [string]$TestFrames -or $run['restored_os'] -ne '1'){$failures+='Replay/restore incomplete'}
     if([int]$run['chip_largest_loaded'] -lt 49152){$failures+='Chip RAM margin below49152 bytes'}
     if($run['capture_original_hash'] -ne $run['capture_decoded_hash']){$failures+='Capture decode mismatch'}

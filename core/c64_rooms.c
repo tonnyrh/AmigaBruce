@@ -1,4 +1,5 @@
 #include "c64_rooms.h"
+#include <stddef.h>
 
 /* Frozen source data + state in CPU RAM. No C64 instruction fetch/decode.
  * Original IRQs/SID/VIC registers have no access to Amiga hardware here. */
@@ -483,6 +484,7 @@ unsigned short bl_c64_vic_compare_selftest(void){
 #endif
 static unsigned short vic_last_x[8],vic_last_y[8];
 static unsigned char vic_collision_valid,vic_last_active,vic_last_tall,vic_last_bits;
+static unsigned char vic_last_wide,vic_last_candidates,vic_last_pairs[8];
 static void source_actor_loading_begin(void);
 static void source_actor_loading_end(void);
 static void source_actor_field(void);
@@ -520,6 +522,9 @@ static void source_sprite_copy(void){
     do{m[(unsigned short)(dest+y++)]=0;--remaining;}while(!(remaining&128));
     m[0x277f]=remaining;a=0;z=0;n=1;sp+=2;
 }
+#if defined(__m68k__) && defined(__GNUC__)
+__attribute__((optimize("O2")))
+#endif
 static void source_contact_align(void){
     unsigned char row,shift,left,middle,right,last,offset=m[0x1c],phase=m[0x1b];unsigned short pointer=W(0x52cc);
     for(row=0;row<offset;row++)m[0xcae0 + row]=0;
@@ -565,8 +570,22 @@ static void source_contact_swap(unsigned short base){
 }
 /* $5431-$55AA. The OR operands below are the frozen instruction operands,
  * including the repeated $4EFE. No class is inferred from tile artwork. */
-static void source_contact_classes(void){
+#if !defined(__m68k__) || (defined(BL_AUTOTEST) && BL_AUTOTEST)
+static unsigned char source_contact_summary_c(void){
     unsigned char col,mask=0,bit;unsigned short flag;
+    m[0x4f3c]=(unsigned char)((m[0x4eee]|m[0x4ef1]|m[0x4ef2]|m[0x4ef3]|m[0x4ef4]|m[0x4efe]|m[0x4ef6]|m[0x4efa]|m[0x4f01]|m[0x4f05]|m[0x4f08]|m[0x4f09]|m[0x4f0a]|m[0x4f0b]|m[0x4efe]|m[0x4f0d]|m[0x4f11]|m[0x4f18]|m[0x4f1c]|m[0x4f1f]|m[0x4f20]|m[0x4f21]|m[0x4f22]|m[0x4f2c]|m[0x4f24]|m[0x4f28]|m[0x4f2f])!=0);
+    m[0x4f3d]=(unsigned char)((m[0x4eef]|m[0x4ef3]|m[0x4ef5]|m[0x4ef6]|m[0x4ef7]|m[0x4ef8]|m[0x4efb]|m[0x4eff]|m[0x4f02]|m[0x4f06]|m[0x4f0a]|m[0x4f0c]|m[0x4f0d]|m[0x4f0e]|m[0x4f0f]|m[0x4f12]|m[0x4f16]|m[0x4f19]|m[0x4f1d]|m[0x4f21]|m[0x4f23]|m[0x4f24]|m[0x4f25]|m[0x4f26]|m[0x4f29]|m[0x4f2d]|m[0x4f30])!=0);
+    m[0x4f3e]=(unsigned char)((m[0x4efd]|m[0x4efe]|m[0x4eff]|m[0x4f00]|m[0x4f01]|m[0x4f02]|m[0x4f03]|m[0x4f14]|m[0x4f15]|m[0x4f16]|m[0x4f17]|m[0x4f18]|m[0x4f19]|m[0x4f1a]|m[0x4f2b]|m[0x4f2c]|m[0x4f2d]|m[0x4f2e]|m[0x4f2f]|m[0x4f30]|m[0x4f31])!=0);
+    m[0x4f3f]=(unsigned char)((m[0x4ef0]|m[0x4ef4]|m[0x4ef8]|m[0x4ef9]|m[0x4efa]|m[0x4efb]|m[0x4efc]|m[0x4f07]|m[0x4f0b]|m[0x4f0f]|m[0x4f10]|m[0x4f11]|m[0x4f12]|m[0x4f13]|m[0x4f1e]|m[0x4f22]|m[0x4f26]|m[0x4f27]|m[0x4f28]|m[0x4f29]|m[0x4f2a])!=0);
+    for(col=5;--col;){flag=(unsigned short)(0x4f3b+col);bit=m[flag]&1;m[flag]>>=1;mask=(unsigned char)((mask<<1)|bit);}
+    return mask;
+}
+#endif
+#if defined(__m68k__)
+extern unsigned long bl_contact_classes4(const unsigned char *ram);
+#endif
+static void source_contact_classes(void){
+    unsigned char col,mask;unsigned short flag;
     DETAIL_BEGIN(BL_PERF_CONTACT_CLASSES);
     for(col=0;col<5;col++)m[0x4f3b+col]=0;
     for(col=0;col<3;col++){
@@ -579,60 +598,58 @@ static void source_contact_classes(void){
             source_contact_swap((unsigned short)(0x4eed+23*col));
         }
     }
-    m[0x4f3c]=(unsigned char)((m[0x4eee]|m[0x4ef1]|m[0x4ef2]|m[0x4ef3]|m[0x4ef4]|m[0x4efe]|m[0x4ef6]|m[0x4efa]|m[0x4f01]|m[0x4f05]|m[0x4f08]|m[0x4f09]|m[0x4f0a]|m[0x4f0b]|m[0x4efe]|m[0x4f0d]|m[0x4f11]|m[0x4f18]|m[0x4f1c]|m[0x4f1f]|m[0x4f20]|m[0x4f21]|m[0x4f22]|m[0x4f2c]|m[0x4f24]|m[0x4f28]|m[0x4f2f])!=0);
-    m[0x4f3d]=(unsigned char)((m[0x4eef]|m[0x4ef3]|m[0x4ef5]|m[0x4ef6]|m[0x4ef7]|m[0x4ef8]|m[0x4efb]|m[0x4eff]|m[0x4f02]|m[0x4f06]|m[0x4f0a]|m[0x4f0c]|m[0x4f0d]|m[0x4f0e]|m[0x4f0f]|m[0x4f12]|m[0x4f16]|m[0x4f19]|m[0x4f1d]|m[0x4f21]|m[0x4f23]|m[0x4f24]|m[0x4f25]|m[0x4f26]|m[0x4f29]|m[0x4f2d]|m[0x4f30])!=0);
-    m[0x4f3e]=(unsigned char)((m[0x4efd]|m[0x4efe]|m[0x4eff]|m[0x4f00]|m[0x4f01]|m[0x4f02]|m[0x4f03]|m[0x4f14]|m[0x4f15]|m[0x4f16]|m[0x4f17]|m[0x4f18]|m[0x4f19]|m[0x4f1a]|m[0x4f2b]|m[0x4f2c]|m[0x4f2d]|m[0x4f2e]|m[0x4f2f]|m[0x4f30]|m[0x4f31])!=0);
-    m[0x4f3f]=(unsigned char)((m[0x4ef0]|m[0x4ef4]|m[0x4ef8]|m[0x4ef9]|m[0x4efa]|m[0x4efb]|m[0x4efc]|m[0x4f07]|m[0x4f0b]|m[0x4f0f]|m[0x4f10]|m[0x4f11]|m[0x4f12]|m[0x4f13]|m[0x4f1e]|m[0x4f22]|m[0x4f26]|m[0x4f27]|m[0x4f28]|m[0x4f29]|m[0x4f2a])!=0);
-    x=m[0x50];a=0;m[0xb6+x]=0;
-    for(col=5;--col;){
-        flag=(unsigned short)(0x4f3b+col);bit=m[flag]&1;m[flag]>>=1;
-        mask=(unsigned char)((mask<<1)|bit);m[0xb6+x]=mask;
-    }
+#if defined(__m68k__)
+    mask=(unsigned char)bl_contact_classes4(m);
+#else
+    mask=source_contact_summary_c();
+#endif
+    x=m[0x50];a=0;m[0xb6+x]=mask;
     c=0;NZ(mask);sp+=2;
     DETAIL_END(BL_PERF_CONTACT_CLASSES);
 }
-/* $55C5-$55D6: source row tables, and $55D7/$5649/$56BB toggles. */
-SOURCE_INLINE void source_contact_table(void){
-    m[4]=m[0x50e7+x];m[0x12]=m[4];m[5]=m[0x50ff+x];
-    a=m[0x5117+x];m[0x13]=a;NZ(a);sp+=2;
+/* $55C5-$55D6 and $55D7/$5649/$56BB are internal to the binary
+ * pointer path below. No service observes their intermediate registers.
+ * The original actor entries still execute their instruction translation. */
+SOURCE_INLINE void source_contact_table(unsigned char row){
+    m[4]=m[0x50e7+row];m[0x12]=m[4];m[5]=m[0x50ff+row];
+    m[0x13]=m[0x5117+row];sp+=2;
 }
 SOURCE_INLINE void source_contact_attribute(unsigned short base,unsigned short flag){
-    unsigned char nonzero;
-    a=(unsigned char)(m[(unsigned short)(W(0x12)+y)]&7);NZ(a);nonzero=a;
-    a=m[flag];NZ(a);
-    if(nonzero?!a:a!=0){
+    unsigned char nonzero=(unsigned char)(m[(unsigned short)(W(0x12)+y)]&7),toggle=m[flag];
+    if(nonzero?!toggle:toggle!=0){
         if(nonzero)++m[flag];else --m[flag];
         source_contact_swap(base);
     }else sp+=2;
 }
-SOURCE_INLINE void source_contact_glyph8(void){
-    unsigned short value=(unsigned short)m[0x43bc]<<3;
-    a=0;m[0x43bc]=(unsigned char)value;m[0x43bb]=(unsigned char)(value>>8);
-    c=0;NZ(m[0x43bb]);sp+=2;
-}
-/* $530A-$537D, binary-mode path. Every internal JSR writes its actual
- * two source stack bytes; source RAM/read order remains authoritative. */
 SOURCE_INLINE void source_contact_frame(unsigned short ret){
     m[0x100+sp--]=(unsigned char)(ret>>8);m[0x100+sp--]=(unsigned char)ret;
 }
-SOURCE_INLINE void source_contact_column(unsigned short operand,unsigned short ret,unsigned char blank){
-    unsigned char high,low;unsigned short sum;
-    a=blank?0:m[(unsigned short)(W(4)+y)];NZ(a);m[0x43bc]=a;
-    source_contact_frame(ret);source_contact_glyph8();
+/* Keep every source RAM/JSR write in lane order, including stack aliases.
+ * Only the third ADC's virtual A/C/N/Z/V survive the complete routine.
+ * Earlier flags cannot feed a branch or arithmetic in the next lane. */
+SOURCE_INLINE void source_contact_column(unsigned short operand,unsigned short ret,unsigned char blank,unsigned char publish){
+    unsigned char value=blank?0:m[(unsigned short)(W(4)+y)],high,low;unsigned short sum;
+    m[0x43bc]=value;source_contact_frame(ret);
+    m[0x43bc]=(unsigned char)(value<<3);m[0x43bb]=(unsigned char)(value>>5);sp+=2;
     low=m[0x43bc];high=(unsigned char)(m[0x43bb]-(low<m[0x52]));
-    m[operand]=(unsigned char)(low-m[0x52]);sum=(unsigned short)high+m[0x7c];
-    v=((~(high^m[0x7c])&(high^sum)&128)!=0);c=sum>255;a=(unsigned char)sum;NZ(a);m[operand+1]=a;
+    m[operand]=(unsigned char)(low-m[0x52]);sum=(unsigned short)high+m[0x7c];m[operand+1]=(unsigned char)sum;
+    if(publish){v=((~(high^m[0x7c])&(high^sum)&128)!=0);c=sum>255;a=(unsigned char)sum;NZ(a);}
 }
+/* $530A-$537D, binary-mode path. Table, attributes, glyphs and operand
+ * aliases remain ordered; only unobserved virtual register stores fold. */
+#if defined(__m68k__) && defined(__GNUC__)
+__attribute__((optimize("O2")))
+#endif
 static void source_contact_pointers(void){
-    unsigned char blank;
-    x=m[0x50];a=m[0xe9+x];x=a;NZ(x);source_contact_frame(0x5311);source_contact_table();
-    x=m[0x50];NZ(x);y=m[0xe6+x];NZ(y);source_contact_frame(0x5318);source_contact_attribute(0x4eed,0x4f32);
-    source_contact_column(0x5381,0x5320,0);
-    ++y;NZ(y);source_contact_frame(0x5338);source_contact_attribute(0x4f04,0x4f33);
-    source_contact_column(0x539b,0x5340,0);
-    ++y;c=y>=40;NZ((unsigned char)(y-40));blank=c;
+    unsigned char blank,row=m[0xe9+m[0x50]];
+    source_contact_frame(0x5311);source_contact_table(row);
+    x=m[0x50];y=m[0xe6+x];source_contact_frame(0x5318);source_contact_attribute(0x4eed,0x4f32);
+    source_contact_column(0x5381,0x5320,0,0);
+    ++y;source_contact_frame(0x5338);source_contact_attribute(0x4f04,0x4f33);
+    source_contact_column(0x539b,0x5340,0,0);
+    ++y;blank=(unsigned char)(y>=40);
     if(!blank){source_contact_frame(0x5360);source_contact_attribute(0x4f1b,0x4f34);}
-    source_contact_column(0x53b5,0x5368,blank);sp+=2;
+    source_contact_column(0x53b5,0x5368,blank,1);sp+=2;
 }
 /* The three source lanes stay ordered: a glyph pointer may alias flags
  * written by an earlier lane. CPY overwrites N/Z/C before any observation. */
@@ -641,25 +658,96 @@ static void source_contact_pointers(void){
     if(value){m[0x4e]=value;xx=(unsigned char)(value>>4);m[(flags)+xx]=xx; \
         aa=(unsigned char)(value&15);xx=aa;m[(flags)+xx]=aa;} \
 }while(0)
+typedef struct {
+    unsigned short lane0,lane1,lane2;
+    unsigned char aa,xx,yy,count;
+} SourceContactBatch;
+typedef char SourceContactBatchLayout[(sizeof(SourceContactBatch)==10 &&
+    offsetof(SourceContactBatch,aa)==6 && offsetof(SourceContactBatch,xx)==7 &&
+    offsetof(SourceContactBatch,yy)==8 && offsetof(SourceContactBatch,count)==9)?1:-1];
+#if defined(__m68k__)
+extern void bl_contact_rows8(unsigned char *ram,SourceContactBatch *batch);
+#endif
+static void source_contact_scan_c(SourceContactBatch *batch){
+    unsigned char value,aa=batch->aa,xx=batch->xx,yy=batch->yy,count=batch->count;
+    while(count--){
+        CONTACT_LANE(batch->lane0,0xcae0,0x4eed);
+        CONTACT_LANE(batch->lane1,0xcb00,0x4f04);
+        CONTACT_LANE(batch->lane2,0xcb20,0x4f1b);
+        ++yy;
+    }
+    batch->aa=aa;batch->xx=xx;batch->yy=yy;
+}
+SOURCE_INLINE void source_contact_scan(SourceContactBatch *batch){
+#if defined(__m68k__)
+    if(batch->lane0<=0xff00 && batch->lane1<=0xff00 && batch->lane2<=0xff00 &&
+       (unsigned short)batch->yy+batch->count<=256){bl_contact_rows8(m,batch);return;}
+#endif
+    source_contact_scan_c(batch);
+}
+#if defined(__m68k__) && defined(BL_AUTOTEST) && BL_AUTOTEST
+unsigned short bl_c64_contact_kernel_selftest(void){
+    unsigned short test,i,errors=0;unsigned char before[70],expected[70];
+    SourceContactBatch batch,initial,wanted;
+    for(test=0;test<BL_C64_CONTACT_ROW_CASES;test++){
+        for(i=0;i<320;i++)m[0xcae0+i]=(unsigned char)((test*17+i*13)^(i>>2));
+        for(i=0;i<128;i++){m[0xa000+i]=(unsigned char)(i*37+test*19);m[0xff00+i]=(unsigned char)(i*23+test);}
+        for(i=0;i<96;i++)m[0x10+i]=(unsigned char)(test+i*7);
+        for(i=0;i<69;i++)m[0x4eed+i]=(unsigned char)(i*11+test*3);
+        m[0x4e]=(unsigned char)test;m[0x4eec]=0xa5;m[0x4f32]=0x5a;
+        batch.lane0=0xa000;batch.lane1=0xa020;batch.lane2=0xa040;
+        batch.yy=(unsigned char)(((test>>3)&3)*8);batch.count=(unsigned char)(1+(test&7));
+        if(test>=32 && test<64){batch.lane0=0x4eed;batch.lane1=0x4f04;batch.lane2=0x4f1b;}
+        if(test>=64 && test<96){batch.lane0=0x10;batch.lane1=(unsigned short)(0x4e - batch.yy);batch.lane2=0x4eed;}
+        if(test>=96){batch.yy=(unsigned char)(248+(test&7));batch.count=(unsigned char)(256-batch.yy);
+            batch.lane0=0xff00;batch.lane1=0x4f04;batch.lane2=0x4eed;
+            for(i=128;i<256;i++)m[0xff00+i]=(unsigned char)(i*31+test);}
+        if(!test)batch.count=0;
+        batch.aa=(unsigned char)(test*3);batch.xx=(unsigned char)(test*7);initial=batch;
+        before[0]=m[0x4e];for(i=0;i<69;i++)before[i+1]=m[0x4eed+i];
+        source_contact_scan_c(&batch);wanted=batch;
+        expected[0]=m[0x4e];for(i=0;i<69;i++)expected[i+1]=m[0x4eed+i];
+        m[0x4e]=before[0];for(i=0;i<69;i++)m[0x4eed+i]=before[i+1];batch=initial;
+        bl_contact_rows8(m,&batch);
+        for(i=0;i<sizeof(batch);i++)if(((unsigned char*)&batch)[i]!=((unsigned char*)&wanted)[i])++errors;
+        if(m[0x4e]!=expected[0] || m[0x4eec]!=0xa5 || m[0x4f32]!=0x5a)++errors;
+        for(i=0;i<69;i++)if(m[0x4eed+i]!=expected[i+1])++errors;
+    }
+    /* One nonzero byte in each original class slot, plus all-zero. */
+    for(test=0;test<BL_C64_CONTACT_CLASS_CASES;test++){
+        unsigned char wanted_mask;
+        for(i=0;i<69;i++)m[0x4eed+i]=0;
+        if(test<69)m[0x4eed+test]=1;
+        m[0x4eec]=m[0x4f32]=m[0x4f3b]=255;
+        wanted_mask=source_contact_summary_c();
+        if(bl_contact_classes4(m)!=wanted_mask)++errors;
+    }
+    return errors;
+}
+#endif
 /* Virtual registers remain local until a source helper, service or return. */
 #if defined(__m68k__) && defined(__GNUC__)
 __attribute__((optimize("O2")))
 #endif
 static unsigned char source_contact_rows_inner(void){
-    unsigned char value,aa=a,xx=x,yy=m[0x52],cc=c,zz=(unsigned char)(yy==0),nn=(unsigned char)((yy&128)!=0);
-    unsigned short lane0=W(0x5381),lane1=W(0x539b),lane2=W(0x53b5);
+    unsigned char count,distance,aa=a,xx=x,yy=m[0x52],cc=c,zz=(unsigned char)(yy==0),nn=(unsigned char)((yy&128)!=0);
+    unsigned short lane0=W(0x5381),lane1=W(0x539b),lane2=W(0x53b5);SourceContactBatch batch;
     for(;;){
         if(actor_world_enabled && io_service && !(yy&7)){
             a=aa;x=xx;y=yy;c=cc;z=zz;n=nn;io_service();
             aa=a;xx=x;yy=y;cc=c;zz=z;nn=n;
             lane0=W(0x5381);lane1=W(0x539b);lane2=W(0x53b5);
         }
-        DETAIL_BEGIN(BL_PERF_CONTACT_LANES);
-        CONTACT_LANE(lane0,0xcae0,0x4eed);
-        CONTACT_LANE(lane1,0xcb00,0x4f04);
-        CONTACT_LANE(lane2,0xcb20,0x4f1b);
-        DETAIL_END(BL_PERF_CONTACT_LANES);
-        ++yy;
+        /* No pixel write can change $4F38/$4F39/$4F3A. Stop at the
+         * earliest body/foot/part boundary or next original8-row service. */
+        count=(unsigned char)(8-(yy&7));
+        distance=(unsigned char)(m[0x4f38]-yy);if(distance && distance<count)count=distance;
+        distance=(unsigned char)(m[0x4f39]-yy);if(distance && distance<count)count=distance;
+        distance=(unsigned char)(m[0x4f3a]-yy);if(distance && distance<count)count=distance;
+        batch.lane0=lane0;batch.lane1=lane1;batch.lane2=lane2;
+        batch.aa=aa;batch.xx=xx;batch.yy=yy;batch.count=count;
+        DETAIL_BEGIN(BL_PERF_CONTACT_LANES);source_contact_scan(&batch);DETAIL_END(BL_PERF_CONTACT_LANES);
+        aa=batch.aa;xx=batch.xx;yy=batch.yy;
         if(yy==m[0x4f38]){
             a=aa;x=xx;y=yy;c=1;z=1;n=0;
             for(x=2;;--x){a=m[0x4f32 + x];m[0x4f35 + x]=a;if(!x)break;}
@@ -882,9 +970,9 @@ static void source_vic_cache(unsigned char sprite,unsigned short pointer,unsigne
 __attribute__((optimize("O2")))
 #endif
 static void source_vic_latch(void){
-    unsigned char i,j,row,prepared=0,candidates=0,pairs[8]={0,0,0,0,0,0,0,0};
+    unsigned char i,j,row,prepared=0,candidates=0;
     unsigned char active=m[0xd015],multi=m[0xd01c],wide=m[0xd01d],tall=m[0xd017],bits=0;
-    unsigned char same=(unsigned char)(vic_collision_valid && vic_last_active==active && vic_last_tall==tall);
+    unsigned char same=(unsigned char)(vic_collision_valid && vic_last_active==active && vic_last_tall==tall && vic_last_wide==wide);
     unsigned short bank=(unsigned short)(((~m[0xdd00])&3)<<14),matrix,pointer[8],sx[8],sy[8],height[8],width[8],top,bottom,dy;
     unsigned long ah,al,bh,bl;short dx;
     matrix=(unsigned short)(bank+((unsigned short)(m[0xd018]>>4)<<10));
@@ -898,13 +986,21 @@ static void source_vic_latch(void){
     /* A nonoverlapping bounding rectangle cannot set a VIC collision bit,
      * whatever its 63 bitmap bytes contain. Keep all active positions so the
      * result cache is invalidated when a sprite later moves into range. */
-    for(i=0;i<7;i++)if(active&(1<<i))for(j=(unsigned char)(i+1);j<8;j++)if(active&(1<<j)){
-        if(sx[i]+width[i]<=sx[j] || sx[j]+width[j]<=sx[i])continue;
-        top=sy[i]>sy[j]?sy[i]:sy[j];bottom=sy[i]+height[i]<sy[j]+height[j]?sy[i]+height[i]:sy[j]+height[j];
-        if(top>=bottom)continue;
-        pairs[i]|=(unsigned char)(1<<j);candidates|=(unsigned char)((1<<i)|(1<<j));
+    /* Geometry depends only on active bits, both sizes and positions.
+     * Reuse its pair set only on that exact key. Bitmap bytes, bank and
+     * pointers are still validated below on every candidate field. */
+    if(same)candidates=vic_last_candidates;
+    else{
+        for(i=0;i<8;i++)vic_last_pairs[i]=0;
+        for(i=0;i<7;i++)if(active&(1<<i))for(j=(unsigned char)(i+1);j<8;j++)if(active&(1<<j)){
+            if(sx[i]+width[i]<=sx[j] || sx[j]+width[j]<=sx[i])continue;
+            top=sy[i]>sy[j]?sy[i]:sy[j];bottom=sy[i]+height[i]<sy[j]+height[j]?sy[i]+height[i]:sy[j]+height[j];
+            if(top>=bottom)continue;
+            vic_last_pairs[i]|=(unsigned char)(1<<j);candidates|=(unsigned char)((1<<i)|(1<<j));
+        }
+        vic_last_candidates=candidates;
     }
-    if(!candidates){vic_last_bits=0;vic_last_active=active;vic_last_tall=tall;vic_collision_valid=1;return;}
+    if(!candidates){vic_last_bits=0;vic_last_active=active;vic_last_tall=tall;vic_last_wide=wide;vic_collision_valid=1;return;}
     for(i=0;i<8;i++)if(candidates&(1<<i)){
         /* Compare effective bitmap bytes, not source write counters. A
          * noncandidate sprite is checked when it next becomes a candidate. */
@@ -914,7 +1010,7 @@ static void source_vic_latch(void){
     /* $D01E is an accumulating latch. A cached overlap must be ORed back
      * after every field, even if source code read/cleared it in between. */
     if(same){m[0xd01e]|=vic_last_bits;return;}
-    for(i=0;i<7;i++)if(pairs[i])for(j=(unsigned char)(i+1);j<8;j++)if(pairs[i]&(1<<j)){
+    for(i=0;i<7;i++)if(vic_last_pairs[i])for(j=(unsigned char)(i+1);j<8;j++)if(vic_last_pairs[i]&(1<<j)){
         top=sy[i]>sy[j]?sy[i]:sy[j];bottom=sy[i]+height[i]<sy[j]+height[j]?sy[i]+height[i]:sy[j]+height[j];
         if(!(prepared&(1<<i))){source_vic_cache(i,pointer[i],(unsigned char)(multi&(1<<i)),(unsigned char)(wide&(1<<i)));prepared|=(unsigned char)(1<<i);}
         if(!(prepared&(1<<j))){source_vic_cache(j,pointer[j],(unsigned char)(multi&(1<<j)),(unsigned char)(wide&(1<<j)));prepared|=(unsigned char)(1<<j);}
@@ -927,7 +1023,7 @@ static void source_vic_latch(void){
             if((ah&bh)||(al&bl)){bits|=(unsigned char)((1<<i)|(1<<j));break;}
         }
     }
-    vic_last_bits=bits;vic_last_active=active;vic_last_tall=tall;vic_collision_valid=1;m[0xd01e]|=bits;
+    vic_last_bits=bits;vic_last_active=active;vic_last_tall=tall;vic_last_wide=wide;vic_collision_valid=1;m[0xd01e]|=bits;
 }
 static void source_actor_field(void){
     unsigned char saved[10]={a,x,y,c,z,n,v,d,sp,actor_i};

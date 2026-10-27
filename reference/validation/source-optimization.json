@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "status": "measured_native_contact_objects_score_realtime_open",
+  "status": "measured_contact_kernels_and_geometry_realtime_open",
   "method": "Separate native actual-PAL source-contact/VIC/presentation pilots; idle-input invincible room1, historical pairs preserved",
   "first_pilot": {
     "old_active_fields": 4690,
@@ -64,6 +64,26 @@
     "new_game_mean_lines": 111.011,
     "old_objects_mean_lines": 111.083,
     "new_objects_mean_lines": 62.619
+  },
+  "contact_kernel_round": {
+    "checkpoint": "3b90e04",
+    "source_steps": 360,
+    "before_outer_loops": 368,
+    "after_outer_loops": 442,
+    "old_active_fields": 1689,
+    "new_active_fields": 1614,
+    "measured_elapsed_reduction_percent": 4.44,
+    "before_drawn_images": 326,
+    "after_drawn_images": 352,
+    "old_audio_missed": 21,
+    "new_audio_missed": 29,
+    "old_contact_mean": 184.847,
+    "new_contact_mean": 161.819,
+    "old_row_mean": 22.264,
+    "new_row_mean": 16.954,
+    "old_vic_mean": 35.266,
+    "new_vic_mean": 28.709,
+    "native_kernel_cases": 198
   },
   "edition_verified": false,
   "natural_playthrough": false,
@@ -343,6 +363,138 @@
       "sha256": "d7219bb9925a4cf43fbf842f6f72112ae89c595a99a6ee772d719bd4bc4f8669"
     },
     {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-before-fixed-timing/identity.json",
+      "sha256": "5af6d2d87891ccbee9d34cb3dd778fdc68b5a3012690a4f7cb1c5c57571bb699"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-before-fixed-timing/native.txt",
+      "sha256": "de4789f1e8f882fef05d4a29f254f72dc0859bbf3fb399df0ff2d5e5506030cf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-before-fixed-timing/native.json",
+      "sha256": "6c767a8913347fbc62773e2e29ba062e961b36a5882c73cd1fa33670ee858e28"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-before-fixed-profile/identity.json",
+      "sha256": "feb9b4295a69913069d7aae177d87763226142b83f483a6541cf554f2bdc8e82"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-before-fixed-profile/native.txt",
+      "sha256": "a8895b4ed222af3704a04e8d3016b21e7aa087fe762e5804396363bf0c957a60"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-before-fixed-profile/native.json",
+      "sha256": "5c8a60046861b3c1677bead928b7c5f0e8f97d7f59b9b17508f6dbbedbe2f2ca"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-o2-fixed-timing/identity.json",
+      "sha256": "9ce7f24354b5181744d5015cbde77d496509a8540d0feed8c10923614bdce400"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-o2-fixed-timing/native.txt",
+      "sha256": "91791afbc7a814bdfa7589201cb15713e3be862343eaf76f210b19c720285e6f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-o2-fixed-timing/native.json",
+      "sha256": "3f6d856ff6d6285fe2f838ddb1574c70252e4a3f39eb94fb9474f8115e6e06d9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-o2-fixed-profile/identity.json",
+      "sha256": "65fcb41255143a2a5e5e67e8d33d368c06062a54c0e3b34a25918f0b7288eb63"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-o2-fixed-profile/native.txt",
+      "sha256": "325ff0618862d9ae51c8ef1b489a0580e4811351b35824f75aebe137254b32dc"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-o2-fixed-profile/native.json",
+      "sha256": "b92b7a0edf8bf9d76fc40fa9bdc5286e17dd49de73336da7463b8e526809644e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-registers-fixed-timing/identity.json",
+      "sha256": "a917d1adab067dd100ab71c94861b02c96e7a0e6a36ae4f314c601152dca9e81"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-registers-fixed-timing/native.txt",
+      "sha256": "3a515bff93a4d93619e5bdeb0c81c3d6dfc2f06921c19ffc90e8e14b104f52ca"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-registers-fixed-timing/native.json",
+      "sha256": "2ae7a7d53942c7b362e02dcdabc62f2afd21593bb375e536a44e95234bb68cee"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-registers-fixed-profile/identity.json",
+      "sha256": "ac9054b82a9bfc3c298c88642eeefb9c4303c078e3045e5fb179baa36550c47d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-registers-fixed-profile/native.txt",
+      "sha256": "14f5e50b62802ab36046d3b17a3e3ff9a14d41e4853a692e9df7603c2841d342"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-helper-registers-fixed-profile/native.json",
+      "sha256": "8416b58323507ef5d9ef7b10f5b096ed3492e2c834890a523d95ab66576a1c1e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-vic-geometry-fixed-timing/identity.json",
+      "sha256": "7dac8c1ae5c9f31456d7c41b49249779a47b5c7c4eae4d66b343e68179039171"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-vic-geometry-fixed-timing/native.txt",
+      "sha256": "76e5343ab010e28a723f7f8367bdf47ef55968a56e735a1f3c903078fffb7317"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-vic-geometry-fixed-timing/native.json",
+      "sha256": "a19ed1e8bf3ed9faaee07e86b93cb98d4853339063181adf3cb3ad86b7852b51"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-rows8-native-fixed-timing/identity.json",
+      "sha256": "4f68851ecce4f89bdd4afd5c5ad1d9b9fc1cb4ff15c1af75054b31a50bf0bfd6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-rows8-native-fixed-timing/native.txt",
+      "sha256": "e3ad000c855329863c08d178284db80b3ec410e2f2249651941c751db7c094d2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-rows8-native-fixed-timing/native.json",
+      "sha256": "f20b399bacb43f4148861c9473dab10445837ce85b5f3c494a70c47f9a33de19"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-rows8-native-fixed-profile/identity.json",
+      "sha256": "97b333efdb6d3b09ecc41729185599d81d6723cf3a0e480144860ae089f99808"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-rows8-native-fixed-profile/native.txt",
+      "sha256": "e593dc279d9fbe75187938f7ee63d7332f4b7a3a85c6a987e7664de6e6a83dfd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-rows8-native-fixed-profile/native.json",
+      "sha256": "d9ee1217998843fbddbc3491895280d67d56d3e4a856db2d1e78a10925a426d5"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-class-groups-fixed-timing/identity.json",
+      "sha256": "8fa2d8b5d3dfa83cbb2c5c4e9765c74a45432da3257ac012f1d8039fc42aaa40"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-class-groups-fixed-timing/native.txt",
+      "sha256": "3ca2a5e516aac82dc1f9471bcc20ade33f1d9d525a157cd320b5dbdd5594d13b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-class-groups-fixed-timing/native.json",
+      "sha256": "2e0a65ffa670e04a336dd127c0558fec4712c1be9883a6ca742fb01640f050ef"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-class-groups-fixed-profile/identity.json",
+      "sha256": "c4872b79ea5b05df517903fb2f2da5347894d8a1eb9d4b2ee75f96e782e7700b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-class-groups-fixed-profile/native.txt",
+      "sha256": "e740261d68ff2c465d5c3e8bbabe3d14ef7a8dc4cdfc084817d354d75a38453b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-class-groups-fixed-profile/native.json",
+      "sha256": "a1d2125e5049cc4bab99345f00851228c0b6d6a76f74b1f84102406896bc6291"
+    },
+    {
       "path": "reference/analysis/optimization-2026-10-27/contact-baseline/manifest.json",
       "sha256": "b1e45a4dbb17235fb34def8438f9ce0d8bd5d1a154794090afeb28c4a7e71eb7"
     },
@@ -364,23 +516,23 @@
     },
     {
       "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
-      "sha256": "cb2d774b49e49f2a1d6068ba0d7258b121f0d59289488430a4e6f9ba24229fdf"
+      "sha256": "0cce41ecde6917ec110dc8b90cd57d3b94433458520f45c83411efed651f536c"
     },
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "7ce6141283d388a41d5c95e88e87a44909cc1b70edc6edeee773a7508bdd3123"
+      "sha256": "30e07f7f3b4688fea5d35911c7055d6345ce8dcb5c21d7c5947805b1150982ab"
     },
     {
       "path": "reference/validation/source-world-native.json",
-      "sha256": "08ed7c0fe0a672908c3dd333c12d1c18865cac89dc60ae3c7b67a7978e3808e8"
+      "sha256": "bf019e33772833e067b31ff3ffe9015e5dcb37c600325bf9f0a254b8ba8927e5"
     },
     {
       "path": "reference/validation/source-vic-host.json",
-      "sha256": "b8af1dd9a92b5185c0181fedb523eee5c4ec1b235519de276ce7e34f0ac0bc28"
+      "sha256": "a6d0c31a73a69dd5878678bd4a8a2a66b324a90ef0464a4441bced9e5bc9a053"
     },
     {
       "path": "reference/validation/source-contact-host.json",
-      "sha256": "b74bdbb5500a72556fa827779c0748291076d2c6f98fc6d07255a60aaa691d68"
+      "sha256": "42350907c5df33fe59752bcd6a0ab528bb4cdbe5f97d1e35dc585194d004c598"
     },
     {
       "path": "docs/CONTACT_OPTIMIZATION.md",
@@ -392,15 +544,23 @@
     },
     {
       "path": "docs/NATIVE_ENGINE_OPTIMIZATION.md",
-      "sha256": "00fa40aafb88d929ec3000febf23eea16addf5cf98417ab247b1f9aaa16341af"
+      "sha256": "e2502afb9c30e9d8f2705db0687f38289e7355ca5e33855c6f9c1ecfb043fc8b"
+    },
+    {
+      "path": "docs/CONTACT_KERNEL_OPTIMIZATION.md",
+      "sha256": "eb964bbb238d5bfc3d59f78f235ee8929fa0e2379aaecbe4ada438356b698e85"
+    },
+    {
+      "path": "tools/build_contact_class_kernel.py",
+      "sha256": "4818bc96edf6a4ac741e6a54fd2b50fa2ac8d137db254cac1e5499483f05b153"
     },
     {
       "path": "reference/validation/source-object-host.json",
-      "sha256": "e98c4bb3839d6cd22bc89f90ff763c996d93c123f60fd906c126fab39f3c9bb9"
+      "sha256": "08a6630f984026ea604afd0702e0c731c817ecf937301576ceeb957a633d92f5"
     },
     {
       "path": "reference/validation/source-score-host.json",
-      "sha256": "030519c0940f3dc3970562ae799343b045f193276bc778f12437e8e2946bd6f7"
+      "sha256": "08943f0539048088160e6e413767b30b1dda7c376ccc9235fe65838f8a62278c"
     },
     {
       "path": "core/source_perf.h",
@@ -420,7 +580,7 @@
     },
     {
       "path": "reference/validation/source-visibility-host.json",
-      "sha256": "a87c0c7d176900d1c99e8fe4e31dee5bb3d7809e3b997300e34ba490e8d19fe9"
+      "sha256": "01d694a17f37526af2bcd65fbb7248b07a92e514121f2c8750a2f57138bd1019"
     },
     {
       "path": "reference/analysis/optimization-2026-10-27/actor-o2-candidate-timing/rejected.json",
@@ -428,7 +588,7 @@
     },
     {
       "path": "tools/verify_source_optimization.py",
-      "sha256": "bf5cd938cdbea6ce3cf2cb22d8822bccbc694fb56b2b182594026b64fa62a81e"
+      "sha256": "7fe5ee778030e56e1af0e247fe91ae061daa2c3ddeb07f7b5cc08ae17b8f2e10"
     },
     {
       "path": "tools/summarize_source_performance.py",
@@ -436,7 +596,7 @@
     },
     {
       "path": "test-source-performance.ps1",
-      "sha256": "172ed294cbecbbfe2b5d493c030fc1924512a6a8168595e9049cbd0e7940032d"
+      "sha256": "10aa8f897641cd2df9fc62a7acaf54bce28561498e2b07a1482aa5bc95022441"
     }
   ],
   "limits": [

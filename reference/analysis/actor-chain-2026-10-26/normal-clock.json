@@ -5,13 +5,13 @@
   "method": "Owned normal68000 run: actual PAL clock stamp versus source87/88 room clock; debugger reads, no source-memory injection",
   "binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "ed6fc7f71bcb4a483f5831043527ab6a5aba298b6ce101835e45c2c2705ef4bb"
+    "sha256": "664212239f6e9ee102a0ef78303390dc1baab565223b9fae96dd52eadec0c195"
   },
   "samples": [
     {
-      "clock_before": 3915,
-      "clock_after": 3916,
-      "age": 2371,
+      "clock_before": 9272,
+      "clock_after": 9277,
+      "age": 6215,
       "epoch": 1,
       "active_flags": [
         1,
@@ -24,14 +24,14 @@
         0
       ],
       "spawn_events": 2,
-      "steps": 517,
+      "steps": 1405,
       "fault": 0,
       "waiting": 0
     },
     {
-      "clock_before": 3997,
-      "clock_after": 4002,
-      "age": 2454,
+      "clock_before": 9398,
+      "clock_after": 9402,
+      "age": 6340,
       "epoch": 1,
       "active_flags": [
         1,
@@ -44,14 +44,14 @@
         22
       ],
       "spawn_events": 2,
-      "steps": 535,
+      "steps": 1432,
       "fault": 0,
       "waiting": 0
     },
     {
-      "clock_before": 4111,
-      "clock_after": 4116,
-      "age": 2568,
+      "clock_before": 9521,
+      "clock_after": 9526,
+      "age": 6465,
       "epoch": 1,
       "active_flags": [
         1,
@@ -61,52 +61,52 @@
       "actor_states": [
         0,
         0,
+        22
+      ],
+      "spawn_events": 2,
+      "steps": 1458,
+      "fault": 0,
+      "waiting": 0
+    },
+    {
+      "clock_before": 9645,
+      "clock_after": 9651,
+      "age": 6589,
+      "epoch": 1,
+      "active_flags": [
+        1,
+        129,
+        65
+      ],
+      "actor_states": [
+        0,
+        17,
         0
       ],
       "spawn_events": 2,
-      "steps": 557,
-      "fault": 0,
-      "waiting": 0
-    },
-    {
-      "clock_before": 4235,
-      "clock_after": 4240,
-      "age": 2693,
-      "epoch": 1,
-      "active_flags": [
-        1,
-        129,
-        65
-      ],
-      "actor_states": [
-        0,
-        0,
-        22
-      ],
-      "spawn_events": 2,
-      "steps": 581,
+      "steps": 1484,
       "fault": 0,
       "waiting": 0
     }
   ],
   "pairs": [
     {
-      "source_fields": 83,
-      "clock_min": 81,
-      "clock_max": 87,
-      "source_steps": 18
-    },
-    {
-      "source_fields": 114,
-      "clock_min": 109,
-      "clock_max": 119,
-      "source_steps": 22
+      "source_fields": 125,
+      "clock_min": 121,
+      "clock_max": 130,
+      "source_steps": 27
     },
     {
       "source_fields": 125,
       "clock_min": 119,
-      "clock_max": 129,
-      "source_steps": 24
+      "clock_max": 128,
+      "source_steps": 26
+    },
+    {
+      "source_fields": 124,
+      "clock_min": 119,
+      "clock_max": 130,
+      "source_steps": 26
     }
   ]
 }

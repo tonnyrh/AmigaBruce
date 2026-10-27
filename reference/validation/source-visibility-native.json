@@ -2,7 +2,7 @@
   "status": "passed_owned_native_visibility_lifecycle",
   "binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "ed6fc7f71bcb4a483f5831043527ab6a5aba298b6ce101835e45c2c2705ef4bb"
+    "sha256": "664212239f6e9ee102a0ef78303390dc1baab565223b9fae96dd52eadec0c195"
   },
   "controlled_injection": true,
   "natural_playthrough": false,
@@ -11,27 +11,27 @@
   "artifacts": [
     {
       "path": "reference/analysis/session-walls-2026-10-25/yamo-visible.bpl",
-      "sha256": "3a4da6204640ef65f20fd1ab35706a9337ed557031e7fa0d43ded10faf38f734"
+      "sha256": "fbe13606f9bfeb40818deb6236a8a10cedd95e04410c1dc15c442803de8a521c"
     },
     {
       "path": "docs/images/session-yamo-visible.png",
-      "sha256": "d67187316240b91fbca371e47cb2ce665744c9a54bd5bac691d6fb7e8485a84a"
+      "sha256": "3ca0997e0e12461493410e1b9423b2347c973dca358ac3a0366fd12259519225"
     },
     {
       "path": "reference/analysis/session-walls-2026-10-25/yamo-hidden.bpl",
-      "sha256": "719b4b30ef66d99995342e5028f9eaa3f442f17b8054bc6937c66af0e71c6886"
+      "sha256": "a8f7ff5a33292738d8893f6dedc40c4769653cbd228a3d0eb8169242f03d791a"
     },
     {
       "path": "docs/images/session-yamo-hidden.png",
-      "sha256": "272d1fafafb1c6512a732b1cb491668ad20f1ec5158cecebd3aa81c3fcbdb61e"
+      "sha256": "a66fc8c7130d88e25369336c134ed235c976ce0639117571dc86e548e8b69ec6"
     },
     {
       "path": "reference/analysis/session-walls-2026-10-25/yamo-returned.bpl",
-      "sha256": "3407b911c819dc5818197ddb77c23e4e5ef5a942094297dd5d4c7904edfa7fc4"
+      "sha256": "c1ec5c47d40096e9328f81666ac5cc729022f9e5747fa8fc63c893c081feed12"
     },
     {
       "path": "docs/images/session-yamo-returned.png",
-      "sha256": "ca8df9f0dbf883ae3bdee54d773a69f94a999a8a573133277bf5071bb6c59ad9"
+      "sha256": "79c9545ab8d32fa9154b9ee9a5660e0aff053ec1db8b82e6b19d511674502a29"
     }
   ],
   "source_files": [
@@ -45,7 +45,7 @@
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "765d1c55eb7ac22a3cdfdeb74659ef3ae66261d83b15992c5e964edf1ce0c6e5"
+      "sha256": "ca0621136aeb41e621479b48e1b687cfaf33b25bd55df8b08793bc6bc7d920ac"
     }
   ],
   "method": "Injected active bit, source wait and original component enable masks; actual normal draw loop and both buffer dirty rectangles",

@@ -4,6 +4,7 @@ from pathlib import Path
 from verify_source_world_delivery import verify
 ROOT=Path(__file__).resolve().parents[1]
 FOLDER='reference/analysis/optimization-2026-10-27'
+HELPER_STAGES=['contact-helper-before-fixed-timing', 'contact-helper-before-fixed-profile', 'contact-helper-o2-fixed-timing', 'contact-helper-o2-fixed-profile', 'contact-helper-registers-fixed-timing', 'contact-helper-registers-fixed-profile', 'contact-vic-geometry-fixed-timing', 'contact-rows8-native-fixed-timing', 'contact-rows8-native-fixed-profile', 'contact-class-groups-fixed-timing', 'contact-class-groups-fixed-profile']
 def read(path):return json.loads((ROOT/path).read_text(encoding='utf-8-sig'))
 def item(path):return dict(path=path,sha256=hashlib.sha256((ROOT/path).read_bytes()).hexdigest())
 def check(entry,path=None):assert item(path or entry['path'])['sha256']==entry['sha256'],path or entry['path']
@@ -17,14 +18,23 @@ def main():
                   'contact-before-profile','contact-before-timing','contact-after-profile','contact-after-timing','present-after-timing',
                   'contact-breakdown-profile','vic-final-timing','visibility-final-all-timing','visibility-final-none-timing','rows-before-profile','rows-after-profile','rows-local-o2-timing',
                   'native-driver-object-final-timing','native-score-final-timing','native-score-final-profile',
-                  'native-object-pass-final-timing','native-object-pass-final-profile','native-object-pass-equal-steps-timing']:
+                  'native-object-pass-final-timing','native-object-pass-final-profile','native-object-pass-equal-steps-timing']+HELPER_STAGES:
         folder=FOLDER+'/'+label;ident=read(folder+'/identity.json');identities[label]=ident
         for binary in ident['build']:check(binary,folder+'/'+Path(binary['path']).name)
         for key in ['c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors']:assert ident['run'][key]=='0'
         if label in ('contact-breakdown-profile','vic-final-timing'):assert ident['run']['vic_compare_errors']=='0'
         expected_frames='370' if label=='native-object-pass-equal-steps-timing' else '360'
         expected_steps='350' if label=='native-object-pass-final-timing' else '360'
-        assert ident['run']['frames']==expected_frames and ident['run']['source_world_steps']==expected_steps
+        if label in HELPER_STAGES:
+            assert ident['source_steps_target']==360 and ident['outer_loop_limit']==1200
+            assert ident['run']['source_perf_steps']=='360' and ident['run']['source_world_steps']=='360'
+            assert 0<int(ident['run']['frames'])<1200 and ident['run']['vic_compare_errors']=='0'
+            assert int(ident['run']['drawn_image_fields'])+int(ident['run']['held_image_fields'])==int(ident['run']['frames'])
+            assert int(ident['run']['max_held_image_streak'])<=3 and int(ident['run']['chip_largest_loaded'])>=49152
+            cases=198 if label.startswith('contact-class-groups-') else 128 if label.startswith('contact-rows8-') else 0
+            if cases:assert ident['run']['contact_kernel_cases']==str(cases) and ident['run']['contact_kernel_errors']=='0'
+        else:
+            assert ident['run']['frames']==expected_frames and ident['run']['source_world_steps']==expected_steps
         if label=='native-object-pass-final-timing':
             rejected=folder+'/rejected-comparison.json';paths.append(rejected)
             assert read(rejected)['status']=='excluded_unequal_source_step_comparison'
@@ -89,7 +99,7 @@ def main():
     native=identities['native-object-pass-equal-steps-timing'];nr=native['run']
     driver=identities['native-driver-object-final-timing']['run']
     score=identities['native-score-final-timing']['run']
-    for source_file in native['source_files']:check(source_file)
+    # Historical native-engine source is superseded by the fixed-step kernel stage below.
     assert native['source_files']==identities['native-object-pass-final-profile']['source_files']
     assert int(driver['source_clock_elapsed'])<int(rr['source_clock_elapsed'])
     assert int(score['source_clock_elapsed'])<int(driver['source_clock_elapsed'])
@@ -103,6 +113,19 @@ def main():
     na={x['name']:x for x in reports['native-object-pass-final-profile']['profile']}
     assert na['game']['average_exclusive']<nb['game']['average_exclusive']
     assert na['objects']['average_exclusive']<nb['objects']['average_exclusive']
+    helper=identities['contact-class-groups-fixed-timing'];hr=helper['run']
+    helper_before=identities['contact-helper-before-fixed-timing'];hbr=helper_before['run']
+    for source_file in helper['source_files']:check(source_file)
+    assert helper['source_files']==identities['contact-class-groups-fixed-profile']['source_files']
+    assert int(hr['source_clock_elapsed'])<int(hbr['source_clock_elapsed'])
+    def stage_sources(label):return {x['path']:x['sha256'] for x in identities[label]['source_files']}
+    hs0=stage_sources('contact-helper-before-fixed-timing');hs1=stage_sources('contact-helper-o2-fixed-timing')
+    assert hs0.keys()==hs1.keys() and [k for k in hs0 if hs0[k]!=hs1[k]]==['core/c64_rooms.c']
+    hp0={x['name']:x for x in reports['contact-helper-before-fixed-profile']['profile']}
+    hp1={x['name']:x for x in reports['contact-class-groups-fixed-profile']['profile']}
+    assert hp1['rows']['average_exclusive']<hp0['rows']['average_exclusive']
+    assert hp1['vic']['average_exclusive']<hp0['vic']['average_exclusive']
+    assert hp1['contact']['average_exclusive']<hp0['contact']['average_exclusive']
     snapshot=FOLDER+'/rows-baseline'
     for entry in read(snapshot+'/manifest.json')['files']:check(entry,snapshot+'/'+entry['path'])
     paths.append(snapshot+'/manifest.json')
@@ -110,14 +133,14 @@ def main():
         'reference/validation/source-world-delivery.json','reference/validation/source-world-native.json',
         'reference/validation/source-vic-host.json','reference/validation/source-contact-host.json',
         'docs/CONTACT_OPTIMIZATION.md','docs/VIC_NATIVE_OPTIMIZATION.md',
-        'docs/NATIVE_ENGINE_OPTIMIZATION.md','reference/validation/source-object-host.json','reference/validation/source-score-host.json',
+        'docs/NATIVE_ENGINE_OPTIMIZATION.md','docs/CONTACT_KERNEL_OPTIMIZATION.md','tools/build_contact_class_kernel.py','reference/validation/source-object-host.json','reference/validation/source-score-host.json',
         'core/source_perf.h','amiga/vic_compare.s','docs/YAMO_VISIBILITY_PERFORMANCE.md','docs/CONTACT_REGISTERS_OPTIMIZATION.md',
         'reference/validation/source-visibility-host.json',
         FOLDER+'/actor-o2-candidate-timing/rejected.json',
         'tools/verify_source_optimization.py','tools/summarize_source_performance.py','test-source-performance.ps1']
     path='reference/validation/source-optimization.json'
     if a.record:
-        report=dict(date='2026-10-27',status='measured_native_contact_objects_score_realtime_open',
+        report=dict(date='2026-10-27',status='measured_contact_kernels_and_geometry_realtime_open',
             method='Separate native actual-PAL source-contact/VIC/presentation pilots; idle-input invincible room1, historical pairs preserved',
             first_pilot=dict(old_active_fields=old,new_active_fields=new,active_time_reduction_percent=round((old-new)*100/old,3),
                 old_vic_mean_lines=old_vic['average_exclusive'],new_vic_mean_lines=new_vic['average_exclusive']),
@@ -144,6 +167,15 @@ def main():
                 drawn_images=int(nr['drawn_image_fields']),held_images=int(nr['held_image_fields']),
                 old_game_mean_lines=nb['game']['average_exclusive'],new_game_mean_lines=na['game']['average_exclusive'],
                 old_objects_mean_lines=nb['objects']['average_exclusive'],new_objects_mean_lines=na['objects']['average_exclusive']),
+            contact_kernel_round=dict(checkpoint='3b90e04',source_steps=360,
+                before_outer_loops=int(hbr['frames']),after_outer_loops=int(hr['frames']),
+                old_active_fields=int(hbr['source_clock_elapsed']),new_active_fields=int(hr['source_clock_elapsed']),
+                measured_elapsed_reduction_percent=round((int(hbr['source_clock_elapsed'])-int(hr['source_clock_elapsed']))*100/int(hbr['source_clock_elapsed']),3),
+                before_drawn_images=int(hbr['drawn_image_fields']),after_drawn_images=int(hr['drawn_image_fields']),
+                old_audio_missed=int(hbr['source_clock_missed']),new_audio_missed=int(hr['source_clock_missed']),
+                old_contact_mean=hp0['contact']['average_exclusive'],new_contact_mean=hp1['contact']['average_exclusive'],
+                old_row_mean=hp0['rows']['average_exclusive'],new_row_mean=hp1['rows']['average_exclusive'],
+                old_vic_mean=hp0['vic']['average_exclusive'],new_vic_mean=hp1['vic']['average_exclusive'],native_kernel_cases=198),
             edition_verified=False,natural_playthrough=False,all_rooms_profiled=False,realtime_accepted=False,
             artifacts=[item(x) for x in paths],
             limits=['Single benchmark pair; source-field/input phases differ as actual execution time changes',
@@ -158,5 +190,6 @@ def main():
         assert report['visibility_contact_round']['new_active_fields']==int(lr['source_clock_elapsed'])
         assert report['local_contact_registers']['new_active_fields']==int(rr['source_clock_elapsed'])
         assert report['native_engine_round']['new_active_fields']==int(nr['source_clock_elapsed'])
-    print(f'PASS native motor round: {rr["source_clock_elapsed"]}->{nr["source_clock_elapsed"]} measured PAL fields; real-time remains open')
+        assert report['contact_kernel_round']['new_active_fields']==int(hr['source_clock_elapsed'])
+    print(f'PASS contact kernels: {hbr["source_clock_elapsed"]}->{hr["source_clock_elapsed"]} measured PAL fields/360 source steps; real-time remains open')
 if __name__=='__main__':main()

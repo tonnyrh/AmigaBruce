@@ -284,3 +284,5 @@ Deretter tas neste største kostnad. Ingen bred omskriving eller ny kunst/
 lydproduksjon starter før denne arbeidsmåten har vist at den virker.
 
 Gjeldende større native motorløft: [rutiner, målinger og kontroller](NATIVE_ENGINE_OPTIMIZATION.md).
+
+Videreført med [kontakt-/VIC-kjerner](CONTACT_KERNEL_OPTIMIZATION.md), inkludert eksakt spillstegstopp og fortsatt åpne lyd-/tidsporter.

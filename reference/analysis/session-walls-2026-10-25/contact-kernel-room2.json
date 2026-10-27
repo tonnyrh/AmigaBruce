@@ -1,0 +1,28 @@
+{
+  "label": "contact-kernel-room2",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "664212239f6e9ee102a0ef78303390dc1baab565223b9fae96dd52eadec0c195"
+  },
+  "source_room": 2,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    396864,
+    396904,
+    396944,
+    396984
+  ],
+  "source_music_fields": 2236,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-room2.bpl",
+      "sha256": "45316ec5b03b6a104260739d0f197f55866eb1286524cfd7ae9b17f03980c860"
+    },
+    {
+      "path": "docs/images/session-contact-kernel-room2.png",
+      "sha256": "dad5e72d18775bb83c20cc2fd2a434c2a6d79f4952747cf97cf3cdf76990f3f0"
+    }
+  ]
+}

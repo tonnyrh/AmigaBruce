@@ -15,6 +15,8 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
   [lokale kontaktregistre](CONTACT_REGISTERS_OPTIMIZATION.md) reduserer målt tid.
   [Native kontakt-/objekt-/poengløft](NATIVE_ENGINE_OPTIMIZATION.md) fortsetter
   fra den pushede milepælen med nye helrutinekontroller og målinger.
+  [Kontakt-/VIC-kjerner](CONTACT_KERNEL_OPTIMIZATION.md) gir videre CPU-gevinst;
+  lydtick-/feltporten står fortsatt åpen.
   Normal klokkeprøve er fortsatt tregere enn tre felt per steg. Kontroller
   synlig framdrift også under naturlig spilling.
 - VIC-PHASE: kontroller naturlige samtidige treff og spritekontakt ved kanter.

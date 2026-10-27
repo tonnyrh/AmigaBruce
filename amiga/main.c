@@ -4,6 +4,9 @@
 #ifndef BL_SOURCE_PERF_TEST
 #define BL_SOURCE_PERF_TEST 0
 #endif
+#ifndef BL_SOURCE_PERF_STEPS
+#define BL_SOURCE_PERF_STEPS 0
+#endif
 #ifndef BL_SOURCE_PERF_ENEMIES
 #define BL_SOURCE_PERF_ENEMIES 3
 #endif
@@ -43,7 +46,7 @@ static unsigned short source_actor_fixture_failure;
 #include "../tests/session_wall_fixture.h"
 #pragma GCC pop_options
 #endif
-static UWORD vic_compare_errors;
+static UWORD vic_compare_errors,contact_kernel_errors;
 
 struct ExecBase *SysBase;
 struct GfxBase *GfxBase;
@@ -799,6 +802,7 @@ int main(void) {
     if(BL_AUTOTEST)arithmetic_errors=bruce_runtime_check();
 #if BL_AUTOTEST
     vic_compare_errors=bl_c64_vic_compare_selftest();
+    contact_kernel_errors=bl_c64_contact_kernel_selftest();
 #endif
 #if BL_SOURCE_WORLD_TEST && !BL_SOURCE_PERF_TEST
     source_actor_fixture_failure=source_actor_fixture_run();
@@ -1017,7 +1021,14 @@ choose_game:
 #endif
                 capture_residue=canvas_residue(buffers[back],back);capture_color15=copper[back][65];
             }
-            input=frame+BL_COMBAT_WARMUP*3<3000?0:BL_FIRE;if(frame>=BL_TEST_FRAMES){PERF_END(BL_PERF_LOOP);break;}}
+            input=frame+BL_COMBAT_WARMUP*3<3000?0:BL_FIRE;
+#if BL_SOURCE_PERF_TEST && BL_SOURCE_PERF_STEPS
+            /* Diagnostic stop only. Never bypass the original field wait. */
+            if(bl_c64_world_stat(0)>=BL_SOURCE_PERF_STEPS || frame>=BL_TEST_FRAMES){PERF_END(BL_PERF_LOOP);break;}
+#else
+            if(frame>=BL_TEST_FRAMES){PERF_END(BL_PERF_LOOP);break;}
+#endif
+        }
         if(BL_ELECTRIC_TEST)input=0;
 #if BL_ENEMY_EDGE_TEST
         input=frame<192?BL_RIGHT:frame<384?0:frame<576?BL_LEFT:0;
@@ -1346,6 +1357,7 @@ restore_os:
 #endif
         append(&p,"Bruce prototype autotest\nsource_world_test=");number(&p,BL_SOURCE_WORLD_TEST);append(&p,"\nsource_world_steps=");number(&p,bl_c64_world_stat(0));append(&p,"\nframes=");number(&p,frame);
         append(&p,"\nsource_perf_test=");number(&p,BL_SOURCE_PERF_TEST);
+        append(&p,"\nsource_perf_steps=");number(&p,BL_SOURCE_PERF_STEPS);
         append(&p,"\nperf_enemy_mask=");number(&p,BL_SOURCE_PERF_ENEMIES);
         append(&p,"\npresentation_hold_fields=");number(&p,BL_SCENE_HOLD_FIELDS);
         append(&p,"\nstage_loop=");number(&p,miss_stage_loop);append(&p,"\nstage_valid=");number(&p,miss_stage_valid);
@@ -1375,6 +1387,10 @@ restore_os:
         append(&p,"\nsource_dma_changes=");number(&p,source_dma_changes);
         append(&p,"\nsource_dma_faults=");number(&p,source_dma_faults);
         append(&p,"\nvic_compare_errors=");number(&p,vic_compare_errors);
+#if BL_AUTOTEST
+        append(&p,"\ncontact_kernel_cases=");number(&p,BL_C64_CONTACT_KERNEL_CASES);
+        append(&p,"\ncontact_kernel_errors=");number(&p,contact_kernel_errors);
+#endif
 #if BL_SOURCE_WORLD_TEST && !BL_SOURCE_PERF_TEST
         append(&p,"\nsource_actor_fixture_cases=");number(&p,BL_SOURCE_ACTOR_CASES);
         append(&p,"\nsource_actor_fixture_failure=");number(&p,source_actor_fixture_failure);

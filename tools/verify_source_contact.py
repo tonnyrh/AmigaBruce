@@ -17,6 +17,9 @@ def main():
             line=next(s for s in code.splitlines() if s.strip().startswith(f'm[0x{flag:04x}]=(unsigned char)(('))
             operands=[int(x,16) for x in re.findall(r'm\[0x([0-9a-f]+)\]',line)][1:]
             assert operands==[int.from_bytes(source[pc+1:pc+3],'little') for pc in range(start,end,3)],hex(flag)
+    from build_contact_class_kernel import generate,MARK
+    kernel=(ROOT/'amiga/contact_rows.s').read_text(encoding='utf-8')
+    assert MARK+kernel.split(MARK,1)[1]==generate(source),'Generated class kernel differs from frozen operands'
     lib=ctypes.CDLL(str(ROOT/'.tmp/source-contact-test/contact.dll'))
     buf=(ctypes.c_ubyte*65536)();regs=(ctypes.c_ubyte*10)()
     lib.bl_contact_run.argtypes=[ctypes.c_long]
@@ -27,8 +30,11 @@ def main():
         # Full CPU status variation. Both helpers must preserve D/V/I.
         r=[rng.randrange(256) for _ in range(3)]+[rng.randrange(2) for _ in range(5)]+[sp,rng.randrange(2)]
         if decimal is not None:r[7]=decimal
-        m[0x1fe:0x200]=b'\xfe\xff'
-        if sp==251:m[0x1fc:0x1fe]=b'\x76\x52' # Actual nested row return frame; $542C discards it.
+        if sp==251:
+            m[0x1fe:0x200]=b'\xfe\xff'
+            m[0x1fc:0x1fe]=b'\x76\x52' # Actual nested row return frame; $542C discards it.
+        else:
+            m[0x100+((sp+1)&255)]=0xfe;m[0x100+((sp+2)&255)]=0xff
         lib.bl_contact_seed((ctypes.c_ubyte*65536).from_buffer_copy(m),(ctypes.c_ubyte*10)(*r))
         cpu=MPU(memory=m,pc=entry);cpu.a,cpu.x,cpu.y=r[:3];cpu.sp=sp
         cpu.p=0x30|r[3]|(r[4]<<1)|(r[9]<<2)|(r[7]<<3)|(r[6]<<6)|(r[5]<<7)
@@ -120,8 +126,24 @@ def main():
             m[0xa1+actor]=29+8*(2+actor*7)+offset
             m[0x4f4e+actor]=rng.randrange(42)
         check(m,0x5212,f'driver/{active}/{phase}/{offset}',decimal=0,trace=True)
+    # Pointer folding must retain ordered source aliases and wrapping JSR
+    # frames. Glyph and attribute reads share these scratch/operand/table
+    # addresses intentionally; no independently invented geometry is used.
+    for actor,pointer,yy,stack in itertools.product(range(3),(0x43bb,0x43bc,0x5381,0x539b,0x53b5,0x50e7,0x5117,0x0100),(0,38,254,255),(0,1,254,255)):
+        m=bytearray(source);m[0x4eed:0x4f40]=rng.randbytes(83);m[0x50]=actor
+        m[0xe6+actor]=yy;m[0xe9+actor]=10;m[0x52]=rng.randrange(32);m[0x7c]=rng.randrange(256)
+        m[0x50e7+10]=pointer&255;m[0x50ff+10]=pointer>>8;m[0x5117+10]=pointer>>8
+        check(m,0x530a,f'pointers/ordered-wrap/{actor}/{pointer:x}/{yy}/{stack}',sp=stack,decimal=0)
+    # Batch scheduling must preserve wrapped Y, body/foot boundaries and
+    # the original8-row service, including a source-pointer wrap fallback.
+    for start,pointer in itertools.product((248,252,255),(0xa000,0xfff0,0x0040)):
+        m=bytearray(source);m[0xcae0:0xcc20]=rng.randbytes(320);m[0x4eed:0x4f40]=rng.randbytes(83)
+        m[0x50]=0;m[0x95:0x98]=bytes(3);m[0x52]=start
+        m[0x4f38]=(start+2)&255;m[0x4f39]=(start+6)&255;m[0x4f3a]=(start+8)&255
+        for operand in (0x5381,0x539b,0x53b5):m[operand:operand+2]=pointer.to_bytes(2,'little')
+        check(m,0x537e,f'rows/wrap/{start}/{pointer:x}',251,trace=True)
     files=['core/c64_rooms.c','core/c64_rooms.h','core/source_perf.h','core/c64_actor_programs.h',
-        'tools/build_c64_rooms.py','tests/source_contact_bridge.c','tools/verify_source_contact.py','test-source-contact.ps1']
+        'tools/build_c64_rooms.py','tools/build_contact_class_kernel.py','amiga/contact_rows.s','tests/source_contact_bridge.c','tools/verify_source_contact.py','test-source-contact.ps1']
     report=dict(status='passed_original_byte_contact_controls',source_sha256=SHA,checks=sum(counts.values()),
         instructions=instructions,entries=counts,service_register_cases=service_cases,edition_verified=False,natural_playthrough=False,raster_exact=False,
         source_files=[dict(path=p,sha256=hashlib.sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])
