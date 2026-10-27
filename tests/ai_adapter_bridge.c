@@ -10,11 +10,32 @@ static BlRoomFacts empty_room;
 int bl_x(const BlGame *g){return g->x/16;}
 int bl_y(const BlGame *g){return g->y/16;}
 void bl_reset(BlGame *g){memset(g,0,sizeof(*g));}
-void bl_step(BlGame *g,unsigned char input){(void)g;requested_input=input;++movement_calls;}
+void bl_step(BlGame *g,unsigned char input){
+    requested_input=input;++movement_calls;
+    /* Physics stays a stub. Use the actual extracted state22 counter/
+     * history body, shared with game.c; no injected collision is claimed. */
+    if(g->attack==BL_SAI){BlSourceActor a;a.state=22;a.counter=g->attack_phase;a.facing=g->facing;
+        bl_source_sai_step(&g->wall,&a);g->attack_phase=a.counter;
+        if(!a.state)g->attack=BL_ATTACK_NONE;
+    }
+}
+unsigned char bl_c64_object_pose(const BlGame *g){(void)g;return 2;}
 void bl_step_npc(BlGame *g,unsigned char input){bl_step(g,input);}
+void bl_step_npc_ai(BlGame *g,unsigned char input){bl_step(g,input);}
 void bl_record_recoil(BlGame *g,int pixels){(void)g;(void)pixels;}
 int bl_contact_kind(const BlGame *g,int x,int y,int prone){(void)g;(void)x;(void)y;(void)prone;return 0;}
 void bl_c64_audio_request(long effect){(void)effect;}
+void bl_c64_enemy_entry(long actor,long *x,long *y,long *health){(void)actor;(void)x;(void)y;(void)health;}
+void bl_c64_enemy_entries_clear(void){}
+unsigned char bl_c64_room(void){return 0;}
+void bl_c64_load(long room){(void)room;}
+unsigned char bl_c64_spawn_cold_counter(long actor){(void)actor;return 0;}
+unsigned char bl_c64_spawn_counter(long actor){(void)actor;return 0;}
+void bl_c64_spawn_sync(long actor,long active,long px,long py,long health,long counter){(void)actor;(void)active;(void)px;(void)py;(void)health;(void)counter;}
+void bl_c64_spawn_services(long px,long py){(void)px;(void)py;}
+void bl_c64_spawn_result(long actor,BlC64Spawn *r){(void)actor;r->active=0;}
+long bl_c64_enemy_remove(long actor){(void)actor;return 0;}
+void bl_step_npc_entry(BlGame *g,unsigned char *state,unsigned char *counter,long px,long mask){(void)g;(void)state;(void)counter;(void)px;(void)mask;}
 const BlRoomFacts *bl_room(unsigned char room){(void)room;return &empty_room;}
 int bl_enemy_leave_room(BlFighter *f,int kind){(void)f;(void)kind;return 0;}
 

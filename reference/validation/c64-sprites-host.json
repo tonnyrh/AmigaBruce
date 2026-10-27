@@ -14,7 +14,7 @@
   "source_files": [
     {
       "path": "core/c64_sprites.c",
-      "sha256": "683a8c4bf4e69f41e600fa9be2214a2496ad213d1621b286c11688c1bdbaf562"
+      "sha256": "00436908bea47f0b2a3cf64a7555c3ba298f6782d4d3d0da3e530adf8cd42770"
     },
     {
       "path": "core/c64_sprites.h",
@@ -26,15 +26,15 @@
     },
     {
       "path": "core/game.h",
-      "sha256": "bbcb1164efaf3660729cc0318196c29f19146c106ad5bb5f1675e493cd96cffb"
+      "sha256": "a4faab307fd692995a67deee3900a694c11ef7c8fd13a5e3e1b8b05b37024bb8"
     },
     {
       "path": "core/combat.h",
-      "sha256": "1001f3fcd4b5c4da12cd9cbc3d8be47d12dd823a191ea43a64e68ca5cad532ea"
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
     },
     {
       "path": "core/source_wall.h",
-      "sha256": "8fcf8898f2c89de98068b315dce430feb7dac032f9aae9b332ca815b9ed78449"
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
     },
     {
       "path": "tools/build_c64_sprites.py",

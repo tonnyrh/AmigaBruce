@@ -8,10 +8,27 @@ case 0x0b30:goto L0b30;
 case 0x0b51:goto L0b51;
 case 0x0b58:goto L0b58;
 case 0x0b5f:goto L0b5f;
+case 0x0b8e:goto L0b8e;
+case 0x0bf0:goto L0bf0;
+case 0x0bfa:goto L0bfa;
+case 0x0c4d:goto L0c4d;
+case 0x0cd5:goto L0cd5;
+case 0x0d0f:goto L0d0f;
+case 0x0d42:goto L0d42;
+case 0x0d46:goto L0d46;
+case 0x0d76:goto L0d76;
+case 0x0da4:goto L0da4;
+case 0x0db1:goto L0db1;
+case 0x0df8:goto L0df8;
+case 0x0e21:goto L0e21;
 case 0x104b:goto L104b;
 case 0x10af:goto L10af;
+case 0x10b5:goto L10b5;
 case 0x10c5:goto L10c5;
+case 0x10d0:goto L10d0;
 case 0x10e0:goto L10e0;
+case 0x1131:goto L1131;
+case 0x1145:goto L1145;
 case 0x1159:goto L1159;
 case 0x17e2:goto L17e2;
 case 0x199f:goto L199f;
@@ -23,10 +40,15 @@ case 0x1b84:goto L1b84;
 case 0x2509:goto L2509;
 case 0x2c70:goto L2c70;
 case 0x2d43:goto L2d43;
+case 0x2ddd:goto L2ddd;
+case 0x2e1c:goto L2e1c;
 case 0x2e29:goto L2e29;
 case 0x2f8e:goto L2f8e;
 case 0x2fd6:goto L2fd6;
 case 0x2fef:goto L2fef;
+case 0x3001:goto L3001;
+case 0x3048:goto L3048;
+case 0x304b:goto L304b;
 case 0x30d4:goto L30d4;
 case 0x312c:goto L312c;
 case 0x3175:goto L3175;
@@ -375,6 +397,929 @@ a&=0x7f;NZ(a);
 goto L0b69;
 L0b69:; /* $0B69 */
 sp+=2;return;
+L0b8e:; /* $0B8E */
+a|=0x01;NZ(a);
+goto L0b90;
+L0b90:; /* $0B90 */
+address=(unsigned char)(0x95 + x);m[address]=a;
+goto L0b92;
+L0b92:; /* $0B92 */
+old=a;a=(unsigned char)((old<<1)|c);c=(old&128)!=0;NZ(a);
+goto L0b93;
+L0b93:; /* $0B93 */
+old=a;a=(unsigned char)((old<<1)|c);c=(old&128)!=0;NZ(a);
+goto L0b94;
+L0b94:; /* $0B94 */
+old=a;a=(unsigned char)((old<<1)|c);c=(old&128)!=0;NZ(a);
+goto L0b95;
+L0b95:; /* $0B95 */
+a&=0x03;NZ(a);
+goto L0b97;
+L0b97:; /* $0B97 */
+y=a;NZ(y);
+goto L0b98;
+L0b98:; /* $0B98 */
+address=0x0052;m[address]=y;
+goto L0b9a;
+L0b9a:; /* $0B9A */
+a=m[(unsigned short)(0x59a8 + y)];NZ(a);
+goto L0b9d;
+L0b9d:; /* $0B9D */
+address=(unsigned char)(0xec + x);m[address]=a;
+goto L0b9f;
+L0b9f:; /* $0B9F */
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0xa1;room_code(0x0e21);if(transition_pending)return;
+goto L0ba2;
+L0ba2:; /* $0BA2 */
+y=m[0x0052];NZ(y);
+goto L0ba4;
+L0ba4:; /* $0BA4 */
+a=m[(unsigned short)(0x59ab + y)];NZ(a);
+goto L0ba7;
+L0ba7:; /* $0BA7 */
+address=(unsigned char)(0xef + x);m[address]=a;
+goto L0ba9;
+L0ba9:; /* $0BA9 */
+if(z)goto L0bae;
+goto L0bab;
+L0bab:; /* $0BAB */
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0xad;room_code(0x0e21);if(transition_pending)return;
+goto L0bae;
+L0bae:; /* $0BAE */
+y=m[0x0052];NZ(y);
+goto L0bb0;
+L0bb0:; /* $0BB0 */
+a=0x00;NZ(a);
+goto L0bb2;
+L0bb2:; /* $0BB2 */
+address=(unsigned char)(0xbf + x);m[address]=a;
+goto L0bb4;
+L0bb4:; /* $0BB4 */
+address=(unsigned char)(0xce + x);m[address]=a;
+goto L0bb6;
+L0bb6:; /* $0BB6 */
+address=(unsigned short)(0x0106 + x);m[address]=a;
+goto L0bb9;
+L0bb9:; /* $0BB9 */
+a=0x0f;NZ(a);
+goto L0bbb;
+L0bbb:; /* $0BBB */
+address=(unsigned char)(0x98 + x);m[address]=a;
+goto L0bbd;
+L0bbd:; /* $0BBD */
+a=0x01;NZ(a);
+goto L0bbf;
+L0bbf:; /* $0BBF */
+address=(unsigned char)(0x9b + x);m[address]=a;
+goto L0bc1;
+L0bc1:; /* $0BC1 */
+a=0x01;NZ(a);
+goto L0bc3;
+L0bc3:; /* $0BC3 */
+address=(unsigned char)(0xb6 + x);m[address]=a;
+goto L0bc5;
+L0bc5:; /* $0BC5 */
+a=0x01;NZ(a);
+goto L0bc7;
+L0bc7:; /* $0BC7 */
+address=(unsigned char)(0xa4 + x);m[address]=a;
+goto L0bc9;
+L0bc9:; /* $0BC9 */
+a=0x02;NZ(a);
+goto L0bcb;
+L0bcb:; /* $0BCB */
+address=(unsigned short)(0x4f48 + x);m[address]=a;
+goto L0bce;
+L0bce:; /* $0BCE */
+address=(unsigned short)(0x4f4e + x);m[address]=a;
+goto L0bd1;
+L0bd1:; /* $0BD1 */
+a=0x03;NZ(a);
+goto L0bd3;
+L0bd3:; /* $0BD3 */
+address=(unsigned short)(0x4f4b + x);m[address]=a;
+goto L0bd6;
+L0bd6:; /* $0BD6 */
+address=(unsigned short)(0x4f51 + x);m[address]=a;
+goto L0bd9;
+L0bd9:; /* $0BD9 */
+a=0x24;NZ(a);
+goto L0bdb;
+L0bdb:; /* $0BDB */
+address=(unsigned char)(0xd1 + x);m[address]=a;
+goto L0bdd;
+L0bdd:; /* $0BDD */
+address=0x0051;m[address]=x;
+goto L0bdf;
+L0bdf:; /* $0BDF */
+a=m[0x0104];NZ(a);
+goto L0be2;
+L0be2:; /* $0BE2 */
+if(z)goto L0be7;
+goto L0be4;
+L0be4:; /* $0BE4 */
+a=x;NZ(a);
+goto L0be5;
+L0be5:; /* $0BE5 */
+if(!z)goto L0bfa;
+goto L0be7;
+L0be7:; /* $0BE7 */
+x=m[0x0029];NZ(x);
+goto L0be9;
+L0be9:; /* $0BE9 */
+a=m[(unsigned short)(0x4bc2 + x)];NZ(a);
+goto L0bec;
+L0bec:; /* $0BEC */
+y=a;NZ(y);
+goto L0bed;
+L0bed:; /* $0BED */
+a=m[(unsigned short)(0x4bae + x)];NZ(a);
+goto L0bf0;
+L0bf0:; /* $0BF0 */
+x=m[0x0051];NZ(x);
+goto L0bf2;
+L0bf2:; /* $0BF2 */
+address=(unsigned char)(0x9e + x);m[address]=a;
+goto L0bf4;
+L0bf4:; /* $0BF4 */
+a=y;NZ(a);
+goto L0bf5;
+L0bf5:; /* $0BF5 */
+address=(unsigned char)(0xa1 + x);m[address]=a;
+goto L0bf7;
+L0bf7:; /* $0BF7 */
+goto L0c4d;
+L0bfa:; /* $0BFA */
+a=m[(unsigned char)(0x8a + x)];NZ(a);
+goto L0bfc;
+L0bfc:; /* $0BFC */
+if(!z)goto L0c3f;
+goto L0bfe;
+L0bfe:; /* $0BFE */
+c=x>=0x01;NZ((unsigned char)(x-0x01));
+goto L0c00;
+L0c00:; /* $0C00 */
+if(!z)goto L0c2a;
+goto L0c02;
+L0c02:; /* $0C02 */
+x=m[0x0029];NZ(x);
+goto L0c04;
+L0c04:; /* $0C04 */
+a=m[(unsigned short)(0x136f + x)];NZ(a);
+goto L0c07;
+L0c07:; /* $0C07 */
+if(z)goto L0c17;
+goto L0c09;
+L0c09:; /* $0C09 */
+m[0x100 + sp--]=0x0c;m[0x100 + sp--]=0x0b;if(m[0x104]){++m[0x16];a=m[(unsigned short)(W(0x16)+y)];}else a=1;NZ(a);sp+=2;
+goto L0c0c;
+L0c0c:; /* $0C0C */
+c=a>=0xc0;NZ((unsigned char)(a-0xc0));
+goto L0c0e;
+L0c0e:; /* $0C0E */
+if(c)goto L0c17;
+goto L0c10;
+L0c10:; /* $0C10 */
+a=m[(unsigned short)(0x136f + x)];NZ(a);
+goto L0c13;
+L0c13:; /* $0C13 */
+if(!n)goto L0be7;
+goto L0c15;
+L0c15:; /* $0C15 */
+if(n)goto L0c1e;
+goto L0c17;
+L0c17:; /* $0C17 */
+m[0x100 + sp--]=0x0c;m[0x100 + sp--]=0x19;if(m[0x104]){++m[0x16];a=m[(unsigned short)(W(0x16)+y)];}else a=1;NZ(a);sp+=2;
+goto L0c1a;
+L0c1a:; /* $0C1A */
+a&=0x01;NZ(a);
+goto L0c1c;
+L0c1c:; /* $0C1C */
+if(z)goto L0be7;
+goto L0c1e;
+L0c1e:; /* $0C1E */
+x=m[0x0029];NZ(x);
+goto L0c20;
+L0c20:; /* $0C20 */
+a=m[(unsigned short)(0x4bea + x)];NZ(a);
+goto L0c23;
+L0c23:; /* $0C23 */
+y=a;NZ(y);
+goto L0c24;
+L0c24:; /* $0C24 */
+a=m[(unsigned short)(0x4bd6 + x)];NZ(a);
+goto L0c27;
+L0c27:; /* $0C27 */
+goto L0bf0;
+L0c2a:; /* $0C2A */
+x=m[0x0029];NZ(x);
+goto L0c2c;
+L0c2c:; /* $0C2C */
+a=m[(unsigned short)(0x1333 + x)];NZ(a);
+goto L0c2f;
+L0c2f:; /* $0C2F */
+if(z)goto L0c17;
+goto L0c31;
+L0c31:; /* $0C31 */
+m[0x100 + sp--]=0x0c;m[0x100 + sp--]=0x33;if(m[0x104]){++m[0x16];a=m[(unsigned short)(W(0x16)+y)];}else a=1;NZ(a);sp+=2;
+goto L0c34;
+L0c34:; /* $0C34 */
+c=a>=0xc0;NZ((unsigned char)(a-0xc0));
+goto L0c36;
+L0c36:; /* $0C36 */
+if(c)goto L0c17;
+goto L0c38;
+L0c38:; /* $0C38 */
+a=m[(unsigned short)(0x136f + x)];NZ(a);
+goto L0c3b;
+L0c3b:; /* $0C3B */
+if(!n)goto L0be7;
+goto L0c3d;
+L0c3d:; /* $0C3D */
+if(n)goto L0c1e;
+goto L0c3f;
+L0c3f:; /* $0C3F */
+address=(unsigned char)(0x9e + x);m[address]=a;
+goto L0c41;
+L0c41:; /* $0C41 */
+a=m[(unsigned char)(0x8c + x)];NZ(a);
+goto L0c43;
+L0c43:; /* $0C43 */
+address=(unsigned char)(0xa1 + x);m[address]=a;
+goto L0c45;
+L0c45:; /* $0C45 */
+a=m[(unsigned char)(0x8e + x)];NZ(a);
+goto L0c47;
+L0c47:; /* $0C47 */
+address=(unsigned char)(0xd1 + x);m[address]=a;
+goto L0c49;
+L0c49:; /* $0C49 */
+a=0x00;NZ(a);
+goto L0c4b;
+L0c4b:; /* $0C4B */
+address=(unsigned char)(0x8a + x);m[address]=a;
+goto L0c4d;
+L0c4d:; /* $0C4D */
+a=m[(unsigned short)(0x276d + x)];NZ(a);
+goto L0c50;
+L0c50:; /* $0C50 */
+y=m[0x277d];NZ(y);
+goto L0c53;
+L0c53:; /* $0C53 */
+if(z)goto L0c58;
+goto L0c55;
+L0c55:; /* $0C55 */
+c=0;
+goto L0c56;
+L0c56:; /* $0C56 */
+adc(0x05);
+goto L0c58;
+L0c58:; /* $0C58 */
+y=a;NZ(y);
+goto L0c59;
+L0c59:; /* $0C59 */
+a=m[(unsigned short)(0x2763 + y)];NZ(a);
+goto L0c5c;
+L0c5c:; /* $0C5C */
+y=m[(unsigned short)(0x276d + x)];NZ(y);
+goto L0c5f;
+L0c5f:; /* $0C5F */
+address=(unsigned short)(0x8ff8 + y);m[address]=a;
+goto L0c62;
+L0c62:; /* $0C62 */
+y++;NZ(y);
+goto L0c63;
+L0c63:; /* $0C63 */
+c=0;
+goto L0c64;
+L0c64:; /* $0C64 */
+adc(0x01);
+goto L0c66;
+L0c66:; /* $0C66 */
+address=(unsigned short)(0x8ff8 + y);m[address]=a;
+goto L0c69;
+L0c69:; /* $0C69 */
+a=m[(unsigned char)(0x9e + x)];NZ(a);
+goto L0c6b;
+L0c6b:; /* $0C6B */
+old=a;a=(unsigned char)(old<<1);c=(old&128)!=0;NZ(a);
+goto L0c6c;
+L0c6c:; /* $0C6C */
+m[0x100 + sp--]=a;
+goto L0c6d;
+L0c6d:; /* $0C6D */
+y=m[(unsigned short)(0x276d + x)];NZ(y);
+goto L0c70;
+L0c70:; /* $0C70 */
+a=m[0xd010];NZ(a);
+goto L0c73;
+L0c73:; /* $0C73 */
+if(!c)goto L0c7a;
+goto L0c75;
+L0c75:; /* $0C75 */
+a|=m[(unsigned short)(0x2773 + y)];NZ(a);
+goto L0c78;
+L0c78:; /* $0C78 */
+if(!z)goto L0c7d;
+goto L0c7a;
+L0c7a:; /* $0C7A */
+a&=m[(unsigned short)(0x2778 + y)];NZ(a);
+goto L0c7d;
+L0c7d:; /* $0C7D */
+address=0xd010;m[address]=a;
+goto L0c80;
+L0c80:; /* $0C80 */
+a=y;NZ(a);
+goto L0c81;
+L0c81:; /* $0C81 */
+old=a;a=(unsigned char)(old<<1);c=(old&128)!=0;NZ(a);
+goto L0c82;
+L0c82:; /* $0C82 */
+y=a;NZ(y);
+goto L0c83;
+L0c83:; /* $0C83 */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L0c84;
+L0c84:; /* $0C84 */
+address=(unsigned short)(0xd000 + y);m[address]=a;
+goto L0c87;
+L0c87:; /* $0C87 */
+a=m[(unsigned char)(0xa1 + x)];NZ(a);
+goto L0c89;
+L0c89:; /* $0C89 */
+c=0;
+goto L0c8a;
+L0c8a:; /* $0C8A */
+adc(0x1d);
+goto L0c8c;
+L0c8c:; /* $0C8C */
+address=(unsigned short)(0xd001 + y);m[address]=a;
+goto L0c8f;
+L0c8f:; /* $0C8F */
+a=m[(unsigned short)(0x2770 + x)];NZ(a);
+goto L0c92;
+L0c92:; /* $0C92 */
+if(n)goto L0cba;
+goto L0c94;
+L0c94:; /* $0C94 */
+a=m[(unsigned char)(0x9e + x)];NZ(a);
+goto L0c96;
+L0c96:; /* $0C96 */
+old=a;a=(unsigned char)(old<<1);c=(old&128)!=0;NZ(a);
+goto L0c97;
+L0c97:; /* $0C97 */
+m[0x100 + sp--]=a;
+goto L0c98;
+L0c98:; /* $0C98 */
+y=m[(unsigned short)(0x2770 + x)];NZ(y);
+goto L0c9b;
+L0c9b:; /* $0C9B */
+a=m[0xd010];NZ(a);
+goto L0c9e;
+L0c9e:; /* $0C9E */
+if(!c)goto L0ca5;
+goto L0ca0;
+L0ca0:; /* $0CA0 */
+a|=m[(unsigned short)(0x2773 + y)];NZ(a);
+goto L0ca3;
+L0ca3:; /* $0CA3 */
+if(!z)goto L0ca8;
+goto L0ca5;
+L0ca5:; /* $0CA5 */
+a&=m[(unsigned short)(0x2778 + y)];NZ(a);
+goto L0ca8;
+L0ca8:; /* $0CA8 */
+address=0xd010;m[address]=a;
+goto L0cab;
+L0cab:; /* $0CAB */
+a=y;NZ(a);
+goto L0cac;
+L0cac:; /* $0CAC */
+old=a;a=(unsigned char)(old<<1);c=(old&128)!=0;NZ(a);
+goto L0cad;
+L0cad:; /* $0CAD */
+y=a;NZ(y);
+goto L0cae;
+L0cae:; /* $0CAE */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L0caf;
+L0caf:; /* $0CAF */
+address=(unsigned short)(0xd000 + y);m[address]=a;
+goto L0cb2;
+L0cb2:; /* $0CB2 */
+a=m[(unsigned char)(0xa1 + x)];NZ(a);
+goto L0cb4;
+L0cb4:; /* $0CB4 */
+c=0;
+goto L0cb5;
+L0cb5:; /* $0CB5 */
+adc(0x1d);
+goto L0cb7;
+L0cb7:; /* $0CB7 */
+address=(unsigned short)(0xd001 + y);m[address]=a;
+goto L0cba;
+L0cba:; /* $0CBA */
+y=m[(unsigned short)(0x276d + x)];NZ(y);
+goto L0cbd;
+L0cbd:; /* $0CBD */
+a=m[0xd015];NZ(a);
+goto L0cc0;
+L0cc0:; /* $0CC0 */
+a|=m[(unsigned short)(0x2773 + y)];NZ(a);
+goto L0cc3;
+L0cc3:; /* $0CC3 */
+address=0xd015;m[address]=a;
+goto L0cc6;
+L0cc6:; /* $0CC6 */
+y=m[(unsigned short)(0x2770 + x)];NZ(y);
+goto L0cc9;
+L0cc9:; /* $0CC9 */
+if(n)goto L0cd4;
+goto L0ccb;
+L0ccb:; /* $0CCB */
+a=m[0xd015];NZ(a);
+goto L0cce;
+L0cce:; /* $0CCE */
+a|=m[(unsigned short)(0x2773 + y)];NZ(a);
+goto L0cd1;
+L0cd1:; /* $0CD1 */
+address=0xd015;m[address]=a;
+goto L0cd4;
+L0cd4:; /* $0CD4 */
+sp+=2;return;
+L0cd5:; /* $0CD5 */
+m[0x100 + sp--]=0x0c;m[0x100 + sp--]=0xd7;room_code(0x10b5);if(transition_pending)return;
+goto L0cd8;
+L0cd8:; /* $0CD8 */
+a=m[0xcf79];NZ(a);
+goto L0cdb;
+L0cdb:; /* $0CDB */
+a^=m[0xcf99];NZ(a);
+goto L0cde;
+L0cde:; /* $0CDE */
+address=0x1166;m[address]=a;
+goto L0ce1;
+L0ce1:; /* $0CE1 */
+x=0x01;NZ(x);
+goto L0ce3;
+L0ce3:; /* $0CE3 */
+a=0x80;NZ(a);
+goto L0ce5;
+L0ce5:; /* $0CE5 */
+m[0x100 + sp--]=0x0c;m[0x100 + sp--]=0xe7;room_code(0x0b8e);if(transition_pending)return;
+goto L0ce8;
+L0ce8:; /* $0CE8 */
+a=0x10;NZ(a);
+goto L0cea;
+L0cea:; /* $0CEA */
+address=(unsigned char)(0xbf + x);m[address]=a;
+goto L0cec;
+L0cec:; /* $0CEC */
+a=0x2a;NZ(a);
+goto L0cee;
+L0cee:; /* $0CEE */
+address=(unsigned short)(0x4f48 + x);m[address]=a;
+goto L0cf1;
+L0cf1:; /* $0CF1 */
+a=0x2b;NZ(a);
+goto L0cf3;
+L0cf3:; /* $0CF3 */
+address=(unsigned short)(0x4f4b + x);m[address]=a;
+goto L0cf6;
+L0cf6:; /* $0CF6 */
+a=0x6c;NZ(a);
+goto L0cf8;
+L0cf8:; /* $0CF8 */
+address=(unsigned short)(0x4f4e + x);m[address]=a;
+goto L0cfb;
+L0cfb:; /* $0CFB */
+a=0x6d;NZ(a);
+goto L0cfd;
+L0cfd:; /* $0CFD */
+address=(unsigned short)(0x4f51 + x);m[address]=a;
+goto L0d00;
+L0d00:; /* $0D00 */
+a=0x0a;NZ(a);
+goto L0d02;
+L0d02:; /* $0D02 */
+address=(unsigned char)(0xce + x);m[address]=a;
+goto L0d04;
+L0d04:; /* $0D04 */
+a=m[(unsigned char)(0xd1 + x)];NZ(a);
+goto L0d06;
+L0d06:; /* $0D06 */
+c=a>=0x14;NZ((unsigned char)(a-0x14));
+goto L0d08;
+L0d08:; /* $0D08 */
+if(!c)goto L0d0e;
+goto L0d0a;
+L0d0a:; /* $0D0A */
+a=0x14;NZ(a);
+goto L0d0c;
+L0d0c:; /* $0D0C */
+address=(unsigned char)(0xd1 + x);m[address]=a;
+goto L0d0e;
+L0d0e:; /* $0D0E */
+sp+=2;return;
+L0d0f:; /* $0D0F */
+a=m[0x005e];NZ(a);
+goto L0d11;
+L0d11:; /* $0D11 */
+if(!z)goto L0d3c;
+goto L0d13;
+L0d13:; /* $0D13 */
+x=0x01;NZ(x);
+goto L0d15;
+L0d15:; /* $0D15 */
+a=m[(unsigned char)(0x95 + x)];NZ(a);
+goto L0d17;
+L0d17:; /* $0D17 */
+a&=0x01;NZ(a);
+goto L0d19;
+L0d19:; /* $0D19 */
+if(!z)goto L0d3c;
+goto L0d1b;
+L0d1b:; /* $0D1B */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x1d;room_code(0x0cd5);if(transition_pending)return;
+goto L0d1e;
+L0d1e:; /* $0D1E */
+x=m[0x0029];NZ(x);
+goto L0d20;
+L0d20:; /* $0D20 */
+a=m[(unsigned short)(0x135b + x)];NZ(a);
+goto L0d23;
+L0d23:; /* $0D23 */
+address=0x005e;m[address]=a;
+goto L0d25;
+L0d25:; /* $0D25 */
+a=m[0x42ca];NZ(a);
+goto L0d28;
+L0d28:; /* $0D28 */
+if(z)goto L0d2e;
+goto L0d2a;
+L0d2a:; /* $0D2A */
+a=0x30;NZ(a);
+goto L0d2c;
+L0d2c:; /* $0D2C */
+address=0x005e;m[address]=a;
+goto L0d2e;
+L0d2e:; /* $0D2E */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x30;room_code(0x10d0);if(transition_pending)return;
+goto L0d31;
+L0d31:; /* $0D31 */
+if(v)goto L0d3d;
+goto L0d33;
+L0d33:; /* $0D33 */
+if(c)goto L0d3a;
+goto L0d35;
+L0d35:; /* $0D35 */
+a=m[0x0040];NZ(a);
+goto L0d37;
+L0d37:; /* $0D37 */
+if(!z)goto L0d3d;
+goto L0d39;
+L0d39:; /* $0D39 */
+sp+=2;return;
+L0d3a:; /* $0D3A */
+old=m[0x005e];m[0x005e]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x005e]);
+goto L0d3c;
+L0d3c:; /* $0D3C */
+sp+=2;return;
+L0d3d:; /* $0D3D */
+a=0x03;NZ(a);
+goto L0d3f;
+L0d3f:; /* $0D3F */
+address=0x005e;m[address]=a;
+goto L0d41;
+L0d41:; /* $0D41 */
+sp+=2;return;
+L0d42:; /* $0D42 */
+c=x>=0x01;NZ((unsigned char)(x-0x01));
+goto L0d44;
+L0d44:; /* $0D44 */
+if(!z)goto L0d72;
+goto L0d46;
+L0d46:; /* $0D46 */
+a=0x5b;NZ(a);
+goto L0d48;
+L0d48:; /* $0D48 */
+c=0;
+goto L0d49;
+L0d49:; /* $0D49 */
+adc(m[0x0029]);
+goto L0d4b;
+L0d4b:; /* $0D4B */
+address=0x0d56;m[address]=a;
+goto L0d4e;
+L0d4e:; /* $0D4E */
+a=0x13;NZ(a);
+goto L0d50;
+L0d50:; /* $0D50 */
+adc(0x00);
+goto L0d52;
+L0d52:; /* $0D52 */
+address=0x0d57;m[address]=a;
+goto L0d55;
+L0d55:; /* $0D55 */
+a=m[W(0x0d56)];NZ(a);
+goto L0d58;
+L0d58:; /* $0D58 */
+address=0x005e;m[address]=a;
+goto L0d5a;
+L0d5a:; /* $0D5A */
+a=m[0x42ca];NZ(a);
+goto L0d5d;
+L0d5d:; /* $0D5D */
+if(z)goto L0d63;
+goto L0d5f;
+L0d5f:; /* $0D5F */
+a=0x30;NZ(a);
+goto L0d61;
+L0d61:; /* $0D61 */
+address=0x005e;m[address]=a;
+goto L0d63;
+L0d63:; /* $0D63 */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x65;room_code(0x10d0);if(transition_pending)return;
+goto L0d66;
+L0d66:; /* $0D66 */
+if(v)goto L0d3d;
+goto L0d68;
+L0d68:; /* $0D68 */
+if(c)goto L0d6f;
+goto L0d6a;
+L0d6a:; /* $0D6A */
+a=m[0x0040];NZ(a);
+goto L0d6c;
+L0d6c:; /* $0D6C */
+if(!z)goto L0d3d;
+goto L0d6e;
+L0d6e:; /* $0D6E */
+sp+=2;return;
+L0d6f:; /* $0D6F */
+old=m[0x005e];m[0x005e]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x005e]);
+goto L0d71;
+L0d71:; /* $0D71 */
+sp+=2;return;
+L0d72:; /* $0D72 */
+c=x>=0x02;NZ((unsigned char)(x-0x02));
+goto L0d74;
+L0d74:; /* $0D74 */
+if(!z)goto L0d9e;
+goto L0d76;
+L0d76:; /* $0D76 */
+a=0x1f;NZ(a);
+goto L0d78;
+L0d78:; /* $0D78 */
+c=0;
+goto L0d79;
+L0d79:; /* $0D79 */
+adc(m[0x0029]);
+goto L0d7b;
+L0d7b:; /* $0D7B */
+address=0x0d86;m[address]=a;
+goto L0d7e;
+L0d7e:; /* $0D7E */
+a=0x13;NZ(a);
+goto L0d80;
+L0d80:; /* $0D80 */
+adc(0x00);
+goto L0d82;
+L0d82:; /* $0D82 */
+address=0x0d87;m[address]=a;
+goto L0d85;
+L0d85:; /* $0D85 */
+a=m[W(0x0d86)];NZ(a);
+goto L0d88;
+L0d88:; /* $0D88 */
+address=0x005d;m[address]=a;
+goto L0d8a;
+L0d8a:; /* $0D8A */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x8c;room_code(0x10d0);if(transition_pending)return;
+goto L0d8d;
+L0d8d:; /* $0D8D */
+if(v)goto L0d99;
+goto L0d8f;
+L0d8f:; /* $0D8F */
+if(c)goto L0d96;
+goto L0d91;
+L0d91:; /* $0D91 */
+a=m[0x0040];NZ(a);
+goto L0d93;
+L0d93:; /* $0D93 */
+if(!z)goto L0d99;
+goto L0d95;
+L0d95:; /* $0D95 */
+sp+=2;return;
+L0d96:; /* $0D96 */
+old=m[0x005d];m[0x005d]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x005d]);
+goto L0d98;
+L0d98:; /* $0D98 */
+sp+=2;return;
+L0d99:; /* $0D99 */
+a=0x03;NZ(a);
+goto L0d9b;
+L0d9b:; /* $0D9B */
+address=0x005d;m[address]=a;
+goto L0d9d;
+L0d9d:; /* $0D9D */
+sp+=2;return;
+L0d9e:; /* $0D9E */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xa0;room_code(0x0d46);if(transition_pending)return;
+goto L0da1;
+L0da1:; /* $0DA1 */
+goto L0d76;
+L0da4:; /* $0DA4 */
+a=m[0x005d];NZ(a);
+goto L0da6;
+L0da6:; /* $0DA6 */
+if(z)goto L0daa;
+goto L0da8;
+L0da8:; /* $0DA8 */
+address=0x005d;m[address]--;NZ(m[address]);
+goto L0daa;
+L0daa:; /* $0DAA */
+a=m[0x005e];NZ(a);
+goto L0dac;
+L0dac:; /* $0DAC */
+if(z)goto L0db0;
+goto L0dae;
+L0dae:; /* $0DAE */
+address=0x005e;m[address]--;NZ(m[address]);
+goto L0db0;
+L0db0:; /* $0DB0 */
+sp+=2;return;
+L0db1:; /* $0DB1 */
+a=m[0x005d];NZ(a);
+goto L0db3;
+L0db3:; /* $0DB3 */
+if(!z)goto L0df7;
+goto L0db5;
+L0db5:; /* $0DB5 */
+a=m[0x0096];NZ(a);
+goto L0db7;
+L0db7:; /* $0DB7 */
+a&=0x01;NZ(a);
+goto L0db9;
+L0db9:; /* $0DB9 */
+if(z)goto L0dd7;
+goto L0dbb;
+L0dbb:; /* $0DBB */
+a=m[0x0040];NZ(a);
+goto L0dbd;
+L0dbd:; /* $0DBD */
+if(!z)goto L0dd7;
+goto L0dbf;
+L0dbf:; /* $0DBF */
+a=m[0x42ca];NZ(a);
+goto L0dc2;
+L0dc2:; /* $0DC2 */
+if(!z)goto L0dd7;
+goto L0dc4;
+L0dc4:; /* $0DC4 */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xc6;room_code(0x10d0);if(transition_pending)return;
+goto L0dc7;
+L0dc7:; /* $0DC7 */
+if(v)goto L0dd7;
+goto L0dc9;
+L0dc9:; /* $0DC9 */
+if(c)goto L0dd7;
+goto L0dcb;
+L0dcb:; /* $0DCB */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xcd;if(m[0x104]){++m[0x16];a=m[(unsigned short)(W(0x16)+y)];}else a=1;NZ(a);sp+=2;
+goto L0dce;
+L0dce:; /* $0DCE */
+c=a>=0x19;NZ((unsigned char)(a-0x19));
+goto L0dd0;
+L0dd0:; /* $0DD0 */
+if(!c)goto L0dd7;
+goto L0dd2;
+L0dd2:; /* $0DD2 */
+a=0x10;NZ(a);
+goto L0dd4;
+L0dd4:; /* $0DD4 */
+address=0x005d;m[address]=a;
+goto L0dd6;
+L0dd6:; /* $0DD6 */
+sp+=2;return;
+L0dd7:; /* $0DD7 */
+x=0x02;NZ(x);
+goto L0dd9;
+L0dd9:; /* $0DD9 */
+a=m[(unsigned char)(0x95 + x)];NZ(a);
+goto L0ddb;
+L0ddb:; /* $0DDB */
+a&=0x01;NZ(a);
+goto L0ddd;
+L0ddd:; /* $0DDD */
+if(!z)goto L0df7;
+goto L0ddf;
+L0ddf:; /* $0DDF */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xe1;room_code(0x0df8);if(transition_pending)return;
+goto L0de2;
+L0de2:; /* $0DE2 */
+x=m[0x0029];NZ(x);
+goto L0de4;
+L0de4:; /* $0DE4 */
+a=m[(unsigned short)(0x131f + x)];NZ(a);
+goto L0de7;
+L0de7:; /* $0DE7 */
+address=0x005d;m[address]=a;
+goto L0de9;
+L0de9:; /* $0DE9 */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xeb;room_code(0x10d0);if(transition_pending)return;
+goto L0dec;
+L0dec:; /* $0DEC */
+if(v)goto L0d99;
+goto L0dee;
+L0dee:; /* $0DEE */
+if(c)goto L0df5;
+goto L0df0;
+L0df0:; /* $0DF0 */
+a=m[0x0040];NZ(a);
+goto L0df2;
+L0df2:; /* $0DF2 */
+if(!z)goto L0d99;
+goto L0df4;
+L0df4:; /* $0DF4 */
+sp+=2;return;
+L0df5:; /* $0DF5 */
+old=m[0x005d];m[0x005d]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x005d]);
+goto L0df7;
+L0df7:; /* $0DF7 */
+sp+=2;return;
+L0df8:; /* $0DF8 */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xfa;room_code(0x10b5);if(transition_pending)return;
+goto L0dfb;
+L0dfb:; /* $0DFB */
+a=0x40;NZ(a);
+goto L0dfd;
+L0dfd:; /* $0DFD */
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xff;room_code(0x0b8e);if(transition_pending)return;
+goto L0e00;
+L0e00:; /* $0E00 */
+a=0x82;NZ(a);
+goto L0e02;
+L0e02:; /* $0E02 */
+address=(unsigned short)(0x4f4e + x);m[address]=a;
+goto L0e05;
+L0e05:; /* $0E05 */
+a=0x00;NZ(a);
+goto L0e07;
+L0e07:; /* $0E07 */
+address=(unsigned short)(0x4f4b + x);m[address]=a;
+goto L0e0a;
+L0e0a:; /* $0E0A */
+address=(unsigned short)(0x4f51 + x);m[address]=a;
+goto L0e0d;
+L0e0d:; /* $0E0D */
+a=m[(unsigned char)(0xd1 + x)];NZ(a);
+goto L0e0f;
+L0e0f:; /* $0E0F */
+c=a>=0x07;NZ((unsigned char)(a-0x07));
+goto L0e11;
+L0e11:; /* $0E11 */
+if(!c)goto L0e17;
+goto L0e13;
+L0e13:; /* $0E13 */
+a=0x07;NZ(a);
+goto L0e15;
+L0e15:; /* $0E15 */
+address=(unsigned char)(0xd1 + x);m[address]=a;
+goto L0e17;
+L0e17:; /* $0E17 */
+a=0x10;NZ(a);
+goto L0e19;
+L0e19:; /* $0E19 */
+address=(unsigned char)(0xce + x);m[address]=a;
+goto L0e1b;
+L0e1b:; /* $0E1B */
+m[0x100 + sp--]=0x0e;m[0x100 + sp--]=0x1d;room_code(0x2ddd);if(transition_pending)return;
+goto L0e1e;
+L0e1e:; /* $0E1E */
+goto L2e1c;
+L0e21:; /* $0E21 */
+c=1;
+goto L0e22;
+L0e22:; /* $0E22 */
+sbc(0x03);
+goto L0e24;
+L0e24:; /* $0E24 */
+y=a;NZ(y);
+goto L0e25;
+L0e25:; /* $0E25 */
+a=m[(unsigned short)(0x59ae + y)];NZ(a);
+goto L0e28;
+L0e28:; /* $0E28 */
+y=a;NZ(y);
+goto L0e29;
+L0e29:; /* $0E29 */
+a=x;NZ(a);
+goto L0e2a;
+L0e2a:; /* $0E2A */
+address=(unsigned short)(0x4f40 + y);m[address]=a;
+goto L0e2d;
+L0e2d:; /* $0E2D */
+sp+=2;return;
 L104b:; /* $104B */
 if(!d){source_movers();return;}
 x=0x08;NZ(x);
@@ -511,6 +1456,44 @@ if(!n)goto L104d;
 goto L10b4;
 L10b4:; /* $10B4 */
 sp+=2;return;
+L10b5:; /* $10B5 */
+m[0x100 + sp--]=a;
+goto L10b6;
+L10b6:; /* $10B6 */
+a=x;NZ(a);
+goto L10b7;
+L10b7:; /* $10B7 */
+m[0x100 + sp--]=a;
+goto L10b8;
+L10b8:; /* $10B8 */
+a=y;NZ(a);
+goto L10b9;
+L10b9:; /* $10B9 */
+m[0x100 + sp--]=a;
+goto L10ba;
+L10ba:; /* $10BA */
+y=0x82;NZ(y);
+goto L10bc;
+L10bc:; /* $10BC */
+m[0x100 + sp--]=0x10;m[0x100 + sp--]=0xbe;room_code(0x2509);if(transition_pending)return;
+goto L10bf;
+L10bf:; /* $10BF */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L10c0;
+L10c0:; /* $10C0 */
+y=a;NZ(y);
+goto L10c1;
+L10c1:; /* $10C1 */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L10c2;
+L10c2:; /* $10C2 */
+x=a;NZ(x);
+goto L10c3;
+L10c3:; /* $10C3 */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L10c4;
+L10c4:; /* $10C4 */
+sp+=2;return;
 L10c5:; /* $10C5 */
 x=0x13;NZ(x);
 goto L10c7;
@@ -527,6 +1510,31 @@ L10cd:; /* $10CD */
 if(!n)goto L10c7;
 goto L10cf;
 L10cf:; /* $10CF */
+sp+=2;return;
+L10d0:; /* $10D0 */
+a=m[0x0088];NZ(a);
+goto L10d2;
+L10d2:; /* $10D2 */
+c=a>=0x20;NZ((unsigned char)(a-0x20));
+goto L10d4;
+L10d4:; /* $10D4 */
+if(c)goto L10da;
+goto L10d6;
+L10d6:; /* $10D6 */
+c=a>=0x19;NZ((unsigned char)(a-0x19));
+goto L10d8;
+L10d8:; /* $10D8 */
+v=0;
+goto L10d9;
+L10d9:; /* $10D9 */
+sp+=2;return;
+L10da:; /* $10DA */
+a=0xff;NZ(a);
+goto L10dc;
+L10dc:; /* $10DC */
+z=(a&m[0x10df])==0;n=(m[0x10df]&128)!=0;v=(m[0x10df]&64)!=0;
+goto L10df;
+L10df:; /* $10DF */
 sp+=2;return;
 L10e0:; /* $10E0 */
 a=m[0x0003];NZ(a);
@@ -565,6 +1573,82 @@ L10f3:; /* $10F3 */
 address=(unsigned short)(0x0300 + x);m[address]=a;
 goto L10f6;
 L10f6:; /* $10F6 */
+sp+=2;return;
+L1131:; /* $1131 */
+m[0x100 + sp--]=a;
+goto L1132;
+L1132:; /* $1132 */
+a=x;NZ(a);
+goto L1133;
+L1133:; /* $1133 */
+m[0x100 + sp--]=a;
+goto L1134;
+L1134:; /* $1134 */
+a=0x00;NZ(a);
+goto L1136;
+L1136:; /* $1136 */
+x=0x7f;NZ(x);
+goto L1138;
+L1138:; /* $1138 */
+address=(unsigned short)(0x8200 + x);m[address]=a;
+goto L113b;
+L113b:; /* $113B */
+address=(unsigned short)(0x8340 + x);m[address]=a;
+goto L113e;
+L113e:; /* $113E */
+x--;NZ(x);
+goto L113f;
+L113f:; /* $113F */
+if(!n)goto L1138;
+goto L1141;
+L1141:; /* $1141 */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L1142;
+L1142:; /* $1142 */
+x=a;NZ(x);
+goto L1143;
+L1143:; /* $1143 */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L1144;
+L1144:; /* $1144 */
+sp+=2;return;
+L1145:; /* $1145 */
+m[0x100 + sp--]=a;
+goto L1146;
+L1146:; /* $1146 */
+a=x;NZ(a);
+goto L1147;
+L1147:; /* $1147 */
+m[0x100 + sp--]=a;
+goto L1148;
+L1148:; /* $1148 */
+a=0x00;NZ(a);
+goto L114a;
+L114a:; /* $114A */
+x=0x3f;NZ(x);
+goto L114c;
+L114c:; /* $114C */
+address=(unsigned short)(0x8280 + x);m[address]=a;
+goto L114f;
+L114f:; /* $114F */
+address=(unsigned short)(0x83c0 + x);m[address]=a;
+goto L1152;
+L1152:; /* $1152 */
+x--;NZ(x);
+goto L1153;
+L1153:; /* $1153 */
+if(!n)goto L114c;
+goto L1155;
+L1155:; /* $1155 */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L1156;
+L1156:; /* $1156 */
+x=a;NZ(x);
+goto L1157;
+L1157:; /* $1157 */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L1158;
+L1158:; /* $1158 */
 sp+=2;return;
 L1159:; /* $1159 */
 a=m[0x0104];NZ(a);
@@ -1254,6 +2338,112 @@ if(!n)goto L2cf3;
 goto L2d54;
 L2d54:; /* $2D54 */
 sp+=2;return;
+L2ddd:; /* $2DDD */
+a=m[(unsigned char)(0xa1 + x)];NZ(a);
+goto L2ddf;
+L2ddf:; /* $2DDF */
+c=1;
+goto L2de0;
+L2de0:; /* $2DE0 */
+sbc(m[0x00a1]);
+goto L2de2;
+L2de2:; /* $2DE2 */
+m[0x100 + sp--]=(unsigned char)(0x30|c|(z<<1)|(d<<3)|(v<<6)|(n<<7));
+goto L2de3;
+L2de3:; /* $2DE3 */
+if(c)goto L2de9;
+goto L2de5;
+L2de5:; /* $2DE5 */
+a^=0xff;NZ(a);
+goto L2de7;
+L2de7:; /* $2DE7 */
+adc(0x01);
+goto L2de9;
+L2de9:; /* $2DE9 */
+c=a>=0x31;NZ((unsigned char)(a-0x31));
+goto L2deb;
+L2deb:; /* $2DEB */
+if(!c)goto L2def;
+goto L2ded;
+L2ded:; /* $2DED */
+a=0x30;NZ(a);
+goto L2def;
+L2def:; /* $2DEF */
+q=m[0x100 + (unsigned char)++sp];c=q&1;z=(q>>1)&1;d=(q>>3)&1;v=(q>>6)&1;n=q>>7;
+goto L2df0;
+L2df0:; /* $2DF0 */
+if(c)goto L2df4;
+goto L2df2;
+L2df2:; /* $2DF2 */
+a|=0x80;NZ(a);
+goto L2df4;
+L2df4:; /* $2DF4 */
+address=0x0062;m[address]=a;
+goto L2df6;
+L2df6:; /* $2DF6 */
+a=m[(unsigned char)(0x9e + x)];NZ(a);
+goto L2df8;
+L2df8:; /* $2DF8 */
+c=1;
+goto L2df9;
+L2df9:; /* $2DF9 */
+sbc(m[0x009e]);
+goto L2dfb;
+L2dfb:; /* $2DFB */
+m[0x100 + sp--]=(unsigned char)(0x30|c|(z<<1)|(d<<3)|(v<<6)|(n<<7));
+goto L2dfc;
+L2dfc:; /* $2DFC */
+if(c)goto L2e02;
+goto L2dfe;
+L2dfe:; /* $2DFE */
+a^=0xff;NZ(a);
+goto L2e00;
+L2e00:; /* $2E00 */
+adc(0x01);
+goto L2e02;
+L2e02:; /* $2E02 */
+c=a>=0x31;NZ((unsigned char)(a-0x31));
+goto L2e04;
+L2e04:; /* $2E04 */
+if(!c)goto L2e08;
+goto L2e06;
+L2e06:; /* $2E06 */
+a=0x30;NZ(a);
+goto L2e08;
+L2e08:; /* $2E08 */
+q=m[0x100 + (unsigned char)++sp];c=q&1;z=(q>>1)&1;d=(q>>3)&1;v=(q>>6)&1;n=q>>7;
+goto L2e09;
+L2e09:; /* $2E09 */
+if(c)goto L2e0d;
+goto L2e0b;
+L2e0b:; /* $2E0B */
+a|=0x80;NZ(a);
+goto L2e0d;
+L2e0d:; /* $2E0D */
+address=0x0063;m[address]=a;
+goto L2e0f;
+L2e0f:; /* $2E0F */
+sp+=2;return;
+L2e1c:; /* $2E1C */
+a=m[0x0063];NZ(a);
+goto L2e1e;
+L2e1e:; /* $2E1E */
+if(!n)goto L2e24;
+goto L2e20;
+L2e20:; /* $2E20 */
+a=0x01;NZ(a);
+goto L2e22;
+L2e22:; /* $2E22 */
+if(!z)goto L2e26;
+goto L2e24;
+L2e24:; /* $2E24 */
+a=0x00;NZ(a);
+goto L2e26;
+L2e26:; /* $2E26 */
+address=(unsigned char)(0xa4 + x);m[address]=a;
+goto L2e28;
+L2e28:; /* $2E28 */
+sp+=2;return;
 L2e29:; /* $2E29 */
 m[0x100 + sp--]=a;
 goto L2e2a;
@@ -1352,6 +2542,148 @@ y=0x24;NZ(y);
 goto L2ffe;
 L2ffe:; /* $2FFE */
 goto L17e2;
+L3001:; /* $3001 */
+a=0x01;NZ(a);
+goto L3003;
+L3003:; /* $3003 */
+a^=0xff;NZ(a);
+goto L3005;
+L3005:; /* $3005 */
+a&=m[(unsigned char)(0x95 + x)];NZ(a);
+goto L3007;
+L3007:; /* $3007 */
+address=(unsigned char)(0x95 + x);m[address]=a;
+goto L3009;
+L3009:; /* $3009 */
+y=m[(unsigned short)(0x276d + x)];NZ(y);
+goto L300c;
+L300c:; /* $300C */
+a=m[0xd015];NZ(a);
+goto L300f;
+L300f:; /* $300F */
+a&=m[(unsigned short)(0x2778 + y)];NZ(a);
+goto L3012;
+L3012:; /* $3012 */
+address=0xd015;m[address]=a;
+goto L3015;
+L3015:; /* $3015 */
+y=m[(unsigned short)(0x2770 + x)];NZ(y);
+goto L3018;
+L3018:; /* $3018 */
+if(n)goto L3023;
+goto L301a;
+L301a:; /* $301A */
+a=m[0xd015];NZ(a);
+goto L301d;
+L301d:; /* $301D */
+a&=m[(unsigned short)(0x2778 + y)];NZ(a);
+goto L3020;
+L3020:; /* $3020 */
+address=0xd015;m[address]=a;
+goto L3023;
+L3023:; /* $3023 */
+a=m[(unsigned char)(0xec + x)];NZ(a);
+goto L3025;
+L3025:; /* $3025 */
+if(z)goto L302f;
+goto L3027;
+L3027:; /* $3027 */
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x29;room_code(0x0e21);if(transition_pending)return;
+goto L302a;
+L302a:; /* $302A */
+a=0xff;NZ(a);
+goto L302c;
+L302c:; /* $302C */
+address=(unsigned short)(0x4f40 + y);m[address]=a;
+goto L302f;
+L302f:; /* $302F */
+a=m[(unsigned char)(0xef + x)];NZ(a);
+goto L3031;
+L3031:; /* $3031 */
+if(z)goto L303b;
+goto L3033;
+L3033:; /* $3033 */
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x35;room_code(0x0e21);if(transition_pending)return;
+goto L3036;
+L3036:; /* $3036 */
+a=0xff;NZ(a);
+goto L3038;
+L3038:; /* $3038 */
+address=(unsigned short)(0x4f40 + y);m[address]=a;
+goto L303b;
+L303b:; /* $303B */
+c=x>=0x01;NZ((unsigned char)(x-0x01));
+goto L303d;
+L303d:; /* $303D */
+if(!z)goto L3045;
+goto L303f;
+L303f:; /* $303F */
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x41;room_code(0x1131);if(transition_pending)return;
+goto L3042;
+L3042:; /* $3042 */
+goto L3048;
+L3045:; /* $3045 */
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x47;room_code(0x1145);if(transition_pending)return;
+goto L3048;
+L3048:; /* $3048 */
+goto L0d42;
+L304b:; /* $304B */
+a=m[0x0029];NZ(a);
+goto L304d;
+L304d:; /* $304D */
+c=a>=0x12;NZ((unsigned char)(a-0x12));
+goto L304f;
+L304f:; /* $304F */
+if(!z)goto L3052;
+goto L3051;
+L3051:; /* $3051 */
+sp+=2;return;
+L3052:; /* $3052 */
+m[0x100 + sp--]=a;
+goto L3053;
+L3053:; /* $3053 */
+a=x;NZ(a);
+goto L3054;
+L3054:; /* $3054 */
+m[0x100 + sp--]=a;
+goto L3055;
+L3055:; /* $3055 */
+a=y;NZ(a);
+goto L3056;
+L3056:; /* $3056 */
+m[0x100 + sp--]=a;
+goto L3057;
+L3057:; /* $3057 */
+y=0x8c;NZ(y);
+goto L3059;
+L3059:; /* $3059 */
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x5b;room_code(0x2509);if(transition_pending)return;
+goto L305c;
+L305c:; /* $305C */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L305d;
+L305d:; /* $305D */
+y=a;NZ(y);
+goto L305e;
+L305e:; /* $305E */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L305f;
+L305f:; /* $305F */
+x=a;NZ(x);
+goto L3060;
+L3060:; /* $3060 */
+a=m[0x100 + (unsigned char)++sp];NZ(a);
+goto L3061;
+L3061:; /* $3061 */
+x=m[0x0051];NZ(x);
+goto L3063;
+L3063:; /* $3063 */
+if(z)goto L3068;
+goto L3065;
+L3065:; /* $3065 */
+goto L3001;
+L3068:; /* $3068 */
+goto L407d;
 L30d4:; /* $30D4 */
 a=m[0x0029];NZ(a);
 goto L30d6;

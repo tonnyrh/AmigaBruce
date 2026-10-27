@@ -1,0 +1,172 @@
+0FED a9 40    LDA #$40
+0FEF 85 04    STA $04
+0FF1 a9 03    LDA #$03
+0FF3 85 05    STA $05
+0FF5 a9 00    LDA #$00
+0FF7 85 4e    STA $4e
+0FF9 0a       ASL A
+0FFA aa       TAX
+0FFB 20 07 10 JSR $1007
+0FFE e6 4e    INC $4e
+1000 a5 4e    LDA $4e
+1002 c9 14    CMP #$14
+1004 90 f3    BCC $0ff9
+1006 60       RTS
+1007 bd e2 4c LDA $4ce2,X
+100A 85 0a    STA $0a
+100C bd e3 4c LDA $4ce3,X
+100F 85 0b    STA $0b
+1011 a0 00    LDY #$00
+1013 b1 0a    LDA ($0a),Y
+1015 30 13    BMI $102a
+1017 48       PHA
+1018 b1 04    LDA ($04),Y
+101A aa       TAX
+101B 68       PLA
+101C 91 04    STA ($04),Y
+101E 8a       TXA
+101F 91 0a    STA ($0a),Y
+1021 20 7c 3a JSR $3a7c
+1024 20 43 0b JSR $0b43
+1027 4c 13 10 JMP $1013
+102A 60       RTS
+102B a2 13    LDX #$13
+102D bd 53 01 LDA $0153,X
+1030 9d b4 47 STA $47b4,X
+1033 ca       DEX
+1034 10 f7    BPL $102d
+1036 a9 fe    LDA #$fe
+1038 85 82    STA $82
+103A 60       RTS
+103B a2 13    LDX #$13
+103D bd b4 47 LDA $47b4,X
+1040 9d 53 01 STA $0153,X
+1043 ca       DEX
+1044 10 f7    BPL $103d
+1046 a9 00    LDA #$00
+1048 85 82    STA $82
+104A 60       RTS
+331C a6 51    LDX $51
+331E b5 e9    LDA $e9,X
+3320 85 5b    STA $5b
+3322 84 5a    STY $5a
+3324 a5 29    LDA $29
+3326 0a       ASL A
+3327 aa       TAX
+3328 bd e2 4c LDA $4ce2,X
+332B 85 14    STA $14
+332D bd e3 4c LDA $4ce3,X
+3330 85 15    STA $15
+3332 a0 00    LDY #$00
+3334 a9 01    LDA #$01
+3336 85 5c    STA $5c
+3338 b1 14    LDA ($14),Y
+333A 30 1e    BMI $335a
+333C d0 02    BNE $3340
+333E 46 5c    LSR $5c
+3340 c8       INY
+3341 c8       INY
+3342 b1 14    LDA ($14),Y
+3344 c5 5a    CMP $5a
+3346 f0 02    BEQ $334a
+3348 46 5c    LSR $5c
+334A c8       INY
+334B b1 14    LDA ($14),Y
+334D c5 5b    CMP $5b
+334F f0 02    BEQ $3353
+3351 46 5c    LSR $5c
+3353 a5 5c    LDA $5c
+3355 d0 05    BNE $335c
+3357 c8       INY
+3358 d0 da    BNE $3334
+335A 38       SEC
+335B 60       RTS
+335C 88       DEY
+335D 88       DEY
+335E 88       DEY
+335F a9 00    LDA #$00
+3361 91 14    STA ($14),Y
+3363 a6 29    LDX $29
+3365 d6 2a    DEC $2a,X
+3367 c8       INY
+3368 b1 14    LDA ($14),Y
+336A 29 7f    AND #$7f
+336C 18       CLC
+336D 60       RTS
+336E a5 29    LDA $29
+3370 0a       ASL A
+3371 aa       TAX
+3372 bd e2 4c LDA $4ce2,X
+3375 85 14    STA $14
+3377 bd e3 4c LDA $4ce3,X
+337A 85 15    STA $15
+337C a0 00    LDY #$00
+337E b1 14    LDA ($14),Y
+3380 30 31    BMI $33b3
+3382 d0 28    BNE $33ac
+3384 c8       INY
+3385 b1 14    LDA ($14),Y
+3387 48       PHA
+3388 c8       INY
+3389 b1 14    LDA ($14),Y
+338B 48       PHA
+338C c8       INY
+338D 84 52    STY $52
+338F b1 14    LDA ($14),Y
+3391 aa       TAX
+3392 20 67 1a JSR $1a67
+3395 68       PLA
+3396 a8       TAY
+3397 68       PLA
+3398 29 7f    AND #$7f
+339A 91 04    STA ($04),Y
+339C 09 80    ORA #$80
+339E 48       PHA
+339F 98       TYA
+33A0 18       CLC
+33A1 69 28    ADC #$28
+33A3 a8       TAY
+33A4 68       PLA
+33A5 91 04    STA ($04),Y
+33A7 a4 52    LDY $52
+33A9 4c af 33 JMP $33af
+33AC c8       INY
+33AD c8       INY
+33AE c8       INY
+33AF c8       INY
+33B0 4c 7e 33 JMP $337e
+33B3 a2 04    LDX #$04
+33B5 a9 00    LDA #$00
+33B7 9d 97 4e STA $4e97,X
+33BA ca       DEX
+33BB 10 fa    BPL $33b7
+2F04 8a       TXA
+2F05 d0 e2    BNE $2ee9
+2F07 20 0e 33 JSR $330e
+2F0A 20 1c 33 JSR $331c
+2F0D b0 2a    BCS $2f39
+2F0F 48       PHA
+2F10 20 15 33 JSR $3315
+2F13 68       PLA
+2F14 91 04    STA ($04),Y
+2F16 09 80    ORA #$80
+2F18 48       PHA
+2F19 98       TYA
+2F1A 18       CLC
+2F1B 69 28    ADC #$28
+2F1D a8       TAY
+2F1E 68       PLA
+2F1F 91 04    STA ($04),Y
+2F21 29 7f    AND #$7f
+2F23 48       PHA
+2F24 98       TYA
+2F25 38       SEC
+2F26 e9 28    SBC #$28
+2F28 a8       TAY
+2F29 68       PLA
+2F2A 20 0e 33 JSR $330e
+2F2D a9 7d    LDA #$7d
+2F2F a2 02    LDX #$02
+2F31 20 75 31 JSR $3175
+2F34 a0 8e    LDY #$8e
+2F36 20 09 25 JSR $2509

@@ -1,0 +1,277 @@
+{
+  "status": "passed_cache_invalidation_and_source_pixel_controls",
+  "natural_playthrough": false,
+  "cache_controls": [
+    {
+      "label": "cold-R05",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "label": "same-room",
+      "cache_hit": true,
+      "bytes": 20480,
+      "stats": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "label": "changed-palette",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "label": "changed-raster-bands",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        2,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "label": "changed-roll-pattern",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        3,
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "label": "changed-animated-code",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        4,
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "label": "restore-original-layout",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        5,
+        1,
+        1,
+        6
+      ]
+    },
+    {
+      "label": "changed-animated-color",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        6,
+        1,
+        1,
+        7
+      ]
+    },
+    {
+      "label": "restore-original-color",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        7,
+        1,
+        1,
+        8
+      ]
+    },
+    {
+      "label": "new-DMA-storage",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        7,
+        1,
+        1,
+        9
+      ]
+    },
+    {
+      "label": "insufficient-capacity",
+      "cache_hit": false,
+      "bytes": 0,
+      "stats": [
+        7,
+        1,
+        1,
+        10
+      ]
+    },
+    {
+      "label": "rebuild-after-capacity-failure",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        7,
+        1,
+        1,
+        11
+      ]
+    },
+    {
+      "label": "different-charset",
+      "cache_hit": false,
+      "bytes": 0,
+      "stats": [
+        7,
+        2,
+        1,
+        12
+      ]
+    },
+    {
+      "label": "fresh-source-reset",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        7,
+        3,
+        1,
+        13
+      ]
+    },
+    {
+      "label": "room-order-1",
+      "cache_hit": false,
+      "bytes": 0,
+      "stats": [
+        7,
+        4,
+        1,
+        14
+      ]
+    },
+    {
+      "label": "room-order-2",
+      "cache_hit": false,
+      "bytes": 0,
+      "stats": [
+        8,
+        4,
+        1,
+        15
+      ]
+    },
+    {
+      "label": "room-order-5",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        8,
+        5,
+        1,
+        16
+      ]
+    },
+    {
+      "label": "room-order-6",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        9,
+        5,
+        1,
+        17
+      ]
+    },
+    {
+      "label": "room-order-5",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        10,
+        5,
+        1,
+        18
+      ]
+    },
+    {
+      "label": "room-order-14",
+      "cache_hit": false,
+      "bytes": 0,
+      "stats": [
+        10,
+        6,
+        1,
+        19
+      ]
+    },
+    {
+      "label": "room-order-19",
+      "cache_hit": false,
+      "bytes": 0,
+      "stats": [
+        10,
+        7,
+        1,
+        20
+      ]
+    },
+    {
+      "label": "room-order-20",
+      "cache_hit": false,
+      "bytes": 18432,
+      "stats": [
+        10,
+        8,
+        1,
+        21
+      ]
+    },
+    {
+      "label": "room-order-5",
+      "cache_hit": false,
+      "bytes": 20480,
+      "stats": [
+        10,
+        9,
+        1,
+        22
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "f2919c4263a931f2f4b6f34f132ee8e61436b9f77d65a8dc4fae75cc84296f0e"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "dfec7451a4102e7655f605fe04b07798467bf824d9f099154d5cd81afe93695a"
+    },
+    {
+      "path": "test-room-reuse.ps1",
+      "sha256": "d3e9ca90b23fd96e67c08625ef0f8ea0593d33040cda503634d6cd6c6d1ee6b2"
+    },
+    {
+      "path": "tools/verify_room_reuse.py",
+      "sha256": "6b7f85a254deff538b66dd5690d83761922560010864235a68e4c1908846cbd3"
+    }
+  ]
+}

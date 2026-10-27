@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-26",
+  "status": "verified_scoped_source_enemy_entry_and_bomb_repair",
+  "source_files": [
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/core/combat.c",
+      "sha256": "b761aee89cd6fec28d3032d862f3b2d38d23ac7d6660ea864703711bc8d1ec46",
+      "original_path": "core/combat.c"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "f277b6a18076bb70fbb77222f67e8fb9f47a61784a80f9987ae416890ce8d973"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "05604fe17739c1a441d269113359dcaf7d82a1acd96d332ee4ba6796fb1b03d4"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/core/rooms.c",
+      "sha256": "90eab92ddd86020e424e2feb182ba18e9a52cb92fee05f011ac65fc6bcdda444",
+      "original_path": "core/rooms.c"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "ceb8cbeff7582d6bbcdc1b87064510de89e49485cc3cad0f2c0c048237fcfebd"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "2c4471a34e0ada547bafff9793edee30a0adb17a63646de9991cd0d9428d2059"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "c78d7ae9fd16e1a09e75c25a11c943d23b7adcda16ac988f29100398c1056583"
+    },
+    {
+      "path": "tests/bombs_entry_bridge.c",
+      "sha256": "e14a621e0c83f89a79510c95da72c79eaf62a1d5348f0d226ec591c92f7af877"
+    },
+    {
+      "path": "tests/bombs_entry_fixture.h",
+      "sha256": "e7505441daf55ad137d758e316425b3d28e104dffc45b0f23fb9430a901dcf23"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/tests/session_fixture.h",
+      "sha256": "64a76f32cb8eb841c40d8b522368bcd9bc376c335b5cec9f3f37cdce1c17904e",
+      "original_path": "tests/session_fixture.h"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/tools/audit_bombs_entry.py",
+      "sha256": "1f5d01bde07974a89b0f45638206c9a56e6af6c89fde561f1a5a54ef52e9d71a",
+      "original_path": "tools/audit_bombs_entry.py"
+    },
+    {
+      "path": "tools/verify_bombs_entry_delivery.py",
+      "sha256": "ca3374f16ffca3e80d99ef33636a4c2ac2bb7296f99418485bda2bdc6b9901de"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/tools/verify_c64_candidate.py",
+      "sha256": "4329b5bd45083720bfe8cc14c746f75fa716cd29108b0d443200c5e617ede9ec",
+      "original_path": "tools/verify_c64_candidate.py"
+    },
+    {
+      "path": "test-bombs-entry.ps1",
+      "sha256": "6268c387694a30a4a8b6af34ed1f367d2e7018cad3eedf0fb447348134018ba8"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/test-amiga.ps1",
+      "sha256": "df6f2287fd4aa7d0b4e8c93ea4c42a9866ff12a6ab5c6eff79000b445bfd6423",
+      "original_path": "test-amiga.ps1"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/test-core.ps1",
+      "sha256": "04e80b220862c009c4fc10859e6b8ac33f5335c58bceb15465c41297f0f6bf14",
+      "original_path": "test-core.ps1"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/test-parity.ps1",
+      "sha256": "6a30876840853e767303db1e417bec12d8f08168229618dd4910a2843b44a089",
+      "original_path": "test-parity.ps1"
+    },
+    {
+      "path": "docs/BOMBS_ENTRY.md",
+      "sha256": "e6587c43cf73e09658bf386bbd6b60a0bc7b5ed5a5903cc3c85ea393e35fdef0"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/reference/analysis/bombs-entry-2026-10-26/report.json",
+      "sha256": "69b7696f063109f021855bd0bc989e621823be17cf96fe0a56551037385ba493",
+      "original_path": "reference/analysis/bombs-entry-2026-10-26/report.json"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/reference/validation/a500-c64-combat-diagnostic.json",
+      "sha256": "712e19efdad38820daac9549f75a55767e78c779304a6c624bb2b3de948cfa3d"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/reference/validation/c64-core.json",
+      "sha256": "51628fcc5c1ae09288f95f7b26294da5611f3463923049f0e1aa28d5afe5bb1f",
+      "original_path": "reference/validation/c64-core.json"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/reference/validation/c64-room-runtime.json",
+      "sha256": "8df21014f521498fc2b4c31034c9c03bf0acd6711b7bdb275b9d8b2856b929c0",
+      "original_path": "reference/validation/c64-room-runtime.json"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/reference/analysis/ai-audit-2026-10-25/report.json",
+      "sha256": "08e528d3c1ce868862e588d421564fc6da860832f032bc79b729033bbff648e2",
+      "original_path": "reference/analysis/ai-audit-2026-10-25/report.json"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/amiga/out/bruce_amiga.exe",
+      "sha256": "70b899e954fb971500836cb03163331d13a091feada461122714d9cc57a7dc74",
+      "original_path": "amiga/out/bruce_amiga.exe"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/amiga/out/bruce_amiga.adf",
+      "sha256": "aa434fd76eefb77a0bbd071e62c7874d7b45586c54cb0aaa2dddb905ba523998",
+      "original_path": "amiga/out/bruce_amiga.adf"
+    }
+  ],
+  "native_build": [
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/amiga/out/bruce_test.exe",
+      "sha256": "44477c4166d7657a2662497b232893bf0804e43610e2b26c83ff86827beac50a",
+      "original_path": "amiga/out/bruce_test.exe"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/amiga/out/bruce_test.adf",
+      "sha256": "9083cae311f21793ab6a9ce1c96d7c75ff2e38f3ea7a9f6a058da3494c9ba955",
+      "original_path": "amiga/out/bruce_test.adf"
+    }
+  ],
+  "native_validation_complete": true,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "full_actor_parity": false,
+  "full_m4_complete": false,
+  "realtime_gate_passed": false,
+  "limits": [
+    "Original memory reader used; full IRQ/caller/read order still incomplete, no new RNG distribution",
+    "Fixtures inject positions and prior states, not natural source play",
+    "NPC entry animations/timers and complete object/AI dispatch remain partial"
+  ],
+  "historical": true,
+  "superseded_by": "reference/validation/room8-blasts-delivery.json"
+}

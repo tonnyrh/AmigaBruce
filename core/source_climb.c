@@ -53,3 +53,31 @@ unsigned char bl_source_climb_pose(const BlSourceActor *a,long previous_pose){
     if(!a->state && (old==10 || old==12))return old;
     return (unsigned char)(old==10?12:10);
 }
+long bl_source_moving_net_step(BlSourceActor *a,unsigned char *delay,
+    unsigned char *hold,long input,long contact,long phase,long reverse){
+    unsigned char direction=0,i,counter=a->counter;
+    long sound=0;
+    if(!(contact&4)){
+        /* $2189 -> $217D/$2504 enters $1F92, bypassing $1F89's lock. */
+        a->state=a->wait=a->counter=0;return 0;
+    }
+    *hold=1; /* $218D; only voluntary movement clears AA. */
+    if(*delay)--*delay;
+    else{
+        switch(input&15){
+        case 4:direction=1;break;
+        case 8:direction=2;break;
+        case 1:direction=3;break;
+        case 2:direction=4;break;
+        }
+        if(direction){
+            for(i=0;i<2;i++)unit(a,direction);
+            *hold=0;*delay=4;sound=1; /* $21E5-$21EB */
+        }
+    }
+    /* $21EE-$2204: carry is vertical, only on phase $60==1.
+     * Glyph scroll ($2C70-$2D54) runs before this actor step. */
+    if(phase==1)for(i=0;i<2;i++)unit(a,(unsigned char)(reverse?2:1));
+    a->state=23;a->counter=counter;a->wait=0; /* $2207-$2234/$24F4 */
+    return sound;
+}

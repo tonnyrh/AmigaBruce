@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-27",
+  "purpose": "Pre OP0 immutable comparison snapshot; current dirty worktree retained",
+  "files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "8789b414748a1a8e76a4d1bbad8419d80c201891e4f8ac212d4d355bdfbcfaef",
+      "bytes": 88700
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "5a5c6fa937efc6e6c2a5d01f4ee2dbfbf6e92feabc0b4e7d1423af8f31709bc4",
+      "bytes": 7404
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+      "bytes": 3622
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+      "bytes": 743
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf",
+      "bytes": 1202
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "e9c066c48459d44d5f561515354be6a07d54b7d786d419bbb143988aa8b6311e",
+      "bytes": 6851
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "82ea6a3488823548eafc8a66770bf132255ce47d5c613290f90b5eb9bdcc7994",
+      "bytes": 77174
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "da96632904302a8054d65e2075720a95152d9df596f9cce8517c17f8392b7b0a",
+      "bytes": 5391
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "310d019af07a23e6f5b0f202779ae386fe3bb461541b554cb132c6780baaa398",
+      "bytes": 4465
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "e5e105d12183b5d353d60d987f69f91801b28b5d5fbaf9b5de909998773be725",
+      "bytes": 17268
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "8f3366c57cdc965c5d244124dfbe3d42acea46ffecbd05d62db44b633ac39cf7",
+      "bytes": 525395
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
+      "sha256": "c3234739a30c11a26547362b85213a3d3105be41e5416ab7a05b546c5cb5f4fa",
+      "bytes": 16665
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "e58a842198388a1f7c5cfa3abe9de51b55db1c80c1a7bd660ab467e1f7670c5a",
+      "bytes": 14819
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "de22805bb66c87a918166421d105c94457c9ccc4e376c711161890f109825950",
+      "bytes": 3474
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-final.txt",
+      "sha256": "ae1b39c63dd0b3c94c23604ec26b30f9dd2ef3d93a6e3d60f91d3b9516489531",
+      "bytes": 4005
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
+      "sha256": "b0078f7001a3dc30369bde8b83d583bfe2f3183d413d7fe61ab29617b075d55e",
+      "bytes": 1469
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "5553cbba0a9f9ff84444205c55f01a5cb9b48c499152ffd6b9986aa00e25d1ef",
+      "bytes": 335004
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "ec00b70dcbaf0ab2209a57f0c6cd3d0845351290b8c64e8824b31d288bce402d",
+      "bytes": 1706984
+    },
+    {
+      "path": "amiga/out/bruce_amiga.map",
+      "sha256": "80c6aeb39a90ec4d5cb30f21a4103c58205f15a13126640e7d98b83a664fddfd",
+      "bytes": 79365
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "89e540aeba5fa8c41bc7862027c9ff299af32c319a5194acd9336f71e8cd88f4",
+      "bytes": 901120
+    }
+  ]
+}

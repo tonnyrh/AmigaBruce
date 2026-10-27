@@ -1,0 +1,727 @@
+{
+  "date": "2026-10-26",
+  "label": "updated",
+  "status": "controlled_room10_presentation_diagnostic",
+  "profile": "PAL68000 OCS KS1.3 512KiB Chip+512KiB slow",
+  "natural_playthrough": false,
+  "full_parity": false,
+  "source_files": [
+    {
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064",
+      "path": "core/c64_hit_data.h"
+    },
+    {
+      "sha256": "ceb8cbeff7582d6bbcdc1b87064510de89e49485cc3cad0f2c0c048237fcfebd",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "2c4471a34e0ada547bafff9793edee30a0adb17a63646de9991cd0d9428d2059",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "d8003b597df01d335cbf3c07d19d2873d5678ea6ee2784adba2cb8e63dc2cf5d",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "7225b91c017c3e6c786dad0fd356b11da118cab0da0d5f5d264e98e9800b6040",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
+    },
+    {
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
+    },
+    {
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0",
+      "path": "core/c64_sprite_pose_data.h"
+    },
+    {
+      "sha256": "3a5bb3ba791da020404ee078140089bca326fd23e9c79d1385b320e1bd65af9b",
+      "path": "core/c64_sprites.c"
+    },
+    {
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9",
+      "path": "core/c64_sprites.h"
+    },
+    {
+      "sha256": "3d8062517d3e01f8372841ac63a821aa825592e3c3c58c7a4a75e8fd34886a6f",
+      "path": "core/combat.c"
+    },
+    {
+      "sha256": "b7bec80142c9f4aa252d1d25a1f0b84925bdfc843101be2fbd2b440570fdba02",
+      "path": "core/combat.h"
+    },
+    {
+      "sha256": "a808c7ccd1f5b97b8e178498d504d10635cbc8e013d9502a35e4e55b9cdb3a7f",
+      "path": "core/game.c"
+    },
+    {
+      "sha256": "47fc6a69a3a800e4aaacb5bf02b938162db40d03c5c6fb3f2935113d9c4a268c",
+      "path": "core/game.h"
+    },
+    {
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404",
+      "path": "core/presentation.c"
+    },
+    {
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445",
+      "path": "core/presentation.h"
+    },
+    {
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "path": "core/room_data.h"
+    },
+    {
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059",
+      "path": "core/room_geometry.h"
+    },
+    {
+      "sha256": "524cc8a99de8fbc8a51cd4ac5fbd844cd52c292d47bfea91327cfcaf31652d5b",
+      "path": "core/rooms.c"
+    },
+    {
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "path": "core/rooms.h"
+    },
+    {
+      "sha256": "ec51965d06c9c133257616f4b9c1c51a9c9a14ed0fba0d903113f732c95c68a1",
+      "path": "core/scene_copy.h"
+    },
+    {
+      "sha256": "f9b1241aa1353d41246c9914bfdfc763c1247d16a7e4bc82e2c65ee7c5274345",
+      "path": "core/session.c"
+    },
+    {
+      "sha256": "58fce65263325d704ac39d8ccfa862b367ad85b8316cf90f9f4f477841bc45ef",
+      "path": "core/session.h"
+    },
+    {
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e",
+      "path": "core/source_audio_data.h"
+    },
+    {
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+      "path": "core/source_audio.c"
+    },
+    {
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+      "path": "core/source_audio.h"
+    },
+    {
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b",
+      "path": "core/source_climb.c"
+    },
+    {
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433",
+      "path": "core/source_climb.h"
+    },
+    {
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf",
+      "path": "core/source_dma.c"
+    },
+    {
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e",
+      "path": "core/source_dma.h"
+    },
+    {
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b",
+      "path": "core/source_wall.c"
+    },
+    {
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56",
+      "path": "core/source_wall.h"
+    },
+    {
+      "sha256": "944865f3613379b82c482fc24e2b060a8ffc601428f47b3a0e6bdffbcbfefd08",
+      "path": "tests/ai_adapter_bridge.c"
+    },
+    {
+      "sha256": "e14a621e0c83f89a79510c95da72c79eaf62a1d5348f0d226ec591c92f7af877",
+      "path": "tests/bombs_entry_bridge.c"
+    },
+    {
+      "sha256": "e7505441daf55ad137d758e316425b3d28e104dffc45b0f23fb9430a901dcf23",
+      "path": "tests/bombs_entry_fixture.h"
+    },
+    {
+      "sha256": "7b115d4c81732be222e5e65f6dd35447e2886b3139059063a6d74561390219b2",
+      "path": "tests/c64_rooms_test.c"
+    },
+    {
+      "sha256": "861c15953b47fcbf5f0a5cdfdf7d414df4a9a9e23e67ae267634bdcacab06fe9",
+      "path": "tests/climb_bridge.c"
+    },
+    {
+      "sha256": "f2824bd318619057f87178d825f6af1742090fe72d776bd6f4b71d8866b5366a",
+      "path": "tests/climb_fixture.h"
+    },
+    {
+      "sha256": "a9b6b8918f16da325467e19535ce8012fc01d04ebcb198267a17a2286ad67ed3",
+      "path": "tests/combat_test.c"
+    },
+    {
+      "sha256": "e664cb25360c0a01b1721373ce89e692033967777a949d003b71c0a3790aa762",
+      "path": "tests/combat_trace.c"
+    },
+    {
+      "sha256": "8d0271902971be7117dac14c181ac618fab8006e69d086a804a8f4ef288f5ba9",
+      "path": "tests/contact_bridge.c"
+    },
+    {
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28",
+      "path": "tests/contact_fixture.h"
+    },
+    {
+      "sha256": "eb34ade1f8d9573a5f2e77f2ea1e2964ebc7d54239d0ff1a3ed1b4a29291e940",
+      "path": "tests/core_test.c"
+    },
+    {
+      "sha256": "237f3d571a104d8191a9ba184ad7e1402a4023c7720e7f3c3bb32c483706b70b",
+      "path": "tests/core_trace.c"
+    },
+    {
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b",
+      "path": "tests/gate_fixture.h"
+    },
+    {
+      "sha256": "b2f376b595adb7626f406adae7555a70d09fae54552b54e328fa181433259005",
+      "path": "tests/movement_bridge.c"
+    },
+    {
+      "sha256": "ee4a38d83d59cef1cc744cef12b482379d7a1151f34e547892f46cecafabff3f",
+      "path": "tests/movement_fixture.h"
+    },
+    {
+      "sha256": "517eb2ba20dbd08f880f7af7cfe58415a4b3d1c08ce2f065efcf37e4e0235e3f",
+      "path": "tests/moving_net_bridge.c"
+    },
+    {
+      "sha256": "26164c3e58c83abf929ced769b0ba8755f670ba67994d9700bdfa27f6f8712a0",
+      "path": "tests/moving_net_fixture.h"
+    },
+    {
+      "sha256": "f649111d35e797059b5709b815f9381c99540229295930b4e9e35267111a2103",
+      "path": "tests/ninja_wall_bridge.c"
+    },
+    {
+      "sha256": "679936008d60be25d4a20a9f651aea03c884e3ca3704fb297a0dfa260e6e60d7",
+      "path": "tests/ninja_wall_fixture.h"
+    },
+    {
+      "sha256": "c8a91b8b0c9df921c563e38542200132cdacdebd27a6e89a1922cdd8fcc2c4d5",
+      "path": "tests/npc_recoil_fixture.h"
+    },
+    {
+      "sha256": "b6b20c2dd9a607d59d19cbf707a362e90703dcda571ba7b99b9fa50d06a132b7",
+      "path": "tests/packed_capture_host.c"
+    },
+    {
+      "sha256": "c6c69e5b051ae9123c44bfda6d02ac92fd91df80fce2fcc471a20d011fd7857e",
+      "path": "tests/packed_capture.h"
+    },
+    {
+      "sha256": "b373e036b51f383eaba2e312a9e6d6018cd768021d2589eafce45840a34235dd",
+      "path": "tests/room_fixture.h"
+    },
+    {
+      "sha256": "7705cb643802638e9b42b64fe31586907811a85d8a5be69cefd272faaa31e2a1",
+      "path": "tests/room8_blast_bridge.c"
+    },
+    {
+      "sha256": "4c5f97f94d56f9abce674ed221e2fd68d84d6cfa02c429e0237dbcc58ba3b78e",
+      "path": "tests/room8_blast_fixture.h"
+    },
+    {
+      "sha256": "35e34cc445edf02f8a01c4cf68304a350b979f68eaf4c3f5540cc5e50626471d",
+      "path": "tests/rooms_test.c"
+    },
+    {
+      "sha256": "f8d0ed96c531ad980f4846b098ab00435bb1c72a60ed8fd422da93fdef8fa689",
+      "path": "tests/rooms_trace.c"
+    },
+    {
+      "sha256": "c6728b633548a0c96a204d9ae93226f15c1f5d36ea7acc1c590357430dca8b94",
+      "path": "tests/scene_copy_bridge.c"
+    },
+    {
+      "sha256": "8b0a99c6a12a4a4e91afc2a60318ba5f78cd5f1b16e9f965e215e6c3238e4eed",
+      "path": "tests/session_bridge.c"
+    },
+    {
+      "sha256": "a5c2ed481ef7a0af7b3e06e015fe3a227b0de19ff1a4736d699dc6524c47e615",
+      "path": "tests/session_fixture.h"
+    },
+    {
+      "sha256": "c7c0c5036874255fd3797fd9108a7c22bfbec6736770d01344fea658ab0c54cc",
+      "path": "tests/session_wall_fixture.h"
+    },
+    {
+      "sha256": "a0badaf7bb633cde1745835d5ea3d9ce88e60ef0fa2735a0820c4824084d58c5",
+      "path": "tests/source_dma_fixture.h"
+    },
+    {
+      "sha256": "7bb591b6eec71c5d6ca366117324c09edf5ec8be43b3b5eba8d3a99baf6a9cc7",
+      "path": "tests/sprite_fixture.h"
+    },
+    {
+      "sha256": "b6065fd1077322ebaf02bcdb3bdba7af4c2021acf8c2c2d826e135ef06dff976",
+      "path": "tests/visual_test.c"
+    },
+    {
+      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203",
+      "path": "amiga/c64_sprite_data.h"
+    },
+    {
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0",
+      "path": "amiga/combat_audio_data.h"
+    },
+    {
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10",
+      "path": "amiga/combat_audio.h"
+    },
+    {
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f",
+      "path": "amiga/fighter_art_data.h"
+    },
+    {
+      "sha256": "4e534017bb7b769ae5f8d6f96f2064582f965b8b8f3d9aa884767c55cc3367b2",
+      "path": "amiga/fighter_dma_data.h"
+    },
+    {
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b",
+      "path": "amiga/intro_audio_data.h"
+    },
+    {
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027",
+      "path": "amiga/intro_audio.h"
+    },
+    {
+      "sha256": "dce62771cdcc6eeff91b1bb4a0e8ac47f122781496c28b84408c2b8572d868c7",
+      "path": "amiga/main.c"
+    },
+    {
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d",
+      "path": "amiga/room_background_data.h"
+    },
+    {
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751",
+      "path": "amiga/runtime.c"
+    },
+    {
+      "sha256": "da96632904302a8054d65e2075720a95152d9df596f9cce8517c17f8392b7b0a",
+      "path": "amiga/source_audio.h"
+    },
+    {
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291",
+      "path": "amiga/start.s"
+    },
+    {
+      "sha256": "d6202014bb867a97c8b33dbd53451e461451885c1d650676562490a11200c75e",
+      "path": "amiga-build.ps1"
+    },
+    {
+      "sha256": "9bf13052a3b140541f4f7b2aeee03677eaa9c6e9222691f71b3109645f71cd7b",
+      "path": "amiga-run.ps1"
+    },
+    {
+      "sha256": "7ddf594596bd6ba154e9d742945c1da734947d0f4e8ab37f20c67844dded0c02",
+      "path": "reference/analysis/room10-electric-2026-10-26/updated/test-room10-electric.ps1"
+    },
+    {
+      "sha256": "f3c58024c92a73a9366f850e49241373e0859a847185f8cb87a3a321ec5312d9",
+      "path": "amiga/out/bruce_test.exe"
+    },
+    {
+      "sha256": "0cac2bff7e5588699016e36919d5b0fb5e14cf2d650751b9ef2aee22be8279f9",
+      "path": "amiga/out/bruce_test.adf"
+    }
+  ],
+  "runs": [
+    {
+      "kick_periods": "0",
+      "target_respawns": "0",
+      "present_min_line": "301",
+      "final_y": "198",
+      "parity": "PROVISIONAL",
+      "room_transitions": "0",
+      "c64_profile_2": "0",
+      "room_work_sum_0": "0",
+      "c64_profile_8": "0",
+      "combat_mode": "1",
+      "pose_yamo_hi": "0",
+      "room_load_fields": "11736",
+      "source_dma_backend": "2",
+      "lantern_pickups": "0",
+      "source_clock_miss_15": "954,5",
+      "capture_color15": "3003",
+      "final_room": "9",
+      "room_reuse_stat_0": "0",
+      "stage1": "200",
+      "c64_profile_1": "0",
+      "contact_fixture_cases": "29",
+      "c64_profile_5": "0",
+      "pose_ninja_hi": "0",
+      "climb_fixture_failure": "0",
+      "timing_jump_fields": "0",
+      "room_test": "0",
+      "intro_silence_reload": "1",
+      "timing_mode_changes": "0",
+      "chip_largest_loaded": "60832",
+      "c64_profile_12": "0",
+      "source_profile": "0",
+      "source_clock_miss_10": "871,5",
+      "source_clock_miss_0": "532,6",
+      "source_clock_miss_13": "921,5",
+      "capture_decoded_hash": "573518504",
+      "c64_profile_14": "0",
+      "electric_mismatch_fields": "234",
+      "room_reuse_stat_2": "0",
+      "source_dma_fixture_failure": "0",
+      "intro_pcm_hash": "508731667",
+      "source_clock_starts": "2",
+      "source_clock_miss_2": "612,6",
+      "stage4": "270",
+      "sprite_fixture_failure": "0",
+      "score": "0",
+      "max_held_image_streak": "5",
+      "source_clock_miss_6": "724,6",
+      "timing_walk_fields": "0",
+      "room_work_sum_1": "0",
+      "gate_checks": "0",
+      "pose_ninja": "0",
+      "intro_dma_stopped": "1",
+      "held_image_fields": "444",
+      "cia_miss_hsync": "635",
+      "enemy_edge_checks": "0",
+      "source_clock_miss_12": "904,5",
+      "combat_warmup_steps": "0",
+      "source_sfx_request_mask": "32767",
+      "contact_fixture_failure": "0",
+      "source_clock_miss_9": "855,5",
+      "room_load_test": "0",
+      "stage3": "256",
+      "electric_checks": "900",
+      "c64_room_fault": "0",
+      "fall_starts": "0",
+      "framebuffer_capture_gap": "259",
+      "chip_largest_before": "438184",
+      "source_audio_hash": "641614181",
+      "chip_available_before": "438184",
+      "enemy_defeats": "0",
+      "source_clock_miss_1": "609,6",
+      "source_dma_image_bytes": "3072",
+      "room_work_max_1": "0",
+      "source_audio_voice_mask": "7",
+      "source_clock_paused_fields": "0",
+      "bad_presents": "0",
+      "room_work_max_4": "0",
+      "capture_packed_bytes": "9612",
+      "timing_pal_lines": "0",
+      "intro_samples": "26460",
+      "punch_periods": "0",
+      "frames": "900",
+      "climb_fixture_cases": "390",
+      "source_music_fields": "120",
+      "gate_test": "0",
+      "visited_rooms_mask": "513",
+      "fighter_cache_hash": "2572544731",
+      "room_tour": "0",
+      "present_max_line": "303",
+      "c64_profile_11": "0",
+      "intro_fields": "350",
+      "moving_net_fixture_cases": "430",
+      "source_clock_miss_14": "937,5",
+      "source_clock_missed": "35",
+      "max_work_frame": "61",
+      "expansion_available_before": "14272",
+      "target_hits": "0",
+      "source_clock_pauses": "2",
+      "restored_os": "1",
+      "intro_finished": "1",
+      "stage2": "236",
+      "test_start_room": "0",
+      "source_audio_chip_bytes": "5332",
+      "max_work_lines": "558",
+      "source_clock_miss_8": "804,6",
+      "session_fixture_failure": "0",
+      "movement_fixture_failure": "0",
+      "source_reader_page": "104",
+      "source_tick_max_lines": "125",
+      "source_dma_faults": "0",
+      "explicit_chip_bytes": "352772",
+      "room_work_max_3": "0",
+      "c64_profile_10": "0",
+      "c64_profile_7": "0",
+      "intro_bitmap_restored": "1",
+      "room_reuse_stat_1": "0",
+      "chip_free_loaded": "60832",
+      "movement_fixture_cases": "70",
+      "session_wall_fixture_failure": "0",
+      "target_defeats": "0",
+      "c64_profile_0": "0",
+      "room_load_events": "0",
+      "first_missed_frame": "3",
+      "enemy_spawns": "0",
+      "source_music_hash": "2708371906",
+      "pose_bruce_hi": "0",
+      "source_audio_fields": "1891",
+      "source_clock_miss_5": "661,6",
+      "source_clock_elapsed": "2044",
+      "stage0": "4",
+      "player_respawns": "0",
+      "missed_frames": "740",
+      "enemy_edge_test": "0",
+      "source_clock_miss_4": "655,6",
+      "c64_profile_3": "0",
+      "sprite_fixture_cases": "324",
+      "source_audio_faults": "0",
+      "combat_hits": "0",
+      "electric_max_streak": "4",
+      "source_dma_fixture_cases": "7",
+      "room_reuse_stat_3": "0",
+      "npc_recoil_fixture_cases": "24",
+      "room_work_sum_4": "0",
+      "timing_fall_fields": "0",
+      "player_deaths": "0",
+      "room_reuse": "1",
+      "final_x": "12",
+      "fighter_cache_bytes": "73680",
+      "max_pal_field_gap": "259",
+      "capture_original_hash": "573518504",
+      "c64_render_checks": "2",
+      "c64_profile_15": "0",
+      "c64_profile_4": "4",
+      "source_clock_max_gap": "2",
+      "prone_periods": "0",
+      "timing_seen": "0",
+      "c64_profile_9": "0",
+      "c64_profile_13": "0",
+      "session_wall_fixture_cases": "324",
+      "npc_recoil_fixture_failure": "0",
+      "pose_yamo": "0",
+      "c64_profile_6": "0",
+      "target_stomps": "0",
+      "stage5": "271",
+      "moving_net_fixture_failure": "0",
+      "climb_periods": "0",
+      "source_clock_miss_3": "632,6",
+      "runtime_arithmetic_errors": "0",
+      "source_dma_changes": "72",
+      "cpu_stamp_chip_bytes": "0",
+      "pose_bruce": "2",
+      "air_periods": "0",
+      "c64_render_mismatches": "0",
+      "max_gap_excluding_framebuffer_capture": "3",
+      "room_work_sum_2": "0",
+      "jump_starts": "0",
+      "first_missed_hsync": "318",
+      "collect_frame_drops": "1",
+      "room_work_sum_3": "0",
+      "room_work_max_2": "0",
+      "source_clock_miss_11": "888,5",
+      "room_work_max_0": "0",
+      "capture_fault": "0",
+      "source_clock_miss_7": "740,1",
+      "drawn_image_fields": "456",
+      "max_hsync_gap": "638",
+      "room_load_max_gap": "11733",
+      "canvas_residue_bytes": "3696",
+      "c64_room_revision": "1942"
+    },
+    {
+      "kick_periods": "0",
+      "target_respawns": "0",
+      "present_min_line": "301",
+      "final_y": "198",
+      "parity": "PROVISIONAL",
+      "room_transitions": "0",
+      "c64_profile_2": "0",
+      "room_work_sum_0": "0",
+      "c64_profile_8": "0",
+      "combat_mode": "1",
+      "pose_yamo_hi": "0",
+      "room_load_fields": "25409",
+      "source_dma_backend": "2",
+      "lantern_pickups": "0",
+      "source_clock_miss_15": "1004,5",
+      "capture_color15": "3003",
+      "final_room": "9",
+      "room_reuse_stat_0": "0",
+      "stage1": "200",
+      "c64_profile_1": "0",
+      "contact_fixture_cases": "29",
+      "c64_profile_5": "0",
+      "pose_ninja_hi": "0",
+      "climb_fixture_failure": "0",
+      "timing_jump_fields": "0",
+      "room_test": "0",
+      "intro_silence_reload": "1",
+      "timing_mode_changes": "0",
+      "chip_largest_loaded": "60832",
+      "c64_profile_12": "0",
+      "source_profile": "0",
+      "source_clock_miss_10": "922,5",
+      "source_clock_miss_0": "554,6",
+      "source_clock_miss_13": "971,5",
+      "capture_decoded_hash": "573518504",
+      "c64_profile_14": "0",
+      "electric_mismatch_fields": "234",
+      "room_reuse_stat_2": "0",
+      "source_dma_fixture_failure": "0",
+      "intro_pcm_hash": "508731667",
+      "source_clock_starts": "2",
+      "source_clock_miss_2": "673,6",
+      "stage4": "270",
+      "sprite_fixture_failure": "0",
+      "score": "0",
+      "max_held_image_streak": "5",
+      "source_clock_miss_6": "856,5",
+      "timing_walk_fields": "0",
+      "room_work_sum_1": "0",
+      "gate_checks": "0",
+      "pose_ninja": "0",
+      "intro_dma_stopped": "1",
+      "held_image_fields": "445",
+      "cia_miss_hsync": "635",
+      "enemy_edge_checks": "0",
+      "source_clock_miss_12": "955,5",
+      "combat_warmup_steps": "0",
+      "source_sfx_request_mask": "32767",
+      "contact_fixture_failure": "0",
+      "source_clock_miss_9": "905,5",
+      "room_load_test": "0",
+      "stage3": "256",
+      "electric_checks": "900",
+      "c64_room_fault": "0",
+      "fall_starts": "0",
+      "framebuffer_capture_gap": "261",
+      "chip_largest_before": "438184",
+      "source_audio_hash": "3504494390",
+      "chip_available_before": "438184",
+      "enemy_defeats": "0",
+      "source_clock_miss_1": "656,6",
+      "source_dma_image_bytes": "3072",
+      "room_work_max_1": "0",
+      "source_audio_voice_mask": "7",
+      "source_clock_paused_fields": "0",
+      "bad_presents": "0",
+      "room_work_max_4": "0",
+      "capture_packed_bytes": "9612",
+      "timing_pal_lines": "0",
+      "intro_samples": "26460",
+      "punch_periods": "0",
+      "frames": "900",
+      "climb_fixture_cases": "390",
+      "source_music_fields": "120",
+      "gate_test": "0",
+      "visited_rooms_mask": "513",
+      "fighter_cache_hash": "2572544731",
+      "room_tour": "0",
+      "present_max_line": "303",
+      "c64_profile_11": "0",
+      "intro_fields": "350",
+      "moving_net_fixture_cases": "430",
+      "source_clock_miss_14": "988,5",
+      "source_clock_missed": "38",
+      "max_work_frame": "61",
+      "expansion_available_before": "14272",
+      "target_hits": "0",
+      "source_clock_pauses": "2",
+      "restored_os": "1",
+      "intro_finished": "1",
+      "stage2": "236",
+      "test_start_room": "0",
+      "source_audio_chip_bytes": "5332",
+      "max_work_lines": "555",
+      "source_clock_miss_8": "889,5",
+      "session_fixture_failure": "0",
+      "movement_fixture_failure": "0",
+      "source_reader_page": "104",
+      "source_tick_max_lines": "126",
+      "source_dma_faults": "0",
+      "explicit_chip_bytes": "352772",
+      "room_work_max_3": "0",
+      "c64_profile_10": "0",
+      "c64_profile_7": "0",
+      "intro_bitmap_restored": "1",
+      "room_reuse_stat_1": "0",
+      "chip_free_loaded": "60832",
+      "movement_fixture_cases": "70",
+      "session_wall_fixture_failure": "0",
+      "target_defeats": "0",
+      "c64_profile_0": "0",
+      "room_load_events": "0",
+      "first_missed_frame": "3",
+      "enemy_spawns": "0",
+      "source_music_hash": "2708371906",
+      "pose_bruce_hi": "0",
+      "source_audio_fields": "1892",
+      "source_clock_miss_5": "845,5",
+      "source_clock_elapsed": "2048",
+      "stage0": "4",
+      "player_respawns": "0",
+      "missed_frames": "740",
+      "enemy_edge_test": "0",
+      "source_clock_miss_4": "770,6",
+      "c64_profile_3": "0",
+      "sprite_fixture_cases": "324",
+      "source_audio_faults": "0",
+      "combat_hits": "0",
+      "electric_max_streak": "4",
+      "source_dma_fixture_cases": "7",
+      "room_reuse_stat_3": "0",
+      "npc_recoil_fixture_cases": "24",
+      "room_work_sum_4": "0",
+      "timing_fall_fields": "0",
+      "player_deaths": "0",
+      "room_reuse": "1",
+      "final_x": "12",
+      "fighter_cache_bytes": "73680",
+      "max_pal_field_gap": "261",
+      "capture_original_hash": "573518504",
+      "c64_render_checks": "2",
+      "c64_profile_15": "0",
+      "c64_profile_4": "4",
+      "source_clock_max_gap": "2",
+      "prone_periods": "0",
+      "timing_seen": "0",
+      "c64_profile_9": "0",
+      "c64_profile_13": "0",
+      "session_wall_fixture_cases": "324",
+      "npc_recoil_fixture_failure": "0",
+      "pose_yamo": "0",
+      "c64_profile_6": "0",
+      "target_stomps": "0",
+      "stage5": "271",
+      "moving_net_fixture_failure": "0",
+      "climb_periods": "0",
+      "source_clock_miss_3": "754,6",
+      "runtime_arithmetic_errors": "0",
+      "source_dma_changes": "72",
+      "cpu_stamp_chip_bytes": "0",
+      "pose_bruce": "2",
+      "air_periods": "0",
+      "c64_render_mismatches": "0",
+      "max_gap_excluding_framebuffer_capture": "3",
+      "room_work_sum_2": "0",
+      "jump_starts": "0",
+      "first_missed_hsync": "316",
+      "collect_frame_drops": "1",
+      "room_work_sum_3": "0",
+      "room_work_max_2": "0",
+      "source_clock_miss_11": "938,5",
+      "room_work_max_0": "0",
+      "capture_fault": "0",
+      "source_clock_miss_7": "872,5",
+      "drawn_image_fields": "455",
+      "max_hsync_gap": "638",
+      "room_load_max_gap": "25406",
+      "canvas_residue_bytes": "3696",
+      "c64_room_revision": "1942"
+    }
+  ],
+  "collector_note": "Native runs completed with the archived collector. Existing framebuffer verified against both native decoded hashes. Current collector subsequently gained an explicit framebuffer-completion wait."
+}

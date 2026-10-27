@@ -1,0 +1,8 @@
+{
+  "validator_sha256": "b33dd73f5ea733e73207d9df4fe3f9f4367242595748c39835a4c2a1d4a6b397",
+  "frames": 6000,
+  "status": "passed_all_existing_test_amiga_per_run_guards",
+  "report_sha256": "b71aa5f2969220098e9ef791f4a0da409ca964c81b609c53e994215165702415",
+  "source_and_binary_identity_verified": true,
+  "guard_sha256": "a0779777a9bdeed635696d561abec7fdd07fa205769c6298799517f53bc07d46"
+}

@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-27",
+  "status": "scoped_complete_source_chain_implemented_acceptance_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "full_original_parity": false,
+  "source_controls": 3034,
+  "integrated_scenarios": 5,
+  "source_instructions": 7055873,
+  "native_controls": 53,
+  "native_replay_loops": 1200,
+  "largest_chip_block": 52632,
+  "realtime_gate_passed": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "1e0989b157897bb277efd74486097ad1fb879d02db9901bc593e01808fd4ac2d"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "7e731ffd78274cef02034f2b05669350dcb463c75f9d84664d33220d256769cb"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "a959a5449da29386c6b2598cd5cabd88faa973479d3ceb9c72719b278b79574e"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-fixture.json",
+      "sha256": "80e9323ded8993c0fa1883e354ce3479df7477b485a751b1dd1db57c417fce0f"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-final.txt",
+      "sha256": "fff29a628ff179c8a010f80461367f95f0c34cc7a858650ad4cfe4f6abeea9ef"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
+      "sha256": "5264d89de217d2b2554fe81e43bd6337e3f34d9b74e6c4d7beaea4c082640270"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "e530adc676b73eb278b911e5cdf0a0976ad7d8cefaac9b7414c2ece5039ca665"
+    },
+    {
+      "path": "docs/MILESTONE_COMPLETION.md",
+      "sha256": "c788bb8d89889ad8265ce4b8c8da5670357fba16aa3562a76fa1b124347c1401"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "eafd0c7d10ccb700caef8229f2328802b5d8d88bc0276d7145f37fc4a0d3c22a"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "sha256": "56cdbec3b1fde2d9d7f87cd1ebef550ca80efe4f17ffc8abc5585ee2a2979d3e"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "sha256": "4ad643e2f98d9cb2e72871d43d519c6d6903e8022f2c9a179b72d7895bb7e90f"
+    },
+    {
+      "path": "tools/verify_source_world_delivery.py",
+      "sha256": "276e661cae54ff4631da4a62eab88a61923dc1c030ef7925826ee7d162fe9cd6"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "07c960b6be6d4d6cf17d58e496d0bb35bdef2cfa00c0a1ea38953e096099bd30"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6f90d4c0ba183d74779b926b3c8ca408fbeb6440d1ba24b84684cf53934c926c"
+    },
+    {
+      "path": "reference/validation/source-vic-host.json",
+      "sha256": "3297b420c65b5c8ccb033ecdbeeffa345df8bc8e8bc8e53fe75dbcc5d999eafb"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
+      "sha256": "b3ed1945cdbef2b0cf118de8969779ee54937da20ffc5fa495eb59264dad54d4"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_REPORT.md",
+      "sha256": "acb5723372d0b3c91f3ac660a1db18ae3b434b24469e98cafd35690699c8531d"
+    },
+    {
+      "path": "reference/validation/source-contact-host.json",
+      "sha256": "b084c9561a156d3b387f259934abab7220c32b6d4520829442086bf31deb1bf0"
+    },
+    {
+      "path": "docs/CONTACT_OPTIMIZATION.md",
+      "sha256": "2e6f6f3bca6059ec32e55144afcde97844052de2bc6ac04383956a41fc5daa5d"
+    },
+    {
+      "path": "docs/VIC_NATIVE_OPTIMIZATION.md",
+      "sha256": "950e173491222814bd33c2c92f9c1b984ab41069e8bbdfddd5749d8261400786"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "30e1736b287c20859c028a64e1b5b591b6a2ded0b58ce2c075fb28b103fcdf0f"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "80140313db2f9e85b93c3352d99d7ff27e543f8defa5d9f721b2196193356e01"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "70331dc93a9dfbd2d45ff1a444d776634a9966fb05e2dd59cc9ef25a574cf6f5"
+    }
+  ],
+  "open_gates": [
+    "Verified untouched1984 edition",
+    "PAL real-time budget across all rooms",
+    "Natural VIC/IRQ phase and reader distribution",
+    "Complete natural playthrough and next round",
+    "Physical A500 and final distribution"
+  ]
+}

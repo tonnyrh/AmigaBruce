@@ -1,0 +1,6 @@
+{
+  "status": "rejected",
+  "reason": "Compiling the entire actor_code with -O2 grew the autotest EXE by about 64 KiB, and the 512+512 KiB A500 benchmark did not finish or restore AmigaOS. The compiler change was reverted.",
+  "baseline_exe_bytes": 352084,
+  "candidate_exe_bytes": 415408
+}

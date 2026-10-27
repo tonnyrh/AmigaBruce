@@ -9,13 +9,58 @@ Lydavspillingen bruker nå [faste Paula-buffere og PAL-styrt service](docs/PAULA
 
 Gjeldende prioritet: **C64-kildedata og disassembly før grafikk og lyd**.
 
+27. oktober: [hele kildekjeden er koblet inn](docs/MILESTONE_COMPLETION.md):
+alle aktørtilstander, pikselkontakt, samtidige treff, AI, liv, turbytte og
+24-bits poeng.3 034 kontroller sammenligner hele RAM/registre mot faktiske
+C64-bytes. A500-feltkadens, rasterfase og naturlig gjennomspilling er fortsatt
+åpne akseptanseporter. Se [aktive tester](docs/ACTIVE_TESTS.md).
+
+Samlet maskinkontroll: `./test-source-world.ps1` (PAL A500, 512+512).
+Vertskontroller og verifikasjon av levert bygg: `./test-parity.ps1`.
+De gamle separate adaptertestene beholdes som historikk; de godkjenner ikke
+den nye motoren. Milepæler lukkes etter faktisk akseptanse, ikke bare bygg.
+
+Kage/Yamos innganger, romspesifikke tellere og retur følger nå
+[C64-kildens spawn-rutiner](docs/ENEMY_SPAWNS.md). Full aktørparitet og
+naturlig gjennomspilling er fortsatt åpne.
+
+[Cheat-brettvalg](docs/CHEAT_PROGRESS.md) fullfører nå lanterner i tidligere
+romnumre, med separat spillerlagring og valgt roms lanterner beholdt.
+
+[Rom 10 og elektrisk felle](docs/ROOM10_ELECTRIC.md): prioritert kopiering av
+feller og rettferdig fordeling av tegnearbeidet på store rullende nett.
+
+[Rom8-eksplosjoner mot skadde fiender](docs/ROOM8_BLASTS.md): NPC-objektkontakt
+bruker nå kildeposituren for treffreaksjon og nedslag, med egne regresjonskontroller.
+
+[Fiendeinnganger og bomber](docs/BOMBS_ENTRY.md): kildevalget mellom
+inngangspunkter, NPC-utløsning og Bruces stille dødsreaksjon er nå koblet inn.
+
+[Kages stikk ved vegger](docs/NINJA_WALL.md) bruker nå kildebasert spritekontakt
+og felles vegghistorikk; den gamle avstandsboksen er fjernet for dette angrepet.
+
+[Rombytte er optimalisert](docs/ROOM_LOAD_PERFORMANCE.md): omtrent 21% mindre
+forberedelsesarbeid i to A500-kjøringer med alle 20 rom og uendrede bildepiksler.
+Fargetabellene bruker 23 KiB mindre CPU-RAM. Denne målingen gjelder det
+tidligere adapterbygget. [Gjeldende milepælstatus](docs/MILESTONE_COMPLETION.md).
+
+[Bevegelig nett i rom5](docs/MOVING_NET.md): kontakt med tegn `$62` bruker
+nå C64-tilstand23 og nettets egen transport, i stedet for en feilaktig
+treffreaksjon som kastet Bruce bakover.
+
+Ny [døds-/livs- og veggrettelse med hovedmeny](docs/SESSION_WALLS.md):
+faredødens stillstand/lyd, synlige reservefall, separate NPC-kontaktmasker
+og korrigert hopp/fall i rom6. Menyen har F3 for spillere og F5 for Yamo;
+Shift+D åpner uendelige liv, udødelighet og startrom. F10 åpner menyen igjen.
+
 Ny rettelse: [NPC-rekyl og uventet romstart i rom2](docs/NPC_RECOIL.md).
 Se [prosjektreglene](AGENTS.md) og [gjennomgangen av rombyggingen](docs/ROOM_RECONSTRUCTION.md).
 Alle20 rom bruker nå dekodede C64-romdata, rippede tegn og oversatte
 init-/løprutiner. De håndlagde blokkrommene og den felles fjellbakgrunnen er
 byttet ut. [Figurene bruker nå også rippede C64-sprites](docs/C64_SPRITES.md).
 Egenlaget grafikk er satt til side til en senere enhanced-utgave.
-Deler av aktørmotoren er fortsatt fra Amiga-prototypen.
+Vanlig spill bruker nå den komplette kildekjeden. Gamle adapterfunksjoner
+beholdes for historiske kontroller og brukes ikke som motor i vanlig spill.
 Klatringen er nå [rettet mot C64-koden](docs/C64_CLIMB.md): aktuell nettmaske,
 grep i rom5, sidefart4/6 piksler per oppdatering og separate vertikale ventesteg.
 Full C64-paritet og naturlig gjennomspilling er ikke godkjent.
@@ -40,15 +85,18 @@ rompiksler. Den strenge A500-ytelsesporten er fortsatt åpen, med tidsavvik i
 blant annet rom 14 og sluttrommet; romlasting tar også flere sekunder.
 Native målinger må gjelde kildene som ble bygget; eldre rom-/aktørmålinger
 er historiske etter aktørrettelsene. Måling av vanligbyggets Chip-reserve gjenstår.
-De tidligere6000-felts målingene etter NPC-rekylrettelsen er historiske etter
-lydendringen. Gjeldende kode er bygget og kontrollert på verten, men ny native
-verifikasjon og nye lydopptak venter på at WinUAE kommer forbi oppstarten.
-Dette er uttrykkelig markert i `reference/validation/paula-stream-delivery.json`;
-ingen gammel minne-/tidsmåling godkjenner dagens bygg.
+De tidligere6000-felts målingene gjelder den gamle adapterbanen. Gjeldende
+kildeport er kontrollert med53 native RAM-/registertilfeller og1 200
+repriseløkker på A500 OCS/KS1.3 med512+512KiB. Full sanntidsfart er fortsatt
+åpen. [Siste optimaliseringsrapport](docs/CONTACT_REGISTERS_OPTIMIZATION.md)
+og `reference/validation/source-world-delivery.json` binder dagens kode,
+normalbygg og kontroller. Naturlig gjennomspilling, lydtiming og fysisk
+A500 er egne akseptanser.
 
 Uttrekk, kildeadresser, tester og avgrensninger er dokumentert i
 [romrekonstruksjonen](docs/ROOM_RECONSTRUCTION.md).
-F1/F2 velger rom for inspeksjon. Dører, åpninger og romendringer følger
+F1/F2 velger rom for inspeksjon når Shift+D-testmodus er aktivert.
+Dører, åpninger og romendringer følger
 kandidatens maskinkode. Referansekandidaten er fortsatt ikke bekreftet som
 valgt, urørt1984-utgave.
 

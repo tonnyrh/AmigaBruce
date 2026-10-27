@@ -1,5 +1,10 @@
 # Kage og Yamo: verifikasjon mot C64-koden
 
+27. oktober: De delvise adapteravvikene under er erstattet i vanlig spill av
+[hele kildekjeden](MILESTONE_COMPLETION.md), inkludert venting, retrett,
+inntreden og objektpass. Denne eldre gjennomgangen beholdes som kildespor.
+Naturlig AI-kontroll, IRQ-fase og A500-feltkadens er fortsatt egne porter.
+
 25. oktober 2026. Kilden er de faktiske bytene i den frosne
 Remember/T64-kandidaten, SHA-256
 `092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8`.
@@ -10,8 +15,9 @@ editorens ombygde spill er ikke brukt som fasit.
 **Konklusjon:** De vanlige angrepsvalgene ved samme høyde er allerede riktige
 i Amiga-adapteren. Hele AI-en er fortsatt ikke kildeidentisk. Venting,
 inntreden, kontakt-/aktørtilstander og romutganger har dokumenterte avvik.
-Denne leveransen verifiserer og spesifiserer koden; spillmotor og EXE/ADF
-er uendret. Den gir ikke en ny native AI- eller ytelsesgodkjenning.
+Den opprinnelige gjennomgangen25. oktober endret ikke spillmotoren.
+26. oktober er [Kages stikk](NINJA_WALL.md) rettet separat; auditens øvrige
+funn gir fortsatt ingen samlet AI- eller ytelsesgodkjenning.
 
 ## Aktører og rekkefølge
 
@@ -105,7 +111,7 @@ Fixturekjøringene av denne IRQ-prefiksen emulerer ikke hele raster-/IRQ-forløp
 
 Slag-/stikkavslutning og «Bruce er over meg»-grenen bruker den ordinære
 ventingen. Stikket slutter ved **restteller 1**, via `$22F0 → $228C`.
-Amiga-adapteren lar stikkflagget stå med teller 0 én oppdatering ekstra.
+Dette ekstra Amiga-steget ble fjernet26. oktober, se [stikkrettelsen](NINJA_WALL.md).
 
 Post-spark-grenen returnerer fra hele `$2D7C`-hjelperen. Testen bruker Yamo
 som avsluttet sparkaktør og injiserer et automatisk kontrollflagg på den
@@ -142,31 +148,39 @@ Verdier under/over `$C0` og en ekstra minnebytes lave bit styrer de andre valgen
 Ved Bruces rombytte lagrer `$2FA5–$2FBD` ankomst/helse for aktive NPC-er.
 En universell ny fullhelse og én fast NPC-inngang bevarer ikke dette.
 
+26. oktober: [inngangsrettelsen](BOMBS_ENTRY.md) kobler den faktisk oversatte
+`$0BFA`-velgeren inn i motoren og beholder lagret ankomst/helse. Den faste
+etterplasseringen er fjernet. Full IRQ-/minneavlesningsrekkefølge og øvrige
+spawn-/inngangstellere er fortsatt åpne. NPC-bombefarer bruker nå `$304B/$3001/$0D42`.
+
 Yamo starter i tilstand 16/teller 10, snur mot Bruce ved teller 1 og går til
 tilstand 18/teller 16 (`$2235–$2269`). Første bevegelse kommer på den 28.
 aktøroppdateringen regnet fra før første oppdatering etter init. Kage snur
 ved inntreden og beveger seg på den 17. Første oppdatering skjer i samme
-hovedrunde som spawn; dette forklarer de målte +27/+16-stegene. Yamos
-retning bestemmes senere enn i dagens Amiga-initialisering.
+hovedrunde som spawn; dette forklarer de målte +27/+16-stegene.
+[Spawn-rettelsen26. oktober](ENEMY_SPAWNS.md) følger nå denne forskjellen.
 
 NPC-utgang går gjennom det samme objektpasset og `$30D4` som Bruce, deretter
 `$2F90 → $3001`. I rom 1s høyre forbindelse kreves rå-X minst162
 (skjerm-X300) og høyre bevegelsesrecord, i tillegg til at utgangscellen er
-funnet. Dagens `bl_enemy_leave_room` bruker en statisk horisontal dørtest,
-skjerm-X302, og ikke denne samlede betingelsen. Den dekker heller ikke hele
-det dynamiske/vertikale objektpasset. Den gamle ruten som faktisk landet på
-X302 beviser derfor ikke at alle mellomliggende terskler er riktige.
+funnet. `bl_enemy_leave_room` bruker nå faktisk dynamisk dørcelle og kildegate
+i objektpasset, før aktøroppdatering. Den kontrollerte rom1-ruten fjerner Kage
+på oppdatering122 ved X302; kildens terskel er fortsatt rå-X162, ikke en ny
+regel om at alle utganger skjer på skjerm-X302.
 
 ## Resultat mot Amiga-adapteren
 
 - 588 isolerte, vanlige valg på fast underlag ved tid 0/runde 0 samsvarer:
   slag/stikk/spark, snu, retrett og forhold til høydeforskjell.
-- 59 konkrete fixtures beholder forskjeller fordelt på fem grupper:
+- 58 konkrete fixtures beholder forskjeller fordelt på fire grupper:
   ordinær venting (20), post-spark-venting (20), retrettstøtte (16),
-  nullmålet ved venstrekanten (2) og stikkavslutning (1).
-- Inntredentabeller, fasevalg og ankomst/helse er kildeavklart, men dagens
-  motor bruker fortsatt forenklet spawn-/resetlogikk. `bl_c64_field` viderefører
-  ikke `$87/$88`-klokken som disse AI-grenene trenger.
+  nullmålet ved venstrekanten (2). [Stikkavslutningen](NINJA_WALL.md) er
+  rettet26. oktober; teller1 avslutter og historikk-kroppen deles med motoren.
+  Auditens øvrige bevegelse og dører er fortsatt eksplisitte stubber.
+- Inntredentabeller, tjenester, fasevalg, ankomst/helse og returtellere er
+  nå koblet inn fra kildekoden. `bl_c64_field` viderefører `$87/$88`.
+  [Den separate auditen](ENEMY_SPAWNS.md) avgrenser register-/RAM-kontekst og
+  logisk klokke fra naturlig fordeling og faktisk feltkadens.
 - Kontakt, NPC-positurer, vegghistorikk, reaksjoner og hele livs-/aktørmaskinen
   må inngå i en samlet port. Lik beslutning på injisert kontakt godkjenner
   ikke gangbane, fysisk kollisjon, dørrute eller naturlig oppførsel.

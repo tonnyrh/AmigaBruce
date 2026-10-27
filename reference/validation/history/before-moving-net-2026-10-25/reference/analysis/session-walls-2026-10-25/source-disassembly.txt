@@ -1,0 +1,443 @@
+0FBC a9 04     LDA #$04
+0FBE 85 28     STA $28
+0FC0 ad ca 42  LDA $42ca
+0FC3 f0 04     BEQ $0fc9
+0FC5 a9 09     LDA #$09
+0FC7 85 28     STA $28
+16A2 ad 01 dc  LDA $dc01
+16A5 a6 03     LDX $03
+16A7 f0 03     BEQ $16ac
+16A9 ad 00 dc  LDA $dc00
+16AC 29 0f     AND #$0f
+16AE bc 83 13  LDY $1383,X
+16B1 d0 0a     BNE $16bd
+16B3 48        PHA
+16B4 29 03     AND #$03
+16B6 a8        TAY
+16B7 68        PLA
+16B8 4a        LSR A
+16B9 4a        LSR A
+16BA 19 85 4a  ORA $4a85,Y
+16BD 85 98     STA $98
+16BF a5 03     LDA $03
+16C1 49 01     EOR #$01
+16C3 aa        TAX
+16C4 bd 00 dc  LDA $dc00,X
+16C7 4a        LSR A
+16C8 4a        LSR A
+16C9 4a        LSR A
+16CA 4a        LSR A
+16CB 29 01     AND #$01
+16CD 85 9b     STA $9b
+16CF ad ca 42  LDA $42ca
+16D2 f0 2f     BEQ $1703
+16D4 a5 03     LDA $03
+16D6 49 01     EOR #$01
+16D8 aa        TAX
+16D9 08        PHP
+16DA ad 01 dc  LDA $dc01
+16DD 28        PLP
+16DE f0 03     BEQ $16e3
+16E0 ad 00 dc  LDA $dc00
+16E3 29 0f     AND #$0f
+16E5 bc 83 13  LDY $1383,X
+16E8 d0 0a     BNE $16f4
+16EA 48        PHA
+16EB 29 03     AND #$03
+16ED a8        TAY
+16EE 68        PLA
+16EF 4a        LSR A
+16F0 4a        LSR A
+16F1 19 85 4a  ORA $4a85,Y
+16F4 85 99     STA $99
+16F6 a6 03     LDX $03
+16F8 bd 00 dc  LDA $dc00,X
+16FB 4a        LSR A
+16FC 4a        LSR A
+16FD 4a        LSR A
+16FE 4a        LSR A
+16FF 29 01     AND #$01
+1701 85 9c     STA $9c
+1818 20 5e 25  JSR $255e
+181B ad 04 01  LDA $0104
+181E d0 06     BNE $1826
+1820 8d bb 09  STA $09bb
+1823 4c 84 05  JMP $0584
+1826 c6 28     DEC $28
+1828 30 64     BMI $188e
+182A a9 24     LDA #$24
+182C 85 d1     STA $d1
+182E 85 d2     STA $d2
+1830 85 d3     STA $d3
+1832 a9 00     LDA #$00
+1834 85 8b     STA $8b
+1836 85 8c     STA $8c
+1838 20 3f 42  JSR $423f
+183B ad c9 42  LDA $42c9
+183E f0 0b     BEQ $184b
+1840 ad 9f 43  LDA $439f
+1843 30 06     BMI $184b
+1845 a5 03     LDA $03
+1847 49 01     EOR #$01
+1849 85 03     STA $03
+184B 20 a7 0e  JSR $0ea7
+184E ad 11 d0  LDA $d011
+1851 29 ef     AND #$ef
+1853 8d 11 d0  STA $d011
+1856 ad c9 42  LDA $42c9
+1859 f0 2b     BEQ $1886
+185B ad 9f 43  LDA $439f
+185E 30 26     BMI $1886
+1860 a2 1b     LDX #$1b
+1862 b5 28     LDA $28,X
+1864 bc 9f 43  LDY $439f,X
+1867 9d 9f 43  STA $439f,X
+186A 98        TYA
+186B 95 28     STA $28,X
+186D ca        DEX
+186E 10 f2     BPL $1862
+1870 20 ed 0f  JSR $0fed
+1873 a2 02     LDX #$02
+1875 bd 92 43  LDA $4392,X
+1878 48        PHA
+1879 bd 95 43  LDA $4395,X
+187C 9d 92 43  STA $4392,X
+187F 68        PLA
+1880 9d 95 43  STA $4395,X
+1883 ca        DEX
+1884 10 ef     BPL $1875
+1886 20 63 07  JSR $0763
+1889 a6 29     LDX $29
+188B 4c 17 32  JMP $3217
+188E 20 3f 42  JSR $423f
+1C5B a9 08     LDA #$08
+1C5D 85 86     STA $86
+1C5F bd 06 01  LDA $0106,X
+1C62 f0 04     BEQ $1c68
+1C64 de 06 01  DEC $0106,X
+1C67 60        RTS
+1C68 9d db 4f  STA $4fdb,X
+1C6B bd 57 4f  LDA $4f57,X
+1C6E 1d 5a 4f  ORA $4f5a,X
+1C71 1d 5d 4f  ORA $4f5d,X
+1C74 1d 60 4f  ORA $4f60,X
+1C77 f0 16     BEQ $1c8f
+1C79 a9 27     LDA #$27
+1C7B 85 4e     STA $4e
+1C7D 8a        TXA
+1C7E 18        CLC
+1C7F 69 75     ADC #$75
+1C81 a8        TAY
+1C82 b9 57 4f  LDA $4f57,Y
+1C85 99 63 4f  STA $4f63,Y
+1C88 88        DEY
+1C89 88        DEY
+1C8A 88        DEY
+1C8B c6 4e     DEC $4e
+1C8D 10 f3     BPL $1c82
+1C8F a9 00     LDA #$00
+1C91 9d 57 4f  STA $4f57,X
+1C94 9d 5a 4f  STA $4f5a,X
+1C97 9d 5d 4f  STA $4f5d,X
+1C9A 9d 60 4f  STA $4f60,X
+1C9D b5 bf     LDA $bf,X
+1C9F f0 0c     BEQ $1cad
+1CA1 d5 c2     CMP $c2,X
+1CA3 d0 08     BNE $1cad
+1CA5 b5 cb     LDA $cb,X
+1CA7 f0 08     BEQ $1cb1
+1CA9 d6 cb     DEC $cb,X
+1CAB 10 04     BPL $1cb1
+1CAD a9 06     LDA #$06
+1CAF 95 cb     STA $cb,X
+1CB1 b5 bf     LDA $bf,X
+1CB3 95 c2     STA $c2,X
+1CB5 c9 19     CMP #$19
+1CB7 d0 03     BNE $1cbc
+1CB9 4c 77 1d  JMP $1d77
+1CBC c9 18     CMP #$18
+1CBE d0 07     BNE $1cc7
+1CC0 b5 ce     LDA $ce,X
+1CC2 f0 03     BEQ $1cc7
+1CC4 4c b7 24  JMP $24b7
+1CC7 b5 b6     LDA $b6,X
+1CC9 29 08     AND #$08
+1CCB d0 03     BNE $1cd0
+1CCD 4c 6f 1d  JMP $1d6f
+1CD0 a9 00     LDA #$00
+1CD2 95 c8     STA $c8,X
+1CD4 a9 01     LDA #$01
+1CD6 85 85     STA $85
+1CD8 de 63 4f  DEC $4f63,X
+1CDB 30 08     BMI $1ce5
+1CDD 46 85     LSR $85
+1CDF 20 39 1e  JSR $1e39
+1CE2 4c d8 1c  JMP $1cd8
+1CE5 de 66 4f  DEC $4f66,X
+1CE8 30 06     BMI $1cf0
+1CEA 20 f2 1d  JSR $1df2
+1CED 4c e5 1c  JMP $1ce5
+1CF0 de 69 4f  DEC $4f69,X
+1CF3 30 08     BMI $1cfd
+1CF5 46 85     LSR $85
+1CF7 20 c4 1e  JSR $1ec4
+1CFA 4c f0 1c  JMP $1cf0
+1CFD de 6c 4f  DEC $4f6c,X
+1D00 30 08     BMI $1d0a
+1D02 46 85     LSR $85
+1D04 20 86 1e  JSR $1e86
+1D07 4c fd 1c  JMP $1cfd
+1D0A a9 23     LDA #$23
+1D0C 85 4e     STA $4e
+1D0E 8a        TXA
+1D0F a8        TAY
+1D10 b9 6f 4f  LDA $4f6f,Y
+1D13 99 57 4f  STA $4f57,Y
+1D16 c8        INY
+1D17 c8        INY
+1D18 c8        INY
+1D19 c6 4e     DEC $4e
+1D1B 10 f3     BPL $1d10
+1D1D a9 00     LDA #$00
+1D1F 9d 06 01  STA $0106,X
+1D22 9d c3 4f  STA $4fc3,X
+1D25 9d c6 4f  STA $4fc6,X
+1D28 9d c9 4f  STA $4fc9,X
+1D2B 9d cc 4f  STA $4fcc,X
+1D2E 9d cf 4f  STA $4fcf,X
+1D31 9d d2 4f  STA $4fd2,X
+1D34 9d d5 4f  STA $4fd5,X
+1D37 9d d8 4f  STA $4fd8,X
+1D3A c6 86     DEC $86
+1D3C 30 28     BMI $1d66
+1D3E b5 b6     LDA $b6,X
+1D40 29 04     AND #$04
+1D42 d0 22     BNE $1d66
+1D44 a5 85     LDA $85
+1D46 f0 0b     BEQ $1d53
+1D48 b5 c2     LDA $c2,X
+1D4A c9 1a     CMP #$1a
+1D4C f0 18     BEQ $1d66
+1D4E a9 00     LDA #$00
+1D50 4c 68 1c  JMP $1c68
+1D53 a5 86     LDA $86
+1D55 c9 07     CMP #$07
+1D57 f0 0d     BEQ $1d66
+1D59 b5 a4     LDA $a4,X
+1D5B d0 06     BNE $1d63
+1D5D 20 c4 1e  JSR $1ec4
+1D60 4c 66 1d  JMP $1d66
+1D63 20 86 1e  JSR $1e86
+1D66 a9 18     LDA #$18
+1D68 95 bf     STA $bf,X
+1D6A a9 40     LDA #$40
+1D6C 95 ce     STA $ce,X
+1D6E 60        RTS
+1D6F 95 c8     STA $c8,X
+1D71 a9 ff     LDA #$ff
+1D73 95 c5     STA $c5,X
+1D75 a9 00     LDA #$00
+2008 84 52     STY $52
+200A b5 bf     LDA $bf,X
+200C c9 05     CMP #$05
+200E d0 38     BNE $2048
+2010 b5 b6     LDA $b6,X
+2012 29 04     AND #$04
+2014 d0 6a     BNE $2080
+2016 c0 0d     CPY #$0d
+2018 b0 14     BCS $202e
+201A c0 02     CPY #$02
+201C 90 10     BCC $202e
+201E c0 08     CPY #$08
+2020 b0 11     BCS $2033
+2022 b5 b6     LDA $b6,X
+2024 29 01     AND #$01
+2026 d0 58     BNE $2080
+2028 20 39 1e  JSR $1e39
+202B 20 39 1e  JSR $1e39
+202E a9 05     LDA #$05
+2030 4c f4 24  JMP $24f4
+2033 c0 0c     CPY #$0c
+2035 d0 06     BNE $203d
+2037 20 f2 1d  JSR $1df2
+203A 20 f2 1d  JSR $1df2
+203D 20 f2 1d  JSR $1df2
+2040 20 f2 1d  JSR $1df2
+2043 a9 05     LDA #$05
+2045 4c f4 24  JMP $24f4
+2048 c9 0c     CMP #$0c
+204A d0 41     BNE $208d
+204C b5 b6     LDA $b6,X
+204E 29 0c     AND #$0c
+2050 d0 2e     BNE $2080
+2052 c0 0c     CPY #$0c
+2054 d0 0b     BNE $2061
+2056 86 51     STX $51
+2058 a0 84     LDY #$84
+205A 20 09 25  JSR $2509
+205D a6 51     LDX $51
+205F a4 52     LDY $52
+2061 c0 0a     CPY #$0a
+2063 90 0b     BCC $2070
+2065 20 f2 1d  JSR $1df2
+2068 20 86 1e  JSR $1e86
+206B a9 0c     LDA #$0c
+206D 4c f4 24  JMP $24f4
+2070 c0 03     CPY #$03
+2072 90 08     BCC $207c
+2074 20 86 1e  JSR $1e86
+2077 a9 0c     LDA #$0c
+2079 4c f4 24  JMP $24f4
+207C b5 b6     LDA $b6,X
+207E 29 01     AND #$01
+2080 d0 71     BNE $20f3
+2082 20 39 1e  JSR $1e39
+2085 20 86 1e  JSR $1e86
+2088 a9 0c     LDA #$0c
+208A 4c f4 24  JMP $24f4
+208D c9 0d     CMP #$0d
+208F d0 41     BNE $20d2
+2091 b5 b6     LDA $b6,X
+2093 29 0c     AND #$0c
+2095 d0 5c     BNE $20f3
+2097 c0 0c     CPY #$0c
+2099 d0 0b     BNE $20a6
+209B 86 51     STX $51
+209D a0 84     LDY #$84
+209F 20 09 25  JSR $2509
+20A2 a6 51     LDX $51
+20A4 a4 52     LDY $52
+20A6 c0 0a     CPY #$0a
+20A8 90 0b     BCC $20b5
+20AA 20 f2 1d  JSR $1df2
+20AD 20 c4 1e  JSR $1ec4
+20B0 a9 0d     LDA #$0d
+20B2 4c f4 24  JMP $24f4
+20B5 c0 03     CPY #$03
+20B7 90 08     BCC $20c1
+20B9 20 c4 1e  JSR $1ec4
+20BC a9 0d     LDA #$0d
+20BE 4c f4 24  JMP $24f4
+20C1 b5 b6     LDA $b6,X
+20C3 29 01     AND #$01
+20C5 d0 2c     BNE $20f3
+20C7 20 39 1e  JSR $1e39
+20CA 20 c4 1e  JSR $1ec4
+20CD a9 0d     LDA #$0d
+20CF 4c f4 24  JMP $24f4
+20D2 c9 06     CMP #$06
+20D4 d0 4a     BNE $2120
+20D6 b5 b6     LDA $b6,X
+20D8 29 04     AND #$04
+20DA d0 17     BNE $20f3
+20DC c0 0a     CPY #$0a
+20DE 90 16     BCC $20f6
+20E0 f0 03     BEQ $20e5
+20E2 20 f2 1d  JSR $1df2
+20E5 20 f2 1d  JSR $1df2
+20E8 20 86 1e  JSR $1e86
+20EB 20 86 1e  JSR $1e86
+20EE a9 06     LDA #$06
+20F0 4c f4 24  JMP $24f4
+20F3 4c 04 25  JMP $2504
+20F6 c0 07     CPY #$07
+20F8 90 0b     BCC $2105
+20FA 20 86 1e  JSR $1e86
+20FD 20 86 1e  JSR $1e86
+2100 a9 06     LDA #$06
+2102 4c f4 24  JMP $24f4
+2105 b5 b6     LDA $b6,X
+2107 29 01     AND #$01
+2109 d0 e8     BNE $20f3
+210B 20 86 1e  JSR $1e86
+210E 20 86 1e  JSR $1e86
+2111 c0 06     CPY #$06
+2113 f0 03     BEQ $2118
+2115 20 39 1e  JSR $1e39
+2118 20 39 1e  JSR $1e39
+211B a9 06     LDA #$06
+211D 4c f4 24  JMP $24f4
+2120 c9 07     CMP #$07
+2122 d0 47     BNE $216b
+2124 b5 b6     LDA $b6,X
+2126 29 04     AND #$04
+2128 d0 c9     BNE $20f3
+212A c0 0a     CPY #$0a
+212C 90 13     BCC $2141
+212E f0 03     BEQ $2133
+2130 20 f2 1d  JSR $1df2
+2133 20 f2 1d  JSR $1df2
+2136 20 c4 1e  JSR $1ec4
+2139 20 c4 1e  JSR $1ec4
+213C a9 07     LDA #$07
+213E 4c f4 24  JMP $24f4
+2141 c0 07     CPY #$07
+2143 90 0b     BCC $2150
+2145 20 c4 1e  JSR $1ec4
+2148 20 c4 1e  JSR $1ec4
+214B a9 07     LDA #$07
+214D 4c f4 24  JMP $24f4
+2150 b5 b6     LDA $b6,X
+2152 29 01     AND #$01
+2154 d0 9d     BNE $20f3
+2156 20 c4 1e  JSR $1ec4
+2159 20 c4 1e  JSR $1ec4
+215C c0 06     CPY #$06
+215E f0 03     BEQ $2163
+2160 20 39 1e  JSR $1e39
+2163 20 39 1e  JSR $1e39
+2166 a9 07     LDA #$07
+2168 4c f4 24  JMP $24f4
+216B c9 19     CMP #$19
+216D d0 11     BNE $2180
+216F e0 00     CPX #$00
+2171 d0 04     BNE $2177
+2173 c0 01     CPY #$01
+2175 f0 03     BEQ $217a
+2177 4c f4 24  JMP $24f4
+217A 4c 18 18  JMP $1818
+2D55 a2 02     LDX #$02
+2D57 b5 95     LDA $95,X
+2D59 29 01     AND #$01
+2D5B f0 18     BEQ $2d75
+2D5D b5 bf     LDA $bf,X
+2D5F c9 13     CMP #$13
+2D61 f0 04     BEQ $2d67
+2D63 c9 19     CMP #$19
+2D65 d0 04     BNE $2d6b
+2D67 b5 ce     LDA $ce,X
+2D69 d0 0a     BNE $2d75
+2D6B b5 d1     LDA $d1,X
+2D6D 10 06     BPL $2d75
+2D6F 8a        TXA
+2D70 f0 07     BEQ $2d79
+2D72 20 01 30  JSR $3001
+2D75 ca        DEX
+2D76 10 df     BPL $2d57
+2D78 60        RTS
+2D79 4c 18 18  JMP $1818
+304B a5 29     LDA $29
+304D c9 12     CMP #$12
+304F d0 01     BNE $3052
+3051 60        RTS
+3052 48        PHA
+3053 8a        TXA
+3054 48        PHA
+3055 98        TYA
+3056 48        PHA
+3057 a0 8c     LDY #$8c
+3059 20 09 25  JSR $2509
+305C 68        PLA
+305D a8        TAY
+305E 68        PLA
+305F aa        TAX
+3060 68        PLA
+3061 a6 51     LDX $51
+3063 f0 03     BEQ $3068
+3065 4c 01 30  JMP $3001
+3068 4c 7d 40  JMP $407d
+407D a9 19     LDA #$19
+407F 95 bf     STA $bf,X
+4081 a9 10     LDA #$10
+4083 95 ce     STA $ce,X
+4085 60        RTS

@@ -5,6 +5,7 @@
   "c64_combat_parity": false,
   "output": [
     "PASS source-audited T10 diagonal stop/input-independent net catch and T13 assignment then one recoil update (actor adapter scope)",
+    "PASS source life countdown, fall reserves, Game Over, debug flags and independent two-player progress",
     "PASS 24 NPC recoil/wall/re-entry regressions in R02",
     "PASS 70 source-derived wall/kick/jump checks",
     "PASS 390 source-derived net dispatch and room5 climb checks",
@@ -13,133 +14,237 @@
     "PASS source-animated R02 hatch to R06, exact arrival and persistent lamps",
     "PASS source final-room timer, next round and reset of original lamp counts",
     "PASS R19 source projectile bits/contact and source death branch",
-    "AUDIO_6000 source_audio_hash=586583410 source_music_hash=2708371906 source_sfx_request_mask=32767 source_audio_chip_bytes=2260",
-    "M3_6000 combat_hits=60 enemy_defeats=6 enemy_spawns=10 player_deaths=2 player_respawns=2 final_x=8 final_y=196"
+    "AUDIO_6000 source_audio_hash=3731737049 source_music_hash=2708371906 source_sfx_request_mask=32767 source_audio_chip_bytes=2260",
+    "M3_6000 combat_hits=55 enemy_defeats=6 enemy_spawns=9 player_deaths=2 player_respawns=2 final_x=8 final_y=196"
   ],
   "source_files": [
     {
-      "path": "tests/npc_recoil_fixture.h",
-      "sha256": "c8a91b8b0c9df921c563e38542200132cdacdebd27a6e89a1922cdd8fcc2c4d5"
+      "sha256": "db91ce8bb9d1956c22a20e8b6aa52e84c7e8c7b14fe7895ce881fed3975aba93",
+      "path": "tests/spawn_fixture.h"
     },
     {
-      "path": "tests/movement_fixture.h",
-      "sha256": "ee4a38d83d59cef1cc744cef12b482379d7a1151f34e547892f46cecafabff3f"
+      "sha256": "99b81b89d048153839bf874d9ed2e30e768467d49d8aab79ea7f78c1e23dc630",
+      "path": "tests/spawn_bridge.c"
     },
     {
-      "path": "tests/climb_fixture.h",
-      "sha256": "f2824bd318619057f87178d825f6af1742090fe72d776bd6f4b71d8866b5366a"
+      "sha256": "6f15e9ef4d9efa98978496abf099e621f4bc8a66a064c89442add6b493f8b80b",
+      "path": "tools/audit_spawn.py"
     },
     {
-      "path": "tests/contact_fixture.h",
-      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28"
+      "sha256": "2a4c62aa44b58f86987e1bc764e184210aff95ed57af69da9c4e9f3daa549d9c",
+      "path": "tools/audit_spawn_world.py"
     },
     {
-      "path": "core/source_wall.c",
-      "sha256": "2cbdff257cbfa551bf0d770c0b82fdc37f90670e4dbaf242a774482eefb5b214"
+      "sha256": "d443c45487b6899402cae230ad5a52d2f12c0988cb304e569dc476c273f39faa",
+      "path": "tools/build_spawn_fixture.py"
     },
     {
-      "path": "core/source_climb.c",
-      "sha256": "3df75184cdce5a5b971a462da96783fc77d848648c94f5c57d5541f83973d259"
+      "sha256": "12190fe3dd600e0717cf02ed8fcd6249e8fe3ffb92a775e7f39fb7e29aa0f277",
+      "path": "test-spawn.ps1"
     },
     {
-      "path": "core/source_climb.h",
-      "sha256": "d3c26f2c23eee3ac48f7f82b4bce4e23a07cd3587bd23fb8b8958e11e6ab7b06"
+      "sha256": "16552c8b2c03dd4f127c5f798badb14be33f3254d61d2c0f052cb2d81e7b08a0",
+      "path": "tests/room8_blast_fixture.h"
     },
     {
-      "path": "core/source_wall.h",
-      "sha256": "8fcf8898f2c89de98068b315dce430feb7dac032f9aae9b332ca815b9ed78449"
+      "sha256": "2439b18409d39720f2566c69527f42c474e2643cfe4c680e91f0fa257b4bebaf",
+      "path": "tools/audit_room8_blasts.py"
     },
     {
-      "path": "core/game.c",
-      "sha256": "5afd9b0c76b6136ebf9bc58e9445b8562d2f03690347b88a51a8c94dfa4b3918"
+      "sha256": "24dcc5a48afc788efe2251fe822ad9701cdab0ed977050ec92809c3a79982d76",
+      "path": "test-room8-blasts.ps1"
     },
     {
-      "path": "core/game.h",
-      "sha256": "bbcb1164efaf3660729cc0318196c29f19146c106ad5bb5f1675e493cd96cffb"
+      "sha256": "4ec76eb26a757d10accbe3ebd279eb5f4dd057f728ae648d258473cf6ac3416d",
+      "path": "tests/bombs_entry_fixture.h"
     },
     {
-      "path": "core/presentation.c",
-      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+      "sha256": "61b26cb873107f5fe4c98994e4e2a942a0a24184335238917f3181b75140f98c",
+      "path": "tools/audit_bombs_entry.py"
     },
     {
-      "path": "core/c64_sprites.c",
-      "sha256": "683a8c4bf4e69f41e600fa9be2214a2496ad213d1621b286c11688c1bdbaf562"
+      "sha256": "6268c387694a30a4a8b6af34ed1f367d2e7018cad3eedf0fb447348134018ba8",
+      "path": "test-bombs-entry.ps1"
     },
     {
-      "path": "core/c64_sprites.h",
-      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064",
+      "path": "core/c64_hit_data.h"
     },
     {
-      "path": "core/c64_sprite_pose_data.h",
-      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+      "sha256": "4253cebe03fcf69014afc225e4459cb574721648f83a7b6960d619fbde899155",
+      "path": "tools/build_c64_hit_masks.py"
     },
     {
-      "path": "core/presentation.h",
-      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+      "sha256": "47e5026d964b61d6957a291d4b50c5070f7b4df616005cd0e8f13d7f450ca93e",
+      "path": "tools/audit_ninja_wall.py"
     },
     {
-      "path": "core/combat.c",
-      "sha256": "bdc6419af8595e7349a94856060099a16102ab0d2bfdb31596b59c67e6c0f4a4"
+      "sha256": "d062aa470a87dfbb9932fe0c3ea6ba3abca02335a81cc9d7981edb5fec2deab6",
+      "path": "tests/ninja_wall_fixture.h"
     },
     {
-      "path": "core/combat.h",
-      "sha256": "1001f3fcd4b5c4da12cd9cbc3d8be47d12dd823a191ea43a64e68ca5cad532ea"
+      "sha256": "f649111d35e797059b5709b815f9381c99540229295930b4e9e35267111a2103",
+      "path": "tests/ninja_wall_bridge.c"
     },
     {
-      "path": "core/rooms.c",
-      "sha256": "d1fe1721368f1541f48fdc4a056f481a9130a1d4daccc918358a4c66a45042e7"
+      "sha256": "073695107b922560a8339491ed02a673de92f1083e961922eaceecd79dda0365",
+      "path": "test-ninja-wall.ps1"
     },
     {
-      "path": "core/rooms.h",
-      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+      "sha256": "d51ee2ee59787459bd955f7071c4e063ade1d79ba6cefd14cc14f96aa41eaec7",
+      "path": "core/session.c"
     },
     {
-      "path": "core/room_data.h",
-      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+      "sha256": "58fce65263325d704ac39d8ccfa862b367ad85b8316cf90f9f4f477841bc45ef",
+      "path": "core/session.h"
     },
     {
-      "path": "core/c64_rooms.c",
-      "sha256": "73d55bac838bb93e973afe64305d8375431516b648e53b430b69f44fc507eac0"
+      "sha256": "ed3cac5b18f84474177afa5fd6b76b84b94a546c78bd44eb82621578d55f0e26",
+      "path": "tests/cheat_progress_fixture.h"
     },
     {
-      "path": "core/c64_rooms.h",
-      "sha256": "8230b5a3dd98aae1bc16586267485c49bc8936b0f5d30673d3ee2fb25cefd2c2"
+      "sha256": "5b3fc2a2353f3553b233c92f2c8fba06cd41ad45e95ce0aa6a5c0d377120803c",
+      "path": "tests/session_fixture.h"
     },
     {
-      "path": "core/c64_room_data.h",
-      "sha256": "fbe262f58205c6429c311d67bf7ea4bd1d12fda54c754c223e091eac2d4dbf7f"
+      "sha256": "c7c0c5036874255fd3797fd9108a7c22bfbec6736770d01344fea658ab0c54cc",
+      "path": "tests/session_wall_fixture.h"
     },
     {
-      "path": "core/c64_room_programs.h",
-      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616"
+      "sha256": "d6651f8beb3333b53af30f0ffe02c3901b74fab5437cf9c648ba2216e781145f",
+      "path": "tests/npc_recoil_fixture.h"
     },
     {
-      "path": "core/c64_sfx.h",
-      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+      "sha256": "ee4a38d83d59cef1cc744cef12b482379d7a1151f34e547892f46cecafabff3f",
+      "path": "tests/movement_fixture.h"
     },
     {
-      "path": "core/c64_sound_data.h",
-      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+      "sha256": "61374c88d69342ed456fb96999296cbcf136318ea06357bff573d9840a9a9c40",
+      "path": "tests/climb_fixture.h"
     },
     {
-      "path": "core/source_audio.c",
-      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+      "sha256": "81f3c8d545d21d8fd6e3634c684e0673ca627982cacf1bf2e7712d89fb474d4a",
+      "path": "tests/moving_net_fixture.h"
     },
     {
-      "path": "core/source_audio.h",
-      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+      "sha256": "060bd4842364df3a2cfc012fb469692b9c201438000e5abfb544aa4844f2140b",
+      "path": "tools/audit_moving_net.py"
     },
     {
-      "path": "core/source_audio_data.h",
-      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+      "sha256": "7fe38e10e401a1c58543a4f4be4efb0f192b7a640608acc60694625c9469c987",
+      "path": "test-moving-net.ps1"
     },
     {
-      "path": "tests/c64_rooms_test.c",
-      "sha256": "3f6a4a6c17c0a0a840e473e132e9fb34ea605adb334aeec0c3da67748b74d437"
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28",
+      "path": "tests/contact_fixture.h"
     },
     {
-      "path": "test-core.ps1",
-      "sha256": "d58be891f51edc29659c7c089382b43c71e8de171a8b4fed4622ae400232d162"
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b",
+      "path": "core/source_wall.c"
+    },
+    {
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b",
+      "path": "core/source_climb.c"
+    },
+    {
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433",
+      "path": "core/source_climb.h"
+    },
+    {
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56",
+      "path": "core/source_wall.h"
+    },
+    {
+      "sha256": "3b3d695a2e93b274ed6f3ea2338ec8bf054f5de32a263bbd4acc3eb15a3a7eb9",
+      "path": "core/game.c"
+    },
+    {
+      "sha256": "a4faab307fd692995a67deee3900a694c11ef7c8fd13a5e3e1b8b05b37024bb8",
+      "path": "core/game.h"
+    },
+    {
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404",
+      "path": "core/presentation.c"
+    },
+    {
+      "sha256": "00436908bea47f0b2a3cf64a7555c3ba298f6782d4d3d0da3e530adf8cd42770",
+      "path": "core/c64_sprites.c"
+    },
+    {
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9",
+      "path": "core/c64_sprites.h"
+    },
+    {
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0",
+      "path": "core/c64_sprite_pose_data.h"
+    },
+    {
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445",
+      "path": "core/presentation.h"
+    },
+    {
+      "sha256": "59df52babdba8330b78ffcabcda466af0f37f6200251297716d5b2dba8542bad",
+      "path": "core/combat.c"
+    },
+    {
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd",
+      "path": "core/combat.h"
+    },
+    {
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05",
+      "path": "core/rooms.c"
+    },
+    {
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "path": "core/rooms.h"
+    },
+    {
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "path": "core/room_data.h"
+    },
+    {
+      "sha256": "8a63248355b77fc9a41ca12315509a7f893522e31bf6eca28d957688047733d5",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "6fcbf402b25472c7701f71484eeb047cf4dd0e83ad7af5d0c95e42b0ee6383cf",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
+    },
+    {
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
+    },
+    {
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+      "path": "core/source_audio.c"
+    },
+    {
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+      "path": "core/source_audio.h"
+    },
+    {
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e",
+      "path": "core/source_audio_data.h"
+    },
+    {
+      "sha256": "7b115d4c81732be222e5e65f6dd35447e2886b3139059063a6d74561390219b2",
+      "path": "tests/c64_rooms_test.c"
+    },
+    {
+      "sha256": "f037b200803ac93d7d4375a30870e34a26f0fd2af881e0876c50e569bb420b90",
+      "path": "test-core.ps1"
     }
   ]
 }

@@ -1,0 +1,68 @@
+{
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "original_raster_phase_verified": false,
+  "method": "Owned normal68000 run: actual PAL clock stamp versus source87/88 room clock; debugger reads, no source-memory injection",
+  "binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "5553cbba0a9f9ff84444205c55f01a5cb9b48c499152ffd6b9986aa00e25d1ef"
+  },
+  "samples": [
+    {
+      "clock_before": 3509,
+      "clock_after": 3513,
+      "age": 112,
+      "epoch": 1,
+      "steps": 22,
+      "fault": 0,
+      "waiting": 0
+    },
+    {
+      "clock_before": 3627,
+      "clock_after": 3631,
+      "age": 231,
+      "epoch": 1,
+      "steps": 46,
+      "fault": 0,
+      "waiting": 0
+    },
+    {
+      "clock_before": 3743,
+      "clock_after": 3750,
+      "age": 347,
+      "epoch": 1,
+      "steps": 69,
+      "fault": 0,
+      "waiting": 0
+    },
+    {
+      "clock_before": 3861,
+      "clock_after": 3866,
+      "age": 464,
+      "epoch": 1,
+      "steps": 92,
+      "fault": 0,
+      "waiting": 0
+    }
+  ],
+  "pairs": [
+    {
+      "source_fields": 119,
+      "clock_min": 114,
+      "clock_max": 122,
+      "source_steps": 24
+    },
+    {
+      "source_fields": 116,
+      "clock_min": 112,
+      "clock_max": 123,
+      "source_steps": 23
+    },
+    {
+      "source_fields": 117,
+      "clock_min": 111,
+      "clock_max": 123,
+      "source_steps": 23
+    }
+  ]
+}

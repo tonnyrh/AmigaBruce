@@ -35,20 +35,23 @@ unsigned char bl_source_pose(const BlSourcePose *p){
 void bl_c64_sprite_step(BlC64Sprite *v,const BlFighter *f,int kind){
     const BlGame *g=&f->body;BlSourcePose p;
     if(!f->active){v->initialized=0;return;}
+    if(g->source_canonical){v->pose=g->source_pose;v->initialized=1;v->x=g->x;v->y=g->y;return;}
     if(!v->initialized){v->pose=(unsigned char)(kind==0?42:2);v->initialized=1;}
     p.previous=v->pose;p.facing=g->facing;
     p.width=c64_sprite_width[kind][v->pose];
     p.second_width=kind==1?0:c64_sprite_width[kind][v->pose+1];
-    p.contact=(unsigned char)(kind==2?g->wall.contact:0);
+    p.contact=g->wall.contact;
     if(g->state==BL_CLIMB)p.contact|=4;
     p.aa=p.locked=0;p.counter=0;p.state=0;
     /* This projection is explicitly not a port of $1C5B. Use source graphics
      * for the states already represented by the adapter; keep its counters
      * and waits labelled as provisional rather than inventing extra frames. */
-    if(kind==2 && g->wall.state==24){v->pose=g->wall.pose;goto done;}
-    if(kind==2 && g->state==BL_CLIMB && !g->attack && !g->prone &&
+    if(g->wall.state==24){v->pose=g->wall.pose;goto done;}
+    if((kind==2 || g->climb_state==23) && g->state==BL_CLIMB && !g->attack && !g->prone &&
        !f->reaction && !f->sai){v->pose=g->wall.pose;goto done;}
-    if(f->reaction==BL_REACTION_DOWN){p.state=19;p.counter=f->stun;}
+    if(f->entering){p.state=f->entry_state;p.counter=f->timer;}
+    else if(f->reaction==BL_REACTION_DEAD){p.state=25;p.counter=f->stun;}
+    else if(f->reaction==BL_REACTION_DOWN){p.state=19;p.counter=f->stun;}
     else if(f->reaction==BL_REACTION_HURT)p.state=18;
     else if(f->reaction==BL_REACTION_FALL)p.state=14;
     else if(f->sai){p.state=22;p.counter=f->timer;}
@@ -58,8 +61,7 @@ void bl_c64_sprite_step(BlC64Sprite *v,const BlFighter *f,int kind){
     else if(g->state==BL_AIR){
         p.state=(unsigned char)(g->jump_phase==255?14:!g->jump_direction?5:g->jump_direction<0?6:7);
         p.counter=(unsigned char)(g->jump_phase<16?16-g->jump_phase:0);
-    }else if(kind==0 && f->ai==BL_AI_WAIT && f->timer>=16)p.state=16;
-    else if(g->state==BL_CLIMB){
+    }else if(g->state==BL_CLIMB){
         p.state=(unsigned char)(g->x!=v->x?(g->facing?4:3):g->y!=v->y?(g->climb_direction<0?1:2):0);
         /* Original waits leave $4FDB set. The adapter exposes a different
          * counter, so unchanged climbing travel retains its current pose. */

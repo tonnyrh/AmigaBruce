@@ -1,0 +1,73 @@
+{
+  "id": "NINJA-WALL-0001",
+  "date": "2026-10-26",
+  "status": "candidate_source_derived_partial_and_native_controls",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "full_combat_parity": false,
+  "source_ranges": [
+    "$1C5B-$1D6E",
+    "$22BD-$22F0",
+    "$2584/$25E2",
+    "$29C3-$2AA4",
+    "$2C54",
+    "$2D7C"
+  ],
+  "condition": "Ninja state22 uses common black/history recovery and virtual forward history; stab damage uses source component occupancy/aggregate groups and source counter/front gate; no new background ray rule",
+  "controls": {
+    "source_wall_entries": 56,
+    "source_occupancy_checks": 2450,
+    "source_combat_entries": 1080,
+    "aggregate_latch_cases": 20,
+    "native_runs": 2,
+    "native_fields_each": 6000,
+    "native_added_controls_each": 152
+  },
+  "artifacts": [
+    {
+      "path": "docs/NINJA_WALL.md",
+      "sha256": "aff49d26fbddfdb6a02ee804cd7d0b9bced207323fe03c0dcd0e2f9df0d5ee9e"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    },
+    {
+      "path": "tools/build_c64_hit_masks.py",
+      "sha256": "4253cebe03fcf69014afc225e4459cb574721648f83a7b6960d619fbde899155"
+    },
+    {
+      "path": "tools/audit_ninja_wall.py",
+      "sha256": "b00323e0bb3e3dd469c2c379bc4113ff4190ee1b0cc213ab0aab84ee6db8cc6d"
+    },
+    {
+      "path": "tests/ninja_wall_fixture.h",
+      "sha256": "679936008d60be25d4a20a9f651aea03c884e3ca3704fb297a0dfa260e6e60d7"
+    },
+    {
+      "path": "reference/analysis/ninja-wall-2026-10-26/report.json",
+      "sha256": "796608c3cd1d58bb63ec09a17f3b17b566cd1de05308925dc35cd5e9479d47a3"
+    },
+    {
+      "path": "reference/analysis/ninja-wall-2026-10-26/source-disassembly.txt",
+      "sha256": "c26497192a800a6811dc8ed7c6b839de02bd353ac4d228951ff218fdaee00e28"
+    },
+    {
+      "path": "reference/analysis/ninja-wall-2026-10-26/masks.json",
+      "sha256": "7432755b72fae3f85d0de3f3cda651217e1b3db22e7a2498c8699b7969baae00"
+    },
+    {
+      "path": "reference/validation/ninja-wall-delivery.json",
+      "sha256": "c54f3743152e7fba07ffaed6df6f12e7014bbb94c3f1c48983b0da646bfe39c6"
+    }
+  ],
+  "limits": [
+    "Current actor/pose bridge and sequential pair processing remain partial",
+    "D01E calculated/injected from executed sprite writer, not natural VIC raster capture",
+    "Other attacks and whole actor FSM remain open",
+    "945/953 missed fields,max3 periods: strict cadence remains open",
+    "Natural reproduction of user incident remains to be retested"
+  ],
+  "historical_native_build": true
+}

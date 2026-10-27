@@ -7,6 +7,8 @@
 #include "movement_fixture.h"
 #include "climb_fixture.h"
 #include "npc_recoil_fixture.h"
+#include "session_fixture.h"
+#include "session_wall_fixture.h"
 #define CHECK(q) do{if(!(q)){fprintf(stderr,"FAIL line%d: %s\n",__LINE__,#q);return 1;}}while(0)
 
 static void clear_room(unsigned char room){
@@ -54,7 +56,7 @@ static int audited_actor_cases(void){
     world.player.health=-1;world.player.stun=1;world.player.reaction=BL_REACTION_DOWN;
     world.player.body.wall.state=24;world.player.body.wall.counter=64;
     bl_combat_step(&world,0);
-    CHECK(!world.player.active && world.player.respawn==96);
+    CHECK(world.player.active && world.player.health==36 && world.player_respawns==1 && world.lives==3);
     puts("PASS source-audited T10 diagonal stop/input-independent net catch and T13 assignment then one recoil update (actor adapter scope)");
     return 0;
 }
@@ -64,6 +66,9 @@ int main(void){
     BlSourceAudio audio;BlPaulaVoice voices[3];unsigned char registers[26];
     unsigned long audio_hash=2166136261UL,music_hash=2166136261UL;int ch,k;
     CHECK(!audited_actor_cases());
+    i=session_fixture_run();if(i)printf("Session fixture failure=%d\n",i);CHECK(!i);
+    CHECK(!session_wall_fixture_run());
+    puts("PASS source life countdown, fall reserves, Game Over, debug flags and independent two-player progress");
     CHECK(!npc_recoil_fixture_run());
     printf("PASS %u NPC recoil/wall/re-entry regressions in R02\n",(unsigned)BL_NPC_RECOIL_FIXTURE_CASES);
     CHECK(!movement_fixture_run());
@@ -116,6 +121,8 @@ int main(void){
     /* Same ordinary input and PAL-field seam as the6000-field native combat
      * route. This checks host/68000 agreement, not unknown C64 combat rules. */
     bl_combat_reset(&world);bl_progress_reset(&progress);
+    /* Match only the controlled native replay's immutable $1159 page. */
+    bl_c64_test_write(0x17,0x68);
     bl_source_audio_reset(&audio);
     for(i=0;i<120;i++){
         bl_source_audio_music(&audio,registers);bl_source_audio_render(&audio,registers,voices);

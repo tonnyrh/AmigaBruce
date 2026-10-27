@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-25",
+  "status": "passed_source_room_integration_and_host_combat_replay",
+  "natural_playthrough": false,
+  "c64_combat_parity": false,
+  "output": [
+    "PASS source-audited T10 diagonal stop/input-independent net catch and T13 assignment then one recoil update (actor adapter scope)",
+    "PASS source life countdown, fall reserves, Game Over, debug flags and independent two-player progress",
+    "PASS 24 NPC recoil/wall/re-entry regressions in R02",
+    "PASS 70 source-derived wall/kick/jump checks",
+    "PASS 390 source-derived net dispatch and room5 climb checks",
+    "PASS 29 source-checked object/door fixtures, directional masks and single pickup",
+    "PASS all20 source-room entries and confirmed T01 free-fall control",
+    "PASS source-animated R02 hatch to R06, exact arrival and persistent lamps",
+    "PASS source final-room timer, next round and reset of original lamp counts",
+    "PASS R19 source projectile bits/contact and source death branch",
+    "AUDIO_6000 source_audio_hash=400497385 source_music_hash=2708371906 source_sfx_request_mask=32767 source_audio_chip_bytes=2260",
+    "M3_6000 combat_hits=58 enemy_defeats=4 enemy_spawns=11 player_deaths=3 player_respawns=3 final_x=28 final_y=196"
+  ],
+  "source_files": [
+    {
+      "path": "core/session.c",
+      "sha256": "f9b1241aa1353d41246c9914bfdfc763c1247d16a7e4bc82e2c65ee7c5274345"
+    },
+    {
+      "path": "core/session.h",
+      "sha256": "58fce65263325d704ac39d8ccfa862b367ad85b8316cf90f9f4f477841bc45ef"
+    },
+    {
+      "path": "tests/session_fixture.h",
+      "sha256": "5367610356381795ae72bfdc4d651755cf63661aafb7fd59a5461d31b5f72a63"
+    },
+    {
+      "path": "tests/session_wall_fixture.h",
+      "sha256": "c7c0c5036874255fd3797fd9108a7c22bfbec6736770d01344fea658ab0c54cc"
+    },
+    {
+      "path": "tests/npc_recoil_fixture.h",
+      "sha256": "c8a91b8b0c9df921c563e38542200132cdacdebd27a6e89a1922cdd8fcc2c4d5"
+    },
+    {
+      "path": "tests/movement_fixture.h",
+      "sha256": "ee4a38d83d59cef1cc744cef12b482379d7a1151f34e547892f46cecafabff3f"
+    },
+    {
+      "path": "tests/climb_fixture.h",
+      "sha256": "f2824bd318619057f87178d825f6af1742090fe72d776bd6f4b71d8866b5366a"
+    },
+    {
+      "path": "tests/contact_fixture.h",
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "2cbdff257cbfa551bf0d770c0b82fdc37f90670e4dbaf242a774482eefb5b214"
+    },
+    {
+      "path": "core/source_climb.c",
+      "sha256": "3df75184cdce5a5b971a462da96783fc77d848648c94f5c57d5541f83973d259"
+    },
+    {
+      "path": "core/source_climb.h",
+      "sha256": "d3c26f2c23eee3ac48f7f82b4bce4e23a07cd3587bd23fb8b8958e11e6ab7b06"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "8fcf8898f2c89de98068b315dce430feb7dac032f9aae9b332ca815b9ed78449"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "9f836c0c9731253b00433c6163dc83015dc3a11ccc2518e010a6ed630e8aaa50"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "c62a62a3a2c0929dcd544d0f84b31e59c56fdfe5fcfd0a56a4f519af8937c9ec"
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "416cecd3eb6bf5f8aafce53ca75a4630ca2b0b7aacd1300070f82b49a2b44ecf"
+    },
+    {
+      "path": "core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "01ed9f011a7fb7ad4fe8687e0d29ebea3445114f3aa6d9b4bbf2818c8342cfd6"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "9a2c0414626805f17bc801425ee76a96ab9ffafa91d8daebd28422833e396ccb"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "b83bbc76fc9b1d856c6467d6057e7efbaa07d2d1a3b6e65ee49af0def7a5b245"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "8c0288d88bd34e9ff93f8148b798360fd78c356ca59beddc43fc4d9adcd6fc61"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "1ebbb3e2f81c702a01aef36afa84b6e16a3a4b368615c1cc50323a963197bb4c"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "a121feee17281a2f78bf5ba2b0c5a5e0b946383f5e732739dd3de38b7f2aa4f4"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "tests/c64_rooms_test.c",
+      "sha256": "aeac77fc789b997a2d35d08717c83e0315ab4dea965d54a0129e5684b0d8948e"
+    },
+    {
+      "path": "test-core.ps1",
+      "sha256": "0282f2682f3dd886b6ed38c234b81a180a36ea1b0b2a8eb8b394fb66b28bf39b"
+    }
+  ]
+}

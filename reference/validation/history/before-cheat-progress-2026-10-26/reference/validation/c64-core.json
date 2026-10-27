@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-25",
+  "status": "passed_source_room_integration_and_host_combat_replay",
+  "natural_playthrough": false,
+  "c64_combat_parity": false,
+  "output": [
+    "PASS source-audited T10 diagonal stop/input-independent net catch and T13 assignment then one recoil update (actor adapter scope)",
+    "PASS source life countdown, fall reserves, Game Over, debug flags and independent two-player progress",
+    "PASS 24 NPC recoil/wall/re-entry regressions in R02",
+    "PASS 70 source-derived wall/kick/jump checks",
+    "PASS 390 source-derived net dispatch and room5 climb checks",
+    "PASS 29 source-checked object/door fixtures, directional masks and single pickup",
+    "PASS all20 source-room entries and confirmed T01 free-fall control",
+    "PASS source-animated R02 hatch to R06, exact arrival and persistent lamps",
+    "PASS source final-room timer, next round and reset of original lamp counts",
+    "PASS R19 source projectile bits/contact and source death branch",
+    "AUDIO_6000 source_audio_hash=3838310537 source_music_hash=2708371906 source_sfx_request_mask=32767 source_audio_chip_bytes=2260",
+    "M3_6000 combat_hits=62 enemy_defeats=6 enemy_spawns=10 player_deaths=2 player_respawns=2 final_x=8 final_y=196"
+  ],
+  "source_files": [
+    {
+      "sha256": "4c5f97f94d56f9abce674ed221e2fd68d84d6cfa02c429e0237dbcc58ba3b78e",
+      "path": "tests/room8_blast_fixture.h"
+    },
+    {
+      "sha256": "8ab07d4f240ad011ebe5bb3ee41947df7d719380c6d0cc7fb93c9daef1b7f862",
+      "path": "tools/audit_room8_blasts.py"
+    },
+    {
+      "sha256": "24dcc5a48afc788efe2251fe822ad9701cdab0ed977050ec92809c3a79982d76",
+      "path": "test-room8-blasts.ps1"
+    },
+    {
+      "sha256": "e7505441daf55ad137d758e316425b3d28e104dffc45b0f23fb9430a901dcf23",
+      "path": "tests/bombs_entry_fixture.h"
+    },
+    {
+      "sha256": "7d9825e07cb6dd9db1fbacf050088e97fee99ef66eb3ca1ed37ae065d8af18fc",
+      "path": "tools/audit_bombs_entry.py"
+    },
+    {
+      "sha256": "6268c387694a30a4a8b6af34ed1f367d2e7018cad3eedf0fb447348134018ba8",
+      "path": "test-bombs-entry.ps1"
+    },
+    {
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064",
+      "path": "core/c64_hit_data.h"
+    },
+    {
+      "sha256": "4253cebe03fcf69014afc225e4459cb574721648f83a7b6960d619fbde899155",
+      "path": "tools/build_c64_hit_masks.py"
+    },
+    {
+      "sha256": "b00323e0bb3e3dd469c2c379bc4113ff4190ee1b0cc213ab0aab84ee6db8cc6d",
+      "path": "tools/audit_ninja_wall.py"
+    },
+    {
+      "sha256": "679936008d60be25d4a20a9f651aea03c884e3ca3704fb297a0dfa260e6e60d7",
+      "path": "tests/ninja_wall_fixture.h"
+    },
+    {
+      "sha256": "f649111d35e797059b5709b815f9381c99540229295930b4e9e35267111a2103",
+      "path": "tests/ninja_wall_bridge.c"
+    },
+    {
+      "sha256": "073695107b922560a8339491ed02a673de92f1083e961922eaceecd79dda0365",
+      "path": "test-ninja-wall.ps1"
+    },
+    {
+      "sha256": "f9b1241aa1353d41246c9914bfdfc763c1247d16a7e4bc82e2c65ee7c5274345",
+      "path": "core/session.c"
+    },
+    {
+      "sha256": "58fce65263325d704ac39d8ccfa862b367ad85b8316cf90f9f4f477841bc45ef",
+      "path": "core/session.h"
+    },
+    {
+      "sha256": "a5c2ed481ef7a0af7b3e06e015fe3a227b0de19ff1a4736d699dc6524c47e615",
+      "path": "tests/session_fixture.h"
+    },
+    {
+      "sha256": "c7c0c5036874255fd3797fd9108a7c22bfbec6736770d01344fea658ab0c54cc",
+      "path": "tests/session_wall_fixture.h"
+    },
+    {
+      "sha256": "c8a91b8b0c9df921c563e38542200132cdacdebd27a6e89a1922cdd8fcc2c4d5",
+      "path": "tests/npc_recoil_fixture.h"
+    },
+    {
+      "sha256": "ee4a38d83d59cef1cc744cef12b482379d7a1151f34e547892f46cecafabff3f",
+      "path": "tests/movement_fixture.h"
+    },
+    {
+      "sha256": "f2824bd318619057f87178d825f6af1742090fe72d776bd6f4b71d8866b5366a",
+      "path": "tests/climb_fixture.h"
+    },
+    {
+      "sha256": "26164c3e58c83abf929ced769b0ba8755f670ba67994d9700bdfa27f6f8712a0",
+      "path": "tests/moving_net_fixture.h"
+    },
+    {
+      "sha256": "c78067e6db2287451e667fdebd01888b5be0ed21151f4c3f84ecc56565ac73f6",
+      "path": "tools/audit_moving_net.py"
+    },
+    {
+      "sha256": "b8b372cb553e78d582c7c23dacfb2849489beb49f2b07a0c45a3d5fe0624dd32",
+      "path": "test-moving-net.ps1"
+    },
+    {
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28",
+      "path": "tests/contact_fixture.h"
+    },
+    {
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b",
+      "path": "core/source_wall.c"
+    },
+    {
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b",
+      "path": "core/source_climb.c"
+    },
+    {
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433",
+      "path": "core/source_climb.h"
+    },
+    {
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56",
+      "path": "core/source_wall.h"
+    },
+    {
+      "sha256": "a808c7ccd1f5b97b8e178498d504d10635cbc8e013d9502a35e4e55b9cdb3a7f",
+      "path": "core/game.c"
+    },
+    {
+      "sha256": "47fc6a69a3a800e4aaacb5bf02b938162db40d03c5c6fb3f2935113d9c4a268c",
+      "path": "core/game.h"
+    },
+    {
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404",
+      "path": "core/presentation.c"
+    },
+    {
+      "sha256": "3a5bb3ba791da020404ee078140089bca326fd23e9c79d1385b320e1bd65af9b",
+      "path": "core/c64_sprites.c"
+    },
+    {
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9",
+      "path": "core/c64_sprites.h"
+    },
+    {
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0",
+      "path": "core/c64_sprite_pose_data.h"
+    },
+    {
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445",
+      "path": "core/presentation.h"
+    },
+    {
+      "sha256": "3d8062517d3e01f8372841ac63a821aa825592e3c3c58c7a4a75e8fd34886a6f",
+      "path": "core/combat.c"
+    },
+    {
+      "sha256": "b7bec80142c9f4aa252d1d25a1f0b84925bdfc843101be2fbd2b440570fdba02",
+      "path": "core/combat.h"
+    },
+    {
+      "sha256": "524cc8a99de8fbc8a51cd4ac5fbd844cd52c292d47bfea91327cfcaf31652d5b",
+      "path": "core/rooms.c"
+    },
+    {
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "path": "core/rooms.h"
+    },
+    {
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "path": "core/room_data.h"
+    },
+    {
+      "sha256": "d8003b597df01d335cbf3c07d19d2873d5678ea6ee2784adba2cb8e63dc2cf5d",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "7225b91c017c3e6c786dad0fd356b11da118cab0da0d5f5d264e98e9800b6040",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "ceb8cbeff7582d6bbcdc1b87064510de89e49485cc3cad0f2c0c048237fcfebd",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "2c4471a34e0ada547bafff9793edee30a0adb17a63646de9991cd0d9428d2059",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
+    },
+    {
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
+    },
+    {
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+      "path": "core/source_audio.c"
+    },
+    {
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+      "path": "core/source_audio.h"
+    },
+    {
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e",
+      "path": "core/source_audio_data.h"
+    },
+    {
+      "sha256": "7b115d4c81732be222e5e65f6dd35447e2886b3139059063a6d74561390219b2",
+      "path": "tests/c64_rooms_test.c"
+    },
+    {
+      "sha256": "fc50eae635f3d4e1e9a59bece29be8515e7d7c790bcdd1d2ccd498f0b6905801",
+      "path": "test-core.ps1"
+    }
+  ]
+}

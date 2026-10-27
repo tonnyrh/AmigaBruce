@@ -41,11 +41,11 @@ slike anslag.
 | `$85` | `$ECBE` | `$22D2`: stikk ved restteller12; også `$227C` i en separat aktørgren. | 7 felt |
 | `$86` | `$ECD8` | `$2E29`, via slag-/spark-/fallgrenene: registrert treff. | 6 felt |
 | `$87` | `$ECEC` | `$2A93`: registrert stikk-treff. | 9 felt |
-| `$88` | `$ED0E` | Blant annet `$3059`: kildebasert fare-/dødsgren. Ikke lagt på alle nederlag ut fra utseendet alene. | 21 felt |
+| `$88` | `$ED0E` | Gyldig effektdata; ingen direkte `LDY #$88`-utløser funnet i det undersøkte spillkodeområdet. | 21 felt |
 | `$89` | `$ED59` | `$404E–$407C`: kildekodens bevegelige celler. | 2 felt |
 | `$8A` | `$ED60` | `$424F`: felles lydkall fra flere dynamiske romrutiner. | 80 felt |
 | `$8B` | `$ED8E` | Blant annet `$3E0D`: romkode. | 15 felt |
-| `$8C` | `$EDC8` | Gyldig rom-/sekvensdata; se de konkrete kallstedene før flere aktørutløsere legges til. | 15 felt |
+| `$8C` | `$EDC8` | `$3057-$3059` køer dødslyden før `$407D` velger tilstand25/teller16. Tidligere tabell oppga feilaktig `$88` ved dette kallstedet. | 15 felt |
 | `$8D` | `$EE07` | Blant annet `$32D3`: objekt-/romkode. | 104 felt |
 | `$8E` | `$EE19` | `$2F36`: lanternemelodi. | 27 felt |
 

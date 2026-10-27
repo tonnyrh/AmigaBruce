@@ -1,0 +1,4028 @@
+{
+  "status": "passed_source_wall_fire_turn_controls",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "implementation_changed": false,
+  "source_files": [
+    {
+      "path": "core/game.c",
+      "sha256": "a808c7ccd1f5b97b8e178498d504d10635cbc8e013d9502a35e4e55b9cdb3a7f"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "47fc6a69a3a800e4aaacb5bf02b938162db40d03c5c6fb3f2935113d9c4a268c"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "37cd0b18a5d45c8de83eab78c2fc555f1ceab9f81c2eb116cee2ef16b76b7ee8"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "dfec7451a4102e7655f605fe04b07798467bf824d9f099154d5cd81afe93695a"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "a121feee17281a2f78bf5ba2b0c5a5e0b946383f5e732739dd3de38b7f2aa4f4"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616"
+    },
+    {
+      "path": "tests/session_bridge.c",
+      "sha256": "8b0a99c6a12a4a4e91afc2a60318ba5f78cd5f1b16e9f965e215e6c3238e4eed"
+    },
+    {
+      "path": "tools/audit_punch_wall.py",
+      "sha256": "bcc801cd5319a755281c5bbc9948f08412834e23de97e4bf7eff5a5b8a66867c"
+    },
+    {
+      "path": "tools/c64_room_model.py",
+      "sha256": "79789dd6fdc3ebf9e0d1725cbdd908d80c9269ddc23ea851fc0db8403e1b0c4b"
+    },
+    {
+      "path": ".tmp/session-test/session.dll",
+      "sha256": "55e5b6128c966b85868d26a1955f20c452dcfafad3a628c4dea7f829fedc1a6e"
+    }
+  ],
+  "cases": [
+    {
+      "label": "fire-immediately-at-wall",
+      "room": 6,
+      "start": [
+        60,
+        196
+      ],
+      "facing": 0,
+      "steps": [
+        {
+          "step": 0,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            60,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            56,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            56,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 1,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            56,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            52,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            52,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 2,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            52,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            48,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            48,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 3,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            48,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            44,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            44,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 4,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            44,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            40,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            40,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 5,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            40,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            36,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            36,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 6,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            36,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            32,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            32,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 7,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            32,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            26,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            26,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 8,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            26,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 9,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            14,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            14,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 10,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            14,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 11,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            2,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            2,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 12,
+          "input": 16,
+          "contact": 9,
+          "before": [
+            2,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            16,
+            24,
+            64
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            16
+          ],
+          "turned": true
+        },
+        {
+          "step": 13,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            24,
+            64,
+            16
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            16,
+            24,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 14,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            24,
+            0,
+            16
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            6,
+            17,
+            4
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            6
+          ],
+          "turned": false
+        },
+        {
+          "step": 15,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            17,
+            4,
+            6
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            6,
+            17,
+            3
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            6
+          ],
+          "turned": false
+        },
+        {
+          "step": 16,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            17,
+            3,
+            6
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            6,
+            17,
+            2
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            6
+          ],
+          "turned": false
+        },
+        {
+          "step": 17,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            17,
+            2,
+            6
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            6,
+            17,
+            1
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            6
+          ],
+          "turned": false
+        },
+        {
+          "step": 18,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            17,
+            1,
+            6
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            3
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 19,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            3,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            2
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 20,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            2,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            1
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 21,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            1,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 22,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            6,
+            17,
+            4
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            6
+          ],
+          "turned": false
+        },
+        {
+          "step": 23,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            17,
+            4,
+            6
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            6,
+            17,
+            3
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            6
+          ],
+          "turned": false
+        },
+        {
+          "step": 24,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            17,
+            3,
+            6
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            6,
+            17,
+            2
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            6
+          ],
+          "turned": false
+        },
+        {
+          "step": 25,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            17,
+            2,
+            6
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            6,
+            17,
+            1
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            6
+          ],
+          "turned": false
+        },
+        {
+          "step": 26,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            17,
+            1,
+            6
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            3
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 27,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            3,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            2
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 28,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            2,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            1
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 29,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            1,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 30,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 31,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 32,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 33,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 34,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 35,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        }
+      ]
+    },
+    {
+      "label": "release-immediately-at-wall",
+      "room": 6,
+      "start": [
+        60,
+        196
+      ],
+      "facing": 0,
+      "steps": [
+        {
+          "step": 0,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            60,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            56,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            56,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 1,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            56,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            52,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            52,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 2,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            52,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            48,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            48,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 3,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            48,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            44,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            44,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 4,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            44,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            40,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            40,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 5,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            40,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            36,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            36,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 6,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            36,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            32,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            32,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 7,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            32,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            26,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            26,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 8,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            26,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 9,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            14,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            14,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 10,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            14,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 11,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            2,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            2,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 12,
+          "input": 0,
+          "contact": 9,
+          "before": [
+            2,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            16,
+            24,
+            64
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            16
+          ],
+          "turned": true
+        },
+        {
+          "step": 13,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            24,
+            64,
+            16
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            16,
+            24,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 14,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            24,
+            0,
+            16
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 15,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 16,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 17,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 18,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 19,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 20,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 21,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 22,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 23,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 24,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 25,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 26,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 27,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 28,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 29,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 30,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 31,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 32,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 33,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 34,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        },
+        {
+          "step": 35,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            1,
+            0,
+            0,
+            2
+          ],
+          "source_after": [
+            8,
+            196,
+            1,
+            2,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            1,
+            2
+          ],
+          "turned": false
+        }
+      ]
+    },
+    {
+      "label": "punch-before-wall",
+      "room": 6,
+      "start": [
+        60,
+        196
+      ],
+      "facing": 0,
+      "steps": [
+        {
+          "step": 0,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            60,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            56,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            56,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 1,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            56,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            52,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            52,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 2,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            52,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            48,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            48,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 3,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            48,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            44,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            44,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 4,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            44,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            40,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            40,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 5,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            40,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            36,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            36,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 6,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            36,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            32,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            32,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 7,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            32,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            26,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            26,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 8,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            26,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 9,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            14,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            14,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 10,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            14,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 11,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 12,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 13,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 14,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 15,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            4,
+            17,
+            4
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 16,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            8,
+            196,
+            0,
+            17,
+            4,
+            4
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            4,
+            17,
+            3
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 17,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            8,
+            196,
+            0,
+            17,
+            3,
+            4
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            4,
+            17,
+            2
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 18,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            8,
+            196,
+            0,
+            17,
+            2,
+            4
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            4,
+            17,
+            1
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 19,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            8,
+            196,
+            0,
+            17,
+            1,
+            4
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            3
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 20,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            3,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            2
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 21,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            2,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            1
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 22,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            1,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 23,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            4,
+            17,
+            4
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 24,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            8,
+            196,
+            0,
+            17,
+            4,
+            4
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            4,
+            17,
+            3
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 25,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            8,
+            196,
+            0,
+            17,
+            3,
+            4
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            4,
+            17,
+            2
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 26,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            8,
+            196,
+            0,
+            17,
+            2,
+            4
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            4,
+            17,
+            1
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 27,
+          "input": 0,
+          "contact": 0,
+          "before": [
+            8,
+            196,
+            0,
+            17,
+            1,
+            4
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            3
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 28,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            3,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            2
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 29,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            2,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            1
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 30,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            1,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 31,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 32,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 33,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 34,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            8,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            8,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        }
+      ]
+    },
+    {
+      "label": "punch-clear-of-wall",
+      "room": 6,
+      "start": [
+        60,
+        196
+      ],
+      "facing": 0,
+      "steps": [
+        {
+          "step": 0,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            60,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            56,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            56,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 1,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            56,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            52,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            52,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 2,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            52,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            48,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            48,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 3,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            48,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            44,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            44,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 4,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            44,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            40,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            40,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 5,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            40,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            36,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            36,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 6,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            36,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            32,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            32,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 7,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            32,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            26,
+            196,
+            0,
+            16,
+            3,
+            0
+          ],
+          "amiga_after": [
+            26,
+            196,
+            0,
+            16
+          ],
+          "turned": false
+        },
+        {
+          "step": 8,
+          "input": 1,
+          "contact": 1,
+          "before": [
+            26,
+            196,
+            0,
+            3,
+            0,
+            16
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            14,
+            3,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            14
+          ],
+          "turned": false
+        },
+        {
+          "step": 9,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            3,
+            0,
+            14
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 10,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 11,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 12,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 13,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            4,
+            17,
+            4
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 14,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            20,
+            196,
+            0,
+            17,
+            4,
+            4
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            4,
+            17,
+            3
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 15,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            20,
+            196,
+            0,
+            17,
+            3,
+            4
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            4,
+            17,
+            2
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 16,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            20,
+            196,
+            0,
+            17,
+            2,
+            4
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            4,
+            17,
+            1
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 17,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            20,
+            196,
+            0,
+            17,
+            1,
+            4
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            3
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 18,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            3,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            2
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 19,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            2,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            1
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 20,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            1,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 21,
+          "input": 16,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            4,
+            17,
+            4
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 22,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            20,
+            196,
+            0,
+            17,
+            4,
+            4
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            4,
+            17,
+            3
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 23,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            20,
+            196,
+            0,
+            17,
+            3,
+            4
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            4,
+            17,
+            2
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 24,
+          "input": 16,
+          "contact": 0,
+          "before": [
+            20,
+            196,
+            0,
+            17,
+            2,
+            4
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            4,
+            17,
+            1
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            4
+          ],
+          "turned": false
+        },
+        {
+          "step": 25,
+          "input": 0,
+          "contact": 0,
+          "before": [
+            20,
+            196,
+            0,
+            17,
+            1,
+            4
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            3
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 26,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            3,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            2
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 27,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            2,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            1
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 28,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            1,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 29,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 30,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 31,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        },
+        {
+          "step": 32,
+          "input": 0,
+          "contact": 1,
+          "before": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source_after": [
+            20,
+            196,
+            0,
+            0,
+            0,
+            0
+          ],
+          "amiga_after": [
+            20,
+            196,
+            0,
+            0
+          ],
+          "turned": false
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Controlled start; source room geometry already checked by room audit",
+    "No source room loops, IRQ or VIC sprite-sprite fight in this actor check",
+    "Checks position/facing/pose/contact/recovery; not complete actor-state parity"
+  ]
+}

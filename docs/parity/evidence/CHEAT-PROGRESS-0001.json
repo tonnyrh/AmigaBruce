@@ -1,0 +1,51 @@
+{
+  "id": "CHEAT-PROGRESS-0001",
+  "date": "2026-10-26",
+  "status": "historical_native_cheat_controls_retested_with_spawn_delivery",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "cheat_is_c64_rule": false,
+  "source_ranges": [
+    "$331C-$336D",
+    "$336E-$33BC",
+    "$4CE2",
+    "$1856-$1870"
+  ],
+  "condition": "Amiga cheat completes lower numbered rooms by source record/count changes. Target/later records, zero-count placeholders, score and lives retained; independent per-player progress saved.",
+  "controls": {
+    "menu_start_cases": 20,
+    "executed_source_record_pickups": 1075,
+    "native_runs": 1,
+    "native_loop_iterations": 900,
+    "native_session_fixture_failure": 0
+  },
+  "artifacts": [
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/docs/CHEAT_PROGRESS.md",
+      "sha256": "b784e291babd0b41ced18c8a63d1ec3895facf961644ffd38fd8ecf46647e944"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/reference/analysis/cheat-progress-2026-10-26/report.json",
+      "sha256": "67d276901ff0ea3855cbe55c5197bf864e250f129b2ae73b04146c9e7a474099"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/reference/analysis/cheat-progress-2026-10-26/source-disassembly.txt",
+      "sha256": "f5f4d10b0796d3714bdf96d473e87b3e31003c56ffb9dd1df815b29a360ba516"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/tests/cheat_progress_fixture.h",
+      "sha256": "ed3cac5b18f84474177afa5fd6b76b84b94a546c78bd44eb82621578d55f0e26"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/reference/validation/cheat-progress-delivery.json",
+      "sha256": "a4de0726bc5faaa4a44a029d34c613cbc58d401635f5fdbe6da41b2da337e8ba"
+    }
+  ],
+  "limits": [
+    "Cheat policy is a requested Amiga extension, not natural C64 progression",
+    "Native controlled fixtures and source instruction calls are not a natural playthrough",
+    "Strict field cadence and full actor parity remain open"
+  ],
+  "superseded_delivery": "reference/validation/spawn-delivery.json"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "BOMBS-ENTRY-0001",
+  "date": "2026-10-26",
+  "status": "candidate_code_derived_partial_and_native_controls",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "full_actor_parity": false,
+  "source_ranges": [
+    "$0BFA-$0C4B",
+    "$0D04/$0E0D",
+    "$1832-$1836",
+    "$2E39-$2F01",
+    "$304B-$30D3",
+    "$3228-$32CB",
+    "$407D-$4085",
+    "$216B-$217A"
+  ],
+  "condition": "Actual source entry selector and one-shot saved destination/health; all actors can arm tile60 via globalB6 bit2; hazards remove NPCs and select Bruce25/16 with8C. Negative combat health and old wall recovery no longer skip/mask hazard death.",
+  "controls": {
+    "entry_choices": 640,
+    "arming_actors": 3,
+    "npc_explosion_contacts": 2,
+    "death_updates": 48,
+    "npc_hazard_cases": 42,
+    "native_added_cases_per_run": 44,
+    "native_runs": 2,
+    "native_fields_each": 6000,
+    "controlled_reader_page": 104
+  },
+  "artifacts": [
+    {
+      "path": "docs/BOMBS_ENTRY.md",
+      "sha256": "e6587c43cf73e09658bf386bbd6b60a0bc7b5ed5a5903cc3c85ea393e35fdef0"
+    },
+    {
+      "path": "tests/bombs_entry_fixture.h",
+      "sha256": "e7505441daf55ad137d758e316425b3d28e104dffc45b0f23fb9430a901dcf23"
+    },
+    {
+      "path": "tools/audit_bombs_entry.py",
+      "sha256": "7d9825e07cb6dd9db1fbacf050088e97fee99ef66eb3ca1ed37ae065d8af18fc"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/reference/analysis/bombs-entry-2026-10-26/report.json",
+      "sha256": "feeaea1c0eae14f69d6a2b10adf08241f55840b4b8b5e6e811f4235529374deb"
+    },
+    {
+      "path": "reference/analysis/bombs-entry-2026-10-26/source-disassembly.txt",
+      "sha256": "d9e105ed3dcd5177223342d6b2df256a0a5b2f564c2bd5dfbdaf1d6467939df2"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/reference/validation/bombs-entry-delivery.json",
+      "sha256": "05cb715d62fa5b3f911eea08d5694923a0474c1014b7eb3b194ea1679554a6f5"
+    },
+    {
+      "path": "reference/analysis/bombs-entry-2026-10-26/uncontrolled-read-diagnostic/raw-native.json",
+      "sha256": "776a881e81efff7288cc6786b05431e8c03168cc36b204ff0f6b18f910613015"
+    }
+  ],
+  "limits": [
+    "Controlled injected states and memory reads, not natural C64 play",
+    "Full IRQ/reader context and NPC animations/timer services remain partial",
+    "Native hazard negative-health marker is not literal sourceD1 health/HUD parity",
+    "Strict field cadence remains open;967/963 missed fields,max3 periods"
+  ],
+  "historical_native_build": true
+}

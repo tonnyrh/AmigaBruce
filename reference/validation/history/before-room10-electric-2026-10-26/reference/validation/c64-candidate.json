@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-26",
+  "status": "verified_scoped_room8_npc_reaction_mask_repair",
+  "artifact": {
+    "path": "reference/validation/room8-blasts-delivery.json",
+    "sha256": "7fb04d803c3b4248995bf63dbf72c072b8700e2f2d2d8f23ddfb746cc81bc0f1"
+  },
+  "native_validation_complete": true,
+  "actor_logic_fully_ported": false,
+  "full_m2_parity": false,
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_playthrough_verified": false,
+  "primary_edition_verified": false,
+  "all_room_realtime_gate_passed": false,
+  "enhanced_art_active": false
+}

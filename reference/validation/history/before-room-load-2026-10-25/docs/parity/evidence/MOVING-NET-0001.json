@@ -1,0 +1,57 @@
+{
+  "id": "MOVING-NET-0001",
+  "date": "2026-10-25",
+  "status": "source_and_native_controls_passed_natural_retest_pending",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "full_original_parity": false,
+  "natural_playthrough": false,
+  "summary": "R05 moving net: replace false hit/recoil with original tile62/state23, manual-delay and vertical carry rules.",
+  "source_ranges": [
+    "$2E10-$2E1B",
+    "$2E39-$2EE9",
+    "$310C-$312B",
+    "$2187-$2234",
+    "$2C70-$2D54",
+    "$2974-$2993"
+  ],
+  "conditions": [
+    "Active non-death actor; tile62 in original six-cell scan and B6&4",
+    "AD gates voluntary movement every five logic updates; pure directions only",
+    "60==1 triggers two vertical carry helpers, direction from65; AA retains carry-only pose",
+    "Black contact still owns source movement-history rollback; no invented recoil"
+  ],
+  "artifacts": [
+    {
+      "path": "docs/MOVING_NET.md",
+      "sha256": "0dc4766bec7203b53b738bc58e13c71cb3c80f39cae7f0700d97dd215cbe720c"
+    },
+    {
+      "path": "reference/analysis/moving-net-2026-10-25/report.json",
+      "sha256": "c6cadf6bcdafce5875857dd6b568814f90109a28fce7f22ba62b597e7e7bbe39"
+    },
+    {
+      "path": "reference/analysis/moving-net-2026-10-25/source-disassembly.txt",
+      "sha256": "fbf11a43b54fe72305b3f7fe2194442af90ff5c0cf93731ba746e0fd266922cb"
+    },
+    {
+      "path": "tests/moving_net_fixture.h",
+      "sha256": "26164c3e58c83abf929ced769b0ba8755f670ba67994d9700bdfa27f6f8712a0"
+    },
+    {
+      "path": "reference/validation/moving-net-delivery.json",
+      "sha256": "c544efa92e69c76d674f6e4e671012916e002fc7e396f6639afac61475a78372"
+    }
+  ],
+  "limits": [
+    "Controlled fixture starts and inputs; no natural C64/Amiga playthrough",
+    "Full AI/combat/actor and real-time performance parity remain open"
+  ],
+  "native_result": {
+    "runs": 2,
+    "PAL_fields_per_run": 6000,
+    "fixture_cases_per_run": 430,
+    "failures": 0,
+    "strict_realtime_gate_passed": false
+  }
+}

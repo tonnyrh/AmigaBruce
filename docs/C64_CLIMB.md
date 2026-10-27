@@ -1,5 +1,13 @@
 # Klatring: rom5 og sidefart
 
+27. oktober: [Samlet kildeport](MILESTONE_COMPLETION.md) erstatter den delvise
+aktøradapteren i vanlig spill, også støtte/landing og aktuell positurmaske.
+Denne avgrensede snapshot-/kodegjennomgangen beholdes som historikk.
+
+Oppfølging: [det bevegelige nettet i rom5](MOVING_NET.md) har en egen
+tilstand23 og venterytme. Den tidligere statiske nettgjennomgangen under
+dekket ikke denne objektgrenen; den er nå skilt fra kampreaksjoner.
+
 25. oktober2026. Klaterutinen og kontaktpositurene er korrigert mot den
 frosne kandidatens faktiske maskinkode. Dette er en avgrenset portering av
 Bruces nettbevegelse; resten av aktørmotoren har fortsatt åpne punkter.

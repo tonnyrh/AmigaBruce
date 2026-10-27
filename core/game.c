@@ -7,6 +7,7 @@
 /* AI gait $2358/$236C/$23F7/$23FF calls movement helpers directly,
  * bypassing the player direction branch's $1FC4 locomotion sound. */
 static unsigned char player_movement_sound=1;
+static unsigned char npc_ai_motion;
 /* Source-CPU checked target deltas. Grounded landing and complete actor
  * dispatch remain scoped adapters; see docs/C64_MOVEMENT.md. */
 /* Launch (counter15), then $2008-$2047/$20D2-$216A counters15..1.
@@ -38,10 +39,10 @@ int bl_attack_overlaps(const BlGame *g,int x,int feet,int prone) {
          * exact sprite-pixel collision remains a separate parity task. */
         if(g->attack_phase>3)return 0;
         top=bl_y(g)-16;bottom=bl_y(g)-11;
-    }else{
+    }else if(g->attack==BL_FLYING_KICK){
         if(g->attack_phase<2 || g->attack_phase>10)return 0;
         top=bl_y(g)-11;bottom=bl_y(g)-6;
-    }
+    }else return 0;
     left=bl_x(g)+(g->facing?4:-14);right=left+10;
     return left<x+7 && right>x-7 && top<feet && bottom>body_top;
 }
@@ -90,19 +91,6 @@ static const BlClimbable *climbable(const BlGame *g){
 static int supported(const BlGame *g){
     return (bl_c64_contact(bl_x(g),bl_y(g),bl_c64_object_pose(g),0)&5)!=0;
 }
-static int land_on_source(BlGame *g,BlCoord previous){
-    int yy,first=previous/Q,last=g->y/Q;
-    if(last<first)return 0;
-    for(yy=first;yy<=last;yy++){
-        /* Source body/whole-mask classes; the positional landing sweep
-         * remains an adapter, not the full $1D99-$1DCC obstruction branch. */
-        if((bl_c64_contact(bl_x(g),yy,bl_c64_object_pose(g),0)&5) &&
-           !(bl_c64_contact(bl_x(g),yy,bl_c64_object_pose(g),1)&1)){
-            g->y=(BlCoord)(yy*Q);return 1;
-        }
-    }
-    return 0;
-}
 
 void bl_reset(BlGame *g) {
     bl_source_wall_reset(&g->wall);
@@ -113,29 +101,29 @@ void bl_reset(BlGame *g) {
     g->state=BL_GROUND; g->facing=1; g->last_input=0; g->jump_phase=255;
     g->walk_steps=0;g->jump_direction=0;g->jump_cooldown=0;
     g->climb_wait=0;g->climb_steps=0;g->climb_state=0;g->climb_direction=0;
+    g->net_delay=g->net_hold=0;
     g->prone=0;g->prone_wait=0;
     g->attack=BL_ATTACK_NONE;g->attack_phase=0;g->attack_recovery=0;
+    g->fall_push=g->source_actor=0;
+    g->source_canonical=g->source_state=g->source_counter=g->source_wait=g->source_pose=g->source_mask=0;
 }
 
 void bl_step(BlGame *g, unsigned char input) {
     bl_step_phased(g,input,input);
 }
 void bl_step_npc(BlGame *g,unsigned char input){
-    int px=bl_x(g),py=bl_y(g);
-    unsigned char recovering=(unsigned char)(g->wall.state==24);
-    /* The NPC adapter suppresses Bruce's input/sound dispatch, not the
-     * per-actor $1C6B-$1C9A history prefix. Retain ordinary displacement
-     * so a later hit in a wall can undo the movement that got it there. */
-    if(!recovering)bl_source_wall_age(&g->wall);
+    /* $17BE-$17DB calls $1C5B for EVERY active actor. Only the player
+     * locomotion sound/input branch differs; black contact does not. */
     player_movement_sound=0;bl_step(g,input);player_movement_sound=1;
-    /* A recovery step already records each inverse helper internally. */
-    if(!recovering || g->wall.state!=24)
-        bl_source_wall_record(&g->wall,bl_x(g)-px,bl_y(g)-py);
+}
+void bl_step_npc_ai(BlGame *g,unsigned char input){
+    npc_ai_motion=1;bl_step_npc(g,input);npc_ai_motion=0;
 }
 
 static void step_motion(BlGame *g,unsigned char input,unsigned char attack_input);
 static unsigned char actor_state(const BlGame *g){
     if(g->wall.state==24)return 24;
+    if(g->attack==BL_SAI)return 22;
     if(g->attack==BL_FLYING_KICK)return (unsigned char)(g->facing?13:12);
     if(g->attack==BL_PUNCH)return 17;
     if(g->prone)return 26;
@@ -143,6 +131,22 @@ static unsigned char actor_state(const BlGame *g){
         !g->jump_direction?5:g->jump_direction<0?6:7);
     if(g->state==BL_CLIMB)return g->climb_state;
     return (unsigned char)(g->walk_steps?(g->facing?4:3):0);
+}
+void bl_moving_net_contact(BlGame *g,long touching){
+    unsigned char pose=touching?bl_c64_object_pose(g):0;
+    if(g->state==BL_CLIMB && g->climb_state==23){
+        /* Source BF becomes zero while the pose latch remains unchanged.
+         * BL_CLIMB/state0 also preserves that latch for the next B6 query. */
+        g->climb_state=g->climb_wait=0; /* $2E10 */
+    }
+    if(touching){
+        /* $310C clears AA but retains the displayed $4F48/$4F4E pose. */
+        g->wall.pose=(unsigned char)(pose-g->source_actor*70);
+        g->wall.state=g->wall.counter=0; /* BF/CE are replaced by $310C. */
+        g->state=BL_CLIMB;g->climb_state=23;g->climb_wait=0;g->net_hold=0;
+        g->attack=BL_ATTACK_NONE;g->prone=g->prone_wait=0;
+        g->walk_steps=0;g->velocity_y=0;
+    }
 }
 void bl_record_recoil(BlGame *g,int pixels){
     int old=bl_x(g),next=old+(g->facing?-pixels:pixels);
@@ -153,15 +157,19 @@ void bl_record_recoil(BlGame *g,int pixels){
 }
 void bl_step_phased(BlGame *g,unsigned char input,unsigned char attack_input){
     int px=bl_x(g),py=bl_y(g);
+    unsigned char previous_pose;
     unsigned char waiting=(unsigned char)((g->state==BL_GROUND && g->prone_wait) ||
         ((g->state==BL_CLIMB || g->state==BL_GROUND) && g->climb_wait));
     if(bl_c64_room()!=g->room)bl_c64_load(g->room);
-    if((player_movement_sound || g->wall.state==24) && !waiting){
+    previous_pose=bl_c64_object_pose(g);
+    if(!waiting){
         BlSourceActor a;
-        unsigned char flags,pose=bl_c64_object_pose(g);
+        unsigned char flags,pose=previous_pose;
         long result;
         a.x=(unsigned char)((px+24)/2);a.y=(unsigned char)py;a.facing=g->facing;
         a.state=actor_state(g);a.counter=g->wall.state==24?g->wall.counter:
+            g->attack==BL_SAI?g->attack_phase:
+            a.state==23?16:
             g->attack==BL_FLYING_KICK?(unsigned char)(g->attack_phase<12?12-g->attack_phase:0):0;
         a.previous=g->wall.previous;a.animation=g->wall.animation;a.wait=a.pose_lock=0;
         flags=bl_c64_contact(px,py,pose,0);
@@ -172,7 +180,7 @@ void bl_step_phased(BlGame *g,unsigned char input,unsigned char attack_input){
             g->previous_x=g->x;g->previous_y=g->y;++g->step;
             g->x=(BlCoord)(((int)a.x*2-24)*Q);g->y=(BlCoord)(a.y*Q);g->facing=a.facing;
             g->wall.state=24;g->wall.counter=a.counter;
-            g->wall.pose=a.pose_lock?pose:bl_c64_recovery_pose(pose);
+            g->wall.pose=(unsigned char)((a.pose_lock?pose:bl_c64_recovery_pose(pose))-g->source_actor*70);
             g->attack=BL_ATTACK_NONE;g->attack_phase=0;g->walk_steps=0;
             g->prone=0;
             g->prone_wait=g->climb_wait=g->jump_cooldown=0;
@@ -183,6 +191,30 @@ void bl_step_phased(BlGame *g,unsigned char input,unsigned char attack_input){
         if(g->wall.state==24){
             g->state=(unsigned char)((flags&5)?BL_GROUND:BL_AIR);
             g->prone=0;g->wall.state=g->wall.counter=0;
+            if(!(flags&5)){
+                /* State24/counter0 -> $1DCA/$1DC4 uses the existing B6.
+                 * Re-querying a new falling mask here can invent support. */
+                g->previous_x=g->x;g->previous_y=g->y;++g->step;
+                if(g->y<199*Q)g->y+=Q;
+                g->jump_phase=255;g->velocity_y=Q;g->fall_push=2;
+                g->walk_steps=0;g->last_input=input;
+                bl_source_wall_record(&g->wall,0,bl_y(g)-py);return;
+            }
+        }
+        if(a.state==23){
+            /* $310C selected this state during the object pass. It bypasses
+             * ordinary jump/net input while keeping black/history recovery. */
+            long sound=bl_source_moving_net_step(&a,&g->net_delay,&g->net_hold,
+                input,flags,bl_c64_read(0x60),bl_c64_read(0x65));
+            g->previous_x=g->x;g->previous_y=g->y;++g->step;
+            g->x=(BlCoord)(((int)a.x*2-24)*Q);g->y=(BlCoord)(a.y*Q);g->facing=a.facing;
+            g->state=BL_CLIMB;g->climb_state=a.state;g->climb_wait=a.wait;
+            if(!a.pose_lock && !(a.state==23 && g->net_hold))
+                g->wall.pose=bl_source_climb_pose(&a,pose-g->source_actor*70);
+            g->velocity_y=0;g->jump_phase=255;g->last_input=input;
+            if(sound)bl_c64_audio_request(0x80);
+            bl_source_wall_record(&g->wall,bl_x(g)-px,bl_y(g)-py);
+            return;
         }
         if(player_movement_sound && !g->attack && (g->state==BL_GROUND || g->state==BL_CLIMB) && (flags&4)){
             /* $1DCA-$1ED5 net direction dispatch, after the exact ready
@@ -212,6 +244,7 @@ void bl_step_phased(BlGame *g,unsigned char input,unsigned char attack_input){
             g->previous_x=g->x;g->previous_y=g->y;++g->step;
             if(g->y<199*Q)g->y+=Q;
             g->state=BL_AIR;g->jump_phase=255;g->velocity_y=Q;
+            g->fall_push=2;
             g->climb_state=g->climb_wait=0;g->walk_steps=0;g->last_input=input;
             bl_source_wall_record(&g->wall,0,bl_y(g)-py);return;
         }
@@ -220,11 +253,21 @@ void bl_step_phased(BlGame *g,unsigned char input,unsigned char attack_input){
         }
     }
     step_motion(g,input,attack_input);
-    if(player_movement_sound && !waiting)
+    if(g->state==BL_GROUND && !g->walk_steps && !g->attack && !g->prone && (g->wall.contact&4)){
+        /* $2974-$2993: a jump/fall ending idle on net must select the
+         * net pose using this step's B6, not a fresh idle-mask query. */
+        g->state=BL_CLIMB;g->climb_state=0;
+        g->wall.pose=(unsigned char)(previous_pose==10 || previous_pose==12?previous_pose:10);
+    }
+    if(g->state==BL_GROUND && g->walk_steps && !g->attack && !g->prone){
+        /* $28C7-$28E5: walking contact must use the same alternating
+         * source mask as the displayed pose, including for NPCs. */
+        g->wall.pose=(unsigned char)(g->facing?(g->wall.pose==18?20:18):(g->wall.pose==14?16:14));
+    }
+    if(!waiting)
         bl_source_wall_record(&g->wall,bl_x(g)-px,bl_y(g)-py);
 }
 static void step_motion(BlGame *g,unsigned char input,unsigned char attack_input) {
-    BlCoord old_y;
     const BlClimbable *net;
     int horizontal=((input&BL_RIGHT)!=0)-((input&BL_LEFT)!=0);
     if(bl_c64_room()!=g->room)bl_c64_load(g->room);
@@ -235,6 +278,16 @@ static void step_motion(BlGame *g,unsigned char input,unsigned char attack_input
      * A launched jump keeps its own direction below; kicks move explicitly. */
     if(g->state==BL_AIR && g->jump_phase==255)horizontal=0;
     g->previous_x=g->x; g->previous_y=g->y; ++g->step;
+    if(g->attack==BL_SAI){
+        /* $22BD-$22F0 runs AFTER the common $1C68 black/history prefix.
+         * CE is a remaining counter for this attack. The source records
+         * one forward helper unit WITHOUT changing X ($22E3/$22E8). */
+        BlSourceActor a;a.state=22;a.counter=g->attack_phase;a.facing=g->facing;
+        if(bl_source_sai_step(&g->wall,&a))bl_c64_audio_request(0x85);
+        g->attack_phase=a.counter;
+        if(!a.state){g->attack=BL_ATTACK_NONE;g->attack_phase=0;}
+        g->walk_steps=0;g->last_input=input;return;
+    }
     /* MACHINE-0005: punch target state lasts four logic steps, repeats
      * every eight when held. Flying kick has its own low trajectory. */
     if(g->attack==BL_PUNCH){
@@ -283,10 +336,50 @@ static void step_motion(BlGame *g,unsigned char input,unsigned char attack_input
     if(g->state==BL_AIR && g->jump_phase==254){
         if(!supported(g)){
             g->jump_phase=255;g->velocity_y=Q;
+            g->fall_push=2;
             if(g->y<199*Q)g->y+=Q;
             g->last_input=input;return;
         }
         g->state=BL_GROUND;g->jump_phase=255;g->velocity_y=0;
+    }
+    if(g->state==BL_AIR && g->jump_phase==255){
+        unsigned char pose=bl_c64_object_pose(g);
+        unsigned char flags=bl_c64_contact(bl_x(g),bl_y(g),pose,0);
+        unsigned char body=bl_c64_contact(bl_x(g),bl_y(g),pose,1);
+        if(g->wall.previous!=14 && !(flags&5)){
+            g->fall_push=2;g->velocity_y=Q;
+            if(g->y<199*Q)g->y+=Q;
+            g->last_input=input;return;
+        }
+        /* $1D84-$1DBF. The source checks the CURRENT pose once, never
+         * searches intermediate Y positions for a landing. Bruce's body
+         * obstruction uses $A7 and the shifted $B0 allowance; NPC landing
+         * instead performs one forward helper ($1D8D-$1D96). */
+        if(player_movement_sound && (body&1)){
+            g->fall_push>>=1;
+            if(g->fall_push){
+                g->x+=(BlCoord)(g->facing?2*Q:-2*Q);
+                if(g->x<0)g->x=0;
+                if(g->x>302*Q)g->x=302*Q;
+            }
+        }else if(flags&5){
+            if(!player_movement_sound){
+                g->x+=(BlCoord)(g->facing?2*Q:-2*Q);
+                if(g->x<0)g->x=0;
+                if(g->x>302*Q)g->x=302*Q;
+                g->walk_steps=1;
+            }else g->walk_steps=0;
+            g->state=BL_GROUND;g->velocity_y=0;g->last_input=input;return;
+        }
+        g->velocity_y=2*Q;if(g->y<198*Q)g->y+=2*Q;else g->y=199*Q;
+        g->last_input=input;return;
+    }
+    if(g->state==BL_GROUND && !supported(g)){
+        /* $1DCA->$1DC4->$1DBC: loss of support precedes direction input.
+         * A step which walks off remains grounded until this next entry. */
+        g->state=BL_AIR;g->jump_phase=255;g->fall_push=2;g->velocity_y=Q;
+        if(g->y<199*Q)g->y+=Q;
+        g->last_input=input;return;
     }
     net=climbable(g);
     /* $2010/$20D6/$2124 -> $2504: launched jump states5/6/7 end
@@ -298,6 +391,20 @@ static void step_motion(BlGame *g,unsigned char input,unsigned char attack_input
         g->climb_direction=0;g->state=BL_CLIMB;g->velocity_y=0;
         g->wall.pose=10;g->climb_state=0;
         g->jump_phase=255;g->last_input=input;return;
+    }
+    if(g->state==BL_AIR && g->jump_phase>0 && g->jump_phase<16){
+        unsigned char counter=(unsigned char)(16-g->jump_phase);
+        unsigned char flags=bl_c64_contact(bl_x(g),bl_y(g),bl_c64_object_pose(g),0);
+        /* $2022/$2105/$2150: solid contact cancels the descending action
+         * BEFORE either movement helper. No swept platform landing occurs
+         * inside a launched jump. The next counter0 entry decides support.
+         * Standing jumps inspect solid only at counters2..7; side jumps
+         * inspect it at counters1..6. */
+        if((flags&1) && (g->jump_direction?counter<7:counter>=2 && counter<8)){
+            g->previous_x=g->x;g->previous_y=g->y;
+            g->state=BL_GROUND;g->jump_phase=255;g->velocity_y=0;
+            g->walk_steps=0;g->last_input=input;return;
+        }
     }
     /* $1EDF/$1F11/$1F3C/$1F52: all four diagonal codes stop on
      * class4, rather than selecting vertical priority. Preserve an action
@@ -347,8 +454,10 @@ static void step_motion(BlGame *g,unsigned char input,unsigned char attack_input
         g->jump_direction=(signed char)horizontal;
     }
     if(g->state==BL_AIR && g->jump_phase==0)horizontal=0;
-    g->x = (BlCoord)(g->x+horizontal*(g->state==BL_CLIMB ? 2*Q :
-        (g->state==BL_GROUND&&g->walk_steps>=7 ? 6*Q : WALK)));
+    /* $2352/$236C calls the horizontal helper twice, also on class4.
+     * Human NPC input retains the ordinary single-helper net movement. */
+    g->x = (BlCoord)(g->x+horizontal*(g->state==BL_CLIMB ? (npc_ai_motion?4*Q:2*Q) :
+        (player_movement_sound && g->state==BL_GROUND&&g->walk_steps>=7 ? 6*Q : WALK)));
     if(g->state==BL_GROUND&&horizontal){
         if(changed_direction && g->walk_steps)g->walk_steps=1;
         else if(g->walk_steps<7)++g->walk_steps;
@@ -382,10 +491,6 @@ static void step_motion(BlGame *g,unsigned char input,unsigned char attack_input
             return;
         }
     }
-    if(g->state==BL_GROUND && !supported(g)) {
-        g->state=BL_AIR;
-    }
-    old_y=g->y;
     if(g->state==BL_AIR) {
         if(g->jump_phase!=255){
             unsigned char phase=g->jump_phase;
@@ -398,12 +503,40 @@ static void step_motion(BlGame *g,unsigned char input,unsigned char attack_input
         g->y += g->velocity_y;
         if(g->y<45*Q)g->y=45*Q;
         if(g->y>199*Q)g->y=199*Q;
-        if(g->velocity_y>=0) {
-            if((g->jump_phase==255 || g->velocity_y>0) && land_on_source(g,old_y)){
-                g->velocity_y=0;g->state=BL_GROUND;g->jump_phase=255;
-                g->walk_steps=0;
-            }
-        }
     }
     g->last_input=input;
+}
+
+void bl_step_npc_entry(BlGame *g,unsigned char *state,unsigned char *counter,long player_x,long mask){
+    BlSourceActor a;unsigned char flags;long result;int px=bl_x(g),py=bl_y(g);
+    a.x=(unsigned char)((px+24)/2);a.y=(unsigned char)py;a.facing=g->facing;
+    a.state=*state;a.counter=*counter;a.previous=g->wall.previous;a.animation=g->wall.animation;
+    a.wait=a.pose_lock=0;flags=bl_c64_contact(px,py,mask,0);g->wall.contact=flags;
+    result=bl_source_wall_step(&g->wall,&a,flags);
+    g->wall.previous=a.previous;g->wall.animation=a.animation;g->wall.tracked=1;
+    g->previous_x=g->x;g->previous_y=g->y;++g->step;g->walk_steps=0;
+    if(result){
+        g->x=(BlCoord)(((int)a.x*2-24)*Q);g->y=(BlCoord)(a.y*Q);g->facing=a.facing;
+        g->wall.state=24;g->wall.counter=a.counter;
+        g->wall.pose=(unsigned char)(bl_c64_recovery_pose(g->wall.pose+g->source_actor*70)%70);
+        *state=24;*counter=a.counter;if(result==2)bl_c64_reenter();return;
+    }
+    /* $2239-$2269: Yamo turns only on CE1, then enters BF18/CE16.
+     * BF0/16/18 countdowns use $24F4; their source wait bytes are zero. */
+    if(a.state==16 && a.counter==1){
+        a.facing=(unsigned char)(px<player_x);a.state=18;a.counter=16;
+        bl_c64_audio_request(0x81);
+    }else if(a.counter)--a.counter;
+    else{
+        /* BF18/CE0 cannot be promoted by $2D7C yet. One idle dispatch
+         * clears it, or starts unsupported fall with one vertical pixel. */
+        a.state=0;g->state=(unsigned char)((flags&4)?BL_CLIMB:BL_GROUND);g->climb_state=0;
+        if(!(flags&5)){
+            a.state=14;if(a.y<199)++a.y;
+            g->state=BL_AIR;g->jump_phase=255;g->fall_push=2;g->velocity_y=Q;
+            bl_source_wall_record(&g->wall,0,(int)a.y-py);
+        }
+    }
+    g->x=(BlCoord)(((int)a.x*2-24)*Q);g->y=(BlCoord)(a.y*Q);g->facing=a.facing;
+    g->wall.state=a.state;g->wall.counter=a.counter;*state=a.state;*counter=a.counter;
 }

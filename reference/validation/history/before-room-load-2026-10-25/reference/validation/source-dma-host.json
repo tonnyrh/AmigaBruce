@@ -1,0 +1,49 @@
+{
+  "status": "verified_fixed_dma_ram_projection",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "fields": 1518,
+  "channel_images": 4554,
+  "bytes_checked": 4663296,
+  "wave_changes": 83,
+  "invalid_cases": 5,
+  "dma_bytes": 3072,
+  "native_fetch_timing_verified": false,
+  "source_files": [
+    {
+      "path": "core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+    },
+    {
+      "path": "core/source_dma.h",
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/waveforms.pcm",
+      "sha256": "fc1020350cc4c0106f05b463928fbc2e8067bf5dbcb2cf546506c5328cd9c89b"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/source-registers.json",
+      "sha256": "c7776d8c23319721287da67b25cd6e910a41c8e8a436b97fbe83c25c6fda758d"
+    },
+    {
+      "path": "tools/verify_source_dma.py",
+      "sha256": "63ea2d3ec0fce613608917ef8fd3cbb173c78ace9eddeaeaabb300cd9bea4939"
+    },
+    {
+      "path": "test-source-dma.ps1",
+      "sha256": "fc6104d0a6a155984d515e696166641af22b305cb1d3e53e1988ef7f2041d66d"
+    }
+  ]
+}

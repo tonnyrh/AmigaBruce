@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-26",
+  "status": "verified_scoped_ninja_stab_wall_and_sprite_contact_repair",
+  "source_files": [
+    {
+      "path": "core/game.c",
+      "sha256": "a808c7ccd1f5b97b8e178498d504d10635cbc8e013d9502a35e4e55b9cdb3a7f"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "47fc6a69a3a800e4aaacb5bf02b938162db40d03c5c6fb3f2935113d9c4a268c"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "39a7d62d5f664a03f7751066ebecbdb96e1299beeeb4a8221ebb19f2bcc452c3"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "b9f39f242bf117b1da0ba26a3105d3cf55f9b59a58ec9ab41436ea31ed9500e1"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "37cd0b18a5d45c8de83eab78c2fc555f1ceab9f81c2eb116cee2ef16b76b7ee8"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "dfec7451a4102e7655f605fe04b07798467bf824d9f099154d5cd81afe93695a"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    },
+    {
+      "path": "tools/build_c64_hit_masks.py",
+      "sha256": "4253cebe03fcf69014afc225e4459cb574721648f83a7b6960d619fbde899155"
+    },
+    {
+      "path": "tools/audit_ninja_wall.py",
+      "sha256": "b00323e0bb3e3dd469c2c379bc4113ff4190ee1b0cc213ab0aab84ee6db8cc6d"
+    },
+    {
+      "path": "tools/verify_ninja_wall_delivery.py",
+      "sha256": "0303b87b4e4c0ea72701e4cf71e45403fb2e81f88ac91cd22fa33222d46f45f9"
+    },
+    {
+      "path": "tools/verify_c64_candidate.py",
+      "sha256": "7d8c0da241107958ad9459fa074aafed036cf9f22310c02f7e1cb723cd6c6972"
+    },
+    {
+      "path": "tests/ninja_wall_fixture.h",
+      "sha256": "679936008d60be25d4a20a9f651aea03c884e3ca3704fb297a0dfa260e6e60d7"
+    },
+    {
+      "path": "tests/ninja_wall_bridge.c",
+      "sha256": "f649111d35e797059b5709b815f9381c99540229295930b4e9e35267111a2103"
+    },
+    {
+      "path": "tests/session_fixture.h",
+      "sha256": "e94cc328139cf26169c1d49bbb32d04877c87b4e11a0e40729664285a19503c4"
+    },
+    {
+      "path": "test-ninja-wall.ps1",
+      "sha256": "073695107b922560a8339491ed02a673de92f1083e961922eaceecd79dda0365"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "sha256": "f7cb0acc1461e5cd411cd27a9c085e95adc3abebaa22e19a97f18f4cd8237ad3"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "dc8cf6a0904bdedfa0f143f216033a303cbe643c39ca339d35849ce26cf4eecb"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "d35c49d765a6b943aa1c835ab50108412ca0fd38a95394af52b440fe97ebbbec"
+    },
+    {
+      "path": "reference/analysis/ninja-wall-2026-10-26/report.json",
+      "sha256": "62340d71b3d9069a19cb7fce35ad120002ccf7e5c39df8cd3c899d8b3f91de46"
+    },
+    {
+      "path": "reference/analysis/ninja-wall-2026-10-26/masks.json",
+      "sha256": "7432755b72fae3f85d0de3f3cda651217e1b3db22e7a2498c8699b7969baae00"
+    },
+    {
+      "path": "reference/validation/a500-c64-combat-diagnostic.json",
+      "sha256": "363cb64aec68ac7de88b92dac95293eea717410ffcf28381c9d45b2c2a57d5e8"
+    },
+    {
+      "path": "reference/validation/c64-core.json",
+      "sha256": "c5734b50797b3d155bc4ebdd6a3b0751c9134fb50c7d3ef583c9e218fd463acc"
+    },
+    {
+      "path": "reference/analysis/ai-audit-2026-10-25/report.json",
+      "sha256": "0d6e5c82e8a1eb72f9e5283addd1f56067c82419527a30c88d2d862d833d1c1e"
+    },
+    {
+      "path": "docs/NINJA_WALL.md",
+      "sha256": "aff49d26fbddfdb6a02ee804cd7d0b9bced207323fe03c0dcd0e2f9df0d5ee9e"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "9b275953aeb27724ebc024dd90af92b0de413e67546cceab27a609382eaf9278"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "acbbe414aaf0549d04c43102f2ec9c2593aa277a686c989935c329839a00b05b"
+    }
+  ],
+  "native_build": [
+    {
+      "path": "amiga/out/bruce_test.exe",
+      "sha256": "dfa1be599a7b8a5ac4b6939a3e3cf816abd94cc72d011f8155753a70a112c82a"
+    },
+    {
+      "path": "amiga/out/bruce_test.adf",
+      "sha256": "d0970f528d82592acc74e54c128e42c7ad5ac667637db1d9846f2b03a7520c21"
+    }
+  ],
+  "native_validation_complete": true,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "full_combat_parity": false,
+  "full_m4_complete": false,
+  "realtime_gate_passed": false,
+  "native_fixture_cases": 152,
+  "limits": [
+    "Current actor-pose bridge and sequential pair application remain incomplete",
+    "Sprite geometry is from executed writer; D01E inputs are calculated/injected, not a VIC raster capture",
+    "State22 idle wait clock/mode and complete actor FSM remain open",
+    "No new wall line-of-sight rule",
+    "Punch/kick/fall geometry, collect-all/apply-all combat and complete pose/FSM remain open",
+    "Current combat replay is controlled; user wall incident still needs a natural retest"
+  ]
+}

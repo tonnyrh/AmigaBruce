@@ -1,0 +1,73 @@
+{
+  "capture_id": "AIR-COMBAT-0001",
+  "date": "2026-10-21",
+  "status": "native_c64_kick_against_jumping_bruce_confirmed",
+  "primary_edition_verified": false,
+  "full_combat_parity": false,
+  "reference_capture": "WALL-0001",
+  "scenario": "wall-jump-right",
+  "before_tick": 354,
+  "hit_tick": 355,
+  "observations": {
+    "bruce_before": {
+      "active": 1,
+      "x": 76,
+      "y": 194,
+      "next_state": 7,
+      "state": 7,
+      "health": 32,
+      "hit": 0,
+      "facing": 1,
+      "wait": 0,
+      "counter": 14,
+      "raw_4f45": 2
+    },
+    "bruce_after": {
+      "active": 1,
+      "x": 74,
+      "y": 195,
+      "next_state": 19,
+      "state": 19,
+      "health": 25,
+      "hit": 8,
+      "facing": 1,
+      "wait": 0,
+      "counter": 11,
+      "raw_4f45": 2
+    },
+    "yamo_before": {
+      "active": 129,
+      "x": 82,
+      "y": 193,
+      "next_state": 12,
+      "state": 12,
+      "health": 20,
+      "hit": 0,
+      "facing": 0,
+      "wait": 0,
+      "counter": 9,
+      "raw_4f45": 2
+    },
+    "damage": 7
+  },
+  "conclusion": "Jump state7 does not confer immunity to Yamo flying kick. Bruce transitions to knockdown19 after losing7 health. C64 sprite-pixel contact, facing, spacing and active attack phase still gate the hit.",
+  "implementation": "Airborne victims remain eligible in the Amiga resolver. The2026-10-24 room expansion changes geometry dispatch and room-local reset/spawns; it does not add jump immunity. Exact masks, contact trajectories and first-kick priority remain open.",
+  "source_files": [
+    {
+      "path": "reference/traces/WALL-0001.json",
+      "sha256": "fd6513e9c8bd7e9861b15e1c53edcc6633096ff24dae01e2622de0af9317d295"
+    },
+    {
+      "path": ".reference/c64/work/untrained-memory.bin",
+      "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "e6441e3bb7f2ef220c7bfb34aefa1bdcb99edcad6e4531b61da40ec5fff3940e"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "89e59ae89f7ebd6a4a4809a145daabd3740cd8403a8b2b3f3ffc97f731ed97fa"
+    }
+  ]
+}

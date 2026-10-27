@@ -21,6 +21,42 @@ def verify(write=False):
     if (ROOT/'reference/analysis/ai-audit-2026-10-25/report.json').exists():
         from audit_c64_ai import verify as verify_ai
         verify_ai()
+    if (ROOT/'reference/validation/spawn-delivery.json').exists():
+        from verify_spawn_delivery import verify as verify_spawn
+        verify_spawn()
+        return
+    if (ROOT/'reference/validation/cheat-progress-delivery.json').exists():
+        from verify_cheat_progress_delivery import verify as verify_cheat_progress
+        verify_cheat_progress()
+        return
+    if (ROOT/'reference/validation/room10-electric-delivery.json').exists():
+        from verify_room10_electric_delivery import verify as verify_room10_electric
+        verify_room10_electric()
+        return
+    if (ROOT/'reference/validation/room8-blasts-delivery.json').exists():
+        from verify_room8_blast_delivery import verify as verify_room8_blast
+        verify_room8_blast()
+        return
+    if (ROOT/'reference/validation/bombs-entry-delivery.json').exists():
+        from verify_bombs_entry_delivery import verify as verify_bombs_entry
+        verify_bombs_entry()
+        return
+    if (ROOT/'reference/validation/ninja-wall-delivery.json').exists():
+        from verify_ninja_wall_delivery import verify as verify_ninja_wall
+        verify_ninja_wall()
+        return
+    if (ROOT/'reference/validation/room-load-delivery.json').exists():
+        from verify_room_load_delivery import verify as verify_room_load
+        verify_room_load()
+        return
+    if (ROOT/'reference/validation/moving-net-delivery.json').exists():
+        from verify_moving_net_delivery import verify as verify_moving_net
+        verify_moving_net()
+        return
+    if (ROOT/'reference/validation/session-walls-delivery.json').exists():
+        from verify_session_delivery import verify as verify_session
+        verify_session()
+        return
     if (ROOT/'reference/validation/paula-stream-delivery.json').exists():
         from verify_paula_stream_delivery import verify as verify_paula
         verify_paula()

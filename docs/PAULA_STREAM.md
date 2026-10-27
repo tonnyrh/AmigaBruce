@@ -66,14 +66,16 @@ Den strenge grafikk-/spillkadensen og endelig lyttegodkjenning er separate.
 
 ## Status for dette bygget
 
-Normalprogram og ADF er bygget. Hele den eksisterende kildekontrollen og den
-nye DMA-bufferkontrollen består på verten. De siste emulatorforsøkene stoppet
-i WinUAE-oppstarten før Amiga-programmet kjørte. Ny native verifikasjon og
-opptak er derfor **uavklart**, ikke bestått. Tidligere opptak og resultater er
-arkivert med sine egne kilde-/byggidentiteter.
+Normalprogram og ADF er bygget. Kildekontrollen og DMA-bufferkontrollen består
+på verten. Senere to6000-felts kjøringer med liv-/veggrettelsen fullførte alle
+native regresjonskontroller og beholdt85408 byte sammenhengende Chip RAM.
+Lydklokken mistet79/77 felt, med største gap3/2, under dette oppsettet.
+Det er ingen godkjenning av streng50Hz-kadens. Nye native musikk-/effektopptak
+er fortsatt **uavklart**. Tidligere opptak har sine egne byggidentiteter.
 
 En tidligere, avgrenset prototype nådde6000 felt, men feilet minnekravet og
 rapporterte tapte lydfelt. Det var før de siste endringene i testbuffer og
 lastepause, og brukes ikke som native godkjenning av nåværende kode.
 
-[Gjeldende status og identiteter](../reference/validation/paula-stream-delivery.json).
+[Gjeldende status og identiteter](../reference/validation/session-walls-delivery.json).
+Den eldre Paula-leveransen er historisk etter liv-/veggrettelsene.

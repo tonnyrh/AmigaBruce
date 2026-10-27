@@ -1,0 +1,28 @@
+{
+  "label": "vic-native-final-running",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "30e1736b287c20859c028a64e1b5b591b6a2ded0b58ce2c075fb28b103fcdf0f"
+  },
+  "source_room": 1,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    396864,
+    396904,
+    396944,
+    396984
+  ],
+  "source_music_fields": 370,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-native-final-running.bpl",
+      "sha256": "01b21738ee39d43908d33d8f6d0c3057d364f913a58cc577c4f79a1a404215eb"
+    },
+    {
+      "path": "docs/images/session-vic-native-final-running.png",
+      "sha256": "40647d48d501c011ac56caa8d63489f0472f40af5f6ca2a955f7703016d1615f"
+    }
+  ]
+}

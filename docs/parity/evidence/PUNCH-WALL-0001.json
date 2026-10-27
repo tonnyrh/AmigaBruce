@@ -1,0 +1,47 @@
+{
+  "id": "PUNCH-WALL-0001",
+  "date": "2026-10-26",
+  "status": "source_and_host_controls_match_existing_wall_turn",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "implementation_changed": false,
+  "source_ranges": [
+    "$1CC7-$1CCD",
+    "$1CF0-$1CFA",
+    "$1E86-$1E97",
+    "$1EC4-$1ED5",
+    "$1F76-$1F86",
+    "$226A-$22BC"
+  ],
+  "condition": "Black contact reverses previous movement; successful horizontal helper also assigns facing before ordinary action dispatch",
+  "controls": {
+    "steps": 140,
+    "sequences": 4,
+    "room": 6,
+    "fire_and_release_same_turn": true,
+    "clear_punches_keep_facing": true
+  },
+  "artifacts": [
+    {
+      "path": "docs/PUNCH_WALL.md",
+      "sha256": "dcbc30ee1d8494a580e1041e2c9339e71e969c43d53fb4178c18b471aef95dba"
+    },
+    {
+      "path": "tools/audit_punch_wall.py",
+      "sha256": "bcc801cd5319a755281c5bbc9948f08412834e23de97e4bf7eff5a5b8a66867c"
+    },
+    {
+      "path": "reference/analysis/punch-wall-2026-10-26/report.json",
+      "sha256": "44cd487832af3675dbda9ab52de521e671f6ba533462c4fcb7314217d0a1d9ab"
+    },
+    {
+      "path": "reference/analysis/punch-wall-2026-10-26/source-disassembly.txt",
+      "sha256": "7170b283f615601086beed3c03bf3b6c04ad361f36a0f404336bdc8f8e26468d"
+    }
+  ],
+  "limits": [
+    "Controlled starts and static room glyphs; no natural C64 recording or NPC fight",
+    "User screenshot does not identify exact pre-contact movement history"
+  ]
+}

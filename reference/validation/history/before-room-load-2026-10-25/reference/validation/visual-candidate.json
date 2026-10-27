@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-25",
+  "status": "verified_scoped_moving_net_controls_on_A500",
+  "artifact": {
+    "path": "reference/validation/moving-net-delivery.json",
+    "sha256": "c544efa92e69c76d674f6e4e671012916e002fc7e396f6639afac61475a78372"
+  },
+  "native_validation_complete": true,
+  "actor_logic_fully_ported": false,
+  "full_m2_parity": false,
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_playthrough_verified": false,
+  "primary_edition_verified": false,
+  "all_room_realtime_gate_passed": false,
+  "enhanced_art_active": false
+}

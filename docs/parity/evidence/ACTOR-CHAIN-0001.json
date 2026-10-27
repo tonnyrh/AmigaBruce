@@ -1,0 +1,39 @@
+{
+  "id": "ACTOR-CHAIN-0001",
+  "date": "2026-10-27",
+  "status": "scoped_complete_source_chain_implemented_acceptance_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "full_original_parity": false,
+  "source_ranges": [
+    "$0743-$1100",
+    "$15A8-$1981",
+    "$1BC2-$33CA",
+    "$40BC",
+    "$5212-$56FF"
+  ],
+  "condition": "Complete source main/actor/contact/object/combat/lifetime/score chain in shared RAM; explicit CIA/VIC/field-wait seams",
+  "controls": {
+    "source": 3034,
+    "integrated": 5,
+    "native": 53
+  },
+  "artifacts": [
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "b87b7857d9a5db3d498b324c6cdf1a9ff47095619f0d008edec4e78080162446"
+    },
+    {
+      "path": "docs/MILESTONE_COMPLETION.md",
+      "sha256": "c1008c145a84d47deacebd367e4c6209ac6b52e04ed0950d1ec6c47822740a07"
+    }
+  ],
+  "limitations": [
+    "Verified untouched1984 edition",
+    "PAL real-time budget across all rooms",
+    "Natural VIC/IRQ phase and reader distribution",
+    "Complete natural playthrough and next round",
+    "Physical A500 and final distribution"
+  ]
+}

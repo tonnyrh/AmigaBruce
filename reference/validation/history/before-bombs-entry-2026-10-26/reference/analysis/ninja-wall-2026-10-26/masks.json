@@ -1,0 +1,20 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "frame_count": 210,
+  "unique_masks": 86,
+  "cpu_bytes": 7644,
+  "chip_bytes": 0,
+  "generator": {
+    "path": "tools/build_c64_hit_masks.py",
+    "sha256": "4253cebe03fcf69014afc225e4459cb574721648f83a7b6960d619fbde899155"
+  },
+  "dependency": {
+    "path": "tools/build_c64_sprites.py",
+    "sha256": "a8e60cf9f9c8fc1a6acc0ffc6d129e1b15232900e0a0223f5b41372cbe6895d7"
+  },
+  "output": {
+    "path": "core/c64_hit_data.h",
+    "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "SESSION-WALLS-0001",
+  "date": "2026-10-25",
+  "status": "candidate_code_derived_partial",
+  "summary": "Source death/lives, R06 landing, all-actor black-contact dispatch and distinct NPC mask banks; Amiga menu/debug controls added and inspected.",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "full_original_parity": false,
+  "source_ranges": [
+    "$0FBC-$0FC7",
+    "$16A2-$1701",
+    "$1818-$188E",
+    "$1C5B-$1DBF",
+    "$2008-$217A",
+    "$2780-$29C2",
+    "$2D55-$2D79",
+    "$304B-$3068",
+    "$407D-$4085",
+    "$59A5-$59A7"
+  ],
+  "conditions": [
+    "Hazard entry queues8C at3057, then state25/counter16 and pose8; combat death retains reaction19",
+    "DEC28 negative ends final attempt; initial4 or9 spare falls",
+    "Player turns use independent28..43 state and lamp identities",
+    "NPC masks use actor base offsets0/70/140; each active actor enters black/history prefix",
+    "Jump and free fall inspect current contact without intermediate-Y sweep"
+  ],
+  "artifacts": [
+    {
+      "path": "docs/SESSION_WALLS.md",
+      "sha256": "fde42f7db517050094f3f4026ee6655f3866f18090eaca0be5781c06655f8f51"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/report.json",
+      "sha256": "17a0f297842688a0d40af2e4b651d96224c974a0b7f58e5ea6a6541ee7726c19"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/source-disassembly.txt",
+      "sha256": "5062e8dbe05821974bcc729ab4724e3f91a9d687918f466d5c125fb4b11f6579"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/menu-native.json",
+      "sha256": "5095d69a3193d5a25f13d01bc033ac2d43f2a189200b543c0d52109caabe90ed"
+    },
+    {
+      "path": "reference/validation/session-walls-delivery.json",
+      "sha256": "e0a8801b6e25efe2d5a66b3f3f6e212cb5ad490885286d93327e65f6a3f2ffd3"
+    }
+  ],
+  "limits": [
+    "Controlled source/native fixtures are not natural C64 play",
+    "Strict A500 cadence and user death-sound listening remain open",
+    "Debug options intentionally override rules"
+  ]
+}

@@ -3,8 +3,8 @@
   "artifacts": [
     {
       "path": "reference/analysis/ai-audit-2026-10-25/report.json",
-      "sha256": "5644b0087f0066d33306080285f209f4875328c5582d727e18e2d185474dbfc2",
-      "size_bytes": 3221784
+      "sha256": "f72424cc6da7d89f096be2472f6127f7af5f07c760bea3fca5c1ae0266455eca",
+      "size_bytes": 3222457
     },
     {
       "path": "reference/analysis/ai-audit-2026-10-25/source-disassembly.txt",
@@ -13,23 +13,23 @@
     },
     {
       "path": "docs/C64_AI.md",
-      "sha256": "8d39497dc471e02aede72f1bc892a005fd59890a5fd164e67daec6cf410cadf9",
-      "size_bytes": 11233
+      "sha256": "aeb8600a4a33dd9e16da0e0064079b2b204a07e72a2e1e2381d4a8cd622cfed7",
+      "size_bytes": 11882
     },
     {
       "path": "tools/audit_c64_ai.py",
-      "sha256": "85fedea43f3565e3bb3b4d72afc20ea133f674e821db54e55cf0a8fcb99e09ca",
-      "size_bytes": 23007
+      "sha256": "ed46e5a687124d6322b1be8f4a05bbe9aa34e02c339fcab8fbe73e747173a243",
+      "size_bytes": 23093
     },
     {
       "path": "tests/ai_adapter_bridge.c",
-      "sha256": "d72ea0a47ab050379e3ba1d124a481a96794b73995844ee69051fc42bd28e6f9",
-      "size_bytes": 2312
+      "sha256": "6bd4a3bb2928ac6b037e2d125d7cc82a7a6c2297a916f877a4935e0bdbefc8d5",
+      "size_bytes": 3706
     },
     {
       "path": "test-c64-ai.ps1",
-      "sha256": "e7d00c34980e3275c07cd7550d3292cf80ddf6a34f14a199a3c9002fc68912c0",
-      "size_bytes": 1377
+      "sha256": "34b3fbef5ac54e9373a9d19aa3110c4bef882acf7f665ee16327a0ab03a7407d",
+      "size_bytes": 1580
     }
   ],
   "date": "2026-10-25",
@@ -38,5 +38,5 @@
   "full_original_parity": false,
   "id": "AI-AUDIT-0001",
   "status": "candidate_code_derived_partial",
-  "summary": "Actual6502 Kage/Yamo AI audit:4578 controlled fixtures,588 ordinary ground choices agree with isolated adapter requests;59 retained counter/support/sai discrepancies plus clock/spawn/entry/door gaps. Engine and EXE/ADF unchanged; no full physics, natural-play or native AI certification."
+  "summary": "Actual6502 Kage/Yamo AI audit:4578 controlled fixtures,588 ordinary ground choices agree with isolated adapter requests;58 retained ordinary wait/support discrepancies. Spawn/entry/clock/door integration is covered separately by SPAWN-AUDIT-0001. This audit changes no executable; no full physics, natural-play or native AI certification."
 }

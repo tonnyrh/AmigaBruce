@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-26",
+  "status": "historical_verified_cheat_progress_superseded_by_spawn",
+  "source_files": [
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/core/session.c",
+      "sha256": "b06a80d4933ebbcacf4e1ebda919a4c5b340c46a330a31bf667491b5d612aef2"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/core/session.h",
+      "sha256": "58fce65263325d704ac39d8ccfa862b367ad85b8316cf90f9f4f477841bc45ef"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/core/c64_rooms.c",
+      "sha256": "8e60240a580e00fbe27546303d022bc4723ad43a750bcf5ddfdf1a3ff95a3251"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/core/c64_rooms.h",
+      "sha256": "162d7487893d4b94c2f8b1656f9c34439503b5080e9d2df4c1777ddf330c81b0"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/tests/cheat_progress_fixture.h",
+      "sha256": "ed3cac5b18f84474177afa5fd6b76b84b94a546c78bd44eb82621578d55f0e26"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/tests/session_fixture.h",
+      "sha256": "0347ebe6a5aa75fb8e8f7c780ef032d47755cdf66e0edd043c9c28e9ab9b93d1"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/tests/session_bridge.c",
+      "sha256": "fbaebb3d0d5a14b5090bbd62bce6cf55daeda99cd69a2f1fd17f421bfe1815d9"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/test-session.ps1",
+      "sha256": "1ab13d4e0c62d03f88759074638a91ffa66c171257b7bec5af5dd11ed1a97aee"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/test-core.ps1",
+      "sha256": "1c508943e5fb791c335b06b723646ae03bd40aae2e4dd1fa47bac832b0b8080e"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/test-amiga.ps1",
+      "sha256": "d307208c1f2cef4e52023980a30b29be87189b13b6a11e52613b8cee2623af8d"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/tools/audit_session_walls.py",
+      "sha256": "e385645195c7dc31e2f8bb4face2e6ed734b55c5cf3b66013eb5d1961ae42a2d"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/tools/audit_cheat_progress.py",
+      "sha256": "e4a8d165f3320455bc87efa125b85fe0ae0ad51c242c4f5fe92ce404db3923c8"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/tools/verify_cheat_progress_delivery.py",
+      "sha256": "2d43f57452b3d824d3b86e7be93db5c8e0ae5213cc302f0c00a3747acb2bec73"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/tools/verify_c64_candidate.py",
+      "sha256": "800039ec311982fd28b3b271ca18431b690d9fa8340292451cfef607f34e2f12"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/docs/CHEAT_PROGRESS.md",
+      "sha256": "b784e291babd0b41ced18c8a63d1ec3895facf961644ffd38fd8ecf46647e944"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/reference/analysis/cheat-progress-2026-10-26/report.json",
+      "sha256": "67d276901ff0ea3855cbe55c5197bf864e250f129b2ae73b04146c9e7a474099"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/reference/analysis/cheat-progress-2026-10-26/source-disassembly.txt",
+      "sha256": "f5f4d10b0796d3714bdf96d473e87b3e31003c56ffb9dd1df815b29a360ba516"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/reference/analysis/session-walls-2026-10-25/report.json",
+      "sha256": "f2e73482d68358f972cd4d4bf5a6a76317308d0f7346b8f46482d2ee13950911"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/reference/validation/c64-core.json",
+      "sha256": "0de592b3b9522f8766c6de2174b31eea5e06efa6ec37783af8af60299d87651c"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/reference/validation/a500-c64-combat-diagnostic.json",
+      "sha256": "793b2b0119b5b3924f649d32f9274ce27fa2b7851312060fca106cb83e238cbb"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/amiga/out/bruce_amiga.exe",
+      "sha256": "2ed207265562962db52ec38b6765ebd74dff43676c59107753abedf6902738db"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/amiga/out/bruce_amiga.adf",
+      "sha256": "0bd158b1fb1f00918231d7a61837f6e80bedc2b05e34316f48e7a11ad9bf82de"
+    }
+  ],
+  "native_build": [
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/amiga/out/bruce_test.exe",
+      "sha256": "e79a75b028adbb0e3b1c3b6a8444012a8baab26cd93d96cd4df1ea89620bc5d3"
+    },
+    {
+      "path": "reference/validation/history/before-spawn-audit-2026-10-26/amiga/out/bruce_test.adf",
+      "sha256": "34b8f8d77f7187023c5b4460cae0953a2a09af79efe8dd256a673cd418794cd0"
+    }
+  ],
+  "source_menu_starts": 20,
+  "source_record_pickups": 1075,
+  "native_validation_complete": true,
+  "native_runs": 1,
+  "native_loop_iterations": 900,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "full_actor_parity": false,
+  "full_m4_complete": false,
+  "realtime_gate_passed": false,
+  "limits": [
+    "Cheat deliberately completes lower numbered rooms; not a C64 start rule",
+    "Controlled source instructions and native fixtures, not natural play",
+    "Complete actor parity and strict field cadence remain open"
+  ],
+  "superseded_by": "reference/validation/spawn-delivery.json"
+}

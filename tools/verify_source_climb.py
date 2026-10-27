@@ -148,7 +148,7 @@ def native_fixtures(fixtures,traces):
            'static const signed short source_climb_starts[][5]={'+','.join(arr(s) for s in starts)+'};',
             f'#define BL_CLIMB_FIXTURE_CASES {len(fixtures)+steps+2}',
             r'''static unsigned short climb_fixture_data(const unsigned char *raw){
-    unsigned short i,j,at;BlSourceActor a;BlGame g;BlFighter f;BlC64Sprite visual;
+    unsigned short i,j,at;BlSourceActor a;BlGame g;BlFighter f={0};BlC64Sprite visual;
     for(i=0;i<BL_CLIMB_DISPATCH_CASES;i++){
         const unsigned char *v=raw+i*22;
         for(j=0;j<9;j++)((unsigned char*)&a)[j]=v[j];

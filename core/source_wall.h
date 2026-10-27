@@ -16,4 +16,7 @@ void bl_source_wall_age(BlSourceWall *wall);
  * The source $0106 wait is handled by the caller before this entry. */
 long bl_source_wall_step(BlSourceWall *wall,BlSourceActor *actor,long contact);
 void bl_source_wall_record(BlSourceWall *wall,long dx,long dy);
+/* $22BD-$22F0, after the shared ready prefix. Returns the $85 sound cue.
+ * Idle clock/mode wait after counter1 remains the caller's adapter. */
+long bl_source_sai_step(BlSourceWall *wall,BlSourceActor *actor);
 #endif

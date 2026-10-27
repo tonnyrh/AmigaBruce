@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-25",
-  "status": "implemented_host_checked_native_validation_pending",
+  "date": "2026-10-26",
+  "status": "verified_scoped_source_spawn_services_and_entry_phases",
   "artifact": {
-    "path": "reference/validation/paula-stream-delivery.json",
-    "sha256": "510dd4f62b56102b85251b5f0ee8b6571fe830c61221116180392b793fa2d43d"
+    "path": "reference/validation/spawn-delivery.json",
+    "sha256": "42fce157714564bb1f4789cc9fa2b6461689d0a17a289b25fe34aa688b882484"
   },
-  "native_validation_complete": false,
+  "native_validation_complete": true,
   "actor_logic_fully_ported": false,
   "full_m2_parity": false,
   "full_m4_parity": false,
@@ -13,6 +13,5 @@
   "natural_playthrough_verified": false,
   "primary_edition_verified": false,
   "all_room_realtime_gate_passed": false,
-  "all_room_native_rerun_after_actor_changes": false,
   "enhanced_art_active": false
 }

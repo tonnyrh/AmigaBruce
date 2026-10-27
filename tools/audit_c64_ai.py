@@ -139,8 +139,9 @@ def record_evidence(report):
                 adapter_ground_decisions=report['adapter_ground_decision_checks'],
                 summary=f"Actual6502 Kage/Yamo AI audit:{report['fixture_count']} controlled fixtures,"
                         f"{report['adapter_ground_decision_checks']} ordinary ground choices agree with isolated adapter requests;"
-                        f"{len(report['adapter_differences'])} retained counter/support/sai discrepancies plus clock/spawn/entry/door gaps. "
-                        'Engine and EXE/ADF unchanged; no full physics, natural-play or native AI certification.',
+                        f"{len(report['adapter_differences'])} retained ordinary wait/support discrepancies. "
+                        'Spawn/entry/clock/door integration is covered separately by SPAWN-AUDIT-0001. '
+                        'This audit changes no executable; no full physics, natural-play or native AI certification.',
                 artifacts=[dict(path=p,sha256=digest(ROOT/p),size_bytes=(ROOT/p).stat().st_size) for p in files])
     (ROOT/'docs/parity/evidence/AI-AUDIT-0001.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n',encoding='utf-8')
 
@@ -194,8 +195,8 @@ def main():
         a=adapter(dll,r);r['adapter_decision']=a
         assert a['timer']==13
         differences.append(dict(rule='AI-RETREAT-ZERO-TARGET',fixture=len(ROWS)-1,source=5,adapter=13))
-    # Full state22 duration: counter1 finishes now, native adapter keeps sai
-    # for one more update; source values are established by these real calls.
+    # State22 duration: the adapter now uses the extracted counter/history
+    # body. Background/physics are still stubs in this decision-only audit.
     for who in (1,2):
         for counter in (1,7,8,12,19):
             r=motion(who,10,0,0,22,counter)
@@ -204,8 +205,7 @@ def main():
             if who==2:
                 a=adapter(dll,r);r['adapter_decision']=a
                 if counter==1:
-                    assert a['intent']=='sai' and a['timer']==0,a
-                    differences.append(dict(rule='AI-SAI-END',fixture=len(ROWS)-1,source='state0/counter6',adapter='sai still active/counter0'))
+                    assert a['intent']=='face_wait' and a['timer']==6,a
                 else:assert a['intent']=='sai' and a['timer']==counter-1,a
     # Promotion helper and its early RETURN after processing a finished kick.
     for who in (1,2):
@@ -380,7 +380,8 @@ def main():
                 limitations=['Contacts, modes, timers and actor states are injected; no VIC/IRQ or natural-play replay',
                              'Existing adapter decisions use recorded movement/door stubs; full physics is not compared',
                              'Memory-reader data is injected at $1163; no random distribution is assumed',
-                             'Full combat, source pose/wall/reaction and NPC entry integration remain unported'])
+                             'This isolated adapter audit stubs motion/doors and excludes integrated entry phases; see SPAWN-AUDIT-0001',
+                             'Full collect/apply combat, ordinary waits/retreat and natural physical navigation remain open'])
     REPORT.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
     record_evidence(report)
     verify()

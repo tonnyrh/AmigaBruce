@@ -1,0 +1,656 @@
+{
+  "date": "2026-10-25",
+  "status": "verified_ripped_c64_sprites_and_scoped_source_selector",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "full_c64_game_parity": false,
+  "complete_actor_fsm_ported": false,
+  "natural_playthrough": false,
+  "enhanced_art_active": false,
+  "components": 210,
+  "composites": 210,
+  "unique_dma_frames": 80,
+  "selector_cases": 17280,
+  "pixel_checks": 211680,
+  "native_fixture_cases": 324,
+  "native_fixture_launches": 2,
+  "native_fixture_failure": 0,
+  "native_cache_hash_verified": true,
+  "cache_bytes": 73680,
+  "packed_bytes": 12852,
+  "previous_cache_bytes": 90912,
+  "previous_packed_bytes": 44042,
+  "all_room_native_rerun": false,
+  "realtime_gate_passed": false,
+  "cli_chip_reserve_passed": true,
+  "native_runs": [
+    {
+      "frames": "6000",
+      "c64_profile_14": "0",
+      "intro_silence_reload": "1",
+      "pose_yamo": "3235913607",
+      "pose_bruce": "813695002",
+      "movement_fixture_failure": "0",
+      "pose_bruce_hi": "0",
+      "combat_hits": "60",
+      "final_x": "8",
+      "source_audio_hash": "586583410",
+      "parity": "PROVISIONAL",
+      "source_music_hash": "2708371906",
+      "stage5": "124",
+      "intro_bitmap_restored": "1",
+      "room_load_max_gap": "100",
+      "first_missed_hsync": "317",
+      "collect_frame_drops": "1",
+      "target_hits": "0",
+      "timing_fall_fields": "6954",
+      "source_audio_fields": "6000",
+      "timing_walk_fields": "0",
+      "chip_available_before": "438184",
+      "enemy_spawns": "10",
+      "expansion_available_before": "44256",
+      "stage4": "123",
+      "contact_fixture_failure": "0",
+      "stage3": "111",
+      "enemy_edge_checks": "0",
+      "prone_periods": "264",
+      "first_missed_frame": "288",
+      "canvas_residue_bytes": "0",
+      "c64_room_revision": "1029",
+      "room_load_events": "2",
+      "pose_ninja": "4081059715",
+      "cia_miss_hsync": "628",
+      "player_deaths": "2",
+      "max_pal_field_gap": "100",
+      "final_y": "196",
+      "intro_pcm_hash": "508731667",
+      "room_tour": "0",
+      "stage1": "336",
+      "c64_profile_8": "0",
+      "max_hsync_gap": "631",
+      "held_image_fields": "1109",
+      "timing_mode_changes": "0",
+      "bad_presents": "0",
+      "room_transitions": "0",
+      "jump_starts": "0",
+      "source_profile": "0",
+      "pose_ninja_hi": "4",
+      "cpu_stamp_chip_bytes": "0",
+      "score": "0",
+      "stage2": "84",
+      "c64_profile_12": "0",
+      "c64_profile_7": "0",
+      "timing_jump_fields": "0",
+      "c64_profile_13": "0",
+      "source_audio_chip_bytes": "2260",
+      "present_max_line": "302",
+      "npc_recoil_fixture_cases": "24",
+      "c64_render_checks": "3",
+      "kick_periods": "0",
+      "source_sfx_request_mask": "32767",
+      "chip_largest_loaded": "88480",
+      "timing_seen": "32",
+      "punch_periods": "1284",
+      "target_defeats": "0",
+      "player_respawns": "2",
+      "missed_frames": "262",
+      "c64_profile_0": "9",
+      "intro_finished": "1",
+      "pose_yamo_hi": "4",
+      "max_held_image_streak": "1",
+      "sprite_fixture_cases": "324",
+      "final_room": "0",
+      "c64_profile_4": "0",
+      "capture_color15": "3003",
+      "c64_render_mismatches": "0",
+      "max_gap_excluding_framebuffer_capture": "2",
+      "gate_checks": "0",
+      "target_stomps": "0",
+      "combat_mode": "1",
+      "c64_profile_11": "0",
+      "source_audio_voice_mask": "7",
+      "stage0": "6",
+      "sprite_fixture_failure": "0",
+      "room_load_fields": "204",
+      "target_respawns": "0",
+      "climb_fixture_failure": "0",
+      "lantern_pickups": "0",
+      "fall_starts": "0",
+      "air_periods": "0",
+      "c64_profile_10": "0",
+      "explicit_chip_bytes": "349700",
+      "source_music_fields": "120",
+      "max_work_lines": "559",
+      "climb_periods": "0",
+      "c64_profile_9": "0",
+      "fighter_cache_bytes": "73680",
+      "restored_os": "1",
+      "combat_warmup_steps": "0",
+      "c64_profile_6": "0",
+      "source_audio_faults": "0",
+      "intro_dma_stopped": "1",
+      "runtime_arithmetic_errors": "0",
+      "chip_largest_before": "438184",
+      "c64_profile_15": "0",
+      "present_min_line": "301",
+      "intro_fields": "253",
+      "enemy_defeats": "6",
+      "gate_test": "0",
+      "test_start_room": "0",
+      "enemy_edge_test": "0",
+      "movement_fixture_cases": "70",
+      "max_work_frame": "5460",
+      "c64_profile_1": "0",
+      "framebuffer_capture_gap": "27",
+      "intro_samples": "26460",
+      "c64_room_fault": "0",
+      "visited_rooms_mask": "1",
+      "drawn_image_fields": "4891",
+      "contact_fixture_cases": "29",
+      "c64_profile_5": "0",
+      "room_test": "0",
+      "c64_profile_2": "0",
+      "npc_recoil_fixture_failure": "0",
+      "fighter_cache_hash": "2572544731",
+      "c64_profile_3": "0",
+      "timing_pal_lines": "313",
+      "climb_fixture_cases": "390",
+      "chip_free_loaded": "88480"
+    },
+    {
+      "frames": "6000",
+      "c64_profile_14": "0",
+      "intro_silence_reload": "1",
+      "pose_yamo": "3235913607",
+      "pose_bruce": "813695002",
+      "movement_fixture_failure": "0",
+      "pose_bruce_hi": "0",
+      "combat_hits": "60",
+      "final_x": "8",
+      "source_audio_hash": "586583410",
+      "parity": "PROVISIONAL",
+      "source_music_hash": "2708371906",
+      "stage5": "125",
+      "intro_bitmap_restored": "1",
+      "room_load_max_gap": "100",
+      "first_missed_hsync": "317",
+      "collect_frame_drops": "1",
+      "target_hits": "0",
+      "timing_fall_fields": "18525",
+      "source_audio_fields": "6000",
+      "timing_walk_fields": "0",
+      "chip_available_before": "438184",
+      "enemy_spawns": "10",
+      "expansion_available_before": "44256",
+      "stage4": "123",
+      "contact_fixture_failure": "0",
+      "stage3": "111",
+      "enemy_edge_checks": "0",
+      "prone_periods": "264",
+      "first_missed_frame": "288",
+      "canvas_residue_bytes": "0",
+      "c64_room_revision": "1029",
+      "room_load_events": "2",
+      "pose_ninja": "4081059715",
+      "cia_miss_hsync": "629",
+      "player_deaths": "2",
+      "max_pal_field_gap": "100",
+      "final_y": "196",
+      "intro_pcm_hash": "508731667",
+      "room_tour": "0",
+      "stage1": "336",
+      "c64_profile_8": "0",
+      "max_hsync_gap": "631",
+      "held_image_fields": "1108",
+      "timing_mode_changes": "0",
+      "bad_presents": "0",
+      "room_transitions": "0",
+      "jump_starts": "0",
+      "source_profile": "0",
+      "pose_ninja_hi": "4",
+      "cpu_stamp_chip_bytes": "0",
+      "score": "0",
+      "stage2": "85",
+      "c64_profile_12": "0",
+      "c64_profile_7": "0",
+      "timing_jump_fields": "0",
+      "c64_profile_13": "0",
+      "source_audio_chip_bytes": "2260",
+      "present_max_line": "302",
+      "npc_recoil_fixture_cases": "24",
+      "c64_render_checks": "3",
+      "kick_periods": "0",
+      "source_sfx_request_mask": "32767",
+      "chip_largest_loaded": "88480",
+      "timing_seen": "32",
+      "punch_periods": "1284",
+      "target_defeats": "0",
+      "player_respawns": "2",
+      "missed_frames": "261",
+      "c64_profile_0": "9",
+      "intro_finished": "1",
+      "pose_yamo_hi": "4",
+      "max_held_image_streak": "1",
+      "sprite_fixture_cases": "324",
+      "final_room": "0",
+      "c64_profile_4": "0",
+      "capture_color15": "3003",
+      "c64_render_mismatches": "0",
+      "max_gap_excluding_framebuffer_capture": "2",
+      "gate_checks": "0",
+      "target_stomps": "0",
+      "combat_mode": "1",
+      "c64_profile_11": "0",
+      "source_audio_voice_mask": "7",
+      "stage0": "6",
+      "sprite_fixture_failure": "0",
+      "room_load_fields": "204",
+      "target_respawns": "0",
+      "climb_fixture_failure": "0",
+      "lantern_pickups": "0",
+      "fall_starts": "0",
+      "air_periods": "0",
+      "c64_profile_10": "0",
+      "explicit_chip_bytes": "349700",
+      "source_music_fields": "120",
+      "max_work_lines": "557",
+      "climb_periods": "0",
+      "c64_profile_9": "0",
+      "fighter_cache_bytes": "73680",
+      "restored_os": "1",
+      "combat_warmup_steps": "0",
+      "c64_profile_6": "0",
+      "source_audio_faults": "0",
+      "intro_dma_stopped": "1",
+      "runtime_arithmetic_errors": "0",
+      "chip_largest_before": "438184",
+      "c64_profile_15": "0",
+      "present_min_line": "301",
+      "intro_fields": "253",
+      "enemy_defeats": "6",
+      "gate_test": "0",
+      "test_start_room": "0",
+      "enemy_edge_test": "0",
+      "movement_fixture_cases": "70",
+      "max_work_frame": "5460",
+      "c64_profile_1": "0",
+      "framebuffer_capture_gap": "27",
+      "intro_samples": "26460",
+      "c64_room_fault": "0",
+      "visited_rooms_mask": "1",
+      "drawn_image_fields": "4892",
+      "contact_fixture_cases": "29",
+      "c64_profile_5": "0",
+      "room_test": "0",
+      "c64_profile_2": "0",
+      "npc_recoil_fixture_failure": "0",
+      "fighter_cache_hash": "2572544731",
+      "c64_profile_3": "0",
+      "timing_pal_lines": "313",
+      "climb_fixture_cases": "390",
+      "chip_free_loaded": "88480"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "8fc286808d059a945c7a6b1dfe3f2ea9409edccc6453b4541b8ada5a6102d32f",
+      "size_bytes": 191692
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "024bd15caa2b416f97b1eada2abb51c23f7ae62ea5f4fd1905e1fcfb384e473f",
+      "size_bytes": 901120
+    }
+  ],
+  "native_binaries": [
+    {
+      "path": "amiga/out/validated/source-audio.exe",
+      "sha256": "c6701aa7576207960eef8d4f74836cf30dae19e0cb3ae2d3da352901a8c979b7",
+      "size_bytes": 216724
+    },
+    {
+      "path": "amiga/out/validated/source-audio.adf",
+      "sha256": "452561f8c9c94552dfc9e1d01ba21008c4ff7f8ba29b2dcea682bf3e2ca2214a",
+      "size_bytes": 901120
+    }
+  ],
+  "native_captures": [
+    {
+      "path": "reference/validation/source-audio-native-1.txt",
+      "sha256": "9c6e40becac2a5c2ea612ff72db82ecf910e05451d26d5c118a59c31cad7157b",
+      "size_bytes": 2605
+    },
+    {
+      "path": "reference/validation/source-audio-native-2.txt",
+      "sha256": "ee370521aa7a170e87182a08504b1dc73333cb3a1bafa8d49cd3b7c18bd763ad",
+      "size_bytes": 2606
+    }
+  ],
+  "source_files": [
+    {
+      "sha256": "86c688652f3bf397721858e5685e4b4f538fac97c929f0d445b561dc8a5cf8ce",
+      "path": "amiga/source_audio.h"
+    },
+    {
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+      "path": "core/source_audio.c"
+    },
+    {
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+      "path": "core/source_audio.h"
+    },
+    {
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e",
+      "path": "core/source_audio_data.h"
+    },
+    {
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
+    },
+    {
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
+    },
+    {
+      "sha256": "e233890b1700200efe0eb3757e3ac1a95f221a2007c2218784099b1a9ba61275",
+      "path": "tools/build_c64_audio.py"
+    },
+    {
+      "sha256": "2d60ad95acc412288a4e3f005573379b643d7fec453fdf331b9d5e318874ff4f",
+      "path": "assets/audio/c64-equivalent-v1/manifest.json"
+    },
+    {
+      "sha256": "fc1020350cc4c0106f05b463928fbc2e8067bf5dbcb2cf546506c5328cd9c89b",
+      "path": "assets/audio/c64-equivalent-v1/waveforms.pcm"
+    },
+    {
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027",
+      "path": "amiga/intro_audio.h"
+    },
+    {
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b",
+      "path": "amiga/intro_audio_data.h"
+    },
+    {
+      "sha256": "4f82259133a4d75dbd9dcb8dd7a1cab5fc8028c822c58a3f528e27d3dfe92e00",
+      "path": "tools/build_intro_audio.py"
+    },
+    {
+      "sha256": "1360629bc7b7a2fc884ece4c9e2294524583427aa1256aa7ecb008bce154a0c5",
+      "path": "tools/verify_intro_audio.py"
+    },
+    {
+      "sha256": "7c07beb139d0fefb6656f45d6be3b343a4b72bb835665bc682c1518f1c9765af",
+      "path": "assets/audio/intro-v1/manifest.json"
+    },
+    {
+      "sha256": "c7e1678bba5ef6245b38f00aaee9bbaf00add7e900a45633935a8afddd3df845",
+      "path": "assets/audio/intro-v1/generation.json"
+    },
+    {
+      "sha256": "e8eaa692c067dc62fd1ed4621d776ebf03878d54f36779eceb782aca2ec4c930",
+      "path": "assets/audio/intro-v1/kiai-source_0.wav"
+    },
+    {
+      "sha256": "efb12f47cf5a69a26a76fd208f1fdfc0928600d927baaebe65de384d039e0e49",
+      "path": "amiga/main.c"
+    },
+    {
+      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203",
+      "path": "amiga/c64_sprite_data.h"
+    },
+    {
+      "sha256": "683a8c4bf4e69f41e600fa9be2214a2496ad213d1621b286c11688c1bdbaf562",
+      "path": "core/c64_sprites.c"
+    },
+    {
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9",
+      "path": "core/c64_sprites.h"
+    },
+    {
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0",
+      "path": "core/c64_sprite_pose_data.h"
+    },
+    {
+      "sha256": "a8e60cf9f9c8fc1a6acc0ffc6d129e1b15232900e0a0223f5b41372cbe6895d7",
+      "path": "tools/build_c64_sprites.py"
+    },
+    {
+      "sha256": "8282019910f73e054f395b88cdf350fd8398afa778c0dc1f5146a254786d4d44",
+      "path": "tools/build_fighter_dma.py"
+    },
+    {
+      "sha256": "6eec4a328b4b3b05cb20ed37c18b1c8aad3b896d5114dff4ed6fa135399bb298",
+      "path": "assets/c64/sprites-v1/manifest.json"
+    },
+    {
+      "sha256": "fc85157571de9d4f9fdc1ce49435e41790d1e0d5d0c99c34bfa4d09ef903f76b",
+      "path": "tools/verify_c64_sprites.py"
+    },
+    {
+      "sha256": "960d8223c53f3926c9f92d1b4fda3c1caa710d1622c10197874182091fc5b19a",
+      "path": "test-c64-sprites.ps1"
+    },
+    {
+      "sha256": "7bb591b6eec71c5d6ca366117324c09edf5ec8be43b3b5eba8d3a99baf6a9cc7",
+      "path": "tests/sprite_fixture.h"
+    },
+    {
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751",
+      "path": "amiga/runtime.c"
+    },
+    {
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291",
+      "path": "amiga/start.s"
+    },
+    {
+      "sha256": "c8a91b8b0c9df921c563e38542200132cdacdebd27a6e89a1922cdd8fcc2c4d5",
+      "path": "tests/npc_recoil_fixture.h"
+    },
+    {
+      "sha256": "ee4a38d83d59cef1cc744cef12b482379d7a1151f34e547892f46cecafabff3f",
+      "path": "tests/movement_fixture.h"
+    },
+    {
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28",
+      "path": "tests/contact_fixture.h"
+    },
+    {
+      "sha256": "2cbdff257cbfa551bf0d770c0b82fdc37f90670e4dbaf242a774482eefb5b214",
+      "path": "core/source_wall.c"
+    },
+    {
+      "sha256": "3df75184cdce5a5b971a462da96783fc77d848648c94f5c57d5541f83973d259",
+      "path": "core/source_climb.c"
+    },
+    {
+      "sha256": "d3c26f2c23eee3ac48f7f82b4bce4e23a07cd3587bd23fb8b8958e11e6ab7b06",
+      "path": "core/source_climb.h"
+    },
+    {
+      "sha256": "f2824bd318619057f87178d825f6af1742090fe72d776bd6f4b71d8866b5366a",
+      "path": "tests/climb_fixture.h"
+    },
+    {
+      "sha256": "278cadbe8e12163fc9c9666ab38f4178fd06e7ce0960c2fe5e1e34d7d3e5e3b0",
+      "path": "tools/verify_source_climb.py"
+    },
+    {
+      "sha256": "1c84db5396f6f3c9024a05db35b1d116c76183c14aa968d8bfe7a425022e994b",
+      "path": "test-source-climb.ps1"
+    },
+    {
+      "sha256": "8fcf8898f2c89de98068b315dce430feb7dac032f9aae9b332ca815b9ed78449",
+      "path": "core/source_wall.h"
+    },
+    {
+      "sha256": "5afd9b0c76b6136ebf9bc58e9445b8562d2f03690347b88a51a8c94dfa4b3918",
+      "path": "core/game.c"
+    },
+    {
+      "sha256": "bbcb1164efaf3660729cc0318196c29f19146c106ad5bb5f1675e493cd96cffb",
+      "path": "core/game.h"
+    },
+    {
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404",
+      "path": "core/presentation.c"
+    },
+    {
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445",
+      "path": "core/presentation.h"
+    },
+    {
+      "sha256": "bdc6419af8595e7349a94856060099a16102ab0d2bfdb31596b59c67e6c0f4a4",
+      "path": "core/combat.c"
+    },
+    {
+      "sha256": "1001f3fcd4b5c4da12cd9cbc3d8be47d12dd823a191ea43a64e68ca5cad532ea",
+      "path": "core/combat.h"
+    },
+    {
+      "sha256": "d1fe1721368f1541f48fdc4a056f481a9130a1d4daccc918358a4c66a45042e7",
+      "path": "core/rooms.c"
+    },
+    {
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "path": "core/rooms.h"
+    },
+    {
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "path": "core/room_data.h"
+    },
+    {
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059",
+      "path": "core/room_geometry.h"
+    },
+    {
+      "sha256": "a132079dc402ab7b9ffeca81ab079ec41c67d5ec366c042ad0673e5050c39357",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "f8dfec676436487d77a0e0ddca7bfbb534a0bf3212ca8a544b2a63eb4dec6ccd",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "fbe262f58205c6429c311d67bf7ea4bd1d12fda54c754c223e091eac2d4dbf7f",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "965afd2e045a4bcad8fa426199af1ac992e0ea1b6243112ae4ca2f8d40b4a836",
+      "path": "tools/build_c64_rooms.py"
+    },
+    {
+      "sha256": "b02a7fe1b6a542e5465a8f684498dd53285b6b2cac2b63e279555366a24ed0c4",
+      "path": "assets/c64/rooms-v1/manifest.json"
+    },
+    {
+      "sha256": "b373e036b51f383eaba2e312a9e6d6018cd768021d2589eafce45840a34235dd",
+      "path": "tests/room_fixture.h"
+    },
+    {
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b",
+      "path": "tests/gate_fixture.h"
+    },
+    {
+      "sha256": "ade20a635b4ce9f773892fc0e75bee1253132d55e6bc60804cf9855a1b3aba25",
+      "path": "test-amiga.ps1"
+    },
+    {
+      "sha256": "a91a02a123940a425c010297fd35a629c6b3aa38ada3d3d863985243a8fb7486",
+      "path": "amiga-build.ps1"
+    },
+    {
+      "sha256": "391a4e7b62a1ae7e2363c88ee412500157751154bfe6010086253b533bc47f81",
+      "path": "amiga-run.ps1"
+    },
+    {
+      "sha256": "5eee92bd8b71f3d091fa9ede5f40673a6242427df2ddeb256c2916ee455c7c25",
+      "path": "tools/preview_planar.py"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "reference/validation/c64-sprites-host.json",
+      "sha256": "46219e19a78a82cb7b744fa20c4b6401d715ea98cfaa5dcc20fb5ace6509ce15",
+      "size_bytes": 2386
+    },
+    {
+      "path": "reference/validation/movement-delivery.json",
+      "sha256": "d61c81a7e52019ceb7484130334bbeabbcc831cb8968166b4364ecaa4bebb19a",
+      "size_bytes": 25163
+    },
+    {
+      "path": "assets/c64/sprites-v1/manifest.json",
+      "sha256": "6eec4a328b4b3b05cb20ed37c18b1c8aad3b896d5114dff4ed6fa135399bb298",
+      "size_bytes": 278145
+    },
+    {
+      "path": "docs/C64_SPRITES.md",
+      "sha256": "70b4af9ee66b7cd06214209e4366b7e5758a0302b5d6cfa3402ea7576afe90ff",
+      "size_bytes": 6150
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "dcaf2867ab94d5447cf4356a39417ffb27c2972fff18e9c6e1f57ebc43a8a689",
+      "size_bytes": 12690
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "sha256": "22020a787f736eaf20ab3a767ed8301f184b2fed73cc9c78861158b53a7e9c60",
+      "size_bytes": 8496
+    },
+    {
+      "path": "docs/AMIGA_ART_PIPELINE.md",
+      "sha256": "8f88b92994201c1f4e96afe9702dbdc220fe84be60c74e51973126a0c1d15489",
+      "size_bytes": 4279
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "sha256": "3063382361192727fca6c95a8cafaa2c0e4941d7d07d578fb9d65e376de8274e",
+      "size_bytes": 14604
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "cac153c44290c4ada1bab4446d39af8cdf880c59b06024f98e8cc7be09c27ace",
+      "size_bytes": 3536
+    },
+    {
+      "path": "README.md",
+      "sha256": "8206edbb7b96c7a1a1909b1a9301e99587fddd62e5408ff4358f47c3de9160d7",
+      "size_bytes": 5409
+    },
+    {
+      "path": "tools/verify_sprite_delivery.py",
+      "sha256": "fbe6c72b4000eadf90d1aaddccf05c0d2f33a40eeffb205d4e44dc5e47b35d6e",
+      "size_bytes": 7150
+    },
+    {
+      "path": "tools/verify_c64_candidate.py",
+      "sha256": "1349aea09161e8597bd82b9fd57e757b3b86ed65182689c8d42593ea2c40f1b9",
+      "size_bytes": 11232
+    },
+    {
+      "path": "reference/validation/c64-sprites-frame.bpl",
+      "sha256": "88d89b898bc38cbd4ee2ab5757cfa6c464ab5d03ef09fc95329edce7e2d13048",
+      "size_bytes": 40960
+    },
+    {
+      "path": "docs/images/c64-sprites.png",
+      "sha256": "e8d5c10f0278199cf8cc97fc6e0ce8daa756fd78f94599b3e8ae37a0f184d635",
+      "size_bytes": 7958
+    }
+  ],
+  "limitations": [
+    "Source selector is decoded; its native actor/counter projection remains partial",
+    "Full movement/contact/combat/AI and input/timing parity remain open",
+    "Existing OCS12-bit palette reproduces source colour indices, not analog C64 RGB",
+    "Native cache signature proves decoding, not visual exercise of every pose/overlap",
+    "No natural all-room playthrough or certified retail edition",
+    "Strict A500 timing/memory gates remain independent"
+  ]
+}

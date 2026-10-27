@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-25",
+  "status": "passed_source_room_integration_and_host_combat_replay",
+  "natural_playthrough": false,
+  "c64_combat_parity": false,
+  "output": [
+    "PASS source-audited T10 diagonal stop/input-independent net catch and T13 assignment then one recoil update (actor adapter scope)",
+    "PASS source life countdown, fall reserves, Game Over, debug flags and independent two-player progress",
+    "PASS 24 NPC recoil/wall/re-entry regressions in R02",
+    "PASS 70 source-derived wall/kick/jump checks",
+    "PASS 390 source-derived net dispatch and room5 climb checks",
+    "PASS 29 source-checked object/door fixtures, directional masks and single pickup",
+    "PASS all20 source-room entries and confirmed T01 free-fall control",
+    "PASS source-animated R02 hatch to R06, exact arrival and persistent lamps",
+    "PASS source final-room timer, next round and reset of original lamp counts",
+    "PASS R19 source projectile bits/contact and source death branch",
+    "AUDIO_6000 source_audio_hash=400497385 source_music_hash=2708371906 source_sfx_request_mask=32767 source_audio_chip_bytes=2260",
+    "M3_6000 combat_hits=58 enemy_defeats=4 enemy_spawns=11 player_deaths=3 player_respawns=3 final_x=28 final_y=196"
+  ],
+  "source_files": [
+    {
+      "sha256": "f9b1241aa1353d41246c9914bfdfc763c1247d16a7e4bc82e2c65ee7c5274345",
+      "path": "core/session.c"
+    },
+    {
+      "sha256": "58fce65263325d704ac39d8ccfa862b367ad85b8316cf90f9f4f477841bc45ef",
+      "path": "core/session.h"
+    },
+    {
+      "sha256": "5367610356381795ae72bfdc4d651755cf63661aafb7fd59a5461d31b5f72a63",
+      "path": "tests/session_fixture.h"
+    },
+    {
+      "sha256": "c7c0c5036874255fd3797fd9108a7c22bfbec6736770d01344fea658ab0c54cc",
+      "path": "tests/session_wall_fixture.h"
+    },
+    {
+      "sha256": "c8a91b8b0c9df921c563e38542200132cdacdebd27a6e89a1922cdd8fcc2c4d5",
+      "path": "tests/npc_recoil_fixture.h"
+    },
+    {
+      "sha256": "ee4a38d83d59cef1cc744cef12b482379d7a1151f34e547892f46cecafabff3f",
+      "path": "tests/movement_fixture.h"
+    },
+    {
+      "sha256": "f2824bd318619057f87178d825f6af1742090fe72d776bd6f4b71d8866b5366a",
+      "path": "tests/climb_fixture.h"
+    },
+    {
+      "sha256": "26164c3e58c83abf929ced769b0ba8755f670ba67994d9700bdfa27f6f8712a0",
+      "path": "tests/moving_net_fixture.h"
+    },
+    {
+      "sha256": "c78067e6db2287451e667fdebd01888b5be0ed21151f4c3f84ecc56565ac73f6",
+      "path": "tools/audit_moving_net.py"
+    },
+    {
+      "sha256": "b8b372cb553e78d582c7c23dacfb2849489beb49f2b07a0c45a3d5fe0624dd32",
+      "path": "test-moving-net.ps1"
+    },
+    {
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28",
+      "path": "tests/contact_fixture.h"
+    },
+    {
+      "sha256": "2cbdff257cbfa551bf0d770c0b82fdc37f90670e4dbaf242a774482eefb5b214",
+      "path": "core/source_wall.c"
+    },
+    {
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b",
+      "path": "core/source_climb.c"
+    },
+    {
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433",
+      "path": "core/source_climb.h"
+    },
+    {
+      "sha256": "8fcf8898f2c89de98068b315dce430feb7dac032f9aae9b332ca815b9ed78449",
+      "path": "core/source_wall.h"
+    },
+    {
+      "sha256": "e7427c98ba043dc2c0e8593b91de421c84aab6ba1757a076cd36c5d550b933be",
+      "path": "core/game.c"
+    },
+    {
+      "sha256": "dfebe3fda66cccc863e58bdd97c0d77260361a9a71660dde0d5bb7e6e6c8ba37",
+      "path": "core/game.h"
+    },
+    {
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404",
+      "path": "core/presentation.c"
+    },
+    {
+      "sha256": "3a5bb3ba791da020404ee078140089bca326fd23e9c79d1385b320e1bd65af9b",
+      "path": "core/c64_sprites.c"
+    },
+    {
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9",
+      "path": "core/c64_sprites.h"
+    },
+    {
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0",
+      "path": "core/c64_sprite_pose_data.h"
+    },
+    {
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445",
+      "path": "core/presentation.h"
+    },
+    {
+      "sha256": "ee03d6b124172f084083214c0c9751414b71ce77aebab65dd5978828ee1aee62",
+      "path": "core/combat.c"
+    },
+    {
+      "sha256": "9a2c0414626805f17bc801425ee76a96ab9ffafa91d8daebd28422833e396ccb",
+      "path": "core/combat.h"
+    },
+    {
+      "sha256": "050add7110f90739128c1ef3061291caef4fd728c85817f08b38f27b43bf1586",
+      "path": "core/rooms.c"
+    },
+    {
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "path": "core/rooms.h"
+    },
+    {
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "path": "core/room_data.h"
+    },
+    {
+      "sha256": "f2919c4263a931f2f4b6f34f132ee8e61436b9f77d65a8dc4fae75cc84296f0e",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "dfec7451a4102e7655f605fe04b07798467bf824d9f099154d5cd81afe93695a",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "a121feee17281a2f78bf5ba2b0c5a5e0b946383f5e732739dd3de38b7f2aa4f4",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
+    },
+    {
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
+    },
+    {
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+      "path": "core/source_audio.c"
+    },
+    {
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+      "path": "core/source_audio.h"
+    },
+    {
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e",
+      "path": "core/source_audio_data.h"
+    },
+    {
+      "sha256": "aeac77fc789b997a2d35d08717c83e0315ab4dea965d54a0129e5684b0d8948e",
+      "path": "tests/c64_rooms_test.c"
+    },
+    {
+      "sha256": "c2955cd927f1d0c6c6b0c020aacecd2d32076bcf7b81bc8ad0756ad8d1b7e5b5",
+      "path": "test-core.ps1"
+    }
+  ]
+}

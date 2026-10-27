@@ -1,6 +1,6 @@
 #Requires -Version 5.1
 [CmdletBinding()]
-param([switch]$Autotest,[switch]$Disk,[switch]$ConfigOnly,[string]$Kickstart,[string]$EmulatorPath,[string]$EmulatorIni)
+param([switch]$Autotest,[switch]$Disk,[switch]$ConfigOnly,[switch]$TwoJoysticks,[ValidateRange(1,2)][int]$TestRuns=2,[string]$Kickstart,[string]$EmulatorPath,[string]$EmulatorIni)
 $ErrorActionPreference='Stop'
 $taskRoot=$PSScriptRoot
 $extension=Get-ChildItem -Directory (Join-Path $env:USERPROFILE '.vscode/extensions') -Filter 'bartmanabyss.amiga-debug-*' |
@@ -29,7 +29,7 @@ if($Autotest){
             if(Test-Path -LiteralPath $old){Remove-Item -LiteralPath $old}
         }
     }
-    $startup+=$program
+    if($TestRuns -eq 2){$startup+=$program}
 }
 [IO.File]::WriteAllText((Join-Path $boot 's/startup-sequence'),($startup -join "`n")+"`n",[Text.Encoding]::ASCII)
 $config=Join-Path $taskRoot $(if($Autotest){'.tmp/bruce-a500-test.uae'}else{'.tmp/bruce-a500.uae'})
@@ -47,6 +47,7 @@ $configLines=@(
     'gfx_filter_autoscale=auto','gfx_width_windowed=960','gfx_height_windowed=768',
     "filesystem2=rw,dh1:dh1:$(Join-Path $taskRoot 'amiga/out'),-128"
 )
+if($TwoJoysticks){$configLines=$configLines -replace '^joyport0=mouse$','joyport0=kbd2'}
 if($Disk){
     $diskImage=Join-Path $taskRoot ('amiga/out/'+[IO.Path]::ChangeExtension($program,'adf'))
     if(-not(Test-Path -LiteralPath $diskImage)){throw 'Build ADF first'}

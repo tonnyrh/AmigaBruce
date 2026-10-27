@@ -1,0 +1,5221 @@
+{
+  "status": "used_static_candidate_tiles",
+  "source": {
+    "path": ".reference/c64/work/untrained-memory.bin",
+    "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+  },
+  "tile_count": 276,
+  "dynamic_mutations_included": false,
+  "entries": [
+    {
+      "id": "tile-b0-00",
+      "bank": 0,
+      "tile": 0,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8,
+        10,
+        12,
+        14,
+        15
+      ],
+      "uses": 1481,
+      "source_glyph_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-02",
+      "bank": 0,
+      "tile": 2,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        5,
+        7,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 6,
+      "source_glyph_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-03",
+      "bank": 0,
+      "tile": 3,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 8,
+      "source_glyph_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-04",
+      "bank": 0,
+      "tile": 4,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        9
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 6,
+      "source_glyph_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-05",
+      "bank": 0,
+      "tile": 5,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        9
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-07",
+      "bank": 0,
+      "tile": 7,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 19,
+      "source_glyph_sha256": "a020b7f8043620b11605e4b25e35803538e4679d5f7a9e6ae90300bf28791989",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-08",
+      "bank": 0,
+      "tile": 8,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "9f6614ec51e23a5da895f024cf3541e3bcde6c17f6f51a62202ca70e360695b2",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-09",
+      "bank": 0,
+      "tile": 9,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 190,
+      "source_glyph_sha256": "bc1443a0d17aab2db1ea0302ef280717ac9a2f23355c5b649ea87d605430458d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-0a",
+      "bank": 0,
+      "tile": 10,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 15,
+      "source_glyph_sha256": "5d7fe06af5e875875e11d2f5ef9fe5470d4d77f66a337a5eb279423660c11099",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-0b",
+      "bank": 0,
+      "tile": 11,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 9,
+      "source_glyph_sha256": "d01d7b7addb964ecfeb21c47b23a819d52199ecb1e1cb6001842e31be278cdfe",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-0c",
+      "bank": 0,
+      "tile": 12,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "ac4bd0787fbbdaa3b64b141c69b457ea6364f2b4c30933d2bc7049d21ccf32f5",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-0d",
+      "bank": 0,
+      "tile": 13,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        7
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 126,
+      "source_glyph_sha256": "e4fee422198d07ce3b43e405974c71429a5329c2d7578be91ab28855f9ba01ff",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-0e",
+      "bank": 0,
+      "tile": 14,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        4
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "a7f99a4e68be272f5cba3bb31332c9f2b5e67e8e4ebaa356cab4d2147fd2fbe0",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-0f",
+      "bank": 0,
+      "tile": 15,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 37,
+      "source_glyph_sha256": "a8ea991eb50a9792504bc12b1c2ef9de90182b5875d8c3d2415aeaa72e7013a4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-10",
+      "bank": 0,
+      "tile": 16,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        6
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 17,
+      "source_glyph_sha256": "809d702f4e545e7331dbb62bace357c3b0c5a8dfadbd26e2d4b8c9586c8670ee",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-11",
+      "bank": 0,
+      "tile": 17,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "colors": [
+        8,
+        12,
+        14
+      ],
+      "uses": 198,
+      "source_glyph_sha256": "6a41379ce1ae0b1d1c34abb56240b825f254185c756a20b2a50c3c6007ea0758",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-12",
+      "bank": 0,
+      "tile": 18,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        7,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 67,
+      "source_glyph_sha256": "deb05fb4047938a64786ce87e1d6b9d925fe625ab3c57773e38212527bda297e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-13",
+      "bank": 0,
+      "tile": 19,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 28,
+      "source_glyph_sha256": "805d49018b49ce5d3b38def2a48a4c542304779f9138f560c6ebbb207f92cd7e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-14",
+      "bank": 0,
+      "tile": 20,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 32,
+      "source_glyph_sha256": "4b4b6c20c05fee828a5abd9a77fac810e0e646d7ba4d21a92a121fb85a5d1689",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-15",
+      "bank": 0,
+      "tile": 21,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 25,
+      "source_glyph_sha256": "466f70a3b96bd95d9ccbc06be53abab08b584d52e604e8afbfa627217ae54249",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-16",
+      "bank": 0,
+      "tile": 22,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 43,
+      "source_glyph_sha256": "7a6f280434720026eb82cb14e4f19bccffcb384b4d87cc9c6fa659390e5fe084",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-17",
+      "bank": 0,
+      "tile": 23,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 25,
+      "source_glyph_sha256": "559628062a9c3288a8e4885442c10e3e31eb692fb51282b4ce6d5ff76976ea2b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-18",
+      "bank": 0,
+      "tile": 24,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        8
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 10,
+      "source_glyph_sha256": "753401f9633209759b85b8f5ff356f23e8d486119e83bbb9031159269e45b698",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-19",
+      "bank": 0,
+      "tile": 25,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        5,
+        8
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 12,
+      "source_glyph_sha256": "dcb3f930e35a0a7c69664fa1a608731672ec5aa87d79a5b88d65d1c8c4a92528",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-1a",
+      "bank": 0,
+      "tile": 26,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        8
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 11,
+      "source_glyph_sha256": "c0901cc92adc6fea4322cb0fa3877efaae15154a583a94141b26496c7d0e16b8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-1b",
+      "bank": 0,
+      "tile": 27,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2,
+        5,
+        7,
+        8
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 15,
+      "source_glyph_sha256": "550d98eb319b368e3845eb6db39e4a991bcdde8c69f5b99150ecf57658d13e6c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-1c",
+      "bank": 0,
+      "tile": 28,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "colors": [
+        8,
+        12,
+        14
+      ],
+      "uses": 63,
+      "source_glyph_sha256": "f3147f336fe1baa336a93b57bae050a83b0935f70f0c9a339f21a5e6a4ef18af",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-1d",
+      "bank": 0,
+      "tile": 29,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2,
+        5,
+        7,
+        8
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 15,
+      "source_glyph_sha256": "78f43be1d758a57d14f0193b3a0792d5169408cdd765d32f5b12f694e304d87d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-20",
+      "bank": 0,
+      "tile": 32,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        12,
+        14
+      ],
+      "uses": 30,
+      "source_glyph_sha256": "413622c5dd4611d8bce2772910acea8c3905ff20553e5b6b6d1a0aff860bafa5",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-21",
+      "bank": 0,
+      "tile": 33,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        12,
+        14
+      ],
+      "uses": 29,
+      "source_glyph_sha256": "a5c34ebb65c53923c9841e9854b0fbf922a64e9a7fbaef7021a5777587135040",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-22",
+      "bank": 0,
+      "tile": 34,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2,
+        4,
+        8,
+        10
+      ],
+      "colors": [
+        8,
+        14,
+        15
+      ],
+      "uses": 12,
+      "source_glyph_sha256": "a0670bca6a72d667b85a0647ec1c59c3782948b808b00fb498d90c4cb511ce97",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-23",
+      "bank": 0,
+      "tile": 35,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 23,
+      "source_glyph_sha256": "b98dca3700d944221dc9fc8ba5397e00a240feb9c8fa8e358203ac126a9d910d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-24",
+      "bank": 0,
+      "tile": 36,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "054de76d903bad87bc1d5e2296c8724e7f9c7ba02c2e4e1af8094a7de897703b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-25",
+      "bank": 0,
+      "tile": 37,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        7
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 12,
+      "source_glyph_sha256": "153cf30a0687eb040a31af752b5bd1866ce20769f7cef6a5f285374e1ae17985",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-26",
+      "bank": 0,
+      "tile": 38,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        7
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 11,
+      "source_glyph_sha256": "b812751d4041d1e908d696d1486cf8521ca5221da4ec722a866f8183c697e898",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-27",
+      "bank": 0,
+      "tile": 39,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 24,
+      "source_glyph_sha256": "131ef653967127688d8eae66f513bd4f61abd7000834817acd02242d639a850e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-28",
+      "bank": 0,
+      "tile": 40,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "colors": [
+        8,
+        12
+      ],
+      "uses": 86,
+      "source_glyph_sha256": "14f46932a2d07a46110efed2c4e589b3849048457b62d170c9504c73c578c404",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-29",
+      "bank": 0,
+      "tile": 41,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        7
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 18,
+      "source_glyph_sha256": "aef016fa5ea246cf7d0dab75c0cff58d7484f051812de8f68c6393fc71a35576",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-2a",
+      "bank": 0,
+      "tile": 42,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8,
+        10,
+        14
+      ],
+      "uses": 109,
+      "source_glyph_sha256": "3603ea26a20925723487ea106393f9ae65595b13e3bdedd2f1ac1608fe89f30c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-2b",
+      "bank": 0,
+      "tile": 43,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "2aff85a6ec31ff8bf440cad60b64940c5ff4e80fd8c458f7e3b77e88fa499be9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-2c",
+      "bank": 0,
+      "tile": 44,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "colors": [
+        12,
+        14
+      ],
+      "uses": 13,
+      "source_glyph_sha256": "c68a29da02fb31eb1dd21d2cf223962a20df18ff0029dd24f57351790ea1debc",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-2d",
+      "bank": 0,
+      "tile": 45,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 45,
+      "source_glyph_sha256": "c05dc8b7d62533701cc297f6d0b6ef027e07c9cd508f13d82764da854f229085",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-2e",
+      "bank": 0,
+      "tile": 46,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 46,
+      "source_glyph_sha256": "27483fb19b1fd53d49d531251b115ba808e4f6fdb9788117d4b23a28621ff6a4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-2f",
+      "bank": 0,
+      "tile": 47,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        6,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 14,
+      "source_glyph_sha256": "64971f5da973bc62451e5de425cae370fa1077a9870e23d4f40b97194430b83f",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-30",
+      "bank": 0,
+      "tile": 48,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        6,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 13,
+      "source_glyph_sha256": "3c2894227711a5b17ccd2c44ce5bd9a50c9431a2ef5854055e4a20702ebfa75c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-31",
+      "bank": 0,
+      "tile": 49,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 6,
+      "source_glyph_sha256": "47c521a6f2e1c4c234fd8fa2fdf687b506befa674ecd3fd48c6b8b228fa8f5e7",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-32",
+      "bank": 0,
+      "tile": 50,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 161,
+      "source_glyph_sha256": "15c664ebc4d22b5553a0d79d1d2348ba1c097a6e3ae64b568b73d2d9d20cb7f9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-33",
+      "bank": 0,
+      "tile": 51,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 32,
+      "source_glyph_sha256": "cecd018c17a192a09e09875076694f0c5921ebc9ab260159b6ffaf437e8838c7",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-34",
+      "bank": 0,
+      "tile": 52,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 18,
+      "source_glyph_sha256": "339f29791d1136aa763c428894eb58284c7d99d407a337c6c9a5b9817b2c2097",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-35",
+      "bank": 0,
+      "tile": 53,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 31,
+      "source_glyph_sha256": "e6e1ad06ac869ea437657ed6d15285533c3b712b3e7c1a1e7fd7f1cf17a52949",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-36",
+      "bank": 0,
+      "tile": 54,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 27,
+      "source_glyph_sha256": "1637af7204b93ecee75bc9b73948301d43ea2c647d33aa40366fb0e7f7622ee9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-37",
+      "bank": 0,
+      "tile": 55,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 16,
+      "source_glyph_sha256": "581b5bb3018a64d0ef9e639946ea05e16d9da9cfcc816a777302bf234f917204",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-38",
+      "bank": 0,
+      "tile": 56,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "3413380496503b88c2598bcec9b60e2a780666eea4007cbd1a9823522462287e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-39",
+      "bank": 0,
+      "tile": 57,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 15,
+      "source_glyph_sha256": "69e7b3988433c3695cc4c0060ae4d386f5cec315de695f51a4b8cbbc0397e95f",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-3a",
+      "bank": 0,
+      "tile": 58,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "e56bb52190cac3b19c9c92705d92febc444d27cfb5e11798f059d76197aa3925",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-3b",
+      "bank": 0,
+      "tile": 59,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        2,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "cb5c21009cf16a753d704c8400917f145f30d34667e0939fd554e7591f2c2e19",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-3c",
+      "bank": 0,
+      "tile": 60,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        4
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 15,
+      "source_glyph_sha256": "e4c8e5b63f07b7a69edcf76082c86d175962feaa260a6cffab9b01f0c00ed915",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-3d",
+      "bank": 0,
+      "tile": 61,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        2
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "266c155cb03d66466ea7badfa152f23fcdf200c745cad9f33309add8021597d9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-3e",
+      "bank": 0,
+      "tile": 62,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        6,
+        9,
+        10
+      ],
+      "colors": [
+        8,
+        12
+      ],
+      "uses": 113,
+      "source_glyph_sha256": "8621a563cba66c8990a8cd670b36c04a8ea45a7220e1724ef780c44aea9a4177",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-3f",
+      "bank": 0,
+      "tile": 63,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 10,
+      "source_glyph_sha256": "b1bfaa407f70c80c650379dfeafaa40f29b753b076f9ae8fc7f6eddb1941e904",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-40",
+      "bank": 0,
+      "tile": 64,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 29,
+      "source_glyph_sha256": "fef1313a7c4173c5596fbfbb2a6e35f20e2b2900b5af90ce0dc192719d677a42",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-41",
+      "bank": 0,
+      "tile": 65,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "7c63022d9451b00dd33e7746f69e491a60c655e2e0c16c90fce703a2e45a846d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-42",
+      "bank": 0,
+      "tile": 66,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "496d46af728c7cc2e1f786f24c564e87226f83c5d664d058e6d538e81959cd09",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-43",
+      "bank": 0,
+      "tile": 67,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "1e3e0411f66f7eb4b39bb6f10d6af7e52d3b893683a019624406b4a9fba1acc9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-44",
+      "bank": 0,
+      "tile": 68,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "ad2804293d1f1552b22e995b1a20f9213a191570854937d95cbfa18a2b471f8a",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-45",
+      "bank": 0,
+      "tile": 69,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "73fd237729315afaba3d946757ad84e0406547ed553debc9939a80624dd48f2e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-46",
+      "bank": 0,
+      "tile": 70,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "4bcfe4934665fbd7611d863db85c3fdab023d6ce9f70ee4454daa2650b2d3fb1",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-48",
+      "bank": 0,
+      "tile": 72,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "8361b166d17b7542736d5ca0189161c873dc6a21dad6c2e7ceb92d48ef1045c0",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-49",
+      "bank": 0,
+      "tile": 73,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "bdbc1bdfd2268555fb05bf10db853de3c97fc9eb9191ea1a50b023ee3b2e5ebc",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-4a",
+      "bank": 0,
+      "tile": 74,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "c102cab0242d70b31aa238161c873b55e1f494f33a0adb748ff9ffe481cf44f3",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-4b",
+      "bank": 0,
+      "tile": 75,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3,
+        4
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 9,
+      "source_glyph_sha256": "a06e0e6be6620640793395ae9ba554cb27fc50ea4ef6504efb4d3c2a22a22ec4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-4c",
+      "bank": 0,
+      "tile": 76,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "07fee321e73a2ccb1349d9a045851c191e2a34b62f6af2b895af6deda3f8d61d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-4d",
+      "bank": 0,
+      "tile": 77,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "d828cbb9a0a93b197b6a210d7604f4cbbcd028b77e972288d87c781f63225446",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-4e",
+      "bank": 0,
+      "tile": 78,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 8,
+      "source_glyph_sha256": "069faac68e0e214b7f7cfd29d07697e24852fbcb90509137d1e8803f00321635",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-4f",
+      "bank": 0,
+      "tile": 79,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 110,
+      "source_glyph_sha256": "d5d14724eec3a84784263ba7b5d168e695326bfcb1a85688a10d6975c8b7afcd",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-50",
+      "bank": 0,
+      "tile": 80,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 67,
+      "source_glyph_sha256": "2d279fd69bdafabcd1368b3f5c4c7ae2a5be557c916ed3f4ad68b9854851c569",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-51",
+      "bank": 0,
+      "tile": 81,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 29,
+      "source_glyph_sha256": "59945aef3ad60d5c92d63227148a48a36a96b79498e873c46308b1707856cc56",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-52",
+      "bank": 0,
+      "tile": 82,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "208191d5275ae776a5530ec90cd8a0bde9e2d19eae0978b7e8f6ae4e8ef437b5",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-53",
+      "bank": 0,
+      "tile": 83,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 39,
+      "source_glyph_sha256": "de67132e1fd2de0ebbaa1dcc2f3a537dc941880abe6602bc6a500ca01133ee68",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-57",
+      "bank": 0,
+      "tile": 87,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        5,
+        7,
+        8,
+        9
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 169,
+      "source_glyph_sha256": "784e727439eb6a0a1e70df97554a38e78ea7d7efcfb8b301ed4439efbbabbca0",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-60",
+      "bank": 0,
+      "tile": 96,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        7,
+        8
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 6,
+      "source_glyph_sha256": "e5f0ed56da2fbb3bc00faf1aace1f071bd48c35dda894741233d856de0726a67",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-61",
+      "bank": 0,
+      "tile": 97,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "colors": [
+        8,
+        10,
+        12
+      ],
+      "uses": 97,
+      "source_glyph_sha256": "86fee67e5ab41673fd3af923b806f07ba7a1264c48da42c583a2b481f28ff1c3",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-62",
+      "bank": 0,
+      "tile": 98,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "colors": [
+        8,
+        10,
+        12
+      ],
+      "uses": 207,
+      "source_glyph_sha256": "573c7282f1e9117b29cb8880677511250aa6144b4f9a6fdd5672ec5fa77cffe8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-63",
+      "bank": 0,
+      "tile": 99,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "colors": [
+        8,
+        10,
+        12
+      ],
+      "uses": 102,
+      "source_glyph_sha256": "cc3fadb6a2492329ea749d869ac42b38b6db420b0df99d0af7e4bad92f31f437",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-64",
+      "bank": 0,
+      "tile": 100,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        8,
+        10
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 52,
+      "source_glyph_sha256": "7a58ef9bffb5e068be91b3a84dd0d9da6fe3e8d1fd8b2b1e3873057bf7ee8717",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-68",
+      "bank": 0,
+      "tile": 104,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        4
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "4dcb05ae1daddcb6712f75b063aa52bbc27516576256c7d7c06165cb21f57932",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-69",
+      "bank": 0,
+      "tile": 105,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        4
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "29d7a1acb4953d0f307a79025b6fc36dfbb50d8ef45d354e36da99f6abcb300c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-6a",
+      "bank": 0,
+      "tile": 106,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        4
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 5,
+      "source_glyph_sha256": "50c3fb7b172903f83fde6ed8108ad26f3264f992ecdac8da6513ca6fa5b0176f",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-6b",
+      "bank": 0,
+      "tile": 107,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3,
+        7
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "f656936de24fba5cc69b1d0f84d0e48f35085872973554c3fffb3a2c741013fe",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-6c",
+      "bank": 0,
+      "tile": 108,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "e5a55d56547fe64aab05cfb84bf10e0615ac2f1d018e0b10bb6da6907cc1716d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-6d",
+      "bank": 0,
+      "tile": 109,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3,
+        7
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "ac1fdb3b217a53622d93c19f1e864bbd592cebbd2e428fe959fe1a49781f1d9d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-6e",
+      "bank": 0,
+      "tile": 110,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "ca26111ee567cdc70520e5460049998502025b27c9ea4639992729f195a334b7",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-6f",
+      "bank": 0,
+      "tile": 111,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "34ff633aeeba3c2b2ba9b9b9e9c939e72ada20257c17a11acf0a38220a730be0",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-70",
+      "bank": 0,
+      "tile": 112,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        1,
+        3
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "cfb368a964bc4a39ff43d3bf734b5fcd60a53b6979dbce085798ed3169ab63c0",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-7e",
+      "bank": 0,
+      "tile": 126,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        7
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "2516f62e25e68c8b90f15c11f8cd255876cd2b73f10d8d0715d12aa130370bd8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b0-7f",
+      "bank": 0,
+      "tile": 127,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        7
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "28a82d8859688101a964c2f2173432e38f219aee45102bb42107b560b9d4fc1e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-00",
+      "bank": 1,
+      "tile": 0,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "colors": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        15
+      ],
+      "uses": 1240,
+      "source_glyph_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-01",
+      "bank": 1,
+      "tile": 1,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18
+      ],
+      "colors": [
+        8,
+        9,
+        10,
+        11,
+        15
+      ],
+      "uses": 84,
+      "source_glyph_sha256": "bc1443a0d17aab2db1ea0302ef280717ac9a2f23355c5b649ea87d605430458d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-02",
+      "bank": 1,
+      "tile": 2,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        14,
+        16,
+        18
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 5,
+      "source_glyph_sha256": "bc1443a0d17aab2db1ea0302ef280717ac9a2f23355c5b649ea87d605430458d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-03",
+      "bank": 1,
+      "tile": 3,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        13,
+        15,
+        17,
+        18
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 9,
+      "source_glyph_sha256": "bc1443a0d17aab2db1ea0302ef280717ac9a2f23355c5b649ea87d605430458d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-04",
+      "bank": 1,
+      "tile": 4,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12,
+        13,
+        15,
+        17
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "bc1443a0d17aab2db1ea0302ef280717ac9a2f23355c5b649ea87d605430458d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-05",
+      "bank": 1,
+      "tile": 5,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12,
+        15
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 5,
+      "source_glyph_sha256": "bc1443a0d17aab2db1ea0302ef280717ac9a2f23355c5b649ea87d605430458d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-06",
+      "bank": 1,
+      "tile": 6,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 111,
+      "source_glyph_sha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-07",
+      "bank": 1,
+      "tile": 7,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        15,
+        16,
+        17
+      ],
+      "colors": [
+        9,
+        12
+      ],
+      "uses": 110,
+      "source_glyph_sha256": "b48e6d1fc60e14253832f19454091e3676be3e01bd375779776e69db30c4c569",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-08",
+      "bank": 1,
+      "tile": 8,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        13,
+        15,
+        17
+      ],
+      "colors": [
+        9,
+        11
+      ],
+      "uses": 62,
+      "source_glyph_sha256": "fd8deef1793ba845c39d80cde03e803afe245a7d26825fe78371c270d283ca3f",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-09",
+      "bank": 1,
+      "tile": 9,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        15,
+        17
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 24,
+      "source_glyph_sha256": "516ad1fed8ddd990d125ebdea2a6946033538bb0e4dd84703173f348a53cff80",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-0a",
+      "bank": 1,
+      "tile": 10,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        15,
+        16,
+        17,
+        20
+      ],
+      "colors": [
+        8,
+        9
+      ],
+      "uses": 38,
+      "source_glyph_sha256": "b706410b61df11ba5f4b5a501c2e2ed515c07e51d8ffd510ee4d1012315a2b49",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-0b",
+      "bank": 1,
+      "tile": 11,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        15,
+        16,
+        17,
+        20
+      ],
+      "colors": [
+        8,
+        9
+      ],
+      "uses": 39,
+      "source_glyph_sha256": "0233072ecd0355cd757431c8409493b35404d909d77f1ef76c95fc1f42c23269",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-0c",
+      "bank": 1,
+      "tile": 12,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        15,
+        16,
+        17
+      ],
+      "colors": [
+        8,
+        9,
+        12
+      ],
+      "uses": 108,
+      "source_glyph_sha256": "148fc41fd11abc2c90227774dc1cac35bfbe8e0a4392900e886f2c4e283e06b4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-0d",
+      "bank": 1,
+      "tile": 13,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        15,
+        16,
+        17
+      ],
+      "colors": [
+        8,
+        9
+      ],
+      "uses": 165,
+      "source_glyph_sha256": "8a7a87325ea064c2d2167d4549caf593fd5e4e953a2e212e15b1c537cbad9c71",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-0e",
+      "bank": 1,
+      "tile": 14,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        15,
+        17
+      ],
+      "colors": [
+        8,
+        9
+      ],
+      "uses": 211,
+      "source_glyph_sha256": "76ff826ef35ea9e7a36bda6850ece828531bd2053acd6caa95c2ad8b5063de0e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-0f",
+      "bank": 1,
+      "tile": 15,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        18
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "e88faf0c73b7e27bfba66558f5494154721d36bfe2e30106aa1f7b3c55098d46",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-10",
+      "bank": 1,
+      "tile": 16,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "colors": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        15
+      ],
+      "uses": 298,
+      "source_glyph_sha256": "541455e5ff93658a5b6006ec35da0dd6b9533ba7871e58c4427919bc38a9e448",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-11",
+      "bank": 1,
+      "tile": 17,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        20
+      ],
+      "colors": [
+        8,
+        9,
+        10,
+        11,
+        15
+      ],
+      "uses": 143,
+      "source_glyph_sha256": "c1f4c77efe98d8930a6ac719c5cbe4eb10627c158995d1ca7f7ae6a51845e2aa",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-12",
+      "bank": 1,
+      "tile": 18,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "4c66b36c76b9452c67bc037cbd8114e8f531a0382063ce48b060219db360bbc9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-13",
+      "bank": 1,
+      "tile": 19,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 12,
+      "source_glyph_sha256": "a427e8489d549e6ab1ceaf9dee88b4629897c9f383037d6d62a0c5652ca30b8a",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-14",
+      "bank": 1,
+      "tile": 20,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 11,
+      "source_glyph_sha256": "11457fe8513674aaf9bbf5d54cf945598e370722d29e468442622a5c596a6c28",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-15",
+      "bank": 1,
+      "tile": 21,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "bb743f1f7457bb6ac2ce2bc912c08e2129d0c011101ec76ba176149b064341a5",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-17",
+      "bank": 1,
+      "tile": 23,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "17e9bfca7ef4630982818e3623a599e4b9be4ea157128dfc76d857acf7213e73",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-18",
+      "bank": 1,
+      "tile": 24,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15,
+        20
+      ],
+      "colors": [
+        8,
+        9,
+        15
+      ],
+      "uses": 5,
+      "source_glyph_sha256": "85b2bc91151836b0155f5bbe2b269a1d7204f66d3380b13ea4905d3d12e2c257",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-19",
+      "bank": 1,
+      "tile": 25,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15,
+        16
+      ],
+      "colors": [
+        8,
+        9
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "919118fe7608127f8cc16e18ee3aa752f066afd66791a1605c8e5219df878fa9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-1a",
+      "bank": 1,
+      "tile": 26,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "d81b52aabfae3b284c3a40c5ad591ed5915d22b146316095ce7fec88c90f3d69",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-1b",
+      "bank": 1,
+      "tile": 27,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15,
+        20
+      ],
+      "colors": [
+        8,
+        9,
+        15
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "89da89c0d116eca36d538a30c228a3f310bfc1c232ab61b42a1db3169ed01cc2",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-1c",
+      "bank": 1,
+      "tile": 28,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "bdc23e39d8aa6f7354455fd93f0090524b7189b7e237bcea09f067a6f642c656",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-1d",
+      "bank": 1,
+      "tile": 29,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "4e78e9018e499d311a97888ce1bea5b8c8e76f809635099e8e9c11a626c5ab3e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-20",
+      "bank": 1,
+      "tile": 32,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "ba19ace4f3ff05f6f8dd1560e952cf7fd1bf3c13d64f95ddcafa6ccdd88453d1",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-21",
+      "bank": 1,
+      "tile": 33,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "6b057e268294b9095c93f5a10ca3f438d886b24a6d9728d67c12fd002c8559fd",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-22",
+      "bank": 1,
+      "tile": 34,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        17
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 22,
+      "source_glyph_sha256": "d2d4490a38b4d5722dfbf8be5f9bae973a1858e6969bd0388f22b4923c8f9a73",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-23",
+      "bank": 1,
+      "tile": 35,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15,
+        16
+      ],
+      "colors": [
+        8,
+        9
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "88c0802e557cea831675e8df64f3df9a5526fed9f21b0d56546360c490742b9f",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-24",
+      "bank": 1,
+      "tile": 36,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15,
+        20
+      ],
+      "colors": [
+        8,
+        9,
+        15
+      ],
+      "uses": 5,
+      "source_glyph_sha256": "56372e82bd6ebbbb3586bf2ea4e940eb7128e4a4d09493571ad49cce5a41a79b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-25",
+      "bank": 1,
+      "tile": 37,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "fa5e6deb4a186948f8931866025568caf1c2d99cf2d8c0ec3a5a09ff1c6bc8e7",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-26",
+      "bank": 1,
+      "tile": 38,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "b87607aedaade97505ba801140c6b74b4e3ba672b26fb68452c4388bf4958a97",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-27",
+      "bank": 1,
+      "tile": 39,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "45cb62c86f58a82ab1f5056cd23c7dc4e6e0804084362854f97021ba22a30aa4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-29",
+      "bank": 1,
+      "tile": 41,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "f5f071afdec8c389ac03bc299c3636ccb7dcfcf773ec9c6d09aa5faee9880ef7",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-2a",
+      "bank": 1,
+      "tile": 42,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15,
+        20
+      ],
+      "colors": [
+        8,
+        9,
+        15
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "03a89f360e23358a7bbf2769efd1c2a470faad14bec02eefb48132529ecf5473",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-2b",
+      "bank": 1,
+      "tile": 43,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "a5772e0014d8dba0f5130edef121dc755d92e708ae7c32e1403ff1a0b451c09e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-2c",
+      "bank": 1,
+      "tile": 44,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "514249359324c7bd1843697a59a96858e4ea640afe64cd5caf4cee16312711b8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-2d",
+      "bank": 1,
+      "tile": 45,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        14,
+        15,
+        17,
+        20
+      ],
+      "colors": [
+        9,
+        10,
+        15
+      ],
+      "uses": 19,
+      "source_glyph_sha256": "8104a19cf3cf57c6bc940b364edb3f527f7f388d21caaa6ff22af413902d74a0",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-2e",
+      "bank": 1,
+      "tile": 46,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        14,
+        15,
+        17,
+        20
+      ],
+      "colors": [
+        9,
+        10,
+        15
+      ],
+      "uses": 19,
+      "source_glyph_sha256": "48fc75a20538cff57fe6a506c835a05eb4e330d1cedb28769cf2524784828c37",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-2f",
+      "bank": 1,
+      "tile": 47,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        14,
+        16,
+        18
+      ],
+      "colors": [
+        8,
+        15
+      ],
+      "uses": 111,
+      "source_glyph_sha256": "280baea206edf2a75e3fb078108e9f274ee87aefc52a84795cdc4257b188e8b7",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-30",
+      "bank": 1,
+      "tile": 48,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "3c7680258a5790d9f3c50855f018a43d0f58b2899da75521a27a419a85efe828",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-32",
+      "bank": 1,
+      "tile": 50,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        11
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "4206c96009737f17afdf43e37c42abd961b99b73359e2dbb171450c966fe503c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-33",
+      "bank": 1,
+      "tile": 51,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        11
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "c957259765c1f538e50d793c6963eb26327fe3a5d61f008907d6a9671075019e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-35",
+      "bank": 1,
+      "tile": 53,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 9,
+      "source_glyph_sha256": "6f67f96d9ec388227a0d5551a3fb3fe77c35586dd1da99f6b701677d7d36a962",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-36",
+      "bank": 1,
+      "tile": 54,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        11
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "6ad4a0e68a793e5f4e84e27fa7f4c47a43e38d00e3d2df1c6a4f9bb81a8e9b2e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-37",
+      "bank": 1,
+      "tile": 55,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        11
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "2635ef613d2d02735317ee3b0db38277ded73cbf60dccd07408a772d589120b4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-38",
+      "bank": 1,
+      "tile": 56,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        11
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "982b1106879a8be6e8ad5e407ce41a2ddf7117fb15b135a37f8c2625bfe639d1",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-39",
+      "bank": 1,
+      "tile": 57,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        11
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "24ab182b1d9dc93df64ab3903860aced7777611cd6d73c397f5c34c275e8626d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-3b",
+      "bank": 1,
+      "tile": 59,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        11
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "02505eb8ff7609746a735c0b2412576f2a313982f81967828add0d410d383197",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-3c",
+      "bank": 1,
+      "tile": 60,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        11
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "d6b740379880d737d4d708153ccf9c6f64799bdd9fc416d07bcdaf371350f523",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-3d",
+      "bank": 1,
+      "tile": 61,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 9,
+      "source_glyph_sha256": "33f23a25c2d7d9a7407d1fe31f0fd524f0f5ac68490f838d18cd9c0431d4200d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-40",
+      "bank": 1,
+      "tile": 64,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 47,
+      "source_glyph_sha256": "293156b668e53b771cb855c36edef4414ed429cba5651689fd6647a1c749d967",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-41",
+      "bank": 1,
+      "tile": 65,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "e63730a8c280eb7b40d65f1d441ec3acc883f71dd464fb6c804eabf7d87a3f2e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-42",
+      "bank": 1,
+      "tile": 66,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        16,
+        20
+      ],
+      "colors": [
+        8,
+        12
+      ],
+      "uses": 49,
+      "source_glyph_sha256": "ae77004362e78c1ad4a819820e230c22a92f6345e0aeb2d65093ad587a0f03f1",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-43",
+      "bank": 1,
+      "tile": 67,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "colors": [
+        8,
+        9
+      ],
+      "uses": 67,
+      "source_glyph_sha256": "83760de8e48ade2479b4d6d1ef0cd725095699b241d5a2c26aa672d58cdc68c8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-44",
+      "bank": 1,
+      "tile": 68,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        18
+      ],
+      "colors": [
+        9,
+        11,
+        15
+      ],
+      "uses": 19,
+      "source_glyph_sha256": "7b473d1eb855259e4fc7be81664019f81ea460d05a24c8e0d9c4546a7c79d634",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-45",
+      "bank": 1,
+      "tile": 69,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "colors": [
+        8,
+        9
+      ],
+      "uses": 79,
+      "source_glyph_sha256": "766d1c856417cec4530a4417219733aad895e5aaf2a93dbf2c70d0afdf95804d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-46",
+      "bank": 1,
+      "tile": 70,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        15,
+        16,
+        17
+      ],
+      "colors": [
+        9,
+        12
+      ],
+      "uses": 121,
+      "source_glyph_sha256": "ab2e68f434b4377e8936752d5cd855205d25c37886cd5620bbd6df3cc3b805d8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-47",
+      "bank": 1,
+      "tile": 71,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        13,
+        15,
+        17
+      ],
+      "colors": [
+        8,
+        9
+      ],
+      "uses": 24,
+      "source_glyph_sha256": "0f981a9c2b682681c4fd394440478bd166ea6a9434bef1e3a76cc7638efbc8a8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-48",
+      "bank": 1,
+      "tile": 72,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        13,
+        15,
+        17
+      ],
+      "colors": [
+        9,
+        11
+      ],
+      "uses": 62,
+      "source_glyph_sha256": "8032232b0cd912538cc1640e21b5cd52e5e8017970fc41abd2167b09b6769de6",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-49",
+      "bank": 1,
+      "tile": 73,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        16,
+        18
+      ],
+      "colors": [
+        8,
+        12,
+        15
+      ],
+      "uses": 25,
+      "source_glyph_sha256": "bb8a356f2c5d90ddac1c8daf64bc30459293dd8656d1b631c89eb9479b07dbaa",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-4a",
+      "bank": 1,
+      "tile": 74,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12,
+        14,
+        18
+      ],
+      "colors": [
+        8,
+        15
+      ],
+      "uses": 19,
+      "source_glyph_sha256": "c58c44dc36cd338cfa404898ad69f1c5b7e274ff7aca2d1abe762072709673dc",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-4b",
+      "bank": 1,
+      "tile": 75,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "b4d2e59425ec1cd2df63077e3b3cb838926c81307692b92fc0f5dc89f243d43f",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-4c",
+      "bank": 1,
+      "tile": 76,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "ab04f7437c32f1638e008273e01906573351c51fdeec6645099f51cf84f9698b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-4d",
+      "bank": 1,
+      "tile": 77,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        18
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 47,
+      "source_glyph_sha256": "0625b1f942e6e18c39bd10a735b998e686f5837213bca308cc8c93846cd9c923",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-50",
+      "bank": 1,
+      "tile": 80,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        14
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 8,
+      "source_glyph_sha256": "41be2256e4777266d10a97b38c5d9b2672fcdcbdd335fda6f6934399bd4a8182",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-51",
+      "bank": 1,
+      "tile": 81,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        18
+      ],
+      "colors": [
+        8,
+        15
+      ],
+      "uses": 12,
+      "source_glyph_sha256": "3603ea26a20925723487ea106393f9ae65595b13e3bdedd2f1ac1608fe89f30c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-53",
+      "bank": 1,
+      "tile": 83,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "0ba8994ea60e77921a983f1e6d07b0b86ab044e9165a6b5345d0e77e4b8dd944",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-57",
+      "bank": 1,
+      "tile": 87,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "0ba5f66a7007d12741e1fe8b11509dd451772684fefc8ba7cc85b552092b57cf",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-58",
+      "bank": 1,
+      "tile": 88,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "8f7213382077014c88b2d9c7505a55a8c86cfaba75068334dd142e3f1c0f7c9f",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-59",
+      "bank": 1,
+      "tile": 89,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "17863959a1b6f72bff75c0717c53561ef72397af1e6e6ac7630b9c7ebc55eed4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-5a",
+      "bank": 1,
+      "tile": 90,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 5,
+      "source_glyph_sha256": "848500cda4a97657862aebd765558287fe714c02fde2fac68e8f625a56c759ca",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-5c",
+      "bank": 1,
+      "tile": 92,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 4,
+      "source_glyph_sha256": "347194e5516f28330ea950a1f31c1922f39250ec6e33e2963aa658b5c9a219e5",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-5d",
+      "bank": 1,
+      "tile": 93,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 6,
+      "source_glyph_sha256": "a0735d763034873bb780c211ff9d2c591b84e78832b9bec973b80585caf9a3fa",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-5e",
+      "bank": 1,
+      "tile": 94,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 17,
+      "source_glyph_sha256": "b1e72f65f5b39306fa3e03ac4280f1a78364d5ff6d5fc002a36e6edf76c8bcd0",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-5f",
+      "bank": 1,
+      "tile": 95,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "6ad5b1dce1ad619569344e7c6f3145a336e50c01f68af3ea5cc416f526103fc2",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-60",
+      "bank": 1,
+      "tile": 96,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        12,
+        13,
+        15,
+        17
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 27,
+      "source_glyph_sha256": "2184809738d90a88acd37a4f122e424bd6a1b506523ed3ed3b451399fa505622",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-61",
+      "bank": 1,
+      "tile": 97,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 11,
+      "source_glyph_sha256": "89e99316685dbd4b89ca26e2e675a3cb1a24cf3a775312cf3fdf13bf179d6fa2",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-62",
+      "bank": 1,
+      "tile": 98,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        8,
+        11
+      ],
+      "uses": 73,
+      "source_glyph_sha256": "4c401efadd3072ca0aba7bff1f4a72599d86b02a6e158779a8f3757d31a7f6d3",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-63",
+      "bank": 1,
+      "tile": 99,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 11,
+      "source_glyph_sha256": "03e3e58668b1148751091461999983aeedd1b802f1a60ec4753c01b62e5a3dbb",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-64",
+      "bank": 1,
+      "tile": 100,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        18
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 17,
+      "source_glyph_sha256": "ed37cbfc58ea3379d7240b42f2cba37290cb31d5117a1b0db3daaf96bad83661",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-65",
+      "bank": 1,
+      "tile": 101,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        14
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 60,
+      "source_glyph_sha256": "23d71a8c619b215f2360215f34163df9286eb437040d76c082886e4f70bff912",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-67",
+      "bank": 1,
+      "tile": 103,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        14,
+        20
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 62,
+      "source_glyph_sha256": "2c8a01c29e0790e70157c75e99b26bd2e60d1f60277182066c9b3472b156c5f8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-68",
+      "bank": 1,
+      "tile": 104,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "cb3f0639f60e59978ab35152472d20efde120d04cbff27c495a8f7cf127181ea",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-69",
+      "bank": 1,
+      "tile": 105,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 4,
+      "source_glyph_sha256": "abbfed436365ec6863de0a8452362afbe09a3ac8add06190acdb403e07673bf7",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-6a",
+      "bank": 1,
+      "tile": 106,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "028339113ba96cbebf2d34eb6daa6682e831b2e09e5a14cd8669d4de20ce89bc",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-6b",
+      "bank": 1,
+      "tile": 107,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "9b5007501efdebf4f814a76a376632d05661510b419772acaf373f5cb97df4d8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-6c",
+      "bank": 1,
+      "tile": 108,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        15
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "000c4202be8c338a0ec9f50275b04f15ec3ce4884b4f39435eb21109465a38da",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-6d",
+      "bank": 1,
+      "tile": 109,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 5,
+      "source_glyph_sha256": "a04e6637b71bf02add0f403dd459e1bfef88fc5ae6cdaab22c554603bf7afd38",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-6e",
+      "bank": 1,
+      "tile": 110,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        20
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 5,
+      "source_glyph_sha256": "3b4ddaf9d70105a5eb70123a3d08ba23c356881dc1e57d19d264135ce7f5fe11",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-6f",
+      "bank": 1,
+      "tile": 111,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        14
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "e3f0fb9f53acd477c54f726ad5396f2d6f87ea2ec83e443affe8cb088aa8f1a4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-70",
+      "bank": 1,
+      "tile": 112,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        12
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 54,
+      "source_glyph_sha256": "8a7a87325ea064c2d2167d4549caf593fd5e4e953a2e212e15b1c537cbad9c71",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-7e",
+      "bank": 1,
+      "tile": 126,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        13,
+        15,
+        17
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 30,
+      "source_glyph_sha256": "e3b4e24c00245d9e3abf236b6cc4b1d7b6f5ab1237cabd537a99a1d70f746d34",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b1-7f",
+      "bank": 1,
+      "tile": 127,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        11,
+        15
+      ],
+      "colors": [
+        9
+      ],
+      "uses": 14,
+      "source_glyph_sha256": "a2917c7eb8938f23f9a19c0294d1457ef96e6834d3253562356200b8e16d4123",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-00",
+      "bank": 2,
+      "tile": 0,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 125,
+      "source_glyph_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-01",
+      "bank": 2,
+      "tile": 1,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 6,
+      "source_glyph_sha256": "00501a2f38b3165ba5ee6eb3664b041b5133a10c34d3a32e44963d92a43111ce",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-02",
+      "bank": 2,
+      "tile": 2,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-04",
+      "bank": 2,
+      "tile": 4,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 9,
+      "source_glyph_sha256": "9b51e1e9a2a0a0c8bf02c187f34b05782e627bdf1827d7f23d0eb44879835411",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-05",
+      "bank": 2,
+      "tile": 5,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 6,
+      "source_glyph_sha256": "56218e752b0b5081c8324fa7bb0141370a568bfbd059723a344748965312730b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-07",
+      "bank": 2,
+      "tile": 7,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "125a4fb630a33738353e543f788edda6ff222f163ce1b0ebe1301fdb711a934c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-08",
+      "bank": 2,
+      "tile": 8,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "791c0364c84f7b3d9c0c9b0cda8737e406c09a1aba7ffbf85987852733eef040",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-09",
+      "bank": 2,
+      "tile": 9,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "c0c59651a2c7e5790f340c53cd88eb7a0ca33b793460ab0b1d0985f5bb69cbcf",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-0a",
+      "bank": 2,
+      "tile": 10,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "44afa4562ea0eb825d9af4feb74cc9f9cc1f2fe7d348cb936faa3e6e2257d7d6",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-0b",
+      "bank": 2,
+      "tile": 11,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "f8e3b4b73b5ee74b559a8965b8b7b9455f07165054affa474dbe7b4d98bf2027",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-0c",
+      "bank": 2,
+      "tile": 12,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "70ebd761987c5fa2108a37dfdbd928b5f8581454d68a7ea0a64ff1b496539f2d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-0d",
+      "bank": 2,
+      "tile": 13,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "54eedb208b9903c03fd8850a1f1bb1191fb66310ebfe70e8e4fabf6d74d34b1d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-0e",
+      "bank": 2,
+      "tile": 14,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "5f710b9d330dc8127fa544d6ce2ccea189e77055ab937a17f5a39d8a9f5e7019",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-12",
+      "bank": 2,
+      "tile": 18,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 6,
+      "source_glyph_sha256": "71123469ee58ed4b024d9ec826af3a0b9318298903e425a7c39f598616d1eef4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-13",
+      "bank": 2,
+      "tile": 19,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8,
+        14
+      ],
+      "uses": 7,
+      "source_glyph_sha256": "d075ccdaac812bac55b8b7a21ac81e247e3723a4fa917095b0d0221184537880",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-17",
+      "bank": 2,
+      "tile": 23,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "8186e6b0a0469f6a70a2b2f5fff5e5ae6a315879466751ca7b33d56e95a6a7f4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-18",
+      "bank": 2,
+      "tile": 24,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "9b0ab8f7fa4ba85b1a0bd7191a62668fbcf764dd2650a26ec5a13fde2ba262de",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-19",
+      "bank": 2,
+      "tile": 25,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "f71fe8c0770c1a9d9c5d4253353f792690f7adeb5d73d24aaaed9b70c2af0929",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-1a",
+      "bank": 2,
+      "tile": 26,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "e83e48bc0bd8f7b508dfa74040e77f3a09b63348583c76f29ad9817b718004ad",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-1b",
+      "bank": 2,
+      "tile": 27,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "8dc1339647ff13874634664d9e107548d30b8097f2a4f82eb7fcf2ca45010800",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-1d",
+      "bank": 2,
+      "tile": 29,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "c285861bfccca29a5f4c46d4ccb8e95189c29a062a7752857903d06110613f43",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-20",
+      "bank": 2,
+      "tile": 32,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "d72acdaa88a8241d3a8ceef9f585ecab8243635f262e7b4fd275f5e1ce3698f1",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-22",
+      "bank": 2,
+      "tile": 34,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "d49cb5ab5b33a5affde0573ebbe43627eb1c601278be2a8f2d250ee45c0ba239",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-23",
+      "bank": 2,
+      "tile": 35,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "4f84e6eea3a49cdd0a419fe4a065cd9cea290decbbe81f6dd30f6e90032d61bf",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-24",
+      "bank": 2,
+      "tile": 36,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "46b602418035de247bf4cb089a5921bb66a364b5cf61d0f9d3c803fd0131b4f1",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-25",
+      "bank": 2,
+      "tile": 37,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "6cde6ea8dfc24ca2a9b2e9801f824bf607ab51ccfbc1c6b5bbd09c2d363fca59",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-26",
+      "bank": 2,
+      "tile": 38,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "4316536c33d457b9447044f7d81c966ed0d8a5d522f6b917ef55013d918689c8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-27",
+      "bank": 2,
+      "tile": 39,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "810040a921e63ff97a26873e9492fc144e439a22c81165c784c35bad6b6aad4c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-2b",
+      "bank": 2,
+      "tile": 43,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "11456a376edaad00b426e6819c622bb786a79cfacbf41d651b09047334358b3b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-2c",
+      "bank": 2,
+      "tile": 44,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "f14340d7e1e356ea686e4eff501f9f204ede7788d06a2de40b39289989cc212d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-2d",
+      "bank": 2,
+      "tile": 45,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "754cdf2806507c933a41c7aaa81629308da11e3aa91ccec837c7899ca47de30c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-2e",
+      "bank": 2,
+      "tile": 46,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "1740a9dd2f4dba72b717e3b5e3da332d99ebfdfc2b07d004fed52283ca80e4a3",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-2f",
+      "bank": 2,
+      "tile": 47,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "3e58bdf0d3c256b81a6ec15f81cbc2f13328344df225105aa34e4b8ececb03b1",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-33",
+      "bank": 2,
+      "tile": 51,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "6878210effd767e9d1dab60c1b717eb61228fc83d71a93fda0a3c36411e12236",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-34",
+      "bank": 2,
+      "tile": 52,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "c64b11fb8be7c6f191c7ca952bc5182619b33650e1dfe841476c2102361d65d3",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-35",
+      "bank": 2,
+      "tile": 53,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "d4a982bda515d1ca84cc719298736cc84f7296a0e66db129be60da75cd0d4f8b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-36",
+      "bank": 2,
+      "tile": 54,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "7abfbd901af7ddfba10ab33d009b1d4bc518358a152a59e72f07fa72e97ccbc3",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-37",
+      "bank": 2,
+      "tile": 55,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "c71659f2a24f014b826fe9f21c1f2372301d851ff4549e0999f1db4d3c84ab1a",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-38",
+      "bank": 2,
+      "tile": 56,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "6475ca4d867c1ae33be94ac2c439c2abf0724ecb0f24b7fad58b646ddd8054ab",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-39",
+      "bank": 2,
+      "tile": 57,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "2c926623fe7a46321dfc1d32cda1bbaffdea33eecf91505c0f0799aa3bea8332",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-3a",
+      "bank": 2,
+      "tile": 58,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "eb8c1fbd4efaf48c6a3b6cdc4474ee6a6c02141ef8db26ffcee949e219db069a",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-3b",
+      "bank": 2,
+      "tile": 59,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "26a4b4cf22f6a1f1f8d44725ae2dcb302c62a65f812161c49be5f4ccf4492166",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-3c",
+      "bank": 2,
+      "tile": 60,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 38,
+      "source_glyph_sha256": "87e36ce5c70a77d0b4bafbe2d6d1f53167344236134dab16808ae0cdd505c54d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-3d",
+      "bank": 2,
+      "tile": 61,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "cf5a55614e0cd27a947bf00e0703a7c5dd62d5c3ea7137533496f1ea45405138",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-3e",
+      "bank": 2,
+      "tile": 62,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "4db903b1cd6740cc8e362ed0325314066cb196549ebae0ffe398e5558f7b12a9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-40",
+      "bank": 2,
+      "tile": 64,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "f8cfe90cc351e879675f812fe893e2be38fe549fcf5ed11a1d987c54bba4c64e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-41",
+      "bank": 2,
+      "tile": 65,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "e047872675643d9b6316835161b46a653e4349577b967aaead1eb39b938ac660",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-42",
+      "bank": 2,
+      "tile": 66,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "dd3f70e3ee1ef3e5d078e5071aafd0260984a009a50f5ec56dad1f045a5be1ee",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-43",
+      "bank": 2,
+      "tile": 67,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "eabc4ef1b9620fcbef58e5d24e517316757454beea212f323335e5ec988c4708",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-44",
+      "bank": 2,
+      "tile": 68,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "d90eed05b784e830c561bb79fdf9b22289c1c88705a5b98f5a07803df6f9beb8",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-45",
+      "bank": 2,
+      "tile": 69,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "86a6f5c2067a7dc882ce6275a6e20606ef35a44c96336fbd1f095c3bd2381690",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-46",
+      "bank": 2,
+      "tile": 70,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "7253642b541da434a14e0a69f998de4feea3e0d12acf6cf20b4d00e77fa4039c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-47",
+      "bank": 2,
+      "tile": 71,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "835e221f7522a73a3632dbb424abcafdcc508755d86f4aef6abfb1822574db6a",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-48",
+      "bank": 2,
+      "tile": 72,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "4918dd984943ea4d33b2d09da23d2b237f5135631748e16f6d9ec319f6a332f1",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-49",
+      "bank": 2,
+      "tile": 73,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "c1327188dd6e3f8b83e81a803ab7c15207f3f08f5add852b2605ff889e004b29",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-4a",
+      "bank": 2,
+      "tile": 74,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "24a619478dbc7d65dd8c0ee51037fe7425f2b567f6f5aefc36420a68c34abcf1",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-4b",
+      "bank": 2,
+      "tile": 75,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "38be1acff06ac0b7346793c36d2725c36592deea5f399b7da2aefba12281f8e0",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-4c",
+      "bank": 2,
+      "tile": 76,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "94e6005823e43f9bfbee0b464f3b0db7abe164cc19af426c38d69155fafa2934",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-4d",
+      "bank": 2,
+      "tile": 77,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 2,
+      "source_glyph_sha256": "eaf5a50d199896cca9b4260b25626ffc9d7706b8f0ca3522d6b8453d7b3428d9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-4e",
+      "bank": 2,
+      "tile": 78,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 16,
+      "source_glyph_sha256": "3aaaffe6857808034ac4fa67de216b5135a7f1a9dd07cebdd3d7bb35077b9ad9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-4f",
+      "bank": 2,
+      "tile": 79,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "0c271e4017c4b6690e201a9fe43e2757d5f8bbe0a4eaa0d307ebf2255a56007c",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-50",
+      "bank": 2,
+      "tile": 80,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 8,
+      "source_glyph_sha256": "5e1f53ecb6a44c83a76898f5c4df1c2438ab9d764fbcecf6c15f38cdfa73bbc4",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-51",
+      "bank": 2,
+      "tile": 81,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "774204b35c600af9c4c0bd34170912e7e671507d7277c5b09ce8b6bbc65c9f32",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-52",
+      "bank": 2,
+      "tile": 82,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "b20800833875b7d7014bb8d15508881410fad57100c84750d5003e7dd3d870b9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-55",
+      "bank": 2,
+      "tile": 85,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "aab2d2f66ff72a49b86620a204bda78201d78bfb9cbb5c6a6af67d3516c44a4a",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-56",
+      "bank": 2,
+      "tile": 86,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "9288cee7471b0a9c222e1d7c95927ae0986edbd0fdd095a18efd65bf39f4e354",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-57",
+      "bank": 2,
+      "tile": 87,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "d3f1d65eaca8719910e50e79767b266a2f13e91803d5e222bb4f57a6830b08c9",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-58",
+      "bank": 2,
+      "tile": 88,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "ab6cbe76f230f9617b2ff5391048fd6458d8d565c721df3a626954dd58b9b45b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-5a",
+      "bank": 2,
+      "tile": 90,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 34,
+      "source_glyph_sha256": "ec9d49b424d44ec9e99fc2ef539024305bb3bfa38e6bdaf7b526900eca1dce69",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-5b",
+      "bank": 2,
+      "tile": 91,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 6,
+      "source_glyph_sha256": "3be58b9c1ec2ba63cb50260e8dc4d627a4031ab539d00bb468f62b31ccfd595b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-5c",
+      "bank": 2,
+      "tile": 92,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 54,
+      "source_glyph_sha256": "c3e4ed7e2872938bc9a295affbc20ec88b0cbb3f79355d21b458754b163e0bbe",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-5d",
+      "bank": 2,
+      "tile": 93,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "eaedc65f6ffcc9d35ca3591db73c60582c3c23f69fa8690f1e9887bff003f289",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-5e",
+      "bank": 2,
+      "tile": 94,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "f507b8ba5eb0491d4d5d2d60ad963459e798a0c913cfdf3b828ddf2d10648087",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-5f",
+      "bank": 2,
+      "tile": 95,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 24,
+      "source_glyph_sha256": "92b742d015e40e77a4c8ff8739b377bde5c1a98315f8f3a202418939b26342ed",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-61",
+      "bank": 2,
+      "tile": 97,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "792e2021d6e5760b65369045710701ca1603f713a708992cc812b71b42c9804d",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-62",
+      "bank": 2,
+      "tile": 98,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "e49edabc727b29183db9ef459ef495c0482a9facfb31f759462494463a771768",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-64",
+      "bank": 2,
+      "tile": 100,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "7afbf43bde9756a5f59968f81b1a448b894b73afac06b5849289913d9b11e44b",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-6d",
+      "bank": 2,
+      "tile": 109,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "301fa8bcd6059d9fc6ff2941ede27241bf4f3410ce37aa9157eb6e2bbb7e1836",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-72",
+      "bank": 2,
+      "tile": 114,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "562b36c14515ddb25ee12cf1d4f3573e63fa1d07c48b018c2c6089b111bdb30e",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-73",
+      "bank": 2,
+      "tile": 115,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        8
+      ],
+      "uses": 1,
+      "source_glyph_sha256": "603740631d75fb4d3df5b0cbbd8a8d1ee6673db3a788e123c273657e5a7bf143",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-7d",
+      "bank": 2,
+      "tile": 125,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 3,
+      "source_glyph_sha256": "e12adae8dc49bb85db251bafa04a33ecd8c3b9b40d61d1a424bf7c652d56e530",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    },
+    {
+      "id": "tile-b2-7e",
+      "bank": 2,
+      "tile": 126,
+      "width": 8,
+      "height": 16,
+      "rooms": [
+        19
+      ],
+      "colors": [
+        14
+      ],
+      "uses": 24,
+      "source_glyph_sha256": "eb6df7d66504eec037b799b32313aaa984ea4a57629f34714220ec984f32e5b7",
+      "graphics_status": "reference_only_replacement_not_created",
+      "semantic_variants_must_preserve_color_attribute": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "label": "visibility-room02",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "364a711483fca983ce559ee9a327ae647d1f83ed0f86ed3189c7fdf42f50c7cc"
+  },
+  "source_room": 2,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    396864,
+    396904,
+    396944,
+    396984
+  ],
+  "source_music_fields": 530,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/visibility-room02.bpl",
+      "sha256": "bc51d267a85c7140b93c5fe11ccb9e931b8c1256e54061bef19411955c5b4ffc"
+    },
+    {
+      "path": "docs/images/session-visibility-room02.png",
+      "sha256": "f0d23d5015d73ef80694d4e51f440bb5fadc72c489d3c3d5349da9f73f07f468"
+    }
+  ]
+}

@@ -49,9 +49,14 @@ static void source_audio_load(long loading){
 }
 static void source_audio_output(UBYTE music){
     UWORD c,changed;ULONG *hash=music?&source_music_hash:&source_audio_hash;
+    PERF_BEGIN(BL_PERF_AUDIO_RENDER);
     bl_source_audio_render(&source_audio,source_registers,source_voices);
+    PERF_END(BL_PERF_AUDIO_RENDER);
+    PERF_BEGIN(BL_PERF_AUDIO_DMA);
     changed=bl_source_dma_update(&source_dma,source_audio_images(),sfx_pcm,
                                 bl_source_audio_chip_bytes(),source_voices);
+    PERF_END(BL_PERF_AUDIO_DMA);
+    PERF_BEGIN(BL_PERF_AUDIO_PUBLISH);
     if(changed&0x8000)++source_dma_faults;
     else for(c=0;c<3;c++)if(changed&(1<<c))++source_dma_changes;
     for(c=0;c<3;c++){
@@ -69,11 +74,14 @@ static void source_audio_output(UBYTE music){
         }
     }
     if(music)++source_music_fields;else ++source_audio_fields;
+    PERF_END(BL_PERF_AUDIO_PUBLISH);
 }
 static void source_audio_tick(void){
     ULONG start=BL_AUTOTEST?line_clock():0;
+    PERF_BEGIN(BL_PERF_AUDIO_SOURCE);
     if(source_audio_mode)bl_source_audio_music(&source_audio,source_registers);
     else bl_c64_audio_frame(source_registers);
+    PERF_END(BL_PERF_AUDIO_SOURCE);
     source_audio_output(source_audio_mode);
     if(BL_AUTOTEST){ULONG cost=(line_clock()-start)&0xffffffUL;if(cost>source_tick_max_lines)source_tick_max_lines=cost;}
 }

@@ -1,0 +1,130 @@
+--- before/core/c64_rooms.c
++++ after/core/c64_rooms.c
+@@ -494,47 +494,97 @@
+     m[0x277f]=remaining;a=0;z=0;n=1;sp+=2;
+ }
+ static void source_contact_align(void){
+-    unsigned char row,shift,bit,old,offset=m[0x1c],phase=m[0x1b];unsigned short pointer=W(0x52cc);
++    unsigned char row,shift,left,middle,right,last,offset=m[0x1c],phase=m[0x1b];unsigned short pointer=W(0x52cc);
+     for(row=0;row<offset;row++)m[0xcae0 + row]=0;
+     if(phase==3){for(row=0;row<32;row++)m[0xcae0 + offset+row]=0;offset+=32;}
+     for(row=0;row<96;row++)m[0xcae0 + offset+row]=m[(unsigned short)(pointer+row)];
+     if(!phase){a=0;x=96;y=(unsigned char)(offset+96);c=1;z=1;n=0;sp+=2;return;}
++    /* $52E3-$5307: rows are independent. Fold the2/4 complete shift passes
++     * into one pass; carry at exit is from row0 in the final source pass.
++     * The preceding forward copy retains source/destination alias behavior. */
+     if(phase==3){
+-        for(shift=0;shift<2;shift++)for(row=32;row--;){
+-            c=m[0xcb40 + row]>>7;m[0xcb40 + row]<<=1;
+-            old=m[0xcb20 + row];bit=c;m[0xcb20 + row]=(unsigned char)((old<<1)|bit);c=old>>7;
+-            old=m[0xcb00 + row];bit=c;m[0xcb00 + row]=(unsigned char)((old<<1)|bit);c=old>>7;
+-            old=m[0xcae0 + row];bit=c;m[0xcae0 + row]=(unsigned char)((old<<1)|bit);c=old>>7;
++        for(row=32;row--;){
++            left=m[0xcae0 + row];middle=m[0xcb00 + row];right=m[0xcb20 + row];last=m[0xcb40 + row];
++            m[0xcae0 + row]=(unsigned char)((left<<2)|(middle>>6));
++            m[0xcb00 + row]=(unsigned char)((middle<<2)|(right>>6));
++            m[0xcb20 + row]=(unsigned char)((right<<2)|(last>>6));m[0xcb40 + row]=(unsigned char)(last<<2);
++            c=(left>>6)&1;
+         }
+         a=3;
+     }else{
+-        a=(unsigned char)(phase<<1);
+-        for(shift=0;shift<a;shift++)for(row=32;row--;){
+-            c=m[0xcae0 + row]&1;m[0xcae0 + row]>>=1;
+-            old=m[0xcb00 + row];bit=c;m[0xcb00 + row]=(unsigned char)((old>>1)|(bit<<7));c=old&1;
+-            old=m[0xcb20 + row];bit=c;m[0xcb20 + row]=(unsigned char)((old>>1)|(bit<<7));c=old&1;
++        a=shift=(unsigned char)(phase<<1);
++        for(row=32;row--;){
++            left=m[0xcae0 + row];middle=m[0xcb00 + row];right=m[0xcb20 + row];
++            m[0xcae0 + row]=(unsigned char)(left>>shift);
++            m[0xcb00 + row]=(unsigned char)((middle>>shift)|(left<<(8-shift)));
++            m[0xcb20 + row]=(unsigned char)((right>>shift)|(middle<<(8-shift)));
++            c=(right>>(shift-1))&1;
+         }
+     }
+     x=255;y=0;z=1;n=0;sp+=2;
++}
++/* $55E6/$5658/$56CA: seven exact exchanges in one23-byte class lane.
++ * A ends with the old left byte, X/N/Z with the source actor index.
++ * C/V/D/Y and every source stack byte remain untouched here. */
++static void source_contact_swap(unsigned short base){
++    static const unsigned char offsets[7]={3,7,11,12,13,14,15};
++    unsigned char i,value;
++    for(i=0;i<7;i++){
++        a=m[base+offsets[i]];value=m[base+16+i];m[base+offsets[i]]=value;m[base+16+i]=a;
++    }
++    x=m[0x50];NZ(x);sp+=2;
++}
++/* $5431-$55AA. The OR operands below are the frozen instruction operands,
++ * including the repeated $4EFE. No class is inferred from tile artwork. */
++static void source_contact_classes(void){
++    unsigned char col,mask=0,bit;unsigned short flag;
++    for(col=0;col<5;col++)m[0x4f3b+col]=0;
++    for(col=0;col<3;col++){
++        flag=(unsigned short)(0x4f32+col);
++        if(m[flag]){
++            --m[flag];
++            /* Actual JSR sites $5443/$544E/$5459. Preserve even the stack
++             * bytes below the restored SP; the source reader can see them. */
++            m[0x100+sp--]=0x54;m[0x100+sp--]=(unsigned char)(0x45+11*col);
++            source_contact_swap((unsigned short)(0x4eed+23*col));
++        }
++    }
++    m[0x4f3c]=(unsigned char)((m[0x4eee]|m[0x4ef1]|m[0x4ef2]|m[0x4ef3]|m[0x4ef4]|m[0x4efe]|m[0x4ef6]|m[0x4efa]|m[0x4f01]|m[0x4f05]|m[0x4f08]|m[0x4f09]|m[0x4f0a]|m[0x4f0b]|m[0x4efe]|m[0x4f0d]|m[0x4f11]|m[0x4f18]|m[0x4f1c]|m[0x4f1f]|m[0x4f20]|m[0x4f21]|m[0x4f22]|m[0x4f2c]|m[0x4f24]|m[0x4f28]|m[0x4f2f])!=0);
++    m[0x4f3d]=(unsigned char)((m[0x4eef]|m[0x4ef3]|m[0x4ef5]|m[0x4ef6]|m[0x4ef7]|m[0x4ef8]|m[0x4efb]|m[0x4eff]|m[0x4f02]|m[0x4f06]|m[0x4f0a]|m[0x4f0c]|m[0x4f0d]|m[0x4f0e]|m[0x4f0f]|m[0x4f12]|m[0x4f16]|m[0x4f19]|m[0x4f1d]|m[0x4f21]|m[0x4f23]|m[0x4f24]|m[0x4f25]|m[0x4f26]|m[0x4f29]|m[0x4f2d]|m[0x4f30])!=0);
++    m[0x4f3e]=(unsigned char)((m[0x4efd]|m[0x4efe]|m[0x4eff]|m[0x4f00]|m[0x4f01]|m[0x4f02]|m[0x4f03]|m[0x4f14]|m[0x4f15]|m[0x4f16]|m[0x4f17]|m[0x4f18]|m[0x4f19]|m[0x4f1a]|m[0x4f2b]|m[0x4f2c]|m[0x4f2d]|m[0x4f2e]|m[0x4f2f]|m[0x4f30]|m[0x4f31])!=0);
++    m[0x4f3f]=(unsigned char)((m[0x4ef0]|m[0x4ef4]|m[0x4ef8]|m[0x4ef9]|m[0x4efa]|m[0x4efb]|m[0x4efc]|m[0x4f07]|m[0x4f0b]|m[0x4f0f]|m[0x4f10]|m[0x4f11]|m[0x4f12]|m[0x4f13]|m[0x4f1e]|m[0x4f22]|m[0x4f26]|m[0x4f27]|m[0x4f28]|m[0x4f29]|m[0x4f2a])!=0);
++    x=m[0x50];a=0;m[0xb6+x]=0;
++    for(col=5;--col;){
++        flag=(unsigned short)(0x4f3b+col);bit=m[flag]&1;m[flag]>>=1;
++        mask=(unsigned char)((mask<<1)|bit);m[0xb6+x]=mask;
++    }
++    c=0;NZ(mask);sp+=2;
+ }
+ static void source_contact_call(unsigned short entry,unsigned short continuation){
+     unsigned short ret=(unsigned short)(continuation-1);
+     m[0x100 + sp--]=(unsigned char)(ret>>8);m[0x100 + sp--]=(unsigned char)ret;
+-    actor_code(entry);
+-}
++    if(entry==0x5431 && m[0x50]<3)source_contact_classes();
++    else if(entry==0x55e6)source_contact_swap(0x4eed);
++    else if(entry==0x5658)source_contact_swap(0x4f04);
++    else if(entry==0x56ca)source_contact_swap(0x4f1b);
++    else{actor_code(entry);return;}
++    actor_return=source_stack_return();
++}
++/* The three source lanes stay ordered: a glyph pointer may alias flags
++ * written by an earlier lane. CPY overwrites N/Z/C before any observation. */
++#define CONTACT_LANE(operand,bitmap,flags) do{ \
++    value=(unsigned char)(m[(unsigned short)(W(operand)+y)]&m[(bitmap)+y]);a=value; \
++    if(value){m[0x4e]=value;x=(unsigned char)(value>>4);m[(flags)+x]=x; \
++        a=(unsigned char)(value&15);x=a;m[(flags)+x]=a;} \
++}while(0)
+ static void source_contact_rows(void){
+-    unsigned char col,value;unsigned short table,flags;
++    unsigned char value;
+     y=m[0x52];
+     for(;;){
+         if(actor_world_enabled && io_service && !(y&7))io_service();
+-        for(col=0;col<3;col++){
+-            table=(unsigned short)(0x5381 + 26*col);flags=(unsigned short)(0x4eed + 23*col);
+-            a=(unsigned char)(m[(unsigned short)(W(table)+y)]&m[0xcae0 + 32*col+y]);NZ(a);
+-            if(a){
+-                value=a;m[0x4e]=value;c=(value>>3)&1;x=(unsigned char)(value>>4);m[flags+x]=x;
+-                a=(unsigned char)(value&15);x=a;m[flags+x]=a;NZ(a);
+-            }
+-        }
++        CONTACT_LANE(0x5381,0xcae0,0x4eed);
++        CONTACT_LANE(0x539b,0xcb00,0x4f04);
++        CONTACT_LANE(0x53b5,0xcb20,0x4f1b);
+         ++y;c=y>=m[0x4f38];NZ((unsigned char)(y-m[0x4f38]));
+         if(z){
+             for(x=2;;--x){a=m[0x4f32 + x];m[0x4f35 + x]=a;if(!x)break;}
+@@ -557,6 +607,7 @@
+         if(z){m[0x52]=y;sp+=2;return;}
+     }
+ }
++#undef CONTACT_LANE
+ #include "c64_actor_programs.h"
+ /* IRQ I/O seam. The two source fragments retain all source timer, palette,
+  * quota and input-mode work. CIA keyboard scanning is replaced only by the

@@ -11,6 +11,12 @@ void bl_source_wall_record(BlSourceWall *w,long dx,long dy){
     if(dx<0)w->moves[0][2]+=(unsigned char)(-dx/2);
     else w->moves[0][3]+=(unsigned char)(dx/2);
 }
+long bl_source_sai_step(BlSourceWall *w,BlSourceActor *a){
+    long sound=a->counter==12;
+    if(a->counter==1){a->state=0;a->counter=6;}
+    else {++w->moves[0][a->facing?3:2];--a->counter;}
+    return sound;
+}
 void bl_source_wall_age(BlSourceWall *w){
     unsigned char i,d;
     /* $1C6B-$1C9A: history ages only when current movement is nonzero. */

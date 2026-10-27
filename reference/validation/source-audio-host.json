@@ -105,11 +105,11 @@
     },
     {
       "path": "core/game.h",
-      "sha256": "bbcb1164efaf3660729cc0318196c29f19146c106ad5bb5f1675e493cd96cffb"
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
     },
     {
       "path": "core/source_wall.h",
-      "sha256": "8fcf8898f2c89de98068b315dce430feb7dac032f9aae9b332ca815b9ed78449"
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
     },
     {
       "path": "core/c64_sfx.h",
@@ -121,11 +121,11 @@
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "73d55bac838bb93e973afe64305d8375431516b648e53b430b69f44fc507eac0"
+      "sha256": "a5e7f17802665dd0e744d484a917d83450960bd8cd7e1a6e2d8508417ee1e0f9"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "8230b5a3dd98aae1bc16586267485c49bc8936b0f5d30673d3ee2fb25cefd2c2"
+      "sha256": "f3ede2c2062517f6adc6db8db414d46dfebc176a6445d87fcb2cbe0790702045"
     },
     {
       "path": "test-source-audio.ps1",

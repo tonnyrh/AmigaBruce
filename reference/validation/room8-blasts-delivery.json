@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-26",
+  "status": "verified_scoped_room8_npc_reaction_mask_repair",
+  "source_files": [
+    {
+      "path": "core/combat.c",
+      "sha256": "3d8062517d3e01f8372841ac63a821aa825592e3c3c58c7a4a75e8fd34886a6f"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "b7bec80142c9f4aa252d1d25a1f0b84925bdfc843101be2fbd2b440570fdba02"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "524cc8a99de8fbc8a51cd4ac5fbd844cd52c292d47bfea91327cfcaf31652d5b"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/core/c64_rooms.c",
+      "sha256": "f277b6a18076bb70fbb77222f67e8fb9f47a61784a80f9987ae416890ce8d973"
+    },
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "3a5bb3ba791da020404ee078140089bca326fd23e9c79d1385b320e1bd65af9b"
+    },
+    {
+      "path": "tests/room8_blast_fixture.h",
+      "sha256": "4c5f97f94d56f9abce674ed221e2fd68d84d6cfa02c429e0237dbcc58ba3b78e"
+    },
+    {
+      "path": "tests/room8_blast_bridge.c",
+      "sha256": "7705cb643802638e9b42b64fe31586907811a85d8a5be69cefd272faaa31e2a1"
+    },
+    {
+      "path": "tests/session_fixture.h",
+      "sha256": "a5c2ed481ef7a0af7b3e06e015fe3a227b0de19ff1a4736d699dc6524c47e615"
+    },
+    {
+      "path": "tools/audit_room8_blasts.py",
+      "sha256": "8ab07d4f240ad011ebe5bb3ee41947df7d719380c6d0cc7fb93c9daef1b7f862"
+    },
+    {
+      "path": "tools/verify_room8_blast_delivery.py",
+      "sha256": "06504b4ff2f4780249103016cc899de7653a2d0c3b21a1fd65a909828fe6e9ef"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/tools/verify_c64_candidate.py",
+      "sha256": "a8746227fd8d9797be6216cbb99b554cd10f6bd5c2e4efb2d656f675d8c1a6bc"
+    },
+    {
+      "path": "tools/audit_bombs_entry.py",
+      "sha256": "7d9825e07cb6dd9db1fbacf050088e97fee99ef66eb3ca1ed37ae065d8af18fc"
+    },
+    {
+      "path": "test-room8-blasts.ps1",
+      "sha256": "24dcc5a48afc788efe2251fe822ad9701cdab0ed977050ec92809c3a79982d76"
+    },
+    {
+      "path": "test-core.ps1",
+      "sha256": "fc50eae635f3d4e1e9a59bece29be8515e7d7c790bcdd1d2ccd498f0b6905801"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/test-parity.ps1",
+      "sha256": "985f64f78a29a44017952edd81d2099a740168cca01468b208f0f9b49a18886f"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/test-amiga.ps1",
+      "sha256": "f378a6fbfee617a70cd00237db8ade34ff26f7aec9ae0383d1291597fe975eb8"
+    },
+    {
+      "path": "docs/ROOM8_BLASTS.md",
+      "sha256": "e3cc4c1cf7a56d9a8aca820aed5a408d0ef3541cb69744e63b210b88109fc3d4"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/reference/analysis/room8-blasts-2026-10-26/report.json",
+      "sha256": "d91f15813dfd5e05d8c8f29ea34b3c20ad63d1d0242d83c0f17a68a50da0f90a"
+    },
+    {
+      "path": "reference/validation/a500-c64-combat-diagnostic.json",
+      "sha256": "905a5d1bb22e0d331388abbae01d95bd3adb40159685b544361732e0b2f30825"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/reference/validation/c64-core.json",
+      "sha256": "05cd0efe04f07d14732a46528a09b86719e03dbeca9eedf3ee0d12248bba5102"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/reference/analysis/bombs-entry-2026-10-26/report.json",
+      "sha256": "feeaea1c0eae14f69d6a2b10adf08241f55840b4b8b5e6e811f4235529374deb"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "34c36d5cc6b8ef8895e8c03b82589f4779bc3cbe087677d19e9e4a9a13b3782c"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "e25f91abf26a1bd799f871eaefe2101d20d3af06204519bd171145560ac47729"
+    }
+  ],
+  "native_build": [
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/amiga/out/bruce_test.exe",
+      "sha256": "3d4268904e224c6e27e2b48d95e65453e52bd82ccf6a20fbfe2c345253e49b63"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/amiga/out/bruce_test.adf",
+      "sha256": "e39f1e9efc727082b2585697a8e71f779f970eb9aae8ebb49ca5c6ce0d79fc80"
+    }
+  ],
+  "source_checks": 2160,
+  "resolved_control_differences": 40,
+  "native_added_cases_per_run": 60,
+  "native_validation_complete": true,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "full_actor_parity": false,
+  "full_m4_complete": false,
+  "realtime_gate_passed": false,
+  "limits": [
+    "Injected single actor poses and bomb stages; not natural C64 play",
+    "Complete actor/AI timing not asserted"
+  ],
+  "historical": true,
+  "superseded_by": "reference/validation/room10-electric-delivery.json"
+}

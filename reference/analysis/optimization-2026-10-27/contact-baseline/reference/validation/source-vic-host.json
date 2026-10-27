@@ -1,0 +1,32 @@
+{
+  "status": "passed_field_sampled_pixel_and_latch_controls",
+  "calls": 6485,
+  "natural_playthrough": false,
+  "original_raster_verified": false,
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "b92dd8cf43c1bb7a3030fc35272ae236ee5bf2fe8dadf9cb2cea4f5a964c1053"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "eb49893049026dd759c46b5a3deaa04f3dde1d28f12be3cdb74a0cfccae3e3e2"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "50e80a899e5a819316e45725a581420fcbadb821264737852f67bfcbd717ef29"
+    },
+    {
+      "path": "tests/source_vic_bridge.c",
+      "sha256": "d7b8317338406825e2c0d3b42477be88023552b8d8bc2f39fd7f8ff482b53a00"
+    },
+    {
+      "path": "tools/verify_source_vic.py",
+      "sha256": "f367f0ab768408c40279e4b0035ff685b1a7f05a98f59ae97e46d19078876025"
+    },
+    {
+      "path": "test-source-vic.ps1",
+      "sha256": "afbc7de467a58b27f014b9ac57da0a333e05498e6fe3461b103c930376b87ba0"
+    }
+  ]
+}

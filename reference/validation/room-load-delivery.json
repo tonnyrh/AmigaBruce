@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-26",
+  "status": "verified_scoped_room_load_work_improvement",
+  "native_validation_complete": true,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "full_c64_game_parity": false,
+  "full_m4_complete": false,
+  "realtime_gate_passed": false,
+  "inspection_cadence_passed": false,
+  "comparison": [
+    {
+      "baseline_hsync": 793045,
+      "optimized_hsync": 628025,
+      "reduction_percent": 20.81,
+      "baseline_mean_hsync": 27346.38,
+      "optimized_mean_hsync": 21656.03,
+      "baseline_max_hsync": 67783,
+      "optimized_max_hsync": 45289,
+      "estimated_ms_per_hsync": null
+    },
+    {
+      "baseline_hsync": 793045,
+      "optimized_hsync": 628019,
+      "reduction_percent": 20.81,
+      "baseline_mean_hsync": 27346.38,
+      "optimized_mean_hsync": 21655.83,
+      "baseline_max_hsync": 67783,
+      "optimized_max_hsync": 45294,
+      "estimated_ms_per_hsync": null
+    }
+  ],
+  "source_files": [
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/core/c64_rooms.c",
+      "sha256": "f2919c4263a931f2f4b6f34f132ee8e61436b9f77d65a8dc4fae75cc84296f0e",
+      "original_path": "core/c64_rooms.c"
+    },
+    {
+      "path": "reference/validation/history/before-bombs-entry-2026-10-26/core/c64_rooms.h",
+      "sha256": "dfec7451a4102e7655f605fe04b07798467bf824d9f099154d5cd81afe93695a",
+      "original_path": "core/c64_rooms.h"
+    },
+    {
+      "path": "reference/validation/history/before-bombs-entry-2026-10-26/amiga/main.c",
+      "sha256": "d91b3cf4237c22d5020318549e4b0ae35d097a5ead240b84ee5eee997efa04aa",
+      "original_path": "amiga/main.c"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/amiga-build.ps1",
+      "sha256": "d4c1ca32a7acd46e26578ce28943ce40a3fd3dd7598b47ffd50a9c52e4be7c86",
+      "original_path": "amiga-build.ps1"
+    },
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "9bf13052a3b140541f4f7b2aeee03677eaa9c6e9222691f71b3109645f71cd7b"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/test-amiga.ps1",
+      "sha256": "0cfe62ef1d0d7405785c57187a6b806fa889ed889bf8af28a9abb7e68bf7bac9",
+      "original_path": "test-amiga.ps1"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/test-parity.ps1",
+      "sha256": "0f1c08f893b628be5740b3fbb666954ec2f9e9b1f631d4c1efb5b34e352d9597",
+      "original_path": "test-parity.ps1"
+    },
+    {
+      "path": "test-room-reuse.ps1",
+      "sha256": "d3e9ca90b23fd96e67c08625ef0f8ea0593d33040cda503634d6cd6c6d1ee6b2"
+    },
+    {
+      "path": "tools/verify_room_reuse.py",
+      "sha256": "6b7f85a254deff538b66dd5690d83761922560010864235a68e4c1908846cbd3"
+    },
+    {
+      "path": "tools/verify_room_load_delivery.py",
+      "sha256": "2d34b4de0c45734797feeadf52b056aaf02373458fd6125abdcf9933e4cb9877"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/tools/verify_c64_candidate.py",
+      "sha256": "b2aad1f59609c16ae91f26daa9de06309a64df376e272b583df35728a9ffe55f",
+      "original_path": "tools/verify_c64_candidate.py"
+    },
+    {
+      "path": "docs/ROOM_LOAD_PERFORMANCE.md",
+      "sha256": "59bd0b674f0bf695bb9954bb1716ffa4f497c211937a1e30907ade02261c049e"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/docs/PROJECT_PLAN.md",
+      "sha256": "9f54a0826ecc93d52d1b10bf7513ddbdf4b04de334010690178803255a2229e4",
+      "original_path": "docs/PROJECT_PLAN.md"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/docs/ACTIVE_TESTS.md",
+      "sha256": "dbbcab6bcbf37daeafcec85220b88c957c778e75f0f4b03c26983571de96677a",
+      "original_path": "docs/ACTIVE_TESTS.md"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/analysis/room-load-2026-10-25/host-reuse.json",
+      "sha256": "7257304e06304e1d4ecc8ac50f88b83fdaa2cb063334d825c8cefc75fa35d180",
+      "original_path": "reference/analysis/room-load-2026-10-25/host-reuse.json"
+    },
+    {
+      "path": "docs/images/room-load-baseline.png",
+      "sha256": "148fbf429eeea9e713ad171222fab5e3bda9f14cb6d8446d98aae5bdbf406c5a"
+    },
+    {
+      "path": "docs/images/room-load.png",
+      "sha256": "148fbf429eeea9e713ad171222fab5e3bda9f14cb6d8446d98aae5bdbf406c5a"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/validation/a500-room-load-baseline.json",
+      "sha256": "7affc919286396986ad642e95ef0fb832c39a215103384deb0ec78f52c340a20",
+      "original_path": "reference/validation/a500-room-load-baseline.json"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/validation/a500-room-load.json",
+      "sha256": "b5d059eb6fbec98f07de8fa9ab8da22b0331697d5abb79a94e4890d8cffe96ce",
+      "original_path": "reference/validation/a500-room-load.json"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/validation/c64-room-runtime.json",
+      "sha256": "2acd6fc41bb2dbaa199aa0d05f4fa13c8aac212e8557211a4f985c4292899686",
+      "original_path": "reference/validation/c64-room-runtime.json"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/validation/c64-core.json",
+      "sha256": "582587455dc3c295e8e553664e98b9d3d54dda581e886ddaa0ebb2020fde8787",
+      "original_path": "reference/validation/c64-core.json"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/analysis/moving-net-2026-10-25/report.json",
+      "sha256": "661363d9a2bc51201b83fa99be1c066a2cb377e07a0dc2668bb2a720c6a1386b",
+      "original_path": "reference/analysis/moving-net-2026-10-25/report.json"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/amiga/out/bruce_amiga.exe",
+      "sha256": "9f97db8305c4758e77774efffce5057e09c725040210b1008d93ab5763657768",
+      "original_path": "amiga/out/bruce_amiga.exe"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/amiga/out/bruce_amiga.adf",
+      "sha256": "8be0b760e4249096e3e1fb43306933e7de56ca898ce3a2266e07107dec30622f",
+      "original_path": "amiga/out/bruce_amiga.adf"
+    }
+  ],
+  "native_build": [
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/amiga/out/bruce_test.exe",
+      "sha256": "c139443ff336370a131f6abf73bfb254e412fa5722b05db89c641a008f7a4bd4",
+      "original_path": "amiga/out/bruce_test.exe"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/amiga/out/bruce_test.adf",
+      "sha256": "a8d080ba232e5c876e1e78990b21579b16d38e4c13867823ca559739e7279d42",
+      "original_path": "amiga/out/bruce_test.adf"
+    }
+  ],
+  "baseline_build": [
+    {
+      "path": "reference/analysis/room-load-2026-10-25/baseline/bruce_test.exe",
+      "sha256": "553077dc0f6f9cacacd58bb24ed069f24df2017f9e9760d7c2beeb8e094e5afa"
+    },
+    {
+      "path": "reference/analysis/room-load-2026-10-25/baseline/bruce_test.adf",
+      "sha256": "12b4b7cf618bc5f26b255db8c4209668b84a5c193d44b1e871e8b6d08dbf4b8d"
+    }
+  ],
+  "limits": [
+    "29 controlled room inspections; not natural transitions or a full playthrough",
+    "Work excludes diagnostic pixel checks; presentation copy/blanking and other frame work are additional",
+    "No measured C64 load-duration comparison and no certified original edition",
+    "Full actor/combat/AI, sound approval and strict whole-game cadence remain open"
+  ],
+  "historical": true,
+  "superseded_by": "reference/validation/ninja-wall-delivery.json"
+}

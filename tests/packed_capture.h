@@ -1,6 +1,12 @@
 /* Test-only lossless snapshot. Keep the saved image in CPU RAM and unpack
  * into a detached bitmap after OS restoration; avoid a40KiB Chip spill. */
+#if BL_COMBAT_TEST && !BL_ROOM_TEST && !BL_ROOM_TOUR && !BL_GATE_TEST && !BL_ENEMY_EDGE_TEST && !BL_ROOM_LOAD_TEST && !BL_ELECTRIC_TEST
+/* R01 combat capture is about10KiB. Bound this diagnostic buffer to16KiB;
+ * retain full decoded-image/hash checks and larger room-tour capacity. */
+#define BL_CAPTURE_BYTES 16384
+#else
 #define BL_CAPTURE_BYTES 24576
+#endif
 static ULONG capture_bytes,capture_original_hash,capture_decoded_hash;static UWORD capture_fault;
 static void capture_pack(UBYTE *out,const UBYTE *src){
     ULONG at=0,used=0;

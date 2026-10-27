@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-25",
+  "status": "verified_scoped_session_and_wall_controls_on_A500",
+  "artifact": {
+    "path": "reference/validation/session-walls-delivery.json",
+    "sha256": "e0a8801b6e25efe2d5a66b3f3f6e212cb5ad490885286d93327e65f6a3f2ffd3"
+  },
+  "native_validation_complete": true,
+  "actor_logic_fully_ported": false,
+  "full_m2_parity": false,
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_playthrough_verified": false,
+  "primary_edition_verified": false,
+  "all_room_realtime_gate_passed": false,
+  "enhanced_art_active": false
+}

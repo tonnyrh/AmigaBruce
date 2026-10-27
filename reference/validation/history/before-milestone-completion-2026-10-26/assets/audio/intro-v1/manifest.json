@@ -1,0 +1,21 @@
+{
+  "generator": "local AudioGen medium",
+  "source": "assets/audio/intro-v1/kiai-source_0.wav",
+  "source_sha256": "e8eaa692c067dc62fd1ed4621d776ebf03878d54f36779eceb782aca2ec4c930",
+  "rate": 11025,
+  "paula_period": 322,
+  "actual_pal_rate": 11015.201863354037,
+  "codec": "4-bit IMA ADPCM, zero initial predictor/index, high nibble first",
+  "samples": 26460,
+  "duration_seconds": 2.402134824966626,
+  "packed_bytes": 13230,
+  "decoded_bytes": 26460,
+  "extra_chip_bytes": 0,
+  "runtime_storage": "second 40960-byte game framebuffer, reused before first game frame",
+  "original_audio_used": false,
+  "speech_or_exact_syllables_certified": false,
+  "manual_listening_accepted": false,
+  "packed_sha256": "98f9579627a9b69796b69df9b562f5addf9022d31169343c63f462f0525cdc4e",
+  "decoded_sha256": "478b72955cdbf0c3d40bd745c7f2b46f32e58c9cb113c1c9a9b5c5eda9d270c9",
+  "conversion_snr_db": 17.618523295175216
+}

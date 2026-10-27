@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "status": "passed_native_c_vs_source_cpu_fixtures",
   "rooms": 20,
   "object_pass_checks": 29,
@@ -398,104 +398,116 @@
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "source_files": [
     {
-      "path": "core/source_wall.c",
-      "sha256": "2cbdff257cbfa551bf0d770c0b82fdc37f90670e4dbaf242a774482eefb5b214"
+      "sha256": "00436908bea47f0b2a3cf64a7555c3ba298f6782d4d3d0da3e530adf8cd42770",
+      "path": "core/c64_sprites.c"
     },
     {
-      "path": "core/source_climb.c",
-      "sha256": "3df75184cdce5a5b971a462da96783fc77d848648c94f5c57d5541f83973d259"
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9",
+      "path": "core/c64_sprites.h"
     },
     {
-      "path": "core/source_climb.h",
-      "sha256": "d3c26f2c23eee3ac48f7f82b4bce4e23a07cd3587bd23fb8b8958e11e6ab7b06"
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0",
+      "path": "core/c64_sprite_pose_data.h"
     },
     {
-      "path": "core/source_wall.h",
-      "sha256": "8fcf8898f2c89de98068b315dce430feb7dac032f9aae9b332ca815b9ed78449"
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b",
+      "path": "core/source_wall.c"
     },
     {
-      "path": "core/game.c",
-      "sha256": "5afd9b0c76b6136ebf9bc58e9445b8562d2f03690347b88a51a8c94dfa4b3918"
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b",
+      "path": "core/source_climb.c"
     },
     {
-      "path": "core/game.h",
-      "sha256": "bbcb1164efaf3660729cc0318196c29f19146c106ad5bb5f1675e493cd96cffb"
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433",
+      "path": "core/source_climb.h"
     },
     {
-      "path": "core/combat.c",
-      "sha256": "bdc6419af8595e7349a94856060099a16102ab0d2bfdb31596b59c67e6c0f4a4"
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56",
+      "path": "core/source_wall.h"
     },
     {
-      "path": "core/combat.h",
-      "sha256": "1001f3fcd4b5c4da12cd9cbc3d8be47d12dd823a191ea43a64e68ca5cad532ea"
+      "sha256": "3b3d695a2e93b274ed6f3ea2338ec8bf054f5de32a263bbd4acc3eb15a3a7eb9",
+      "path": "core/game.c"
     },
     {
-      "path": "core/rooms.c",
-      "sha256": "d1fe1721368f1541f48fdc4a056f481a9130a1d4daccc918358a4c66a45042e7"
+      "sha256": "a4faab307fd692995a67deee3900a694c11ef7c8fd13a5e3e1b8b05b37024bb8",
+      "path": "core/game.h"
     },
     {
-      "path": "core/rooms.h",
-      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+      "sha256": "59df52babdba8330b78ffcabcda466af0f37f6200251297716d5b2dba8542bad",
+      "path": "core/combat.c"
     },
     {
-      "path": "core/room_data.h",
-      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd",
+      "path": "core/combat.h"
     },
     {
-      "path": "tests/contact_bridge.c",
-      "sha256": "8d0271902971be7117dac14c181ac618fab8006e69d086a804a8f4ef288f5ba9"
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05",
+      "path": "core/rooms.c"
     },
     {
-      "path": "tests/contact_fixture.h",
-      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28"
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "path": "core/rooms.h"
     },
     {
-      "path": "tools/verify_c64_contacts.py",
-      "sha256": "857282ac044e9f4f4ef83d2e36f50a744250003caae1170f240c8ae37274439e"
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "path": "core/room_data.h"
     },
     {
-      "path": "core/c64_rooms.c",
-      "sha256": "73d55bac838bb93e973afe64305d8375431516b648e53b430b69f44fc507eac0"
+      "sha256": "8d0271902971be7117dac14c181ac618fab8006e69d086a804a8f4ef288f5ba9",
+      "path": "tests/contact_bridge.c"
     },
     {
-      "path": "core/c64_rooms.h",
-      "sha256": "8230b5a3dd98aae1bc16586267485c49bc8936b0f5d30673d3ee2fb25cefd2c2"
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28",
+      "path": "tests/contact_fixture.h"
     },
     {
-      "path": "core/c64_sfx.h",
-      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+      "sha256": "857282ac044e9f4f4ef83d2e36f50a744250003caae1170f240c8ae37274439e",
+      "path": "tools/verify_c64_contacts.py"
     },
     {
-      "path": "core/c64_sound_data.h",
-      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+      "sha256": "8a63248355b77fc9a41ca12315509a7f893522e31bf6eca28d957688047733d5",
+      "path": "core/c64_rooms.c"
     },
     {
-      "path": "core/c64_room_data.h",
-      "sha256": "fbe262f58205c6429c311d67bf7ea4bd1d12fda54c754c223e091eac2d4dbf7f"
+      "sha256": "6fcbf402b25472c7701f71484eeb047cf4dd0e83ad7af5d0c95e42b0ee6383cf",
+      "path": "core/c64_rooms.h"
     },
     {
-      "path": "core/c64_room_programs.h",
-      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616"
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
     },
     {
-      "path": "tools/build_c64_rooms.py",
-      "sha256": "965afd2e045a4bcad8fa426199af1ac992e0ea1b6243112ae4ca2f8d40b4a836"
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
     },
     {
-      "path": "tools/verify_c64_room_runtime.py",
-      "sha256": "3863dda65cfcbdc019b3d2f8f0f6eb7cd85e2f04e690ec31c1672c15bac7fc7c"
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00",
+      "path": "core/c64_room_data.h"
     },
     {
-      "path": "tools/c64_room_model.py",
-      "sha256": "79789dd6fdc3ebf9e0d1725cbdd908d80c9269ddc23ea851fc0db8403e1b0c4b"
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3",
+      "path": "core/c64_room_programs.h"
     },
     {
-      "path": "tools/rip_c64_room_graphics.py",
-      "sha256": "e2d441d8ef20845513c3aaffecf48a51076649dd1f3915711f7ec10d7d617081"
+      "sha256": "305804951f2e718a976d0ce14778a46eccac9f29800353801f97c2bb9c44ccee",
+      "path": "tools/build_c64_rooms.py"
     },
     {
-      "path": "test-c64-rooms.ps1",
-      "sha256": "d7bc53338112a82fcf8548c30a475ed84d3e1ff612fe06ac4ff0109336b0d8bc"
+      "sha256": "0fde7f0ca9a34ed5912ea94ee7279d48f41a4527622616d237a1e594352df057",
+      "path": "tools/verify_c64_room_runtime.py"
+    },
+    {
+      "sha256": "79789dd6fdc3ebf9e0d1725cbdd908d80c9269ddc23ea851fc0db8403e1b0c4b",
+      "path": "tools/c64_room_model.py"
+    },
+    {
+      "sha256": "e2d441d8ef20845513c3aaffecf48a51076649dd1f3915711f7ec10d7d617081",
+      "path": "tools/rip_c64_room_graphics.py"
+    },
+    {
+      "sha256": "92fee59c7e647f014d0a914eb8d2a4898e9d93c6f6f1f64e20a186af7bf1c2d0",
+      "path": "test-c64-rooms.ps1"
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "label": "optimized-running",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "75ea05396e06123a8d8dc19b0e608aaba15b1d1013555bcb3cfde0e9730fd34a"
+  },
+  "source_room": 1,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    396864,
+    396904,
+    396944,
+    396984
+  ],
+  "source_music_fields": 635,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/optimized-running.bpl",
+      "sha256": "9e74821a79f17f7da905f9892faaf8358a2c632d712189cac9e4e3bf91c91050"
+    },
+    {
+      "path": "docs/images/session-optimized-running.png",
+      "sha256": "e938faeaed9cf34ec89e7da8a7ea7f864c3c63d45f9bf03e8cd50ea521b3000d"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "status": "passed_owned_native_visibility_lifecycle",
+  "binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "03a17d43c8d6e5f7ced1537f49cb11650689852595fd8f5c4c099d03733075e1"
+  },
+  "controlled_injection": true,
+  "natural_playthrough": false,
+  "room": 2,
+  "source_actor": 1,
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/yamo-visible.bpl",
+      "sha256": "496ec11186a15695ed22125a431b1cc685fa712ffe1d22be9283e89f04da7111"
+    },
+    {
+      "path": "docs/images/session-yamo-visible.png",
+      "sha256": "7c896f0e64023bc6db032478c64f86847ad109d35ca2847619b29e89a5d0c05c"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/yamo-hidden.bpl",
+      "sha256": "e29cbbd5e8a073cc18d50f689f487b69e4e813f962c06d6603d26a24162ad245"
+    },
+    {
+      "path": "docs/images/session-yamo-hidden.png",
+      "sha256": "e6a6c0599665f045d108fb9d4762f71eb1bb4c8e9090ebc9d3cdd3ce05485674"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/yamo-returned.bpl",
+      "sha256": "bfbeb7000c5333aba62e6f0ee8d40c9e624d08f79918e2e9d07e7c441642a099"
+    },
+    {
+      "path": "docs/images/session-yamo-returned.png",
+      "sha256": "4a84622c837a6d8efa780ddb33451fbced18cd69f8d6493fbf1eb37d599f236f"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "tools/audit_native_visibility.py",
+      "sha256": "41ced0cc2f0a1cef2fbd955ab96dc955849f938586e7e0c506e15f2f8552ab6d"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "c9a09029ce46c43b7c3c15ed05bdee43255565e385684524ca3a34b02d0f162e"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "a5e7f17802665dd0e744d484a917d83450960bd8cd7e1a6e2d8508417ee1e0f9"
+    }
+  ],
+  "method": "Injected active bit, source wait and original component enable masks; actual normal draw loop and both buffer dirty rectangles",
+  "states": [
+    {
+      "label": "yamo-visible",
+      "flags": 129,
+      "buffer_dirty": [
+        [
+          232,
+          155,
+          248,
+          176
+        ],
+        [
+          232,
+          155,
+          248,
+          176
+        ]
+      ],
+      "fault": 0
+    },
+    {
+      "label": "yamo-hidden",
+      "flags": 128,
+      "buffer_dirty": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "fault": 0
+    },
+    {
+      "label": "yamo-returned",
+      "flags": 129,
+      "buffer_dirty": [
+        [
+          232,
+          155,
+          248,
+          176
+        ],
+        [
+          232,
+          155,
+          248,
+          176
+        ]
+      ],
+      "fault": 0
+    }
+  ]
+}

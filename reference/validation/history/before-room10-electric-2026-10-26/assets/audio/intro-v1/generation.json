@@ -1,0 +1,22 @@
+{
+  "generator": "local AudioGen medium",
+  "duration_seconds": 2.4,
+  "variants": 2,
+  "seed": null,
+  "model_path": "D:/Audiogen/audiogen-medium",
+  "python": "D:/Audiogen/venv310/Scripts/python.exe",
+  "prompt": "A single real male martial artist performing one powerful sustained karate kiai scream, Haaaaaiiiii-yahhhhh! A forceful human voice with a long rising vowel and explosive final yah, close dry studio recording, solo voice only, no music, no impacts, no crowd, no echo.",
+  "selected": "kiai-source_0.wav",
+  "selection": "First generated candidate; waveform and conversion checked; manual listening still pending",
+  "recording_of_real_performer": false,
+  "sources": [
+    {
+      "path": "assets/audio/intro-v1/kiai-source_0.wav",
+      "sha256": "e8eaa692c067dc62fd1ed4621d776ebf03878d54f36779eceb782aca2ec4c930"
+    },
+    {
+      "path": "assets/audio/intro-v1/kiai-source_1.wav",
+      "sha256": "8b2b867a16799731bfb286cedb9c225419da2aa56ee7a9cf6967c69d8d24300d"
+    }
+  ]
+}

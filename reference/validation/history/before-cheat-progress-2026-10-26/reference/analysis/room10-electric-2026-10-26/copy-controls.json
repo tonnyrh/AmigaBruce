@@ -1,0 +1,52 @@
+{
+  "status": "passed_budget_and_fairness_stress",
+  "natural_playthrough": false,
+  "controls": [
+    {
+      "legacy": true,
+      "urgent": false,
+      "max_pending_calls": 90,
+      "max_bytes": 3840,
+      "row23_last_copy": 0,
+      "row24_last_copy": 0
+    },
+    {
+      "legacy": false,
+      "urgent": false,
+      "max_pending_calls": 7,
+      "max_bytes": 3840,
+      "row23_last_copy": 88,
+      "row24_last_copy": 88
+    },
+    {
+      "legacy": false,
+      "urgent": true,
+      "max_pending_calls": 7,
+      "max_bytes": 3904,
+      "row23_last_copy": 90,
+      "row24_last_copy": 88
+    }
+  ],
+  "source_files": [
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "ec51965d06c9c133257616f4b9c1c51a9c9a14ed0fba0d903113f732c95c68a1"
+    },
+    {
+      "path": "tests/scene_copy_bridge.c",
+      "sha256": "c6728b633548a0c96a204d9ae93226f15c1f5d36ea7acc1c590357430dca8b94"
+    },
+    {
+      "path": "test-scene-copy.ps1",
+      "sha256": "afa21ae115873f6a4fa83de9fe295f9887b0addead3856073d5bcc2312d8d7b7"
+    },
+    {
+      "path": "tools/verify_scene_copy.py",
+      "sha256": "3bf9853422e5998a1e2a2bb952aa87470de549cb520302c5b48dfb36d43113b4"
+    },
+    {
+      "path": "reference/validation/history/before-room10-electric-2026-10-26/amiga/main.c",
+      "sha256": "fe0f5478819e955164fc457a6f6cc9e6a0ad3b7c5da6170b5447c491cba9baa9"
+    }
+  ]
+}

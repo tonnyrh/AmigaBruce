@@ -1,0 +1,501 @@
+{
+  "date": "2026-10-25",
+  "status": "passed_native_c_vs_source_cpu_fixtures",
+  "rooms": 20,
+  "object_pass_checks": 29,
+  "source_loop_calls": 2560,
+  "source_animation_calls": 160,
+  "animation_cache_checks": [
+    {
+      "room": 1,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 2,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 3,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 4,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 5,
+      "cache_bytes": 20480,
+      "source_phases": 8,
+      "block_draws": 16,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 6,
+      "cache_bytes": 20480,
+      "source_phases": 8,
+      "block_draws": 16,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 7,
+      "cache_bytes": 34816,
+      "source_phases": 8,
+      "block_draws": 24,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 8,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 9,
+      "cache_bytes": 104448,
+      "source_phases": 8,
+      "block_draws": 120,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 10,
+      "cache_bytes": 87040,
+      "source_phases": 8,
+      "block_draws": 184,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 11,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 12,
+      "cache_bytes": 52224,
+      "source_phases": 8,
+      "block_draws": 64,
+      "max_presentation_parts": 2
+    },
+    {
+      "room": 13,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 14,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 15,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 16,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 17,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 18,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 19,
+      "cache_bytes": 0,
+      "source_phases": 8,
+      "block_draws": 0,
+      "max_presentation_parts": 1
+    },
+    {
+      "room": 20,
+      "cache_bytes": 18432,
+      "source_phases": 8,
+      "block_draws": 35,
+      "max_presentation_parts": 2
+    }
+  ],
+  "contact_checks": 24860,
+  "door_gate_checks": 640,
+  "indexed_room_images_compared": 20,
+  "dynamic_room_images_compared": 40,
+  "checks": [
+    {
+      "room": 1,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 1,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 2,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 2,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 3,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 3,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 4,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 4,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 5,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 5,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 6,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 6,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 7,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 7,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 8,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 8,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 9,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 9,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 10,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 10,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 11,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 11,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 12,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 12,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 13,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 13,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 14,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 14,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 15,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 15,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 16,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 16,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 17,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 17,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 18,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 18,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 19,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 19,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 20,
+      "all_lamps_cleared": false,
+      "source_loop_calls": 64,
+      "matched": true
+    },
+    {
+      "room": 20,
+      "all_lamps_cleared": true,
+      "source_loop_calls": 64,
+      "matched": true
+    }
+  ],
+  "natural_playthrough": false,
+  "hardware_parity": false,
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_files": [
+    {
+      "sha256": "2cbdff257cbfa551bf0d770c0b82fdc37f90670e4dbaf242a774482eefb5b214",
+      "path": "core/source_wall.c"
+    },
+    {
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b",
+      "path": "core/source_climb.c"
+    },
+    {
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433",
+      "path": "core/source_climb.h"
+    },
+    {
+      "sha256": "8fcf8898f2c89de98068b315dce430feb7dac032f9aae9b332ca815b9ed78449",
+      "path": "core/source_wall.h"
+    },
+    {
+      "sha256": "e7427c98ba043dc2c0e8593b91de421c84aab6ba1757a076cd36c5d550b933be",
+      "path": "core/game.c"
+    },
+    {
+      "sha256": "dfebe3fda66cccc863e58bdd97c0d77260361a9a71660dde0d5bb7e6e6c8ba37",
+      "path": "core/game.h"
+    },
+    {
+      "sha256": "ee03d6b124172f084083214c0c9751414b71ce77aebab65dd5978828ee1aee62",
+      "path": "core/combat.c"
+    },
+    {
+      "sha256": "9a2c0414626805f17bc801425ee76a96ab9ffafa91d8daebd28422833e396ccb",
+      "path": "core/combat.h"
+    },
+    {
+      "sha256": "050add7110f90739128c1ef3061291caef4fd728c85817f08b38f27b43bf1586",
+      "path": "core/rooms.c"
+    },
+    {
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "path": "core/rooms.h"
+    },
+    {
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "path": "core/room_data.h"
+    },
+    {
+      "sha256": "8d0271902971be7117dac14c181ac618fab8006e69d086a804a8f4ef288f5ba9",
+      "path": "tests/contact_bridge.c"
+    },
+    {
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28",
+      "path": "tests/contact_fixture.h"
+    },
+    {
+      "sha256": "857282ac044e9f4f4ef83d2e36f50a744250003caae1170f240c8ae37274439e",
+      "path": "tools/verify_c64_contacts.py"
+    },
+    {
+      "sha256": "8c0288d88bd34e9ff93f8148b798360fd78c356ca59beddc43fc4d9adcd6fc61",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "1ebbb3e2f81c702a01aef36afa84b6e16a3a4b368615c1cc50323a963197bb4c",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
+    },
+    {
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
+    },
+    {
+      "sha256": "a121feee17281a2f78bf5ba2b0c5a5e0b946383f5e732739dd3de38b7f2aa4f4",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "34fa3aedd0e66ad24b3c58d53ee6d01243d1fe6f74d7af4cabfc322940e21ba0",
+      "path": "tools/build_c64_rooms.py"
+    },
+    {
+      "sha256": "3863dda65cfcbdc019b3d2f8f0f6eb7cd85e2f04e690ec31c1672c15bac7fc7c",
+      "path": "tools/verify_c64_room_runtime.py"
+    },
+    {
+      "sha256": "79789dd6fdc3ebf9e0d1725cbdd908d80c9269ddc23ea851fc0db8403e1b0c4b",
+      "path": "tools/c64_room_model.py"
+    },
+    {
+      "sha256": "e2d441d8ef20845513c3aaffecf48a51076649dd1f3915711f7ec10d7d617081",
+      "path": "tools/rip_c64_room_graphics.py"
+    },
+    {
+      "sha256": "d7bc53338112a82fcf8548c30a475ed84d3e1ff612fe06ac4ff0109336b0d8bc",
+      "path": "test-c64-rooms.ps1"
+    }
+  ]
+}

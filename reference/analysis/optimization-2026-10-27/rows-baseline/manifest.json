@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "b89a7848d5a389f8e0cca6d90d9253fd3486ce6ef5d02c6ff9e974bd2223d2db"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "d8fc66eabdf769c5c9038a0be7d74c98ede91a93390042ae3f658ca1ede735c2"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "18483251ba1f8fdb4d8340738ec9819cfc890052b0830d8853c0ecf7e2b4bc60"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "9feef76b04bee26cd5224720da4048b4bfa773ce8f63d002dcea62dd99a99cf0"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "914c8169ecc11aca570b3381bde5213f48df46960069940bbb4162b91d7ee05e"
+    },
+    {
+      "path": "docs/MILESTONE_COMPLETION.md",
+      "sha256": "8d0c83ee317201220a3349772634d27e28cf64caaf8eab1a63068859b656b0b8"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "f90cf1bc94f77fb9301b4a7b468ebe6f29958ef29f65f940d3a3f6be8d1b6a58"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "f497782ae2f29be8f24e6f47e9cdf0048d17c530e1adfe3b1252ab20291262f6"
+    },
+    {
+      "path": "reference/validation/source-optimization.json",
+      "sha256": "ed5e81b2a172b13feb0ea1b333d5d32f0e0a61994f870d80a62c5d21d9f9d81d"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
+      "sha256": "104fa8d16f87c2489c1604c1cd924d270ffc52da3d0b4f656f0200fa496b9470"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "364a711483fca983ce559ee9a327ae647d1f83ed0f86ed3189c7fdf42f50c7cc"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "50f194b33c003688521f3cd023d91fb197a57431322cb774d421f6f086f47fec"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "95c431f11f6c5d355c11d0f105a88b7e3cbc1830644973f3a64f815b8921b03e"
+    }
+  ]
+}

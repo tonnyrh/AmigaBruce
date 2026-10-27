@@ -1,0 +1,26 @@
+[
+  {
+    "path": "bruce_amiga.adf",
+    "sha256": "70331dc93a9dfbd2d45ff1a444d776634a9966fb05e2dd59cc9ef25a574cf6f5"
+  },
+  {
+    "path": "bruce_amiga.elf",
+    "sha256": "80140313db2f9e85b93c3352d99d7ff27e543f8defa5d9f721b2196193356e01"
+  },
+  {
+    "path": "bruce_amiga.exe",
+    "sha256": "30e1736b287c20859c028a64e1b5b591b6a2ded0b58ce2c075fb28b103fcdf0f"
+  },
+  {
+    "path": "source-optimization.json",
+    "sha256": "3db9d280dfc2d0fc77f4d2915e3a827ea00f01adbada64c8788f66f74f889456"
+  },
+  {
+    "path": "source-world-delivery.json",
+    "sha256": "afe2196e29378e0238119defecb4b7380b04990d1154e223d7ac334ebfa7fc98"
+  },
+  {
+    "path": "source-world-native.json",
+    "sha256": "e530adc676b73eb278b911e5cdf0a0976ad7d8cefaac9b7414c2ece5039ca665"
+  }
+]

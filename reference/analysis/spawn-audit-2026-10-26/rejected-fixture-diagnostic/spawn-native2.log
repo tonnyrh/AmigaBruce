@@ -1,0 +1,20 @@
+Extracted15 source SFX; title1154fields/loop; 2260Chip waveform bytes; 355music packets
+Ripped210 components,210 source pose/facing composites, 80 unique DMA frames; 73680 Chip bytes, 12852 packed
+VIC hit masks:210 frames,86 unique,7644 CPU bytes;0 Chip bytes
+Extracted20 rooms,4 charset banks; translated2839 source instructions to native C
+  Write S/startup-sequence.
+  Copy file: bruce_test.exe (size: 295324)
+Device : Floppy DD. Cylinders = 80, Heads = 2, Sectors = 11. Volumes = 1
+Volume : Floppy 880 KBytes, "Bruce" between sectors [0-1759]. OFS . Filled at 35.3%.
+ 295324  2026/10/25  22:24:10  000885  bruce_test.exe
+         2026/10/25  22:24:10  000882  S/
+     15  2026/10/25  22:24:10  000883  S/startup-sequence
+>>> Created "C:\vscode\_EXT\AmigaBruceLee\amiga\out\bruce_test.adf" <<<
+exe2adf v0.3e - coded by Bonefish/Reality 2015-2017.
+----------------------------------------------------
+
+Name           Length
+----           ------
+bruce_test.exe 295324
+bruce_test.adf 901120
+WinUAE PID 4256; PAL OCS 68000, 512 KiB Chip + 512 KiB slow

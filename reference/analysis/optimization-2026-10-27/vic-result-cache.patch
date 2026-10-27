@@ -1,0 +1,86 @@
+--- before/core/c64_rooms.c
++++ after/core/c64_rooms.c
+@@ -454,6 +454,8 @@
+ static unsigned char actor_delay_pending;
+ static unsigned long vic_high[8][21],vic_low[8][21];
+ static unsigned char vic_bytes[8][63],vic_layout[8],vic_valid;
++static unsigned short vic_last_x[8],vic_last_y[8];
++static unsigned char vic_collision_valid,vic_last_active,vic_last_tall,vic_last_bits;
+ static void source_actor_loading_begin(void);
+ static void source_actor_loading_end(void);
+ static void source_actor_field(void);
+@@ -577,12 +579,16 @@
+     }
+     *hi=high;*lo=low;
+ }
++static unsigned char source_vic_same(unsigned char sprite,unsigned short pointer,unsigned char multi,unsigned char wide){
++    unsigned char i,layout=(unsigned char)((multi?1:0)|(wide?2:0));
++    if((vic_valid&(1<<sprite)) && vic_layout[sprite]==layout){
++        for(i=0;i<63;i++)if(vic_bytes[sprite][i]!=m[(unsigned short)(pointer+i)])break;
++        if(i==63)return 1;
++    }
++    return 0;
++}
+ static void source_vic_cache(unsigned char sprite,unsigned short pointer,unsigned char multi,unsigned char wide){
+     unsigned char row,i,layout=(unsigned char)((multi?1:0)|(wide?2:0));
+-    if((vic_valid&(1<<sprite)) && vic_layout[sprite]==layout){
+-        for(i=0;i<63;i++)if(vic_bytes[sprite][i]!=m[(unsigned short)(pointer+i)])break;
+-        if(i==63)return;
+-    }
+     for(i=0;i<63;i++)vic_bytes[sprite][i]=m[(unsigned short)(pointer+i)];
+     for(row=0;row<21;row++)source_vic_row(pointer,row,multi,wide,&vic_high[sprite][row],&vic_low[sprite][row]);
+     vic_layout[sprite]=layout;vic_valid|=(unsigned char)(1<<sprite);
+@@ -592,7 +598,8 @@
+  * is still a separate hardware acceptance item; no attack boxes or wall ray
+  * is introduced at this seam. */
+ static void source_vic_latch(void){
+-    unsigned char i,j,row,prepared=0,active=m[0xd015],multi=m[0xd01c],wide=m[0xd01d],tall=m[0xd017];
++    unsigned char i,j,row,prepared=0,active=m[0xd015],multi=m[0xd01c],wide=m[0xd01d],tall=m[0xd017],bits=0;
++    unsigned char same=(unsigned char)(vic_collision_valid && vic_last_active==active && vic_last_tall==tall);
+     unsigned short bank=(unsigned short)(((~m[0xdd00])&3)<<14),matrix,pointer[8],sx[8],sy[8],height[8],width[8],top,bottom,dy;
+     unsigned long ah,al,bh,bl;short dx;
+     matrix=(unsigned short)(bank+((unsigned short)(m[0xd018]>>4)<<10));
+@@ -600,7 +607,19 @@
+         sx[i]=(unsigned short)(m[0xd000 + i*2]+((m[0xd010]&(1<<i))?256:0));sy[i]=m[0xd001 + i*2];
+         width[i]=(unsigned short)((wide&(1<<i))?48:24);height[i]=(unsigned short)((tall&(1<<i))?42:21);
+         pointer[i]=(unsigned short)(bank+((unsigned short)m[(unsigned short)(matrix+0x3f8 + i)]<<6));
+-    }
++        if(active&(1<<i)){
++            if(sx[i]!=vic_last_x[i] || sy[i]!=vic_last_y[i])same=0;
++            /* Full effective63 bytes and layout, including bank/pointer
++             * aliases. Checking all writes/version counters is unnecessary.
++             * Valid rows are prepared once even on a result-cache miss. */
++            if(source_vic_same(i,pointer[i],(unsigned char)(multi&(1<<i)),(unsigned char)(wide&(1<<i))))prepared|=(unsigned char)(1<<i);
++            else same=0;
++        }
++        vic_last_x[i]=sx[i];vic_last_y[i]=sy[i];
++    }
++    /* $D01E is an accumulating latch. A cached overlap must be ORed back
++     * after every field, even if source code read/cleared it in between. */
++    if(same){m[0xd01e]|=vic_last_bits;return;}
+     for(i=0;i<7;i++)if(active&(1<<i))for(j=(unsigned char)(i+1);j<8;j++)if(active&(1<<j)){
+         if(sx[i]+width[i]<=sx[j] || sx[j]+width[j]<=sx[i])continue;
+         top=sy[i]>sy[j]?sy[i]:sy[j];bottom=sy[i]+height[i]<sy[j]+height[j]?sy[i]+height[i]:sy[j]+height[j];
+@@ -613,9 +632,10 @@
+             row=(unsigned char)((dy-sy[j])>>((tall&(1<<j))?1:0));bh=vic_high[j][row];bl=vic_low[j][row];
+             if(dx>=32){bl=bh>>(dx-32);bh=0;}else if(dx>0){bl=(bl>>dx)|(bh<<(32-dx));bh>>=dx;}
+             else if(dx<=-32){bh=bl<<(-dx-32);bl=0;}else if(dx<0){bh=(bh<<-dx)|(bl>>(32+dx));bl<<=-dx;}
+-            if((ah&bh)||(al&bl)){m[0xd01e]|=(unsigned char)((1<<i)|(1<<j));break;}
+-        }
+-    }
++            if((ah&bh)||(al&bl)){bits|=(unsigned char)((1<<i)|(1<<j));break;}
++        }
++    }
++    vic_last_bits=bits;vic_last_active=active;vic_last_tall=tall;vic_collision_valid=1;m[0xd01e]|=bits;
+ }
+ static void source_actor_field(void){
+     unsigned char saved[10]={a,x,y,c,z,n,v,d,sp,actor_i};
+@@ -667,7 +687,7 @@
+     seed_actor_memory();a=x=y=c=z=n=v=d=sp=0;loaded=255;++revision;source_fault=0;
+     actor_loading_pending=actor_life_pending=actor_reset_pending=actor_gameover_pending=actor_legacy_load=actor_delay_pending=0;actor_stop_pc=0;
+     actor_preparing=actor_i=actor_infinite=actor_invincible=0;actor_life_events=actor_spawn_events=0;
+-    actor_world_enabled=actor_irq_stop=0;actor_logic_steps=actor_loading_epoch=0;actor_debug_target=255;vic_valid=0;
++    actor_world_enabled=actor_irq_stop=0;actor_logic_steps=actor_loading_epoch=0;actor_debug_target=255;vic_valid=vic_collision_valid=0;
+     for(i=0;i<256;i++)glyph_tracking[i]=0;
+     glyph_tracking[0x93]=glyph_tracking[0x94]=glyph_tracking[0xb1]=3;
+     glyph_tracking[0x86]=glyph_tracking[0xe7]=1;

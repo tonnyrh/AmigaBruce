@@ -229,12 +229,6 @@
       "source": 5
     },
     {
-      "adapter": "sai still active/counter0",
-      "fixture": 2467,
-      "rule": "AI-SAI-END",
-      "source": "state0/counter6"
-    },
-    {
       "adapter": 24,
       "fixture": 2554,
       "rule": "AI-POST-KICK-WAIT",
@@ -365,7 +359,7 @@
     },
     {
       "path": ".tmp/c64-ai-test/ai.dll",
-      "sha256": "ce2ad3afc2032383b6c1a23615392d427892d4df1a7314ceca5c1c5daed0daea"
+      "sha256": "2ea26e0844461db79ab4e7a20253f82c39f12c31c4ce44cb6c49d421c7c79221"
     }
   ],
   "date": "2026-10-25",
@@ -120848,9 +120842,9 @@
       "adapter_decision": {
         "facing": 0,
         "input_request": 0,
-        "intent": "sai",
-        "movement_calls": 0,
-        "timer": 0
+        "intent": "face_wait",
+        "movement_calls": 1,
+        "timer": 6
       },
       "after": {
         "active": 65,
@@ -120903,7 +120897,7 @@
         "facing": 0,
         "input_request": 0,
         "intent": "sai",
-        "movement_calls": 0,
+        "movement_calls": 1,
         "timer": 6
       },
       "after": {
@@ -120957,7 +120951,7 @@
         "facing": 0,
         "input_request": 0,
         "intent": "sai",
-        "movement_calls": 0,
+        "movement_calls": 1,
         "timer": 7
       },
       "after": {
@@ -121011,7 +121005,7 @@
         "facing": 0,
         "input_request": 0,
         "intent": "sai",
-        "movement_calls": 0,
+        "movement_calls": 1,
         "timer": 11
       },
       "after": {
@@ -121065,7 +121059,7 @@
         "facing": 0,
         "input_request": 0,
         "intent": "sai",
-        "movement_calls": 0,
+        "movement_calls": 1,
         "timer": 18
       },
       "after": {
@@ -163185,39 +163179,60 @@
     "Contacts, modes, timers and actor states are injected; no VIC/IRQ or natural-play replay",
     "Existing adapter decisions use recorded movement/door stubs; full physics is not compared",
     "Memory-reader data is injected at $1163; no random distribution is assumed",
-    "Full combat, source pose/wall/reaction and NPC entry integration remain unported"
+    "This isolated adapter audit stubs motion/doors and excludes integrated entry phases; see SPAWN-AUDIT-0001",
+    "Full collect/apply combat, ordinary waits/retreat and natural physical navigation remain open"
   ],
   "natural_playthrough": false,
   "reviewed_sources": [
     {
       "path": "core/game.c",
-      "sha256": "5afd9b0c76b6136ebf9bc58e9445b8562d2f03690347b88a51a8c94dfa4b3918"
+      "sha256": "3b3d695a2e93b274ed6f3ea2338ec8bf054f5de32a263bbd4acc3eb15a3a7eb9"
     },
     {
       "path": "core/rooms.c",
-      "sha256": "d1fe1721368f1541f48fdc4a056f481a9130a1d4daccc918358a4c66a45042e7"
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05"
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "73d55bac838bb93e973afe64305d8375431516b648e53b430b69f44fc507eac0"
+      "sha256": "8a63248355b77fc9a41ca12315509a7f893522e31bf6eca28d957688047733d5"
     }
   ],
   "source_files": [
     {
+      "path": "core/c64_sprites.c",
+      "sha256": "00436908bea47f0b2a3cf64a7555c3ba298f6782d4d3d0da3e530adf8cd42770"
+    },
+    {
+      "path": "core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
       "path": "core/combat.c",
-      "sha256": "bdc6419af8595e7349a94856060099a16102ab0d2bfdb31596b59c67e6c0f4a4"
+      "sha256": "59df52babdba8330b78ffcabcda466af0f37f6200251297716d5b2dba8542bad"
     },
     {
       "path": "core/combat.h",
-      "sha256": "1001f3fcd4b5c4da12cd9cbc3d8be47d12dd823a191ea43a64e68ca5cad532ea"
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
     },
     {
       "path": "core/game.h",
-      "sha256": "bbcb1164efaf3660729cc0318196c29f19146c106ad5bb5f1675e493cd96cffb"
+      "sha256": "a4faab307fd692995a67deee3900a694c11ef7c8fd13a5e3e1b8b05b37024bb8"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
     },
     {
       "path": "core/source_wall.h",
-      "sha256": "8fcf8898f2c89de98068b315dce430feb7dac032f9aae9b332ca815b9ed78449"
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
     },
     {
       "path": "core/rooms.h",
@@ -163225,7 +163240,7 @@
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "8230b5a3dd98aae1bc16586267485c49bc8936b0f5d30673d3ee2fb25cefd2c2"
+      "sha256": "6fcbf402b25472c7701f71484eeb047cf4dd0e83ad7af5d0c95e42b0ee6383cf"
     },
     {
       "path": "core/c64_sfx.h",
@@ -163233,15 +163248,15 @@
     },
     {
       "path": "tests/ai_adapter_bridge.c",
-      "sha256": "d72ea0a47ab050379e3ba1d124a481a96794b73995844ee69051fc42bd28e6f9"
+      "sha256": "6bd4a3bb2928ac6b037e2d125d7cc82a7a6c2297a916f877a4935e0bdbefc8d5"
     },
     {
       "path": "tools/audit_c64_ai.py",
-      "sha256": "85fedea43f3565e3bb3b4d72afc20ea133f674e821db54e55cf0a8fcb99e09ca"
+      "sha256": "ed46e5a687124d6322b1be8f4a05bbe9aa34e02c339fcab8fbe73e747173a243"
     },
     {
       "path": "test-c64-ai.ps1",
-      "sha256": "e7d00c34980e3275c07cd7550d3292cf80ddf6a34f14a199a3c9002fc68912c0"
+      "sha256": "34b3fbef5ac54e9373a9d19aa3110c4bef882acf7f665ee16327a0ab03a7407d"
     }
   ],
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",

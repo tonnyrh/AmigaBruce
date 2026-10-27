@@ -1,0 +1,148 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "cheat_is_amiga_extension": true,
+  "menu_start_cases": 20,
+  "executed_source_pickups": 1075,
+  "rows": [
+    {
+      "start_room": 1,
+      "executed_source_pickups": 0,
+      "matched": true
+    },
+    {
+      "start_room": 2,
+      "executed_source_pickups": 6,
+      "matched": true
+    },
+    {
+      "start_room": 3,
+      "executed_source_pickups": 12,
+      "matched": true
+    },
+    {
+      "start_room": 4,
+      "executed_source_pickups": 22,
+      "matched": true
+    },
+    {
+      "start_room": 5,
+      "executed_source_pickups": 24,
+      "matched": true
+    },
+    {
+      "start_room": 6,
+      "executed_source_pickups": 26,
+      "matched": true
+    },
+    {
+      "start_room": 7,
+      "executed_source_pickups": 36,
+      "matched": true
+    },
+    {
+      "start_room": 8,
+      "executed_source_pickups": 44,
+      "matched": true
+    },
+    {
+      "start_room": 9,
+      "executed_source_pickups": 57,
+      "matched": true
+    },
+    {
+      "start_room": 10,
+      "executed_source_pickups": 61,
+      "matched": true
+    },
+    {
+      "start_room": 11,
+      "executed_source_pickups": 66,
+      "matched": true
+    },
+    {
+      "start_room": 12,
+      "executed_source_pickups": 69,
+      "matched": true
+    },
+    {
+      "start_room": 13,
+      "executed_source_pickups": 72,
+      "matched": true
+    },
+    {
+      "start_room": 14,
+      "executed_source_pickups": 75,
+      "matched": true
+    },
+    {
+      "start_room": 15,
+      "executed_source_pickups": 75,
+      "matched": true
+    },
+    {
+      "start_room": 16,
+      "executed_source_pickups": 79,
+      "matched": true
+    },
+    {
+      "start_room": 17,
+      "executed_source_pickups": 85,
+      "matched": true
+    },
+    {
+      "start_room": 18,
+      "executed_source_pickups": 87,
+      "matched": true
+    },
+    {
+      "start_room": 19,
+      "executed_source_pickups": 89,
+      "matched": true
+    },
+    {
+      "start_room": 20,
+      "executed_source_pickups": 90,
+      "matched": true
+    }
+  ],
+  "source_files": [
+    {
+      "path": "core/session.c",
+      "sha256": "d51ee2ee59787459bd955f7071c4e063ade1d79ba6cefd14cc14f96aa41eaec7"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "8a63248355b77fc9a41ca12315509a7f893522e31bf6eca28d957688047733d5"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "6fcbf402b25472c7701f71484eeb047cf4dd0e83ad7af5d0c95e42b0ee6383cf"
+    },
+    {
+      "path": "tests/cheat_progress_fixture.h",
+      "sha256": "ed3cac5b18f84474177afa5fd6b76b84b94a546c78bd44eb82621578d55f0e26"
+    },
+    {
+      "path": "tests/session_fixture.h",
+      "sha256": "5b3fc2a2353f3553b233c92f2c8fba06cd41ad45e95ce0aa6a5c0d377120803c"
+    },
+    {
+      "path": "tests/session_bridge.c",
+      "sha256": "fbaebb3d0d5a14b5090bbd62bce6cf55daeda99cd69a2f1fd17f421bfe1815d9"
+    },
+    {
+      "path": "test-session.ps1",
+      "sha256": "1ab13d4e0c62d03f88759074638a91ffa66c171257b7bec5af5dd11ed1a97aee"
+    },
+    {
+      "path": "tools/audit_cheat_progress.py",
+      "sha256": "e4a8d165f3320455bc87efa125b85fe0ae0ad51c242c4f5fe92ce404db3923c8"
+    },
+    {
+      "path": ".tmp/session-test/session.dll",
+      "sha256": "60456c8da8a0ef2babe7b9b7667891541a6ec2c8b245521f2bbf9bd3fd907fae"
+    }
+  ]
+}

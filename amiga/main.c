@@ -1,3 +1,12 @@
+#ifndef BL_SOURCE_WORLD_TEST
+#define BL_SOURCE_WORLD_TEST 0
+#endif
+#ifndef BL_SOURCE_PERF_TEST
+#define BL_SOURCE_PERF_TEST 0
+#endif
+#ifndef BL_SOURCE_PERF_ENEMIES
+#define BL_SOURCE_PERF_ENEMIES 3
+#endif
 #include <exec/execbase.h>
 #include <exec/memory.h>
 #include <graphics/gfxbase.h>
@@ -9,17 +18,32 @@
 #include <hardware/dmabits.h>
 #include "../core/game.h"
 #include "../core/presentation.h"
+#include "../core/scene_copy.h"
 #include "../core/combat.h"
 #include "../core/rooms.h"
+#include "../core/session.h"
 #include "../core/c64_rooms.h"
 #include "c64_sprite_data.h"
 #include "../core/c64_sprites.h"
+#if BL_SOURCE_WORLD_TEST && !BL_SOURCE_PERF_TEST
+#include "../tests/source_actor_fixture.h"
+static unsigned short source_actor_fixture_failure;
+#endif
 #if BL_AUTOTEST
+/* Source fixtures execute before hardware takeover. Keep their diagnostic
+ * code small without changing the optimization of measured game code. */
+#pragma GCC push_options
+#pragma GCC optimize ("Os")
 #include "../tests/sprite_fixture.h"
 #include "../tests/climb_fixture.h"
+#include "../tests/moving_net_fixture.h"
 #include "../tests/npc_recoil_fixture.h"
 #include "../tests/source_dma_fixture.h"
+#include "../tests/session_fixture.h"
+#include "../tests/session_wall_fixture.h"
+#pragma GCC pop_options
 #endif
+static UWORD vic_compare_errors;
 
 struct ExecBase *SysBase;
 struct GfxBase *GfxBase;
@@ -69,8 +93,28 @@ static volatile struct Custom *hw=(volatile struct Custom *)0xdff000;
 #ifndef BL_GATE_TEST
 #define BL_GATE_TEST 0
 #endif
-#define BL_CAPTURE_FRAME (BL_GATE_TEST?450:(BL_ROOM_TOUR?6950:(BL_ENEMY_EDGE_TEST?360:(BL_ROOM_TEST?630:(BL_COMBAT_TEST?900:120)))))
+#ifndef BL_ROOM_LOAD_TEST
+#define BL_ROOM_LOAD_TEST 0
+#endif
+#ifndef BL_ELECTRIC_TEST
+#define BL_ELECTRIC_TEST 0
+#endif
+#define BL_CAPTURE_FRAME (BL_ELECTRIC_TEST?450:((BL_GATE_TEST || BL_ROOM_LOAD_TEST)?450:(BL_ROOM_TOUR?6950:(BL_ENEMY_EDGE_TEST?360:(BL_ROOM_TEST?630:(BL_COMBAT_TEST?900:120))))))
 #include "source_audio.h"
+/* Normal play advances the source IRQ clock from actual PAL time. The
+ * controlled replay uses one explicit field per loop and reports overruns. */
+static ULONG game_field_last;
+static UBYTE game_field_active,game_field_busy,game_field_loading;
+static void source_game_service(void){
+    ULONG now,gap;source_audio_service();
+    if(!game_field_active || game_field_busy)return;
+    now=field_clock();gap=(now-game_field_last)&0xffffffUL;game_field_last=now;
+    if(game_field_loading)return;
+    game_field_busy=1;while(gap--)bl_c64_field();game_field_busy=0;
+}
+static void source_game_load(long loading){
+    game_field_loading=(UBYTE)(loading!=0);game_field_last=field_clock();source_audio_load(loading);
+}
 #if BL_AUTOTEST
 #include "../tests/packed_capture.h"
 #else
@@ -83,8 +127,11 @@ static UWORD contact_fixture_failure;
 static UWORD movement_fixture_failure;
 static UWORD sprite_fixture_failure;
 static UWORD climb_fixture_failure;
+static UWORD moving_net_fixture_failure;
 static UWORD npc_recoil_fixture_failure;
 static UWORD source_dma_fixture_failure;
+static UWORD session_fixture_failure;
+static UWORD session_wall_fixture_failure;
 #endif
 #if BL_ROOM_TEST
 #include "../tests/room_fixture.h"
@@ -97,6 +144,17 @@ static UBYTE slot_room[2]={0,1};
 static UBYTE *capture,*tone,*fighter_dma,*tile_dma;
 static UWORD native_cell_offset[1000];
 static ULONG source_render_checks,source_render_mismatches;
+static ULONG residue_hud,residue_scene,residue_pending,residue_unexplained;
+static ULONG line_clock(void);
+static ULONG elapsed_work(ULONG start);
+static ULONG room_draw_cost[4],room_work_sum[5],room_work_max[5];
+static ULONG room_event_work[32],room_event_check[32];
+static UBYTE room_event_id[32];
+#if BL_ROOM_LOAD_TEST
+/* Controlled inspections, including same-room and animated-room reuse.
+ * These requests do not prove natural door/progression parity. */
+static const UBYTE room_load_route[]={0,1,0,2,3,4,5,4,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,0,4,5,4,0};
+#endif
 static void wait_blitter(void);
 static void paint_source_tile(const BlC64Paint *request);
 static void paint_source_block(const BlC64Block *request);
@@ -107,6 +165,11 @@ static UBYTE target_stamp[6][4][26][2],target_mask[6][26][2];
  * barrel shifters also handle clipped edges through a second Chip buffer. */
 static ULONG source_words[2][25];
 static UBYTE source_rows[2][25];
+static ULONG priority_words[2][25];
+static UBYTE priority_rows[2][25],source_cursor[2]={3,3},priority_cursor[2]={3,3};
+#if BL_ELECTRIC_TEST
+static ULONG electric_checks,electric_mismatch_fields,electric_streak,electric_max_streak;
+#endif
 static UWORD painted_lanterns[20];
 static UBYTE painted_openings[20];
 static ULONG actor_pose_seen[3];
@@ -207,18 +270,23 @@ static void draw_loading(UBYTE *b){
 
 static void draw_room(const BlGame *game,const BlProgress *progress){
     ULONG i;char title[]="ROOM 01";wait_blitter();
+    ULONG started=BL_AUTOTEST?line_clock():0;
     for(i=0;i<BITMAP_BYTES;i++)background[i]=0;
     bl_c64_paint_room(background,SCENE_TOP);wait_blitter();
+    if(BL_AUTOTEST){room_draw_cost[0]=elapsed_work(started);started=line_clock();}
     if(BL_AUTOTEST){source_render_mismatches+=(ULONG)bl_c64_check_interleaved(background,SCENE_TOP);++source_render_checks;}
+    if(BL_AUTOTEST){room_draw_cost[1]=elapsed_work(started);started=line_clock();}
     bl_c64_clear_dirty();
     (void)bl_c64_build_animation_cache(tile_dma,TILE_DMA_BYTES);
+    if(BL_AUTOTEST){room_draw_cost[2]=elapsed_work(started);started=line_clock();}
     text(background,8,7,"BRUCE",7);
     title[5]=(char)('0'+(game->room+1)/10);title[6]=(char)('0'+(game->room+1)%10);
     text(background,264,7,title,1);
     text(background,16,19,"KAGE",2);text(background,128,19,"YAMO",5);text(background,240,19,"BRUCE",7);
-    text(background,8,238,"F1 F2 ROOMS  JOYSTICK MOVE",1);
-    text(background,8,248,"ESC EXIT  C64 SOURCE ROOMS",12);
+    text(background,8,238,"JOYSTICK MOVE  FIRE ATTACK",1);
+    text(background,8,248,"F10 MENU  ESC AMIGADOS",12);
     if(progress){painted_lanterns[progress->room]=progress->collected[progress->room];painted_openings[progress->room]=0;}
+    if(BL_AUTOTEST)room_draw_cost[3]=elapsed_work(started);
 }
 static void load_room_background(const BlGame *game,const BlProgress *progress,int force){
     /* Source full loader $09F3->$255E silences SID before reinitializing.
@@ -228,7 +296,10 @@ static void load_room_background(const BlGame *game,const BlProgress *progress,i
     (void)force;
     room_backgrounds[slot_room[slot]]=0;slot_room[slot]=room;room_backgrounds[room]=room_slots[slot];
     background=room_slots[slot];draw_room(game,progress);
-    {int b,i;for(b=0;b<2;b++)for(i=0;i<25;i++){source_rows[b][i]=0;source_words[b][i]=0;}}
+    {int b,i;for(b=0;b<2;b++){
+        source_cursor[b]=priority_cursor[b]=3;
+        for(i=0;i<25;i++){source_rows[b][i]=priority_rows[b][i]=0;source_words[b][i]=priority_words[b][i]=0;}
+    }}
     source_audio_resume();
 }
 static ULONG line_clock(void);
@@ -243,6 +314,11 @@ static int update_lantern_background(const BlProgress *progress){
         source_words[0][pos]|=words[pos];source_words[1][pos]|=words[pos];
         source_rows[0][pos]|=rows[pos];source_rows[1][pos]|=rows[pos];
     }
+    words=bl_c64_part_priority_words();rows=bl_c64_part_priority_rows();
+    for(pos=3;pos<25;pos++)if(words[pos]){
+        priority_words[0][pos]|=words[pos];priority_words[1][pos]|=words[pos];
+        priority_rows[0][pos]|=rows[pos];priority_rows[1][pos]|=rows[pos];
+    }
     if(BL_C64_PROFILE){bl_c64_profile_add(3,elapsed_work(part));part=line_clock();}
     if(bl_c64_paint_done())bl_c64_clear_dirty();else return 0;
     if(BL_C64_PROFILE)bl_c64_profile_add(6,elapsed_work(part));
@@ -250,16 +326,12 @@ static int update_lantern_background(const BlProgress *progress){
 }
 
 static void restore_source_cells(UBYTE *b,int buffer){
-    UWORD row,budget=5000;
-    for(row=3;row<25;row++)if(source_rows[buffer][row]){
-        UBYTE bits=source_rows[buffer][row];UWORD dy=0,last=row;ULONG words=source_words[buffer][row];BlDirty strip;
-        if(bits==255)while(last<24 && source_rows[buffer][last+1]==255 && source_words[buffer][last+1]==words)++last;
-        {ULONG value=words;UWORD word_count=0,scan_count=0,cost;UBYTE mask=bits;
-        while(value){++word_count;value&=value-1;}while(mask){++scan_count;mask&=(UBYTE)(mask-1);}
-        cost=(UWORD)(word_count*scan_count*8);
-        if(cost>budget)break;
-        while(last>row && (UWORD)(cost*(last-row+1))>budget)--last;
-        budget=(UWORD)(budget-cost*(last-row+1));}
+    UWORD budget=5000,pass;BlSceneSlice slice;
+    for(pass=0;pass<2;pass++)while(bl_scene_take(
+        pass?source_words[buffer]:priority_words[buffer],
+        pass?source_rows[buffer]:priority_rows[buffer],
+        pass?&source_cursor[buffer]:&priority_cursor[buffer],&budget,&slice)){
+        UBYTE bits=slice.rows;UWORD dy=0,row=slice.first,last=slice.last;ULONG words=slice.words;BlDirty strip;
         while(dy<8){
             UWORD col=0;
             if(!(bits&(1u<<dy))){++dy;continue;}
@@ -272,8 +344,6 @@ static void restore_source_cells(UBYTE *b,int buffer){
                 strip.right=(short)(col*16);restore_actor(b,&strip);
             }
         }
-        do{source_rows[buffer][row]=0;source_words[buffer][row]=0;}while(row++<last);
-        --row;
     }
 }
 
@@ -397,6 +467,14 @@ static void paint_source_tile(const BlC64Paint *request){
 }
 static void paint_source_block(const BlC64Block *request){
     UBYTE *target=request->bitmap+request->top*ROW_BYTES+request->left;
+    if(request->first_mask==0xffff && request->last_mask==0xffff){
+        /* Whole words need only A/D DMA. Reading the destination through C
+         * is redundant when every output bit comes from the cached source. */
+        wait_blitter();hw->bltcon0=0x09f0;hw->bltcon1=0;
+        hw->bltafwm=hw->bltalwm=0xffff;hw->bltamod=0;hw->bltdmod=(WORD)(40-request->width);
+        hw->bltapt=(APTR)request->pixels;hw->bltdpt=(APTR)target;
+        hw->bltsize=(UWORD)((request->height*4<<6)|(request->width>>1));return;
+    }
     wait_blitter();hw->bltcon0=0x07ca;hw->bltcon1=0;
     hw->bltafwm=(UWORD)request->first_mask;hw->bltalwm=(UWORD)request->last_mask;
     hw->bltadat=0xffff;hw->bltbdat=0;
@@ -501,6 +579,7 @@ static void draw_source_projectiles(UBYTE *b,int buffer){
 static ULONG canvas_residue(const UBYTE *b,int buffer){
     ULONG bad=0,offset;
     int p,y,x,n,allowed;
+    residue_hud=residue_scene=residue_pending=residue_unexplained=0;
     for(p=0;p<4;p++)for(y=0;y<HEIGHT;y++)for(x=0;x<40;x++){
         if(!x)source_audio_service();
         offset=p*40+y*ROW_BYTES+x;
@@ -511,7 +590,11 @@ static ULONG canvas_residue(const UBYTE *b,int buffer){
             if(d->right>d->left && y>=d->top && y<d->bottom &&
                x*8<d->right && x*8+8>d->left){allowed=1;break;}
         }
-        if(!allowed)++bad;
+        if(!allowed){++bad;if(y<SCENE_TOP)++residue_hud;else{
+            int row=(y-SCENE_TOP)/8,dy=(y-SCENE_TOP)&7;++residue_scene;
+            if(row<25 && (source_words[buffer][row]&(1UL<<(x/2))) && (source_rows[buffer][row]&(1u<<dy)))++residue_pending;
+            else ++residue_unexplained;
+        }}
     }
     return bad;
 }
@@ -556,18 +639,20 @@ static ULONG line_clock(void){
     return (hi<<16)|(mid<<8)|lo;
 }
 static ULONG elapsed_work(ULONG start){return (line_clock()-start)&0xffffff;}
-static UBYTE read_input(void) {
-    UWORD joy=hw->joy1dat;UBYTE result=0;
+static UBYTE read_port(UBYTE port) {
+    UWORD joy=port?hw->joy1dat:hw->joy0dat;UBYTE result=0;
     if(joy&2)result|=BL_RIGHT;
     if(joy&0x200)result|=BL_LEFT;
     if(((joy>>1)^joy)&1)result|=BL_DOWN;
     if(((joy>>1)^joy)&0x100)result|=BL_UP;
-    if(!(*(volatile UBYTE*)0xbfe001&128))result|=BL_FIRE;
+    if(!(*(volatile UBYTE*)0xbfe001&(port?128:64)))result|=BL_FIRE;
     return result;
 }
+static UBYTE read_input(void){return read_port(1);}
 
 /* Poll the keyboard while OS interrupts are disabled. Acknowledge every
  * serial byte, including releases, so the keyboard keeps transmitting. */
+static UBYTE keyboard_shift;
 static UBYTE read_key(void) {
     volatile UBYTE *icr=(volatile UBYTE*)0xbfed01;
     volatile UBYTE *sdr=(volatile UBYTE*)0xbfec01;
@@ -581,7 +666,78 @@ static UBYTE read_key(void) {
     *sdr=0;*cra=(UBYTE)(control|64);
     for(delay=0;delay<700;delay++){}
     *cra=(UBYTE)(control&~64);
+    if(raw==0x60)keyboard_shift|=1;
+    if(raw==0x61)keyboard_shift|=2;
+    if(raw==0xe0)keyboard_shift&=(UBYTE)~1;
+    if(raw==0xe1)keyboard_shift&=(UBYTE)~2;
     return raw;
+}
+
+static void menu_paint(const BlOptions *o,UBYTE debug,UBYTE game_over){
+    ULONG i;char players[]="F3 PLAYERS 1",room[]="F3 F4 START ROOM 01";
+    wait_blitter();
+    for(i=0;i<BITMAP_BYTES;i++){buffers[0][i]=0;if(!(i&1023))source_audio_service();}
+    text(buffers[0],142,38,"BRUCE",7);
+    if(game_over)text(buffers[0],130,59,"GAME OVER",2);
+    if(debug){
+        text(buffers[0],94,78,"TEST OPTIONS",13);
+        text(buffers[0],58,100,o->infinite_lives?"F1 INFINITE FALLS ON":"F1 INFINITE FALLS OFF",1);
+        text(buffers[0],58,116,o->invincible?"F2 INVINCIBLE ON":"F2 INVINCIBLE OFF",1);
+        room[17]=(char)('0'+(o->start_room+1)/10);room[18]=(char)('0'+(o->start_room+1)%10);
+        text(buffers[0],58,132,room,1);
+        text(buffers[0],58,152,"F5 BACK  FIRE START TEST",5);
+        text(buffers[0],34,194,"IN GAME F1 F2 CHANGE ROOM",12);
+        text(buffers[0],34,210,"TEST FLAGS CHANGE C64 RULES",12);
+    }else{
+        players[11]=(char)('0'+o->players);
+        text(buffers[0],64,96,players,1);
+        text(buffers[0],64,116,o->human_yamo?"F5 YAMO JOYSTICK 1":"F5 YAMO COMPUTER",1);
+        text(buffers[0],64,146,"FIRE OR RETURN START",5);
+        text(buffers[0],64,172,"SHIFT D TEST OPTIONS",12);
+        text(buffers[0],34,200,"2 PLAYERS TAKE TURNS AS BRUCE",12);
+        text(buffers[0],34,216,"1P JOYSTICK 2  2P JOYSTICK 1",12);
+    }
+    text(buffers[0],100,238,"ESC AMIGADOS",12);
+    wait_frame();hw->cop1lc=(ULONG)copper[0];
+}
+static UBYTE choose_options(BlOptions *o,UBYTE game_over){
+    UBYTE debug=0,armed=0;
+    bl_source_audio_reset(&source_audio);source_audio_start(1);
+    menu_paint(o,debug,game_over);
+    for(;;){
+        UBYTE key,changed=0,fire;
+        wait_frame();key=read_key();fire=(UBYTE)(read_input()&BL_FIRE);
+        if(!fire)armed=1;
+        if(key==0x45){source_audio_mute();return 0;}
+        if(key==0x44 || (armed && fire)){source_audio_mute();return 1;}
+        if(key==0x22 && keyboard_shift){debug^=1;o->debug=1;changed=1;}
+        if(debug){
+            if(key==0x50){o->infinite_lives^=1;changed=1;}
+            if(key==0x51){o->invincible^=1;changed=1;}
+            if(key==0x52){o->start_room=(UBYTE)((o->start_room+19)%20);changed=1;}
+            if(key==0x53){o->start_room=(UBYTE)((o->start_room+1)%20);changed=1;}
+            if(key==0x54){debug=0;changed=1;}
+        }else{
+            if(key==0x52){o->players=(UBYTE)(3-o->players);changed=1;}
+            if(key==0x54){o->human_yamo^=1;changed=1;}
+        }
+        if(changed)menu_paint(o,debug,game_over);
+    }
+}
+static void draw_lives(UBYTE *b,const BlCombat *w,const BlSession *s){
+    char value[]="1P FALLS INF";
+    int lives=w->lives<0?0:w->lives;
+    value[0]=(char)('1'+s->current);
+    if(!w->infinite_lives){
+        value[9]=(char)('0'+lives/10%10);value[10]=(char)('0'+lives%10);value[11]=0;
+    }
+    rect(b,96,7,88,8,0);text(b,96,7,value,1);
+    (void)s;
+}
+static void draw_score(UBYTE *b,const BlProgress *p,UBYTE debug){
+    char value[9];ULONG score=p->score;int i;value[8]=0;
+    for(i=7;i>=0;i--){value[i]=(char)('0'+score%10);score/=10;}
+    rect(b,192,7,64,8,0);text(b,192,7,value,(UBYTE)(debug?2:1));
 }
 
 extern unsigned long bruce_runtime_check(void);
@@ -590,12 +746,14 @@ static void append(char **p,const char *s){while(*s)*(*p)++=*s++;}
 
 int main(void) {
     struct View *old_view;UWORD old_dma,old_int,old_adk;
-    ULONG free_chip_before,free_slow_before,last_field=0,max_gap=0,max_runtime_gap=0,capture_gap=0;
+    ULONG free_chip_before,free_slow_before,last_field=0,max_gap=0,max_runtime_gap=0,capture_gap=0,last_image_field=0;
     ULONG climb_periods=0,air_periods=0,jump_starts=0,fall_starts=0,prone_periods=0;
     ULONG punch_periods=0,kick_periods=0;
     ULONG target_defeats=0,target_respawns=0;
     ULONG max_work_lines=0,max_work_frame=0,missed_frames=0,first_missed=0;
     ULONG stage[6]={0,0,0,0,0,0},miss_stage[6]={0,0,0,0,0,0};
+    UBYTE stage_valid=0,miss_stage_valid=0;ULONG stage_loop=0,miss_stage_loop=0;
+    ULONG held_changed=0,held_unchanged=0;UWORD presented_step=65535;
     ULONG last_line_clock=0,max_hsync_gap=0,first_missed_hsync=0,cia_miss_hsync=0;
     ULONG time_walk_a=0,time_walk_b=0,time_jump_a=0,time_jump_b=0,time_fall_a=0,time_fall_b=0;
     UBYTE timing_seen=0,enemy_edge_checks=0,old_keyboard_control=0;
@@ -610,6 +768,10 @@ int main(void) {
     UBYTE oldtargetlook[2]={255,255};
     BlCombat world;
     BlProgress progress;
+    BlOptions options;
+    BlSession session;
+    int oldlives[2]={-99,-99};UBYTE oldturn[2]={255,255},menu_game_over=0;
+    ULONG oldscore[2]={0xffffffffUL,0xffffffffUL};UBYTE old_game_over[2]={255,255};
     UWORD drawn_room_revision[2]={0,0},drawn_lanterns[2]={0,0};
     ULONG room_load_fields=0,room_load_max_gap=0,room_load_events=0;
     UWORD gate_checks=0;
@@ -636,16 +798,27 @@ int main(void) {
         if(previous){Close(previous);report_path="DH1:autotest-2.txt";}}
     if(BL_AUTOTEST)arithmetic_errors=bruce_runtime_check();
 #if BL_AUTOTEST
+    vic_compare_errors=bl_c64_vic_compare_selftest();
+#endif
+#if BL_SOURCE_WORLD_TEST && !BL_SOURCE_PERF_TEST
+    source_actor_fixture_failure=source_actor_fixture_run();
+#endif
+#if BL_AUTOTEST
     /* Controlled logic fixtures run before the loading sound/hardware
      * takeover, independently of the measured gameplay field budget. */
+    if(!BL_SOURCE_WORLD_TEST){
     contact_fixture_failure=contact_fixture_run();
     movement_fixture_failure=movement_fixture_run();
     sprite_fixture_failure=sprite_fixture_check();
     climb_fixture_failure=climb_fixture_run();
+    moving_net_fixture_failure=moving_net_fixture_run();
     npc_recoil_fixture_failure=npc_recoil_fixture_run();
+    session_fixture_failure=session_fixture_run();
+    session_wall_fixture_failure=session_wall_fixture_run();
     {UBYTE *workspace=AllocMem(4096,MEMF_PUBLIC);
     source_dma_fixture_failure=workspace?source_dma_fixture_run(workspace):8;
     if(workspace)FreeMem(workspace,4096);}
+    }
 #endif
     free_chip_before=AvailMem(MEMF_CHIP);free_slow_before=AvailMem(MEMF_FAST);
     if(BL_AUTOTEST)chip_largest_before=AvailMem(MEMF_CHIP|MEMF_LARGEST);
@@ -699,7 +872,24 @@ int main(void) {
     }}
     bl_c64_set_painter(paint_source_tile);bl_c64_set_block_painter(paint_source_block);
     bl_combat_reset(&world);bl_progress_reset(&progress);
+    /* Controlled replay only: $1159 otherwise reads live ZP, including
+     * SID pointers $F6..$FB that differ with hardware-field catch-up.
+     * Both hosts read the same immutable source sprite-data page instead.
+     * Normal play and room/door inspection keep their original input. */
+    if(BL_AUTOTEST && !BL_SOURCE_WORLD_TEST && BL_COMBAT_TEST && !BL_ROOM_TEST && !BL_ROOM_TOUR &&
+       !BL_GATE_TEST && !BL_ENEMY_EDGE_TEST && !BL_ROOM_LOAD_TEST)
+        bl_c64_test_write(0x17,0x68);
+#if BL_ENEMY_EDGE_TEST
+    bl_c64_test_write(0x16,0);bl_c64_test_write(0x17,0x60);
+    {long read_at;for(read_at=0x6000;read_at<0x6300;read_at++)bl_c64_test_write(read_at,1);}
+#endif
+    bl_options_reset(&options);
+    /* Explicit diagnostic route. Actual PAL scheduling, stationary Bruce,
+     * invincibility extension; never labelled a natural playthrough. */
+    if(BL_SOURCE_PERF_TEST)options.invincible=1;
+    if(BL_SOURCE_WORLD_TEST)bl_session_source_start(&session,&options,&progress,&world);
     if(BL_AUTOTEST && BL_ROOM_TOUR && BL_TEST_START_ROOM)bl_progress_inspect_room(&progress,&world,BL_TEST_START_ROOM);
+    if(BL_ELECTRIC_TEST)bl_progress_inspect_room(&progress,&world,9);
     draw_room(&world.player.body,(!BL_AUTOTEST || BL_COMBAT_TEST)?&progress:0);
     prepare_target();if(!BL_AUTOTEST || BL_COMBAT_TEST)prepare_fighters();
     if(BL_AUTOTEST && BL_COMBAT_TEST){
@@ -725,13 +915,30 @@ int main(void) {
     if(exit_requested)goto restore_os;
     /* Source $06DA/$154C plays the title theme until the start input;
      * gameplay $15A8 switches to the three independent SFX drivers. */
+choose_game:
+    game_field_active=0;
     rect(buffers[0],0,160,320,18,0);text(buffers[0],106,166,"FIRE TO START",5);
     wait_frame();hw->cop1lc=(ULONG)copper[0];
     source_audio_begin();
-    bl_c64_set_service(source_audio_service);
-    bl_c64_set_load_service(source_audio_load);
-    source_audio_start(1);
+    bl_c64_set_service(source_game_service);
+    bl_c64_set_load_service(source_game_load);
+    if(!BL_AUTOTEST){
+        if(!choose_options(&options,menu_game_over))goto restore_os;
+        bl_session_source_start(&session,&options,&progress,&world);game=world.player.body;
+        load_room_background(&game,&progress,1);
+        for(n=0;n<2;n++){
+            oldlives[n]=-99;oldturn[n]=255;drawn_room_revision[n]=0;
+            oldscore[n]=0xffffffffUL;old_game_over[n]=255;
+            oldhealth[n][0]=oldhealth[n][1]=oldhealth[n][2]=-99;
+            actor_sprite[n].initialized=0;
+        }
+        actor_sprite[2].initialized=0;
+        for(n=0;n<2;n++)bl_c64_sprite_step(&actor_sprite[n],&world.enemy[n],n);
+        bl_c64_sprite_step(&actor_sprite[2],&world.player,2);
+        room_paint_pending=0;room_request=255;held=0;
+    }else source_audio_start(1);
     for(;;){
+        if(!BL_AUTOTEST)break;
         wait_frame();
         if(BL_AUTOTEST){if(source_music_fields>=120)break;}
         else{
@@ -747,21 +954,28 @@ int main(void) {
     wait_frame();hw->cop1lc=(ULONG)copper[1];wait_frame();
     copy(buffers[0],background,BITMAP_BYTES);intro_restored=1;
     source_audio_start(0);
+    game_field_last=field_clock();game_field_active=(UBYTE)(!BL_AUTOTEST || BL_SOURCE_PERF_TEST);
+    last_image_field=game_field_last;
+    if(BL_AUTOTEST)bl_c64_reuse_reset();
+    bl_perf_reset();
     for(;;) {
         ULONG now,gap,measured_line_gap=0,render_clock=line_clock();
         UBYTE hold_image=0;
         UBYTE room_load_this_frame=0;
+        if(BL_AUTOTEST){for(n=0;n<6;n++)stage[n]=0;stage_valid=0;stage_loop=frame;}
+        PERF_BEGIN(BL_PERF_LOOP);
         source_audio_context=1;
         /* Exercise all15 valid source requests, including low priorities. */
-        if(BL_AUTOTEST && frame>=20 && frame<=300 && frame%20==0)
+        if(BL_AUTOTEST && !BL_SOURCE_WORLD_TEST && frame>=20 && frame<=300 && frame%20==0)
             bl_c64_audio_request(0x80+frame/20-1);
         if(!BL_AUTOTEST){
             UBYTE key=read_key();
             if(key==0x45)break;
-            if(key==0x50)room_request=(UBYTE)((progress.room+19)%20);
-            if(key==0x51)room_request=(UBYTE)((progress.room+1)%20);
+            if(key==0x59 || session.over){menu_game_over=session.over;source_audio_mute();goto choose_game;}
+            if(options.debug && key==0x50)room_request=(UBYTE)((progress.room+19)%20);
+            if(options.debug && key==0x51)room_request=(UBYTE)((progress.room+1)%20);
         }
-        input=read_input();
+        input=(!BL_AUTOTEST && session.current)?read_port(0):read_input();
         if(BL_AUTOTEST && !BL_COMBAT_TEST){
             if(frame==1080){bl_reset(&game);bl_visual_reset(&visual,&game);bl_target_reset(&target);held=0;}
             if(frame==1440){
@@ -793,17 +1007,18 @@ int main(void) {
             if(frame>=1080)input=frame<1122?BL_RIGHT:frame<1170?BL_FIRE:
                 frame<1200?(BL_RIGHT|BL_FIRE):0;
             if(frame>=1530)input=frame<1536?BL_UP:0;
-            if(frame>=BL_TEST_FRAMES)break;
+            if(frame>=BL_TEST_FRAMES){PERF_END(BL_PERF_LOOP);break;}
         }
         if(BL_AUTOTEST && BL_COMBAT_TEST){
-            if(frame==BL_CAPTURE_FRAME){
+            if(frame==BL_CAPTURE_FRAME && !BL_SOURCE_PERF_TEST){
                 source_audio_context=5;
 #if BL_AUTOTEST
                 capture_pack(capture,buffers[back]);
 #endif
                 capture_residue=canvas_residue(buffers[back],back);capture_color15=copper[back][65];
             }
-            input=frame+BL_COMBAT_WARMUP*3<3000?0:BL_FIRE;if(frame>=BL_TEST_FRAMES)break;}
+            input=frame+BL_COMBAT_WARMUP*3<3000?0:BL_FIRE;if(frame>=BL_TEST_FRAMES){PERF_END(BL_PERF_LOOP);break;}}
+        if(BL_ELECTRIC_TEST)input=0;
 #if BL_ENEMY_EDGE_TEST
         input=frame<192?BL_RIGHT:frame<384?0:frame<576?BL_LEFT:0;
 #endif
@@ -820,28 +1035,51 @@ int main(void) {
 #if BL_GATE_TEST
         input=0;
 #endif
-        if(BL_AUTOTEST && BL_COMBAT_TEST)stage[0]=elapsed_work(last_line_clock);
+#if BL_ROOM_LOAD_TEST
+        input=0;
+        if(frame && frame%24==0 && (ULONG)(frame/24)<=sizeof(room_load_route))room_request=room_load_route[frame/24-1];
+#endif
+        if(BL_AUTOTEST && BL_COMBAT_TEST){stage[0]=elapsed_work(render_clock);stage_valid|=1;}
         held|=input;
         if(BL_AUTOTEST)bl_c64_profile_reset();
         /* MACHINE-0001 observes three PAL fields per candidate game step.
          * Native input phase and retail edition parity remain unverified. */
+#if BL_SOURCE_PERF_TEST && BL_SOURCE_PERF_ENEMIES!=3
+        /* Explicit performance-only state restriction, not a game rule.
+         * Keep excluded actors inactive, entry timers nonzero, and their
+         * actual VIC components disabled using the source tables. */
+        for(n=1;n<3;n++)if(!(BL_SOURCE_PERF_ENEMIES&(1<<(n-1)))){
+            UBYTE sprite=bl_c64_read(0x276d+n),mask=bl_c64_read(0x2778+sprite),second=bl_c64_read(0x2770+n);
+            if(second<128)mask&=bl_c64_read(0x2778+second);
+            bl_c64_test_write(0x95+n,bl_c64_read(0x95+n)&254);
+            bl_c64_test_write(n==1?0x5e:0x5d,255);bl_c64_test_write(0xd015,bl_c64_read(0xd015)&mask);
+        }
+#endif
         source_audio_service();
-        bl_c64_field();
-        if(field_phase==0){
+        if(!BL_AUTOTEST || BL_SOURCE_WORLD_TEST)bl_c64_world_input(input,read_port((UBYTE)(session.current?1:0)));
+        if(BL_AUTOTEST && !BL_SOURCE_PERF_TEST)bl_c64_field();else source_game_service();
+        if((!BL_AUTOTEST || BL_SOURCE_WORLD_TEST)?bl_c64_world_ready():field_phase==0){
             UBYTE previous_state=game.state;
             UBYTE previous_health=target.health;
             if(!BL_AUTOTEST || BL_COMBAT_TEST){
                 UWORD previous_revision=progress.revision;
                 UBYTE previous_room=progress.room;
+                ULONG tick_elapsed=0;
                 UBYTE states[2],active[2],player_active=world.player.active;
                 for(n=0;n<2;n++){states[n]=world.enemy[n].body.state;active[n]=world.enemy[n].active;}
 #if BL_GATE_TEST
                 input=gate_fixture_prepare(&progress,&world,(UWORD)(frame/3));
 #endif
-                {ULONG tick_start=BL_C64_PROFILE?line_clock():0;
+                {ULONG tick_start=(BL_C64_PROFILE || BL_AUTOTEST)?line_clock():0;
                 if(room_request<20){
-                    bl_progress_inspect_room(&progress,&world,room_request);room_request=255;
-                }else{source_audio_context=2;bl_progress_step(&progress,&world,input|(held&(BL_UP|BL_FIRE)));}
+                    if(!BL_AUTOTEST || BL_SOURCE_WORLD_TEST)bl_session_source_jump(&session,&progress,&world,room_request);
+                    else bl_progress_inspect_room(&progress,&world,room_request);
+                    room_request=255;
+                }else{source_audio_context=2;
+                    if(!BL_AUTOTEST || BL_SOURCE_WORLD_TEST)bl_session_source_step(&session,&progress,&world,input,read_port((UBYTE)(session.current?1:0)));
+                    else bl_progress_step(&progress,&world,input|(held&(BL_UP|BL_FIRE)));
+                }
+                if(BL_AUTOTEST)tick_elapsed=elapsed_work(tick_start);
                 if(BL_C64_PROFILE)bl_c64_profile_add(4,elapsed_work(tick_start));}
                 source_audio_context=3;source_audio_service();
                 bl_c64_prepare_paint();
@@ -852,15 +1090,15 @@ int main(void) {
 #endif
                 visited_rooms_mask|=1UL<<progress.room;
 #if BL_ENEMY_EDGE_TEST
-                /* Same ordinary-input route as ENEMY-EDGE-0001. Check the
-                 * compiled 68000 state, including the below-platform player. */
+                /* Cold source counters and entry phase: source-controlled
+                 * checkpoints in spawn-audit/world-controls.json. */
                 {
                     const BlFighter *f=&world.enemy[BL_NINJA];
                     int x=bl_x(&f->body),y=bl_y(&f->body);
-                    if(world.step==96 && f->active && x==294 && y==98 && f->body.facing)enemy_edge_checks|=1;
-                    if(world.step==114 && !f->active && x==302 && y==98 && f->respawn==160 && bl_y(&world.player.body)==196)enemy_edge_checks|=2;
-                    if(world.step==274 && f->active && x==294 && y==98 && !f->body.facing)enemy_edge_checks|=4;
-                    if(world.step==290 && f->active && x==290 && y==98)enemy_edge_checks|=8;
+                    if(world.step==104 && f->active && x==294 && y==98 && f->body.facing)enemy_edge_checks|=1;
+                    if(world.step==119 && f->active && x==294 && y==98 && f->timer==0)enemy_edge_checks|=2;
+                    if(world.step==120 && f->active && x==298 && y==98)enemy_edge_checks|=4;
+                    if(world.step==122 && !f->active && x==302 && y==98 && f->respawn==160 && bl_y(&world.player.body)==196)enemy_edge_checks|=8;
                 }
 #endif
                 if(previous_revision==progress.revision && bl_c64_needs_full_paint())++progress.revision;
@@ -868,11 +1106,23 @@ int main(void) {
                     (void)previous_room;
                     room_paint_pending=0;
                     ++room_load_events;
-                    load_room_background(&game,&progress,previous_room==progress.room);
+                    PERF_BEGIN(BL_PERF_LOAD);load_room_background(&game,&progress,previous_room==progress.room);PERF_END(BL_PERF_LOAD);
+                    if(BL_AUTOTEST){
+                        ULONG costs[5];int k;costs[0]=tick_elapsed;
+                        for(k=0;k<4;k++)costs[k+1]=room_draw_cost[k];
+                        for(k=0;k<5;k++){room_work_sum[k]+=costs[k];if(costs[k]>room_work_max[k])room_work_max[k]=costs[k];}
+                        if(room_load_events<=32){
+                            UWORD at=(UWORD)(room_load_events-1);room_event_id[at]=progress.room;
+                            room_event_work[at]=costs[0]+costs[1]+costs[3]+costs[4];
+                            room_event_check[at]=costs[2];
+                        }
+                    }
                     bl_visual_reset(&visual,&game);
                     for(n=0;n<2;n++){
                         bl_visual_reset(&enemy_visual[n],&world.enemy[n].body);
                         oldhealth[n][0]=-99;oldhealth[n][1]=-99;oldhealth[n][2]=-99;
+                        oldlives[n]=-99;oldturn[n]=255;
+                        oldscore[n]=0xffffffffUL;old_game_over[n]=255;
                     }
                 }else room_paint_pending=1;
                 if(!player_active && world.player.active)bl_visual_reset(&visual,&game);
@@ -919,11 +1169,13 @@ int main(void) {
          * the three-field seam while keeping logic/input cadence unchanged. */
         if(room_paint_pending && field_phase!=0){
             ULONG paint_start=BL_C64_PROFILE?line_clock():0;
+            PERF_BEGIN(BL_PERF_BACKGROUND);
             room_paint_pending=(UBYTE)!update_lantern_background(&progress);
+            PERF_END(BL_PERF_BACKGROUND);
             if(BL_C64_PROFILE)bl_c64_profile_add(5,elapsed_work(paint_start));
         }
         source_audio_service();
-        if(BL_AUTOTEST && BL_COMBAT_TEST)stage[1]=elapsed_work(last_line_clock);
+        if(BL_AUTOTEST && BL_COMBAT_TEST){stage[1]=elapsed_work(render_clock);stage_valid|=2;}
         if(BL_AUTOTEST){if(game.state==BL_CLIMB)++climb_periods;if(game.state==BL_AIR)++air_periods;if(game.prone)++prone_periods;}
         if(BL_AUTOTEST){if(game.attack==BL_PUNCH)++punch_periods;if(game.attack==BL_FLYING_KICK)++kick_periods;}
         render_game=game;
@@ -939,11 +1191,14 @@ int main(void) {
             spent=elapsed_work(render_clock);
             if(drawn_room_revision[back^1]==progress.revision && spent>140){
                 int row;for(row=3;row<25;row++)if(source_rows[back^1][row]){pending=1;break;}
-                if(spent>(pending?140:220))hold_image=1;
+                hold_image=bl_scene_hold_frame(spent,pending,(field_clock()-last_image_field)&0xffffffUL);
             }
         }
-        if(hold_image){++held_images;++held_streak;if(held_streak>max_held_streak)max_held_streak=held_streak;}
+        if(hold_image){++held_images;++held_streak;if(held_streak>max_held_streak)max_held_streak=held_streak;
+            if(BL_AUTOTEST){if(presented_step!=world.step)++held_changed;else ++held_unchanged;}}
         else{++drawn_images;held_streak=0;
+        presented_step=world.step;
+        PERF_BEGIN(BL_PERF_RESTORE);
         back^=1;
         if((!BL_AUTOTEST || BL_COMBAT_TEST) && drawn_room_revision[back]!=progress.revision){
             room_load_this_frame=1;
@@ -966,15 +1221,16 @@ int main(void) {
             restore_actor(buffers[back],&actor_dirty[back][3]);
             restore_actor(buffers[back],&actor_dirty[back][4]);
             restore_source_cells(buffers[back],back);
-            if(BL_AUTOTEST && BL_COMBAT_TEST)stage[2]=elapsed_work(last_line_clock);
+            PERF_END(BL_PERF_RESTORE);PERF_BEGIN(BL_PERF_DRAW);
+            if(BL_AUTOTEST && BL_COMBAT_TEST){stage[2]=elapsed_work(render_clock);stage_valid|=4;}
             draw_source_projectiles(buffers[back],back);
             for(n=1;n>=0;n--){
                 BlGame body=world.enemy[n].body;
                 draw_fighter(buffers[back],&world.enemy[n],&body,n,frame,back);
             }
-            if(BL_AUTOTEST && BL_COMBAT_TEST)stage[3]=elapsed_work(last_line_clock);
+            if(BL_AUTOTEST && BL_COMBAT_TEST){stage[3]=elapsed_work(render_clock);stage_valid|=8;}
             draw_fighter(buffers[back],&world.player,&render_game,2,frame,back);
-            if(BL_AUTOTEST && BL_COMBAT_TEST)stage[4]=elapsed_work(last_line_clock);
+            if(BL_AUTOTEST && BL_COMBAT_TEST){stage[4]=elapsed_work(render_clock);stage_valid|=16;}
             for(n=0;n<3;n++){
                 int health=n==0?world.player.health:world.enemy[n-1].health;
                 if(health!=oldhealth[back][n]){
@@ -982,7 +1238,20 @@ int main(void) {
                     oldhealth[back][n]=health;
                 }
             }
+            if(!BL_AUTOTEST && (oldlives[back]!=world.lives || oldturn[back]!=session.current)){
+                draw_lives(buffers[back],&world,&session);
+                oldlives[back]=world.lives;oldturn[back]=session.current;
+            }
+            if((!BL_AUTOTEST || BL_SOURCE_WORLD_TEST) && oldscore[back]!=progress.score){
+                draw_score(buffers[back],&progress,options.debug);oldscore[back]=progress.score;
+            }
+            if((!BL_AUTOTEST || BL_SOURCE_WORLD_TEST) && old_game_over[back]!=world.game_over){
+                rect(buffers[back],126,49,80,8,0);
+                if(world.game_over)text(buffers[back],126,49,"GAME OVER",2);
+                old_game_over[back]=world.game_over;
+            }
         }else{
+        PERF_END(BL_PERF_RESTORE);PERF_BEGIN(BL_PERF_DRAW);
         {
         UBYTE look=target.respawn?0:(target.health|(target.invulnerable?8:0));
         int changed=oldtarget[back]!=target.x || oldtargetlook[back]!=look;
@@ -996,9 +1265,23 @@ int main(void) {
         }
         draw_player(buffers[back],&render_game);
         }
-        if(BL_AUTOTEST && BL_COMBAT_TEST)stage[5]=elapsed_work(last_line_clock);
+        if(BL_AUTOTEST && BL_COMBAT_TEST){stage[5]=elapsed_work(render_clock);stage_valid|=32;}
         oldx[back]=bl_x(&render_game);oldy[back]=SCENE_TOP+bl_y(&render_game);
+        PERF_END(BL_PERF_DRAW);
         }
+#if BL_ELECTRIC_TEST
+        /* Compare only the bottom trap strip, away from the stationary
+         * Bruce sprite. This tests presentation against the current source
+         * background, not a new rule for trap timing/collision. */
+        {int row,dy,plane,col;UBYTE mismatch=0;wait_blitter();
+        for(row=23;row<=24;row++)for(dy=0;dy<8;dy++)for(plane=0;plane<4;plane++)for(col=6;col<25;col++){
+            ULONG at=(SCENE_TOP+row*8+dy)*ROW_BYTES+plane*40+col;
+            if(buffers[back][at]!=background[at])mismatch=1;
+        }
+        ++electric_checks;
+        if(mismatch){++electric_mismatch_fields;++electric_streak;if(electric_streak>electric_max_streak)electric_max_streak=electric_streak;}
+        else electric_streak=0;}
+#endif
         /* Finish the back buffer before waiting for presentation. Restarting
          * Copper after drawing can reload bitplane pointers mid-display.
          * Publish only during vertical blank; hardware restarts at field 0. */
@@ -1010,7 +1293,9 @@ int main(void) {
             }
         }
         copper[back][65]=palette[bl_c64_flash_color()];
+        PERF_END(BL_PERF_LOOP);PERF_BEGIN(BL_PERF_WAIT);
         wait_frame();
+        PERF_END(BL_PERF_WAIT);
         if(BL_AUTOTEST){
             ULONG pulse=line_clock(),linegap=(pulse-last_line_clock)&0xffffff;
             if(frame && frame!=BL_CAPTURE_FRAME && !room_load_this_frame && linegap>max_hsync_gap)max_hsync_gap=linegap;
@@ -1025,7 +1310,7 @@ int main(void) {
         }
         else if(frame){
             if(gap>max_runtime_gap)max_runtime_gap=gap;
-            if(BL_AUTOTEST && gap>1){if(!missed_frames){cia_miss_hsync=measured_line_gap;first_missed=(ULONG)frame;for(n=0;n<6;n++)miss_stage[n]=stage[n];}++missed_frames;}
+            if(BL_AUTOTEST && gap>1){if(!missed_frames){cia_miss_hsync=measured_line_gap;first_missed=(ULONG)frame;miss_stage_valid=stage_valid;miss_stage_loop=stage_loop;for(n=0;n<6;n++)miss_stage[n]=stage[n];}++missed_frames;}
         }
         last_field=now;
         if(BL_AUTOTEST){
@@ -1035,9 +1320,13 @@ int main(void) {
             if(line<300||line>308)++bad_presents;
         }
         hw->cop1lc=(ULONG)copper[back];
+        if(!hold_image)last_image_field=now;
         ++frame;field_phase=(UBYTE)(field_phase==2?0:field_phase+1);
         if(BL_AUTOTEST && max_runtime_gap>1 && !BL_COLLECT_FRAME_DROPS)break;
     }
+#if BL_ELECTRIC_TEST
+    wait_blitter();source_render_mismatches+=(ULONG)bl_c64_check_interleaved(background,SCENE_TOP);++source_render_checks;
+#endif
 restore_os:
     source_audio_mute();
     bl_c64_set_service(0);
@@ -1053,9 +1342,22 @@ restore_os:
          * extra3584-byte BSS buffer can spill the40KiB test capture to Chip. */
         char *report=(char*)buffers[0],*p=report;BPTR file;
 #if BL_AUTOTEST
-        capture_unpack(buffers[1],capture);
+        if(!BL_SOURCE_PERF_TEST)capture_unpack(buffers[1],capture);
 #endif
-        append(&p,"Bruce prototype autotest\nframes=");number(&p,frame);
+        append(&p,"Bruce prototype autotest\nsource_world_test=");number(&p,BL_SOURCE_WORLD_TEST);append(&p,"\nsource_world_steps=");number(&p,bl_c64_world_stat(0));append(&p,"\nframes=");number(&p,frame);
+        append(&p,"\nsource_perf_test=");number(&p,BL_SOURCE_PERF_TEST);
+        append(&p,"\nperf_enemy_mask=");number(&p,BL_SOURCE_PERF_ENEMIES);
+        append(&p,"\npresentation_hold_fields=");number(&p,BL_SCENE_HOLD_FIELDS);
+        append(&p,"\nstage_loop=");number(&p,miss_stage_loop);append(&p,"\nstage_valid=");number(&p,miss_stage_valid);
+        append(&p,"\nheld_changed=");number(&p,held_changed);append(&p,"\nheld_unchanged=");number(&p,held_unchanged);
+#if BL_C64_PROFILE
+        append(&p,"\nperf_errors=");number(&p,bl_perf_value(-1,0));
+        append(&p,"\nperf_overhead_32_pairs_lines=");number(&p,bl_perf_value(-1,1));
+        for(n=0;n<BL_PERF_SLOTS;n++){
+            int k;append(&p,"\nperf_");number(&p,n);append(&p,"=");
+            for(k=0;k<5+BL_PERF_BINS;k++){if(k)append(&p,",");number(&p,bl_perf_value(n,k));}
+        }
+#endif
         append(&p,"\nchip_available_before=");number(&p,free_chip_before);
         append(&p,"\nexpansion_available_before=");number(&p,free_slow_before);
         append(&p,"\nchip_largest_before=");number(&p,chip_largest_before);
@@ -1072,8 +1374,13 @@ restore_os:
         append(&p,"\nsource_dma_backend=2\nsource_dma_image_bytes=");number(&p,BL_SOURCE_DMA_BYTES);
         append(&p,"\nsource_dma_changes=");number(&p,source_dma_changes);
         append(&p,"\nsource_dma_faults=");number(&p,source_dma_faults);
+        append(&p,"\nvic_compare_errors=");number(&p,vic_compare_errors);
+#if BL_SOURCE_WORLD_TEST && !BL_SOURCE_PERF_TEST
+        append(&p,"\nsource_actor_fixture_cases=");number(&p,BL_SOURCE_ACTOR_CASES);
+        append(&p,"\nsource_actor_fixture_failure=");number(&p,source_actor_fixture_failure);
+#endif
 #if BL_AUTOTEST
-        append(&p,"\nsource_dma_fixture_cases=");number(&p,BL_SOURCE_DMA_FIXTURE_CASES);
+        append(&p,"\nsource_dma_fixture_cases=");number(&p,BL_SOURCE_WORLD_TEST?0:BL_SOURCE_DMA_FIXTURE_CASES);
         append(&p,"\nsource_dma_fixture_failure=");number(&p,source_dma_fixture_failure);
 #endif
         append(&p,"\nsource_clock_elapsed=");number(&p,source_clock_elapsed);
@@ -1094,8 +1401,12 @@ restore_os:
             append(&p,"=");number(&p,source_clock_miss_fields[n]);append(&p,",");number(&p,source_clock_miss_context[n]);
         }
 #if BL_AUTOTEST
-        append(&p,"\nnpc_recoil_fixture_cases=");number(&p,BL_NPC_RECOIL_FIXTURE_CASES);
+        append(&p,"\nnpc_recoil_fixture_cases=");number(&p,BL_SOURCE_WORLD_TEST?0:BL_NPC_RECOIL_FIXTURE_CASES);
         append(&p,"\nnpc_recoil_fixture_failure=");number(&p,npc_recoil_fixture_failure);
+        append(&p,"\nsession_fixture_failure=");number(&p,session_fixture_failure);
+        append(&p,"\nspawn_fixture_cases=");number(&p,BL_SOURCE_WORLD_TEST?0:SPAWN_FIXTURE_CASES);
+        append(&p,"\nsession_wall_fixture_cases=");number(&p,BL_SOURCE_WORLD_TEST?0:BL_SESSION_WALL_CASES);
+        append(&p,"\nsession_wall_fixture_failure=");number(&p,session_wall_fixture_failure);
 #endif
         append(&p,"\nsource_audio_fields=");number(&p,source_audio_fields);
         append(&p,"\nsource_music_fields=");number(&p,source_music_fields);
@@ -1128,6 +1439,7 @@ restore_os:
         append(&p,"\ncia_miss_hsync=");number(&p,cia_miss_hsync);
         append(&p,"\ncombat_warmup_steps=");number(&p,BL_COMBAT_WARMUP);
         append(&p,"\ncombat_mode=");number(&p,BL_COMBAT_TEST);
+        append(&p,"\nsource_reader_page=");number(&p,bl_c64_read(0x17));
         append(&p,"\nenemy_spawns=");number(&p,world.spawns);
         append(&p,"\nenemy_edge_test=");number(&p,BL_ENEMY_EDGE_TEST);
         append(&p,"\nenemy_edge_checks=");number(&p,enemy_edge_checks);
@@ -1135,18 +1447,25 @@ restore_os:
         append(&p,"\nroom_tour=");number(&p,BL_ROOM_TOUR);
         append(&p,"\ntest_start_room=");number(&p,BL_TEST_START_ROOM);
         append(&p,"\nsource_profile=");number(&p,BL_C64_PROFILE);
+#if BL_ELECTRIC_TEST
+        append(&p,"\nelectric_checks=");number(&p,electric_checks);
+        append(&p,"\nelectric_mismatch_fields=");number(&p,electric_mismatch_fields);
+        append(&p,"\nelectric_max_streak=");number(&p,electric_max_streak);
+#endif
         append(&p,"\ncollect_frame_drops=");number(&p,BL_COLLECT_FRAME_DROPS);
         append(&p,"\ngate_test=");number(&p,BL_GATE_TEST);
         append(&p,"\ngate_checks=");number(&p,gate_checks);
 #if BL_AUTOTEST
-        append(&p,"\ncontact_fixture_cases=");number(&p,BL_CONTACT_CASE_COUNT);
+        append(&p,"\ncontact_fixture_cases=");number(&p,BL_SOURCE_WORLD_TEST?0:BL_CONTACT_CASE_COUNT);
         append(&p,"\ncontact_fixture_failure=");number(&p,contact_fixture_failure);
-        append(&p,"\nmovement_fixture_cases=");number(&p,BL_MOVEMENT_CASE_COUNT);
+        append(&p,"\nmovement_fixture_cases=");number(&p,BL_SOURCE_WORLD_TEST?0:BL_MOVEMENT_CASE_COUNT);
         append(&p,"\nmovement_fixture_failure=");number(&p,movement_fixture_failure);
-        append(&p,"\nsprite_fixture_cases=");number(&p,BL_SPRITE_FIXTURE_CASES);
+        append(&p,"\nsprite_fixture_cases=");number(&p,BL_SOURCE_WORLD_TEST?0:BL_SPRITE_FIXTURE_CASES);
         append(&p,"\nsprite_fixture_failure=");number(&p,sprite_fixture_failure);
-        append(&p,"\nclimb_fixture_cases=");number(&p,BL_CLIMB_FIXTURE_CASES);
+        append(&p,"\nclimb_fixture_cases=");number(&p,BL_SOURCE_WORLD_TEST?0:BL_CLIMB_FIXTURE_CASES);
         append(&p,"\nclimb_fixture_failure=");number(&p,climb_fixture_failure);
+        append(&p,"\nmoving_net_fixture_cases=");number(&p,BL_SOURCE_WORLD_TEST?0:BL_MOVING_NET_CASES);
+        append(&p,"\nmoving_net_fixture_failure=");number(&p,moving_net_fixture_failure);
 #endif
         append(&p,"\nheld_image_fields=");number(&p,held_images);
         append(&p,"\ndrawn_image_fields=");number(&p,drawn_images);
@@ -1159,6 +1478,10 @@ restore_os:
         append(&p,"\nc64_room_revision=");number(&p,bl_c64_revision());
         append(&p,"\ncapture_color15=");number(&p,capture_color15);
         append(&p,"\ncanvas_residue_bytes=");number(&p,capture_residue);
+        append(&p,"\ncanvas_residue_hud=");number(&p,residue_hud);
+        append(&p,"\ncanvas_residue_scene=");number(&p,residue_scene);
+        append(&p,"\ncanvas_residue_pending=");number(&p,residue_pending);
+        append(&p,"\ncanvas_residue_unexplained=");number(&p,residue_unexplained);
         append(&p,"\npose_yamo=");number(&p,actor_pose_seen[0]);
         append(&p,"\npose_ninja=");number(&p,actor_pose_seen[1]);
         append(&p,"\npose_bruce=");number(&p,actor_pose_seen[2]);
@@ -1173,6 +1496,18 @@ restore_os:
         append(&p,"\nroom_load_events=");number(&p,room_load_events);
         append(&p,"\nroom_load_fields=");number(&p,room_load_fields);
         append(&p,"\nroom_load_max_gap=");number(&p,room_load_max_gap);
+        append(&p,"\nroom_load_test=");number(&p,BL_ROOM_LOAD_TEST);
+        append(&p,"\nroom_reuse=");number(&p,BL_ROOM_REUSE);
+        for(n=0;n<4;n++){append(&p,"\nroom_reuse_stat_");number(&p,n);append(&p,"=");number(&p,bl_c64_reuse_stat(n));}
+        for(n=0;n<5;n++){
+            append(&p,"\nroom_work_sum_");number(&p,n);append(&p,"=");number(&p,room_work_sum[n]);
+            append(&p,"\nroom_work_max_");number(&p,n);append(&p,"=");number(&p,room_work_max[n]);
+        }
+        for(n=0;(ULONG)n<room_load_events && n<32;n++){
+            append(&p,"\nroom_event_");number(&p,n);append(&p,"_id=");number(&p,room_event_id[n]);
+            append(&p,"\nroom_event_");number(&p,n);append(&p,"_work=");number(&p,room_event_work[n]);
+            append(&p,"\nroom_event_");number(&p,n);append(&p,"_check=");number(&p,room_event_check[n]);
+        }
         append(&p,"\ncombat_hits=");number(&p,world.hits);
         append(&p,"\nenemy_defeats=");number(&p,world.defeats);
         append(&p,"\nplayer_deaths=");number(&p,world.player_deaths);

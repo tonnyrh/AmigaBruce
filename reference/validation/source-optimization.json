@@ -1,0 +1,342 @@
+{
+  "date": "2026-10-27",
+  "status": "measured_local_contact_registers_realtime_open",
+  "method": "Separate native actual-PAL source-contact/VIC/presentation pilots; idle-input invincible room1, historical pairs preserved",
+  "first_pilot": {
+    "old_active_fields": 4690,
+    "new_active_fields": 2827,
+    "active_time_reduction_percent": 39.723,
+    "old_vic_mean_lines": 160.408,
+    "new_vic_mean_lines": 77.055
+  },
+  "contact_pilot": {
+    "old_active_fields": 2827,
+    "new_active_fields": 2644,
+    "active_time_reduction_percent": 6.473,
+    "old_align_mean_lines": 61.572,
+    "new_align_mean_lines": 38.26
+  },
+  "presentation": {
+    "old_drawn_images": 2,
+    "new_drawn_images": 360,
+    "active_fields": 2857,
+    "decision_deadline_fields": 3,
+    "hard_realtime_deadline_met": false
+  },
+  "m68k_vic_round": {
+    "old_active_fields": 2857,
+    "new_active_fields": 2325,
+    "active_time_reduction_percent": 18.621,
+    "old_audio_missed": 210,
+    "new_audio_missed": 96,
+    "drawn_images": 360,
+    "vic_compare_errors": 0
+  },
+  "visibility_contact_round": {
+    "old_active_fields": 2325,
+    "new_active_fields": 2085,
+    "solo_active_fields": 1564,
+    "drawn_images": 360,
+    "old_audio_missed": 96,
+    "new_audio_missed": 207
+  },
+  "local_contact_registers": {
+    "old_active_fields": 2085,
+    "new_active_fields": 2014,
+    "old_row_mean_lines": 41.361,
+    "new_row_mean_lines": 36.21,
+    "old_audio_missed": 207,
+    "new_audio_missed": 176
+  },
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "all_rooms_profiled": false,
+  "realtime_accepted": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/optimization-2026-10-27/baseline/manifest.json",
+      "sha256": "dc2efc7523a60f280bb61f567c2bc52ed71a8010703833dfb93a2b004e33010d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-profile/identity.json",
+      "sha256": "ccd1c2cc66f0edc97035066a06be22af332bafb91d1289022f8ab27bc8246c02"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-profile/native.txt",
+      "sha256": "fd92a4c33767204cba54935fc4aa210d4b611c374cb4ec3ca1850af8b897364e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-profile/native.json",
+      "sha256": "8256a79e8c12f9466609ec4df9724212028e93ac88d487271ae19c1b6fa3905e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-timing/identity.json",
+      "sha256": "62e627d2720240510b438c606d1d5e03b3f4bb6eb435ca6985c73a7bc8711725"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-timing/native.txt",
+      "sha256": "c5dce3e091b48f668839b8ae2c13c67f3ec9a4ad1d5f153257c063de6b0cea2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-timing/native.json",
+      "sha256": "0f28a2fc487089001561d7183a8f33c1baf69e0deb27f79133874b1d7b9144a3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-profile/identity.json",
+      "sha256": "c0170e510b5821881bb68cb3f31c5cd2c5a8795faba266b2da4e6e11101d42ec"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-profile/native.txt",
+      "sha256": "d427e9a49434a5fe9b8b8e4128cc1fd1e7abb68b7357d660686f1911b05e68db"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-profile/native.json",
+      "sha256": "3093b11841559d46c610a01eb45de9cab3ed53f05c27cf2fc41cae8d21eb76b1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-timing/identity.json",
+      "sha256": "8bc36db98c80237754a1b60c2a836598fe86edbf4c32cf8c3b686ee1f56e5efd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-timing/native.txt",
+      "sha256": "616b495135fa7283bc2d2e88dce6ffcd8b2c436dbe8898f3c83795c6250ae53d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-timing/native.json",
+      "sha256": "31e8f3b0dca15086c53e0350f827bdd6f3e02fa250d21ce0113f929557763bfd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-before-profile/identity.json",
+      "sha256": "ef93ef25e60451f8388045df22aacdf67f07fdb0065934fa00e7fbcc8b1ff303"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-before-profile/native.txt",
+      "sha256": "354b57e958020c211e934636827e1e4b9a804111b0934174be10ee6857ae7a25"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-before-profile/native.json",
+      "sha256": "5ab8ac6216f60fb861371f176c3a68af7c2a3aec31726c406b8199dd782653e9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-before-timing/identity.json",
+      "sha256": "048c2632e952c3afe06e055bc6f3842020334c79fdef1fc42909c13dba4dc1d6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-before-timing/native.txt",
+      "sha256": "a8fc9054c2e0d0804e17dcd931d8945211b32d202f1dfc80e25fae1453148e12"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-before-timing/native.json",
+      "sha256": "31e8f3b0dca15086c53e0350f827bdd6f3e02fa250d21ce0113f929557763bfd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-after-profile/identity.json",
+      "sha256": "960678e4eef7487137ee102d8328e5d5f0c8ac2aa8a581882a7b66fe0ec0c908"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-after-profile/native.txt",
+      "sha256": "533de10620c6f404bd3559216f72e5b73ce3f0358e39cee5799287091fb6ac07"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-after-profile/native.json",
+      "sha256": "a297d62187f3745508ccdfed9be854ee1a1667de39b4902078ab518d8db7c594"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-after-timing/identity.json",
+      "sha256": "31a9aa12625d90b4e771b57c494b8aeb309785cfb881e1bca65ff0023b4f2094"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-after-timing/native.txt",
+      "sha256": "60854419153aa01a73718c5e3efa6871d5e9c0e5d5ae5346c9036e0fea809504"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-after-timing/native.json",
+      "sha256": "180c15eac1984f2c38da4a5925489a712305a11075859512ef0f7ecd0045db71"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/present-after-timing/identity.json",
+      "sha256": "e0ce5325a6dbee77a87e78a176a82361bcc7b30b5ebe847479f093086c03436f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/present-after-timing/native.txt",
+      "sha256": "2ce25eb5adad940be15e98d848abbb3aab868b13326ba205df463ae08f25b419"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/present-after-timing/native.json",
+      "sha256": "f16a4f2e47c48ef453dd3bd502484f728ac242f13c4a411e5f48436f2ef884e3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-breakdown-profile/identity.json",
+      "sha256": "e7e5ca17a59bd2b97c0bf925ad08db81ffce6eb70ab8f7db858fa3a1ea524ec9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-breakdown-profile/native.txt",
+      "sha256": "87b1275c886ecd25174d5c3e77d31ff8bb004ac24c5f661811c9df9a873b93a6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-breakdown-profile/native.json",
+      "sha256": "a12b9bbdca0faccc5fe610f514814d003add129c21d9af3f242ec9b64393f578"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-final-timing/identity.json",
+      "sha256": "84569fc0fb73fdc3517f2877716e10a1a80792b337713910feffa1f73a6045cb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-final-timing/native.txt",
+      "sha256": "1da668afc986d76fa17ded492427c4e55c68345781b84d1ce5cc1425c465b921"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-final-timing/native.json",
+      "sha256": "eef9702951010a7b26d23ef335cb854cf15632aa1ab8709752c50f24c80c0f12"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/visibility-final-all-timing/identity.json",
+      "sha256": "21015e8208867b78cb64a5334e4f982aa62eb3f30e18d2ddedab0dfca7fda39e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/visibility-final-all-timing/native.txt",
+      "sha256": "358cfc7908eb3f96903a7499181726e20f61818b98bca275e8782bcc82bb1aba"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/visibility-final-all-timing/native.json",
+      "sha256": "cfb327caf0204a4016f7f15df597656e00eaa09816c1a17565bd8f8f92fc20fe"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/visibility-final-none-timing/identity.json",
+      "sha256": "e54c46a5e408de64f44f6c0c4ecafda97f27b9212346b7190fa4019771b1bc01"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/visibility-final-none-timing/native.txt",
+      "sha256": "674e2d962189ed8b9220521b0fcc0afd7cc05f458088d9762af399bc5ebc3a78"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/visibility-final-none-timing/native.json",
+      "sha256": "e64470416d46c7fb2536c760beafc5ad880b8e5d62f1a87faff3cf9be2e6589c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-before-profile/identity.json",
+      "sha256": "fa43992693f8394438a1d346f43348d8c2100d95a7c36c3090563102486da6ce"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-before-profile/native.txt",
+      "sha256": "56d89814d84b5f10335afa27e73caf691a030c769025265567ae2010fb75c197"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-before-profile/native.json",
+      "sha256": "a6528c4ed0dc22d49ca4e51124a6d77e54cc93888a25a32103b2a9612c0baaf7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-after-profile/identity.json",
+      "sha256": "8a7a47a0cb562628c330de4d73f709d2a136d2ac0d7708623919452a08d4c922"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-after-profile/native.txt",
+      "sha256": "5938ad1b0b0462b61c3d3ec938194061b411b71fd9b7f01c4c240f4df1613b36"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-after-profile/native.json",
+      "sha256": "458ac5b5b3f758af49b92e9b8f8c488f82d9a4420e7eb0cb090cc303c4c3acce"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-local-o2-timing/identity.json",
+      "sha256": "77972b75179f80c3116fffcf09b83a35691568ff45bd5a33967ebe7de817889a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-local-o2-timing/native.txt",
+      "sha256": "aacf861eaaa99419cf167c320d3a0c2436c2ff693d3883dc4f229f42aca521a7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-local-o2-timing/native.json",
+      "sha256": "ca32f993acf1dea30a8f3fca7db2d6a5de3cdec948562c23ed33a5cfdd6f9e42"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-baseline/manifest.json",
+      "sha256": "b1e45a4dbb17235fb34def8438f9ce0d8bd5d1a154794090afeb28c4a7e71eb7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-profile/c64_rooms.c",
+      "sha256": "9a2e9e94d294b3e2e8938f16df9e362810a62badf9bc073a5dd4a91499652f00"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-timing/c64_rooms.c",
+      "sha256": "9a2e9e94d294b3e2e8938f16df9e362810a62badf9bc073a5dd4a91499652f00"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/rows-baseline/manifest.json",
+      "sha256": "68215a2b42a314d34ac69296c6f50147418434c436aaf172d1390903212f0a4e"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_REPORT.md",
+      "sha256": "acb5723372d0b3c91f3ac660a1db18ae3b434b24469e98cafd35690699c8531d"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
+      "sha256": "7c43859b3872c91385e57b7b9cef8da04a262b8ea1166c4e3f464d1859e4a09a"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "b87b7857d9a5db3d498b324c6cdf1a9ff47095619f0d008edec4e78080162446"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "4b401e7a1e93e4ee5936e2e88f4e716a663f73fb4236f9259387182a01f1ffb8"
+    },
+    {
+      "path": "reference/validation/source-vic-host.json",
+      "sha256": "77cada8e07e7c9d29532606b5df2f089b4b08590039f9af4833e3a7529c38708"
+    },
+    {
+      "path": "reference/validation/source-contact-host.json",
+      "sha256": "f6c3ad7dc3d0a0a0af56a8b5f933e7c69b76ebfb399f97a08283b876a5d5b9b5"
+    },
+    {
+      "path": "docs/CONTACT_OPTIMIZATION.md",
+      "sha256": "2e6f6f3bca6059ec32e55144afcde97844052de2bc6ac04383956a41fc5daa5d"
+    },
+    {
+      "path": "docs/VIC_NATIVE_OPTIMIZATION.md",
+      "sha256": "950e173491222814bd33c2c92f9c1b984ab41069e8bbdfddd5749d8261400786"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4ef57a72b3cf174d7879354d323044ac20b44a0e66852741fdc6132386f5e327"
+    },
+    {
+      "path": "docs/YAMO_VISIBILITY_PERFORMANCE.md",
+      "sha256": "0185e4a4b11048f5f9e0214017e5d5ecb2dae699f8de380337083b99ebf0a7fe"
+    },
+    {
+      "path": "docs/CONTACT_REGISTERS_OPTIMIZATION.md",
+      "sha256": "77af1f6ef33987d991f1c999e3d354a4a69a88a2bec1c794d95b6401c75ce61d"
+    },
+    {
+      "path": "reference/validation/source-visibility-host.json",
+      "sha256": "b9cdb514ac731f926ec02e31fecaa9d923968f7738634ff968672317be4867af"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/actor-o2-candidate-timing/rejected.json",
+      "sha256": "93a3922ad0db6b2c77022af6aac4e07af7cb0a173a9b3e4fbad672e06f5d370f"
+    },
+    {
+      "path": "tools/verify_source_optimization.py",
+      "sha256": "efa9a420006e77885dfc2af2d8a40548854723c953735a36226492a51ed3dfde"
+    },
+    {
+      "path": "tools/summarize_source_performance.py",
+      "sha256": "a2b98c5ae3a9c9c3fbf0883378d435a7182eedbdb39be14e93ce236a1f784641"
+    },
+    {
+      "path": "test-source-performance.ps1",
+      "sha256": "172ed294cbecbbfe2b5d493c030fc1924512a6a8168595e9049cbd0e7940032d"
+    }
+  ],
+  "limits": [
+    "Single benchmark pair; source-field/input phases differ as actual execution time changes",
+    "Rendering more images costs time; sound gaps, scene residue and hard real-time acceptance remain open",
+    "No original-raster or physical-A500 acceptance"
+  ]
+}

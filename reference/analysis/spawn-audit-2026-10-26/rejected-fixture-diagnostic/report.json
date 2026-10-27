@@ -1,0 +1,22 @@
+{
+  "status": "rejected_not_accepted",
+  "fixture_failure": 1101,
+  "chip_largest_loaded": 44440,
+  "reason": "New entering field was uninitialized in older stack-allocated fighter fixtures. Code generated for native diagnostics also exceeded the49152-byte reserve.",
+  "correction": "Initialize complete fixture fighters; size-optimize pre-hardware fixture functions and bound ordinary R01 lossless capture buffer to16KiB. Retain image hash and memory gates.",
+  "natural_playthrough": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/rejected-fixture-diagnostic/autotest-1.txt",
+      "sha256": "7b7840f135e7d3d64a0d9a37e11d7fb62f01064ea3686ea4bb50e05197094d31"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/rejected-fixture-diagnostic/bruce_test.exe",
+      "sha256": "1cd90d937e4534ba230b1a0c4e023dbbcb42793675d6ae13c50a2d46ee0917f6"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/rejected-fixture-diagnostic/spawn-native2.log",
+      "sha256": "88166a1e4b2e58b43e81290ff12fa20105c96f13126f4acadad08fd7673cf418"
+    }
+  ]
+}

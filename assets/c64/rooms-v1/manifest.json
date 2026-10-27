@@ -7,7 +7,7 @@
   },
   "edition_verified": false,
   "room_count": 20,
-  "instructions": 2392,
+  "instructions": 2839,
   "entries": [
     "$0A9B",
     "$0AD7",
@@ -15,10 +15,27 @@
     "$0B51",
     "$0B58",
     "$0B5F",
+    "$0B8E",
+    "$0BF0",
+    "$0BFA",
+    "$0C4D",
+    "$0CD5",
+    "$0D0F",
+    "$0D42",
+    "$0D46",
+    "$0D76",
+    "$0DA4",
+    "$0DB1",
+    "$0DF8",
+    "$0E21",
     "$104B",
     "$10AF",
+    "$10B5",
     "$10C5",
+    "$10D0",
     "$10E0",
+    "$1131",
+    "$1145",
     "$1159",
     "$17E2",
     "$199F",
@@ -30,10 +47,15 @@
     "$2509",
     "$2C70",
     "$2D43",
+    "$2DDD",
+    "$2E1C",
     "$2E29",
     "$2F8E",
     "$2FD6",
     "$2FEF",
+    "$3001",
+    "$3048",
+    "$304B",
     "$30D4",
     "$312C",
     "$3175",
@@ -137,7 +159,7 @@
     "$4794",
     "$485B"
   ],
-  "instruction_bytes_sha256": "f288e4192eb7d12c279e0b32acd19685497564024e42e4f01edc0202045e3a3c",
+  "instruction_bytes_sha256": "2800403d8d7a227e074f799cedc56dc61ba2f6bdbe609882f8d3057b9dd65ca2",
   "boundaries": {
     "$2F8E": "Native room transition request; no C64 stack reset/IRQ takeover",
     "$17E2": "Native decoded string writer; source stack/register/final flag effects retained",
@@ -190,11 +212,11 @@
   "generated_outputs": [
     {
       "path": "core/c64_room_data.h",
-      "sha256": "fbe262f58205c6429c311d67bf7ea4bd1d12fda54c754c223e091eac2d4dbf7f"
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
     },
     {
       "path": "core/c64_room_programs.h",
-      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616"
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
     }
   ],
   "assets": [

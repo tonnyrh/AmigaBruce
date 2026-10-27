@@ -1,0 +1,28 @@
+{
+  "label": "contact-running",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "bd9a9b61741c7258a6ce72928e69417e21fa40449991a96ca2b55e65b2cd71e4"
+  },
+  "source_room": 1,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    354880,
+    354920,
+    354960,
+    355000
+  ],
+  "source_music_fields": 2050,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-running.bpl",
+      "sha256": "7c2ed6c679ade74aec94fdbddaeb65b7e668e06e7f53ddeca51926d867480e45"
+    },
+    {
+      "path": "docs/images/session-contact-running.png",
+      "sha256": "3959192ec9935b0fde3951081259fc4075da908dfc12111471686a02cfa08015"
+    }
+  ]
+}

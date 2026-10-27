@@ -1,0 +1,529 @@
+{
+  "status": "pre_milestone_work_snapshot",
+  "files": [
+    {
+      "path": ".tmp/c64-ai-test/ai.dll",
+      "sha256": "2ea26e0844461db79ab4e7a20253f82c39f12c31c4ce44cb6c49d421c7c79221"
+    },
+    {
+      "path": "README.md",
+      "sha256": "248e61fa755cfcd35d3fcdb53cbc47c2b6047ca156a7afe05f76d1cd1187e9ea"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "d6202014bb867a97c8b33dbd53451e461451885c1d650676562490a11200c75e"
+    },
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "9bf13052a3b140541f4f7b2aeee03677eaa9c6e9222691f71b3109645f71cd7b"
+    },
+    {
+      "path": "amiga/c64_sprite_data.h",
+      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203"
+    },
+    {
+      "path": "amiga/intro_audio.h",
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027"
+    },
+    {
+      "path": "amiga/intro_audio_data.h",
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "7d30ce2c8bd4216f5166ca57be41ff18847824fd884570c69ef8cf7cc28bc5f2"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "cef42be9f82eb3c58133710940e69879944ae119a0c91a030df4ae00fb1f2fe1"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "5a2a0f93ab681702ee8f057b1c7edc3c267c4c092fb08d4fbd12e8db7ce8ed86"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "37bd23435653d3766183c06cbcf4be2493c9a24793e2c2a97875bae041276e80"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.map",
+      "sha256": "df960033c73fe1e9f8d097a7345de257204af79daf7dc445f26c54b21bbd4a18"
+    },
+    {
+      "path": "amiga/out/bruce_test.adf",
+      "sha256": "9bdc16090813dfe42b6c30b022c8e67298e37636d146eb619daf831296efaa94"
+    },
+    {
+      "path": "amiga/out/bruce_test.elf",
+      "sha256": "ab6f0a1fd4cbd83900b9b5fd6f855db924b93812fb01520c244ad02168daa8d4"
+    },
+    {
+      "path": "amiga/out/bruce_test.exe",
+      "sha256": "8557bf53b4151d2ee83791552cdb43a8ebf9b1a65758a796bbf43d57cbe509da"
+    },
+    {
+      "path": "amiga/out/bruce_test.map",
+      "sha256": "aebe15dea690be98dd50d216e7ad511e355a5ba7a8f327a94aa7e39e9688cf1e"
+    },
+    {
+      "path": "amiga/runtime.c",
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "da96632904302a8054d65e2075720a95152d9df596f9cce8517c17f8392b7b0a"
+    },
+    {
+      "path": "amiga/start.s",
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/manifest.json",
+      "sha256": "2d60ad95acc412288a4e3f005573379b643d7fec453fdf331b9d5e318874ff4f"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/waveforms.pcm",
+      "sha256": "fc1020350cc4c0106f05b463928fbc2e8067bf5dbcb2cf546506c5328cd9c89b"
+    },
+    {
+      "path": "assets/audio/intro-v1/generation.json",
+      "sha256": "c7e1678bba5ef6245b38f00aaee9bbaf00add7e900a45633935a8afddd3df845"
+    },
+    {
+      "path": "assets/audio/intro-v1/kiai-source_0.wav",
+      "sha256": "e8eaa692c067dc62fd1ed4621d776ebf03878d54f36779eceb782aca2ec4c930"
+    },
+    {
+      "path": "assets/audio/intro-v1/manifest.json",
+      "sha256": "7c07beb139d0fefb6656f45d6be3b343a4b72bb835665bc682c1518f1c9765af"
+    },
+    {
+      "path": "assets/c64/rooms-v1/manifest.json",
+      "sha256": "755fa3bd3df05ec110e112e1cb205065eb5118a6925115e61ffb3ffda1250619"
+    },
+    {
+      "path": "assets/c64/sprites-v1/manifest.json",
+      "sha256": "6eec4a328b4b3b05cb20ed37c18b1c8aad3b896d5114dff4ed6fa135399bb298"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "8a63248355b77fc9a41ca12315509a7f893522e31bf6eca28d957688047733d5"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "6fcbf402b25472c7701f71484eeb047cf4dd0e83ad7af5d0c95e42b0ee6383cf"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "00436908bea47f0b2a3cf64a7555c3ba298f6782d4d3d0da3e530adf8cd42770"
+    },
+    {
+      "path": "core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "59df52babdba8330b78ffcabcda466af0f37f6200251297716d5b2dba8542bad"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "3b3d695a2e93b274ed6f3ea2338ec8bf054f5de32a263bbd4acc3eb15a3a7eb9"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a4faab307fd692995a67deee3900a694c11ef7c8fd13a5e3e1b8b05b37024bb8"
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "ec51965d06c9c133257616f4b9c1c51a9c9a14ed0fba0d903113f732c95c68a1"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "d51ee2ee59787459bd955f7071c4e063ade1d79ba6cefd14cc14f96aa41eaec7"
+    },
+    {
+      "path": "core/session.h",
+      "sha256": "58fce65263325d704ac39d8ccfa862b367ad85b8316cf90f9f4f477841bc45ef"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/source_climb.c",
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b"
+    },
+    {
+      "path": "core/source_climb.h",
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433"
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+    },
+    {
+      "path": "core/source_dma.h",
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "edb5aa88cc30672c32789890ab4d53ed5c50e894e4cc1f4daf1058f6c5566dc8"
+    },
+    {
+      "path": "docs/C64_AI.md",
+      "sha256": "aeb8600a4a33dd9e16da0e0064079b2b204a07e72a2e1e2381d4a8cd622cfed7"
+    },
+    {
+      "path": "docs/ENEMY_SPAWNS.md",
+      "sha256": "42b641f003ae2ccb8f287eb67ceb76b6965516d0baa19c2b43fa7345ea5a2909"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "sha256": "086eacdf1c34b3e18b13a78c57f0fd738d0a03d7e9cb05470cd678b72302ae9e"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "sha256": "79341ea3a6daff5581f4cb1704e0183e7c96bb942c2bf6836c9ba2cfc460d60d"
+    },
+    {
+      "path": "reference/analysis/ai-audit-2026-10-25/report.json",
+      "sha256": "f72424cc6da7d89f096be2472f6127f7af5f07c760bea3fca5c1ae0266455eca"
+    },
+    {
+      "path": "reference/analysis/ai-audit-2026-10-25/source-disassembly.txt",
+      "sha256": "eb1b51f7827f8e518994a7542207914cb9971fa9e0953c60caa4a1e22d7a4b38"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/native-first-run.json",
+      "sha256": "b71aa5f2969220098e9ef791f4a0da409ca964c81b609c53e994215165702415"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/native-first-run.txt",
+      "sha256": "154c6ec0fc96cc0304b1d41b3f3df9325022115620607576a03c7cc435b1e6e4"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/native-first-validation.json",
+      "sha256": "7ad7b1b267634134db9b20c33a9f26cef3e337188f04913c39bd75a4c24c7d23"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/native-second-run.json",
+      "sha256": "a2e8447926ae237ec45236199bb8699aac0065bcb5514116b7c0543580c0c526"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/report.json",
+      "sha256": "cb3f4bfd14553d70418c92234e3fcb47054f505490198e34652f69824269548e"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/room-table.md",
+      "sha256": "a54151c7ad0d01071bed00086dbce0421e7cd8aa7fc7496ab894028b79dcf2c5"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/source-disassembly.txt",
+      "sha256": "ee7a52bd1a6befa2910009d214bd7e85d6c1a7477f86d388af96004677b76987"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/world-controls.json",
+      "sha256": "1ff8617feb8875a3bab077ed1ea03af1290c17529e6fbfa4f5c57fa572c36cd9"
+    },
+    {
+      "path": "reference/validation/a500-c64-combat-diagnostic.json",
+      "sha256": "128f65f651890cf0b8015e944c48ee2a222253e5678d5d8ec5433c9004fb19c3"
+    },
+    {
+      "path": "reference/validation/c64-core.json",
+      "sha256": "b7f04fb2b81f802b8f8ba2bae657344eb40ede36c38cd886097c4c8d583cc8c2"
+    },
+    {
+      "path": "reference/validation/c64-room-runtime.json",
+      "sha256": "642b07b8a1fe716bebaaa6127fef80811a78fa031ae6c465610d5823858ba73b"
+    },
+    {
+      "path": "reference/validation/spawn-delivery.json",
+      "sha256": "42fce157714564bb1f4789cc9fa2b6461689d0a17a289b25fe34aa688b882484"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "sha256": "a0779777a9bdeed635696d561abec7fdd07fa205769c6298799517f53bc07d46"
+    },
+    {
+      "path": "test-bombs-entry.ps1",
+      "sha256": "6268c387694a30a4a8b6af34ed1f367d2e7018cad3eedf0fb447348134018ba8"
+    },
+    {
+      "path": "test-c64-ai.ps1",
+      "sha256": "34b3fbef5ac54e9373a9d19aa3110c4bef882acf7f665ee16327a0ab03a7407d"
+    },
+    {
+      "path": "test-c64-sprites.ps1",
+      "sha256": "960d8223c53f3926c9f92d1b4fda3c1caa710d1622c10197874182091fc5b19a"
+    },
+    {
+      "path": "test-core.ps1",
+      "sha256": "f037b200803ac93d7d4375a30870e34a26f0fd2af881e0876c50e569bb420b90"
+    },
+    {
+      "path": "test-moving-net.ps1",
+      "sha256": "7fe38e10e401a1c58543a4f4be4efb0f192b7a640608acc60694625c9469c987"
+    },
+    {
+      "path": "test-ninja-wall.ps1",
+      "sha256": "073695107b922560a8339491ed02a673de92f1083e961922eaceecd79dda0365"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "5328a936a3da89cbf5b746d58aa8b29254b3870091277db0692254723cdd98e2"
+    },
+    {
+      "path": "test-room8-blasts.ps1",
+      "sha256": "24dcc5a48afc788efe2251fe822ad9701cdab0ed977050ec92809c3a79982d76"
+    },
+    {
+      "path": "test-source-climb.ps1",
+      "sha256": "1c84db5396f6f3c9024a05db35b1d116c76183c14aa968d8bfe7a425022e994b"
+    },
+    {
+      "path": "test-spawn.ps1",
+      "sha256": "12190fe3dd600e0717cf02ed8fcd6249e8fe3ffb92a775e7f39fb7e29aa0f277"
+    },
+    {
+      "path": "tests/ai_adapter_bridge.c",
+      "sha256": "6bd4a3bb2928ac6b037e2d125d7cc82a7a6c2297a916f877a4935e0bdbefc8d5"
+    },
+    {
+      "path": "tests/bombs_entry_fixture.h",
+      "sha256": "4ec76eb26a757d10accbe3ebd279eb5f4dd057f728ae648d258473cf6ac3416d"
+    },
+    {
+      "path": "tests/c64_rooms_test.c",
+      "sha256": "7b115d4c81732be222e5e65f6dd35447e2886b3139059063a6d74561390219b2"
+    },
+    {
+      "path": "tests/cheat_progress_fixture.h",
+      "sha256": "ed3cac5b18f84474177afa5fd6b76b84b94a546c78bd44eb82621578d55f0e26"
+    },
+    {
+      "path": "tests/climb_fixture.h",
+      "sha256": "61374c88d69342ed456fb96999296cbcf136318ea06357bff573d9840a9a9c40"
+    },
+    {
+      "path": "tests/contact_fixture.h",
+      "sha256": "d53e35a6f98872b9b2ae57883be30a9185fb67b46b52df87cb05084e0403ea28"
+    },
+    {
+      "path": "tests/gate_fixture.h",
+      "sha256": "e7a1b9e14a60f8d7abb2da1285e382aabc96e94c290317cf098aded8f35a288b"
+    },
+    {
+      "path": "tests/movement_fixture.h",
+      "sha256": "ee4a38d83d59cef1cc744cef12b482379d7a1151f34e547892f46cecafabff3f"
+    },
+    {
+      "path": "tests/moving_net_fixture.h",
+      "sha256": "81f3c8d545d21d8fd6e3634c684e0673ca627982cacf1bf2e7712d89fb474d4a"
+    },
+    {
+      "path": "tests/ninja_wall_bridge.c",
+      "sha256": "f649111d35e797059b5709b815f9381c99540229295930b4e9e35267111a2103"
+    },
+    {
+      "path": "tests/ninja_wall_fixture.h",
+      "sha256": "d062aa470a87dfbb9932fe0c3ea6ba3abca02335a81cc9d7981edb5fec2deab6"
+    },
+    {
+      "path": "tests/npc_recoil_fixture.h",
+      "sha256": "d6651f8beb3333b53af30f0ffe02c3901b74fab5437cf9c648ba2216e781145f"
+    },
+    {
+      "path": "tests/packed_capture.h",
+      "sha256": "3b3bfc9ac6451b91d47681dba1ea00de90cda701b604f26e7844f03005a0801a"
+    },
+    {
+      "path": "tests/room8_blast_fixture.h",
+      "sha256": "16552c8b2c03dd4f127c5f798badb14be33f3254d61d2c0f052cb2d81e7b08a0"
+    },
+    {
+      "path": "tests/room_fixture.h",
+      "sha256": "b373e036b51f383eaba2e312a9e6d6018cd768021d2589eafce45840a34235dd"
+    },
+    {
+      "path": "tests/session_fixture.h",
+      "sha256": "5b3fc2a2353f3553b233c92f2c8fba06cd41ad45e95ce0aa6a5c0d377120803c"
+    },
+    {
+      "path": "tests/session_wall_fixture.h",
+      "sha256": "c7c0c5036874255fd3797fd9108a7c22bfbec6736770d01344fea658ab0c54cc"
+    },
+    {
+      "path": "tests/source_dma_fixture.h",
+      "sha256": "a0badaf7bb633cde1745835d5ea3d9ce88e60ef0fa2735a0820c4824084d58c5"
+    },
+    {
+      "path": "tests/spawn_bridge.c",
+      "sha256": "99b81b89d048153839bf874d9ed2e30e768467d49d8aab79ea7f78c1e23dc630"
+    },
+    {
+      "path": "tests/spawn_fixture.h",
+      "sha256": "db91ce8bb9d1956c22a20e8b6aa52e84c7e8c7b14fe7895ce881fed3975aba93"
+    },
+    {
+      "path": "tests/sprite_fixture.h",
+      "sha256": "7bb591b6eec71c5d6ca366117324c09edf5ec8be43b3b5eba8d3a99baf6a9cc7"
+    },
+    {
+      "path": "tools/audit_bombs_entry.py",
+      "sha256": "61b26cb873107f5fe4c98994e4e2a942a0a24184335238917f3181b75140f98c"
+    },
+    {
+      "path": "tools/audit_c64_ai.py",
+      "sha256": "ed46e5a687124d6322b1be8f4a05bbe9aa34e02c339fcab8fbe73e747173a243"
+    },
+    {
+      "path": "tools/audit_moving_net.py",
+      "sha256": "060bd4842364df3a2cfc012fb469692b9c201438000e5abfb544aa4844f2140b"
+    },
+    {
+      "path": "tools/audit_ninja_wall.py",
+      "sha256": "47e5026d964b61d6957a291d4b50c5070f7b4df616005cd0e8f13d7f450ca93e"
+    },
+    {
+      "path": "tools/audit_room8_blasts.py",
+      "sha256": "2439b18409d39720f2566c69527f42c474e2643cfe4c680e91f0fa257b4bebaf"
+    },
+    {
+      "path": "tools/audit_spawn.py",
+      "sha256": "6f15e9ef4d9efa98978496abf099e621f4bc8a66a064c89442add6b493f8b80b"
+    },
+    {
+      "path": "tools/audit_spawn_world.py",
+      "sha256": "2a4c62aa44b58f86987e1bc764e184210aff95ed57af69da9c4e9f3daa549d9c"
+    },
+    {
+      "path": "tools/build_c64_audio.py",
+      "sha256": "e233890b1700200efe0eb3757e3ac1a95f221a2007c2218784099b1a9ba61275"
+    },
+    {
+      "path": "tools/build_c64_hit_masks.py",
+      "sha256": "4253cebe03fcf69014afc225e4459cb574721648f83a7b6960d619fbde899155"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "305804951f2e718a976d0ce14778a46eccac9f29800353801f97c2bb9c44ccee"
+    },
+    {
+      "path": "tools/build_c64_sprites.py",
+      "sha256": "a8e60cf9f9c8fc1a6acc0ffc6d129e1b15232900e0a0223f5b41372cbe6895d7"
+    },
+    {
+      "path": "tools/build_fighter_dma.py",
+      "sha256": "8282019910f73e054f395b88cdf350fd8398afa778c0dc1f5146a254786d4d44"
+    },
+    {
+      "path": "tools/build_intro_audio.py",
+      "sha256": "4f82259133a4d75dbd9dcb8dd7a1cab5fc8028c822c58a3f528e27d3dfe92e00"
+    },
+    {
+      "path": "tools/build_spawn_fixture.py",
+      "sha256": "d443c45487b6899402cae230ad5a52d2f12c0988cb304e569dc476c273f39faa"
+    },
+    {
+      "path": "tools/merge_spawn_native_runs.py",
+      "sha256": "df13f8e0cbdeeb4c54dce40b9f05dd01ac89467e4c871f8466864d0e1f75e40f"
+    },
+    {
+      "path": "tools/preview_planar.py",
+      "sha256": "5eee92bd8b71f3d091fa9ede5f40673a6242427df2ddeb256c2916ee455c7c25"
+    },
+    {
+      "path": "tools/verify_c64_candidate.py",
+      "sha256": "b8f4ede0a0be916514aae3ea4fdade2f157623629f5827a2970eed5aa76df87e"
+    },
+    {
+      "path": "tools/verify_c64_sprites.py",
+      "sha256": "fc85157571de9d4f9fdc1ce49435e41790d1e0d5d0c99c34bfa4d09ef903f76b"
+    },
+    {
+      "path": "tools/verify_intro_audio.py",
+      "sha256": "1360629bc7b7a2fc884ece4c9e2294524583427aa1256aa7ecb008bce154a0c5"
+    },
+    {
+      "path": "tools/verify_source_climb.py",
+      "sha256": "8545d70c795ca6af0f919c9e33476f88151b240bfe0b53157706acd4f9bd266c"
+    },
+    {
+      "path": "tools/verify_spawn_delivery.py",
+      "sha256": "94204ad7bae102ac651ea06a64c9325ad4caf90b1bbc0c7f22ff9582ee85077a"
+    },
+    {
+      "path": "tools/verify_spawn_native_report.ps1",
+      "sha256": "b33dd73f5ea733e73207d9df4fe3f9f4367242595748c39835a4c2a1d4a6b397"
+    }
+  ]
+}

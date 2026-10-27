@@ -1,0 +1,262 @@
+{
+  "snapshot": {
+    "path": ".tmp/25.10.2026.uss",
+    "sha256": "1e75f6a627e5b6e7697f3c385f80c24637297011e73027fd554c723289de3188",
+    "size_bytes": 224324
+  },
+  "snapshot_unchanged": true,
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "source_ram_address": "$C5BD60",
+  "room": 5,
+  "source_room_tick_anchor": [
+    218,
+    179
+  ],
+  "frame": {
+    "path": "docs/images/climb-snapshot-r05.png",
+    "sha256": "a304998fa258b5cf4f3a59cfdd1219d52cb1eb836d71e27e8ea675c934b11a23",
+    "method": "Reconstructed stored planar bitmap from matching Copper list",
+    "bitplanes": [
+      349160,
+      349200,
+      349240,
+      349280
+    ]
+  },
+  "chunks": [
+    {
+      "tag": "ASF ",
+      "offset": 0,
+      "size": 39,
+      "flags": 0
+    },
+    {
+      "tag": "CYCS",
+      "offset": 40,
+      "size": 32,
+      "flags": 0
+    },
+    {
+      "tag": "CPU ",
+      "offset": 76,
+      "size": 168,
+      "flags": 0
+    },
+    {
+      "tag": "CPUX",
+      "offset": 248,
+      "size": 30,
+      "flags": 0
+    },
+    {
+      "tag": "CPUT",
+      "offset": 280,
+      "size": 176,
+      "flags": 0
+    },
+    {
+      "tag": "DSK0",
+      "offset": 460,
+      "size": 217,
+      "flags": 0
+    },
+    {
+      "tag": "DSK1",
+      "offset": 680,
+      "size": 43,
+      "flags": 0
+    },
+    {
+      "tag": "DSK2",
+      "offset": 724,
+      "size": 43,
+      "flags": 0
+    },
+    {
+      "tag": "DSK3",
+      "offset": 768,
+      "size": 43,
+      "flags": 0
+    },
+    {
+      "tag": "DSD0",
+      "offset": 812,
+      "size": 3841,
+      "flags": 1
+    },
+    {
+      "tag": "DISK",
+      "offset": 4656,
+      "size": 29,
+      "flags": 0
+    },
+    {
+      "tag": "CHIP",
+      "offset": 4688,
+      "size": 372,
+      "flags": 0
+    },
+    {
+      "tag": "CHPX",
+      "offset": 5064,
+      "size": 60,
+      "flags": 0
+    },
+    {
+      "tag": "BLTX",
+      "offset": 5128,
+      "size": 238,
+      "flags": 0
+    },
+    {
+      "tag": "BLIT",
+      "offset": 5368,
+      "size": 75,
+      "flags": 0
+    },
+    {
+      "tag": "CHSL",
+      "offset": 5444,
+      "size": 203,
+      "flags": 0
+    },
+    {
+      "tag": "CINP",
+      "offset": 5648,
+      "size": 24,
+      "flags": 0
+    },
+    {
+      "tag": "AGAC",
+      "offset": 5676,
+      "size": 1036,
+      "flags": 0
+    },
+    {
+      "tag": "BPLX",
+      "offset": 6716,
+      "size": 304,
+      "flags": 0
+    },
+    {
+      "tag": "SPR0",
+      "offset": 7024,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "SPR1",
+      "offset": 7064,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "SPR2",
+      "offset": 7104,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "SPR3",
+      "offset": 7144,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "SPR4",
+      "offset": 7184,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "SPR5",
+      "offset": 7224,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "SPR6",
+      "offset": 7264,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "SPR7",
+      "offset": 7304,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "AUD0",
+      "offset": 7344,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "AUD1",
+      "offset": 7384,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "AUD2",
+      "offset": 7424,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "AUD3",
+      "offset": 7464,
+      "size": 37,
+      "flags": 0
+    },
+    {
+      "tag": "CIAA",
+      "offset": 7504,
+      "size": 61,
+      "flags": 0
+    },
+    {
+      "tag": "CIAB",
+      "offset": 7568,
+      "size": 61,
+      "flags": 0
+    },
+    {
+      "tag": "KEYB",
+      "offset": 7632,
+      "size": 27,
+      "flags": 0
+    },
+    {
+      "tag": "EXPA",
+      "offset": 7660,
+      "size": 32,
+      "flags": 0
+    },
+    {
+      "tag": "CRAM",
+      "offset": 7696,
+      "size": 42691,
+      "flags": 1
+    },
+    {
+      "tag": "BRAM",
+      "offset": 50388,
+      "size": 165270,
+      "flags": 1
+    },
+    {
+      "tag": "ROM ",
+      "offset": 215660,
+      "size": 107,
+      "flags": 0
+    }
+  ],
+  "limits": [
+    "Amiga snapshot contains the prior custom-art build",
+    "Source room tick coordinates do not identify every live BlGame field or failed input",
+    "Sequential comparison recreates controlled room5 states; it does not resume this USS"
+  ]
+}

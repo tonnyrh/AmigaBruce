@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-27",
+  "status": "first_measured_pilot_completed_realtime_open",
+  "method": "One unprofiled actual-PAL A/B pair and separate nested profile pair, idle-input invincible source-world room1",
+  "old_active_fields": 4690,
+  "new_active_fields": 2827,
+  "active_time_reduction_percent": 39.723,
+  "old_vic_mean_lines": 160.408,
+  "new_vic_mean_lines": 77.055,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "all_rooms_profiled": false,
+  "realtime_accepted": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/optimization-2026-10-27/baseline/manifest.json",
+      "sha256": "dc2efc7523a60f280bb61f567c2bc52ed71a8010703833dfb93a2b004e33010d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-profile/identity.json",
+      "sha256": "ccd1c2cc66f0edc97035066a06be22af332bafb91d1289022f8ab27bc8246c02"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-profile/native.txt",
+      "sha256": "fd92a4c33767204cba54935fc4aa210d4b611c374cb4ec3ca1850af8b897364e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-profile/native.json",
+      "sha256": "8256a79e8c12f9466609ec4df9724212028e93ac88d487271ae19c1b6fa3905e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-timing/identity.json",
+      "sha256": "62e627d2720240510b438c606d1d5e03b3f4bb6eb435ca6985c73a7bc8711725"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-timing/native.txt",
+      "sha256": "c5dce3e091b48f668839b8ae2c13c67f3ec9a4ad1d5f153257c063de6b0cea2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-timing/native.json",
+      "sha256": "0f28a2fc487089001561d7183a8f33c1baf69e0deb27f79133874b1d7b9144a3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-profile/identity.json",
+      "sha256": "c0170e510b5821881bb68cb3f31c5cd2c5a8795faba266b2da4e6e11101d42ec"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-profile/native.txt",
+      "sha256": "d427e9a49434a5fe9b8b8e4128cc1fd1e7abb68b7357d660686f1911b05e68db"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-profile/native.json",
+      "sha256": "3093b11841559d46c610a01eb45de9cab3ed53f05c27cf2fc41cae8d21eb76b1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-timing/identity.json",
+      "sha256": "8bc36db98c80237754a1b60c2a836598fe86edbf4c32cf8c3b686ee1f56e5efd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-timing/native.txt",
+      "sha256": "616b495135fa7283bc2d2e88dce6ffcd8b2c436dbe8898f3c83795c6250ae53d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/after-timing/native.json",
+      "sha256": "31e8f3b0dca15086c53e0350f827bdd6f3e02fa250d21ce0113f929557763bfd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-profile/c64_rooms.c",
+      "sha256": "9a2e9e94d294b3e2e8938f16df9e362810a62badf9bc073a5dd4a91499652f00"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/before-timing/c64_rooms.c",
+      "sha256": "9a2e9e94d294b3e2e8938f16df9e362810a62badf9bc073a5dd4a91499652f00"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_REPORT.md",
+      "sha256": "6bc4a94707d16c17b1df741b65fbed7577c85b639092f9f820fa5d212c5b3393"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
+      "sha256": "03a1a27a56e11a951d7766b5d9ee2cd33ab7958cd5652c5058a053f5d67320bf"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "0116a0d49c17b60c64db79e6cbec7a531ba815f0a12e2ee3e375cf5ec7cbde25"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "babc5beae2b496493969508ecb572c049371e0230f7760c5c8c4aab362ec0074"
+    },
+    {
+      "path": "reference/validation/source-vic-host.json",
+      "sha256": "213de1e930b00961bc4a2967d95fb378c46ecf610ab06939130214cbb826a503"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "50e80a899e5a819316e45725a581420fcbadb821264737852f67bfcbd717ef29"
+    },
+    {
+      "path": "tools/verify_source_optimization.py",
+      "sha256": "5844cbabf4308588679d111e6f7d5a0104ff0b608d74be19027fc77b33c58b12"
+    },
+    {
+      "path": "tools/summarize_source_performance.py",
+      "sha256": "607ea0359f2478613f97517275bb8840a4b746dbdd4abbf2c4bd4ddae2a6d69d"
+    },
+    {
+      "path": "test-source-performance.ps1",
+      "sha256": "92916e806c25ada0e447d2db2bee47842c51638d9c26257765041cec78ff7148"
+    }
+  ],
+  "limits": [
+    "Single benchmark pair; source-field/input phases differ as actual execution time changes",
+    "Held new frames, missing audio ticks and33 unexplained scene bytes remain open",
+    "No original-raster or physical-A500 acceptance"
+  ]
+}

@@ -20277,15 +20277,15 @@
   "source_files": [
     {
       "path": "core/combat.c",
-      "sha256": "bdc6419af8595e7349a94856060099a16102ab0d2bfdb31596b59c67e6c0f4a4"
+      "sha256": "01ed9f011a7fb7ad4fe8687e0d29ebea3445114f3aa6d9b4bbf2818c8342cfd6"
     },
     {
       "path": "core/game.c",
-      "sha256": "5afd9b0c76b6136ebf9bc58e9445b8562d2f03690347b88a51a8c94dfa4b3918"
+      "sha256": "9f836c0c9731253b00433c6163dc83015dc3a11ccc2518e010a6ed630e8aaa50"
     },
     {
       "path": "core/game.h",
-      "sha256": "bbcb1164efaf3660729cc0318196c29f19146c106ad5bb5f1675e493cd96cffb"
+      "sha256": "c62a62a3a2c0929dcd544d0f84b31e59c56fdfe5fcfd0a56a4f519af8937c9ec"
     },
     {
       "path": "core/source_wall.c",
@@ -20313,7 +20313,7 @@
     },
     {
       "path": "reference/analysis/movement-audit-2026-10-25/wall-report.json",
-      "sha256": "20b3b302a0d6192bd641b1a84e8dc71135058ace8e9bbeef466f54bc13534594"
+      "sha256": "dba48eeb6f9d85a032899d64458274d90247e7da273c4114604092ca6f09bbf9"
     }
   ],
   "limitations": [

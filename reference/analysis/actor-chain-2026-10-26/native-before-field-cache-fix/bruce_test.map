@@ -1,0 +1,1597 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\start.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\start.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\start.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .text.memset   0x00000000       0x20 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_geometry
+                0x00000000        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_attack_overlaps
+                0x00000000      0x114 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_contact_kind
+                0x00000000       0xca C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_target_step
+                0x00000000      0x176 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_moving_net_contact
+                0x00000000       0x78 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_record_recoil
+                0x00000000       0x6c C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_step_phased
+                0x00000000     0x1c74 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_step  0x00000000       0x1a C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_step_npc
+                0x00000000       0x28 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_step_npc_ai
+                0x00000000       0x36 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text.bl_step_npc_entry
+                0x00000000      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .rodata.no_rectangles
+                0x00000000        0xc C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .rodata.bl_climbable_count
+                0x00000000        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .rodata.bl_climbables
+                0x00000000        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .rodata.bl_platform_count
+                0x00000000        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .rodata.bl_platforms
+                0x00000000        0x6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .rodata.moving_jump
+                0x00000000       0x10 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .rodata.standing_jump
+                0x00000000       0x10 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .bss.npc_ai_motion
+                0x00000000        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .data.player_movement_sound
+                0x00000000        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .text.move     0x00000000       0xd8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .text.bl_source_wall_record
+                0x00000000       0x32 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .text.bl_source_sai_step
+                0x00000000       0x50 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .text.bl_source_wall_age
+                0x00000000       0x48 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .text.bl_source_wall_step
+                0x00000000      0x200 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .text.unit     0x00000000       0x9a C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .text.bl_source_climb_step
+                0x00000000      0x1d8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .text.bl_source_climb_pose
+                0x00000000       0x3e C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .text.bl_source_moving_net_step
+                0x00000000      0x1ba C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .debug_frame   0x00000000      0x1ec C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .debug_info    0x00000000      0x4e5 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .debug_abbrev  0x00000000      0x163 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .debug_loclists
+                0x00000000      0x350 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .debug_aranges
+                0x00000000       0x38 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .debug_rnglists
+                0x00000000       0x31 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .debug_line    0x00000000      0xb01 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .debug_str     0x00000000        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .comment       0x00000000       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .text.bl_visual_pose
+                0x00000000       0xb8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .text.bl_visual_face
+                0x00000000       0x30 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.combat_contact
+                0x00000000      0x384 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.reaction_step
+                0x00000000      0x138 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.finish_player_life
+                0x00000000       0xb6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.bl_combat_object_pose
+                0x00000000      0x16e C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.hit_index
+                0x00000000       0x7a C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.bl_combat_sprite_touch
+                0x00000000      0x154 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.sprite_latch
+                0x00000000       0xc2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.bl_combat_hazard
+                0x00000000       0x6e C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.bl_combat_contact
+                0x00000000       0x76 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.bl_combat_spawn_service
+                0x00000000      0x1f8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text.bl_combat_step
+                0x00000000      0x80e C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .rodata.hit_rows
+                0x00000000     0x1c38 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .rodata.hit_self
+                0x00000000       0xd2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .rodata.hit_frame
+                0x00000000       0xd2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .text.reset_enemies
+                0x00000000      0x192 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .text.enter_source_room
+                0x00000000      0x168 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .text.bl_progress_room_openings
+                0x00000000        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .text.bl_progress_door
+                0x00000000       0x92 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .text.bl_enemy_leave_room
+                0x00000000      0x198 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .text.bl_progress_inspect_room
+                0x00000000      0x10a C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .text.bl_progress_contacts
+                0x00000000      0x348 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .text.bl_progress_step
+                0x00000000      0x58c C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .text.bl_session_source_jump
+                0x00000000       0x3e C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .text.bl_session_start
+                0x00000000      0x2f6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .text.bl_session_jump
+                0x00000000       0xe6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .text.bl_session_step
+                0x00000000      0x206 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_profile_add
+                0x00000000       0x18 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_audio_request
+                0x00000000       0xba C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_actor_life_pending
+                0x00000000        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_actor_return
+                0x00000000        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_test_execute
+                0x00000000       0x1a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_screen
+                0x00000000        0xe C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_screen_color
+                0x00000000       0x12 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_glyph
+                0x00000000       0x24 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_cell_dirty
+                0x00000000       0x28 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_tile
+                0x00000000       0x3e C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_attribute
+                0x00000000       0x3e C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_charset_row
+                0x00000000       0x3a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_pixel
+                0x00000000       0xa0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_contact
+                0x00000000      0x9fa C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_has_dirty
+                0x00000000       0x20 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_colors
+                0x00000000       0x28 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_planar
+                0x00000000       0x46 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_paint_changes
+                0x00000000      0x12c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_tick_begin
+                0x00000000       0x62 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_tick_room
+                0x00000000       0x5a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_tick
+                0x00000000       0x16 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_changed_rows
+                0x00000000       0x10 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_offsets
+                0x00000000        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_cell_y
+                0x00000000        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_remaining
+                0x00000000       0x1a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_object_pose
+                0x00000000      0x1e2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_recovery_pose
+                0x00000000       0x4a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_collect
+                0x00000000       0xf2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_door
+                0x00000000       0xbe C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_motion
+                0x00000000       0x6e C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_reenter
+                0x00000000       0x3a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_transition
+                0x00000000       0x5c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_object
+                0x00000000       0xc0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_dead
+                0x00000000        0xe C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_enemy_entry
+                0x00000000       0xbe C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_spawn_counter
+                0x00000000       0x1a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_set_opponent_mode
+                0x00000000       0x10 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_spawn_sync
+                0x00000000       0x66 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_spawn_services
+                0x00000000      0x112 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_spawn_result
+                0x00000000       0x50 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_enemy_remove
+                0x00000000       0x7c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_enemy_door
+                0x00000000       0xda C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_enemy_follow
+                0x00000000       0x52 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_enemy_entries_clear
+                0x00000000        0xe C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_enemy_hazard
+                0x00000000       0xa2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_clear_death
+                0x00000000        0xe C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_set_lives
+                0x00000000        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_save_progress
+                0x00000000       0x1c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_restore_progress
+                0x00000000       0x78 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_player_sprite_contact
+                0x00000000      0x1ac C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.contact_last
+                0x00000000        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.contact_use
+                0x00000000        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.constant_masks
+                0x00000000      0x4ec C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.contact_epoch
+                0x00000000      0x7d0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.contact_coverage
+                0x00000000     0x3e80 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.contact_bitmap
+                0x00000000     0x1f40 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.target_room
+                0x00000000        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.target_y  0x00000000        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.target_x  0x00000000        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .text          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+ .data          0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+ .bss           0x00000000        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .text set to 0x0
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\start.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_climb.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+LOAD C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+                [!provide]                        PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x80000000))
+                0x80000074                        . = (SEGMENT_START ("text-segment", 0x80000000) + SIZEOF_HEADERS)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rela.dyn       0x80000074        0x0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+                [!provide]                        PROVIDE (__rela_iplt_start = .)
+ *(.rela.iplt)
+                [!provide]                        PROVIDE (__rela_iplt_end = .)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x00000000    0x30c54
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ .text.startup.main
+                0x00000000     0x487c C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+                0x00000000                main
+ *(.text.hot .text.hot.*)
+ *(SORT_BY_NAME(.text.sorted.*))
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text.start    0x0000487c        0x6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\start.o
+                0x0000487c                _start
+ .text.bl_scene_take
+                0x00004882      0x1f6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.source_audio_mute
+                0x00004a78       0x60 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.source_audio_resume
+                0x00004ad8       0x58 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.source_game_load
+                0x00004b30       0x78 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.rect     0x00004ba8      0x12e C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.text     0x00004cd6      0x12a C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.line_clock
+                0x00004e00       0x44 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.read_port
+                0x00004e44       0x7a C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.number   0x00004ebe       0x62 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.source_actor_fixture_run
+                0x00004f20      0x150 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.update_lantern_background.isra.0
+                0x00005070       0xf0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.prepare_fighters
+                0x00005160      0x1a2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.prepare_target
+                0x00005302      0x29e C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.source_audio_tick
+                0x000055a0      0x3d4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.source_audio_start
+                0x00005974       0x5e C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.source_audio_service.part.0
+                0x000059d2      0x10a C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.copy.constprop.0
+                0x00005adc       0x58 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.wait_frame
+                0x00005b34       0xbe C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.capture_pack
+                0x00005bf2      0x1f4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.wait_blitter
+                0x00005de6       0x64 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.paint_source_block
+                0x00005e4a      0x114 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.paint_source_tile
+                0x00005f5e       0xfa C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.restore_actor.isra.0
+                0x00006058      0x134 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.draw_fighter.isra.0
+                0x0000618c      0x44c C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.source_game_service
+                0x000065d8       0x9a C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.draw_room
+                0x00006672      0x3ba C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .text.divide.part.0
+                0x00006a2c       0xa2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .text.memcpy   0x00006ace       0x1e C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+                0x00006ace                memcpy
+ .text.__mulsi3
+                0x00006aec       0x46 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+                0x00006aec                __mulsi3
+ .text.__udivsi3
+                0x00006b32       0x22 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+                0x00006b32                __udivsi3
+ .text.__umodsi3
+                0x00006b54       0x2e C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+                0x00006b54                __umodsi3
+ .text.__divsi3
+                0x00006b82       0x70 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+                0x00006b82                __divsi3
+ .text.__modsi3
+                0x00006bf2       0x7c C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+                0x00006bf2                __modsi3
+ .text.bruce_runtime_check
+                0x00006c6e      0x268 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+                0x00006c6e                bruce_runtime_check
+ .text.bl_x     0x00006ed6       0x18 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+                0x00006ed6                bl_x
+ .text.bl_y     0x00006eee       0x1a C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+                0x00006eee                bl_y
+ .text.bl_target_reset
+                0x00006f08       0x22 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+                0x00006f08                bl_target_reset
+ .text.bl_reset
+                0x00006f2a       0x70 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+                0x00006f2a                bl_reset
+ .text.bl_source_wall_reset
+                0x00006f9a       0x42 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+                0x00006f9a                bl_source_wall_reset
+ .text.bl_visual_reset
+                0x00006fdc       0x2a C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+                0x00006fdc                bl_visual_reset
+ .text.bl_visual_target
+                0x00007006       0x80 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+                0x00007006                bl_visual_target
+ .text.bl_visual_frame
+                0x00007086       0xa8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+                0x00007086                bl_visual_frame
+ .text.bl_source_pose
+                0x0000712e      0x2c6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+                0x0000712e                bl_source_pose
+ .text.bl_c64_sprite_step
+                0x000073f4      0x500 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+                0x000073f4                bl_c64_sprite_step
+ .text.bl_combat_reset
+                0x000078f4      0x13e C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+                0x000078f4                bl_combat_reset
+ .text.bl_room  0x00007a32       0x24 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+                0x00007a32                bl_room
+ .text.bl_progress_reset
+                0x00007a56       0x3e C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+                0x00007a56                bl_progress_reset
+ .text.source_fighter
+                0x00007a94      0x278 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .text.source_session_view
+                0x00007d0c      0x10c C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .text.bl_options_reset
+                0x00007e18       0x1e C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+                0x00007e18                bl_options_reset
+ .text.bl_session_source_start
+                0x00007e36      0x13c C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+                0x00007e36                bl_session_source_start
+ .text.bl_session_source_step
+                0x00007f72       0x5a C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+                0x00007f72                bl_session_source_step
+ .text.release_cell_cache
+                0x00007fcc       0x46 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.reset_contact_masks
+                0x00008012       0x74 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.invalidate_contacts
+                0x00008086       0xca C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.mark_cell
+                0x00008150       0x7c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.glyph_first
+                0x000081cc       0x94 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.flush_glyph_changes
+                0x00008260       0xde C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.W        0x0000833e       0x30 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.adc      0x0000836e       0x92 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.sbc      0x00008400       0xb6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.audio_write
+                0x000084b6       0x50 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_stack_return
+                0x00008506       0x40 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_sprite_copy
+                0x00008546      0x1c8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_contact_align
+                0x0000870e      0x1b4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_vic_cache
+                0x000088c2      0x1a4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.charset  0x00008a66       0x2a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_animation
+                0x00008a90      0x290 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.index_screen
+                0x00008d20       0xe6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.prepare_palette
+                0x00008e06      0x3b6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.ensure_paint_bank
+                0x000091bc       0x80 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.animation_cell_changed.part.0
+                0x0000923c       0xc8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.audio_data
+                0x00009304       0x2a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.audio_driver
+                0x0000932e      0x26a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_actor_loading_end
+                0x00009598      0x100 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.paint_cell.isra.0
+                0x00009698      0x3be C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_written
+                0x00009a56      0x32a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_movers
+                0x00009d80      0x5b4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.actor_code
+                0x0000a334    0x23788 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_contact_call
+                0x0002dabc       0x4c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.source_contact_rows
+                0x0002db08      0x314 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.execute  0x0002de1c       0x88 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .text.bl_c64_set_service
+                0x0002dea4        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002dea4                bl_c64_set_service
+ .text.bl_c64_set_load_service
+                0x0002deae        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002deae                bl_c64_set_load_service
+ .text.bl_c64_profile_reset
+                0x0002deb8       0x12 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002deb8                bl_c64_profile_reset
+ .text.bl_c64_profile
+                0x0002deca       0x14 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002deca                bl_c64_profile
+ .text.bl_c64_set_painter
+                0x0002dede        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002dede                bl_c64_set_painter
+ .text.bl_c64_set_block_painter
+                0x0002dee8        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002dee8                bl_c64_set_block_painter
+ .text.bl_c64_reuse_reset
+                0x0002def2       0x1a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002def2                bl_c64_reuse_reset
+ .text.bl_c64_reuse_stat
+                0x0002df0c       0x14 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002df0c                bl_c64_reuse_stat
+ .text.bl_c64_audio_reset
+                0x0002df20       0x2e C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002df20                bl_c64_audio_reset
+ .text.bl_c64_audio_frame
+                0x0002df4e       0x6e C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002df4e                bl_c64_audio_frame
+ .text.bl_c64_audio_faults
+                0x0002dfbc        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002dfbc                bl_c64_audio_faults
+ .text.bl_c64_audio_requests
+                0x0002dfc4        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002dfc4                bl_c64_audio_requests
+ .text.bl_c64_actor_seed
+                0x0002dfcc       0x26 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002dfcc                bl_c64_actor_seed
+ .text.bl_c64_actor_test_call
+                0x0002dff2       0xc8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002dff2                bl_c64_actor_test_call
+ .text.bl_c64_actor_ram_hash
+                0x0002e0ba       0x3c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002e0ba                bl_c64_actor_ram_hash
+ .text.bl_c64_actor_registers
+                0x0002e0f6       0x6c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002e0f6                bl_c64_actor_registers
+ .text.bl_c64_reset
+                0x0002e162      0x362 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002e162                bl_c64_reset
+ .text.bl_c64_load_at
+                0x0002e4c4      0x35a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002e4c4                bl_c64_load_at
+ .text.bl_c64_load
+                0x0002e81e       0x58 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002e81e                bl_c64_load
+ .text.bl_c64_world_start
+                0x0002e876       0xf2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002e876                bl_c64_world_start
+ .text.bl_c64_world_input
+                0x0002e968       0x12 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002e968                bl_c64_world_input
+ .text.bl_c64_world_ready
+                0x0002e97a       0x1a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002e97a                bl_c64_world_ready
+ .text.bl_c64_world_step
+                0x0002e994       0xf6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002e994                bl_c64_world_step
+ .text.bl_c64_world_actor
+                0x0002ea8a      0x10c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ea8a                bl_c64_world_actor
+ .text.bl_c64_world_stat
+                0x0002eb96       0xa8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002eb96                bl_c64_world_stat
+ .text.bl_c64_read
+                0x0002ec3e       0x10 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ec3e                bl_c64_read
+ .text.bl_c64_test_write
+                0x0002ec4e       0x2a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ec4e                bl_c64_test_write
+ .text.bl_c64_fault
+                0x0002ec78        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ec78                bl_c64_fault
+ .text.bl_c64_room
+                0x0002ec80        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ec80                bl_c64_room
+ .text.bl_c64_revision
+                0x0002ec88        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ec88                bl_c64_revision
+ .text.bl_c64_clear_dirty
+                0x0002ec90       0x76 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ec90                bl_c64_clear_dirty
+ .text.bl_c64_needs_full_paint
+                0x0002ed06       0x12 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ed06                bl_c64_needs_full_paint
+ .text.bl_c64_paint_room
+                0x0002ed18       0x2e C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ed18                bl_c64_paint_room
+ .text.bl_c64_build_animation_cache
+                0x0002ed46      0x89c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002ed46                bl_c64_build_animation_cache
+ .text.bl_c64_prepare_paint
+                0x0002f5e2      0x1c8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002f5e2                bl_c64_prepare_paint
+ .text.bl_c64_paint_part
+                0x0002f7aa      0x54c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002f7aa                bl_c64_paint_part
+ .text.bl_c64_paint_done
+                0x0002fcf6       0x36 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002fcf6                bl_c64_paint_done
+ .text.bl_c64_part_words
+                0x0002fd2c        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002fd2c                bl_c64_part_words
+ .text.bl_c64_part_rows
+                0x0002fd34        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002fd34                bl_c64_part_rows
+ .text.bl_c64_part_priority_words
+                0x0002fd3c        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002fd3c                bl_c64_part_priority_words
+ .text.bl_c64_part_priority_rows
+                0x0002fd44        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002fd44                bl_c64_part_priority_rows
+ .text.bl_c64_check_interleaved
+                0x0002fd4c      0x120 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002fd4c                bl_c64_check_interleaved
+ .text.bl_c64_field
+                0x0002fe6c      0x620 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0002fe6c                bl_c64_field
+ .text.bl_c64_flash_color
+                0x0003048c       0x1a C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x0003048c                bl_c64_flash_color
+ .text.bl_c64_debug_complete_before
+                0x000304a6       0x5c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x000304a6                bl_c64_debug_complete_before
+ .text.bl_c64_world_jump
+                0x00030502       0xbe C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x00030502                bl_c64_world_jump
+ .text.bl_c64_collected
+                0x000305c0       0x50 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x000305c0                bl_c64_collected
+ .text.bl_c64_spawn_cold_counter
+                0x00030610       0x10 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x00030610                bl_c64_spawn_cold_counter
+ .text.bl_c64_projectile
+                0x00030620       0xb2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+                0x00030620                bl_c64_projectile
+ .text.bl_source_audio_chip_bytes
+                0x000306d2        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+                0x000306d2                bl_source_audio_chip_bytes
+ .text.bl_source_audio_copy
+                0x000306da       0x16 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+                0x000306da                bl_source_audio_copy
+ .text.bl_source_audio_reset
+                0x000306f0       0x16 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+                0x000306f0                bl_source_audio_reset
+ .text.bl_source_audio_faults
+                0x00030706        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+                0x00030706                bl_source_audio_faults
+ .text.bl_source_audio_music
+                0x0003070e       0xf4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+                0x0003070e                bl_source_audio_music
+ .text.bl_source_audio_render
+                0x00030802      0x342 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+                0x00030802                bl_source_audio_render
+ .text.bl_source_dma_reset
+                0x00030b44       0x28 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+                0x00030b44                bl_source_dma_reset
+ .text.bl_source_dma_update
+                0x00030b6c       0xe8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+                0x00030b6c                bl_source_dma_update
+ *(.gnu.warning)
+
+.fini
+ *(SORT_NONE(.fini))
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+
+.rodata         0x00030c54    0x14e38
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x00030c54      0xc3b C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.digits
+                0x0003188f       0x46 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.glyphs
+                0x000318d5       0xb6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ *fill*         0x0003198b        0x1 
+ .rodata.palette
+                0x0003198c       0x20 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.bl_intro_packed
+                0x000319ac     0x33ae C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.bl_intro_index
+                0x00034d5a        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.bl_intro_steps
+                0x00034d62       0xb2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.source_actor_controls
+                0x00034e14      0x562 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.source_actor_writes
+                0x00035376      0x9d4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.fighter_dma_packed
+                0x00035d4a     0x3234 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.c64_sprite_bounds
+                0x00038f7e      0x348 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.fighter_dma_offsets
+                0x000392c6      0x348 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .rodata.values.0
+                0x0003960e       0x40 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .rodata.c64_sprite_width
+                0x0003964e       0xd2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .rodata.bl_room_facts
+                0x00039720      0x618 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .rodata.CSWTCH.15
+                0x00039d38        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .rodata.CSWTCH.14
+                0x00039d42        0xb C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ *fill*         0x00039d4d        0x1 
+ .rodata.CSWTCH.20367
+                0x00039d4e        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .rodata.bl_source_sfx_freq_hi
+                0x00039d58       0x56 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .rodata.bl_source_sfx_freq_lo
+                0x00039dae       0x56 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .rodata.bl_source_sfx_data
+                0x00039e04      0x38b C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .rodata.actor_seed_packed
+                0x0003a18f     0xa038 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x000441c7        0x1 
+ .rodata.source_color_planes
+                0x000441c8       0x40 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .rodata.bl_source_release_step
+                0x00044208       0x40 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .rodata.bl_source_attack_step
+                0x00044248       0x40 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .rodata.bl_source_music
+                0x00044288      0xb7e C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .rodata.bl_source_frequencies
+                0x00044e06      0x1a0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .rodata.bl_source_waves
+                0x00044fa6      0x210 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ *fill*         0x000451b6        0x2 
+ .rodata.bl_source_wave_bytes
+                0x000451b8      0x8d4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.sframe
+ *(.sframe)
+ *(.sframe.*)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges*)
+
+.note.build-id
+ *(.note.build-id)
+
+.note.GNU-stack
+ *(.note.GNU-stack)
+
+.note.gnu-property
+ *(.note.gnu-property)
+
+.note.ABI-tag
+ *(.note.ABI-tag)
+
+.note.package
+ *(.note.package)
+
+.note.dlopen
+ *(.note.dlopen)
+
+.note.netbsd.ident
+ *(.note.netbsd.ident)
+
+.note.openbsd.ident
+ *(.note.openbsd.ident)
+                0x00046000                        . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.sframe
+ *(.sframe)
+ *(.sframe.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges*)
+
+.tdata          0x00046000        0x0
+                [!provide]                        PROVIDE (__tdata_start = .)
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x00046000        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x00046000        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00046000        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic
+ *(.dynamic)
+                0x00046000                        . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x00046000       0x15
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data.fighter_cache_hash
+                0x00046000        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .data.priority_cursor
+                0x00046004        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .data.source_cursor
+                0x00046006        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .data.slot_room
+                0x00046008        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .data.source_music_hash
+                0x0004600a        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .data.source_audio_hash
+                0x0004600e        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .data.actor_debug_target
+                0x00046012        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .data.paint_bank
+                0x00046013        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .data.loaded   0x00046014        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+
+.data1
+ *(.data1)
+                0x00046015                        _edata = .
+                [!provide]                        PROVIDE (edata = .)
+                0x00046015                        . = ALIGN (ALIGNOF (NEXT_SECTION))
+                0x00046018                        __bss_start = .
+
+.bss            0x00046018    0x29de8
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss.fighter_cache_bytes
+                0x00046018        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.actor_dirty
+                0x0004601c       0x50 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.actor_sprite
+                0x0004606c       0x12 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.actor_pose_seen_hi
+                0x0004607e        0x3 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ *fill*         0x00046081        0x1 
+ .bss.actor_pose_seen
+                0x00046082        0xc C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ *fill*         0x0004608e        0x2 
+ .bss.priority_rows
+                0x00046090       0x32 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ *fill*         0x000460c2        0x2 
+ .bss.priority_words
+                0x000460c4       0xc8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_rows
+                0x0004618c       0x32 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ *fill*         0x000461be        0x2 
+ .bss.source_words
+                0x000461c0       0xc8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.copper    0x00046288        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.room_event_id
+                0x00046290       0x20 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.room_event_check
+                0x000462b0       0x80 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.room_event_work
+                0x00046330       0x80 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.room_work_max
+                0x000463b0       0x14 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.room_work_sum
+                0x000463c4       0x14 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.room_draw_cost
+                0x000463d8       0x10 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_render_mismatches
+                0x000463e8        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_render_checks
+                0x000463ec        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.native_cell_offset
+                0x000463f0      0x7d0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.tile_dma  0x00046bc0        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.fighter_dma
+                0x00046bc4        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.tone      0x00046bc8        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.capture   0x00046bcc        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.room_slots
+                0x00046bd0        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.room_backgrounds
+                0x00046bd8       0x50 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.buffers   0x00046c28        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.background
+                0x00046c30        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.capture_fault
+                0x00046c34        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.capture_decoded_hash
+                0x00046c36        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.capture_original_hash
+                0x00046c3a        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.capture_bytes
+                0x00046c3e        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.game_field_loading
+                0x00046c42        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.game_field_busy
+                0x00046c43        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.game_field_active
+                0x00046c44        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ *fill*         0x00046c45        0x1 
+ .bss.game_field_last
+                0x00046c46        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_music_faults
+                0x00046c4a        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_dma_faults
+                0x00046c4c        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_voice_mask
+                0x00046c4e        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_miss_records
+                0x00046c50        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_audio_context
+                0x00046c52        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_miss_context
+                0x00046c54       0x20 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_miss_fields
+                0x00046c74       0x20 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_audio_load_resume
+                0x00046c94        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ *fill*         0x00046c95        0x1 
+ .bss.source_tick_max_lines
+                0x00046c96        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_pause_start
+                0x00046c9a        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_paused_fields
+                0x00046c9e        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_dma_changes
+                0x00046ca2        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_pauses
+                0x00046ca6        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_starts
+                0x00046caa        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_max_gap
+                0x00046cae        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_missed
+                0x00046cb2        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_elapsed
+                0x00046cb6        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_clock_last
+                0x00046cba        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_music_fields
+                0x00046cbe        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_audio_fields
+                0x00046cc2        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_audio_busy
+                0x00046cc6        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_audio_mode
+                0x00046cc7        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_audio_active
+                0x00046cc8        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_registers
+                0x00046cc9       0x1a C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ *fill*         0x00046ce3        0x1 
+ .bss.source_voices
+                0x00046ce4       0x18 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_dma
+                0x00046cfc        0xc C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.source_audio
+                0x00046d08       0x30 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.sfx_pcm   0x00046d38        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.DOSBase   0x00046d3c        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+                0x00046d3c                DOSBase
+ .bss.GfxBase   0x00046d40        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+                0x00046d40                GfxBase
+ .bss.SysBase   0x00046d44        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+                0x00046d44                SysBase
+ .bss.source_actor_fixture_failure
+                0x00046d48        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .bss.vic_valid
+                0x00046d4a        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.vic_layout
+                0x00046d4b        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.vic_bytes
+                0x00046d53      0x1f8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x00046f4b        0x1 
+ .bss.vic_low   0x00046f4c      0x2a0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.vic_high  0x000471ec      0x2a0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_delay_pending
+                0x0004748c        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x0004748d        0x1 
+ .bss.actor_stop_pc
+                0x0004748e        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_loading_epoch
+                0x00047490        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_logic_steps
+                0x00047492        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_yamo_input
+                0x00047494        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_input
+                0x00047495        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_world_enabled
+                0x00047496        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_irq_stop
+                0x00047497        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_loading_pending
+                0x00047498        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_invincible
+                0x00047499        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_infinite
+                0x0004749a        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_legacy_load
+                0x0004749b        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_gameover_pending
+                0x0004749c        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_i   0x0004749d        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_preparing
+                0x0004749e        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_reset_pending
+                0x0004749f        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_life_pending
+                0x000474a0        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x000474a1        0x1 
+ .bss.actor_spawn_events
+                0x000474a2        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_life_events
+                0x000474a4        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.actor_return
+                0x000474a6        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.audio_faults
+                0x000474a8        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.audio_gates
+                0x000474aa        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x000474ab        0x1 
+ .bss.contact_checked_revision
+                0x000474ac        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.contact_generation
+                0x000474ae        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.contact_cache
+                0x000474b0      0x270 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.constant_ages
+                0x00047720        0xa C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.constant_bands
+                0x0004772a        0x5 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.constant_classes
+                0x0004772f       0x23 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.constant_poses
+                0x00047752        0x5 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.contact_classes
+                0x00047757      0x200 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x00047957        0x1 
+ .bss.contact_bank
+                0x00047958        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.spread_masks
+                0x0004795a      0x200 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.coverage_table
+                0x00047b5a      0x400 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.contact_cells
+                0x00047f5a      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_saved_bands
+                0x00048342       0xc8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_saved_palette
+                0x0004840a        0xc C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_saved_bytes
+                0x00048416        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_saved_count
+                0x0004841a        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.reuse_stats
+                0x0004841c        0x8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.palette_key
+                0x00048424        0xc C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.palette_ready
+                0x00048430        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.coverage_ready
+                0x00048431        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.line_colors
+                0x00048432      0x258 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.line_band
+                0x0004868a       0xc8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.planar_foreground
+                0x00048752     0x2400 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.planar_base
+                0x0004ab52     0x1000 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.indexed_glyph
+                0x0004bb52      0x800 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.index_ready
+                0x0004c352        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.indexed_color
+                0x0004c353      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.indexed_screen
+                0x0004c73b      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.glyph_tracking
+                0x0004cb23      0x100 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.glyph_index_dirty
+                0x0004cc23      0x100 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x0004cd23        0x1 
+ .bss.glyph_previous
+                0x0004cd24      0x7d0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.glyph_next
+                0x0004d4f4      0x7d0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.glyph_head
+                0x0004dcc4      0x200 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.glyph_changed_count
+                0x0004dec4        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.glyph_changed_list
+                0x0004dec6      0x100 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.glyph_changes
+                0x0004dfc6      0x100 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.glyph_epoch
+                0x0004e0c6      0x200 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.block_painter
+                0x0004e2c6        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_cache
+                0x0004e2ca        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_checked_revision
+                0x0004e2ce        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_variants
+                0x0004e2d0      0x180 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_phase_valid
+                0x0004e450        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_pattern
+                0x0004e451       0x18 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x0004e469        0x1 
+ .bss.animation_differences
+                0x0004e46a      0x100 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_part
+                0x0004e56a        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_ready
+                0x0004e56b        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_started
+                0x0004e56c        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_mismatch
+                0x0004e56d      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_done
+                0x0004e955       0x80 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_color
+                0x0004e9d5      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_code
+                0x0004edbd      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x0004f1a5        0x1 
+ .bss.animation_cell
+                0x0004f1a6      0x7d0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_count
+                0x0004f976        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_rects
+                0x0004f978      0xb00 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.paint_request
+                0x00050478       0x18 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.tile_painter
+                0x00050490        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.cache_references
+                0x00050494      0x800 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.cell_stamp
+                0x00050c94      0xfa0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.cell_cache
+                0x00051c34      0x7d0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.character_cache
+                0x00052404     0xa000 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.part_priority_rows
+                0x0005c404       0x19 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x0005c41d        0x1 
+ .bss.part_priority_words
+                0x0005c41e       0x64 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.part_rows
+                0x0005c482       0x19 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x0005c49b        0x1 
+ .bss.part_words
+                0x0005c49c       0x64 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.cell_word_mask
+                0x0005c500      0xfa0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.cell_y    0x0005d4a0      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.cell_offsets
+                0x0005d888      0x7d0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.flash_changed
+                0x0005e058        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.flash_cells
+                0x0005e059      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.paint_rows
+                0x0005e441      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.paint_queued
+                0x0005e829      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_fallback_dirty
+                0x0005ec11        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_pending
+                0x0005ec12        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ *fill*         0x0005ec13        0x1 
+ .bss.animation_fallback_count
+                0x0005ec14        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.animation_fallback
+                0x0005ec16      0x6e0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.paint_cursor
+                0x0005f2f6        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.paint_count
+                0x0005f2f8        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.paint_list
+                0x0005f2fa      0x6e0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.old_bank  0x0005f9da        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.display_dirty
+                0x0005f9db        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.cell_dirt
+                0x0005f9dc      0x3e8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.profile   0x0005fdc4       0x20 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.load_service
+                0x0005fde4        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.io_service
+                0x0005fde8        0x4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.audio_requests_mask
+                0x0005fdec        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.source_fault
+                0x0005fdee        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.revision  0x0005fdf0        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.transition_pending
+                0x0005fdf2        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.sp        0x0005fdf3        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.d         0x0005fdf4        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.v         0x0005fdf5        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.n         0x0005fdf6        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.z         0x0005fdf7        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.c         0x0005fdf8        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.y         0x0005fdf9        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.x         0x0005fdfa        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.a         0x0005fdfb        0x1 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.m         0x0005fdfc    0x10000 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .bss.faults    0x0006fdfc        0x2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ *(COMMON)
+                0x0006fe00                        . = ALIGN ((. != 0x0)?0x4:0x1)
+ *fill*         0x0006fdfe        0x2 
+                0x0006fe00                        . = ALIGN (0x4)
+                0x0006fe00                        . = SEGMENT_START ("ldata-segment", .)
+                0x0006fe00                        . = ALIGN (0x4)
+                0x0006fe00                        _end = .
+                [!provide]                        PROVIDE (end = .)
+                0x0006fe00                        . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x12
+ *(.comment)
+ .comment       0x00000000       0x12 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+                                 0x13 (size before relaxing)
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .comment       0x00000012       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes .gnu.build.attributes.*)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x860
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0xf0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .debug_aranges
+                0x000000f0       0x60 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .debug_aranges
+                0x00000150       0x90 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .debug_aranges
+                0x000001e0       0x48 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .debug_aranges
+                0x00000228       0x40 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .debug_aranges
+                0x00000268       0x28 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .debug_aranges
+                0x00000290       0x78 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .debug_aranges
+                0x00000308       0x68 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .debug_aranges
+                0x00000370       0x60 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .debug_aranges
+                0x000003d0      0x420 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .debug_aranges
+                0x000007f0       0x48 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .debug_aranges
+                0x00000838       0x28 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000    0x40ea4
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000    0x166ba C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .debug_info    0x000166ba      0xbec C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .debug_info    0x000172a6     0x1e3a C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .debug_info    0x000190e0      0x574 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .debug_info    0x00019654      0x874 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .debug_info    0x00019ec8      0x9aa C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .debug_info    0x0001a872     0x1db5 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .debug_info    0x0001c627     0x1de0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .debug_info    0x0001e407     0x1619 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .debug_info    0x0001fa20    0x20a39 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .debug_info    0x00040459      0x6d6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .debug_info    0x00040b2f      0x375 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+.debug_abbrev   0x00000000     0x25cd
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x88d C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .debug_abbrev  0x0000088d      0x212 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .debug_abbrev  0x00000a9f      0x487 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .debug_abbrev  0x00000f26      0x197 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .debug_abbrev  0x000010bd      0x140 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .debug_abbrev  0x000011fd      0x145 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .debug_abbrev  0x00001342      0x3f2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .debug_abbrev  0x00001734      0x30f C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .debug_abbrev  0x00001a43      0x28d C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .debug_abbrev  0x00001cd0      0x6df C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .debug_abbrev  0x000023af      0x12a C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .debug_abbrev  0x000024d9       0xf4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+.debug_line     0x00000000    0x7c914
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000    0x10111 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .debug_line    0x00010111     0x10b0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .debug_line    0x000111c1     0x5361 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .debug_line    0x00016522      0xdef C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .debug_line    0x00017311      0x50b C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .debug_line    0x0001781c      0xccb C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .debug_line    0x000184e7     0x2b28 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .debug_line    0x0001b00f     0x1ce5 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .debug_line    0x0001ccf4     0x1219 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .debug_line    0x0001df0d    0x5dbc2 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .debug_line    0x0007bacf      0xac4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .debug_line    0x0007c593      0x381 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+.debug_frame    0x00000000     0x657c
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x89c C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .debug_frame   0x0000089c      0x238 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .debug_frame   0x00000ad4      0x370 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .debug_frame   0x00000e44      0x17c C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .debug_frame   0x00000fc0      0x134 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .debug_frame   0x000010f4      0x224 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .debug_frame   0x00001318      0x5d8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .debug_frame   0x000018f0      0x73c C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .debug_frame   0x0000202c      0x4d8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .debug_frame   0x00002504     0x3ed8 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .debug_frame   0x000063dc      0x110 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .debug_frame   0x000064ec       0x90 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+.debug_str      0x00000000      0x591
+ *(.debug_str)
+ .debug_str     0x00000000      0x322 C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .debug_str     0x00000322        0x0 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .debug_str     0x00000322       0x42 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .debug_str     0x00000364       0x13 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .debug_str     0x00000377        0x9 C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .debug_str     0x00000380        0x9 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .debug_str     0x00000389       0x33 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .debug_str     0x000003bc        0x5 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .debug_str     0x000003c1       0x74 C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .debug_str     0x00000435      0x141 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .debug_str     0x00000576       0x12 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .debug_str     0x00000588        0x9 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_addr
+ *(.debug_addr)
+
+.debug_line_str
+ *(.debug_line_str)
+
+.debug_loclists
+                0x00000000    0x246ea
+ *(.debug_loclists)
+ .debug_loclists
+                0x00000000     0xcdae C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .debug_loclists
+                0x0000cdae     0x14d4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .debug_loclists
+                0x0000e282     0x1eb4 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .debug_loclists
+                0x00010136      0x520 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .debug_loclists
+                0x00010656      0x591 C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .debug_loclists
+                0x00010be7     0x1122 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .debug_loclists
+                0x00011d09     0x12f6 C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .debug_loclists
+                0x00012fff      0x5ca C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .debug_loclists
+                0x000135c9    0x1095c C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .debug_loclists
+                0x00023f25      0x5ae C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .debug_loclists
+                0x000244d3      0x217 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_names
+ *(.debug_names)
+
+.debug_rnglists
+                0x00000000     0x37e4
+ *(.debug_rnglists)
+ .debug_rnglists
+                0x00000000     0x19be C:\vscode\_EXT\AmigaBruceLee\amiga\out\main.o
+ .debug_rnglists
+                0x000019be      0x249 C:\vscode\_EXT\AmigaBruceLee\amiga\out\runtime.o
+ .debug_rnglists
+                0x00001c07      0x9f9 C:\vscode\_EXT\AmigaBruceLee\amiga\out\game.o
+ .debug_rnglists
+                0x00002600       0x72 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_wall.o
+ .debug_rnglists
+                0x00002672       0x3a C:\vscode\_EXT\AmigaBruceLee\amiga\out\presentation.o
+ .debug_rnglists
+                0x000026ac       0x1f C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_sprites.o
+ .debug_rnglists
+                0x000026cb      0x291 C:\vscode\_EXT\AmigaBruceLee\amiga\out\combat.o
+ .debug_rnglists
+                0x0000295c      0x21c C:\vscode\_EXT\AmigaBruceLee\amiga\out\rooms.o
+ .debug_rnglists
+                0x00002b78       0x8d C:\vscode\_EXT\AmigaBruceLee\amiga\out\session.o
+ .debug_rnglists
+                0x00002c05      0xb0d C:\vscode\_EXT\AmigaBruceLee\amiga\out\c64_rooms.o
+ .debug_rnglists
+                0x00003712       0x97 C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_audio.o
+ .debug_rnglists
+                0x000037a9       0x3b C:\vscode\_EXT\AmigaBruceLee\amiga\out\source_dma.o
+
+.debug_str_offsets
+ *(.debug_str_offsets)
+
+.debug_sup
+ *(.debug_sup)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+ *(.gnu_object_only)
+OUTPUT(C:\vscode\_EXT\AmigaBruceLee\amiga\out\bruce_test.elf elf32-m68k)

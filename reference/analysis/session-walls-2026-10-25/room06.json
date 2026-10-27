@@ -1,0 +1,28 @@
+{
+  "label": "room06",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "4e861a4cf294fe039445170019220c075db49821c285b0058e5d8649aeb58d50"
+  },
+  "source_room": 6,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    354880,
+    354920,
+    354960,
+    355000
+  ],
+  "source_music_fields": 672,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/room06.bpl",
+      "sha256": "919d2873b5b025555c8d975d6935c8ff1ac149a521c4a6d44ce40c1b244b8dd1"
+    },
+    {
+      "path": "docs/images/session-room06.png",
+      "sha256": "c95abfc9350377cbadbdbab98a3c030ac1cbe08fcd1b9f191f987522023c5b7a"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "ROOM8-BLAST-0001",
+  "date": "2026-10-26",
+  "status": "candidate_code_derived_partial_and_native_controls",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "full_actor_parity": false,
+  "source_ranges": [
+    "$2780-$29C2",
+    "$5212-$52AC",
+    "$2E39-$2F01",
+    "$304B-$3068",
+    "$3228-$32CB"
+  ],
+  "condition": "NPC object contact must use the selected source pose including hurt18 and knockdown19, not idle/prone body mask. Global B6&2 gates the source object handler; visible flame overlap alone is insufficient.",
+  "controls": {
+    "source_cases": 2160,
+    "bomb_cells": 5,
+    "enemies": 2,
+    "stages": 3,
+    "represented_pose_states": 12,
+    "before_differences": 40,
+    "after_differences": 0,
+    "native_added_cases_per_run": 60,
+    "native_runs": 2,
+    "native_fields_each": 6000,
+    "controlled_reader_page": 104
+  },
+  "artifacts": [
+    {
+      "path": "docs/ROOM8_BLASTS.md",
+      "sha256": "e3cc4c1cf7a56d9a8aca820aed5a408d0ef3541cb69744e63b210b88109fc3d4"
+    },
+    {
+      "path": "tests/room8_blast_fixture.h",
+      "sha256": "4c5f97f94d56f9abce674ed221e2fd68d84d6cfa02c429e0237dbcc58ba3b78e"
+    },
+    {
+      "path": "tools/audit_room8_blasts.py",
+      "sha256": "8ab07d4f240ad011ebe5bb3ee41947df7d719380c6d0cc7fb93c9daef1b7f862"
+    },
+    {
+      "path": "reference/analysis/room8-blasts-2026-10-26/report.json",
+      "sha256": "d91f15813dfd5e05d8c8f29ea34b3c20ad63d1d0242d83c0f17a68a50da0f90a"
+    },
+    {
+      "path": "reference/analysis/room8-blasts-2026-10-26/source-disassembly.txt",
+      "sha256": "644c6b2f81526affc1279e43e21305535e5a09e9b6d9813983eef90b8e5d92c5"
+    },
+    {
+      "path": "reference/validation/room8-blasts-delivery.json",
+      "sha256": "7fb04d803c3b4248995bf63dbf72c072b8700e2f2d2d8f23ddfb746cc81bc0f1"
+    },
+    {
+      "path": "reference/validation/history/before-room8-blasts-2026-10-26/reference/analysis/room8-blasts-2026-10-26/report.json",
+      "sha256": "d7df71230b68087259e17ddd7faf09f98fca755ea0a71a4b4ddf99b983df2b11"
+    }
+  ],
+  "limits": [
+    "Controlled injected source states, not natural C64 play",
+    "Full actor-state timing and physical adapters remain partial",
+    "Strict50Hz cadence remains open:1000/1004 missed fields,max3 periods"
+  ]
+}

@@ -13,6 +13,7 @@ static unsigned short npc_recoil_fixture_run(void){
         ++testcase;
         bl_combat_reset(&world);bl_progress_reset(&progress);
         bl_progress_inspect_room(&progress,&world,1);
+        bl_c64_test_write(0x7a,1); /* Isolate recoil: source spawn service paused. */
         world.enemy[1-kind].active=0;world.enemy[1-kind].respawn=0;
         victim=&world.enemy[kind];victim->active=1;
         victim->health=(signed short)(dead?6:20);victim->stun=0;

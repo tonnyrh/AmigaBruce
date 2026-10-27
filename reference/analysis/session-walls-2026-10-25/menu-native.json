@@ -1,0 +1,143 @@
+{
+  "status": "native_menu_and_debug_controls_checked",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "4e861a4cf294fe039445170019220c075db49821c285b0058e5d8649aeb58d50"
+  },
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "docs/images/session-menu.png",
+      "sha256": "2c8656e6a1bae54efa5586b47d16aada856a3248621ada1978f38daf54f39002"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/debug.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "docs/images/session-debug.png",
+      "sha256": "d7d72ec3724993aab6018bf52d2227b831f1c89f817f008f3225c4b411841c8c"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/debug-selected.bpl",
+      "sha256": "b7a4f0b2b3f62440e2a4d7ce5c1d584c017bec90305cef11ff9de7c447dfef59"
+    },
+    {
+      "path": "docs/images/session-debug-selected.png",
+      "sha256": "f07067c76a309c5852f1af1c944c782db14f85030297d58ebb25185fca14e409"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/room06.bpl",
+      "sha256": "919d2873b5b025555c8d975d6935c8ff1ac149a521c4a6d44ce40c1b244b8dd1"
+    },
+    {
+      "path": "docs/images/session-room06.png",
+      "sha256": "c95abfc9350377cbadbdbab98a3c030ac1cbe08fcd1b9f191f987522023c5b7a"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/room07.bpl",
+      "sha256": "667d2d345b970053ba68f968f5786206b316491323a4e7c437883f1353173d3b"
+    },
+    {
+      "path": "docs/images/session-room07.png",
+      "sha256": "7e8d9567a54f82fd5e46dabe0f14367d3c543daeb1fe414e02c9f70649d2fd2d"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/menu-2p.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "docs/images/session-menu-2p.png",
+      "sha256": "1719023c380b266a952a02f983ffb1f6b89e15be5226c0831cb85eeed6c31cd9"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/debug-off.bpl",
+      "sha256": "bf2626506b700f2ac5684f1d69a6ad00510263fbf45f84e194487488d8bd3420"
+    },
+    {
+      "path": "docs/images/session-debug-off.png",
+      "sha256": "c907b3454b700a88623a07bd8dc088f02270851c040d00678cab47faae466c1d"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/room06-2p.bpl",
+      "sha256": "38aca0ab61fbc940d5391384154642663c7ca8e1816895ae7061bbe2f115878f"
+    },
+    {
+      "path": "docs/images/session-room06-2p.png",
+      "sha256": "0c45f5b49aaeb310e0b7b619b3733a290bf616bdbb1c52a9ebb8796154f96dcb"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/menu.json",
+      "sha256": "7fddbd7fb2a83996e811df3d9f9e65e84bbf00ae0c6bbaa65518645ba8c6addc"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/debug.json",
+      "sha256": "f1dd00841686c52909d1f3f8082503fe686e9c6e207acf76a70619dac0433c4f"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/debug-selected.json",
+      "sha256": "0305e30880c522e360bb4c33612503359f64af992361cbf4f0352d80cce67f72"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/room06.json",
+      "sha256": "885f379d412e2bd034de4406bff1c6e04ff327720fabe9a1d47e1e3107c2f587"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/room07.json",
+      "sha256": "7b8bfbbf37062472c46f024ab25fbdbc280393e4d6c7ac47d581bd550fc20202"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/menu-2p.json",
+      "sha256": "60a90cdb14a797c5b7111a9f2bf67c66d467802e5a0e629bcfb894b9940a43f1"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/debug-off.json",
+      "sha256": "59f27b1505d09ecba2fba98552dfb62d09520344c45bd875631324e057436549"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/room06-2p.json",
+      "sha256": "d24a8b9a11d7b4c89f4f9d66a0db540e81c4c4e3aaa775c9bfac86d0d4cfe011"
+    }
+  ],
+  "checks": [
+    "Shift+D opens test options",
+    "F1/F2 toggle infinite falls/invincibility on and off",
+    "F4 selects room6 and Return starts it",
+    "F2 in test mode changes to room7",
+    "FALLS INF/TEST survives room change",
+    "F3 selects2players",
+    "FALLS04 with test flags off",
+    "F10 returns to main menu"
+  ],
+  "method": "Owned WinUAE keyboard events and current bitplane reads; expected menu/HUD text verified from saved pixels",
+  "natural_playthrough": false,
+  "limits": [
+    "No natural C64 play inferred",
+    "User death-sound listening and full human-Yamo/port play remain manual"
+  ],
+  "source_files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "ca0899b844992a148360aaa7904f928d1b04becc9a144416ad9063e700473e99"
+    },
+    {
+      "path": "tools/inspect_native_menu.py",
+      "sha256": "b7127f0247b948262ee348435a4913b7a77ee5bc9c10b4b6f826d9fdefc70e68"
+    },
+    {
+      "path": "tools/winuae_ipc.py",
+      "sha256": "898655a26c431c9c03bd73e0df1b10fa24b2d07d0c2c9a61f17a6f8e01dd005b"
+    },
+    {
+      "path": "tools/capture_paula_stream.py",
+      "sha256": "c710236ff8645a23211a199660870c111785ef4fcc576f5beaa1cefee3bd8181"
+    },
+    {
+      "path": "tools/preview_planar.py",
+      "sha256": "5eee92bd8b71f3d091fa9ede5f40673a6242427df2ddeb256c2916ee455c7c25"
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 # Gjennomgang av T01–T18 mot C64-koden
 
+27. oktober: Adapterbegrensningene under er historikk. Den
+[samlede kildeporten](MILESTONE_COMPLETION.md) erstatter aktør-, støtte-,
+pose-, kamp-, AI- og livsadapteren i vanlig spill. Naturlig akseptanse og
+maskinfasen er fortsatt åpne; brukerens tidligere godkjenninger beholdes.
+
 25. oktober 2026. Dette korrigerer **tolkningen av de tidligere testene** og
 registrerer konkrete feil i Amiga-adapteren. Brukerens observasjoner beholdes.
 Senere samme dag: [lanterne- og romgrensegjennomgangen](C64_CONTACTS.md) retter

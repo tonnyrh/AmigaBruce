@@ -112,5 +112,7 @@
     "Fixed in-place images retain prefetched-word/current-period/copy-boundary effects",
     "Cooperative service exposes missed fields; no independent audio interrupt or blanket50Hz guarantee",
     "Actor/gameplay/full natural C64 parity and strict A500 rendering gate remain open"
-  ]
+  ],
+  "superseded_by": "reference/validation/session-walls-delivery.json",
+  "historical_build": true
 }

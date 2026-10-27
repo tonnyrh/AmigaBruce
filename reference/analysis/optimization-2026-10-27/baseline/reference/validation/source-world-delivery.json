@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-27",
+  "status": "scoped_complete_source_chain_implemented_acceptance_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "full_original_parity": false,
+  "source_controls": 3034,
+  "integrated_scenarios": 5,
+  "source_instructions": 7055873,
+  "native_controls": 53,
+  "native_replay_loops": 1200,
+  "largest_chip_block": 52632,
+  "realtime_gate_passed": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "d4b25b91f0c1543b0f77dc58b6df5b2eba0132d92846edd15efca0587d5188e2"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "b0d284eb50f96d9c634824ec00dca8ccfadf2257d5164afe562e5931d0b36470"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "1223486324e75339cf5e81053e2cef29913f49573eff8443a068b5fb09f4cc9e"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-fixture.json",
+      "sha256": "80e9323ded8993c0fa1883e354ce3479df7477b485a751b1dd1db57c417fce0f"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-final.txt",
+      "sha256": "ae1b39c63dd0b3c94c23604ec26b30f9dd2ef3d93a6e3d60f91d3b9516489531"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
+      "sha256": "b0078f7001a3dc30369bde8b83d583bfe2f3183d413d7fe61ab29617b075d55e"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "e58a842198388a1f7c5cfa3abe9de51b55db1c80c1a7bd660ab467e1f7670c5a"
+    },
+    {
+      "path": "docs/MILESTONE_COMPLETION.md",
+      "sha256": "f59aef2d2c4a38ebca7244aebd64ab2e9f1eaf85b2a047930eb6d3c030df3eae"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "72be44ae0b7d67c4f95a21f551747e35517ecac854e97339b9ac352c918b3b73"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "sha256": "56cdbec3b1fde2d9d7f87cd1ebef550ca80efe4f17ffc8abc5585ee2a2979d3e"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "sha256": "4ad643e2f98d9cb2e72871d43d519c6d6903e8022f2c9a179b72d7895bb7e90f"
+    },
+    {
+      "path": "tools/verify_source_world_delivery.py",
+      "sha256": "bbc0c3194b90b40ae6a964ed39539059cceeec4ec84174666332ca56385da3dc"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "a0c995b702aa50f3ebf1820357103bfdb2eef6907de4199eb892d0ea1d157a5d"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6f90d4c0ba183d74779b926b3c8ca408fbeb6440d1ba24b84684cf53934c926c"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "5553cbba0a9f9ff84444205c55f01a5cb9b48c499152ffd6b9986aa00e25d1ef"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "ec00b70dcbaf0ab2209a57f0c6cd3d0845351290b8c64e8824b31d288bce402d"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "89e540aeba5fa8c41bc7862027c9ff299af32c319a5194acd9336f71e8cd88f4"
+    }
+  ],
+  "open_gates": [
+    "Verified untouched1984 edition",
+    "PAL real-time budget across all rooms",
+    "Natural VIC/IRQ phase and reader distribution",
+    "Complete natural playthrough and next round",
+    "Physical A500 and final distribution"
+  ]
+}

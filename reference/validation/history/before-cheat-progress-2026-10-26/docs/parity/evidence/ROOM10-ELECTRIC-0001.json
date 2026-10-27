@@ -1,0 +1,74 @@
+{
+  "id": "ROOM10-ELECTRIC-0001",
+  "date": "2026-10-26",
+  "status": "candidate_source_checked_presentation_repair",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "source_ranges": [
+    "$348F-$34C7",
+    "$3BB2-$3C8D",
+    "$404E-$40B7",
+    "$43BE/$45DC/$45DE",
+    "$5212-$52AC"
+  ],
+  "condition": "R10 trap state/characters match the executed source. Direct source-cell changes now copy before cached scrolling blocks; rotating budget scan prevents indefinite lower-row starvation. Full-word animation copies use A/D instead of B/C/D DMA.",
+  "controls": {
+    "source_loop_controls": 480,
+    "native_runs": 2,
+    "native_loop_iterations": 900,
+    "baseline_floor_mismatch_checks": 614,
+    "updated_floor_mismatch_checks": [
+      234,
+      234
+    ],
+    "baseline_longest_stale_streak": 60,
+    "updated_longest_stale_streak": [
+      4,
+      4
+    ],
+    "native_full_background_errors": [
+      0,
+      0
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "docs/ROOM10_ELECTRIC.md",
+      "sha256": "7cde71ad6d74b70faf27d1d1c1addee0d66a55b65193ee4681546e8d304eae09"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "ec51965d06c9c133257616f4b9c1c51a9c9a14ed0fba0d903113f732c95c68a1"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/source-disassembly.txt",
+      "sha256": "660df8da3238328ec8c5a95c1efd312a91ce1ad52316d37cd21c9bb2803c4354"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/source-controls.json",
+      "sha256": "becd120e210da3f1729447cf43ab89fdaed59ee0a2c7c992342883db80cb7074"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/copy-controls.json",
+      "sha256": "b352d465ac76207d9ed0393e8c5b603f6799caec97c78121d79bd14af4614c60"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/baseline/report.json",
+      "sha256": "13260286d6cec76cbb627d675b02f4872f39f5e69569f9c4f3e92bd96863ed5b"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/updated/report.json",
+      "sha256": "8d8478e96b681a2858d229272faeccfcedf995fe22fa1979b21761b75154a06f"
+    },
+    {
+      "path": "reference/validation/room10-electric-delivery.json",
+      "sha256": "1b876bfc885a0fd1db3bac726352bcf866b42ce0bf0d3ff653ab2de5b9b6c577"
+    }
+  ],
+  "limits": [
+    "Injected CPU controls and stationary A500 inspection, not natural C64 play",
+    "Instrumented display-copy delay improved; total field cadence did not improve",
+    "Baseline689 vs updated740 iterations with field gap>1; complete performance gate remains open"
+  ]
+}

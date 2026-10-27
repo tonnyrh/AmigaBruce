@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-26",
+  "status": "verified_scoped_room10_presentation_repair",
+  "source_files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "dce62771cdcc6eeff91b1bb4a0e8ac47f122781496c28b84408c2b8572d868c7"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "d6202014bb867a97c8b33dbd53451e461451885c1d650676562490a11200c75e"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "d8003b597df01d335cbf3c07d19d2873d5678ea6ee2784adba2cb8e63dc2cf5d"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "7225b91c017c3e6c786dad0fd356b11da118cab0da0d5f5d264e98e9800b6040"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "ec51965d06c9c133257616f4b9c1c51a9c9a14ed0fba0d903113f732c95c68a1"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "sha256": "e302b0734cd9f29e93d010577c0f189f9348756a0e150365afa9de9598d79420"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "8ea5d62d4f750121b415e9b03d90065d2192551d785e161b7d2f9aa9dcd24254"
+    },
+    {
+      "path": "test-room10-electric.ps1",
+      "sha256": "e619766f0501ca9876a700eac83f8d0a1b477166d6eea4e6800bc93ab01e7d56"
+    },
+    {
+      "path": "test-scene-copy.ps1",
+      "sha256": "afa21ae115873f6a4fa83de9fe295f9887b0addead3856073d5bcc2312d8d7b7"
+    },
+    {
+      "path": "tests/scene_copy_bridge.c",
+      "sha256": "c6728b633548a0c96a204d9ae93226f15c1f5d36ea7acc1c590357430dca8b94"
+    },
+    {
+      "path": "tools/audit_room10_electric.py",
+      "sha256": "c20fc6087ffe755d4cf71c68d0f792112625bc51736fb5ce5eab57b92221d98c"
+    },
+    {
+      "path": "tools/verify_scene_copy.py",
+      "sha256": "3bf9853422e5998a1e2a2bb952aa87470de549cb520302c5b48dfb36d43113b4"
+    },
+    {
+      "path": "tools/verify_room10_electric_delivery.py",
+      "sha256": "f31ff51913bd83262307bbfbefa25ce4fe95f9b23803a6662a7a206222350040"
+    },
+    {
+      "path": "tools/verify_c64_candidate.py",
+      "sha256": "cb550b49a6ce0ac500e5963cb3cfa523964671a6bb436e21e27d3b774a3e18a3"
+    },
+    {
+      "path": "docs/ROOM10_ELECTRIC.md",
+      "sha256": "7cde71ad6d74b70faf27d1d1c1addee0d66a55b65193ee4681546e8d304eae09"
+    },
+    {
+      "path": "reference/validation/c64-core.json",
+      "sha256": "fa8c30022f5d5c37a9428bfd028df89a791816eff0c4e95b689404b0ca74678f"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/source-controls.json",
+      "sha256": "becd120e210da3f1729447cf43ab89fdaed59ee0a2c7c992342883db80cb7074"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/source-disassembly.txt",
+      "sha256": "660df8da3238328ec8c5a95c1efd312a91ce1ad52316d37cd21c9bb2803c4354"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/copy-controls.json",
+      "sha256": "b352d465ac76207d9ed0393e8c5b603f6799caec97c78121d79bd14af4614c60"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/baseline/report.json",
+      "sha256": "13260286d6cec76cbb627d675b02f4872f39f5e69569f9c4f3e92bd96863ed5b"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/baseline/frame.bpl",
+      "sha256": "684b0c4f89087d3242704b49bba9e7668036e7fa67d8b687713010073686462d"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/updated/report.json",
+      "sha256": "8d8478e96b681a2858d229272faeccfcedf995fe22fa1979b21761b75154a06f"
+    },
+    {
+      "path": "reference/analysis/room10-electric-2026-10-26/updated/frame.bpl",
+      "sha256": "684b0c4f89087d3242704b49bba9e7668036e7fa67d8b687713010073686462d"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "54b54196239cbff38a49cc8bfec7e991d10573186cbb61276084ecf096f32c50"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "0242f5ab58c3354fbd4ea1024e65356bc0e552b6f6a707469e28fdcb7edef843"
+    }
+  ],
+  "native_build": [
+    {
+      "path": "amiga/out/bruce_test.exe",
+      "sha256": "f3c58024c92a73a9366f850e49241373e0859a847185f8cb87a3a321ec5312d9"
+    },
+    {
+      "path": "amiga/out/bruce_test.adf",
+      "sha256": "0cac2bff7e5588699016e36919d5b0fb5e14cf2d650751b9ef2aee22be8279f9"
+    }
+  ],
+  "source_loop_controls": 480,
+  "native_validation_complete": true,
+  "native_fields_per_run": 900,
+  "native_runs": 2,
+  "baseline_mismatch_fields": 614,
+  "baseline_max_streak": 60,
+  "updated_mismatch_fields": [
+    234,
+    234
+  ],
+  "updated_max_streak": [
+    4,
+    4
+  ],
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "full_actor_parity": false,
+  "full_m4_complete": false,
+  "realtime_gate_passed": false
+}

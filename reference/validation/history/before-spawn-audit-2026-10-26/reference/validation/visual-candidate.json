@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-26",
+  "status": "verified_scoped_cheat_progress_preparation",
+  "artifact": {
+    "path": "reference/validation/cheat-progress-delivery.json",
+    "sha256": "a4de0726bc5faaa4a44a029d34c613cbc58d401635f5fdbe6da41b2da337e8ba"
+  },
+  "native_validation_complete": true,
+  "actor_logic_fully_ported": false,
+  "full_m2_parity": false,
+  "full_m4_parity": false,
+  "full_m5_complete": false,
+  "natural_playthrough_verified": false,
+  "primary_edition_verified": false,
+  "all_room_realtime_gate_passed": false,
+  "enhanced_art_active": false
+}

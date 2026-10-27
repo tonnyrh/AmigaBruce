@@ -19,7 +19,7 @@ static const unsigned char source_climb_packed[]={131,80,120,1,6,0,134,1,0,77,12
 static const signed short source_climb_starts[][5]={{0,120,4,148,179},{120,120,4,172,179},{240,48,4,148,150}};
 #define BL_CLIMB_FIXTURE_CASES 390
 static unsigned short climb_fixture_data(const unsigned char *raw){
-    unsigned short i,j,at;BlSourceActor a;BlGame g;BlFighter f;BlC64Sprite visual;
+    unsigned short i,j,at;BlSourceActor a;BlGame g;BlFighter f={0};BlC64Sprite visual;
     for(i=0;i<BL_CLIMB_DISPATCH_CASES;i++){
         const unsigned char *v=raw+i*22;
         for(j=0;j<9;j++)((unsigned char*)&a)[j]=v[j];

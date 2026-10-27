@@ -1,0 +1,62 @@
+{
+  "id": "SPAWN-AUDIT-0001",
+  "date": "2026-10-26",
+  "status": "candidate_code_derived_partial_and_native_scoped",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "full_original_parity": false,
+  "source_ranges": [
+    "$0A2A-$0A69",
+    "$0B8E-$0E2D",
+    "$1159-$1166",
+    "$130B-$1382",
+    "$1614-$1626",
+    "$1BEE-$1C32",
+    "$2235-$2269",
+    "$2E39-$2EE9",
+    "$3001-$304A",
+    "$30D4-$310B",
+    "$4BAE-$4BFD",
+    "$4C9E"
+  ],
+  "condition": "Actual source spawn services/tables, entry phases/masks, saved arrival/health, age/mode returns and dynamic-door gates integrated. Logical field clock preserved; full actor/IRQ context and natural read distribution remain open.",
+  "controls": {
+    "initial": 80,
+    "services": 4320,
+    "removal": 960,
+    "clock": 60,
+    "entry_steps": 908,
+    "source_main_updates": 123,
+    "birth_blast_cases": 30,
+    "native_fixture_cases": 223,
+    "native_runs": 2,
+    "native_loop_iterations_per_run": 6000
+  },
+  "artifacts": [
+    {
+      "path": "reference/validation/spawn-delivery.json",
+      "sha256": "42fce157714564bb1f4789cc9fa2b6461689d0a17a289b25fe34aa688b882484"
+    },
+    {
+      "path": "docs/ENEMY_SPAWNS.md",
+      "sha256": "42b641f003ae2ccb8f287eb67ceb76b6965516d0baa19c2b43fa7345ea5a2909"
+    },
+    {
+      "path": "tests/spawn_fixture.h",
+      "sha256": "db91ce8bb9d1956c22a20e8b6aa52e84c7e8c7b14fe7895ce881fed3975aba93"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/report.json",
+      "sha256": "cb3f4bfd14553d70418c92234e3fcb47054f505490198e34652f69824269548e"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/world-controls.json",
+      "sha256": "1ff8617feb8875a3bab077ed1ea03af1290c17529e6fbfa4f5c57fa572c36cd9"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/source-disassembly.txt",
+      "sha256": "ee7a52bd1a6befa2910009d214bd7e85d6c1a7477f86d388af96004677b76987"
+    }
+  ]
+}

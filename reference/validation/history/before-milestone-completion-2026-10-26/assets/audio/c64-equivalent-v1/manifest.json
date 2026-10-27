@@ -1,0 +1,175 @@
+{
+  "source": {
+    "path": ".reference/c64/work/untrained-memory.bin",
+    "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+  },
+  "edition_verified": false,
+  "method": "Actual6502 music/SFX subroutines with controlled initialization; not natural full-machine play",
+  "music": {
+    "init": "$E000 then $E003",
+    "play": "$E006 per PAL field",
+    "caller": "$06DA/$154C",
+    "frames": 1155,
+    "loop_frame": 1,
+    "loop_length": 1154,
+    "packets": 355,
+    "bytes": 2942,
+    "loop_byte": 31
+  },
+  "effects": [
+    {
+      "id": "0x80",
+      "stream_address": "$EC31",
+      "frames": 2,
+      "priority": 11
+    },
+    {
+      "id": "0x81",
+      "stream_address": "$EC37",
+      "frames": 33,
+      "priority": 12
+    },
+    {
+      "id": "0x82",
+      "stream_address": "$EC47",
+      "frames": 13,
+      "priority": 10
+    },
+    {
+      "id": "0x83",
+      "stream_address": "$EC7A",
+      "frames": 7,
+      "priority": 0
+    },
+    {
+      "id": "0x84",
+      "stream_address": "$EC90",
+      "frames": 22,
+      "priority": 8
+    },
+    {
+      "id": "0x85",
+      "stream_address": "$ECBE",
+      "frames": 7,
+      "priority": 7
+    },
+    {
+      "id": "0x86",
+      "stream_address": "$ECD8",
+      "frames": 6,
+      "priority": 9
+    },
+    {
+      "id": "0x87",
+      "stream_address": "$ECEC",
+      "frames": 9,
+      "priority": 6
+    },
+    {
+      "id": "0x88",
+      "stream_address": "$ED0E",
+      "frames": 21,
+      "priority": 0
+    },
+    {
+      "id": "0x89",
+      "stream_address": "$ED59",
+      "frames": 2,
+      "priority": 0
+    },
+    {
+      "id": "0x8a",
+      "stream_address": "$ED60",
+      "frames": 80,
+      "priority": 1
+    },
+    {
+      "id": "0x8b",
+      "stream_address": "$ED8E",
+      "frames": 15,
+      "priority": 2
+    },
+    {
+      "id": "0x8c",
+      "stream_address": "$EDC8",
+      "frames": 15,
+      "priority": 3
+    },
+    {
+      "id": "0x8d",
+      "stream_address": "$EE07",
+      "frames": 104,
+      "priority": 4
+    },
+    {
+      "id": "0x8e",
+      "stream_address": "$EE19",
+      "frames": 27,
+      "priority": 5
+    }
+  ],
+  "priority_routine": "$2509-$255D",
+  "drivers": [
+    "$EB03",
+    "$EF73",
+    "$F073"
+  ],
+  "waveform_bytes": 2260,
+  "previous_sfx_chip_bytes": 4004,
+  "source_sid_clock": 985248,
+  "paula_clock": 3546895,
+  "paula_minimum_period": 124,
+  "noise_source": "deterministic23-bit LFSR Paula resource",
+  "envelopes": "50Hz fixed-point piecewise linear approximation using MOS6581 ADSR rates",
+  "limitations": [
+    "Not analog SID/filter/noise or cycle-exact ADSR emulation",
+    "8/16/32-sample wave cycles quantize pulse width and Paula period",
+    "Noise sample rate constrained by OCS DMA; inaudible extremes cannot retain exact SID pitch",
+    "Source PAL cadence adapted to A500 fields; long-term clock mismatch remains open"
+  ],
+  "code_ranges": [
+    {
+      "start": "$2509",
+      "end_exclusive": "$2584",
+      "sha256": "f258eba176369942f9780f9a49eaa5ecb964373180c8afef23759ab7a65eef59"
+    },
+    {
+      "start": "$E000",
+      "end_exclusive": "$EB00",
+      "sha256": "79ed471f503db2b45eb2ffeda2acf36ae31f643d16166ba936062f3609d98f25"
+    },
+    {
+      "start": "$EB03",
+      "end_exclusive": "$EBE5",
+      "sha256": "e00c0fd4671f42e6ede687ea7242799d4035fd0bede99ae65a39f141315352e8"
+    },
+    {
+      "start": "$EF73",
+      "end_exclusive": "$F070",
+      "sha256": "d4f094bb0fe26f445bf743db31287da26c6214ab7e34d9934478e5f8efdba0ea"
+    },
+    {
+      "start": "$F073",
+      "end_exclusive": "$F160",
+      "sha256": "57c4a302a96fd219308b3c4e6cf34dcdc60724408daf04abc929112e6ee8034e"
+    }
+  ],
+  "generated": [
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/waveforms.pcm",
+      "sha256": "fc1020350cc4c0106f05b463928fbc2e8067bf5dbcb2cf546506c5328cd9c89b"
+    },
+    {
+      "path": "assets/audio/c64-equivalent-v1/source-registers.json",
+      "sha256": "c7776d8c23319721287da67b25cd6e910a41c8e8a436b97fbe83c25c6fda758d"
+    }
+  ]
+}

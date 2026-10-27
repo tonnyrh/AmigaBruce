@@ -1,0 +1,1761 @@
+{
+  "checks_passed": true,
+  "primary_edition_verified": false,
+  "full_m4_parity": false,
+  "rooms": [
+    {
+      "index": 0,
+      "room_id": "R01",
+      "packed_address": "0x68f9",
+      "packed_bytes": 272,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 31,
+          "row": 7
+        },
+        {
+          "column": 38,
+          "row": 7
+        },
+        {
+          "column": 2,
+          "row": 10
+        },
+        {
+          "column": 25,
+          "row": 10
+        },
+        {
+          "column": 29,
+          "row": 10
+        },
+        {
+          "column": 38,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 1,
+          "entry_x": 8,
+          "entry_y": 146,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 8
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 4,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 5,
+          "target": 1,
+          "entry_x": 6,
+          "entry_y": 98,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 5
+            }
+          ]
+        }
+      ],
+      "entry_x": 28,
+      "entry_y": 196,
+      "enemy_x": 294,
+      "enemy_y": 98,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        238,
+        160
+      ],
+      "init_address": "0x33f4",
+      "loop_address": "0x3641"
+    },
+    {
+      "index": 1,
+      "room_id": "R02",
+      "packed_address": "0x6a09",
+      "packed_bytes": 309,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 9,
+          "row": 7
+        },
+        {
+          "column": 30,
+          "row": 7
+        },
+        {
+          "column": 6,
+          "row": 10
+        },
+        {
+          "column": 15,
+          "row": 10
+        },
+        {
+          "column": 24,
+          "row": 10
+        },
+        {
+          "column": 32,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 0,
+          "entry_x": 296,
+          "entry_y": 146,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 8
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 5,
+          "entry_x": 64,
+          "entry_y": 50,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 4,
+          "target": 0,
+          "entry_x": 298,
+          "entry_y": 98,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 5
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 2,
+          "entry_x": 8,
+          "entry_y": 98,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 5
+            }
+          ]
+        }
+      ],
+      "entry_x": 24,
+      "entry_y": 98,
+      "enemy_x": 274,
+      "enemy_y": 146,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        238,
+        160
+      ],
+      "init_address": "0x33f5",
+      "loop_address": "0x3678"
+    },
+    {
+      "index": 2,
+      "room_id": "R03",
+      "packed_address": "0x6b3e",
+      "packed_bytes": 351,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 5,
+          "row": 7
+        },
+        {
+          "column": 9,
+          "row": 7
+        },
+        {
+          "column": 22,
+          "row": 7
+        },
+        {
+          "column": 26,
+          "row": 7
+        },
+        {
+          "column": 30,
+          "row": 7
+        },
+        {
+          "column": 5,
+          "row": 10
+        },
+        {
+          "column": 9,
+          "row": 10
+        },
+        {
+          "column": 15,
+          "row": 10
+        },
+        {
+          "column": 21,
+          "row": 10
+        },
+        {
+          "column": 27,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 3,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 4,
+          "target": 1,
+          "entry_x": 298,
+          "entry_y": 98,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 5
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 3,
+          "entry_x": 8,
+          "entry_y": 196,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 72,
+      "entry_y": 196,
+      "enemy_x": 276,
+      "enemy_y": 196,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        238,
+        160
+      ],
+      "init_address": "0x33f4",
+      "loop_address": "0x36a5"
+    },
+    {
+      "index": 3,
+      "room_id": "R04",
+      "packed_address": "0x6c9d",
+      "packed_bytes": 382,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 29,
+          "row": 10
+        },
+        {
+          "column": 38,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 3,
+          "target": 10,
+          "entry_x": 8,
+          "entry_y": 176,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 4,
+          "target": 2,
+          "entry_x": 298,
+          "entry_y": 197,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": 8,
+          "entry_y": 98,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 40,
+      "entry_y": 192,
+      "enemy_x": 88,
+      "enemy_y": 196,
+      "enemies_enabled": false,
+      "enemy_exit_wait": [
+        0,
+        0
+      ],
+      "init_address": "0x33fb",
+      "loop_address": "0x3701"
+    },
+    {
+      "index": 4,
+      "room_id": "R05",
+      "packed_address": "0x6e1b",
+      "packed_bytes": 359,
+      "decoded_cells": 442,
+      "lanterns": [
+        {
+          "column": 11,
+          "row": 4
+        },
+        {
+          "column": 28,
+          "row": 4
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 5,
+          "entry_x": 8,
+          "entry_y": 194,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 4
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 7,
+          "entry_x": 38,
+          "entry_y": 50,
+          "valid": true,
+          "cells": [
+            {
+              "column": 1,
+              "row": 12
+            },
+            {
+              "column": 2,
+              "row": 12
+            },
+            {
+              "column": 3,
+              "row": 12
+            },
+            {
+              "column": 4,
+              "row": 12
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 272,
+      "entry_y": 180,
+      "enemy_x": 276,
+      "enemy_y": 180,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        238,
+        112
+      ],
+      "init_address": "0x3401",
+      "loop_address": "0x375f"
+    },
+    {
+      "index": 5,
+      "room_id": "R06",
+      "packed_address": "0x6f82",
+      "packed_bytes": 347,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 2,
+          "row": 3
+        },
+        {
+          "column": 6,
+          "row": 3
+        },
+        {
+          "column": 28,
+          "row": 3
+        },
+        {
+          "column": 32,
+          "row": 3
+        },
+        {
+          "column": 38,
+          "row": 3
+        },
+        {
+          "column": 30,
+          "row": 6
+        },
+        {
+          "column": 2,
+          "row": 10
+        },
+        {
+          "column": 23,
+          "row": 10
+        },
+        {
+          "column": 26,
+          "row": 10
+        },
+        {
+          "column": 30,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 4,
+          "entry_x": 288,
+          "entry_y": 81,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 3,
+          "target": 6,
+          "entry_x": 8,
+          "entry_y": 64,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 4
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 6,
+          "entry_x": 8,
+          "entry_y": 116,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 7
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 1,
+          "entry_x": 152,
+          "entry_y": 102,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 44,
+      "entry_y": 81,
+      "enemy_x": 56,
+      "enemy_y": 194,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        96,
+        12
+      ],
+      "init_address": "0x3427",
+      "loop_address": "0x38aa"
+    },
+    {
+      "index": 6,
+      "room_id": "R07",
+      "packed_address": "0x70dd",
+      "packed_bytes": 330,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 8,
+          "row": 5
+        },
+        {
+          "column": 10,
+          "row": 5
+        },
+        {
+          "column": 14,
+          "row": 5
+        },
+        {
+          "column": 22,
+          "row": 5
+        },
+        {
+          "column": 26,
+          "row": 5
+        },
+        {
+          "column": 28,
+          "row": 5
+        },
+        {
+          "column": 6,
+          "row": 9
+        },
+        {
+          "column": 30,
+          "row": 9
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 5,
+          "entry_x": 296,
+          "entry_y": 128,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 6
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 5,
+          "entry_x": 296,
+          "entry_y": 102,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 4,
+          "target": 2,
+          "entry_x": 20,
+          "entry_y": 81,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": 40,
+          "entry_y": 81,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 244,
+      "entry_y": 179,
+      "enemy_x": 234,
+      "enemy_y": 114,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        238,
+        48
+      ],
+      "init_address": "0x33f4",
+      "loop_address": "0x39a9"
+    },
+    {
+      "index": 7,
+      "room_id": "R08",
+      "packed_address": "0x7227",
+      "packed_bytes": 234,
+      "decoded_cells": 442,
+      "lanterns": [
+        {
+          "column": 3,
+          "row": 2
+        },
+        {
+          "column": 12,
+          "row": 2
+        },
+        {
+          "column": 13,
+          "row": 2
+        },
+        {
+          "column": 25,
+          "row": 2
+        },
+        {
+          "column": 26,
+          "row": 2
+        },
+        {
+          "column": 5,
+          "row": 5
+        },
+        {
+          "column": 6,
+          "row": 5
+        },
+        {
+          "column": 12,
+          "row": 5
+        },
+        {
+          "column": 13,
+          "row": 5
+        },
+        {
+          "column": 25,
+          "row": 5
+        },
+        {
+          "column": 26,
+          "row": 5
+        },
+        {
+          "column": 2,
+          "row": 9
+        },
+        {
+          "column": 3,
+          "row": 9
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 0,
+          "entry_x": 72,
+          "entry_y": 81,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 3,
+          "target": 8,
+          "entry_x": 6,
+          "entry_y": 70,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 6
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 8,
+          "entry_x": 8,
+          "entry_y": 192,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 10
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": 40,
+          "entry_y": 81,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 32,
+      "entry_y": 68,
+      "enemy_x": 38,
+      "enemy_y": 116,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        192,
+        24
+      ],
+      "init_address": "0x3460",
+      "loop_address": "0x39c2"
+    },
+    {
+      "index": 8,
+      "room_id": "R09",
+      "packed_address": "0x7311",
+      "packed_bytes": 384,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 15,
+          "row": 3
+        },
+        {
+          "column": 24,
+          "row": 3
+        },
+        {
+          "column": 6,
+          "row": 7
+        },
+        {
+          "column": 33,
+          "row": 7
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 7,
+          "entry_x": 296,
+          "entry_y": 116,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 3
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 9,
+          "entry_x": 8,
+          "entry_y": 83,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 3
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 7,
+          "entry_x": 298,
+          "entry_y": 181,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 9,
+          "entry_x": 6,
+          "entry_y": 198,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 11
+            }
+          ]
+        }
+      ],
+      "entry_x": 16,
+      "entry_y": 70,
+      "enemy_x": -24,
+      "enemy_y": 0,
+      "enemies_enabled": false,
+      "enemy_exit_wait": [
+        0,
+        0
+      ],
+      "init_address": "0x3477",
+      "loop_address": "0x3ad3"
+    },
+    {
+      "index": 9,
+      "room_id": "R10",
+      "packed_address": "0x7491",
+      "packed_bytes": 327,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 32,
+          "row": 2
+        },
+        {
+          "column": 15,
+          "row": 7
+        },
+        {
+          "column": 27,
+          "row": 10
+        },
+        {
+          "column": 28,
+          "row": 10
+        },
+        {
+          "column": 32,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 8,
+          "entry_x": 296,
+          "entry_y": 71,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 4
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 8,
+          "entry_x": 296,
+          "entry_y": 192,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 6,
+          "entry_x": 290,
+          "entry_y": 199,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 12,
+      "entry_y": 198,
+      "enemy_x": -24,
+      "enemy_y": 0,
+      "enemies_enabled": false,
+      "enemy_exit_wait": [
+        0,
+        0
+      ],
+      "init_address": "0x348e",
+      "loop_address": "0x3bb1"
+    },
+    {
+      "index": 10,
+      "room_id": "R11",
+      "packed_address": "0x75d8",
+      "packed_bytes": 372,
+      "decoded_cells": 442,
+      "lanterns": [
+        {
+          "column": 1,
+          "row": 4
+        },
+        {
+          "column": 30,
+          "row": 7
+        },
+        {
+          "column": 30,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 3,
+          "entry_x": 296,
+          "entry_y": 196,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 11,
+          "entry_x": 8,
+          "entry_y": 196,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 5
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 80,
+      "entry_y": 140,
+      "enemy_x": 276,
+      "enemy_y": 92,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        48,
+        12
+      ],
+      "init_address": "0x33f4",
+      "loop_address": "0x3c8f"
+    },
+    {
+      "index": 11,
+      "room_id": "R12",
+      "packed_address": "0x774c",
+      "packed_bytes": 247,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 18,
+          "row": 3
+        },
+        {
+          "column": 21,
+          "row": 3
+        },
+        {
+          "column": 7,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 10,
+          "entry_x": 296,
+          "entry_y": 90,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 12,
+          "entry_x": 8,
+          "entry_y": 92,
+          "valid": true,
+          "cells": [
+            {
+              "column": 9,
+              "row": 7
+            },
+            {
+              "column": 10,
+              "row": 7
+            },
+            {
+              "column": 11,
+              "row": 7
+            },
+            {
+              "column": 12,
+              "row": 7
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 14,
+          "entry_x": 8,
+          "entry_y": 94,
+          "valid": true,
+          "cells": [
+            {
+              "column": 18,
+              "row": 7
+            },
+            {
+              "column": 19,
+              "row": 7
+            },
+            {
+              "column": 20,
+              "row": 7
+            },
+            {
+              "column": 21,
+              "row": 7
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 16,
+          "entry_x": 8,
+          "entry_y": 92,
+          "valid": true,
+          "cells": [
+            {
+              "column": 27,
+              "row": 7
+            },
+            {
+              "column": 28,
+              "row": 7
+            },
+            {
+              "column": 29,
+              "row": 7
+            },
+            {
+              "column": 30,
+              "row": 7
+            }
+          ]
+        }
+      ],
+      "entry_x": 104,
+      "entry_y": 76,
+      "enemy_x": -24,
+      "enemy_y": 0,
+      "enemies_enabled": false,
+      "enemy_exit_wait": [
+        0,
+        0
+      ],
+      "init_address": "0x33f4",
+      "loop_address": "0x3cbf"
+    },
+    {
+      "index": 12,
+      "room_id": "R13",
+      "packed_address": "0x7843",
+      "packed_bytes": 387,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 36,
+          "row": 4
+        },
+        {
+          "column": 36,
+          "row": 7
+        },
+        {
+          "column": 36,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 3,
+          "target": 11,
+          "entry_x": 80,
+          "entry_y": 190,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 8
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 14,
+          "entry_x": 8,
+          "entry_y": 190,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 24,
+      "entry_y": 92,
+      "enemy_x": 200,
+      "enemy_y": 92,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        32,
+        4
+      ],
+      "init_address": "0x34bc",
+      "loop_address": "0x3e4b"
+    },
+    {
+      "index": 13,
+      "room_id": "R14",
+      "packed_address": "0x79c6",
+      "packed_bytes": 128,
+      "decoded_cells": 442,
+      "lanterns": [],
+      "doors": [
+        {
+          "id": 2,
+          "target": 15,
+          "entry_x": 8,
+          "entry_y": 195,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 4,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 280,
+      "entry_y": 50,
+      "enemy_x": -24,
+      "enemy_y": 0,
+      "enemies_enabled": false,
+      "enemy_exit_wait": [
+        238,
+        8
+      ],
+      "init_address": "0x34c2",
+      "loop_address": "0x3e7b"
+    },
+    {
+      "index": 14,
+      "room_id": "R15",
+      "packed_address": "0x7a46",
+      "packed_bytes": 366,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 9,
+          "row": 7
+        },
+        {
+          "column": 30,
+          "row": 7
+        },
+        {
+          "column": 9,
+          "row": 10
+        },
+        {
+          "column": 30,
+          "row": 10
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 3,
+          "target": 11,
+          "entry_x": 136,
+          "entry_y": 190,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 5
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 12,
+          "entry_x": 296,
+          "entry_y": 190,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 16,
+          "entry_x": 8,
+          "entry_y": 190,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 11
+            }
+          ]
+        }
+      ],
+      "entry_x": 24,
+      "entry_y": 92,
+      "enemy_x": 268,
+      "enemy_y": 190,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        48,
+        8
+      ],
+      "init_address": "0x358c",
+      "loop_address": "0x3ecb"
+    },
+    {
+      "index": 15,
+      "room_id": "R16",
+      "packed_address": "0x7bb4",
+      "packed_bytes": 168,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 19,
+          "row": 3
+        },
+        {
+          "column": 21,
+          "row": 3
+        },
+        {
+          "column": 14,
+          "row": 4
+        },
+        {
+          "column": 26,
+          "row": 4
+        },
+        {
+          "column": 13,
+          "row": 6
+        },
+        {
+          "column": 27,
+          "row": 6
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 13,
+          "entry_x": 296,
+          "entry_y": 196,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 17,
+          "entry_x": 8,
+          "entry_y": 179,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 4,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 32,
+      "entry_y": 195,
+      "enemy_x": 220,
+      "enemy_y": 196,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        80,
+        8
+      ],
+      "init_address": "0x3592",
+      "loop_address": "0x3ee5"
+    },
+    {
+      "index": 16,
+      "room_id": "R17",
+      "packed_address": "0x7c5c",
+      "packed_bytes": 305,
+      "decoded_cells": 440,
+      "lanterns": [
+        {
+          "column": 32,
+          "row": 4
+        },
+        {
+          "column": 5,
+          "row": 7
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 3,
+          "target": 11,
+          "entry_x": 232,
+          "entry_y": 190,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 8
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 14,
+          "entry_x": 296,
+          "entry_y": 190,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 24,
+      "entry_y": 92,
+      "enemy_x": 234,
+      "enemy_y": 142,
+      "enemies_enabled": true,
+      "enemy_exit_wait": [
+        48,
+        8
+      ],
+      "init_address": "0x359e",
+      "loop_address": "0x3f5a"
+    },
+    {
+      "index": 17,
+      "room_id": "R18",
+      "packed_address": "0x7d8d",
+      "packed_bytes": 259,
+      "decoded_cells": 442,
+      "lanterns": [
+        {
+          "column": 38,
+          "row": 10
+        },
+        {
+          "column": 31,
+          "row": 11
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 15,
+          "entry_x": 296,
+          "entry_y": 147,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 10
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 18,
+          "entry_x": 8,
+          "entry_y": 198,
+          "valid": true,
+          "cells": [
+            {
+              "column": 39,
+              "row": 3
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 24,
+      "entry_y": 180,
+      "enemy_x": -24,
+      "enemy_y": 0,
+      "enemies_enabled": false,
+      "enemy_exit_wait": [
+        238,
+        8
+      ],
+      "init_address": "0x35c3",
+      "loop_address": "0x3f70"
+    },
+    {
+      "index": 18,
+      "room_id": "R19",
+      "packed_address": "0x7e90",
+      "packed_bytes": 336,
+      "decoded_cells": 442,
+      "lanterns": [
+        {
+          "column": 37,
+          "row": 11
+        }
+      ],
+      "doors": [
+        {
+          "id": 2,
+          "target": 17,
+          "entry_x": 296,
+          "entry_y": 68,
+          "valid": true,
+          "cells": [
+            {
+              "column": 0,
+              "row": 11
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "target": 19,
+          "entry_x": 8,
+          "entry_y": 150,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 4,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": [
+            {
+              "column": 13,
+              "row": 2
+            },
+            {
+              "column": 7,
+              "row": 8
+            },
+            {
+              "column": 13,
+              "row": 8
+            },
+            {
+              "column": 26,
+              "row": 8
+            },
+            {
+              "column": 32,
+              "row": 8
+            },
+            {
+              "column": 7,
+              "row": 9
+            },
+            {
+              "column": 13,
+              "row": 9
+            },
+            {
+              "column": 26,
+              "row": 9
+            },
+            {
+              "column": 32,
+              "row": 9
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": [
+            {
+              "column": 4,
+              "row": 2
+            },
+            {
+              "column": 8,
+              "row": 2
+            },
+            {
+              "column": 12,
+              "row": 2
+            },
+            {
+              "column": 30,
+              "row": 2
+            },
+            {
+              "column": 34,
+              "row": 2
+            },
+            {
+              "column": 38,
+              "row": 2
+            }
+          ]
+        }
+      ],
+      "entry_x": 24,
+      "entry_y": 198,
+      "enemy_x": -24,
+      "enemy_y": 0,
+      "enemies_enabled": false,
+      "enemy_exit_wait": [
+        0,
+        0
+      ],
+      "init_address": "0x35f9",
+      "loop_address": "0x3cdb"
+    },
+    {
+      "index": 19,
+      "room_id": "R20",
+      "packed_address": "0x7fe0",
+      "packed_bytes": 416,
+      "decoded_cells": 440,
+      "lanterns": [],
+      "doors": [
+        {
+          "id": 2,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 3,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 4,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        },
+        {
+          "id": 5,
+          "target": 0,
+          "entry_x": -24,
+          "entry_y": 0,
+          "valid": false,
+          "cells": []
+        }
+      ],
+      "entry_x": 12,
+      "entry_y": 149,
+      "enemy_x": -24,
+      "enemy_y": 0,
+      "enemies_enabled": false,
+      "enemy_exit_wait": [
+        0,
+        0
+      ],
+      "init_address": "0x425e",
+      "loop_address": "0x4271"
+    }
+  ],
+  "limits": [
+    "Static table extraction does not certify reachable exits or room-specific gates",
+    "Editor defaults differ and are not used as original room links",
+    "Original init/loop code, traps, gates and completion require native measurements"
+  ],
+  "source_files": [
+    {
+      "path": ".reference/c64/work/untrained-memory.bin",
+      "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+    },
+    {
+      "path": "tools/analyze_c64_rooms.py",
+      "sha256": "c5a5deea7dc3ca979b291ee9e20b56b9faba2d9ac4f923c7b84f26769cfe81fd"
+    }
+  ],
+  "generated_header_sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+}

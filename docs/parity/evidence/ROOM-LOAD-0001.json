@@ -1,0 +1,78 @@
+{
+  "id": "ROOM-LOAD-0001",
+  "date": "2026-10-26",
+  "status": "source_pixels_and_native_room_work_controls_passed",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "full_original_parity": false,
+  "source_data": [
+    "$0A9B source room load",
+    "$480B palette pointers",
+    "$4833 raster pointers",
+    "$2C70-$2D54 rolling glyphs",
+    "$42F1/$4309 source patterns"
+  ],
+  "conditions": [
+    "C64 room/actor state and contact rules are unchanged; caches supply only rendered graphics",
+    "Exact palette/raster/pattern/cell/buffer/capacity keys govern reuse; immutable foreground masks are shared",
+    "Baseline uses archived previous renderer; optimized capture is pixel-identical at the native checkpoint"
+  ],
+  "controls": {
+    "host_cache_invalidation": 23,
+    "baseline_runs": 1,
+    "optimized_runs": 2,
+    "room_choices_per_run": 29,
+    "rooms": 20,
+    "source_render_checks_per_run": 30,
+    "render_mismatches": 0,
+    "preparation_work_reduction_percent": [
+      20.81,
+      20.81
+    ],
+    "CPU_table_bytes_saved": 23552,
+    "largest_chip_block_before": 60832,
+    "largest_chip_block_after": 85408
+  },
+  "artifacts": [
+    {
+      "path": "docs/ROOM_LOAD_PERFORMANCE.md",
+      "sha256": "59bd0b674f0bf695bb9954bb1716ffa4f497c211937a1e30907ade02261c049e"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/docs/PROJECT_PLAN.md",
+      "sha256": "9f54a0826ecc93d52d1b10bf7513ddbdf4b04de334010690178803255a2229e4",
+      "original_path": "docs/PROJECT_PLAN.md"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/docs/ACTIVE_TESTS.md",
+      "sha256": "dbbcab6bcbf37daeafcec85220b88c957c778e75f0f4b03c26983571de96677a",
+      "original_path": "docs/ACTIVE_TESTS.md"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/validation/room-load-delivery.json",
+      "sha256": "fec24eaf53eb0ab76fb7351658aaaa2c83e8c672e0e0fee0750b151c642facbf",
+      "original_path": "reference/validation/room-load-delivery.json"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/analysis/room-load-2026-10-25/host-reuse.json",
+      "sha256": "7257304e06304e1d4ecc8ac50f88b83fdaa2cb063334d825c8cefc75fa35d180",
+      "original_path": "reference/analysis/room-load-2026-10-25/host-reuse.json"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/validation/a500-room-load-baseline.json",
+      "sha256": "7affc919286396986ad642e95ef0fb832c39a215103384deb0ec78f52c340a20",
+      "original_path": "reference/validation/a500-room-load-baseline.json"
+    },
+    {
+      "path": "reference/validation/history/before-ninja-wall-2026-10-26/reference/validation/a500-room-load.json",
+      "sha256": "b5d059eb6fbec98f07de8fa9ab8da22b0331697d5abb79a94e4890d8cffe96ce",
+      "original_path": "reference/validation/a500-room-load.json"
+    }
+  ],
+  "limits": [
+    "Controlled room choices are not natural transitions or progression",
+    "Preparation work excludes diagnostic pixel checks and is not the entire visible transition",
+    "Full M4, strict whole-game cadence, full actor/combat/AI and listening approval remain open"
+  ]
+}

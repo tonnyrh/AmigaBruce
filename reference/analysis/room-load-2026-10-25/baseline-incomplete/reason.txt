@@ -1,0 +1,1 @@
+Diagnostic capture only: initial route omitted rooms3/4 and counted startup in first load field gap. Rejected by route gate; not used as accepted baseline.

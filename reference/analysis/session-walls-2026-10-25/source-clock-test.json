@@ -1,0 +1,28 @@
+{
+  "label": "source-clock-test",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "8711b37875b5ca45d3e9e51f04c4b9bef93ec7a6b0a275347d849b3719eeddcc"
+  },
+  "source_room": 1,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    354880,
+    354920,
+    354960,
+    355000
+  ],
+  "source_music_fields": 2443,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/source-clock-test.bpl",
+      "sha256": "b413f5d669d47c8f5a85354d55874ffedcee06c908eef8d608f5e8318980d41c"
+    },
+    {
+      "path": "docs/images/session-source-clock-test.png",
+      "sha256": "4beada18860e270618a842e3c14f2fc3af3adab74da4482fa0356aaece984f7b"
+    }
+  ]
+}

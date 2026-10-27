@@ -16,11 +16,12 @@ enhanced-utgave kommer etterpå. Se [spriteuttrekket](C64_SPRITES.md).
 
 Fast arbeidsregel: [AGENTS.md](../AGENTS.md). Nåværende kildegjennomgang og
 konkrete romavvik: [romrekonstruksjon](ROOM_RECONSTRUCTION.md).
-Alle 20 rom bruker nå dekodede init-/løprutiner, kildebasert pikselkontakt og
-rippede tegn fra C64-kandidaten. Neste motorarbeid er komplett kildebasert
-aktørtilstand, posevalg, kamp og AI. Maskinvarekontroll av rommotoren og
-kildebundet dokumentasjon er en egen leveranseport.
-Alle20 rom er besøkt i native inspeksjon med kontrollerte rom-pikseldata uten
+Alle20 rom, hele aktørmaskinen, posevalg, kamp, AI, liv, poeng og
+progresjonskjeden bruker nå statisk oversatt kode fra C64-kandidaten.
+Den samlede [milepælgjennomgangen](MILESTONE_COMPLETION.md) beskriver
+kontroller, I/O-grenser og gjenstående akseptanse. Maskintiming og naturlig
+gjennomspilling er egne porter.
+Alle 20 rom er besøkt i native inspeksjon med kontrollerte rom-pikseldata uten
 avvik. Den strenge feltkadensen er fortsatt åpen; både tunge romrutiner og
 en lengre kampkjøring har vist tidsavvik. Dette skal rettes før ytelsesporten
 eller full originaltiming godkjennes.
@@ -164,35 +165,42 @@ Endelig kunstproduksjon følger etter stabil bevegelse og kamp.
 
 Ingen kalenderestimater låses før M0 har avklart datagrunnlaget.
 
-## Nåværende leveranse — første M4-kandidat
+## Nåværende leveranse — samlet kildeport, 27. oktober 2026
 
-Spillet heter nå **Bruce**. [Oppstarten](BRUCE_STARTUP.md) får et kort
-karateskrik og en lasteflate; brukerens illustrasjon avventer bildevedlegget.
+Aktiv ferdiggjennomgang: [kildekjeden og resterende ferdigkrav](MILESTONE_COMPLETION.md).
+[Spawn-leveransen](ENEMY_SPAWNS.md) er fulgt av hele kildekjeden for
+aktører, kontakt, kamp, AI, liv, turbytte, poeng og progresjon.
+Den naturlige gjennomspillingsporten er fortsatt åpen.
 
-Nyeste arbeid 24. oktober: [flere animasjonsfaser og dynamiske åpninger](ANIMATION_AND_OPENINGS_2026-10-24.md).
-Brukeren tillater friere Amiga-animasjon. V2 har vekslende klatresider,
-flere kamp-/løpefaser og Ninjas bambusstav. C64-kildene styrer de første
-dynamiske åpningene fra rom 2 via rom 6/7 og tilbake til rom 3.
-Yamos hud og kroppsform er deretter korrigert, og helsefeltene har fått
-navnene KAGE, YAMO og BRUCE; se [den visuelle rettelsen](YAMO_AND_HEALTH_HUD.md).
-Den [første grafikk- og spillbarhetskandidaten](NEXT_CANDIDATE_2026-10-24.md) beholdes som historikk.
-Dette viderefører M4 og starter M5 med nye figurer/bakgrunn; ingen av de to
-milepælene er godkjent som fullført. M4s krav om naturlig gjennomspilling og
-M5s krav om ferdig presentasjon gjelder fortsatt.
+Alle 20 rom bruker kandidatens dekodede C64-data og oversatte init-/løprutiner,
+med rippede tegn og sprites. Blokkgeometrien og V2-kunsten er satt til side.
+Meny, reservefall, to spillere, separat framdrift og Shift+D for testvalg er
+implementert. Dette er en kildebasert kandidat med åpne maskintiming- og
+gjennomspillingsporter.
 
-Oppdatert 24. oktober: Se [20-romsutgaven](M4_ROOM_EXPLORER.md). Alle 20 rom
-har nå inspeksjon med egen blokkgeometri og to bakgrunnsslots, mens naturlig
-progresjon, øvrige dynamiske dører og feller fortsatt gjenstår. Denne utvidelsen
-erstatter ikke M4s ferdigkrav. [Aktive tester](ACTIVE_TESTS.md) erstatter den
-gamle komplette manuelle listen. [Grafikkflyten](AMIGA_ART_PIPELINE.md)
-beskriver uttrekking, lagret prompt og formatkontroll for senere AI-kunst.
+| Område | Verifisert nå | Utestående ferdigkrav |
+| --- | --- | --- |
+| M0 / referanse | Frosset kandidat og kildeidentiteter | Bekrefte valgt urørt 1984-utgave; kandidaten gir ikke sertifisert originalparitet |
+| M1 / A500 | Oppstart, CLI, ADF, 512+512, gjentatt kjøring og OS-tilbakeføring | Stabil feltkadens og ressursmargin i hele spillet |
+| M2 / aktør | Hele aktørmaskinen, støtte/landing, historikk, nett, kildepositur og pikselkontakt | Naturlig timing og kant-/vegg-/nettforløp |
+| M3 / kamp og AI | Hele kamp-/AI-/objektkjeden, innsamling før skade, samtidighet og reaksjon | VIC-/IRQ-fase og naturlig kampkontroll |
+| M4 / rom og progresjon |20 kilderom, liv, poeng/bonus, turbytte og progresjons-/sluttgrener i felles RAM | Naturlig hel gjennomspilling, forbindelser/feller og ny runde |
+| M5 / presentasjon | Rippede C64-figurer/tegn og kildebaserte musikk-/effektforløp | Naturlig positur-/hendelsestiming og lydgodkjenning; enhanced-grafikk/lyd utsatt |
+| M6 / leveranse | Byggeskript og lokal EXE/ADF | Sluttkontroll, fysisk A500-test og ferdig distribusjonspakke |
 
-Den første leveransen nedenfor er beholdt som historikk:
+[Kages stikk og vegghistorikk](NINJA_WALL.md) er rettet mot kildekoden26. oktober.
+[Fiendenes inngangsvalg og bombekontakt](BOMBS_ENTRY.md) er også koblet inn,
+med kildebasert skrik/stillstand ved bombedød. Den nye kjeden følger hele
+aktørmaskinen; naturlig gjennomspilling står fortsatt åpen.
+[Tidligere rombyttekontroll](ROOM_LOAD_PERFORMANCE.md) gjelder adapterbygget.
+Neste prioritet er A500-feltkadens og naturlig progresjon. Renderingen skal bevare
+kandidatens romminne, mutasjoner og kontaktregler. Romvalg og beståtte
+bilde-/CPU-fixtures beviser ikke naturlig tilgjengelighet.
 
-To rom er spillbare, lanterner kan samles og innsamlingen beholdes ved retur.
-Koordinater og koblingstabeller for alle20 rom er ekstrahert fra C64-kandidaten.
-Se [M4-kandidaten](M4_ROOMS.md) for rute, tester, avvik og ressursmålinger.
+Den aktive listen er [ACTIVE_TESTS.md](ACTIVE_TESTS.md). Bekreftede tester
+T01, T05, T12, T13, T15 og T16 beholdes som bestått; T04 er mekanisk akseptert
+i de testede situasjonene. R05-nett, R06-vegg/hopp, død/liv, NPC-rekyl og
+meny/to spillere venter på de beskrevne manuelle nytestene.
 
-M4 er ikke fullført. Resterende rom, nøyaktig geometri, bro-/fellelogikk,
-spillermoduser og full gjennomspilling gjenstår. M3s kampforløp og M2s tidligere
-kollisjonsavvik er fortsatt åpne; denne leveransen godkjenner dem ikke.
+Tidligere milepæltekst er [arkivert](history/PROJECT_PLAN_M4_CANDIDATE_2026-10-24.md).
+Den er historikk for grafikk, romgeometri og antall spillbare rom.

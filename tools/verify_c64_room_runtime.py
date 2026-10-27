@@ -15,11 +15,11 @@ sys.path.insert(0,str(ROOT/'.reference/tools/python'))
 from py65.devices.mpu6502 import MPU
 
 
-def invoke(m,entry):
+def invoke(m,entry,stop=0xffff):
     cpu=MPU(memory=m,pc=entry)
     cpu.sp=0xfd;m[0x1fe]=0xfe;m[0x1ff]=0xff
     for _ in range(100000):
-        if cpu.pc==0xffff:return cpu
+        if cpu.pc==stop:return cpu
         if cpu.pc==0x2f8e:return # Shared native transition boundary; verified separately.
         cpu.step()
     raise AssertionError(f'6502 escaped ${entry:04X} at ${cpu.pc:04X}')
@@ -115,6 +115,7 @@ def main():
             # independently. Add executable source bytes only to the CPU side.
             m=[native.bl_c64_read(i) for i in range(65536)]
             m[0x500:0x4300]=source[0x500:0x4300]
+            m[0x29]=room;invoke(m,0x0a2a,stop=0x0a6b)
             m[0x9e]=source[0x4bae+room];m[0xa1]=source[0x4bc2+room];m[0xb6]=1;m[0xce]=4
             m[0x29]=room;m[0x100]=m[0x106]=m[0xbf]=0;m[0x65]=0;m[0x4321]=7
             for i in range(132):m[0x4f57+i]=0
@@ -176,6 +177,7 @@ def main():
                 px=28+(step*4)%260;py=196-(step%24)*2
                 for _ in range(3):
                     native.bl_c64_field();m[0x16]=(m[0x16]+1)&255
+                    invoke(m,0x1614,stop=0x1628)
                     if m[0x49]:m[0x49]-=1
                     elif m[0x4a]:m[0x4a]-=1;m[0x49]=255
                 m[0x9e]=(px+24)//2;m[0xa1]=py;m[2]=50;m[0x100]=0
