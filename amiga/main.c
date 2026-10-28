@@ -1388,6 +1388,7 @@ restore_os:
         append(&p,"\nsource_dma_faults=");number(&p,source_dma_faults);
         append(&p,"\nvic_compare_errors=");number(&p,vic_compare_errors);
 #if BL_AUTOTEST
+        append(&p,"\nvic_repeat_cases=");number(&p,BL_C64_VIC_REPEAT_CASES);
         append(&p,"\ncontact_kernel_cases=");number(&p,BL_C64_CONTACT_KERNEL_CASES);
         append(&p,"\ncontact_kernel_errors=");number(&p,contact_kernel_errors);
 #endif

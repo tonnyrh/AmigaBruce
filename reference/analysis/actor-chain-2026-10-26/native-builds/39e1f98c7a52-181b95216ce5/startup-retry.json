@@ -1,0 +1,8 @@
+{
+  "status": "emulator_exited_before_report_retry_pending",
+  "pid": 10268,
+  "reason": "Owned WinUAE process exited without an Amiga report; startup log reached configuration load, no acceptance inferred; retry same binary with absolute emulator paths",
+  "retry_pid": 34076,
+  "retry_status": "started_and_stopped_before_report_to_fix_normal_only_test_metric_guard",
+  "acceptance_claimed": false
+}

@@ -20,7 +20,7 @@ def verify():
     assert world['checks'][-1]['stop']=='$0584' and world['checks'][-1]['terminal_life']
     assert all(row['life_events']>=1 for row in world['checks'])
     vic=read('reference/validation/source-vic-host.json')
-    assert vic['status']=='passed_field_sampled_pixel_and_latch_controls' and vic['calls']==6709
+    assert vic['status']=='passed_field_sampled_pixel_and_latch_controls' and vic['calls']==8741
     assert not vic['original_raster_verified'];identities(vic['source_files'])
     contact=read('reference/validation/source-contact-host.json')
     assert contact['status']=='passed_original_byte_contact_controls' and contact['checks']==4239
@@ -66,9 +66,15 @@ def verify():
     assert native['status']=='passed_scoped_native_source_contract' and not native['failures']
     assert native['run']['source_actor_fixture_cases']=='53' and native['run']['source_actor_fixture_failure']=='0'
     assert native['run']['vic_compare_errors']=='0'
+    assert native['run']['vic_repeat_cases']=='0'
     assert native['run']['contact_kernel_cases']=='454' and native['run']['contact_kernel_errors']=='0'
     assert native['run']['restored_os']=='1' and native['run']['c64_room_fault']=='0'
     assert int(native['run']['chip_largest_loaded'])>=49152
+    kernels=read('reference/analysis/vic-repeat-2026-10-28/native-kernel-bytes.json')
+    assert kernels['status']=='passed_identical_native_vic_kernel_bytes' and len(kernels['builds'])==4
+    assert set(kernels['kernels'])=={'bl_vic_repeat','bl_vic_equal63'}
+    identities(kernels['builds']+kernels['source_files'])
+    assert next(x for x in native['build'] if x['path'].endswith('.elf')) in kernels['builds']
     clock=read(FOLDER+'/normal-clock.json');identities([clock['binary']])
     assert all(x['fault']==0 for x in clock['samples']) and len(clock['pairs'])==3
     assert all(x['source_fields']>0 and x['clock_min']-2<=x['source_fields']<=x['clock_max']+2 for x in clock['pairs'])
@@ -85,6 +91,7 @@ def main():
         proofs += ['reference/validation/source-object-host.json','reference/validation/source-score-host.json','docs/NATIVE_ENGINE_OPTIMIZATION.md','docs/CONTACT_KERNEL_OPTIMIZATION.md','docs/PACKED_MASK_OPTIMIZATION.md']
         proofs += ['reference/validation/source-contact-host.json','docs/CONTACT_OPTIMIZATION.md','docs/VIC_NATIVE_OPTIMIZATION.md']
         proofs += ['reference/validation/source-visibility-native.json','reference/validation/source-visibility-host.json','reference/analysis/yamo-r02-2026-10-27/snapshot.json','reference/analysis/yamo-r02-2026-10-27/source-memory.bin','tools/inspect_source_snapshot.py','docs/YAMO_VISIBILITY_PERFORMANCE.md','docs/CONTACT_REGISTERS_OPTIMIZATION.md']
+        proofs += ['docs/VIC_REPEAT_OPTIMIZATION.md','reference/analysis/vic-repeat-2026-10-28/baseline/manifest.json','reference/analysis/vic-repeat-2026-10-28/native-kernel-bytes.json','reference/analysis/vic-repeat-2026-10-28/source-register-seams.json']
         proofs += ['reference/validation/source-paint-host.json','reference/validation/source-trap-native.json',
             'docs/CONTACT_PREPARATION_OPTIMIZATION.md','docs/TRAP_R06_2026-10-28.md',
             'reference/analysis/trap-r06-2026-10-28/room-loop-controls.json',

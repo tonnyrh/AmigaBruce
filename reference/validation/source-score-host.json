@@ -10,7 +10,7 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
+      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
     },
     {
       "path": "core/c64_actor_programs.h",

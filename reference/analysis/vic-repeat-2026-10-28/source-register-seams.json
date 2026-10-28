@@ -1,0 +1,44 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "seams": [
+    {
+      "address": "$29CE",
+      "bytes": "ad1ed0",
+      "instruction": "LDA $d01e"
+    },
+    {
+      "address": "$3D20",
+      "bytes": "ad1ed0",
+      "instruction": "LDA $d01e"
+    }
+  ],
+  "unchanged_generated_files": [
+    {
+      "path": "core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "131727831db097b479aa98ec4c8f6b9f7439f0e9cc04e770d2081af604f702a6"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    }
+  ],
+  "note": "VIC opacity/latch is an existing explicit field-sampled hardware seam; these source readers and all generated instructions/data remain unchanged"
+}

@@ -464,10 +464,119 @@ static unsigned char actor_delay_pending;
 static unsigned long vic_high[8][21],vic_low[8][21];
 /* 64-byte stride keeps every cached sprite even for 68000 longword reads.
  * The source still compares exactly the first63 bytes. */
-static unsigned char vic_bytes[8][64] BL_VIC_ALIGNED,vic_layout[8],vic_valid;
+typedef struct {
+    unsigned char bytes[8][64];
+    unsigned short sx[8],sy[8];
+    unsigned char layout[8],valid,collision_valid,active,tall,wide,bits,candidates,pairs[8];
+} SourceVicRepeat;
+static SourceVicRepeat vic_repeat BL_VIC_ALIGNED;
+/* Fixed byte/word layout shared with vic_compare.s; no -mshort scalar ABI. */
+typedef char SourceVicRepeatLayout[(sizeof(SourceVicRepeat)==568 && offsetof(SourceVicRepeat,sx)==512 && offsetof(SourceVicRepeat,sy)==528 && offsetof(SourceVicRepeat,layout)==544 && offsetof(SourceVicRepeat,valid)==552 && offsetof(SourceVicRepeat,collision_valid)==553 && offsetof(SourceVicRepeat,active)==554 && offsetof(SourceVicRepeat,tall)==555 && offsetof(SourceVicRepeat,wide)==556 && offsetof(SourceVicRepeat,bits)==557 && offsetof(SourceVicRepeat,candidates)==558 && offsetof(SourceVicRepeat,pairs)==559)?1:-1];
+#define vic_bytes vic_repeat.bytes
+#define vic_last_x vic_repeat.sx
+#define vic_last_y vic_repeat.sy
+#define vic_layout vic_repeat.layout
+#define vic_valid vic_repeat.valid
+#define vic_collision_valid vic_repeat.collision_valid
+#define vic_last_active vic_repeat.active
+#define vic_last_tall vic_repeat.tall
+#define vic_last_wide vic_repeat.wide
+#define vic_last_bits vic_repeat.bits
+#define vic_last_candidates vic_repeat.candidates
+#define vic_last_pairs vic_repeat.pairs
+#if !defined(__m68k__) || (defined(BL_AUTOTEST) && BL_AUTOTEST && defined(BL_SOURCE_PERF_TEST) && BL_SOURCE_PERF_TEST && !BL_C64_PROFILE)
+/* Exact repeat predicate, also an independent portable native-test reference.
+ * Only the accumulated latch can be written; a miss has no side effects. */
+static unsigned long source_vic_repeat_c(unsigned char *ram,const SourceVicRepeat *q){
+    unsigned char i,k,active=ram[0xd015],layout;
+    unsigned short bank,matrix,pointer,sx;
+    if(!q->collision_valid || q->active!=active || q->tall!=ram[0xd017] || q->wide!=ram[0xd01d])return 0;
+    for(i=0;i<8;i++)if(active&(1<<i)){
+        sx=(unsigned short)(ram[0xd000+i*2]+((ram[0xd010]&(1<<i))?256:0));
+        if(q->sx[i]!=sx || q->sy[i]!=ram[0xd001+i*2])return 0;
+    }
+    if(q->candidates){
+        if((q->valid&q->candidates)!=q->candidates)return 0;
+        bank=(unsigned short)(((~ram[0xdd00])&3)<<14);matrix=(unsigned short)(bank+((unsigned short)(ram[0xd018]>>4)<<10));
+        for(i=0;i<8;i++)if(q->candidates&(1<<i)){
+            layout=(unsigned char)(((ram[0xd01c]&(1<<i))?1:0)|((ram[0xd01d]&(1<<i))?2:0));
+            if(q->layout[i]!=layout)return 0;
+            pointer=(unsigned short)(bank+((unsigned short)ram[(unsigned short)(matrix+0x3f8+i)]<<6));
+            for(k=0;k<63;k++)if(q->bytes[i][k]!=ram[(unsigned short)(pointer+k)])return 0;
+        }
+    }
+    ram[0xd01e]|=q->bits;return 1;
+}
+#endif
+#if defined(__m68k__)
+extern unsigned long bl_vic_repeat(unsigned char *ram,const SourceVicRepeat *q);
+#endif
+
 #if defined(__m68k__)
 extern unsigned char bl_vic_equal63(const unsigned char *before,const unsigned char *current);
 #if defined(BL_AUTOTEST) && BL_AUTOTEST
+#if BL_C64_VIC_REPEAT_CASES
+static unsigned short source_vic_repeat_selftest(void){
+    static SourceVicRepeat q BL_VIC_ALIGNED;
+    unsigned short test,i,k,bank,matrix,pointer,errors=0;unsigned char first,second,active,kind,mask,latch,wanted_latch;
+    unsigned long wanted,actual;unsigned char original[sizeof(SourceVicRepeat)];
+    if(((unsigned long)&q&3)||((unsigned long)m&3))++errors;
+    for(test=0;test<BL_C64_VIC_REPEAT_CASES;test++){
+        first=(unsigned char)(test&7);second=(unsigned char)((first+1)&7);mask=(unsigned char)(1<<first);
+        active=(unsigned char)((test<1024 && (test&64))?255:mask|(1<<second));
+        if(test<8)active=0; /* empty active set, cached zero and accumulated external latch bits */
+        m[0xd015]=active;m[0xd010]=(unsigned char)(test*29);m[0xd017]=(unsigned char)(test*19);
+        m[0xd01d]=(unsigned char)(test*37);m[0xd01c]=(unsigned char)(test*13);
+        m[0xdd00]=(unsigned char)(test&3);m[0xd018]=(unsigned char)(((test>>2)&15)<<4);
+        bank=(unsigned short)(((~m[0xdd00])&3)<<14);matrix=(unsigned short)(bank+((unsigned short)(m[0xd018]>>4)<<10));
+        q.valid=active;q.collision_valid=1;q.active=active;q.tall=m[0xd017];q.wide=m[0xd01d];
+        q.candidates=(unsigned char)((!active || (test<1024 && (test&128)))?0:mask|(1<<second));
+        q.bits=q.candidates?((test&256)?q.candidates:0):0;
+        for(i=0;i<8;i++){
+            m[0xd000+i*2]=(unsigned char)(100+i*3);m[0xd001+i*2]=(unsigned char)(60+i);
+            q.sx[i]=(unsigned short)(m[0xd000+i*2]+((m[0xd010]&(1<<i))?256:0));q.sy[i]=m[0xd001+i*2];
+            q.layout[i]=(unsigned char)(((m[0xd01c]&(1<<i))?1:0)|((m[0xd01d]&(1<<i))?2:0));q.pairs[i]=0;
+            m[(unsigned short)(matrix+0x3f8+i)]=(unsigned char)(128+i);pointer=(unsigned short)(bank+(128+i)*64);
+            for(k=0;k<63;k++)m[pointer+k]=q.bytes[i][k]=(unsigned char)(test*11+i*17+k*31);
+            m[pointer+63]=0xa5;q.bytes[i][63]=0x5a;
+        }
+        pointer=(unsigned short)(bank+(128+first)*64);
+        if(test>=1024)m[pointer+((test-1024)>>3)]^=0x80; /* all63 bytes + ignored padding for all8 sprites */
+        else{
+            kind=(unsigned char)((test>>3)&15);
+            if(kind==1)m[0xd015]^=mask;
+            else if(kind==2)m[0xd017]^=mask;
+            else if(kind==3)m[0xd01d]^=mask;
+            else if(kind==4)++m[0xd000+first*2];
+            else if(kind==5)m[0xd010]^=mask;
+            else if(kind==6)++m[0xd001+first*2];
+            else if(kind==7)m[0xd01c]^=mask;
+            else if(kind==8)m[pointer]^=0x80;
+            else if(kind==9)m[pointer+62]^=0x80;
+            else if(kind==10)m[pointer+63]^=0x80;
+            else if(kind==11){
+                m[(unsigned short)(matrix+0x3f8+first)]=(unsigned char)(144+first);pointer=(unsigned short)(bank+(144+first)*64);
+                for(k=0;k<63;k++)m[pointer+k]=q.bytes[first][k];
+            }else if(kind==12){
+                m[0xdd00]^=1;bank=(unsigned short)(((~m[0xdd00])&3)<<14);matrix=(unsigned short)(bank+((unsigned short)(m[0xd018]>>4)<<10));
+                for(i=0;i<8;i++){
+                    m[(unsigned short)(matrix+0x3f8+i)]=(unsigned char)(128+i);pointer=(unsigned short)(bank+(128+i)*64);
+                    for(k=0;k<63;k++)m[pointer+k]=q.bytes[i][k];
+                }
+            }else if(kind==13)m[(unsigned short)(bank+(128+((first+2)&7))*64)]^=0x80;
+            else if(kind==14)q.valid&=(unsigned char)~mask;
+            else if(kind==15)q.collision_valid=0;
+        }
+        latch=(unsigned char)(test*7);m[0xd01e]=latch;
+        for(k=0;k<sizeof(q);k++)original[k]=((const unsigned char*)&q)[k];
+        wanted=source_vic_repeat_c(m,&q);wanted_latch=m[0xd01e];m[0xd01e]=latch;
+        actual=bl_vic_repeat(m,&q);
+        if(actual!=wanted || m[0xd01e]!=wanted_latch)++errors;
+        for(k=0;k<sizeof(q);k++)if(original[k]!=((const unsigned char*)&q)[k]){++errors;break;}
+    }
+    return errors;
+}
+#endif
 unsigned short bl_c64_vic_compare_selftest(void){
     static unsigned char before[64] BL_VIC_ALIGNED,current[64] BL_VIC_ALIGNED;
     unsigned short i,errors=0;
@@ -481,13 +590,13 @@ unsigned short bl_c64_vic_compare_selftest(void){
     }
     current[63]^=0x80;
     if(bl_vic_equal63(before,current)!=1)++errors;
+#if BL_C64_VIC_REPEAT_CASES
+    errors+=source_vic_repeat_selftest();
+#endif
     return errors;
 }
 #endif
 #endif
-static unsigned short vic_last_x[8],vic_last_y[8];
-static unsigned char vic_collision_valid,vic_last_active,vic_last_tall,vic_last_bits;
-static unsigned char vic_last_wide,vic_last_candidates,vic_last_pairs[8];
 static void source_actor_loading_begin(void);
 static void source_actor_loading_end(void);
 static void source_actor_field(void);
@@ -1143,7 +1252,7 @@ static void source_vic_cache(unsigned char sprite,unsigned short pointer,unsigne
 #if defined(__m68k__) && defined(__GNUC__)
 __attribute__((optimize("O2")))
 #endif
-static void source_vic_latch(void){
+static void source_vic_latch_slow(void){
     unsigned char i,j,row,prepared=0,candidates=0;
     unsigned char active=m[0xd015],multi=m[0xd01c],wide=m[0xd01d],tall=m[0xd017],bits=0;
     unsigned char same=(unsigned char)(vic_collision_valid && vic_last_active==active && vic_last_tall==tall && vic_last_wide==wide);
@@ -1198,6 +1307,16 @@ static void source_vic_latch(void){
         }
     }
     vic_last_bits=bits;vic_last_active=active;vic_last_tall=tall;vic_last_wide=wide;vic_collision_valid=1;m[0xd01e]|=bits;
+}
+/* Keep the repeat entry outside the slow function's large stack frame.
+ * It reads actual sprite bytes each field; source writes need no barriers. */
+static void source_vic_latch(void){
+#if defined(__m68k__)
+    if(bl_vic_repeat(m,&vic_repeat))return;
+#else
+    if(source_vic_repeat_c(m,&vic_repeat))return;
+#endif
+    source_vic_latch_slow();
 }
 static void source_actor_field(void){
     unsigned char saved[10]={a,x,y,c,z,n,v,d,sp,actor_i};

@@ -8,6 +8,7 @@ HELPER_STAGES=['contact-helper-before-fixed-timing', 'contact-helper-before-fixe
 ALIGN_STAGES=['align4-even-clear-fixed-timing','align4-even-clear-fixed-profile']
 FINAL_ALIGN_STAGES=['align4-compact-controls-final-timing','align4-compact-controls-final-profile']
 PREPARE_STAGES=['contact-prepare-native-fixed-timing','contact-rest-body-native-timing','contact-rest-final2-timing','contact-rest-final2-profile','contact-rest-requeue-final-timing','contact-rest-requeue-final-profile']
+VIC_REPEAT_STAGES=['vic-repeat-native-fixed-timing','vic-repeat-native-final-timing','vic-repeat-native-memory-final-timing','vic-repeat-native-memory-final-profile','vic-repeat-delivery-final-timing','vic-repeat-delivery-final-profile','vic-repeat-scoped-final-timing','vic-repeat-scoped-final-profile']
 
 def read(path):return json.loads((ROOT/path).read_text(encoding='utf-8-sig'))
 def item(path):return dict(path=path,sha256=hashlib.sha256((ROOT/path).read_bytes()).hexdigest())
@@ -22,14 +23,14 @@ def main():
                   'contact-before-profile','contact-before-timing','contact-after-profile','contact-after-timing','present-after-timing',
                   'contact-breakdown-profile','vic-final-timing','visibility-final-all-timing','visibility-final-none-timing','rows-before-profile','rows-after-profile','rows-local-o2-timing',
                   'native-driver-object-final-timing','native-score-final-timing','native-score-final-profile',
-                  'native-object-pass-final-timing','native-object-pass-final-profile','native-object-pass-equal-steps-timing']+HELPER_STAGES+ALIGN_STAGES+FINAL_ALIGN_STAGES+PREPARE_STAGES:
+                  'native-object-pass-final-timing','native-object-pass-final-profile','native-object-pass-equal-steps-timing']+HELPER_STAGES+ALIGN_STAGES+FINAL_ALIGN_STAGES+PREPARE_STAGES+VIC_REPEAT_STAGES:
         folder=FOLDER+'/'+label;ident=read(folder+'/identity.json');identities[label]=ident
         for binary in ident['build']:check(binary,folder+'/'+Path(binary['path']).name)
         for key in ['c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors']:assert ident['run'][key]=='0'
         if label in ('contact-breakdown-profile','vic-final-timing'):assert ident['run']['vic_compare_errors']=='0'
         expected_frames='370' if label=='native-object-pass-equal-steps-timing' else '360'
         expected_steps='350' if label=='native-object-pass-final-timing' else '360'
-        if label in HELPER_STAGES+ALIGN_STAGES+FINAL_ALIGN_STAGES+PREPARE_STAGES:
+        if label in HELPER_STAGES+ALIGN_STAGES+FINAL_ALIGN_STAGES+PREPARE_STAGES+VIC_REPEAT_STAGES:
             assert ident['source_steps_target']==360 and ident['outer_loop_limit']==1200
             assert ident['run']['source_perf_steps']=='360' and ident['run']['source_world_steps']=='360'
             assert 0<int(ident['run']['frames'])<1200 and ident['run']['vic_compare_errors']=='0'
@@ -37,6 +38,9 @@ def main():
             assert int(ident['run']['max_held_image_streak'])<=3 and int(ident['run']['chip_largest_loaded'])>=49152
             cases=454 if label in ALIGN_STAGES+FINAL_ALIGN_STAGES else 198 if label.startswith('contact-class-groups-') else 128 if label.startswith('contact-rows8-') else 0
             if label in PREPARE_STAGES:cases=454 if ident['profile'] else 934 if label=='contact-prepare-native-fixed-timing' else 1046
+            if label in VIC_REPEAT_STAGES:
+                cases=454 if ident['profile'] else 1046
+                assert ident['run']['vic_repeat_cases']==('0' if ident['profile'] else '1536')
             if cases:assert ident['run']['contact_kernel_cases']==str(cases) and ident['run']['contact_kernel_errors']=='0'
         else:
             assert ident['run']['frames']==expected_frames and ident['run']['source_world_steps']==expected_steps
@@ -137,12 +141,21 @@ def main():
     assert hp1['contact']['average_exclusive']<hp0['contact']['average_exclusive']
     prepared=identities['contact-rest-requeue-final-timing'];cr=prepared['run']
     assert prepared['source_files']==identities['contact-rest-requeue-final-profile']['source_files']
-    for source_file in prepared['source_files']:check(source_file)
     assert int(cr['source_clock_elapsed'])<int(pr['source_clock_elapsed'])
     cp={x['name']:x for x in reports['contact-rest-requeue-final-profile']['profile']}
     assert cp['contact']['average_exclusive']<pp['contact']['average_exclusive']
     for label in ('contact-prepare-driver-clear-fixed-timing','contact-rest-body-native-profile'):
         paths.append(FOLDER+'/'+label+'/rejected.json')
+    repeated=identities['vic-repeat-scoped-final-timing'];vr=repeated['run']
+    assert repeated['source_files']==identities['vic-repeat-scoped-final-profile']['source_files']
+    for source_file in repeated['source_files']:check(source_file)
+    assert int(vr['source_clock_elapsed'])<int(cr['source_clock_elapsed'])
+    vp={x['name']:x for x in reports['vic-repeat-scoped-final-profile']['profile']}
+    assert vp['vic']['average_exclusive']<cp['vic']['average_exclusive']
+    assert vp['vic']['calls']>360
+    vb='reference/analysis/vic-repeat-2026-10-28/baseline'
+    for entry in read(vb+'/manifest.json')['files']:check(entry,vb+'/'+entry['path'])
+    paths += ['tools/audit_vic_native_kernels.py','reference/analysis/vic-repeat-2026-10-28/native-kernel-bytes.json','reference/analysis/vic-repeat-2026-10-28/full-diagnostic-placement.json','reference/analysis/vic-repeat-2026-10-28/source-register-seams.json',vb+'/manifest.json',FOLDER+'/vic-repeat-pilot-timing/rejected.json',FOLDER+'/vic-repeat-native-final-profile/rejected.json',FOLDER+'/vic-repeat-native-final-profile/allocation-failure.txt','docs/VIC_REPEAT_OPTIMIZATION.md']
     snapshot=FOLDER+'/rows-baseline'
     for entry in read(snapshot+'/manifest.json')['files']:check(entry,snapshot+'/'+entry['path'])
     paths.append(snapshot+'/manifest.json')
@@ -164,7 +177,7 @@ def main():
         'tools/verify_source_paint.py','tools/audit_native_trap_pause.py','test-source-paint.ps1','tests/source_paint_bridge.c']
     path='reference/validation/source-optimization.json'
     if a.record:
-        report=dict(date='2026-10-28',status='measured_contact_preparation_realtime_open',
+        report=dict(date='2026-10-28',status='measured_vic_repeat_realtime_open',
             method='Separate native actual-PAL source-contact/VIC/presentation pilots; idle-input invincible room1, historical pairs preserved',
             first_pilot=dict(old_active_fields=old,new_active_fields=new,active_time_reduction_percent=round((old-new)*100/old,3),
                 old_vic_mean_lines=old_vic['average_exclusive'],new_vic_mean_lines=new_vic['average_exclusive']),
@@ -212,6 +225,11 @@ def main():
                 old_audio_missed=int(pr['source_clock_missed']),new_audio_missed=int(cr['source_clock_missed']),
                 old_contact_mean=pp['contact']['average_exclusive'],new_contact_mean=cp['contact']['average_exclusive'],
                 native_kernel_cases=1046,full_native_kernel_cases=454,trap_requeue_fixed=True),
+            vic_repeat_round=dict(checkpoint='cb7224a',source_steps=360,
+                old_active_fields=int(cr['source_clock_elapsed']),new_active_fields=int(vr['source_clock_elapsed']),
+                measured_elapsed_reduction_percent=round((int(cr['source_clock_elapsed'])-int(vr['source_clock_elapsed']))*100/int(cr['source_clock_elapsed']),3),
+                old_audio_missed=int(cr['source_clock_missed']),new_audio_missed=int(vr['source_clock_missed']),
+                old_vic_mean=cp['vic']['average_exclusive'],new_vic_mean=vp['vic']['average_exclusive'],native_repeat_cases=1536,separate_reference_build=True,full_native_repeat_cases=0),
             edition_verified=False,natural_playthrough=False,all_rooms_profiled=False,realtime_accepted=False,
             artifacts=[item(x) for x in paths],
             limits=['Single benchmark pair; source-field/input phases differ as actual execution time changes',
@@ -229,5 +247,6 @@ def main():
         assert report['contact_kernel_round']['new_active_fields']==int(hr['source_clock_elapsed'])
         assert report['packed_mask_round']['new_active_fields']==int(pr['source_clock_elapsed'])
         assert report['contact_preparation_round']['new_active_fields']==int(cr['source_clock_elapsed'])
-    print(f'PASS contact preparation: {pr["source_clock_elapsed"]}->{cr["source_clock_elapsed"]} measured PAL fields/360 source steps; real-time remains open')
+        assert report['vic_repeat_round']['new_active_fields']==int(vr['source_clock_elapsed'])
+    print(f'PASS VIC repeat: {cr["source_clock_elapsed"]}->{vr["source_clock_elapsed"]} measured PAL fields/360 source steps; real-time remains open')
 if __name__=='__main__':main()

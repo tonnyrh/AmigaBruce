@@ -133,6 +133,11 @@ void bl_c64_profile_reset(void);
 unsigned short bl_c64_profile(long item);
 void bl_c64_profile_add(long item,long lines);
 #if defined(BL_AUTOTEST) && BL_AUTOTEST && defined(__m68k__)
+#if defined(BL_SOURCE_PERF_TEST) && BL_SOURCE_PERF_TEST && !BL_C64_PROFILE
+#define BL_C64_VIC_REPEAT_CASES 1536
+#else
+#define BL_C64_VIC_REPEAT_CASES 0
+#endif
 unsigned short bl_c64_vic_compare_selftest(void);
 #define BL_C64_CONTACT_ALIGN_CASES 256
 #define BL_C64_CONTACT_ROW_CASES 128

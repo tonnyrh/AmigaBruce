@@ -1,0 +1,28 @@
+{
+  "label": "vic-repeat-final-adf-options",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "feb553d0bfd04277622ea23dedeec8ad65b550e111e0216c5dd97b81a7fcfa62"
+  },
+  "source_room": 1,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    353792,
+    353832,
+    353872,
+    353912
+  ],
+  "source_music_fields": 374,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-adf-options.bpl",
+      "sha256": "3f78508fa36f1e0d72f21dcf5c81e5b1d29d3191005ee71869d74b5637875f10"
+    },
+    {
+      "path": "docs/images/session-vic-repeat-final-adf-options.png",
+      "sha256": "6e64673af2acdd780a930ca6491b7597c84f92174a35ef5d96a4499aca4a48b9"
+    }
+  ]
+}

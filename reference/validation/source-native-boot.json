@@ -2,108 +2,132 @@
   "status": "passed_owned_cli_adf_smoke",
   "binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "0103e56518415da3c135916c7ad70431cd924d2cdcefca5e43ee2c9793a987b5"
+    "sha256": "feb553d0bfd04277622ea23dedeec8ad65b550e111e0216c5dd97b81a7fcfa62"
   },
   "adf": {
     "path": "amiga/out/bruce_amiga.adf",
-    "sha256": "ae3a993b4ac37ed33a5a2a9bb85138eff3d3cc636498e7997b972d7b4c9c6a24"
+    "sha256": "51d0598673e4b19b487f32980e8e04c507b90b0c163dc3b75dc1893a1244e937"
   },
   "artifacts": [
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-menu.json",
-      "sha256": "d8f7a6a2055ce1fe5de4775b03647cc7c79e1ad3c666e60a7afa4c668a24ec5a"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-menu.json",
+      "sha256": "41b83d31f88e8ffb668271097a28ccded8b349d14786ba3c344d8e7d2e9b224f"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-menu.bpl",
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-menu.bpl",
       "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
     },
     {
-      "path": "docs/images/session-contact-rest-final-menu.png",
+      "path": "docs/images/session-vic-repeat-final-menu.png",
       "sha256": "2c8656e6a1bae54efa5586b47d16aada856a3248621ada1978f38daf54f39002"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-debug.json",
-      "sha256": "02be0c45cf74266c32e0dc0df15e23e6932f96a9ae4a4a18263093efdac1897b"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-cli.json",
+      "sha256": "270c183a1632da9f2577a45510a64479509aebbd96424fbb2b610790d03a6cd8"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-debug.bpl",
-      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-cli.bpl",
+      "sha256": "9f7034b169f5e990ea5649887041feedf58fc1f62d199ab1ff3b8914439fc164"
     },
     {
-      "path": "docs/images/session-contact-rest-final-debug.png",
-      "sha256": "19cd16dd077341ea4e3f43e222432a673fabebfa39e58b706016a41ae442f3fd"
+      "path": "docs/images/session-vic-repeat-final-cli.png",
+      "sha256": "f326c3c0330266d990d54562fc7a35d7e8d6efb1f638d5291c9e934bbed76d0a"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-game1.json",
-      "sha256": "84e308cefa66e5d958ee5e33abe284b3728df2ba9cfd96523feabc257b01d02c"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room2.json",
+      "sha256": "4fb072b2d410d1a0c208e35890808e5ab9f5174a3683907f8ca84c6963c1958e"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-game1.bpl",
-      "sha256": "712ab614165047693cf1c6031194a10325edad67bcce61179e8b09fa3257d15c"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room2.bpl",
+      "sha256": "b1033a1a7e2d82234f1d1cfbfe83c1bd81cf17567b0c4f59c58b3e7e63fb9c3c"
     },
     {
-      "path": "docs/images/session-contact-rest-final-game1.png",
-      "sha256": "f487071d2208a0b150d59976e569215d1ec39c12ec85b10326c1473b94710bd6"
+      "path": "docs/images/session-vic-repeat-final-room2.png",
+      "sha256": "27fd3792352c043c21361e71e1f74e87695df35f7d8daf379587aaaa0c34d4f4"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-room2.json",
-      "sha256": "c632cb43c2638585ef4c367d7606fbae7dc9ce67422381256a9abd51b54b9b87"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room3.json",
+      "sha256": "d08ca070ceede46b0ace01629e5d048d642bbf10fcb996dd0bfd2217df0fda67"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-room2.bpl",
-      "sha256": "5e009e46ac79387ba1bf5857b2bab4da6358a60cfefe34e00a09a80aa90bdfe0"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room3.bpl",
+      "sha256": "4c973c65bc709e9420514d685b6d34c272ae6e2f565a74b3a2916aa205457074"
     },
     {
-      "path": "docs/images/session-contact-rest-final-room2.png",
-      "sha256": "5f68bdd9ca0291b3d47cbb480164902e48b50ad57bb363d46d0ad6fedc45f501"
+      "path": "docs/images/session-vic-repeat-final-room3.png",
+      "sha256": "6374dee9e9bb7901329868fbaa9ec2c488bdd062dbfa33cc2eeed2f628966219"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-room6.json",
-      "sha256": "39079b8e276a9e289586c8f6a083ef1d8780f4c792daa59e1ef4dfb7236f7196"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room4.json",
+      "sha256": "5926d6d360f1aa2d8ffba626fe79ca65353cb20cfef1c72be239d495fbc80b0a"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-room6.bpl",
-      "sha256": "2b957e409506a34894abe6605d8073a379e702a283558dbf41bb8e212d9580de"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room4.bpl",
+      "sha256": "d9a34cc97dc8bafc0a27bf3704f72bcd24821dda9ca0a647f8e1705ed600b896"
     },
     {
-      "path": "docs/images/session-contact-rest-final-room6.png",
-      "sha256": "af208374fd52459de2cc5dcf96646347dd54a650fe1aa534e67f562864ad47e0"
+      "path": "docs/images/session-vic-repeat-final-room4.png",
+      "sha256": "738e99c9496952e4037fcf4d457d8f0cce5953689e3d6931976449f19326cc97"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-adf-menu.json",
-      "sha256": "b169b65bbc9aa2ff7df47a8632face2b3726af365226923ca9747ac0ea59a26e"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room5.json",
+      "sha256": "e6561ca6a4729a894ab04cd0891856e213374024b099a37e3895dc52a916956f"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-adf-menu.bpl",
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room5.bpl",
+      "sha256": "43a61e5bb458b4eb0dc6d36dfbfb46cbeb138de0d4cecd3503b6de906ddaf1e6"
+    },
+    {
+      "path": "docs/images/session-vic-repeat-final-room5.png",
+      "sha256": "7ef3bf67844fbb8a0dda9f146d5e9b28a816edb264c2a9e52a1b0b40b3ad9111"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room6.json",
+      "sha256": "3d86e184d6f5976df404fab3e0460a3e3ebcb167738879a2197122ff6bccb6f7"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room6.bpl",
+      "sha256": "7242cd25f51be7f7d7876776acd439d614de97873b5fcfbb66e6d8c503bb9406"
+    },
+    {
+      "path": "docs/images/session-vic-repeat-final-room6.png",
+      "sha256": "200234774e7c9ed5f7afb5627172ddfdcf7ca1ff61837f19cc80771e57825c3c"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-adf-menu.json",
+      "sha256": "db2d5dcae676f212273b62f26247fefadfc66b8deb7521aeff77d858f002392d"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-adf-menu.bpl",
       "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
     },
     {
-      "path": "docs/images/session-contact-rest-final-adf-menu.png",
+      "path": "docs/images/session-vic-repeat-final-adf-menu.png",
       "sha256": "2c8656e6a1bae54efa5586b47d16aada856a3248621ada1978f38daf54f39002"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-adf.json",
-      "sha256": "1e13b55c7bce31185b3f54e42bd09d597e433221e89969d312e4a07ac2e2e3a1"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-adf.json",
+      "sha256": "671b57ab4ffd2985dd5d45f98b7c6c640312b7b172fb5c06d25679444220bd37"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-adf.bpl",
-      "sha256": "c0505ac1d3641367817afd720cc53a3f5f225d3151609e25bc87f727589132d7"
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-adf.bpl",
+      "sha256": "08bd0e3313a32803b2221e8ed13bd24ca06fcebe94e9902aec75328c4866ac22"
     },
     {
-      "path": "docs/images/session-contact-rest-final-adf.png",
-      "sha256": "ec5a02526f89c8737e4df7781a69dfe65aa0805f10d93336227d1588ed3aa849"
+      "path": "docs/images/session-vic-repeat-final-adf.png",
+      "sha256": "5e774d83b919a83595ed2c84429e9b004374f37ce1ab7e8375456a74bd095d56"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/contact-rest-final-early-clock.json",
-      "sha256": "b508a278d0b0d2a9c5efc24c5969e966e04ed0c86ebce3aea857c5af9dcf21e9"
+      "path": "reference/analysis/optimization-2026-10-27/vic-repeat-final-early-clock.json",
+      "sha256": "5bc66ec2eb3f635429729a3e02907f3c9d719b0b5b5092870318e36c2731fce3"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/contact-rest-final-late-clock.json",
-      "sha256": "e51ea1e63c19321799fc132513924c817de9902ae9dd5276cadc0a1f738834a8"
+      "path": "reference/analysis/optimization-2026-10-27/vic-repeat-final-late-clock.json",
+      "sha256": "81ebcf18530cccd309d663f9c10a3d983735bd83110a775b666337da86b81988"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/contact-rest-final-adf-clock.json",
-      "sha256": "dd999c25fad182b320937c21965e4ab6e7ae415117d78be1c12687683e0a98e5"
+      "path": "reference/analysis/optimization-2026-10-27/vic-repeat-final-adf-clock.json",
+      "sha256": "250014cdd39a827eca0d7172e2d7dbd91709791213cc7f86244bbf611a7b001b"
     }
   ],
   "settings": {
@@ -115,7 +139,7 @@
     "fastmem_size": "0",
     "ntsc": "false"
   },
-  "method": "Owned final normal CLI and actual ADF boot; menu/new game, room1/2/6 via debug navigation, source-clock samples and bitplanes; room2 injected visibility control recorded separately",
+  "method": "Owned final normal CLI and actual ADF boot; menu/new game and rooms1..6 via debug navigation; source clock, visibility lifecycle and trap pixels recorded separately",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "natural_playthrough": false,
   "physical_a500": false

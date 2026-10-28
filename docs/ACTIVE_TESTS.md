@@ -21,6 +21,8 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
   med 5,2 %; 454 native kjernekontroller supplerer kilde-/motorfixturene.
   [Resten av kontaktløpet](CONTACT_PREPARATION_OPTIMIZATION.md) gir ytterligere
   4,18 % kortere målt tid; 1046 native kjernekontroller kjøres separat.
+  [VIC-hurtigbanen](VIC_REPEAT_OPTIMIZATION.md) viderefører målt CPU-arbeid
+  uten å endre kollisjonslås eller spritepiksler.
   Normal klokkeprøve er fortsatt tregere enn tre felt per steg. Kontroller
   synlig framdrift også under naturlig spilling.
 - VIC-PHASE: kontroller naturlige samtidige treff og spritekontakt ved kanter.

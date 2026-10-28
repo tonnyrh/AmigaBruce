@@ -1,0 +1,4 @@
+{
+  "status": "allocation_failed_before_measured_loop",
+  "reason": "1536-case reference/q plus profiler tables do not fit diagnostic image; keep1536 controls in timing/full and omit only their reference in profile; production kernel and hard memory gate unchanged"
+}

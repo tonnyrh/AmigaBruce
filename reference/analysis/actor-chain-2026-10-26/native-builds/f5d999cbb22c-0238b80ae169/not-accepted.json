@@ -1,0 +1,5 @@
+{
+  "status": "stopped_before_report_chip_resident_bss",
+  "diagnostic_placement": "reference/analysis/vic-repeat-2026-10-28/full-diagnostic-placement.json",
+  "acceptance_claimed": false
+}

@@ -1,0 +1,27 @@
+{
+  "status": "stopped_before_report_chip_resident_bss",
+  "pid": 27920,
+  "hunks": [
+    "$C0CB88",
+    "$C3FF50",
+    "$C54C78",
+    "$015060"
+  ],
+  "source_ram_address": "$02F148",
+  "allocation_failure_observed": false,
+  "reason": "CLI Hunk chain confirmed diagnostic BSS fell into Chip; no runtime/Chip gate pass claimed; run1536 repeat controls separately from53 full fixtures, same production kernel and unchanged49152 Chip gate",
+  "build": [
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/f5d999cbb22c-0238b80ae169/bruce_test.adf",
+      "sha256": "0238b80ae169ed97d45d2b5fce36eb00251a941c03893a781429205d6e2fec95"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/f5d999cbb22c-0238b80ae169/bruce_test.elf",
+      "sha256": "d79d3e5e52bb723b747deec09f63fe67e589e938a2b7e7ec741baf4f9b6c4198"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/f5d999cbb22c-0238b80ae169/bruce_test.exe",
+      "sha256": "f5d999cbb22c1b9a7440ebb872fcc075ea0caf82635d14f2516883a86e0508a9"
+    }
+  ]
+}

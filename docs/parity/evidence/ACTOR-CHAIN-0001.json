@@ -22,7 +22,7 @@
   "artifacts": [
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "6f7ad75cef089134ffb4d7e098b90d03e44d6bbef8d104dc6feee62c6f6d4eea"
+      "sha256": "57edf284038831c725244dc2c07947ee21777b1239ea88fa82dd4b2117563cc5"
     },
     {
       "path": "docs/MILESTONE_COMPLETION.md",

@@ -290,3 +290,5 @@ Videreført med [kontakt-/VIC-kjerner](CONTACT_KERNEL_OPTIMIZATION.md), inkluder
 Videre optimalisering: [pakkede kontaktmasker, 28. oktober](PACKED_MASK_OPTIMIZATION.md).
 
 Siste kontaktløft: [pekeroppsett, klassifisering og kildebasert fellerettelse](CONTACT_PREPARATION_OPTIMIZATION.md).
+
+Neste målte VIC-løft: [gjenbruk av uendret pikselkontakt på 68000](VIC_REPEAT_OPTIMIZATION.md).

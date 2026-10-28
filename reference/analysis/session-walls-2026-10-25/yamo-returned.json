@@ -2,27 +2,27 @@
   "label": "yamo-returned",
   "normal_binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "0103e56518415da3c135916c7ad70431cd924d2cdcefca5e43ee2c9793a987b5"
+    "sha256": "feb553d0bfd04277622ea23dedeec8ad65b550e111e0216c5dd97b81a7fcfa62"
   },
   "source_room": 2,
   "source_spare_falls": 4,
   "bitplanes": [
-    396864,
-    396904,
-    396944,
-    396984
+    354880,
+    354920,
+    354960,
+    355000
   ],
-  "source_music_fields": 1268,
+  "source_music_fields": 432,
   "source_audio_mode": 0,
   "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
   "artifacts": [
     {
       "path": "reference/analysis/session-walls-2026-10-25/yamo-returned.bpl",
-      "sha256": "2b17488655c7477e2fc6e84afccc760427d42f145690df53aa58d7c8a004da47"
+      "sha256": "97d7093d714c0cb51125cdbd8592d02cc51cf362de315f7ba0db559729d1d6f5"
     },
     {
       "path": "docs/images/session-yamo-returned.png",
-      "sha256": "abf2b85e3572b74de0b0b0acb30ee084f4e05e78414e927a999e84cda2fb9451"
+      "sha256": "0f74444af56b9687ae69f7f629d3178e72a9eac18db8c25f1a0479def298e9fa"
     }
   ]
 }

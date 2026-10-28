@@ -75,7 +75,21 @@ def main():
         m[0xd000+2*second]=24;seed(m);check(m);check(m)
         for address,value in [(0xd01d,left),(0xd01d,0),(0xd000+2*second,0),(0xd001+2*second,21),(0xd017,left),(0xd017,0),(0xd001+2*second,0),(0xd010,right),(0xd010,0),(0x2000,0),(0x2000,255),(0xd015,left),(0xd015,left|right)]:
             write(m,address,value);check(m);check(m)
-    files=['core/c64_rooms.c','core/c64_rooms.h','core/source_perf.h','tests/source_vic_bridge.c','tools/verify_source_vic.py','test-source-vic.ps1']
+    # Every bitmap byte must invalidate a cached zero/contact result for
+    # every sprite slot. Single opaque pixels isolate the changed byte;
+    # a dense image could conceal an accidentally skipped comparison.
+    for first in range(8):
+        second=(first+1)&7;m=bytearray(65536);m[0xdd00]=3;m[0xd018]=0x10
+        m[0xd015]=(1<<first)|(1<<second)
+        m[0x7f8+first]=128+first;m[0x7f8+second]=128+second;seed(m);check(m)
+        for byte in range(63):
+            aa=0x2000+first*64+byte;bb=0x2000+second*64+byte
+            write(m,aa,128);check(m)
+            write(m,bb,128);check(m)
+            write(m,aa,0);check(m)
+            write(m,bb,0);check(m)
+        write(m,0x2000+first*64+63,255);write(m,0x2000+second*64+63,255);check(m)
+    files=['core/c64_rooms.c','core/c64_rooms.h','core/source_perf.h','amiga/vic_compare.s','tests/source_vic_bridge.c','tools/verify_source_vic.py','test-source-vic.ps1']
     report=dict(status='passed_field_sampled_pixel_and_latch_controls',calls=calls,
         natural_playthrough=False,original_raster_verified=False,source_files=[dict(path=p,
         sha256=hashlib.sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])

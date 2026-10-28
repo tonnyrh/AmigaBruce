@@ -40,6 +40,8 @@ try{
     if($run['restored_os'] -ne '1'){throw 'Benchmark did not restore OS'}
     $expectedKernelCases=if($Profile -or $Controlled){'454'}else{'1046'}
     if($run['contact_kernel_cases'] -ne $expectedKernelCases){throw 'Native contact kernel controls missing'}
+    $expectedVicCases=if($Profile -or $Controlled){'0'}else{'1536'}
+    if($run['vic_repeat_cases'] -ne $expectedVicCases){throw 'Native VIC repeat controls missing'}
     foreach($item in $identity){if((Get-FileHash (Join-Path $taskRoot $item.path)).Hash.ToLower() -ne $item.sha256){throw "Source changed during benchmark: $($item.path)"}}
     foreach($key in @('c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors','vic_compare_errors','contact_kernel_errors')){
         if($run[$key] -ne '0'){throw "$key=$($run[$key])"}}

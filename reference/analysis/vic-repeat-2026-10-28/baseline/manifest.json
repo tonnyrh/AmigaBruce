@@ -1,0 +1,36 @@
+{
+  "checkpoint": "cb7224a",
+  "production_code_checkpoint": "c34174c",
+  "files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "56bafaf9051feb282f40494034c305b6d736449d28804f216f871266286e9dff"
+    },
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4ef57a72b3cf174d7879354d323044ac20b44a0e66852741fdc6132386f5e327"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "fdcdde98938946edc7b536d879e1ca768fb721de985a044cbb402d855bf71217"
+    },
+    {
+      "path": "bruce_amiga.exe",
+      "sha256": "0103e56518415da3c135916c7ad70431cd924d2cdcefca5e43ee2c9793a987b5"
+    },
+    {
+      "path": "bruce_amiga.elf",
+      "sha256": "ed3503620907aa9dac81a4fc1fe403b9f94e3a409762d0185d78aec5e56dcf09"
+    },
+    {
+      "path": "bruce_amiga.adf",
+      "sha256": "ae3a993b4ac37ed33a5a2a9bb85138eff3d3cc636498e7997b972d7b4c9c6a24"
+    }
+  ],
+  "baseline_timing": "reference/analysis/optimization-2026-10-27/contact-rest-requeue-final-timing/identity.json",
+  "baseline_profile": "reference/analysis/optimization-2026-10-27/contact-rest-requeue-final-profile/identity.json"
+}

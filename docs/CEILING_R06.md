@@ -55,6 +55,8 @@ Dette er kildebasert avklaring med kontrollerte innganger. IRQ/rasterfase,
 romløkken og kamp er utelatt i denne avgrensede kontrollen. Brukerens
 skjermbilde har ingen inputhistorikk eller eget snapshot for dette treffet;
 det er ikke grunnlag for å hevde naturlig gjennomspillingsparitet eller at
-alle tenkelige taktreff er avklart. Ingen ny 68000-kjøring eller ny spill-
-build påstås: produksjonskoden er uendret fra `c34174c`, der de native
-kontaktkjernene og hele-RAM-fixturene allerede er kontrollert separat.
+alle tenkelige taktreff er avklart. Ingen ny 68000-kjøring eller spillutgave
+påstås av denne vertskontrollen.
+Den opprinnelige avklaringen ved `cb7224a` endret ingen spillregler. Senere
+gjentakelser binder gjeldende vertskode; egne native målinger og kontroller
+av [VIC-optimaliseringen](VIC_REPEAT_OPTIMIZATION.md) rapporteres separat.

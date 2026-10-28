@@ -1,0 +1,4 @@
+{
+  "status": "assembly_rejected_before_native_measurement",
+  "reason": "68000 requires register base for offsets above signed16 and indexed displacement above signed8; corrected without changing CPU target"
+}

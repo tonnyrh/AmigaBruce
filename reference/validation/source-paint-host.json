@@ -8,15 +8,15 @@
   "source_files": [
     {
       "path": "amiga/main.c",
-      "sha256": "fdcdde98938946edc7b536d879e1ca768fb721de985a044cbb402d855bf71217"
+      "sha256": "871640d5964d33e31efab1cc4d6f960f8ed383a49affe8af10e729c889747da6"
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
+      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "56bafaf9051feb282f40494034c305b6d736449d28804f216f871266286e9dff"
+      "sha256": "14e3f03cd2fbc6e541c372746db8dc1b31da88081a22c4363bd0f67a2206ecd2"
     },
     {
       "path": "tests/source_paint_bridge.c",

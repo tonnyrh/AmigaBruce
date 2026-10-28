@@ -20,15 +20,16 @@
   "artifacts": [
     {
       "path": "docs/CEILING_R06.md",
-      "sha256": "3ff0790c8cbb7e802b9f0ed8daa5121771900688cd9cc96bfdda9de99e15e2f4"
+      "sha256": "af8f29486bbf37ed4eaa37bbbb0778e1cbc76a52c4360303ea707f8ecb6fab6f"
     },
     {
       "path": "reference/analysis/ceiling-r06-2026-10-28/report.json",
-      "sha256": "539d65cdbe330e6d275c0670099dfbca25d9f460ef2b305a2727bbdb2b0a119c"
+      "sha256": "b0da75e8b143c9d21fb7eaf87bd3dc0823d31ed7e70cc9472227459bc3251021"
     }
   ],
   "limitations": [
     "Injected source calls and whole-RAM host comparisons; no IRQ/raster/room-loop/combat or natural-play claim",
     "No snapshot/input history for the exact user head bump"
-  ]
+  ],
+  "rechecked_with_vic_repeat_host_port": true
 }

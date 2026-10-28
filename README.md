@@ -143,3 +143,5 @@ Neste ytelsesrunde: [kontakt-/VIC-kjerner og faste kildespillsteg](docs/CONTACT_
 Videre optimalisering: [pakkede kontaktmasker, 28. oktober](docs/PACKED_MASK_OPTIMIZATION.md).
 
 Siste kontaktløft: [pekeroppsett, klassifisering og kildebasert fellerettelse](docs/CONTACT_PREPARATION_OPTIMIZATION.md).
+
+Siste VIC-løft: [gjenbruk av uendret pikselkontakt på 68000](docs/VIC_REPEAT_OPTIMIZATION.md).

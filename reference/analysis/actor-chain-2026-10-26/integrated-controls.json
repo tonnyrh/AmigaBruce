@@ -58,64 +58,64 @@
   "instructions": 7055873,
   "source_files": [
     {
-      "path": "core/c64_rooms.c",
-      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
+      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27",
+      "path": "core/c64_rooms.c"
     },
     {
-      "path": "tests/source_actor_bridge.c",
-      "sha256": "9548f50571ede97c0ba8df23d9612aa3a09ac328ed87b69f161a51bc49c26356"
+      "sha256": "9548f50571ede97c0ba8df23d9612aa3a09ac328ed87b69f161a51bc49c26356",
+      "path": "tests/source_actor_bridge.c"
     },
     {
-      "path": "core/c64_rooms.h",
-      "sha256": "56bafaf9051feb282f40494034c305b6d736449d28804f216f871266286e9dff"
+      "sha256": "14e3f03cd2fbc6e541c372746db8dc1b31da88081a22c4363bd0f67a2206ecd2",
+      "path": "core/c64_rooms.h"
     },
     {
-      "path": "core/source_perf.h",
-      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd",
+      "path": "core/source_perf.h"
     },
     {
-      "path": "core/game.h",
-      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c",
+      "path": "core/game.h"
     },
     {
-      "path": "core/combat.h",
-      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd",
+      "path": "core/combat.h"
     },
     {
-      "path": "core/c64_actor_data.h",
-      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae",
+      "path": "core/c64_actor_data.h"
     },
     {
-      "path": "core/c64_actor_programs.h",
-      "sha256": "131727831db097b479aa98ec4c8f6b9f7439f0e9cc04e770d2081af604f702a6"
+      "sha256": "131727831db097b479aa98ec4c8f6b9f7439f0e9cc04e770d2081af604f702a6",
+      "path": "core/c64_actor_programs.h"
     },
     {
-      "path": "core/c64_room_data.h",
-      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00",
+      "path": "core/c64_room_data.h"
     },
     {
-      "path": "core/c64_room_programs.h",
-      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3",
+      "path": "core/c64_room_programs.h"
     },
     {
-      "path": "core/c64_sfx.h",
-      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
     },
     {
-      "path": "core/c64_sound_data.h",
-      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
     },
     {
-      "path": "tools/build_c64_actors.py",
-      "sha256": "106e0dc72a5f1a0aa53e4ae1a02fa3645efb62ab19e06c2e8078b7415f642448"
+      "sha256": "106e0dc72a5f1a0aa53e4ae1a02fa3645efb62ab19e06c2e8078b7415f642448",
+      "path": "tools/build_c64_actors.py"
     },
     {
-      "path": "tools/build_c64_rooms.py",
-      "sha256": "5c5bd7147ff2af45257ccb46f6ece9a53a1a4f57046b3a7c1729787dc983a499"
+      "sha256": "5c5bd7147ff2af45257ccb46f6ece9a53a1a4f57046b3a7c1729787dc983a499",
+      "path": "tools/build_c64_rooms.py"
     },
     {
-      "path": "test-c64-actors.ps1",
-      "sha256": "43648d8c8d08fe3f55f9a3f73507e887d4bde8cb35aa850e9a9243be8f30907b"
+      "sha256": "43648d8c8d08fe3f55f9a3f73507e887d4bde8cb35aa850e9a9243be8f30907b",
+      "path": "test-c64-actors.ps1"
     }
   ],
   "seams": [

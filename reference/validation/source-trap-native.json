@@ -2,7 +2,7 @@
   "status": "passed_owned_r06_negative_phase_trap_pixels",
   "binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "0103e56518415da3c135916c7ad70431cd924d2cdcefca5e43ee2c9793a987b5"
+    "sha256": "feb553d0bfd04277622ea23dedeec8ad65b550e111e0216c5dd97b81a7fcfa62"
   },
   "source_files": [
     {
@@ -11,56 +11,56 @@
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
+      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
     },
     {
       "path": "amiga/main.c",
-      "sha256": "fdcdde98938946edc7b536d879e1ca768fb721de985a044cbb402d855bf71217"
+      "sha256": "871640d5964d33e31efab1cc4d6f960f8ed383a49affe8af10e729c889747da6"
     }
   ],
   "samples": [
     {
       "phase_before": 227,
+      "phase_source": 228,
+      "phase_after": 229,
+      "source_column": 1,
+      "background_mismatches": 0,
+      "buffers": [
+        {
+          "buffer": 0,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        },
+        {
+          "buffer": 1,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        }
+      ]
+    },
+    {
+      "phase_before": 233,
+      "phase_source": 234,
+      "phase_after": 236,
+      "source_column": 1,
+      "background_mismatches": 0,
+      "buffers": [
+        {
+          "buffer": 0,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        },
+        {
+          "buffer": 1,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        }
+      ]
+    },
+    {
+      "phase_before": 227,
       "phase_source": 227,
       "phase_after": 228,
-      "source_column": 1,
-      "background_mismatches": 0,
-      "buffers": [
-        {
-          "buffer": 0,
-          "actor_intersects_roi": false,
-          "mismatches": 0
-        },
-        {
-          "buffer": 1,
-          "actor_intersects_roi": false,
-          "mismatches": 0
-        }
-      ]
-    },
-    {
-      "phase_before": 230,
-      "phase_source": 230,
-      "phase_after": 231,
-      "source_column": 1,
-      "background_mismatches": 0,
-      "buffers": [
-        {
-          "buffer": 0,
-          "actor_intersects_roi": false,
-          "mismatches": 0
-        },
-        {
-          "buffer": 1,
-          "actor_intersects_roi": false,
-          "mismatches": 0
-        }
-      ]
-    },
-    {
-      "phase_before": 232,
-      "phase_source": 232,
-      "phase_after": 233,
       "source_column": 1,
       "background_mismatches": 0,
       "buffers": [
@@ -86,51 +86,51 @@
   "artifacts": [
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-background.bpl",
-      "sha256": "5aa63210d4ea2490215e147cd3400a05097a0242051af464c7633af8dd311ac3"
+      "sha256": "5af00ae8c13390a3b4d1271cd8933f3c1649e160c352e6eb1acd0f5babbf17b5"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-buffer0.bpl",
-      "sha256": "58761fe1145fead0e6e092a8c4a7677d6d61b46642b2b846b65552367ac710ad"
+      "sha256": "f289bde24f53bed1ad4efdafb93ec31b38f3fe8ae2603069591b945a0e1fef1a"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-buffer1.bpl",
-      "sha256": "58761fe1145fead0e6e092a8c4a7677d6d61b46642b2b846b65552367ac710ad"
+      "sha256": "553dbaba636b1907025c714a502537680e63e3b057faa809c27ac10cdbe55404"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-source.bin",
-      "sha256": "d765fa477ad7d80617430e9236db5fbc678359c33de62b91fc82185977aa2f5b"
+      "sha256": "184b680e873d404584a635e6df2828d28f2be32cf134bc0be95fdc60f13848d2"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-background.bpl",
-      "sha256": "7dd7c21e1fb036e29e92ba90adb3880e0360816ee0d7848ac62ff0b94939a4d7"
+      "sha256": "e1feac533e4c7b6a34f519f9e2366aaead3445866f7495322fe89549e21e1a1e"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-buffer0.bpl",
-      "sha256": "3050d7e898d77c9f4a75168eb4f05a3b5d25e8345954e524ac247620416b9d11"
+      "sha256": "2e174dac8ee7acd63939e9b9e6a912b2d713dbbd72e4ddb689caeebc4e97e71e"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-buffer1.bpl",
-      "sha256": "f9326636624687507e24bebf02712111eeea8748b7dd54c8bce9526ac88f98f0"
+      "sha256": "5359d16e241197a05b7ea5cbc84e0f7d49e1ed1cefa89ad2c871930539eb816e"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-source.bin",
-      "sha256": "b5112e8b2250f65847fb07ffd1c695aa9cb4f559eedef9c827bbd2800473332c"
+      "sha256": "57e35f54ff7e9fa64dd4a6393477f5e72d61bc24df368498c608b9d067019b2d"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-background.bpl",
-      "sha256": "b4b2afd522668780e05f074527a9cd5ec061128a29ff3e1c8771037fe028e011"
+      "sha256": "7a00007332b5756466b56c79e57872b472cb7f6d59e0b1d94b25e7fd1a1393a8"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-buffer0.bpl",
-      "sha256": "6cb80523891788691d528b905c8e0a92ca461e1095282469036063ce6cbb2047"
+      "sha256": "3ea835f82ee177a6c5314cbcd0f667e7e9e8ec7186631b891f45c61342821358"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-buffer1.bpl",
-      "sha256": "6cb80523891788691d528b905c8e0a92ca461e1095282469036063ce6cbb2047"
+      "sha256": "30404608b19cf18f2c2eaa15711c1b2829eef3f3ea7483e352fd78b887ed67da"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-source.bin",
-      "sha256": "16f3cca5634197c1bdf560bd45ec26cd66fe3cd4eee1e7e421668b94b4695424"
+      "sha256": "bf354d686c68d0f2e06dc7eda614cc5dbd3ba3c06f8db775c435f6b0d35934f1"
     }
   ],
   "natural_playthrough": false,

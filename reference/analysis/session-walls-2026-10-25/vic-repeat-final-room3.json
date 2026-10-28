@@ -1,0 +1,28 @@
+{
+  "label": "vic-repeat-final-room3",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "feb553d0bfd04277622ea23dedeec8ad65b550e111e0216c5dd97b81a7fcfa62"
+  },
+  "source_room": 3,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    396864,
+    396904,
+    396944,
+    396984
+  ],
+  "source_music_fields": 432,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-repeat-final-room3.bpl",
+      "sha256": "4c973c65bc709e9420514d685b6d34c272ae6e2f565a74b3a2916aa205457074"
+    },
+    {
+      "path": "docs/images/session-vic-repeat-final-room3.png",
+      "sha256": "6374dee9e9bb7901329868fbaa9ec2c488bdd062dbfa33cc2eeed2f628966219"
+    }
+  ]
+}
