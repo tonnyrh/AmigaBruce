@@ -218,6 +218,9 @@ static void invalidate_contacts(void){
 static void mark_cell(unsigned short cell,unsigned char pixels,unsigned char rows){
     dirty_cells[cell]=1;
     if(!paint_queued[cell]){paint_queued[cell]=1;paint_list[paint_count++]=cell;}
+    else if(paint_queued[cell]==2)paint_queued[cell]=3;
+    /* 1=pending,2=consumed,3=changed again after consumption. Keep one
+     * unique queue slot per source cell; clear_dirty carries state3. */
     display_dirty=1;paint_rows[cell]|=rows;
     if(pixels)contact_cells[cell]=1;
 }
@@ -574,17 +577,39 @@ static void source_contact_align(void){
 #endif
     source_contact_align_c();
 }
+/* Keep a portable instruction-equivalent reference for host controls and
+ * the separate extended native kernel test; not in the production Hunk. */
+#if !defined(__m68k__) || (defined(BL_SOURCE_PERF_TEST) && BL_SOURCE_PERF_TEST && (!defined(BL_C64_PROFILE) || !BL_C64_PROFILE))
+#define BL_CONTACT_C_REFERENCE 1
+#else
+#define BL_CONTACT_C_REFERENCE 0
+#endif
+#if defined(__m68k__)
+extern void bl_contact_clear72(unsigned char *ram);
+extern unsigned long bl_contact_swap_lane(unsigned char *ram,unsigned long base);
+extern unsigned long bl_contact_classify_full(unsigned char *ram,unsigned long stack);
+#endif
 /* $55E6/$5658/$56CA: seven exact exchanges in one23-byte class lane.
  * A ends with the old left byte, X/N/Z with the source actor index.
  * C/V/D/Y and every source stack byte remain untouched here. */
-static void source_contact_swap(unsigned short base){
+#if BL_CONTACT_C_REFERENCE
+static void source_contact_swap_c(unsigned short base){
     static const unsigned char offsets[7]={3,7,11,12,13,14,15};
     unsigned char i,value;
-    DETAIL_BEGIN(BL_PERF_CONTACT_SWAP);
     for(i=0;i<7;i++){
         a=m[base+offsets[i]];value=m[base+16+i];m[base+offsets[i]]=value;m[base+16+i]=a;
     }
     x=m[0x50];NZ(x);sp+=2;
+}
+#endif
+static void source_contact_swap(unsigned short base){
+    DETAIL_BEGIN(BL_PERF_CONTACT_SWAP);
+#if defined(__m68k__)
+    a=(unsigned char)bl_contact_swap_lane(m,(unsigned long)base);
+    x=m[0x50];NZ(x);sp+=2;
+#else
+    source_contact_swap_c(base);
+#endif
     DETAIL_END(BL_PERF_CONTACT_SWAP);
 }
 /* $5431-$55AA. The OR operands below are the frozen instruction operands,
@@ -603,9 +628,9 @@ static unsigned char source_contact_summary_c(void){
 #if defined(__m68k__)
 extern unsigned long bl_contact_classes4(const unsigned char *ram);
 #endif
-static void source_contact_classes(void){
+#if BL_CONTACT_C_REFERENCE
+static void source_contact_classes_c(void){
     unsigned char col,mask;unsigned short flag;
-    DETAIL_BEGIN(BL_PERF_CONTACT_CLASSES);
     for(col=0;col<5;col++)m[0x4f3b+col]=0;
     for(col=0;col<3;col++){
         flag=(unsigned short)(0x4f32+col);
@@ -614,18 +639,28 @@ static void source_contact_classes(void){
             /* Actual JSR sites $5443/$544E/$5459. Preserve even the stack
              * bytes below the restored SP; the source reader can see them. */
             m[0x100+sp--]=0x54;m[0x100+sp--]=(unsigned char)(0x45+11*col);
-            source_contact_swap((unsigned short)(0x4eed+23*col));
+            source_contact_swap_c((unsigned short)(0x4eed+23*col));
         }
     }
-#if defined(__m68k__)
-    mask=(unsigned char)bl_contact_classes4(m);
-#else
     mask=source_contact_summary_c();
-#endif
     x=m[0x50];a=0;m[0xb6+x]=mask;
     c=0;NZ(mask);sp+=2;
+}
+#endif
+static void source_contact_classes(void){
+    DETAIL_BEGIN(BL_PERF_CONTACT_CLASSES);
+#if defined(__m68k__)
+    unsigned char mask=(unsigned char)bl_contact_classify_full(m,(unsigned long)sp);
+    x=m[0x50];a=0;m[0xb6+x]=mask;c=0;NZ(mask);sp+=2;
+#else
+    source_contact_classes_c();
+#endif
     DETAIL_END(BL_PERF_CONTACT_CLASSES);
 }
+SOURCE_INLINE void source_contact_frame(unsigned short ret){
+    m[0x100+sp--]=(unsigned char)(ret>>8);m[0x100+sp--]=(unsigned char)ret;
+}
+#if BL_CONTACT_C_REFERENCE
 /* $55C5-$55D6 and $55D7/$5649/$56BB are internal to the binary
  * pointer path below. No service observes their intermediate registers.
  * The original actor entries still execute their instruction translation. */
@@ -637,11 +672,8 @@ SOURCE_INLINE void source_contact_attribute(unsigned short base,unsigned short f
     unsigned char nonzero=(unsigned char)(m[(unsigned short)(W(0x12)+y)]&7),toggle=m[flag];
     if(nonzero?!toggle:toggle!=0){
         if(nonzero)++m[flag];else --m[flag];
-        source_contact_swap(base);
+        source_contact_swap_c(base);
     }else sp+=2;
-}
-SOURCE_INLINE void source_contact_frame(unsigned short ret){
-    m[0x100+sp--]=(unsigned char)(ret>>8);m[0x100+sp--]=(unsigned char)ret;
 }
 /* Keep every source RAM/JSR write in lane order, including stack aliases.
  * Only the third ADC's virtual A/C/N/Z/V survive the complete routine.
@@ -659,7 +691,7 @@ SOURCE_INLINE void source_contact_column(unsigned short operand,unsigned short r
 #if defined(__m68k__) && defined(__GNUC__)
 __attribute__((optimize("O2")))
 #endif
-static void source_contact_pointers(void){
+static void source_contact_pointers_c(void){
     unsigned char blank,row=m[0xe9+m[0x50]];
     source_contact_frame(0x5311);source_contact_table(row);
     x=m[0x50];y=m[0xe6+x];source_contact_frame(0x5318);source_contact_attribute(0x4eed,0x4f32);
@@ -669,6 +701,51 @@ static void source_contact_pointers(void){
     ++y;blank=(unsigned char)(y>=40);
     if(!blank){source_contact_frame(0x5360);source_contact_attribute(0x4f1b,0x4f34);}
     source_contact_column(0x53b5,0x5368,blank,1);sp+=2;
+}
+#endif
+/* Eight-byte result ABI, independent of the module's -mshort setting.
+ * No I/O seam is crossed by the original pointer preparation. */
+typedef struct {unsigned char aa,xx,yy,cc,zz,nn,vv,stack;} SourceContactRegisters;
+typedef char SourceContactRegistersLayout[(sizeof(SourceContactRegisters)==8 && offsetof(SourceContactRegisters,stack)==7)?1:-1];
+#if defined(__m68k__)
+extern void bl_contact_pointers3(unsigned char *ram,SourceContactRegisters *result);
+#endif
+static void source_contact_pointers(void){
+#if defined(__m68k__)
+    SourceContactRegisters result;result.stack=sp;
+    bl_contact_pointers3(m,&result);
+    a=result.aa;x=result.xx;y=result.yy;c=result.cc;z=result.zz;n=result.nn;v=result.vv;sp=result.stack;
+#else
+    source_contact_pointers_c();
+#endif
+}
+/* $53E0-$5428 body classification: no service inside these ordered
+ * snapshots, class reduction and conditional lane reversals. */
+#if BL_CONTACT_C_REFERENCE
+static void source_contact_body_c(void){
+for(x=2;;--x){a=m[0x4f32 + x];m[0x4f35 + x]=a;if(!x)break;}
+x=255;NZ(x);source_contact_frame(0x53f1);
+if(m[0x50]<3)source_contact_classes_c();else actor_code(0x5431);
+a=m[0xb6 + x];m[0xa7 + x]=a;NZ(a);
+a=m[0x4f32];c=a>=m[0x4f35];NZ((unsigned char)(a-m[0x4f35]));
+if(!z){a^=1;m[0x4f32]=a;NZ(a);source_contact_frame(0x5405);source_contact_swap_c(0x4eed);}
+a=m[0x4f33];c=a>=m[0x4f36];NZ((unsigned char)(a-m[0x4f36]));
+if(!z){a^=1;m[0x4f33]=a;NZ(a);source_contact_frame(0x5415);source_contact_swap_c(0x4f04);}
+a=m[0x4f34];c=a>=m[0x4f37];NZ((unsigned char)(a-m[0x4f37]));
+if(!z){a^=1;m[0x4f34]=a;NZ(a);source_contact_frame(0x5425);source_contact_swap_c(0x4f1b);}
+}
+#endif
+#if defined(__m68k__)
+extern void bl_contact_body(unsigned char *ram,SourceContactRegisters *result);
+#endif
+static void source_contact_body(void){
+#if defined(__m68k__)
+    SourceContactRegisters result;result.stack=sp;
+    bl_contact_body(m,&result);
+    a=result.aa;x=result.xx;c=result.cc;z=result.zz;n=result.nn;
+#else
+    source_contact_body_c();
+#endif
 }
 /* The three source lanes stay ordered: a glyph pointer may alias flags
  * written by an earlier lane. CPY overwrites N/Z/C before any observation. */
@@ -705,6 +782,57 @@ SOURCE_INLINE void source_contact_scan(SourceContactBatch *batch){
     source_contact_scan_c(batch);
 }
 #if defined(__m68k__) && defined(BL_AUTOTEST) && BL_AUTOTEST
+#if defined(BL_SOURCE_PERF_TEST) && BL_SOURCE_PERF_TEST && (!defined(BL_C64_PROFILE) || !BL_C64_PROFILE)
+/* Separate native kernel controls fit in the benchmark image without
+ * duplicating the portable references in the full53-fixture game image. */
+static void source_prepare_image(unsigned char *out,unsigned char restore){
+    static const unsigned short operands[8]={0x43bb,0x43bc,0x5381,0x5382,0x539b,0x539c,0x53b5,0x53b6};
+    unsigned short i,at=0;
+    for(i=0;i<512;i++,at++){if(restore)m[i]=out[at];else out[at]=m[i];}
+    for(i=0;i<85;i++,at++){if(restore)m[0x4eec+i]=out[at];else out[at]=m[0x4eec+i];}
+    for(i=0;i<8;i++,at++){if(restore)m[operands[i]]=out[at];else out[at]=m[operands[i]];}
+}
+static void source_prepare_registers(unsigned short test,unsigned char classes,unsigned char stack){
+    a=(unsigned char)(test*3);x=(unsigned char)(test*7);y=(unsigned char)(test*11);
+    c=test&1;z=(test>>1)&1;n=(test>>2)&1;v=(test>>3)&1;d=classes?((test>>4)&1):0;sp=stack;
+}
+static unsigned short source_prepare_selftest(void){
+    static const unsigned short glyphs[8]={0xa000,0x0100,0x43bb,0x5381,0x539b,0x4eed,0xfff0,0x0040};
+    static const unsigned char stacks[4]={0,1,254,255},ys[4]={0,38,254,255};
+    unsigned char before[605],wanted[605],got[605],want_regs[13],got_regs[13],actor,stack,classes;
+    unsigned short test,i,errors=0,pointer;
+    for(test=0;test<BL_C64_CONTACT_POINTER_CASES+BL_C64_CONTACT_PREPARE_CLASS_CASES+BL_C64_CONTACT_BODY_CASES;test++){
+        classes=(unsigned char)(test>=BL_C64_CONTACT_POINTER_CASES);actor=(unsigned char)(test%3);
+        stack=stacks[((test%BL_C64_CONTACT_POINTER_CASES)/24)&3];
+        for(i=0;i<512;i++)m[i]=(unsigned char)(i*17+test*13);
+        for(i=0;i<85;i++)m[0x4eec+i]=(unsigned char)(i*23+test*7);
+        for(i=0;i<96;i++)m[0xa000+i]=(unsigned char)(i*37+test*19);
+        for(i=0;i<96;i++)m[0x43a0+i]=(unsigned char)(i*31+test*11);
+        for(i=0;i<128;i++){m[0x5300+i]=(unsigned char)(i*11+test*43);m[0xff80+i]=(unsigned char)(i*29+test*5);}
+        m[0x50]=actor;m[0x52]=(unsigned char)(test&31);m[0x7c]=(unsigned char)(test*59);
+        m[0xe6+actor]=ys[(test/96)&3];m[0xe9+actor]=10;
+        pointer=glyphs[(test/3)&7];m[0x50e7+10]=(unsigned char)pointer;
+        m[0x50ff+10]=(unsigned char)(pointer>>8);m[0x5117+10]=(unsigned char)((test&1)?(pointer>>8):0x4f);
+        if(classes)for(i=0;i<3;i++)m[0x4f32+i]=(unsigned char)((((test-BL_C64_CONTACT_POINTER_CASES)/3)>>i)&1?((test&1)?255:1):0);
+        source_prepare_registers(test,classes,stack);source_prepare_image(before,0);
+        if(test>=BL_C64_CONTACT_POINTER_CASES+BL_C64_CONTACT_PREPARE_CLASS_CASES)source_contact_body_c();else if(classes)source_contact_classes_c();else source_contact_pointers_c();
+        source_prepare_image(wanted,0);bl_c64_actor_registers(want_regs);
+        source_prepare_image(before,1);source_prepare_registers(test,classes,stack);
+        if(test>=BL_C64_CONTACT_POINTER_CASES+BL_C64_CONTACT_PREPARE_CLASS_CASES)source_contact_body();else if(classes)source_contact_classes();else source_contact_pointers();
+        source_prepare_image(got,0);bl_c64_actor_registers(got_regs);
+        for(i=0;i<605;i++)if(got[i]!=wanted[i])++errors;
+        for(i=0;i<13;i++)if(got_regs[i]!=want_regs[i])++errors;
+    }
+    for(test=0;test<BL_C64_CONTACT_CLEAR_CASES;test++){
+        m[0x4eec]=0xa5;m[0x4f35]=0x5a;
+        for(i=0;i<72;i++)m[0x4eed+i]=(unsigned char)((i*13+test*17)|1);
+        bl_contact_clear72(m);
+        for(i=0;i<72;i++)if(m[0x4eed+i])++errors;
+        if(m[0x4eec]!=0xa5 || m[0x4f35]!=0x5a)++errors;
+    }
+    return errors;
+}
+#endif
 unsigned short bl_c64_contact_kernel_selftest(void){
     unsigned short test,i,errors=0;unsigned char before[70],expected[70];
     SourceContactBatch batch,initial,wanted;
@@ -770,6 +898,9 @@ unsigned short bl_c64_contact_kernel_selftest(void){
         wanted_mask=source_contact_summary_c();
         if(bl_contact_classes4(m)!=wanted_mask)++errors;
     }
+#if defined(BL_SOURCE_PERF_TEST) && BL_SOURCE_PERF_TEST && (!defined(BL_C64_PROFILE) || !BL_C64_PROFILE)
+    errors+=source_prepare_selftest();
+#endif
     return errors;
 }
 #endif
@@ -798,16 +929,7 @@ static unsigned char source_contact_rows_inner(void){
         aa=batch.aa;xx=batch.xx;yy=batch.yy;
         if(yy==m[0x4f38]){
             a=aa;x=xx;y=yy;c=1;z=1;n=0;
-            for(x=2;;--x){a=m[0x4f32 + x];m[0x4f35 + x]=a;if(!x)break;}
-            x=255;NZ(x);source_contact_frame(0x53f1);
-            if(m[0x50]<3)source_contact_classes();else actor_code(0x5431);
-            a=m[0xb6 + x];m[0xa7 + x]=a;NZ(a);
-            a=m[0x4f32];c=a>=m[0x4f35];NZ((unsigned char)(a-m[0x4f35]));
-            if(!z){a^=1;m[0x4f32]=a;NZ(a);source_contact_frame(0x5405);source_contact_swap(0x4eed);}
-            a=m[0x4f33];c=a>=m[0x4f36];NZ((unsigned char)(a-m[0x4f36]));
-            if(!z){a^=1;m[0x4f33]=a;NZ(a);source_contact_frame(0x5415);source_contact_swap(0x4f04);}
-            a=m[0x4f34];c=a>=m[0x4f37];NZ((unsigned char)(a-m[0x4f37]));
-            if(!z){a^=1;m[0x4f34]=a;NZ(a);source_contact_frame(0x5425);source_contact_swap(0x4f1b);}
+            source_contact_body();
             aa=a;xx=x;yy=y;
         }
         if(yy==m[0x4f39]){
@@ -872,7 +994,11 @@ static unsigned short source_object_classify(void){
 /* $55AB-$55C4 has no service/alias seam inside its fixed 72-byte
  * clear. Preserve final DEX flags, A=0 and the source RTS frame. */
 SOURCE_INLINE void source_contact_clear(void){
+#if defined(__m68k__)
+    bl_contact_clear72(m);
+#else
     unsigned char at;for(at=0;at<72;at++)m[0x4eed+at]=0;
+#endif
     a=0;x=255;NZ(x);sp+=2;
 }
 /* Native object pass ($2E39-$2E88), keeping the original handler for each
@@ -929,28 +1055,28 @@ __attribute__((optimize("O2")))
 static void source_contact_driver(void){
     static const unsigned short pointer_return[4]={0x5273,0x5282,0x5291,0x52a0};
     static const unsigned short row_return[4]={0x5276,0x5285,0x5294,0x52a3};
-    unsigned char part;
+    unsigned char part,actor,pose;
     x=2;NZ(x);
     for(;;){
         if(actor_world_enabled && io_service)io_service();
         m[0x50]=x;a=(unsigned char)(m[(unsigned char)(0x95+x)]&1);NZ(a);
         if(a){
-            a=m[(unsigned char)(0x9e + x)];c=1;sbc(12);
-            m[(unsigned char)(0xe6+x)]=a;a&=3;m[0x1b]=a;NZ(a);
-            a=m[(unsigned char)(0xa1+x)];c=1;sbc(29);
-            m[(unsigned char)(0xe9+x)]=a;a&=7;m[0x1c]=a;NZ(a);
-            x=m[0x4f4e + x];NZ(x);a=m[0x1167+x];m[0x52cc]=a;
-            a=m[0x1239+x];m[0x52cd]=a;NZ(a);
+            /* All entry arithmetic is binary. Intermediate virtual flags
+             * have no reader before $530A's final ADC publishes them at
+             * the first row/service boundary. Keep every RAM write. */
+            actor=m[0x50];
+            m[0xe6+actor]=(unsigned char)(m[0x9e + actor]-12);m[0x1b]=m[0xe6+actor]&3;
+            m[0xe9+actor]=(unsigned char)(m[0xa1+actor]-29);m[0x1c]=m[0xe9+actor]&7;
+            pose=m[0x4f4e + actor];m[0x52cc]=m[0x1167+pose];m[0x52cd]=m[0x1239+pose];
             source_contact_frame(0x5247);PERF_BEGIN(BL_PERF_ALIGN);
             source_contact_align();PERF_END(BL_PERF_ALIGN);
-            a=m[0x1c];c=0;adc(21);m[0x4f39]=a;c=1;sbc(6);m[0x4f38]=a;
+            m[0x4f39]=(unsigned char)(m[0x1c]+21);m[0x4f38]=(unsigned char)(m[0x1c]+15);
             source_contact_frame(0x5258);source_contact_clear();
-            x=m[0x50];a=m[(unsigned char)(0xe6+x)];a>>=2;m[(unsigned char)(0xe6+x)]=a;
-            a=m[(unsigned char)(0xe9+x)];c=(a>>2)&1;a>>=3;m[(unsigned char)(0xe9+x)]=a;
+            m[0xe6+actor]>>=2;m[0xe9+actor]>>=3;
             y=0;m[0x52]=0;
             for(part=0;part<4;part++){
-                if(part){x=m[0x50];NZ(x);++m[(unsigned char)(0xe9+x)];NZ(m[(unsigned char)(0xe9+x)]);}
-                a=(unsigned char)((part+1)*8);m[0x4f3a]=a;NZ(a);
+                if(part)++m[0xe9+m[0x50]];
+                m[0x4f3a]=(unsigned char)((part+1)*8);
                 source_contact_frame(pointer_return[part]);source_contact_pointers();
                 source_contact_frame(row_return[part]);PERF_BEGIN(BL_PERF_ROWS);
                 if(source_contact_rows_inner()){PERF_END(BL_PERF_ROWS);break;}
@@ -1285,9 +1411,14 @@ unsigned char bl_c64_screen_color(long cell){return m[0xd800 + cell]&7;}
 unsigned char bl_c64_glyph(long code,long row){return m[charset()+((unsigned short)code<<3)+row];}
 unsigned char bl_c64_cell_dirty(long cell){return (unsigned char)(dirty_cells[cell]||dirty_glyphs[m[0x8c00 + cell]]||old_bank!=m[0xf2]);}
 void bl_c64_clear_dirty(void){
-    unsigned short i;invalidate_contacts();
-    for(i=0;i<paint_count;i++){dirty_cells[paint_list[i]]=paint_queued[paint_list[i]]=0;paint_rows[paint_list[i]]=0;}
-    paint_count=paint_cursor=0;animation_pending=0;animation_started=0;old_bank=m[0xf2];display_dirty=0;flash_changed=0;
+    unsigned short i,keep=0,cell;invalidate_contacts();
+    for(i=0;i<paint_count;i++){
+        cell=paint_list[i];
+        if(paint_queued[cell]==3){paint_queued[cell]=1;paint_list[keep++]=cell;}
+        else{dirty_cells[cell]=paint_queued[cell]=0;paint_rows[cell]=0;}
+    }
+    paint_count=keep;paint_cursor=0;animation_pending=0;animation_started=0;
+    old_bank=m[0xf2];display_dirty=(unsigned char)(keep!=0);flash_changed=0;
 }
 
 unsigned char bl_c64_tile(long column,long row){
@@ -1613,7 +1744,10 @@ const unsigned short *bl_c64_paint_changes(unsigned char *planes,long scene_top,
         for(cell=glyph_first(code|128);cell!=65535;cell=glyph_next[cell])mark_cell(cell,0,255);
     }}
     *count=paint_count;
-    for(item=0;item<paint_count;item++)paint_cell(planes,paint_list[item],(unsigned short)scene_top,paint_rows[paint_list[item]]);
+    for(item=0;item<paint_count;item++){
+        cell=paint_list[item];paint_queued[cell]=2;
+        paint_cell(planes,cell,(unsigned short)scene_top,paint_rows[cell]);
+    }
     return paint_list;
 }
 /* Source $2CF1-$2D54: three8x16 glyphs, each source row duplicated.
@@ -1798,10 +1932,10 @@ const unsigned short *bl_c64_paint_part(unsigned char *planes,long scene_top,lon
         cell=paint_list[paint_cursor];
         if(animation_ready && animation_cell[cell]!=65535 && !animation_differences[animation_cell[cell]]){
             if(!animation_done[animation_cell[cell]])break;
-            ++paint_cursor;continue;
+            ++paint_cursor;paint_queued[cell]=2;continue;
         }
         if(work++>=limit)break;
-        ++paint_cursor;rows=paint_rows[cell];stamp=cell_stamp[cell];
+        ++paint_cursor;paint_queued[cell]=2;rows=paint_rows[cell];stamp=cell_stamp[cell];
 #if defined(__m68k__)
         if(stamp && *(unsigned short*)(stamp-2)==glyph_epoch[indexed_screen[cell]]){
             if(tile_painter){

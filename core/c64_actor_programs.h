@@ -19770,7 +19770,7 @@ goto L5309;
 L5309:; /* $5309 */
 sp+=2;actor_return=source_stack_return();return;
 L530a:; /* $530A */
-if(!d){source_contact_pointers();actor_return=source_stack_return();return;}
+if(!d && m[0x50]<3){source_contact_pointers();actor_return=source_stack_return();return;}
 x=m[0x0050];NZ(x);
 goto L530c;
 L530c:; /* $530C */
@@ -19926,7 +19926,7 @@ goto L537d;
 L537d:; /* $537D */
 sp+=2;actor_return=source_stack_return();return;
 L537e:; /* $537E */
-PERF_BEGIN(BL_PERF_ROWS);source_contact_rows();PERF_END(BL_PERF_ROWS);actor_return=source_stack_return();return;
+if(m[0x50]<3){PERF_BEGIN(BL_PERF_ROWS);source_contact_rows();PERF_END(BL_PERF_ROWS);actor_return=source_stack_return();return;}
 y=m[0x0052];NZ(y);
 goto L5380;
 L5380:; /* $5380 */

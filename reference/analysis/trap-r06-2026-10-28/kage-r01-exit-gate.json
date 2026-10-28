@@ -1,0 +1,81 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_range": "$30D4-$310B",
+  "cases": [
+    {
+      "raw_x": 160,
+      "screen_x": 296,
+      "y": 98,
+      "right_movement_record": 0,
+      "gate_carry": 1,
+      "gate_allows_exit": false,
+      "instructions": 18
+    },
+    {
+      "raw_x": 160,
+      "screen_x": 296,
+      "y": 98,
+      "right_movement_record": 1,
+      "gate_carry": 1,
+      "gate_allows_exit": false,
+      "instructions": 18
+    },
+    {
+      "raw_x": 161,
+      "screen_x": 298,
+      "y": 98,
+      "right_movement_record": 0,
+      "gate_carry": 1,
+      "gate_allows_exit": false,
+      "instructions": 18
+    },
+    {
+      "raw_x": 161,
+      "screen_x": 298,
+      "y": 98,
+      "right_movement_record": 1,
+      "gate_carry": 1,
+      "gate_allows_exit": false,
+      "instructions": 18
+    },
+    {
+      "raw_x": 162,
+      "screen_x": 300,
+      "y": 98,
+      "right_movement_record": 0,
+      "gate_carry": 1,
+      "gate_allows_exit": false,
+      "instructions": 20
+    },
+    {
+      "raw_x": 162,
+      "screen_x": 300,
+      "y": 98,
+      "right_movement_record": 1,
+      "gate_carry": 0,
+      "gate_allows_exit": true,
+      "instructions": 14
+    },
+    {
+      "raw_x": 163,
+      "screen_x": 302,
+      "y": 98,
+      "right_movement_record": 0,
+      "gate_carry": 1,
+      "gate_allows_exit": false,
+      "instructions": 20
+    },
+    {
+      "raw_x": 163,
+      "screen_x": 302,
+      "y": 98,
+      "right_movement_record": 1,
+      "gate_carry": 0,
+      "gate_allows_exit": true,
+      "instructions": 14
+    }
+  ],
+  "condition": "Room1, actor2 at upper exit height; gate only. The actual object pass must also encounter exit cell2..5 before $2F90->$3001 removes an NPC.",
+  "natural_playthrough": false,
+  "edition_verified": false
+}

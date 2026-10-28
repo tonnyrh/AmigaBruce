@@ -1,0 +1,77 @@
+{
+  "cells": [
+    {
+      "cell": 402,
+      "code": 128,
+      "indexed": 128,
+      "color": 252,
+      "slot": 256,
+      "stamp": "0xc588fc",
+      "queued": 0,
+      "paint_rows": 0,
+      "animation_cell": 65535,
+      "glyph_epoch": 0,
+      "entry_tag": "0x480",
+      "entry_generation": 6,
+      "entry_epoch": 0,
+      "planes": "0000000000000000ffffffffffffffffffffffffffffffff0000000000000000"
+    },
+    {
+      "cell": 403,
+      "code": 128,
+      "indexed": 128,
+      "color": 252,
+      "slot": 65535,
+      "stamp": "0x0",
+      "queued": 0,
+      "paint_rows": 0,
+      "animation_cell": 65535,
+      "glyph_epoch": 0,
+      "entry_tag": "0x0",
+      "entry_generation": 0,
+      "entry_epoch": 0,
+      "planes": ""
+    },
+    {
+      "cell": 442,
+      "code": 0,
+      "indexed": 0,
+      "color": 252,
+      "slot": 128,
+      "stamp": "0xc574fc",
+      "queued": 0,
+      "paint_rows": 0,
+      "animation_cell": 65535,
+      "glyph_epoch": 0,
+      "entry_tag": "0x400",
+      "entry_generation": 6,
+      "entry_epoch": 0,
+      "planes": "0000000000000000ffffffffffffffffffffffffffffffff0000000000000000"
+    },
+    {
+      "cell": 443,
+      "code": 0,
+      "indexed": 0,
+      "color": 252,
+      "slot": 128,
+      "stamp": "0xc574fc",
+      "queued": 0,
+      "paint_rows": 0,
+      "animation_cell": 65535,
+      "glyph_epoch": 0,
+      "entry_tag": "0x400",
+      "entry_generation": 6,
+      "entry_epoch": 0,
+      "planes": "0000000000000000ffffffffffffffffffffffffffffffff0000000000000000"
+    }
+  ],
+  "state": {
+    "paint_count": 0,
+    "paint_cursor": 0,
+    "display_dirty": 0,
+    "animation_pending": 0,
+    "animation_phase_valid": 1,
+    "animation_part": 2,
+    "contact_generation": 6
+  }
+}

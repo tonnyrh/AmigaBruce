@@ -6,11 +6,11 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "a05ac49c04b2ced8f09b907030b2e1bd59737cf4cb3c0e1103dfecd747be2d4b"
+      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "d23a666053b8dd791947fd12b27508a6d27752039ba0d1ec81649bbecd411402"
+      "sha256": "56bafaf9051feb282f40494034c305b6d736449d28804f216f871266286e9dff"
     },
     {
       "path": "core/source_perf.h",

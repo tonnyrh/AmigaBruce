@@ -1,6 +1,6 @@
 {
   "id": "ACTOR-CHAIN-0001",
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "status": "scoped_complete_source_chain_implemented_acceptance_open",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "primary_edition_verified": false,
@@ -22,7 +22,7 @@
   "artifacts": [
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "26f0f582d57c7e498a73b52af4102d524ca1508a666f4599aa25e28dee764478"
+      "sha256": "773aedbe9ef236f95d5934516b479cc7e677a3da015707bd59edd7cd8337ec33"
     },
     {
       "path": "docs/MILESTONE_COMPLETION.md",

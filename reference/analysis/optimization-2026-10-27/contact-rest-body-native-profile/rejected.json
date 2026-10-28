@@ -1,0 +1,4 @@
+{
+  "status": "allocation_failed_before_measured_loop",
+  "reason": "Extended reference kernels plus profiling tables exceed combined diagnostic-image budget; run extended controls in timing image and existing454 controls in profile/full image; all memory gates unchanged"
+}

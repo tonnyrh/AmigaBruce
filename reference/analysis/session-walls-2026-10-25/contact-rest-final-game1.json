@@ -1,0 +1,28 @@
+{
+  "label": "contact-rest-final-game1",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "0103e56518415da3c135916c7ad70431cd924d2cdcefca5e43ee2c9793a987b5"
+  },
+  "source_room": 1,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    354880,
+    354920,
+    354960,
+    355000
+  ],
+  "source_music_fields": 2236,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-game1.bpl",
+      "sha256": "712ab614165047693cf1c6031194a10325edad67bcce61179e8b09fa3257d15c"
+    },
+    {
+      "path": "docs/images/session-contact-rest-final-game1.png",
+      "sha256": "f487071d2208a0b150d59976e569215d1ec39c12ec85b10326c1473b94710bd6"
+    }
+  ]
+}

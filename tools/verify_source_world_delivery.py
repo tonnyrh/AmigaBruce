@@ -23,7 +23,7 @@ def verify():
     assert vic['status']=='passed_field_sampled_pixel_and_latch_controls' and vic['calls']==6709
     assert not vic['original_raster_verified'];identities(vic['source_files'])
     contact=read('reference/validation/source-contact-host.json')
-    assert contact['status']=='passed_original_byte_contact_controls' and contact['checks']==4209
+    assert contact['status']=='passed_original_byte_contact_controls' and contact['checks']==4239
     assert contact['service_register_cases']==489
     assert contact['source_sha256']==source and not contact['natural_playthrough'];identities(contact['source_files'])
     objects=read('reference/validation/source-object-host.json')
@@ -49,6 +49,18 @@ def verify():
     identities([native_visibility['binary']]+native_visibility['source_files']+native_visibility['artifacts'])
     assert [x['flags']&1 for x in native_visibility['states']]==[1,0,1]
     assert all(not any(rect) for rect in native_visibility['states'][1]['buffer_dirty'])
+    paint=read('reference/validation/source-paint-host.json')
+    assert paint['status']=='passed_source_paint_requeue_controls' and len(paint['cases'])==2
+    identities(paint['source_files'])
+    trap=read('reference/validation/source-trap-native.json')
+    assert trap['status']=='passed_owned_r06_negative_phase_trap_pixels'
+    assert not trap['source_ram_injected'] and not trap['natural_playthrough']
+    identities([trap['binary']]+trap['source_files']+trap['artifacts'])
+    assert len(trap['samples'])==3
+    for sample in trap['samples']:
+        assert sample['background_mismatches']==0 and sample['phase_source']&128
+        assert len(sample['buffers'])==2
+        assert all(not v['actor_intersects_roi'] and v['mismatches']==0 for v in sample['buffers'])
     assert len(fixture['cases'])==53;identities([fixture['fixture']])
     native=read('reference/validation/source-world-native.json');identities(native['source_files']+native['build'])
     assert native['status']=='passed_scoped_native_source_contract' and not native['failures']
@@ -73,15 +85,21 @@ def main():
         proofs += ['reference/validation/source-object-host.json','reference/validation/source-score-host.json','docs/NATIVE_ENGINE_OPTIMIZATION.md','docs/CONTACT_KERNEL_OPTIMIZATION.md','docs/PACKED_MASK_OPTIMIZATION.md']
         proofs += ['reference/validation/source-contact-host.json','docs/CONTACT_OPTIMIZATION.md','docs/VIC_NATIVE_OPTIMIZATION.md']
         proofs += ['reference/validation/source-visibility-native.json','reference/validation/source-visibility-host.json','reference/analysis/yamo-r02-2026-10-27/snapshot.json','reference/analysis/yamo-r02-2026-10-27/source-memory.bin','tools/inspect_source_snapshot.py','docs/YAMO_VISIBILITY_PERFORMANCE.md','docs/CONTACT_REGISTERS_OPTIMIZATION.md']
+        proofs += ['reference/validation/source-paint-host.json','reference/validation/source-trap-native.json',
+            'docs/CONTACT_PREPARATION_OPTIMIZATION.md','docs/TRAP_R06_2026-10-28.md',
+            'reference/analysis/trap-r06-2026-10-28/room-loop-controls.json',
+            'reference/analysis/trap-r06-2026-10-28/trap-pixels.json',
+            'reference/analysis/trap-r06-2026-10-28/requeue-before.json',
+            'reference/analysis/trap-r06-2026-10-28/kage-r01-exit-gate.json']
         normal=[artifact('amiga/out/bruce_amiga.'+suffix) for suffix in ('exe','elf','adf')]
-        report=dict(date='2026-10-27',status='scoped_complete_source_chain_implemented_acceptance_open',source_sha256=source,
+        report=dict(date='2026-10-28',status='scoped_complete_source_chain_implemented_acceptance_open',source_sha256=source,
             edition_verified=False,natural_playthrough=False,raster_exact=False,full_original_parity=False,
             source_controls=3034,integrated_scenarios=5,source_instructions=world['instructions'],native_controls=53,
             native_replay_loops=int(native['run']['frames']),largest_chip_block=int(native['run']['chip_largest_loaded']),
             realtime_gate_passed=native['realtime_contract_passed'],artifacts=[artifact(x) for x in proofs],normal_build=normal,
             open_gates=['Verified untouched1984 edition','PAL real-time budget across all rooms','Natural VIC/IRQ phase and reader distribution','Complete natural playthrough and next round','Physical A500 and final distribution'])
         (ROOT/path).write_text(json.dumps(report,indent=2)+'\n')
-        evidence=dict(id='ACTOR-CHAIN-0001',date='2026-10-27',status=report['status'],source_sha256=source,
+        evidence=dict(id='ACTOR-CHAIN-0001',date='2026-10-28',status=report['status'],source_sha256=source,
             primary_edition_verified=False,natural_playthrough=False,full_original_parity=False,
             source_ranges=['$0743-$1100','$15A8-$1981','$1BC2-$33CA','$40BC','$5212-$56FF'],
             condition='Complete source main/actor/contact/object/combat/lifetime/score chain in shared RAM; explicit CIA/VIC/field-wait seams',

@@ -1,0 +1,34 @@
+{
+  "status": "passed_source_paint_requeue_controls",
+  "cases": [
+    "repaint_consumed_cell_after_source_mutation",
+    "full880_queue_repeated_mutation_coalescing"
+  ],
+  "natural_playthrough": false,
+  "source_files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "fdcdde98938946edc7b536d879e1ca768fb721de985a044cbb402d855bf71217"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "56bafaf9051feb282f40494034c305b6d736449d28804f216f871266286e9dff"
+    },
+    {
+      "path": "tests/source_paint_bridge.c",
+      "sha256": "6098fee2eadcea995f8abf75d10c4ef1981769d94f354feb9db73bbdd4e895b1"
+    },
+    {
+      "path": "tools/verify_source_paint.py",
+      "sha256": "6055839094b912228264049294e232bb72f58aab9ef7e6138713acd07863ded2"
+    },
+    {
+      "path": "test-source-paint.ps1",
+      "sha256": "753c27af983ffce6e43a83a955057560ee56697596ba9d4821d37298d2b76052"
+    }
+  ]
+}

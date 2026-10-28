@@ -1,0 +1,16 @@
+{
+  "method": "Read-only stored Amiga buffers, BSS located from source RAM signature and currently deployed pre-sprint ELF; not a resume",
+  "elf_sha256": "4b9d9b9327e3aacba01afd2aa96621999107935da4cb680740e4aafd6ff8d39b",
+  "bss_base": "0xc49ea0",
+  "buffers": [
+    334680,
+    376664
+  ],
+  "background": [
+    213360
+  ],
+  "copper": [
+    375640,
+    417624
+  ]
+}

@@ -38,7 +38,8 @@ try{
         if($run['source_perf_steps'] -ne [string]$SourceSteps -or $run['source_world_steps'] -ne [string]$SourceSteps -or [int]$run['frames'] -ge $TestFrames){throw 'Benchmark did not reach exactly the requested source steps before safety limit'}
     }elseif($run['frames'] -ne [string]$TestFrames){throw 'Benchmark did not finish outer loops'}
     if($run['restored_os'] -ne '1'){throw 'Benchmark did not restore OS'}
-    if($run['contact_kernel_cases'] -ne '454'){throw 'Native contact kernel controls missing'}
+    $expectedKernelCases=if($Profile -or $Controlled){'454'}else{'1046'}
+    if($run['contact_kernel_cases'] -ne $expectedKernelCases){throw 'Native contact kernel controls missing'}
     foreach($item in $identity){if((Get-FileHash (Join-Path $taskRoot $item.path)).Hash.ToLower() -ne $item.sha256){throw "Source changed during benchmark: $($item.path)"}}
     foreach($key in @('c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors','vic_compare_errors','contact_kernel_errors')){
         if($run[$key] -ne '0'){throw "$key=$($run[$key])"}}

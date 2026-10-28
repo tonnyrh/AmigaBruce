@@ -1,0 +1,139 @@
+{
+  "status": "passed_owned_r06_negative_phase_trap_pixels",
+  "binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "0103e56518415da3c135916c7ad70431cd924d2cdcefca5e43ee2c9793a987b5"
+  },
+  "source_files": [
+    {
+      "path": "tools/audit_native_trap_pause.py",
+      "sha256": "1ada26ed1eaa52c62cf52be174b1061f523d420a47b3cd6fa64f757b616a89f5"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "fdcdde98938946edc7b536d879e1ca768fb721de985a044cbb402d855bf71217"
+    }
+  ],
+  "samples": [
+    {
+      "phase_before": 227,
+      "phase_source": 227,
+      "phase_after": 228,
+      "source_column": 1,
+      "background_mismatches": 0,
+      "buffers": [
+        {
+          "buffer": 0,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        },
+        {
+          "buffer": 1,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        }
+      ]
+    },
+    {
+      "phase_before": 230,
+      "phase_source": 230,
+      "phase_after": 231,
+      "source_column": 1,
+      "background_mismatches": 0,
+      "buffers": [
+        {
+          "buffer": 0,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        },
+        {
+          "buffer": 1,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        }
+      ]
+    },
+    {
+      "phase_before": 232,
+      "phase_source": 232,
+      "phase_after": 233,
+      "source_column": 1,
+      "background_mismatches": 0,
+      "buffers": [
+        {
+          "buffer": 0,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        },
+        {
+          "buffer": 1,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        }
+      ]
+    }
+  ],
+  "roi": [
+    24,
+    80,
+    40,
+    96
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-background.bpl",
+      "sha256": "5aa63210d4ea2490215e147cd3400a05097a0242051af464c7633af8dd311ac3"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-buffer0.bpl",
+      "sha256": "58761fe1145fead0e6e092a8c4a7677d6d61b46642b2b846b65552367ac710ad"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-buffer1.bpl",
+      "sha256": "58761fe1145fead0e6e092a8c4a7677d6d61b46642b2b846b65552367ac710ad"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-source.bin",
+      "sha256": "d765fa477ad7d80617430e9236db5fbc678359c33de62b91fc82185977aa2f5b"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-background.bpl",
+      "sha256": "7dd7c21e1fb036e29e92ba90adb3880e0360816ee0d7848ac62ff0b94939a4d7"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-buffer0.bpl",
+      "sha256": "3050d7e898d77c9f4a75168eb4f05a3b5d25e8345954e524ac247620416b9d11"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-buffer1.bpl",
+      "sha256": "f9326636624687507e24bebf02712111eeea8748b7dd54c8bce9526ac88f98f0"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-source.bin",
+      "sha256": "b5112e8b2250f65847fb07ffd1c695aa9cb4f559eedef9c827bbd2800473332c"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-background.bpl",
+      "sha256": "b4b2afd522668780e05f074527a9cd5ec061128a29ff3e1c8771037fe028e011"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-buffer0.bpl",
+      "sha256": "6cb80523891788691d528b905c8e0a92ca461e1095282469036063ce6cbb2047"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-buffer1.bpl",
+      "sha256": "6cb80523891788691d528b905c8e0a92ca461e1095282469036063ce6cbb2047"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-source.bin",
+      "sha256": "16f3cca5634197c1bdf560bd45ec26cd66fe3cd4eee1e7e421668b94b4695424"
+    }
+  ],
+  "natural_playthrough": false,
+  "source_ram_injected": false,
+  "method": "Owned normal game reached room6 via debug room navigation; actual source phase and raw background/both display buffers; no source state injected"
+}

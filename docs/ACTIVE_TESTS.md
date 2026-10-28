@@ -19,6 +19,8 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
   lydtick-/feltporten står fortsatt åpen.
   [Pakkede kontaktmasker](PACKED_MASK_OPTIMIZATION.md) reduserer målt tid videre
   med 5,2 %; 454 native kjernekontroller supplerer kilde-/motorfixturene.
+  [Resten av kontaktløpet](CONTACT_PREPARATION_OPTIMIZATION.md) gir ytterligere
+  4,18 % kortere målt tid; 1046 native kjernekontroller kjøres separat.
   Normal klokkeprøve er fortsatt tregere enn tre felt per steg. Kontroller
   synlig framdrift også under naturlig spilling.
 - VIC-PHASE: kontroller naturlige samtidige treff og spritekontakt ved kanter.
@@ -45,6 +47,7 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
 | SCORE/BONUS | Kontroller poeng for lanterner/kamp og bonusliv. HUD viser kilde-RAMs binære24-bits poeng; ingen egen Amiga-poengregel. |
 | CHEAT-PROGRESS | Start i rom10 via Shift+D: rom1–9 fullført, målrom bevart. Prøv to spillere og F1/F2. Romhopp gir ingen poeng/bonus. |
 | GEO-R02/ROOM-LOAD | Midtforbindelsen i rom2, retur1↔2 og5↔6, samme rom ved død. Kontroller geometri, palett, lanterner og nett. |
+| R06-TRAP-REPAINT | Ny EXE/ADF: observer øvre venstre felle over en hel syklus. Kildens lange pause beholdes, men gammel hvit rest skal ikke bli stående etter at tegnet er fjernet. Se USS-analysen og de nye køkontrollene. |
 | R10-ELECTRIC | Følg nederste elektriske felle mens nettene ruller. Meld synlig forsinkelse separat fra kildefellens tilstand. |
 | AUDIO/SPRITES | Lytt gjennom tittellåten og naturlige døds-/kampforløp. Kontroller kildepositurer i begge retninger, også Kages stav. Originalt motorvalg styrer nå posen direkte. |
 

@@ -325,7 +325,7 @@ static int update_lantern_background(const BlProgress *progress){
     if(BL_C64_PROFILE){bl_c64_profile_add(3,elapsed_work(part));part=line_clock();}
     if(bl_c64_paint_done())bl_c64_clear_dirty();else return 0;
     if(BL_C64_PROFILE)bl_c64_profile_add(6,elapsed_work(part));
-    return 1;
+    return bl_c64_paint_done(); /* A consumed cell may have changed again. */
 }
 
 static void restore_source_cells(UBYTE *b,int buffer){

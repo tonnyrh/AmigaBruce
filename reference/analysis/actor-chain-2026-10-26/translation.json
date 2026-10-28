@@ -884,7 +884,7 @@
   "generated": [
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "779479168f174c3ae8220006c9424118284920d89440421d49c592442809fd19"
+      "sha256": "131727831db097b479aa98ec4c8f6b9f7439f0e9cc04e770d2081af604f702a6"
     },
     {
       "path": "core/c64_actor_data.h",

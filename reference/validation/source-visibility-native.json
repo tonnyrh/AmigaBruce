@@ -2,7 +2,7 @@
   "status": "passed_owned_native_visibility_lifecycle",
   "binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "4901624596c2db04d6a70c0b7894439c0e34e1cba18695a5002ec26e35b7ee1e"
+    "sha256": "0103e56518415da3c135916c7ad70431cd924d2cdcefca5e43ee2c9793a987b5"
   },
   "controlled_injection": true,
   "natural_playthrough": false,
@@ -11,27 +11,27 @@
   "artifacts": [
     {
       "path": "reference/analysis/session-walls-2026-10-25/yamo-visible.bpl",
-      "sha256": "6371a60f0881fa9059424e0502a8cd8548015df787a727066df3822c0052cf34"
+      "sha256": "52e729c1d461853d8feb54caccb817ff1c29a3f49abcd3bcfe1faf6369cdbcae"
     },
     {
       "path": "docs/images/session-yamo-visible.png",
-      "sha256": "c128d954e36e651bba41b5f70e62c6bdd85628443d1fa428d7c80d41c152e05d"
+      "sha256": "b27ac81cf8c8a5f21ce75a96814ded25025b435475164f5c1772d3cca7636c6b"
     },
     {
       "path": "reference/analysis/session-walls-2026-10-25/yamo-hidden.bpl",
-      "sha256": "68cc6febffdee5ca6cd6faf79559d020e2181779bbeb2750d5a7993c2fcdbc8f"
+      "sha256": "fa5c46720a1fe905d587cc27ca719ed6137789957059668a6317d0e964537bfe"
     },
     {
       "path": "docs/images/session-yamo-hidden.png",
-      "sha256": "30f0a3f45760faf31d448983ebe7cbad5062e25aa201e2dda392d15f7f721bb2"
+      "sha256": "435bb541801fa4ea9732216e51305412bf8408691c02c2abd0decc1c93d6031e"
     },
     {
       "path": "reference/analysis/session-walls-2026-10-25/yamo-returned.bpl",
-      "sha256": "3e5953abc3935c9d116dfafb3272d7318cff6077f390906ec94ab5f6300441b6"
+      "sha256": "2b17488655c7477e2fc6e84afccc760427d42f145690df53aa58d7c8a004da47"
     },
     {
       "path": "docs/images/session-yamo-returned.png",
-      "sha256": "97f9a2d60724e23733000be881221201973ace0f7d08e90b3a28267844f510a3"
+      "sha256": "abf2b85e3572b74de0b0b0acb30ee084f4e05e78414e927a999e84cda2fb9451"
     }
   ],
   "source_files": [
@@ -45,7 +45,7 @@
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "a05ac49c04b2ced8f09b907030b2e1bd59737cf4cb3c0e1103dfecd747be2d4b"
+      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
     }
   ],
   "method": "Seed inactive actor, publish active bit last; injected source wait and original component enable masks; actual normal draw loop and both buffer dirty rectangles",

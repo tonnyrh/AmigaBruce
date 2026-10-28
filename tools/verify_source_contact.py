@@ -149,8 +149,19 @@ def main():
         m[0x4f38]=(start+2)&255;m[0x4f39]=(start+6)&255;m[0x4f3a]=(start+8)&255
         for operand in (0x5381,0x539b,0x53b5):m[operand:operand+2]=pointer.to_bytes(2,'little')
         check(m,0x537e,f'rows/wrap/{start}/{pointer:x}',251,trace=True)
+    # Unusual actor indices must keep the literal source entry paths,
+    # including zero-page wrap. They must not enter the0..2 native kernels.
+    for actor,yy,stack in itertools.product((3,127,255),(0,38,255),(0,253)):
+        m=bytearray(source);m[0x4eed:0x4f40]=rng.randbytes(83);m[0x50]=actor
+        m[(0xe6+actor)&255]=yy;m[(0xe9+actor)&255]=10;m[0x52]=rng.randrange(32);m[0x7c]=0xa0
+        check(m,0x530a,f'pointers/literal-fallback/{actor}/{yy}/{stack}',sp=stack,decimal=0)
+    for actor,body,stack in itertools.product((3,127,255),(4,15),(0,253)):
+        m=bytearray(source);m[0xcae0:0xcb60]=rng.randbytes(128);m[0x4eed:0x4f40]=rng.randbytes(83)
+        m[0x50]=actor;m[0x52]=0;m[0x4f38]=body;m[0x4f39]=21;m[0x4f3a]=8
+        for operand in (0x5381,0x539b,0x53b5):m[operand:operand+2]=(0xa000).to_bytes(2,'little')
+        check(m,0x537e,f'rows/literal-fallback/{actor}/{body}/{stack}',sp=stack,decimal=0)
     files=['core/c64_rooms.c','core/c64_rooms.h','core/source_perf.h','core/c64_actor_programs.h',
-        'tools/build_c64_rooms.py','tools/build_contact_class_kernel.py','amiga/contact_rows.s','amiga/contact_align.s','tests/source_contact_bridge.c','tools/verify_source_contact.py','test-source-contact.ps1']
+        'tools/build_c64_rooms.py','tools/build_contact_class_kernel.py','amiga/contact_rows.s','amiga/contact_align.s','amiga/contact_prepare.s','tests/source_contact_bridge.c','tools/verify_source_contact.py','test-source-contact.ps1']
     report=dict(status='passed_original_byte_contact_controls',source_sha256=SHA,checks=sum(counts.values()),
         instructions=instructions,entries=counts,service_register_cases=service_cases,edition_verified=False,natural_playthrough=False,raster_exact=False,
         source_files=[dict(path=p,sha256=hashlib.sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])

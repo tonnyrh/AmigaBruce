@@ -1,0 +1,28 @@
+{
+  "label": "contact-rest-final-return1",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "0103e56518415da3c135916c7ad70431cd924d2cdcefca5e43ee2c9793a987b5"
+  },
+  "source_room": 5,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    396864,
+    396904,
+    396944,
+    396984
+  ],
+  "source_music_fields": 1268,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-return1.bpl",
+      "sha256": "055545d34cf4cc119e37da9c037dac96202a54ac5c69432d2d2f6b3e5c6344f3"
+    },
+    {
+      "path": "docs/images/session-contact-rest-final-return1.png",
+      "sha256": "50df70757a8258b983e3648ec90bc3e3d49f853c4a22627c78f423b8d805723a"
+    }
+  ]
+}

@@ -2,60 +2,108 @@
   "status": "passed_owned_cli_adf_smoke",
   "binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "4901624596c2db04d6a70c0b7894439c0e34e1cba18695a5002ec26e35b7ee1e"
+    "sha256": "0103e56518415da3c135916c7ad70431cd924d2cdcefca5e43ee2c9793a987b5"
   },
   "adf": {
     "path": "amiga/out/bruce_amiga.adf",
-    "sha256": "0975bf34b8eaae0c1e64a5e0b7cca4d743df65f0305bd438e3c434849bded65d"
+    "sha256": "ae3a993b4ac37ed33a5a2a9bb85138eff3d3cc636498e7997b972d7b4c9c6a24"
   },
   "artifacts": [
     {
-      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-cli.json",
-      "sha256": "2b926a9c7b930432965a8ef76c1c4a71b65c9e3d10c3de8eb23b930c4a146081"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-menu.json",
+      "sha256": "d8f7a6a2055ce1fe5de4775b03647cc7c79e1ad3c666e60a7afa4c668a24ec5a"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-cli.bpl",
-      "sha256": "1411859a37b2718d65fb7b2b04be374e5b717069fb9edc7a4e1ee1bc32741774"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
     },
     {
-      "path": "docs/images/session-packed-mask-final-cli.png",
-      "sha256": "284eedf3a2429051fc885fb9cbfaa8905b6dbf5c1d9b0f7ddf4ca2409d06293b"
+      "path": "docs/images/session-contact-rest-final-menu.png",
+      "sha256": "2c8656e6a1bae54efa5586b47d16aada856a3248621ada1978f38daf54f39002"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-room2.json",
-      "sha256": "9de53388a9f4517310dd895f9b3f492c5826175b18094ea78d5f826a2908c514"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-debug.json",
+      "sha256": "02be0c45cf74266c32e0dc0df15e23e6932f96a9ae4a4a18263093efdac1897b"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-room2.bpl",
-      "sha256": "67f010def13bc0a94d155e14cc26e88bf7978df4beb0c6a78d0d2440806e2051"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-debug.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
     },
     {
-      "path": "docs/images/session-packed-mask-final-room2.png",
-      "sha256": "a1b100c5633aba015f63d4b0c8a2799e680a7d16db3dbf841e7ad2a3ddb3047c"
+      "path": "docs/images/session-contact-rest-final-debug.png",
+      "sha256": "19cd16dd077341ea4e3f43e222432a673fabebfa39e58b706016a41ae442f3fd"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-adf.json",
-      "sha256": "be45c8e4864da7a36a801215120e600a2a477b6e15a410835d4796c3c13b5610"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-game1.json",
+      "sha256": "84e308cefa66e5d958ee5e33abe284b3728df2ba9cfd96523feabc257b01d02c"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-adf.bpl",
-      "sha256": "1411859a37b2718d65fb7b2b04be374e5b717069fb9edc7a4e1ee1bc32741774"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-game1.bpl",
+      "sha256": "712ab614165047693cf1c6031194a10325edad67bcce61179e8b09fa3257d15c"
     },
     {
-      "path": "docs/images/session-packed-mask-final-adf.png",
-      "sha256": "284eedf3a2429051fc885fb9cbfaa8905b6dbf5c1d9b0f7ddf4ca2409d06293b"
+      "path": "docs/images/session-contact-rest-final-game1.png",
+      "sha256": "f487071d2208a0b150d59976e569215d1ec39c12ec85b10326c1473b94710bd6"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/packed-mask-final-early-clock.json",
-      "sha256": "5dba397455b25dcdc736a07062377db7637751e77a606fb5f314c97fa9850bd9"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-room2.json",
+      "sha256": "c632cb43c2638585ef4c367d7606fbae7dc9ce67422381256a9abd51b54b9b87"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/packed-mask-final-late-clock.json",
-      "sha256": "09702fc4563975a709c2df1d837013559f7549f5027579953dbb5dd46e3682a9"
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-room2.bpl",
+      "sha256": "5e009e46ac79387ba1bf5857b2bab4da6358a60cfefe34e00a09a80aa90bdfe0"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/packed-mask-final-adf-clock.json",
-      "sha256": "62184d45e685fe655dd7f5192798ec3f3857b0e5b82d08653618b3e328d35168"
+      "path": "docs/images/session-contact-rest-final-room2.png",
+      "sha256": "5f68bdd9ca0291b3d47cbb480164902e48b50ad57bb363d46d0ad6fedc45f501"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-room6.json",
+      "sha256": "39079b8e276a9e289586c8f6a083ef1d8780f4c792daa59e1ef4dfb7236f7196"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-room6.bpl",
+      "sha256": "2b957e409506a34894abe6605d8073a379e702a283558dbf41bb8e212d9580de"
+    },
+    {
+      "path": "docs/images/session-contact-rest-final-room6.png",
+      "sha256": "af208374fd52459de2cc5dcf96646347dd54a650fe1aa534e67f562864ad47e0"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-adf-menu.json",
+      "sha256": "b169b65bbc9aa2ff7df47a8632face2b3726af365226923ca9747ac0ea59a26e"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-adf-menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "docs/images/session-contact-rest-final-adf-menu.png",
+      "sha256": "2c8656e6a1bae54efa5586b47d16aada856a3248621ada1978f38daf54f39002"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-adf.json",
+      "sha256": "1e13b55c7bce31185b3f54e42bd09d597e433221e89969d312e4a07ac2e2e3a1"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/contact-rest-final-adf.bpl",
+      "sha256": "c0505ac1d3641367817afd720cc53a3f5f225d3151609e25bc87f727589132d7"
+    },
+    {
+      "path": "docs/images/session-contact-rest-final-adf.png",
+      "sha256": "ec5a02526f89c8737e4df7781a69dfe65aa0805f10d93336227d1588ed3aa849"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-rest-final-early-clock.json",
+      "sha256": "b508a278d0b0d2a9c5efc24c5969e966e04ed0c86ebce3aea857c5af9dcf21e9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-rest-final-late-clock.json",
+      "sha256": "e51ea1e63c19321799fc132513924c817de9902ae9dd5276cadc0a1f738834a8"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-rest-final-adf-clock.json",
+      "sha256": "dd999c25fad182b320937c21965e4ab6e7ae415117d78be1c12687683e0a98e5"
     }
   ],
   "settings": {
@@ -67,7 +115,7 @@
     "fastmem_size": "0",
     "ntsc": "false"
   },
-  "method": "Own final normal CLI and actual ADF boot; menu/new game, room1/2, source-clock samples and bitplanes; earlier builds retained separately",
+  "method": "Owned final normal CLI and actual ADF boot; menu/new game, room1/2/6 via debug navigation, source-clock samples and bitplanes; room2 injected visibility control recorded separately",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "natural_playthrough": false,
   "physical_a500": false

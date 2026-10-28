@@ -1,0 +1,4 @@
+{
+  "status": "stopped_before_final_report",
+  "reason": "Pre-queue-fix full native run intentionally stopped so the delivered repaint fix could be included; no acceptance claimed for this archive"
+}

@@ -118,9 +118,9 @@ def translate(memory, roots, *, actors=False):
             targets=(0x2ee9,0x2eea,0x2ef7,0x2efa,0x2f01,0x2f04,0x2f3c,0x2f51,0x2f66,0x2f7b,0x310c)
             lines.append('switch(source_object_classify()){'+''.join(f'case 0x{target:04x}:goto L{target:04x};' for target in targets)+'default:source_fault=0x2e89;return;}')
         if actors and pc==0x5212:lines.append('if(!d){source_contact_driver();'+return_helper+'return;}')
-        if actors and pc==0x530a:lines.append('if(!d){source_contact_pointers();'+return_helper+'return;}')
+        if actors and pc==0x530a:lines.append('if(!d && m[0x50]<3){source_contact_pointers();'+return_helper+'return;}')
         if actors and pc==0x52ad:lines.append('if(m[0x1b]<4 && m[0x1c]<8){PERF_BEGIN(BL_PERF_ALIGN);source_contact_align();PERF_END(BL_PERF_ALIGN);'+return_helper+'return;}')
-        if actors and pc==0x537e:lines.append('PERF_BEGIN(BL_PERF_ROWS);source_contact_rows();PERF_END(BL_PERF_ROWS);'+return_helper+'return;')
+        if actors and pc==0x537e:lines.append('if(m[0x50]<3){PERF_BEGIN(BL_PERF_ROWS);source_contact_rows();PERF_END(BL_PERF_ROWS);'+return_helper+'return;}')
         if actors and pc==0x5431:lines.append('if(m[0x50]<3){source_contact_classes();'+return_helper+'return;}')
         if actors and pc in (0x55e6,0x5658,0x56ca):
             base={0x55e6:0x4eed,0x5658:0x4f04,0x56ca:0x4f1b}[pc]

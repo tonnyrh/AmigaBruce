@@ -59,7 +59,7 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "a05ac49c04b2ced8f09b907030b2e1bd59737cf4cb3c0e1103dfecd747be2d4b"
+      "sha256": "e2459b92e2d619b4e5cb6bab1f41f6ccf3f9eb99980854a29e838b37f17998e9"
     },
     {
       "path": "tests/source_actor_bridge.c",
@@ -67,7 +67,7 @@
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "d23a666053b8dd791947fd12b27508a6d27752039ba0d1ec81649bbecd411402"
+      "sha256": "56bafaf9051feb282f40494034c305b6d736449d28804f216f871266286e9dff"
     },
     {
       "path": "core/source_perf.h",
@@ -87,7 +87,7 @@
     },
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "779479168f174c3ae8220006c9424118284920d89440421d49c592442809fd19"
+      "sha256": "131727831db097b479aa98ec4c8f6b9f7439f0e9cc04e770d2081af604f702a6"
     },
     {
       "path": "core/c64_room_data.h",
@@ -111,7 +111,7 @@
     },
     {
       "path": "tools/build_c64_rooms.py",
-      "sha256": "5a60c61898697ffd545857f2f62155aa679a269f6208ccb4f68af015eba2e286"
+      "sha256": "5c5bd7147ff2af45257ccb46f6ece9a53a1a4f57046b3a7c1729787dc983a499"
     },
     {
       "path": "test-c64-actors.ps1",

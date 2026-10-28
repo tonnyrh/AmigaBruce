@@ -288,3 +288,5 @@ Gjeldende større native motorløft: [rutiner, målinger og kontroller](NATIVE_E
 Videreført med [kontakt-/VIC-kjerner](CONTACT_KERNEL_OPTIMIZATION.md), inkludert eksakt spillstegstopp og fortsatt åpne lyd-/tidsporter.
 
 Videre optimalisering: [pakkede kontaktmasker, 28. oktober](PACKED_MASK_OPTIMIZATION.md).
+
+Siste kontaktløft: [pekeroppsett, klassifisering og kildebasert fellerettelse](CONTACT_PREPARATION_OPTIMIZATION.md).
