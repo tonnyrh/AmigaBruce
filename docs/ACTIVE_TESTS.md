@@ -60,3 +60,10 @@ Den [tidligere kodegjennomgangen](TEST_AUDIT_2026-10-25.md) er historikk for
 adapteravvik. Der den sier at støtte, samtidighet eller full AI mangler,
 er implementasjonsstatus erstattet av den samlede kildeporten. Naturlig
 akseptanse er fortsatt separat fra injiserte RAM-/CPU-kontroller.
+
+## Kildeavklart observasjon, 28. oktober
+
+Takspissen i rom6 har svart kontaktklasse også etter at lanternen er tatt.
+[Adresser, faktisk kollisjonsgren og kontrollerte hoppforløp](CEILING_R06.md).
+Ingen ny geometri-/bevegelsesregel legges til. Naturlig spilling og generell
+rasterparitet står fortsatt under de åpne portene over.

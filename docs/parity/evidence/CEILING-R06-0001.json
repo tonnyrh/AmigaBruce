@@ -1,0 +1,34 @@
+{
+  "id": "CEILING-R06-0001",
+  "date": "2026-10-28",
+  "status": "candidate_code_derived_and_controlled_host_verified",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "native_run_this_change": false,
+  "source_ranges": [
+    "$1C0D-$1C10",
+    "$17BE-$17E1",
+    "$5212-$55AA",
+    "$1CC7-$1D6E",
+    "$2F04-$2F39",
+    "$A286-$A287",
+    "$A680"
+  ],
+  "condition": "Room6 black roof pairs overlap the current source jump mask, including cell244 glyphD0 x34/y48 after actual lantern collection",
+  "effect": "B6 bit08 invokes ordered source wall-history reversal and state24; no gameplay change",
+  "artifacts": [
+    {
+      "path": "docs/CEILING_R06.md",
+      "sha256": "3ff0790c8cbb7e802b9f0ed8daa5121771900688cd9cc96bfdda9de99e15e2f4"
+    },
+    {
+      "path": "reference/analysis/ceiling-r06-2026-10-28/report.json",
+      "sha256": "539d65cdbe330e6d275c0670099dfbca25d9f460ef2b305a2727bbdb2b0a119c"
+    }
+  ],
+  "limitations": [
+    "Injected source calls and whole-RAM host comparisons; no IRQ/raster/room-loop/combat or natural-play claim",
+    "No snapshot/input history for the exact user head bump"
+  ]
+}
