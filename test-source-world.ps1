@@ -53,7 +53,7 @@ try{
         if($run[$key] -ne '0'){$failures+="$key=$($run[$key])"}
     }
     if($run['source_actor_fixture_cases'] -ne '53'){$failures+='Missing53 source controls'}
-    if($run['contact_kernel_cases'] -ne '198'){$failures+='Missing198 native contact kernel controls'}
+    if($run['contact_kernel_cases'] -ne '454'){$failures+='Missing454 native contact kernel controls'}
     if($run['source_world_test'] -ne '1' -or $run['frames'] -ne [string]$TestFrames -or $run['restored_os'] -ne '1'){$failures+='Replay/restore incomplete'}
     if([int]$run['chip_largest_loaded'] -lt 49152){$failures+='Chip RAM margin below49152 bytes'}
     if($run['capture_original_hash'] -ne $run['capture_decoded_hash']){$failures+='Capture decode mismatch'}

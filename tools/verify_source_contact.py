@@ -63,6 +63,13 @@ def main():
         if pointer==0x6800:m[pointer:pointer+96]=rng.randbytes(96)
         m[0x1b]=phase;m[0x1c]=offset;m[0x52cc:0x52ce]=pointer.to_bytes(2,'little')
         check(m,0x52ad,f'align/{phase}/{offset}/{pointer:x}')
+    # Packed native preparation must preserve forward overlapping copies,
+    # odd byte addresses and the fallback for a source span across $FFFF.
+    for phase,offset,kind in itertools.product(range(4),range(8),range(8)):
+        pointer=[0xa001,0xcae0+offset,0xcae0+offset-1,0xcae0+offset+1,0xcad0,0xcadf,0xffa0,0xfff0][kind]
+        m=bytearray(source);m[0xcad0:0xcbc0]=rng.randbytes(240)
+        m[0x1b]=phase;m[0x1c]=offset;m[0x52cc:0x52ce]=pointer.to_bytes(2,'little')
+        check(m,0x52ad,f'align/packed-alias/{phase}/{offset}/{pointer:x}')
     for case in range(640):
         m=bytearray(source);m[0x4eed:0x4f40]=rng.randbytes(83);m[0x50]=case%3
         m[0xe6+case%3]=rng.choice([0,1,37,38,39,40,254,255]);m[0xe9+case%3]=case%24
@@ -143,7 +150,7 @@ def main():
         for operand in (0x5381,0x539b,0x53b5):m[operand:operand+2]=pointer.to_bytes(2,'little')
         check(m,0x537e,f'rows/wrap/{start}/{pointer:x}',251,trace=True)
     files=['core/c64_rooms.c','core/c64_rooms.h','core/source_perf.h','core/c64_actor_programs.h',
-        'tools/build_c64_rooms.py','tools/build_contact_class_kernel.py','amiga/contact_rows.s','tests/source_contact_bridge.c','tools/verify_source_contact.py','test-source-contact.ps1']
+        'tools/build_c64_rooms.py','tools/build_contact_class_kernel.py','amiga/contact_rows.s','amiga/contact_align.s','tests/source_contact_bridge.c','tools/verify_source_contact.py','test-source-contact.ps1']
     report=dict(status='passed_original_byte_contact_controls',source_sha256=SHA,checks=sum(counts.values()),
         instructions=instructions,entries=counts,service_register_cases=service_cases,edition_verified=False,natural_playthrough=False,raster_exact=False,
         source_files=[dict(path=p,sha256=hashlib.sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])

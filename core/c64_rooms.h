@@ -134,9 +134,10 @@ unsigned short bl_c64_profile(long item);
 void bl_c64_profile_add(long item,long lines);
 #if defined(BL_AUTOTEST) && BL_AUTOTEST && defined(__m68k__)
 unsigned short bl_c64_vic_compare_selftest(void);
+#define BL_C64_CONTACT_ALIGN_CASES 256
 #define BL_C64_CONTACT_ROW_CASES 128
 #define BL_C64_CONTACT_CLASS_CASES 70
-#define BL_C64_CONTACT_KERNEL_CASES (BL_C64_CONTACT_ROW_CASES+BL_C64_CONTACT_CLASS_CASES)
+#define BL_C64_CONTACT_KERNEL_CASES (BL_C64_CONTACT_ALIGN_CASES+BL_C64_CONTACT_ROW_CASES+BL_C64_CONTACT_CLASS_CASES)
 unsigned short bl_c64_contact_kernel_selftest(void);
 #endif
 #endif

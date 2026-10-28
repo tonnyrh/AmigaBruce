@@ -1,0 +1,5 @@
+{
+  "status": "failed_before_play",
+  "reason": "New full test Hunk needs more than the previously available 1472-byte slow-RAM margin; diagnostic code/relocations under review; memory gate unchanged",
+  "natural_playthrough": false
+}

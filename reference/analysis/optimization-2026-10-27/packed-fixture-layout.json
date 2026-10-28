@@ -1,0 +1,16 @@
+{
+  "status": "identical_source_fixture_contracts",
+  "cases": 53,
+  "write_entries": 629,
+  "old_native_write_bytes": 2516,
+  "new_native_write_bytes": 1887,
+  "encoding": "Three explicit bytes: source address high, source address low, value; no odd-address word reads",
+  "expected_inputs_ram_hashes_and_registers_unchanged": true,
+  "old_fixture_sha256": "c37122edc04687f628d84ff90ec40856202cbfc7945ba1256e56ad1a1c000065",
+  "new_fixture_sha256": "b874503480b1fb0246e18d29be45d75708dab91bbb4045f3df6dfd327bbb1477",
+  "generator_sha256": "9c76cfc7730315accd86562422a69235a97f0eb66a2a0681dcb031ba8df944cf",
+  "limits": [
+    "Layout comparison, not a substitute for running all53 original native controls",
+    "Diagnostic RAM dump was inspected after cleanup; not a natural play trace"
+  ]
+}

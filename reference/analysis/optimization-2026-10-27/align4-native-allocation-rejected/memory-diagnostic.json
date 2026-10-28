@@ -1,0 +1,19 @@
+[
+  {
+    "region": "chip",
+    "bss": "0x15060",
+    "m": "0x2ef10",
+    "post_cleanup": true,
+    "background": "0x3ef18",
+    "tile_dma": "0x48f18",
+    "fighter_dma": "0x6cf18",
+    "capture": "0xc589c8",
+    "tone": "0x7f428",
+    "sfx_pcm": "0x0",
+    "source_actor_fixture_failure": "0x1",
+    "contact_kernel_errors": "0x0",
+    "buffers": "0000000000000000",
+    "room_backgrounds": "0003ef1800062f18",
+    "copper": "0000000000000000"
+  }
+]

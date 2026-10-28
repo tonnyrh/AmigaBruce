@@ -1,0 +1,7 @@
+{
+  "method": "Diagnostic copy only: force first expected fixture hash to differ, so full Hunk footprint reaches allocations after one fixture; not a parity pass",
+  "input_sha256": "7c6142645ee4ffde270de0d25b6e7466d0fb8991c0ac4820d019625dc5d706a2",
+  "probe_sha256": "c0c857cc3be16d850c70e410d9e29497480734d644fab263dd9e2994c352ebc8",
+  "patch_file_offset": 293040,
+  "fixture_failure_expected": 1
+}

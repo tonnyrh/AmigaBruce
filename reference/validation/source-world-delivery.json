@@ -16,7 +16,7 @@
   "artifacts": [
     {
       "path": "reference/analysis/actor-chain-2026-10-26/report.json",
-      "sha256": "60847bc82e1510acd0faf414e8db85d60309a53f8d4f3376e4e5f3a30d00831e"
+      "sha256": "207df6a2dc358d6eec2056ad74d04b76f1338b7a78bc9a725033df30f2e59880"
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
@@ -24,15 +24,15 @@
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
-      "sha256": "754a521114ca67b88b1934ea43009284457f36e78c6084073b9fe294291e1395"
+      "sha256": "0eb75ffe43ca6a86809cac9509665b9c86d3b0487ab6e3e80880f2623b2dadd2"
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/native-fixture.json",
-      "sha256": "80e9323ded8993c0fa1883e354ce3479df7477b485a751b1dd1db57c417fce0f"
+      "sha256": "9ae6eea4c8998e7d5e0c78f172b780e4c3bf678054df360a0acebb021bb3ec15"
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/native-final.txt",
-      "sha256": "66a08df1f1ee552f687a2ec4b0f7c5e68a43ee9ad957e00fd25a2f7bc3a411ea"
+      "sha256": "cbbbaee972613d274afe9802db6edf42d619905d5a9f0ffca8bb5bb5ccd1a7a6"
     },
     {
       "path": "tools/audit_normal_source_clock.py",
@@ -40,11 +40,11 @@
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
-      "sha256": "d4f6669264f49919e1e2f5e9c009b44705bb8bf560b1ae0a91bdc7a98ea6830a"
+      "sha256": "09702fc4563975a709c2df1d837013559f7549f5027579953dbb5dd46e3682a9"
     },
     {
       "path": "reference/validation/source-world-native.json",
-      "sha256": "bf019e33772833e067b31ff3ffe9015e5dcb37c600325bf9f0a254b8ba8927e5"
+      "sha256": "cd5a5aa10dd73928957bd9d16d5917b4fdac2188080adaa4a51d6e52ac1b7362"
     },
     {
       "path": "docs/MILESTONE_COMPLETION.md",
@@ -52,7 +52,7 @@
     },
     {
       "path": "docs/ACTIVE_TESTS.md",
-      "sha256": "467fb8700e18d482cc9e108cae43cce29e071737dc7ec2fe55daed0ea84a244b"
+      "sha256": "34f777797560a1d73c3683aa188334d1bb65bbee0e1206f831b8df9a47449018"
     },
     {
       "path": "docs/PROJECT_PLAN.md",
@@ -64,7 +64,7 @@
     },
     {
       "path": "tools/verify_source_world_delivery.py",
-      "sha256": "478665885b79c7a42f1807062e7b1929f784d7a20427899a9956e3ad2e7b839e"
+      "sha256": "021e412204311af850c0d638cca0543e6ce57d694b5189ab31e5cf0b5dec9988"
     },
     {
       "path": "test-parity.ps1",
@@ -72,15 +72,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "96d563d7a714db2cc3a4314c6ab2ecdeb09cbe04159873b0c7db3cc3dece3897"
+      "sha256": "fdd810d6f51872f16299dae97c17d2d7027bc14f5e09b93cda970ea74917d3f3"
     },
     {
       "path": "reference/validation/source-vic-host.json",
-      "sha256": "a6d0c31a73a69dd5878678bd4a8a2a66b324a90ef0464a4441bced9e5bc9a053"
+      "sha256": "1a16eb63f81aa76a12b55753dc6ff4d4c830028eda24bdfd4399553397ed3298"
     },
     {
       "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
-      "sha256": "0cce41ecde6917ec110dc8b90cd57d3b94433458520f45c83411efed651f536c"
+      "sha256": "03de9e1400bed4dc1f662873c3c0505dc65001bbae1891be2a08487846eb243a"
     },
     {
       "path": "docs/AMIGA_OPTIMIZATION_REPORT.md",
@@ -88,15 +88,15 @@
     },
     {
       "path": "reference/validation/source-native-boot.json",
-      "sha256": "120228e8d97df1fe1a6b25b2388234312dc9fdade8e9439fc056170d03eaf526"
+      "sha256": "674c143f88f825c7a4fcd4d88f905649374a01f7248f82b3e08b5879acfc67b4"
     },
     {
       "path": "reference/validation/source-object-host.json",
-      "sha256": "08a6630f984026ea604afd0702e0c731c817ecf937301576ceeb957a633d92f5"
+      "sha256": "a989a36c4828c2bbc4b976d62292a8c69b6f836212c97b6b1213ab782fd1db51"
     },
     {
       "path": "reference/validation/source-score-host.json",
-      "sha256": "08943f0539048088160e6e413767b30b1dda7c376ccc9235fe65838f8a62278c"
+      "sha256": "d7fb0e6c70997fb495b688a3b9eb551243ba4989aea8995bca88ef6387e55b0e"
     },
     {
       "path": "docs/NATIVE_ENGINE_OPTIMIZATION.md",
@@ -107,8 +107,12 @@
       "sha256": "eb964bbb238d5bfc3d59f78f235ee8929fa0e2379aaecbe4ada438356b698e85"
     },
     {
+      "path": "docs/PACKED_MASK_OPTIMIZATION.md",
+      "sha256": "00c6cf08b77d2674924bc257fd19bd7ff1beb29585872c70d1e8c8d3fd4132cb"
+    },
+    {
       "path": "reference/validation/source-contact-host.json",
-      "sha256": "42350907c5df33fe59752bcd6a0ab528bb4cdbe5f97d1e35dc585194d004c598"
+      "sha256": "5b207a60a4f22b5392022edc348cc4cce06242ac1f65c3ffa07280fa4a9538b5"
     },
     {
       "path": "docs/CONTACT_OPTIMIZATION.md",
@@ -120,11 +124,11 @@
     },
     {
       "path": "reference/validation/source-visibility-native.json",
-      "sha256": "d5fb310d6963b8172152a080b3c38d7b380ba9c0fa704e055902775627cb120a"
+      "sha256": "0e2a25dc8cf3bc7c719973a5e3a833705feac93b3634f9e9b6f1a6157c8e9ff6"
     },
     {
       "path": "reference/validation/source-visibility-host.json",
-      "sha256": "01d694a17f37526af2bcd65fbb7248b07a92e514121f2c8750a2f57138bd1019"
+      "sha256": "b877eebed0c4181e55e20ffacd37d9b75337309872db99f81c4cb41c6f488386"
     },
     {
       "path": "reference/analysis/yamo-r02-2026-10-27/snapshot.json",
@@ -150,15 +154,15 @@
   "normal_build": [
     {
       "path": "amiga/out/bruce_amiga.exe",
-      "sha256": "664212239f6e9ee102a0ef78303390dc1baab565223b9fae96dd52eadec0c195"
+      "sha256": "4901624596c2db04d6a70c0b7894439c0e34e1cba18695a5002ec26e35b7ee1e"
     },
     {
       "path": "amiga/out/bruce_amiga.elf",
-      "sha256": "46a2ae45d75740acb912370ef98f24032fde448732d3e4e4c58988692145cd78"
+      "sha256": "4b9d9b9327e3aacba01afd2aa96621999107935da4cb680740e4aafd6ff8d39b"
     },
     {
       "path": "amiga/out/bruce_amiga.adf",
-      "sha256": "0f3335b3f451c6721947d0fbcf8671d8f4c8174f4ec274f6098f9943e2026440"
+      "sha256": "0975bf34b8eaae0c1e64a5e0b7cca4d743df65f0305bd438e3c434849bded65d"
     }
   ],
   "open_gates": [

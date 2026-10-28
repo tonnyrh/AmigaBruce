@@ -17,6 +17,8 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
   fra den pushede milepælen med nye helrutinekontroller og målinger.
   [Kontakt-/VIC-kjerner](CONTACT_KERNEL_OPTIMIZATION.md) gir videre CPU-gevinst;
   lydtick-/feltporten står fortsatt åpen.
+  [Pakkede kontaktmasker](PACKED_MASK_OPTIMIZATION.md) reduserer målt tid videre
+  med 5,2 %; 454 native kjernekontroller supplerer kilde-/motorfixturene.
   Normal klokkeprøve er fortsatt tregere enn tre felt per steg. Kontroller
   synlig framdrift også under naturlig spilling.
 - VIC-PHASE: kontroller naturlige samtidige treff og spritekontakt ved kanter.

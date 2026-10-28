@@ -1,10 +1,10 @@
 {
   "status": "passed_original_byte_contact_controls",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
-  "checks": 3953,
-  "instructions": 2066781,
+  "checks": 4209,
+  "instructions": 2314995,
   "entries": {
-    "$52AD": 128,
+    "$52AD": 384,
     "$530A": 1120,
     "$55AB": 256,
     "$5431": 1192,
@@ -21,11 +21,11 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "ca0621136aeb41e621479b48e1b687cfaf33b25bd55df8b08793bc6bc7d920ac"
+      "sha256": "a05ac49c04b2ced8f09b907030b2e1bd59737cf4cb3c0e1103dfecd747be2d4b"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "4f0302d76f62bbfbfc229dc15ae3ffdf5fbe202a980c0f7999e25e242b5531d3"
+      "sha256": "d23a666053b8dd791947fd12b27508a6d27752039ba0d1ec81649bbecd411402"
     },
     {
       "path": "core/source_perf.h",
@@ -48,12 +48,16 @@
       "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
     },
     {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
       "path": "tests/source_contact_bridge.c",
       "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
     },
     {
       "path": "tools/verify_source_contact.py",
-      "sha256": "1a17334331c8bfc4fadd45d448917dac650943862b4bb521c70a81199888ebf5"
+      "sha256": "8fd616c5a32c5ad0faf81ee6709879fe3da23b964187789604a482a56b5c7674"
     },
     {
       "path": "test-source-contact.ps1",

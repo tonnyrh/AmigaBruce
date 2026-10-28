@@ -2,60 +2,60 @@
   "status": "passed_owned_cli_adf_smoke",
   "binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "664212239f6e9ee102a0ef78303390dc1baab565223b9fae96dd52eadec0c195"
+    "sha256": "4901624596c2db04d6a70c0b7894439c0e34e1cba18695a5002ec26e35b7ee1e"
   },
   "adf": {
     "path": "amiga/out/bruce_amiga.adf",
-    "sha256": "0f3335b3f451c6721947d0fbcf8671d8f4c8174f4ec274f6098f9943e2026440"
+    "sha256": "0975bf34b8eaae0c1e64a5e0b7cca4d743df65f0305bd438e3c434849bded65d"
   },
   "artifacts": [
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-cli.json",
-      "sha256": "6d8ace7b9934bdd5bace0ee6d310d6739c5627a9148d1378fd51b67eabacb619"
+      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-cli.json",
+      "sha256": "2b926a9c7b930432965a8ef76c1c4a71b65c9e3d10c3de8eb23b930c4a146081"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-cli.bpl",
+      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-cli.bpl",
       "sha256": "1411859a37b2718d65fb7b2b04be374e5b717069fb9edc7a4e1ee1bc32741774"
     },
     {
-      "path": "docs/images/session-contact-kernel-cli.png",
+      "path": "docs/images/session-packed-mask-final-cli.png",
       "sha256": "284eedf3a2429051fc885fb9cbfaa8905b6dbf5c1d9b0f7ddf4ca2409d06293b"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-room2.json",
-      "sha256": "221c51edf74f09b9ba0e21a73d000bf0bcb794c38cb772d277340348ef7bd3eb"
+      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-room2.json",
+      "sha256": "9de53388a9f4517310dd895f9b3f492c5826175b18094ea78d5f826a2908c514"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-room2.bpl",
-      "sha256": "45316ec5b03b6a104260739d0f197f55866eb1286524cfd7ae9b17f03980c860"
+      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-room2.bpl",
+      "sha256": "67f010def13bc0a94d155e14cc26e88bf7978df4beb0c6a78d0d2440806e2051"
     },
     {
-      "path": "docs/images/session-contact-kernel-room2.png",
-      "sha256": "dad5e72d18775bb83c20cc2fd2a434c2a6d79f4952747cf97cf3cdf76990f3f0"
+      "path": "docs/images/session-packed-mask-final-room2.png",
+      "sha256": "a1b100c5633aba015f63d4b0c8a2799e680a7d16db3dbf841e7ad2a3ddb3047c"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-adf.json",
-      "sha256": "cce4c40545eb10371ec78906891109aa8706460a8ed1bbc3305cca1fd835854a"
+      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-adf.json",
+      "sha256": "be45c8e4864da7a36a801215120e600a2a477b6e15a410835d4796c3c13b5610"
     },
     {
-      "path": "reference/analysis/session-walls-2026-10-25/contact-kernel-adf.bpl",
+      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-adf.bpl",
       "sha256": "1411859a37b2718d65fb7b2b04be374e5b717069fb9edc7a4e1ee1bc32741774"
     },
     {
-      "path": "docs/images/session-contact-kernel-adf.png",
+      "path": "docs/images/session-packed-mask-final-adf.png",
       "sha256": "284eedf3a2429051fc885fb9cbfaa8905b6dbf5c1d9b0f7ddf4ca2409d06293b"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/contact-kernel-early-clock.json",
-      "sha256": "4bce86e52a6f6f6a5feba5de943c7c868670ea15a45496338ac126955826570e"
+      "path": "reference/analysis/optimization-2026-10-27/packed-mask-final-early-clock.json",
+      "sha256": "5dba397455b25dcdc736a07062377db7637751e77a606fb5f314c97fa9850bd9"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/contact-kernel-late-clock.json",
-      "sha256": "d4f6669264f49919e1e2f5e9c009b44705bb8bf560b1ae0a91bdc7a98ea6830a"
+      "path": "reference/analysis/optimization-2026-10-27/packed-mask-final-late-clock.json",
+      "sha256": "09702fc4563975a709c2df1d837013559f7549f5027579953dbb5dd46e3682a9"
     },
     {
-      "path": "reference/analysis/optimization-2026-10-27/contact-kernel-adf-clock.json",
-      "sha256": "d976f0b5f8ddc02ba7e13ae83d71bb60b8b4f2fa388e4d79ce0cfe38d5b93881"
+      "path": "reference/analysis/optimization-2026-10-27/packed-mask-final-adf-clock.json",
+      "sha256": "62184d45e685fe655dd7f5192798ec3f3857b0e5b82d08653618b3e328d35168"
     }
   ],
   "settings": {
@@ -67,7 +67,7 @@
     "fastmem_size": "0",
     "ntsc": "false"
   },
-  "method": "Own final normal CLI and actual ADF boot; menu/new game, room1/2, source-clock samples and bitplanes",
+  "method": "Own final normal CLI and actual ADF boot; menu/new game, room1/2, source-clock samples and bitplanes; earlier builds retained separately",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "natural_playthrough": false,
   "physical_a500": false

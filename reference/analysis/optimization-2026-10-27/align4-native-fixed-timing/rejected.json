@@ -1,0 +1,5 @@
+{
+  "status": "aborted_before_report",
+  "reason": "Static review found odd-address longword clear in phase3; owned emulator stopped, fixed before measurement; no valid native results",
+  "natural_playthrough": false
+}

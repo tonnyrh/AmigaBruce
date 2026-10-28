@@ -28,9 +28,14 @@ def main():
     component=read(m+0x276e,1)[0];second=read(m+0x2771,1)[0]
     enabled=read(m+0x2773+component,1)[0]
     if second<128:enabled|=read(m+0x2773+second,1)[0]
-    writes={0x96:0x81,0x9f:128,0xa2:145,0xa5:1,0xc0:0,0xc3:0,0xcf:8,0xd2:15,0x107:200,0x4f49:2,0x4f4f:72,0x5e:255}
+    # Configure an inactive source actor before publishing bit0. Separate
+    # IPC writes span real source fields; enabling first exposes a partial
+    # position/state to AI and can legitimately remove it before seeding ends.
+    write(m+0x96,0x80)
+    writes={0x9f:128,0xa2:145,0xa5:1,0xc0:0,0xc3:0,0xcf:8,0xd2:15,0x107:200,0x4f49:2,0x4f4f:72,0x5e:255}
     for at,value in writes.items():write(m+at,value)
     write(m+0xd015,read(m+0xd015,1)[0]|enabled)
+    write(m+0x96,0x81)
     def sample(label,active):
         time.sleep(2)
         dirty=[list(struct.unpack('>4h',read(address('actor_dirty')+buffer*40,8))) for buffer in range(2)]
@@ -49,6 +54,6 @@ def main():
         record=json.loads((ROOT/'reference/analysis/session-walls-2026-10-25'/(row['label']+'.json')).read_text())
         artifacts.extend(record['artifacts'])
     report=dict(status='passed_owned_native_visibility_lifecycle',binary=dict(path='amiga/out/bruce_amiga.exe',sha256=hashlib.sha256((ROOT/'amiga/out/bruce_amiga.exe').read_bytes()).hexdigest()),
-        controlled_injection=True,natural_playthrough=False,room=2,source_actor=1,artifacts=artifacts,source_files=[dict(path=p,sha256=hashlib.sha256((ROOT/p).read_bytes()).hexdigest()) for p in ['tools/audit_native_visibility.py','core/session.c','core/c64_rooms.c']],method='Injected active bit, source wait and original component enable masks; actual normal draw loop and both buffer dirty rectangles',states=rows)
+        controlled_injection=True,natural_playthrough=False,room=2,source_actor=1,artifacts=artifacts,source_files=[dict(path=p,sha256=hashlib.sha256((ROOT/p).read_bytes()).hexdigest()) for p in ['tools/audit_native_visibility.py','core/session.c','core/c64_rooms.c']],method='Seed inactive actor, publish active bit last; injected source wait and original component enable masks; actual normal draw loop and both buffer dirty rectangles',states=rows)
     out=ROOT/'reference/validation/source-visibility-native.json';out.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps(report,indent=2))
 if __name__=='__main__':main()

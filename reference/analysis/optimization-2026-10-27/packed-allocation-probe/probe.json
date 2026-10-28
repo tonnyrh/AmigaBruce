@@ -1,0 +1,7 @@
+{
+  "method": "Diagnostic copy only: change first expected fixture hash; not a parity pass",
+  "input_sha256": "b8e1b04f095ae6aab99da838b612ec6762535cc76e069f1939eb03fb330a9ccd",
+  "probe_sha256": "51db4e77a356e2f2085d17694a1e0e21ff10125b3f32f6d7ee33131bc402562a",
+  "patch_file_offset": 293020,
+  "fixture_failure_expected": 1
+}

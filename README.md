@@ -139,3 +139,5 @@ Nyeste ytelsesrunde: [native kontakt, objekter og poeng](docs/NATIVE_ENGINE_OPTI
 Git-merke før løftet: `milestone/c64-source-2026-10-27` (`26fb6d1`).
 
 Neste ytelsesrunde: [kontakt-/VIC-kjerner og faste kildespillsteg](docs/CONTACT_KERNEL_OPTIMIZATION.md).
+
+Videre optimalisering: [pakkede kontaktmasker, 28. oktober](docs/PACKED_MASK_OPTIMIZATION.md).

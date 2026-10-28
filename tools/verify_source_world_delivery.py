@@ -23,7 +23,7 @@ def verify():
     assert vic['status']=='passed_field_sampled_pixel_and_latch_controls' and vic['calls']==6709
     assert not vic['original_raster_verified'];identities(vic['source_files'])
     contact=read('reference/validation/source-contact-host.json')
-    assert contact['status']=='passed_original_byte_contact_controls' and contact['checks']==3953
+    assert contact['status']=='passed_original_byte_contact_controls' and contact['checks']==4209
     assert contact['service_register_cases']==489
     assert contact['source_sha256']==source and not contact['natural_playthrough'];identities(contact['source_files'])
     objects=read('reference/validation/source-object-host.json')
@@ -54,7 +54,7 @@ def verify():
     assert native['status']=='passed_scoped_native_source_contract' and not native['failures']
     assert native['run']['source_actor_fixture_cases']=='53' and native['run']['source_actor_fixture_failure']=='0'
     assert native['run']['vic_compare_errors']=='0'
-    assert native['run']['contact_kernel_cases']=='198' and native['run']['contact_kernel_errors']=='0'
+    assert native['run']['contact_kernel_cases']=='454' and native['run']['contact_kernel_errors']=='0'
     assert native['run']['restored_os']=='1' and native['run']['c64_room_fault']=='0'
     assert int(native['run']['chip_largest_loaded'])>=49152
     clock=read(FOLDER+'/normal-clock.json');identities([clock['binary']])
@@ -70,7 +70,7 @@ def main():
         proofs += ['tools/audit_normal_source_clock.py',FOLDER+'/normal-clock.json','reference/validation/source-world-native.json','docs/MILESTONE_COMPLETION.md','docs/ACTIVE_TESTS.md','docs/PROJECT_PLAN.md','docs/parity/register.csv','tools/verify_source_world_delivery.py','test-parity.ps1','README.md']
         proofs += ['reference/validation/source-vic-host.json','docs/AMIGA_OPTIMIZATION_PLAN.md','docs/AMIGA_OPTIMIZATION_REPORT.md']
         proofs += ['reference/validation/source-native-boot.json']
-        proofs += ['reference/validation/source-object-host.json','reference/validation/source-score-host.json','docs/NATIVE_ENGINE_OPTIMIZATION.md','docs/CONTACT_KERNEL_OPTIMIZATION.md']
+        proofs += ['reference/validation/source-object-host.json','reference/validation/source-score-host.json','docs/NATIVE_ENGINE_OPTIMIZATION.md','docs/CONTACT_KERNEL_OPTIMIZATION.md','docs/PACKED_MASK_OPTIMIZATION.md']
         proofs += ['reference/validation/source-contact-host.json','docs/CONTACT_OPTIMIZATION.md','docs/VIC_NATIVE_OPTIMIZATION.md']
         proofs += ['reference/validation/source-visibility-native.json','reference/validation/source-visibility-host.json','reference/analysis/yamo-r02-2026-10-27/snapshot.json','reference/analysis/yamo-r02-2026-10-27/source-memory.bin','tools/inspect_source_snapshot.py','docs/YAMO_VISIBILITY_PERFORMANCE.md','docs/CONTACT_REGISTERS_OPTIMIZATION.md']
         normal=[artifact('amiga/out/bruce_amiga.'+suffix) for suffix in ('exe','elf','adf')]

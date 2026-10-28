@@ -30,11 +30,12 @@ def main():
         regs=[cpu.a,cpu.x,cpu.y,cpu.p&1,(cpu.p>>1)&1,cpu.p>>7,(cpu.p>>6)&1,(cpu.p>>3)&1,cpu.sp,life,int(cpu.pc in (0x50f,0x584)),(cpu.p>>2)&1,1 if cpu.pc==0x1968 else 2 if cpu.pc==0x197d else 0]
         rows.append(dict(room=room,actor=actor,entry=entry,writes=writes,ram_fnv=h,registers=regs))
     text=['/* Generated from actual source instructions; injected RAM fixtures, not natural play. */',f'#define BL_SOURCE_ACTOR_CASES {len(rows)}',
-        'typedef struct {unsigned short address;unsigned char value;} BlActorWrite;',
+        '/* Three explicit bytes avoid per-entry padding and odd 68000 word reads. */',
+        'typedef struct {unsigned char hi,lo,value;} BlActorWrite;',
         'static const BlActorWrite source_actor_writes[]={']
     for row in rows:
         row['offset']=sum(len(r['writes']) for r in rows[:rows.index(row)])
-        text += ['{'+str(at)+','+str(value)+'},' for at,value in row['writes']]
+        text += ['{'+str(at>>8)+','+str(at&255)+','+str(value)+'},' for at,value in row['writes']]
     text += ['};','typedef struct {unsigned char room,actor,count;unsigned short entry,offset;unsigned long hash;unsigned char registers[13];} BlActorControl;', 'static const BlActorControl source_actor_controls[]={']
     for row in rows:text.append('{'+','.join(map(str,[row['room'],row['actor'],len(row['writes']),row['entry'],row['offset']]))+f',{row["ram_fnv"]}UL,{{'+','.join(map(str,row['registers']))+'}},')
     text += ['};','static unsigned short source_actor_fixture_run(void){unsigned short i,j;unsigned char registers[13];',
@@ -42,7 +43,7 @@ def main():
         'bl_c64_reset();bl_c64_actor_seed();bl_c64_actor_test_call(0x0f72,0);bl_c64_test_write(2,50);bl_c64_test_write(0x104,1);',
         'bl_c64_test_write(0xd1,36);bl_c64_test_write(0xd2,36);bl_c64_test_write(0xd3,36);',
         'bl_c64_actor_test_call(0x0763,0);bl_c64_load(q->room);bl_c64_actor_test_call(0x0b30,0);',
-        'for(j=0;j<q->count;j++){const BlActorWrite *w=&source_actor_writes[q->offset+j];bl_c64_test_write(w->address,w->value);}',
+        'for(j=0;j<q->count;j++){const BlActorWrite *w=&source_actor_writes[q->offset+j];bl_c64_test_write(((unsigned short)w->hi<<8)|w->lo,w->value);}',
         'bl_c64_actor_test_call(q->entry,q->actor);if(bl_c64_fault() || bl_c64_actor_ram_hash()!=q->hash)return i+1;',
         'bl_c64_actor_registers(registers);for(j=0;j<13;j++)if(registers[j]!=q->registers[j])return i+1;',
         '}return 0;}']

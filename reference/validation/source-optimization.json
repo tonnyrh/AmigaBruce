@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-27",
-  "status": "measured_contact_kernels_and_geometry_realtime_open",
+  "date": "2026-10-28",
+  "status": "measured_packed_mask_kernel_realtime_open",
   "method": "Separate native actual-PAL source-contact/VIC/presentation pilots; idle-input invincible room1, historical pairs preserved",
   "first_pilot": {
     "old_active_fields": 4690,
@@ -84,6 +84,18 @@
     "old_vic_mean": 35.266,
     "new_vic_mean": 28.709,
     "native_kernel_cases": 198
+  },
+  "packed_mask_round": {
+    "checkpoint": "c77404b",
+    "source_steps": 360,
+    "old_active_fields": 1614,
+    "new_active_fields": 1530,
+    "measured_elapsed_reduction_percent": 5.204,
+    "old_audio_missed": 29,
+    "new_audio_missed": 21,
+    "old_align_mean": 34.404,
+    "new_align_mean": 14.337,
+    "native_kernel_cases": 454
   },
   "edition_verified": false,
   "natural_playthrough": false,
@@ -495,6 +507,54 @@
       "sha256": "a1d2125e5049cc4bab99345f00851228c0b6d6a76f74b1f84102406896bc6291"
     },
     {
+      "path": "reference/analysis/optimization-2026-10-27/align4-even-clear-fixed-timing/identity.json",
+      "sha256": "d066963419e49d64d3d5b4bdde14554c015b114d20a2ba59170bc75577fba20c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-even-clear-fixed-timing/native.txt",
+      "sha256": "9f2bb2a7ecae1fc2307dd18592e0fabdf1c003081015ef125bf711bff7f6b3ea"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-even-clear-fixed-timing/native.json",
+      "sha256": "e747dc06c131eb97c178b745f4b1521ebcce2e0aacec73d559028fc1297bc1d2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-even-clear-fixed-profile/identity.json",
+      "sha256": "218409e6f3142af5e3b1bd431e5a4958932f7cdef91eca0303c06c9be30d60f8"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-even-clear-fixed-profile/native.txt",
+      "sha256": "74088aa07214088a3165f15ea76aa6b581ac5691e8e55388d4ea11f2beb8870e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-even-clear-fixed-profile/native.json",
+      "sha256": "aea0bd1480d217a8fcc1133c7b1febc605b9c39b54cf8c669fe09256a4211939"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-compact-controls-final-timing/identity.json",
+      "sha256": "2c76d7ea3f16aec5469d1c880e067da80da455970421f86dffdcd2e214b43fb6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-compact-controls-final-timing/native.txt",
+      "sha256": "410602e20303c14249a2f533cb1df8a61ffa8e562dceb7027cac43c1e701907b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-compact-controls-final-timing/native.json",
+      "sha256": "e747dc06c131eb97c178b745f4b1521ebcce2e0aacec73d559028fc1297bc1d2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-compact-controls-final-profile/identity.json",
+      "sha256": "9b5226913609fffb4d99123000f8da31ac775a5f219f14cfa487ec4b2ae8684a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-compact-controls-final-profile/native.txt",
+      "sha256": "08a29f597e604c3ef44d5af33464b92a1aa839bee68bae086f37ea906edb946e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-compact-controls-final-profile/native.json",
+      "sha256": "7e32a8690e9210f40dd308669eb7b73e57fb56f438eaf37586f56173eca48ae5"
+    },
+    {
       "path": "reference/analysis/optimization-2026-10-27/contact-baseline/manifest.json",
       "sha256": "b1e45a4dbb17235fb34def8438f9ce0d8bd5d1a154794090afeb28c4a7e71eb7"
     },
@@ -516,23 +576,23 @@
     },
     {
       "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
-      "sha256": "0cce41ecde6917ec110dc8b90cd57d3b94433458520f45c83411efed651f536c"
+      "sha256": "03de9e1400bed4dc1f662873c3c0505dc65001bbae1891be2a08487846eb243a"
     },
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "30e07f7f3b4688fea5d35911c7055d6345ce8dcb5c21d7c5947805b1150982ab"
+      "sha256": "26f0f582d57c7e498a73b52af4102d524ca1508a666f4599aa25e28dee764478"
     },
     {
       "path": "reference/validation/source-world-native.json",
-      "sha256": "bf019e33772833e067b31ff3ffe9015e5dcb37c600325bf9f0a254b8ba8927e5"
+      "sha256": "cd5a5aa10dd73928957bd9d16d5917b4fdac2188080adaa4a51d6e52ac1b7362"
     },
     {
       "path": "reference/validation/source-vic-host.json",
-      "sha256": "a6d0c31a73a69dd5878678bd4a8a2a66b324a90ef0464a4441bced9e5bc9a053"
+      "sha256": "1a16eb63f81aa76a12b55753dc6ff4d4c830028eda24bdfd4399553397ed3298"
     },
     {
       "path": "reference/validation/source-contact-host.json",
-      "sha256": "42350907c5df33fe59752bcd6a0ab528bb4cdbe5f97d1e35dc585194d004c598"
+      "sha256": "5b207a60a4f22b5392022edc348cc4cce06242ac1f65c3ffa07280fa4a9538b5"
     },
     {
       "path": "docs/CONTACT_OPTIMIZATION.md",
@@ -551,16 +611,24 @@
       "sha256": "eb964bbb238d5bfc3d59f78f235ee8929fa0e2379aaecbe4ada438356b698e85"
     },
     {
+      "path": "docs/PACKED_MASK_OPTIMIZATION.md",
+      "sha256": "00c6cf08b77d2674924bc257fd19bd7ff1beb29585872c70d1e8c8d3fd4132cb"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
       "path": "tools/build_contact_class_kernel.py",
       "sha256": "4818bc96edf6a4ac741e6a54fd2b50fa2ac8d137db254cac1e5499483f05b153"
     },
     {
       "path": "reference/validation/source-object-host.json",
-      "sha256": "08a6630f984026ea604afd0702e0c731c817ecf937301576ceeb957a633d92f5"
+      "sha256": "a989a36c4828c2bbc4b976d62292a8c69b6f836212c97b6b1213ab782fd1db51"
     },
     {
       "path": "reference/validation/source-score-host.json",
-      "sha256": "08943f0539048088160e6e413767b30b1dda7c376ccc9235fe65838f8a62278c"
+      "sha256": "d7fb0e6c70997fb495b688a3b9eb551243ba4989aea8995bca88ef6387e55b0e"
     },
     {
       "path": "core/source_perf.h",
@@ -580,15 +648,55 @@
     },
     {
       "path": "reference/validation/source-visibility-host.json",
-      "sha256": "01d694a17f37526af2bcd65fbb7248b07a92e514121f2c8750a2f57138bd1019"
+      "sha256": "b877eebed0c4181e55e20ffacd37d9b75337309872db99f81c4cb41c6f488386"
     },
     {
       "path": "reference/analysis/optimization-2026-10-27/actor-o2-candidate-timing/rejected.json",
       "sha256": "93a3922ad0db6b2c77022af6aac4e07af7cb0a173a9b3e4fbad672e06f5d370f"
     },
     {
+      "path": "reference/analysis/optimization-2026-10-27/align4-native-fixed-timing/rejected.json",
+      "sha256": "b7306835ecf59e82be6059f4828f5ca12032a9900268225a5c2ad23d02697007"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/packed-allocation-probe/probe.json",
+      "sha256": "4eddf80c8db655aaca0f0032f3191b062cf5f63362bb68cf9db7e796de46987c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/packed-allocation-probe/autotest-1.txt",
+      "sha256": "a6a910f18f84645490df9d6e518b8be62f9e0e7abb0218e1d16c8865f95bd071"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/packed-allocation-probe/diagnostic.json",
+      "sha256": "4a2cc60ab540212349c1103f5e19c8ad7dacbea0fac708384edec4cb85a1fd28"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/packed-fixture-layout.json",
+      "sha256": "c2ad0826466216d5e3476733ae952bca9868df422502b0b62f2d122501df5aeb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-native-allocation-rejected/rejected.json",
+      "sha256": "196710edf1eac13dc0ccd140dbe12280515b2d7721d410a865a9ac532c8b1fd1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-native-allocation-rejected/probe.json",
+      "sha256": "6c3a6dfeb643d3388ed581147c07003a29eda6b7f3fc40363c39f2a4b320686f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-native-allocation-rejected/memory-diagnostic.json",
+      "sha256": "8c75a39c6f56310b9080ee75a32c9c0aae49b35c51130f5ecc58743d45026095"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-native-allocation-rejected/source-world-native.json",
+      "sha256": "111ec0c874fe2b007454d6bdca67e15e9e65262b413800057bc0e337350e577d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/align4-native-allocation-rejected/native-final.txt",
+      "sha256": "fe453f2a5d161cd2d06957efd67e01a0d0add983b5e8cafdeb5ddd4c7b477361"
+    },
+    {
       "path": "tools/verify_source_optimization.py",
-      "sha256": "7fe5ee778030e56e1af0e247fe91ae061daa2c3ddeb07f7b5cc08ae17b8f2e10"
+      "sha256": "7f8546e8ea2fce358262f479a7060e1a02025fed88f9a117d265f7903cb61dc6"
     },
     {
       "path": "tools/summarize_source_performance.py",
@@ -596,7 +704,7 @@
     },
     {
       "path": "test-source-performance.ps1",
-      "sha256": "10aa8f897641cd2df9fc62a7acaf54bce28561498e2b07a1482aa5bc95022441"
+      "sha256": "c6b78717a6722cf852307b37ccd740f80f0d3d21bd3f96ed8be64e41c2088fd1"
     }
   ],
   "limits": [

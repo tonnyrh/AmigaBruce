@@ -525,7 +525,7 @@ static void source_sprite_copy(void){
 #if defined(__m68k__) && defined(__GNUC__)
 __attribute__((optimize("O2")))
 #endif
-static void source_contact_align(void){
+static void source_contact_align_c(void){
     unsigned char row,shift,left,middle,right,last,offset=m[0x1c],phase=m[0x1b];unsigned short pointer=W(0x52cc);
     for(row=0;row<offset;row++)m[0xcae0 + row]=0;
     if(phase==3){for(row=0;row<32;row++)m[0xcae0 + offset+row]=0;offset+=32;}
@@ -554,6 +554,25 @@ static void source_contact_align(void){
         }
     }
     x=255;y=0;z=1;n=0;sp+=2;
+}
+/* $52AD-$5309: the packed 68000 kernel is valid only for the source
+ * driver's phase0..3, offset0..7 and a nonwrapping 96-byte source span.
+ * Other injected entries retain the byte-ordered C path. No I/O service
+ * observes the copy/shift interiors; all source bytes and exit flags stay. */
+#if defined(__m68k__)
+extern unsigned long bl_contact_align4(unsigned char *ram,unsigned long pointer,unsigned long phase,unsigned long offset);
+#endif
+static void source_contact_align(void){
+#if defined(__m68k__)
+    unsigned char phase=m[0x1b],offset=m[0x1c];unsigned short pointer=W(0x52cc);
+    if(phase<4 && offset<8 && pointer<=0xffa0){
+        c=(unsigned char)bl_contact_align4(m,pointer,phase,offset);
+        if(!phase){a=0;x=96;y=(unsigned char)(offset+96);}
+        else{a=phase==3?3:(unsigned char)(phase<<1);x=255;y=0;}
+        z=1;n=0;sp+=2;return;
+    }
+#endif
+    source_contact_align_c();
 }
 /* $55E6/$5658/$56CA: seven exact exchanges in one23-byte class lane.
  * A ends with the old left byte, X/N/Z with the source actor index.
@@ -689,6 +708,35 @@ SOURCE_INLINE void source_contact_scan(SourceContactBatch *batch){
 unsigned short bl_c64_contact_kernel_selftest(void){
     unsigned short test,i,errors=0;unsigned char before[70],expected[70];
     SourceContactBatch batch,initial,wanted;
+    /* Every source phase/offset, aligned/odd/overlapping source copies.
+     * Compare the full writable span plus both canaries and all registers. */
+    for(test=0;test<BL_C64_CONTACT_ALIGN_CASES;test++){
+        unsigned char saved[194],want[194],want_regs[13],got_regs[13];
+        unsigned char phase=(unsigned char)(test&3),offset=(unsigned char)((test>>2)&7);
+        unsigned short pointer,kind=(unsigned short)(test>>5);
+        switch(kind){
+        case 0:pointer=0xa000;break;case 1:pointer=0xa001;break;
+        case 2:pointer=(unsigned short)(0xcae0+offset);break;
+        case 3:pointer=(unsigned short)(0xcae0+offset-1);break;
+        case 4:pointer=(unsigned short)(0xcae0+offset+1);break;
+        case 5:pointer=0xcb00;break;case 6:pointer=0xffa0;break;
+        default:pointer=0xcad0;break;
+        }
+        for(i=0;i<194;i++)m[0xcadf+i]=(unsigned char)((i*17+test*31)^(i>>2));
+        for(i=0;i<96;i++)m[(unsigned short)(pointer+i)]=(unsigned char)(i*29+test*7);
+        m[0x1b]=phase;m[0x1c]=offset;m[0x52cc]=(unsigned char)pointer;m[0x52cd]=(unsigned char)(pointer>>8);
+        for(i=0;i<194;i++)saved[i]=m[0xcadf+i];
+        a=17;x=23;y=41;c=0;z=0;n=1;v=1;d=1;sp=251;
+        source_contact_align_c();
+        for(i=0;i<194;i++)want[i]=m[0xcadf+i];
+        bl_c64_actor_registers(want_regs);
+        for(i=0;i<194;i++)m[0xcadf+i]=saved[i];
+        a=17;x=23;y=41;c=0;z=0;n=1;v=1;d=1;sp=251;
+        source_contact_align();
+        for(i=0;i<194;i++)if(m[0xcadf+i]!=want[i])++errors;
+        bl_c64_actor_registers(got_regs);
+        for(i=0;i<13;i++)if(got_regs[i]!=want_regs[i])++errors;
+    }
     for(test=0;test<BL_C64_CONTACT_ROW_CASES;test++){
         for(i=0;i<320;i++)m[0xcae0+i]=(unsigned char)((test*17+i*13)^(i>>2));
         for(i=0;i<128;i++){m[0xa000+i]=(unsigned char)(i*37+test*19);m[0xff00+i]=(unsigned char)(i*23+test);}

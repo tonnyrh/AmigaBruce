@@ -1,0 +1,9 @@
+{
+  "status": "allocation_recovered_negative_fixture_control_detected",
+  "fixture_failure_expected_and_observed": 1,
+  "largest_chip_block": 52632,
+  "native_kernel_cases": 454,
+  "native_kernel_errors": 0,
+  "full_native_parity_pass": false,
+  "natural_playthrough": false
+}

@@ -1,0 +1,28 @@
+{
+  "label": "packed-mask-final-room2",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "4901624596c2db04d6a70c0b7894439c0e34e1cba18695a5002ec26e35b7ee1e"
+  },
+  "source_room": 2,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    396864,
+    396904,
+    396944,
+    396984
+  ],
+  "source_music_fields": 2825,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/packed-mask-final-room2.bpl",
+      "sha256": "67f010def13bc0a94d155e14cc26e88bf7978df4beb0c6a78d0d2440806e2051"
+    },
+    {
+      "path": "docs/images/session-packed-mask-final-room2.png",
+      "sha256": "a1b100c5633aba015f63d4b0c8a2799e680a7d16db3dbf841e7ad2a3ddb3047c"
+    }
+  ]
+}
