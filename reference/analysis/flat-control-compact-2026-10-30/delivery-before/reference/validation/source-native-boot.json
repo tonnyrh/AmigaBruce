@@ -1,0 +1,171 @@
+{
+  "status": "passed_owned_cli_adf_smoke",
+  "binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
+  },
+  "adf": {
+    "path": "amiga/out/bruce_amiga.adf",
+    "sha256": "d2a74039ef2a05a746000edbfc4b21e49276422b520f58ea2d61b39b8a55a140"
+  },
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-menu.json",
+      "sha256": "1aa99227f13e800bc4ba64ffaac7e90027906a4d8e243547ca358d9cb352f938"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "docs/images/session-observer-final-menu.png",
+      "sha256": "2c8656e6a1bae54efa5586b47d16aada856a3248621ada1978f38daf54f39002"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-options.json",
+      "sha256": "d5794bf6118c96118e15d0b1320499ba04220d78a7e70eddea7a198062ec5fe5"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-options.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "docs/images/session-observer-final-options.png",
+      "sha256": "76a666ce3a65e2dbf70db6854ffd24d6ceb72d1e2dbbc6b4b87df2a544994e13"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-cli.json",
+      "sha256": "f18b8efb46dd4444567a6c5db055fcdea55ddaca45534fbb8cdb83b5cd8c0b2e"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-cli.bpl",
+      "sha256": "6b94c40f7376ad01d51e59489c8395711063353c4ca3b8f64ccb5114bf41e41a"
+    },
+    {
+      "path": "docs/images/session-observer-final-cli.png",
+      "sha256": "cc6a49b38c1a552cc294e0b63d0eed6e22bda50f93f914ed1c5a9f6bb02890bf"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room2.json",
+      "sha256": "ffe61f1165b94eb580b8a3dee31e1c49e7fbbda571b85a8bd1ea2316d69cff10"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room2.bpl",
+      "sha256": "500bb772297ac618040e08d29e06f7f10efc3c0d32271f56f1abdf428a6719c4"
+    },
+    {
+      "path": "docs/images/session-observer-final-room2.png",
+      "sha256": "d7e4488e8624b809b02694a3eac53c5abf33ded8538405721434117595e0e111"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room3.json",
+      "sha256": "2ea6c204883c01f2eb9ab9ac969cfedfda6b469bd70547b50a8852ecbcf0580c"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room3.bpl",
+      "sha256": "b29efa3483ab2006832a7453fe3fc8fcb3feac45ee4a8c6680022a67b60d6e0c"
+    },
+    {
+      "path": "docs/images/session-observer-final-room3.png",
+      "sha256": "15f299e4f32dd63acf0f0673449537d9195b196186df276a66468d21b2301cdd"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room4.json",
+      "sha256": "c17d77b78b649ecdcf5363c7b114433d6fb3020abd504c9c37eab8196655ff4d"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room4.bpl",
+      "sha256": "27a6ac93974bb31c6a85e6cbfcadb933e088033a3abc5eed09eee8d8a7670c5d"
+    },
+    {
+      "path": "docs/images/session-observer-final-room4.png",
+      "sha256": "290d41668f00779e3de17282c06d2aaae2bd670aee0ac4d853189df8a22cac51"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room5.json",
+      "sha256": "c4da9f76954720b9d326056b3885ff7ed1ba207e60317968805a5484543b7b1e"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room5.bpl",
+      "sha256": "4d01328e56f053432117cdb0fb8447ebef0b68ad9996b70b90e9da6487e3ab60"
+    },
+    {
+      "path": "docs/images/session-observer-final-room5.png",
+      "sha256": "a76ba31d831617b86561466e6a3b12ce7f090d833ca6cf7da6a35877a30d0666"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room6.json",
+      "sha256": "b4ec2e503d38c8792a9a68e6a8c3823bc5a0479283ffc81978928c15325c5301"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room6.bpl",
+      "sha256": "b5ca5dacc2ce07e3b06d593b2c0a99dc1f4cb69b212692e727a1d37f99365ebf"
+    },
+    {
+      "path": "docs/images/session-observer-final-room6.png",
+      "sha256": "723b9c90e0861a58b8fe1885cff035fd85e12fccf20a70b8e6802364718b24fb"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-adf-menu.json",
+      "sha256": "b0d4106998ef801378d61b1ca794579b5ef7aede13fdabbe4a836bed1f4281e9"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-adf-menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "docs/images/session-observer-final-adf-menu.png",
+      "sha256": "2c8656e6a1bae54efa5586b47d16aada856a3248621ada1978f38daf54f39002"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-adf-options.json",
+      "sha256": "c57536804fbf5a09acedfcc1045dc1111bf1b5c38da7dbd4eed4e60a785799e8"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-adf-options.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "docs/images/session-observer-final-adf-options.png",
+      "sha256": "76a666ce3a65e2dbf70db6854ffd24d6ceb72d1e2dbbc6b4b87df2a544994e13"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-adf.json",
+      "sha256": "11c9d37e49d718f3a12613a21a752918b9ea1a829c74fe0a42f7213b3e52a5f4"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-adf.bpl",
+      "sha256": "2ce273c485cf35e386f3c724d34922b3eae3deec5b620f9ef29a3f85e2cef5bc"
+    },
+    {
+      "path": "docs/images/session-observer-final-adf.png",
+      "sha256": "8f09f92dcf39804da641b5becab0e825292270e1cec2ac45639549bab2b7ab82"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/observer-final-early-clock.json",
+      "sha256": "f2a82edb0357cef163a4e8dc6089d7789d1ab89bf460de311ed5c9ffe61721d3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/observer-final-late-clock.json",
+      "sha256": "b54b0d66357b67cabe311aad2cc4e769e02d5ceab5c9e7632149c96b64adf4d3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/observer-final-adf-clock.json",
+      "sha256": "3fb754297a4469fed7e156a0517c0032cdb2450e2262d72be7f8549de1e06b50"
+    }
+  ],
+  "settings": {
+    "cpu_model": "68000",
+    "cpu_speed": "real",
+    "chipset": "ocs",
+    "chipmem_size": "1",
+    "bogomem_size": "2",
+    "fastmem_size": "0",
+    "ntsc": "false"
+  },
+  "method": "Owned current normal CLI and actual ADF boot; exact complete initial-menu bitmap hash plus title-music readiness before start keys; new game, rooms1..6, normal PAL clocks, source-active visibility lifecycle and R06 negative-phase trap pixels. Separate paused R12 death/transition and menu/F10 publication controls bind the same normal ELF.",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "natural_playthrough": false,
+  "physical_a500": false,
+  "menu_readiness": "reference/analysis/session-walls-2026-10-25/observer-final-adf-menu.json"
+}

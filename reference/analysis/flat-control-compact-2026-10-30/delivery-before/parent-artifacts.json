@@ -1,0 +1,422 @@
+{
+  "status": "frozen_preceding_scoped_delivery_artifacts",
+  "previous_delivery": "reference/validation/source-world-delivery.json",
+  "artifacts": [
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "321b0da7db9c7b25cb199402ee645461b99ec1255ef0867ad64b81fe9f75b8a8"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "6bc512d155e594ce2ef7c862936d17b97484ee680d0896f6ca485a88b59aafb7"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "533912a4b7cf30a8faa1c33269724b6830c37230c3ad372f5bd6e37e5e2ff325"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-fixture.json",
+      "sha256": "9ae6eea4c8998e7d5e0c78f172b780e4c3bf678054df360a0acebb021bb3ec15"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-final.txt",
+      "sha256": "0f3c180fafd9a5f5b91d957b0b88294c42b0c5b9f2357725f670558c523905e6"
+    },
+    {
+      "path": "tools/audit_normal_source_clock.py",
+      "sha256": "fcf7ca8b3296cb340217ea62230f68deca30e68bbcc83741c3f0e3bb56182f53"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
+      "sha256": "b54b0d66357b67cabe311aad2cc4e769e02d5ceab5c9e7632149c96b64adf4d3"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "fac20ec0f7e8938c96752589bd30f089906c6223afa641c2dc97bc73f4ec757a"
+    },
+    {
+      "path": "docs/MILESTONE_COMPLETION.md",
+      "sha256": "223064275395e1eb404d1444180b6cfce1597108360e7487d7d2d52a63d0e88f"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "569fda6afda02e6b045fd1e8519c563db9dff155dec47c8736a55bf76aca048b"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "sha256": "ef7aa9dec9dc3b6615b53f47e12b95551dc030c16ecafb05cc8cf9c97801b488"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "sha256": "7d8afca2090e672171f3178fce3dc3f18d80e843c068fcbf6dd45a9b0f62f83d"
+    },
+    {
+      "path": "tools/verify_source_world_delivery.py",
+      "sha256": "9132c048c8542deff88af3a0c1a567c1fd1a03297fe8205fbe12e650a74b35a3"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "21bf3f54b2121ccb792ab2c593e5ded77dda53b8e8bf37d13dc6b4a6080e06e7"
+    },
+    {
+      "path": "README.md",
+      "sha256": "55a46a71b653c4d654c8234e05333e6d2f9acca1750fb793c011d0a041309674"
+    },
+    {
+      "path": "reference/validation/source-vic-host.json",
+      "sha256": "d0d19795235efbc1b1a23b526af2755639368775fffb218d039c1539068d8d22"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
+      "sha256": "eb5e09311df34aa058e0bba88492d3b41395e22d67b3be7ff664935461eee3bf"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_REPORT.md",
+      "sha256": "acb5723372d0b3c91f3ac660a1db18ae3b434b24469e98cafd35690699c8531d"
+    },
+    {
+      "path": "reference/validation/source-native-boot.json",
+      "sha256": "3c5a698c865e664fc71da307ec1758d35f97e0adc4dd964f8f47319878607a0c"
+    },
+    {
+      "path": "reference/validation/color-observer-optimization.json",
+      "sha256": "c2e22e0428e33a806504076c2c8d1cc7dcad501598eda14e7e5503cbcacff373"
+    },
+    {
+      "path": "tools/verify_color_observer_optimization.py",
+      "sha256": "db07119f8e699d50f9fbc05280d36cb3593b70268388e68e25286402aecd6b06"
+    },
+    {
+      "path": "reference/analysis/color-observer-2026-10-30/native-images.json",
+      "sha256": "b4f4c7364d9da006192427fa9d0967f4e8e9c2c83e09c24b5701305b00bac274"
+    },
+    {
+      "path": "reference/analysis/publication-2026-10-30/report.json",
+      "sha256": "2a94e1f590a627047a850689d58d1c9de5d916c631c48b9451de0d94720f2a7d"
+    },
+    {
+      "path": "docs/BUFFER_PUBLICATION.md",
+      "sha256": "3a2308017e251df9005b814d5332bd79998c6d30a8a7031ddf45c48862af749f"
+    },
+    {
+      "path": "tools/verify_publication_guard.py",
+      "sha256": "0d7ea9b36b5cbc23d9edad4e0df545a441f70e32e385f25d98c83acbdcc79ec8"
+    },
+    {
+      "path": "reference/validation/menu-publication.json",
+      "sha256": "acab55547db6113d535df9a3e4533cf35b8e45b97eb35656bdadb65ffa2a9555"
+    },
+    {
+      "path": "tools/verify_menu_publication.py",
+      "sha256": "3af06aa64721c35490fbe089ebe0787913960f2572ad40e2eb8e84ec6ee9b9ea"
+    },
+    {
+      "path": "tools/audit_native_menu_publication.py",
+      "sha256": "3619cae63ebded4d72f9720914eca608a694d0f1201fb2cbc84bc92328ed0425"
+    },
+    {
+      "path": "docs/MENU_PUBLICATION.md",
+      "sha256": "fd723c6dc97f8d8f57a6424c9a2b22e90b411808d8ffd3a3e63a6ab7480a3686"
+    },
+    {
+      "path": "docs/parity/evidence/MENU-PUBLICATION-0001.json",
+      "sha256": "628f8f5d0434c496c086b0187c3b96088aae3db3d22e80a08766cff56b325a42"
+    },
+    {
+      "path": "reference/validation/vic-cache-optimization.json",
+      "sha256": "a5523a70b35e836f5eb168f84a340017a37316fe1ffb266592d24febd44e278c"
+    },
+    {
+      "path": "reference/validation/vic-cache-host.json",
+      "sha256": "354da4bdbf56d85a1226f100e9451ac762e63733dda8173cdfa1dc81042caada"
+    },
+    {
+      "path": "tools/verify_vic_cache_optimization.py",
+      "sha256": "fd1ed41c2b8ac31d12f9a32886f67a9caecd75388a02d242871e780d930d2bb9"
+    },
+    {
+      "path": "tools/verify_vic_cache.py",
+      "sha256": "19eba73e41c08945411da93d755571b5e1ed13c24cf4b7e37e748977a05abab4"
+    },
+    {
+      "path": "tests/vic_cache_bridge.c",
+      "sha256": "762dee151e25a5bcfdbd8f0920955ea7413e29549f0ca3ee2c24d8d29ab86ee1"
+    },
+    {
+      "path": "test-vic-cache.ps1",
+      "sha256": "9fd134af6afb2d6e5d274ab027cc0d4d566e9bb3817f14423d637bfc57521f31"
+    },
+    {
+      "path": "docs/VIC_CACHE_OPTIMIZATION.md",
+      "sha256": "dabf252ae92ed8b3b6c2543eb5bcac988741ced502b6edfded118ac3d41d2052"
+    },
+    {
+      "path": "docs/parity/evidence/VIC-CACHE-0001.json",
+      "sha256": "e7da601eb02689e13280729bc37030537284cc67d7bc1c87db9f3a3d2605a708"
+    },
+    {
+      "path": "reference/validation/view-projection.json",
+      "sha256": "f5d3b6a3defdb1c3db705cc06f00f353052657edf05e1941142b9bb6c83dc7d6"
+    },
+    {
+      "path": "reference/validation/view-mask-host.json",
+      "sha256": "008a27b544e219fda7b4ecb4ebe3c41e6e3b38320b27a4ff027551e8846d6098"
+    },
+    {
+      "path": "tools/verify_view_projection.py",
+      "sha256": "51c1acac2f2e190b59296d2b025cc46753e3537d5fc099c731845db29fe203f0"
+    },
+    {
+      "path": "docs/VIEW_PROJECTION_OPTIMIZATION.md",
+      "sha256": "02fc08feb0caf34a9df6c6e01efdf85aaf1926f9fab45b601f551b6c42f2dd81"
+    },
+    {
+      "path": "test-view-mask.ps1",
+      "sha256": "eeded1edf43059523dae87d6867e0c6393f508aafc1a01e9344ccc3a8c537ca6"
+    },
+    {
+      "path": "docs/parity/evidence/VIEW-PROJECTION-0001.json",
+      "sha256": "e7221a10a222a9b196e80136ac460b1754bfccd173591b4129fc36620ed3c066"
+    },
+    {
+      "path": "reference/validation/final-colors-optimization.json",
+      "sha256": "c62d70d7dc1758aa3f567a7ec9bd9169daef394e5e4b0d2fbe15c64108b2c365"
+    },
+    {
+      "path": "tools/verify_final_color_optimization.py",
+      "sha256": "fa3b263f1f125c9c32aee9ee0a582f2f4d74f671690c4c2ca8f6608dfd282ebe"
+    },
+    {
+      "path": "docs/parity/evidence/FINAL-COLORS-0001.json",
+      "sha256": "d5431accbbceb0c3eb4255036ac2ef43df9a2dd20abf04c22dfc8d08cd3b93e4"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/source-scope.json",
+      "sha256": "f46457dde8628990bf3710c755a4ce0d2d17ee487e810a8980bb55e13b6e3a47"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/native-images.json",
+      "sha256": "3564d3b4a32d558bf18e78f103a84d834c96f34dc745edb7052a2e9caaa06a99"
+    },
+    {
+      "path": "tools/audit_final_color_images.py",
+      "sha256": "631a86a2d33708e811491eceadaae6f4c1e0ffa7520e4d00f7bee9b69e5e9eb7"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/host.json",
+      "sha256": "67eb19b21c1010338a869fb48806e070e0c1188c95b79e36607b1fb72ec10c75"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/tour-v3-comparison.json",
+      "sha256": "83dbf72e09d0b3f097f30745aff420867d957087c719964a4977ea622dda85ca"
+    },
+    {
+      "path": "tools/verify_final_color_scope.py",
+      "sha256": "4fc7325734fd28403359a1745d4c25c2284c1f605ec05bb36f52b7e276a264a6"
+    },
+    {
+      "path": "docs/FINAL_COLOR_OPTIMIZATION.md",
+      "sha256": "331eef6d4fc4d4a7e480bee0bcff87cde22e8252a435c12bbfa7b6a6e7a33452"
+    },
+    {
+      "path": "docs/parity/evidence/RENDER-COHERENCE-0001.json",
+      "sha256": "ed69638032b97d339215b49b259019c67dd101b3467ff32ca1bea382bcf60d82"
+    },
+    {
+      "path": "reference/validation/render-coherence.json",
+      "sha256": "438a00f1c0287a21324550ebdc19ee99fe747d295e4516dc12c983c6faebb8e5"
+    },
+    {
+      "path": "tools/verify_render_coherence.py",
+      "sha256": "0fe9a127c284688d6c7e9708b14893e7990dcaadb092d5450a002c21117db60b"
+    },
+    {
+      "path": "tools/audit_native_animation_frame.py",
+      "sha256": "3cbcf3b5b7dc3585ce6099f8680f9b6984f7d737ccb6935c064bfb13e43e2c0e"
+    },
+    {
+      "path": "docs/RENDER_COHERENCE.md",
+      "sha256": "370ce4e7d0dd078efabf6974eea3e46b23409fe38dd9153d20544931c1653f5c"
+    },
+    {
+      "path": "tools/audit_contact_kernel_images.py",
+      "sha256": "3bc41b747428036d6fb244ca57e74f2ae4c7f433d185ce588c04f2c8223e69af"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/contact-kernel-images.json",
+      "sha256": "9ed67c9c3ae6f20aefdde8f3236e97a3bd5e9d7327d9e979faba78db4c5e3e5c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-r01/identity.json",
+      "sha256": "0c2450027becdf7593149e6617d36817a816ea215605021847ebcedf3a85808c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-r01/native.txt",
+      "sha256": "aedeca3c6f532eeafdbcc631213b366c579f421c4667cdf032c6afbc3ae4c43d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-r01/native.json",
+      "sha256": "0795488af6bde50cd10680b09b79690d1bca71a95b77fef7d078f8d25b887d65"
+    },
+    {
+      "path": "reference/validation/source-object-host.json",
+      "sha256": "6a7984237a235c607620beca176b56c5e7aec96a04a0bcf1d5bb7111bd484141"
+    },
+    {
+      "path": "reference/validation/source-score-host.json",
+      "sha256": "ab46330a29fa7c2bb6fc5b25bb91dde54d7b6a2a62fea1e0a09757a3aaa4f7d2"
+    },
+    {
+      "path": "docs/NATIVE_ENGINE_OPTIMIZATION.md",
+      "sha256": "e2502afb9c30e9d8f2705db0687f38289e7355ca5e33855c6f9c1ecfb043fc8b"
+    },
+    {
+      "path": "docs/CONTACT_KERNEL_OPTIMIZATION.md",
+      "sha256": "eb964bbb238d5bfc3d59f78f235ee8929fa0e2379aaecbe4ada438356b698e85"
+    },
+    {
+      "path": "docs/PACKED_MASK_OPTIMIZATION.md",
+      "sha256": "00c6cf08b77d2674924bc257fd19bd7ff1beb29585872c70d1e8c8d3fd4132cb"
+    },
+    {
+      "path": "reference/validation/source-contact-host.json",
+      "sha256": "7bc6c6fe66e50bf0e02cdb793bbaaeae6f5dc78d20b7c8f5c6abec774f2d5a20"
+    },
+    {
+      "path": "docs/CONTACT_OPTIMIZATION.md",
+      "sha256": "2e6f6f3bca6059ec32e55144afcde97844052de2bc6ac04383956a41fc5daa5d"
+    },
+    {
+      "path": "docs/VIC_NATIVE_OPTIMIZATION.md",
+      "sha256": "950e173491222814bd33c2c92f9c1b984ab41069e8bbdfddd5749d8261400786"
+    },
+    {
+      "path": "reference/validation/source-visibility-native.json",
+      "sha256": "9678480f001c52e47e21771745976779154ba7d5c63a44ba7ca7356312cfcc66"
+    },
+    {
+      "path": "reference/validation/source-visibility-host.json",
+      "sha256": "bc2fe6f8316870f3086b6e38aafe9e9220c7afa57556f6d4b65a66e868862859"
+    },
+    {
+      "path": "reference/analysis/yamo-r02-2026-10-27/snapshot.json",
+      "sha256": "e16380e10ce451c3902b3465891e643ea70cbf2f6366005575a2085804709ecb"
+    },
+    {
+      "path": "reference/analysis/yamo-r02-2026-10-27/source-memory.bin",
+      "sha256": "70ed4f18ab2f93aff99995c6ddfc7515c86a9c6caa55115f647008c1983e1ab3"
+    },
+    {
+      "path": "tools/inspect_source_snapshot.py",
+      "sha256": "98b3b2d0f48e06e505feceb279cde1f4e79179818caccc8bc239b83bbe9204f0"
+    },
+    {
+      "path": "docs/YAMO_VISIBILITY_PERFORMANCE.md",
+      "sha256": "0185e4a4b11048f5f9e0214017e5d5ecb2dae699f8de380337083b99ebf0a7fe"
+    },
+    {
+      "path": "docs/CONTACT_REGISTERS_OPTIMIZATION.md",
+      "sha256": "01e9465000b2198ea6997f6c700c599c0983d560936e699a4acee8d5e2b52d82"
+    },
+    {
+      "path": "docs/VIC_REPEAT_OPTIMIZATION.md",
+      "sha256": "75d3793e0a6c6e83846b22500333319e3fa8f6ce438dbb3e870a239beda0d3c0"
+    },
+    {
+      "path": "reference/analysis/vic-repeat-2026-10-28/baseline/manifest.json",
+      "sha256": "662836ac8a71e9f69afa653a50a0f922332231dc5b30e9ef362be79b48ed8313"
+    },
+    {
+      "path": "reference/analysis/vic-repeat-2026-10-28/native-kernel-bytes.json",
+      "sha256": "67231a4ba54f9caa0a7d4fbed114e4f86ff0c733f1b19e0056223dfb4996dedb"
+    },
+    {
+      "path": "reference/analysis/vic-repeat-2026-10-28/source-register-seams.json",
+      "sha256": "b7c574a4dcf32d3a065ce4a7cc03c626ff0010a83dbf0e07a54ee2f538f78f19"
+    },
+    {
+      "path": "reference/validation/source-paint-host.json",
+      "sha256": "45bdc4c3c38b9bcd21f2901d04fc6b2defa56ec0193e86e1d3ea46e949381fd0"
+    },
+    {
+      "path": "reference/validation/source-trap-native.json",
+      "sha256": "2f95c7a2aa42ea34016c85d1a9b5dde27967c84e60cf8c687fb3b4e0a1aa669e"
+    },
+    {
+      "path": "docs/CONTACT_PREPARATION_OPTIMIZATION.md",
+      "sha256": "4e983d5410603e2f2d5bc0901364ca12c6754c280224b1cbba5218ef509a5912"
+    },
+    {
+      "path": "docs/TRAP_R06_2026-10-28.md",
+      "sha256": "e8730e361e36a8668f551b740ac7d05640718a34e454c6ec76be20fcaa4749e7"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/room-loop-controls.json",
+      "sha256": "6d99b92e3dcabb240305f3df3bb21c5ce16faf743d4f0e3d3962e48ff0fd6551"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/trap-pixels.json",
+      "sha256": "4b829bb705a395f0e78dd2ddc300bdfeff93ee1ce841429ba09d063df19736a0"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/requeue-before.json",
+      "sha256": "f8798935424f31cecda5c71672574da1806bcf65424ecf1180f0f329b8407587"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/kage-r01-exit-gate.json",
+      "sha256": "d03163eb98d4b12661dc25e0cf92b4ce1094554677eb68dde97a0082a7248fd6"
+    },
+    {
+      "path": "docs/parity/evidence/SPRITE-COPY-0001.json",
+      "sha256": "30c5c45803529943aacd8148d1d9ca371901deabe3332971c2ff6068abc58d18"
+    },
+    {
+      "path": "reference/validation/source-sprite-copy-host.json",
+      "sha256": "50d659e8dd295b1eafa4f65d314cb6b4b53cf03e9d9c1d1cb2eb5033ebfecf73"
+    },
+    {
+      "path": "docs/SPRITE_COPY_OPTIMIZATION.md",
+      "sha256": "c7f6d6c76786c1b174c7c3f7ee377c5622a7fd9d3dfe82cea7edaa4681483fa8"
+    },
+    {
+      "path": "tools/audit_sprite_native_kernel.py",
+      "sha256": "dd86b08e427906f4017f6d86db51d8ae937234638521a82c6774e1ab55d4195e"
+    },
+    {
+      "path": "tools/verify_source_sprite_copy.py",
+      "sha256": "12a6b8598c1e2d5ba5edf4ce19f4975de65c6542b42959a8a799914e561fc17a"
+    },
+    {
+      "path": "tools/verify_amiga_entry.py",
+      "sha256": "857be561143af60741a1db39ab6044799cd5c11413c34a81d76e7d97dce3aea8"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "reference/analysis/sprite-copy-2026-10-29/source-contract.json",
+      "sha256": "3c5675706f533ea86828eca3470b713099d15b2572db1692d0f3d35e073521fb"
+    },
+    {
+      "path": "reference/analysis/sprite-copy-2026-10-29/source-copy-disassembly.txt",
+      "sha256": "c2dd06f63574ce2d0ae859d8e31561da8962069f7d2d9d590a805cacc47e9b7a"
+    },
+    {
+      "path": "reference/analysis/sprite-copy-2026-10-29/native-kernel-bytes.json",
+      "sha256": "2c94fbfd0787228b49c7cd4cee9dd19f4e276b5955d7f8459810ca5b6cbc562b"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "d2a74039ef2a05a746000edbfc4b21e49276422b520f58ea2d61b39b8a55a140"
+    }
+  ]
+}

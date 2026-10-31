@@ -103,19 +103,24 @@ static volatile struct Custom *hw=(volatile struct Custom *)0xdff000;
 #define BL_ELECTRIC_TEST 0
 #endif
 #define BL_CAPTURE_FRAME (BL_ELECTRIC_TEST?450:((BL_GATE_TEST || BL_ROOM_LOAD_TEST)?450:(BL_ROOM_TOUR?6950:(BL_ENEMY_EDGE_TEST?360:(BL_ROOM_TEST?630:(BL_COMBAT_TEST?900:120))))))
+#ifndef BL_SEPARATE_CONTACT_TEST
+#define BL_SEPARATE_CONTACT_TEST 0
+#endif
 #include "source_audio.h"
 /* Normal play advances the source IRQ clock from actual PAL time. The
  * controlled replay uses one explicit field per loop and reports overruns. */
 static ULONG game_field_last;
 static UBYTE game_field_active,game_field_busy,game_field_loading;
+static void blank_game_display(void);
 static void source_game_service(void){
     ULONG now,gap;source_audio_service();
     if(!game_field_active || game_field_busy)return;
     now=field_clock();gap=(now-game_field_last)&0xffffffUL;game_field_last=now;
     if(game_field_loading)return;
-    game_field_busy=1;while(gap--)bl_c64_field();game_field_busy=0;
+    game_field_busy=1;while(gap--){bl_c64_field();source_audio_service();}game_field_busy=0;
 }
 static void source_game_load(long loading){
+    if(loading)blank_game_display();
     game_field_loading=(UBYTE)(loading!=0);game_field_last=field_clock();source_audio_load(loading);
 }
 #if BL_AUTOTEST
@@ -162,6 +167,12 @@ static void wait_blitter(void);
 static void paint_source_tile(const BlC64Paint *request);
 static void paint_source_block(const BlC64Block *request);
 static UWORD *copper[2];
+/* Source $09BC-$09C1 clears DEN before rebuilding a room. Keep both
+ * lists blank until present_frame publishes a complete replacement. */
+static void blank_game_display(void){
+    copper[0][1]=copper[1][1]=0;
+    hw->bplcon0=0;
+}
 /* CPU-side test-target stamps; fixed eight-pixel knockback keeps byte alignment. */
 static UBYTE target_stamp[6][4][26][2],target_mask[6][26][2];
 /* Unshifted CPU poses:74880 bytes for3 actors/2 faces/16 phases. The OCS
@@ -195,11 +206,6 @@ static ULONG fighter_fnv(ULONG hash,UBYTE value){
     return (high<<16)|(UWORD)low;
 }
 
-static void copy(UBYTE *d,const UBYTE *s,ULONG n) {
-    while(n){UWORD part=(UWORD)(n>256?256:n);n-=part;
-        while(part--)*d++=*s++;
-        source_audio_service();}
-}
 static void pixel(UBYTE *b,int x,int y,UBYTE color) {
     UWORD p; ULONG offset; UBYTE mask;
     if(x<0||x>=WIDTH||y<0||y>=HEIGHT)return;
@@ -626,6 +632,17 @@ static void make_copper(UWORD *list,UBYTE *bitmap) {
 }
 static UWORD raster(void){return (UWORD)((*(volatile ULONG*)0xdff004>>8)&0x1ff);}
 static void wait_frame(void){while(raster()>=300){source_audio_service();}while(raster()<300){source_audio_service();}}
+/* COP1LC must be committed before the next automatic Copper restart.
+ * Audio servicing can overrun wait_frame's blank boundary. Recheck directly
+ * before the write, and keep accounting/debug work after publication. */
+static UWORD present_frame(UWORD *list){
+    UWORD line;
+    wait_blitter();
+    do{wait_frame();line=raster();}while(line<300 || line>308);
+    list[1]=(game_field_active && game_field_loading)?0:0x4200;
+    hw->cop1lc=(ULONG)list;
+    return line;
+}
 static ULONG field_clock(void){
     ULONG hi=*(volatile UBYTE*)0xbfea01;
     ULONG mid=*(volatile UBYTE*)0xbfe901;
@@ -676,37 +693,42 @@ static UBYTE read_key(void) {
     return raw;
 }
 
-static void menu_paint(const BlOptions *o,UBYTE debug,UBYTE game_over){
+static void menu_paint(const BlOptions *o,UBYTE debug,UBYTE game_over,int *front){
+    UBYTE hidden=(UBYTE)(*front^1),*bitmap=buffers[hidden];
     ULONG i;char players[]="F3 PLAYERS 1",room[]="F3 F4 START ROOM 01";
     wait_blitter();
-    for(i=0;i<BITMAP_BYTES;i++){buffers[0][i]=0;if(!(i&1023))source_audio_service();}
-    text(buffers[0],142,38,"BRUCE",7);
-    if(game_over)text(buffers[0],130,59,"GAME OVER",2);
+    for(i=0;i<BITMAP_BYTES;i++){bitmap[i]=0;if(!(i&1023))source_audio_service();}
+    text(bitmap,142,38,"BRUCE",7);
+    if(game_over)text(bitmap,130,59,"GAME OVER",2);
     if(debug){
-        text(buffers[0],94,78,"TEST OPTIONS",13);
-        text(buffers[0],58,100,o->infinite_lives?"F1 INFINITE FALLS ON":"F1 INFINITE FALLS OFF",1);
-        text(buffers[0],58,116,o->invincible?"F2 INVINCIBLE ON":"F2 INVINCIBLE OFF",1);
+        text(bitmap,94,78,"TEST OPTIONS",13);
+        text(bitmap,58,100,o->infinite_lives?"F1 INFINITE FALLS ON":"F1 INFINITE FALLS OFF",1);
+        text(bitmap,58,116,o->invincible?"F2 INVINCIBLE ON":"F2 INVINCIBLE OFF",1);
         room[17]=(char)('0'+(o->start_room+1)/10);room[18]=(char)('0'+(o->start_room+1)%10);
-        text(buffers[0],58,132,room,1);
-        text(buffers[0],58,152,"F5 BACK  FIRE START TEST",5);
-        text(buffers[0],34,194,"IN GAME F1 F2 CHANGE ROOM",12);
-        text(buffers[0],34,210,"TEST FLAGS CHANGE C64 RULES",12);
+        text(bitmap,58,132,room,1);
+        text(bitmap,58,152,"F5 BACK  FIRE START TEST",5);
+        text(bitmap,34,194,"IN GAME F1 F2 CHANGE ROOM",12);
+        text(bitmap,34,210,"TEST FLAGS CHANGE C64 RULES",12);
     }else{
         players[11]=(char)('0'+o->players);
-        text(buffers[0],64,96,players,1);
-        text(buffers[0],64,116,o->human_yamo?"F5 YAMO JOYSTICK 1":"F5 YAMO COMPUTER",1);
-        text(buffers[0],64,146,"FIRE OR RETURN START",5);
-        text(buffers[0],64,172,"SHIFT D TEST OPTIONS",12);
-        text(buffers[0],34,200,"2 PLAYERS TAKE TURNS AS BRUCE",12);
-        text(buffers[0],34,216,"1P JOYSTICK 2  2P JOYSTICK 1",12);
+        text(bitmap,64,96,players,1);
+        text(bitmap,64,116,o->human_yamo?"F5 YAMO JOYSTICK 1":"F5 YAMO COMPUTER",1);
+        text(bitmap,64,146,"FIRE OR RETURN START",5);
+        text(bitmap,64,172,"SHIFT D TEST OPTIONS",12);
+        text(bitmap,34,200,"2 PLAYERS TAKE TURNS AS BRUCE",12);
+        text(bitmap,34,216,"1P JOYSTICK 2  2P JOYSTICK 1",12);
     }
-    text(buffers[0],100,238,"ESC AMIGADOS",12);
-    wait_frame();hw->cop1lc=(ULONG)copper[0];
+    text(bitmap,100,238,"ESC AMIGADOS",12);
+    /* Publish only a complete menu, then wait until Copper has latched it
+     * before the former front may be reused by another menu or game. */
+    present_frame(copper[hidden]);wait_frame();*front=hidden;
 }
-static UBYTE choose_options(BlOptions *o,UBYTE game_over){
+static UBYTE choose_options(BlOptions *o,UBYTE game_over,int *front){
     UBYTE debug=0,armed=0;
     bl_source_audio_reset(&source_audio);source_audio_start(1);
-    menu_paint(o,debug,game_over);
+    /* The game may have just published at line300; let Copper latch the
+     * recorded front before the previous buffer becomes menu workspace. */
+    wait_frame();menu_paint(o,debug,game_over,front);
     for(;;){
         UBYTE key,changed=0,fire;
         wait_frame();key=read_key();fire=(UBYTE)(read_input()&BL_FIRE);
@@ -724,7 +746,7 @@ static UBYTE choose_options(BlOptions *o,UBYTE game_over){
             if(key==0x52){o->players=(UBYTE)(3-o->players);changed=1;}
             if(key==0x54){o->human_yamo^=1;changed=1;}
         }
-        if(changed)menu_paint(o,debug,game_over);
+        if(changed)menu_paint(o,debug,game_over,front);
     }
 }
 static void draw_lives(UBYTE *b,const BlCombat *w,const BlSession *s){
@@ -802,7 +824,7 @@ int main(void) {
     if(BL_AUTOTEST)arithmetic_errors=bruce_runtime_check();
 #if BL_AUTOTEST
     vic_compare_errors=bl_c64_vic_compare_selftest();
-    contact_kernel_errors=bl_c64_contact_kernel_selftest();
+    if(!BL_SEPARATE_CONTACT_TEST)contact_kernel_errors=bl_c64_contact_kernel_selftest();
 #endif
 #if BL_SOURCE_WORLD_TEST && !BL_SOURCE_PERF_TEST
     source_actor_fixture_failure=source_actor_fixture_run();
@@ -921,13 +943,16 @@ int main(void) {
      * gameplay $15A8 switches to the three independent SFX drivers. */
 choose_game:
     game_field_active=0;
+    if(BL_AUTOTEST){
     rect(buffers[0],0,160,320,18,0);text(buffers[0],106,166,"FIRE TO START",5);
-    wait_frame();hw->cop1lc=(ULONG)copper[0];
+    present_frame(copper[0]);
+    back=0;
+    }
     source_audio_begin();
     bl_c64_set_service(source_game_service);
     bl_c64_set_load_service(source_game_load);
     if(!BL_AUTOTEST){
-        if(!choose_options(&options,menu_game_over))goto restore_os;
+        if(!choose_options(&options,menu_game_over,&back))goto restore_os;
         bl_session_source_start(&session,&options,&progress,&world);game=world.player.body;
         load_room_background(&game,&progress,1);
         for(n=0;n<2;n++){
@@ -954,9 +979,11 @@ choose_game:
     source_audio_mute();
     if(exit_requested)goto restore_os;
     bl_source_audio_reset(&source_audio);bl_c64_audio_reset();
-    copy(buffers[1],background,BITMAP_BYTES);
-    wait_frame();hw->cop1lc=(ULONG)copper[1];wait_frame();
-    copy(buffers[0],background,BITMAP_BYTES);intro_restored=1;
+    /* Menu return preserves the actual front. Build the game in the other
+     * buffer; both complete copies finish before their destination is reused. */
+    back^=1;copy_room_bitmap(buffers[back],background);
+    present_frame(copper[back]);wait_frame();
+    copy_room_bitmap(buffers[back^1],background);intro_restored=1;
     source_audio_start(0);
     game_field_last=field_clock();game_field_active=(UBYTE)(!BL_AUTOTEST || BL_SOURCE_PERF_TEST);
     last_image_field=game_field_last;
@@ -1231,7 +1258,14 @@ choose_game:
             for(n=0;n<2;n++)restore_actor(buffers[back],&actor_dirty[back][n]);
             restore_actor(buffers[back],&actor_dirty[back][3]);
             restore_actor(buffers[back],&actor_dirty[back][4]);
+            {const unsigned long *covered=bl_c64_animation_coverage();int row;
+            if(covered)for(row=3;row<25;row++){
+                source_words[back][row]&=~covered[row];priority_words[back][row]&=~covered[row];
+                if(!source_words[back][row])source_rows[back][row]=0;
+                if(!priority_words[back][row])priority_rows[back][row]=0;
+            }}
             restore_source_cells(buffers[back],back);
+            bl_c64_paint_animation_frame(buffers[back],SCENE_TOP);
             PERF_END(BL_PERF_RESTORE);PERF_BEGIN(BL_PERF_DRAW);
             if(BL_AUTOTEST && BL_COMBAT_TEST){stage[2]=elapsed_work(render_clock);stage_valid|=4;}
             draw_source_projectiles(buffers[back],back);
@@ -1257,8 +1291,8 @@ choose_game:
                 draw_score(buffers[back],&progress,options.debug);oldscore[back]=progress.score;
             }
             if((!BL_AUTOTEST || BL_SOURCE_WORLD_TEST) && old_game_over[back]!=world.game_over){
-                rect(buffers[back],126,49,80,8,0);
-                if(world.game_over)text(buffers[back],126,49,"GAME OVER",2);
+                rect(buffers[back],126,46,80,8,0);
+                if(world.game_over)text(buffers[back],126,46,"GAME OVER",2);
                 old_game_over[back]=world.game_over;
             }
         }else{
@@ -1305,7 +1339,12 @@ choose_game:
         }
         copper[back][65]=palette[bl_c64_flash_color()];
         PERF_END(BL_PERF_LOOP);PERF_BEGIN(BL_PERF_WAIT);
-        wait_frame();
+        {UWORD line=present_frame(copper[back]);
+        if(BL_AUTOTEST){
+            if(line<present_min)present_min=line;
+            if(line>present_max)present_max=line;
+            if(line<300||line>308)++bad_presents;
+        }}
         PERF_END(BL_PERF_WAIT);
         if(BL_AUTOTEST){
             ULONG pulse=line_clock(),linegap=(pulse-last_line_clock)&0xffffff;
@@ -1324,13 +1363,6 @@ choose_game:
             if(BL_AUTOTEST && gap>1){if(!missed_frames){cia_miss_hsync=measured_line_gap;first_missed=(ULONG)frame;miss_stage_valid=stage_valid;miss_stage_loop=stage_loop;for(n=0;n<6;n++)miss_stage[n]=stage[n];}++missed_frames;}
         }
         last_field=now;
-        if(BL_AUTOTEST){
-            UWORD line=raster();
-            if(line<present_min)present_min=line;
-            if(line>present_max)present_max=line;
-            if(line<300||line>308)++bad_presents;
-        }
-        hw->cop1lc=(ULONG)copper[back];
         if(!hold_image)last_image_field=now;
         ++frame;field_phase=(UBYTE)(field_phase==2?0:field_phase+1);
         if(BL_AUTOTEST && max_runtime_gap>1 && !BL_COLLECT_FRAME_DROPS)break;
@@ -1389,7 +1421,9 @@ restore_os:
         append(&p,"\nvic_compare_errors=");number(&p,vic_compare_errors);
 #if BL_AUTOTEST
         append(&p,"\nvic_repeat_cases=");number(&p,BL_C64_VIC_REPEAT_CASES);
-        append(&p,"\ncontact_kernel_cases=");number(&p,BL_C64_CONTACT_KERNEL_CASES);
+        append(&p,"\nsprite_copy_cases=");number(&p,BL_C64_SPRITE_COPY_CASES);
+        append(&p,"\ncontact_kernel_cases=");number(&p,BL_SEPARATE_CONTACT_TEST?0:BL_C64_CONTACT_KERNEL_CASES);
+        append(&p,"\ncontact_reference_separate=");number(&p,BL_SEPARATE_CONTACT_TEST);
         append(&p,"\ncontact_kernel_errors=");number(&p,contact_kernel_errors);
 #endif
 #if BL_SOURCE_WORLD_TEST && !BL_SOURCE_PERF_TEST

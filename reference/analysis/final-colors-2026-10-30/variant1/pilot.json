@@ -1,0 +1,75 @@
+{
+  "status": "candidate_passes_source_and_native_controls_pending_all_room_and_delivery",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "r20_unprofiled": [
+    {
+      "label": "final-colors-before-timing",
+      "source_clock_elapsed": 660,
+      "source_clock_missed": 178,
+      "source_clock_starts": 2,
+      "source_audio_fields": 364,
+      "source_music_fields": 120,
+      "max_held_image_streak": 0,
+      "held_changed": 0,
+      "chip_largest_loaded": 44440,
+      "drawn_image_fields": 120,
+      "frames": 120
+    },
+    {
+      "label": "final-colors-after-timing",
+      "source_clock_elapsed": 574,
+      "source_clock_missed": 82,
+      "source_clock_starts": 2,
+      "source_audio_fields": 374,
+      "source_music_fields": 120,
+      "max_held_image_streak": 1,
+      "held_changed": 6,
+      "chip_largest_loaded": 44440,
+      "drawn_image_fields": 115,
+      "frames": 121
+    }
+  ],
+  "elapsed_reduction_percent": 13.03,
+  "limitations": [
+    "Elapsed includes title and game; compare identical boot/input/step protocols only.",
+    "RoomTour diagnostic binary has extra code; Chip44440 is below49152 delivery gate. No memory acceptance claimed for this research image.",
+    "Before-profile image failed allocation; raw failure retained.",
+    "Normal production EXE/ADF have not been replaced.",
+    "Original-byte and renderer-state controls do not certify original edition/raster/natural play."
+  ],
+  "native_fixture": {
+    "cases": 53,
+    "loops": 1200,
+    "chip_largest": 52632,
+    "realtime_contract_passed": false,
+    "report_sha256": "e771906e2c0baa3eb416d003ad60ce006fb8ce62f31c7fcc722e21ff0a2f3e55",
+    "build": [
+      {
+        "sha256": "fd9fefc871e5426ba6e5881b3eae3d74322b99fa139e552d4949ebf4eab14cd2",
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/fd9fefc871e5-3a39aaba118f/bruce_test.exe"
+      },
+      {
+        "sha256": "d41b7d3af7f034b6f5d89ce667c16f5068c23d77f4b9096c91b1de0e47415653",
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/fd9fefc871e5-3a39aaba118f/bruce_test.elf"
+      },
+      {
+        "sha256": "3a39aaba118f2a5927792a005afda15c8a722a68a646953a302c9065cddeeafb",
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/fd9fefc871e5-3a39aaba118f/bruce_test.adf"
+      }
+    ]
+  },
+  "normal_production_unchanged": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "dae1f7aee576e3839e9b135f2b18009e94659c7890299e107430f835c01c8810"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "343dbcaed8b7978bffb8ef691ca9f75073a8303f156742636c2a8e5765e3423a"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "96bb14db669da4c973674e52fa7b69a71cfb55896a665195c43db746380277b0"
+    }
+  ]
+}

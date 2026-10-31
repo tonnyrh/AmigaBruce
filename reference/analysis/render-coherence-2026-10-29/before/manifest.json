@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "0ef3085ccc987a3a0d38e615ff37c154bacc1f2e34e9ca43608c759de77e3ec0"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "62d0b6a29dad21628be8305389c018610e94243c51384410239a4f96f2c1fb10"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "55a0b3be1c7c08f7412441142452fa8bd693d23454bfec3234eb074b734f25a7"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "cec3aed78363eb5d8d5fc85b0b4334027e7a13e5ce1461f5e17cb518dca96044"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "25acc260d13786bd250916104724d4aaa4b2bc87dadd752b9aeae47548b76852"
+    }
+  ]
+}

@@ -1,0 +1,959 @@
+{
+  "date": "2026-10-30",
+  "status": "scoped_complete_compact_backend_acceptance_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_controls": 3034,
+  "integrated_scenarios": 5,
+  "source_instructions": 7055873,
+  "native_controls": 53,
+  "native_replay_loops": 1200,
+  "largest_chip_block": 52632,
+  "realtime_gate_passed": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "full_original_parity": false,
+  "converted_jsrs": 444,
+  "pairs": [
+    {
+      "before_fields": 9044,
+      "after_fields": 8965,
+      "before_missed": 131,
+      "after_missed": 126,
+      "slow_gain": 13248
+    },
+    {
+      "before_fields": 9046,
+      "after_fields": 8956,
+      "before_missed": 127,
+      "after_missed": 121,
+      "slow_gain": 13248
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "f1047de7ded0a9087abefcec46e963aa8369019bc700172c60a99529cbea533d"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "2560d20e497e1a9e5a04078a72ba38a9072794e6d70b07632794183bcb465a64"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "e44dacf87e569551aa88ffc04680b08aab3865f7646699c70a7fee8a3feb4056"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "f1047de7ded0a9087abefcec46e963aa8369019bc700172c60a99529cbea533d"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "569fda6afda02e6b045fd1e8519c563db9dff155dec47c8736a55bf76aca048b"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
+      "sha256": "ebf001419f09a0450913493ea3330e7410bbbe869d2ef5a5eb3a291441bc3673"
+    },
+    {
+      "path": "docs/NATIVE_CONTINUATION_EXPERIMENT.md",
+      "sha256": "c9e24415673006ad29113c231a7497442e772a7b7446944866e42c0ce2e03259"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "sha256": "7d8afca2090e672171f3178fce3dc3f18d80e843c068fcbf6dd45a9b0f62f83d"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "f6241940014c276183a1131b28a92bdd20d9a1e84f757e8c7b28d0873294de12"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
+      "sha256": "db0e1d430e06849707b55652b3baf9a95e4b25cb74427dc48fc102d68827a29f"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "5ba59b9060a0c801d64bc7f8ff40304e8c6494688917bfd769b78c1ad82e1c9c"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "8454ce51773279205e0daa89585b71567301dc046febc4c82b185b34adac6b4f"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/capacity1/integrated-controls.json",
+      "sha256": "f56b7b33bd4f5e1ed949c67763455bde40f88d5c8c7b026a58c1691d2887e603"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/capacity1/report.json",
+      "sha256": "d1cb4f5d4076d8d439b20aaf18e17f0eeb191eb031cdd48fed055979ef3c940a"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/manifest.json",
+      "sha256": "41a75b4712443f4c0ebd960629cfd461b2f0def199764e070742965373870e11"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/parent-artifacts.json",
+      "sha256": "8192a389cf57d9462689f28e8c5d0db8d3f44044f3e36655e9b4aa3cd8ebaca8"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-world-delivery.json",
+      "sha256": "0f7573355c3406477e9c75435f8015496fcc87e94fcb42c72b5ea34d114e6ac2"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-kernels.json",
+      "sha256": "756ee636ffbbf6104492bf1f67289a7c6af42517e00225e41d0c1005e4131519"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/normal-boot.json",
+      "sha256": "535870e7d632bc0b43034049c6f790bbc9418f3c1012fa524f94ae6611ddebd9"
+    },
+    {
+      "path": "reference/analysis/irq-input-2026-10-30/irq-context-candidate.json",
+      "sha256": "a9da051a5653c94ba4fd44144c5e605ff7bc83e4bc281e0763eda0d64fbd7631"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change00-complete.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change01-complete.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change02-complete.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change03-complete.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change04-complete.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change05-complete.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change06-complete.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change07-complete.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change08-complete.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change09-complete.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/change10-complete.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/front.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/hidden.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/menu-source-0.bin",
+      "sha256": "78f17fb6e35311379026e344ad26cc1c7e5157619eff437e15637ce8868a2d91"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/menu-source-1.bin",
+      "sha256": "78f17fb6e35311379026e344ad26cc1c7e5157619eff437e15637ce8868a2d91"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/menu-source-2.bin",
+      "sha256": "7eacd21fd3a92dc6dca6f24d1ff3310ecc3691d0f626dca51a765625c70860a7"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/report.json",
+      "sha256": "c3dd78af5ff3fd280dd7a47099f670890c203043f8f3831543a241c50698ac2c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample000-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample000-hidden.bpl",
+      "sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample001-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample001-hidden.bpl",
+      "sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample002-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample002-hidden.bpl",
+      "sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample003-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample003-hidden.bpl",
+      "sha256": "734802180ff2a1cf0623b494f5c872e2e19527f3b6197afdb4bb31684242355e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample004-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample004-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample005-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample005-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample006-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample006-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample007-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample007-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample008-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample008-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample009-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample009-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample010-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample010-hidden.bpl",
+      "sha256": "cfc204c120bde37e0fc74de6602c3631a14d2881368b523f46d7e9e61cd489da"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample011-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample011-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample012-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample012-hidden.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample013-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample013-hidden.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample014-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample014-hidden.bpl",
+      "sha256": "dd27755187e712830fc17eb4a136dcc89a44b0c12c218d46e4dd4af219f8390c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample015-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample015-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample016-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample016-hidden.bpl",
+      "sha256": "d2cd007ec13f128253bc520ab7b148aa5d14520337749a61c6b571b828a28b9a"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample017-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample017-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample018-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample018-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample019-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample019-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample020-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample020-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample021-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample021-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample022-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample022-hidden.bpl",
+      "sha256": "0f3328dbe4a2ad8ef60233074941c54e951defe00662165635bec2bc499a3dd5"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample023-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample023-hidden.bpl",
+      "sha256": "c17e974a119b82245c40c052c6db28bf213cc7f8d482ebe2c1108c7be35c2b9f"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample024-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample024-hidden.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample025-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample025-hidden.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample026-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample026-hidden.bpl",
+      "sha256": "9456fb46be2d24bd2787f27e7363fcb08f727e2ad56fc18243528b8f5df3df69"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample027-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample027-hidden.bpl",
+      "sha256": "c6f20bbaace44493b3fffc12ba9832c1162257f516772851c94a483c4526c912"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample028-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample028-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample029-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample029-hidden.bpl",
+      "sha256": "e46e6088bcd036b1074f217a02fdb98920b0dce0f10bb949839bbe3a1d696e64"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample030-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample030-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample031-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample031-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample032-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample032-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample033-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample033-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample034-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample034-hidden.bpl",
+      "sha256": "cfc204c120bde37e0fc74de6602c3631a14d2881368b523f46d7e9e61cd489da"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample035-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample035-hidden.bpl",
+      "sha256": "7dc850a0a9158e719dbce33dc72688a6eb4d5ea47495205d6a8059a574dedde0"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample036-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample036-hidden.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample037-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample037-hidden.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample038-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample038-hidden.bpl",
+      "sha256": "22a73c29b48d00e53abb029eb287150cdf98c50f48d08458ceafa00aba8df327"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample039-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample039-hidden.bpl",
+      "sha256": "046838daa8776856dcb63a16baa36ce2179723645ca30772759bdd966fa38107"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample040-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample040-hidden.bpl",
+      "sha256": "12bec0e514d1ddf92b03d600f4384a52106f7301bddcc0599363f22a0b184ef8"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample041-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample041-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample042-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample042-hidden.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample043-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample043-hidden.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample044-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample044-hidden.bpl",
+      "sha256": "21c3710915b39920fbe0c968051ecf7d3b2aa9f9874a3ca0b6ea9bf42c44ecc9"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample045-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample045-hidden.bpl",
+      "sha256": "0f6a977a3ee24becd7cf50f3a8a0f2bce7718febc4889018b66c5c7ae95ce13d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample046-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample046-hidden.bpl",
+      "sha256": "12bec0e514d1ddf92b03d600f4384a52106f7301bddcc0599363f22a0b184ef8"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample047-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample047-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample048-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample048-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample049-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample049-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample050-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample050-hidden.bpl",
+      "sha256": "80ba16414382d847e0dc2618e4a47548ca95b05a4c4789fcff94ff6441df7c96"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample051-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample051-hidden.bpl",
+      "sha256": "a65c0939dbe59e8038f693baed3daceff35a03d09b593ee227f0c9673e02dca4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample052-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample052-hidden.bpl",
+      "sha256": "4e069620643825654a1487db2b10b18f80e680a38189b5e66ec2db533d9af500"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample053-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample053-hidden.bpl",
+      "sha256": "4c5f3a19ef5225f7fd1bd9b5c384afee32372b327552e6d179b09175f611892c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample054-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample054-hidden.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample055-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample055-hidden.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample056-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample056-hidden.bpl",
+      "sha256": "e7de90d21a8ee9d2c529fb57aaf235921c2f003ec823c0f86a5ec27bc78c745d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample057-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample057-hidden.bpl",
+      "sha256": "5ce849e123095a1627bf5b5c122c37ab211f460ec4bd59791bb850c740a8a7b4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample058-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample058-hidden.bpl",
+      "sha256": "a647ca016ea248af40aa078bc9c462a8a310da25d2ae853294482754cda88656"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample059-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample059-hidden.bpl",
+      "sha256": "b58299f37b8ecf95256c5624de79dd1f0566fa7dbf8759a73f5c82cdad4541de"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample060-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample060-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample061-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample061-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample062-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample062-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample063-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample063-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample064-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample064-hidden.bpl",
+      "sha256": "c3d105d11d5b616077167b037b857ad0ca3ed4381868ecddb0899baf84943828"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample065-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample065-hidden.bpl",
+      "sha256": "bf8f52047c190e8b7989914f36bc49bbef7e67c742d6618f36cb4811aa4fe372"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample066-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample066-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample067-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample067-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample068-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample068-hidden.bpl",
+      "sha256": "562535200daf36def6b986b531059707b8734a23234e2a81992cc8b174681731"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample069-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample069-hidden.bpl",
+      "sha256": "f302e472d464ea146ffc257aa30654229c04c21ccccb9685b2204525fc8648c0"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample070-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample070-hidden.bpl",
+      "sha256": "9312fb5ecd1c004b087bac63d1f2dfbf6f37a066c5f68f60a20331eac69b6154"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample071-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample071-hidden.bpl",
+      "sha256": "e15bef58bca5495fd8a8a828ba580b4d79c6e8bc21924d13573c93ee4c8afc28"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample072-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample072-hidden.bpl",
+      "sha256": "e7fa11e1c72823a988b3125ee88cb237723e37d4379373e183c1e7937ba4db9d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample073-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample073-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample074-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample074-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample075-front.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/compact-menu/sample075-hidden.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/compact-call-r01/compile-overrides.json",
+      "sha256": "5f79f0c1d7a4a3f6dd02f17e87f05b204fb256a437cc5afef86d33a127eb2298"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/compact-call-r01/compiled-build.ps1",
+      "sha256": "38cecc4f422c5da488cf8feaa3f923007f18b3de96c10bb0adb21397a2eef37e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/compact-call-r01/compiled-main.c",
+      "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/compact-call-r01/identity.json",
+      "sha256": "68be5a25c56b9ab09597ec42a38dff325177decc6cfb72c4380f102cb16a7272"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/compact-call-r01/native.txt",
+      "sha256": "fa5923924cc187f952f3aa12d6d242c74bc9c7aca142c4e850057b5434bbfe2b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-before-repeat/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-before-repeat/identity.json",
+      "sha256": "e8f6130ad1d6724c8cbb0d219de26eccbb39770313742ad6bef513e49dd2529d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-tour-repeat/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-tour-repeat/identity.json",
+      "sha256": "6702d875a1ae7abe6c8f8d7f79a131aab3c25f21acbea2b2b7b9775c1357ecea"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-tour/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-tour/identity.json",
+      "sha256": "e49fd95eb864f286ff805d44e0b7ad1d1036343813ef1603984e05db716694db"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-before-repeat/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-before-repeat/identity.json",
+      "sha256": "0d39f920f3998977f5f2c268e88f7bad8e77421933d50c4ba8a9807a0662dcad"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/compact-clean-native-death/front.bpl",
+      "sha256": "00027e1196276d3debcf9d5d44b46980a9f53bfb0319666514ebe76fc0fda380"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/compact-clean-native-death/report.json",
+      "sha256": "aef03adc5f8d63dd9e38bfc31bc91900dcbec4bdd976c3ce731f4ac148735d8b"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/compact-clean-native-death/source.bin",
+      "sha256": "93b5cbffcad029bf3d2435eb71d7c9517d9bc6ca7205262280e5663ea42e5c61"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/compact-clean-native/front.bpl",
+      "sha256": "584f786c2ee0ce4568ed550f6f6c6da08c9abdb1e0d21cd852cf6f313d606865"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/compact-clean-native/report.json",
+      "sha256": "56d95b2b08fdcd07d5d7cd79a62c3dc97cb1ee0d9b4c17723dfe70e47ec28415"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/compact-clean-native/source.bin",
+      "sha256": "2ad5b8d26cb36ccf024342f7f6d4c2a80d51fb574fb56166e32855dbdec02b5b"
+    },
+    {
+      "path": "reference/validation/source-audio-host.json",
+      "sha256": "c229c4382876d599ca46d7a96834e82e29eb2712bd7ebb73aaf142dd1f32f825"
+    },
+    {
+      "path": "reference/validation/source-contact-host.json",
+      "sha256": "84c0c1644d22a33539e218b919f9b753d0237a3d4f646f1dd708c68c92c7cde8"
+    },
+    {
+      "path": "reference/validation/source-dma-host.json",
+      "sha256": "05087d93ea935714f404439c29b1e3ea96d0056304976536bd453c459e1fe2ee"
+    },
+    {
+      "path": "reference/validation/source-object-host.json",
+      "sha256": "96dd2c0e0e03ae64b3e842d5a8c8fb0ef3a8784af8a2cf2c9171f3124ae0cb9e"
+    },
+    {
+      "path": "reference/validation/source-paint-host.json",
+      "sha256": "45bdc4c3c38b9bcd21f2901d04fc6b2defa56ec0193e86e1d3ea46e949381fd0"
+    },
+    {
+      "path": "reference/validation/source-score-host.json",
+      "sha256": "c2f8216a29764190fb79b26ae33d526ea5ac54c55877966a82002f557eccd1d2"
+    },
+    {
+      "path": "reference/validation/source-sprite-copy-host.json",
+      "sha256": "fd6e667fbb5f4b54bdccbe9e28e4f69476058ccda936e64da4be8b5ecd247318"
+    },
+    {
+      "path": "reference/validation/source-vic-host.json",
+      "sha256": "d0d19795235efbc1b1a23b526af2755639368775fffb218d039c1539068d8d22"
+    },
+    {
+      "path": "reference/validation/source-visibility-host.json",
+      "sha256": "bc2fe6f8316870f3086b6e38aafe9e9220c7afa57556f6d4b65a66e868862859"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "569a0262d995291fb99ecf1532ac6fb78d0e57a9ce53acd9f396687ef970b7f4"
+    },
+    {
+      "path": "reference/validation/vic-cache-host.json",
+      "sha256": "354da4bdbf56d85a1226f100e9451ac762e63733dda8173cdfa1dc81042caada"
+    },
+    {
+      "path": "reference/validation/view-mask-host.json",
+      "sha256": "008a27b544e219fda7b4ecb4ebe3c41e6e3b38320b27a4ff027551e8846d6098"
+    },
+    {
+      "path": "tools/audit_native_animation_frame.py",
+      "sha256": "3cbcf3b5b7dc3585ce6099f8680f9b6984f7d737ccb6935c064bfb13e43e2c0e"
+    },
+    {
+      "path": "tools/audit_native_menu_publication.py",
+      "sha256": "3619cae63ebded4d72f9720914eca608a694d0f1201fb2cbc84bc92328ed0425"
+    },
+    {
+      "path": "tools/audit_normal_source_clock.py",
+      "sha256": "fcf7ca8b3296cb340217ea62230f68deca30e68bbcc83741c3f0e3bb56182f53"
+    },
+    {
+      "path": "tools/build_c64_actors.py",
+      "sha256": "4761e14f38fe762840bb12e6da73de610f3b7b6185cfc8271b11319fd7fa9824"
+    },
+    {
+      "path": "tools/check_compact_boot.py",
+      "sha256": "798b92b0166347c53ff72af430c8f632ffc50de2b7cec2d8bba083415c0567bc"
+    },
+    {
+      "path": "tools/native_actor_continuations.py",
+      "sha256": "b1721f8fb468d77c70c57eb99fa56955586d5a0413970b3a41613f985cd922b1"
+    },
+    {
+      "path": "tools/verify_compact_actor_delivery.py",
+      "sha256": "76ec038b8b462299d5e25178315f82477dec7610a0661f7de89e544234680da4"
+    },
+    {
+      "path": "tools/verify_source_optimization.py",
+      "sha256": "b2eddd70113c1ee791030b143cf3aefb0c3cd7be8daa0bbd0c41b590406cc751"
+    },
+    {
+      "path": "tools/verify_source_world_delivery.py",
+      "sha256": "fa049fc19ba812defb08c470f38eff4100feada9a9ebb67495fd91295f7cb979"
+    }
+  ],
+  "open_gates": [
+    "Verified untouched 1984 edition",
+    "Full PAL real-time cadence and natural IRQ/input phase",
+    "Whole native stack high-water",
+    "Complete natural playthrough and physical A500"
+  ]
+}

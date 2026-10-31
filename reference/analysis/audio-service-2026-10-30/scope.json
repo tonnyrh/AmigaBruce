@@ -1,0 +1,76 @@
+{
+  "status": "diagnostic_only_audio_service_probe",
+  "production_changed": false,
+  "callback_sites": {
+    "1": "source_contact_rows_inner",
+    "2": "source_contact_driver",
+    "3": "bl_c64_contact",
+    "4": "bl_c64_tick_begin",
+    "0": "main renderer/wait"
+  },
+  "record_fields": [
+    "previous_tick_start",
+    "previous_tick_end",
+    "current_tick_start",
+    "current_tick_end",
+    "field_gap",
+    "previous_poll_site",
+    "current_site",
+    "previous_poll_context",
+    "current_context",
+    "source_row"
+  ],
+  "limitations": [
+    "Instrumentation changes field phase and adds CPU work",
+    "Only first16 misses retained",
+    "Poll sites bracket silent work; they do not identify every interior instruction"
+  ],
+  "inputs": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1"
+    },
+    {
+      "path": ".tmp/compact-delivery/math-main.c",
+      "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1"
+    },
+    {
+      "path": ".tmp/compact-delivery/math-build.ps1",
+      "sha256": "38cecc4f422c5da488cf8feaa3f923007f18b3de96c10bb0adb21397a2eef37e"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/probe/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/probe/c64_rooms.c",
+      "sha256": "0b4d1b37c8b357ce1efa3c03e5f25785af1894d7ad26862f614cb5a368bfb4ca"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/probe/main.c",
+      "sha256": "a5c253772f5f1121d19795cc56a7dd402cd74ea4f45d5a9a5c0c8da2be357751"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/probe/source_audio.h",
+      "sha256": "4452a4a3c01efc05386f21126d053a9e2a661410967f78515c9f8feee712cca9"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/build.ps1",
+      "sha256": "09355e2f07d8946289ce071dd2cff56d5bbd10010c2e051d35e6f02445a50980"
+    }
+  ]
+}

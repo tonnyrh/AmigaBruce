@@ -123,9 +123,13 @@ static unsigned short animation_checked_revision;
 static unsigned char *animation_cache;
 static BlC64BlockPainter block_painter;
 void bl_c64_set_block_painter(BlC64BlockPainter painter){block_painter=painter;}
-static void animation_cell_changed(unsigned short cell){
+#if defined(__GNUC__)
+__attribute__((noinline,noclone))
+#else
+__declspec(noinline)
+#endif
+static void animation_cell_changed_active(unsigned short cell){
     unsigned short item;unsigned char mismatch;
-    if(!animation_count)return;
     if((m[0x8c00 + cell]&127)>=0x61 && (m[0x8c00 + cell]&127)<=0x63)animation_fallback_dirty=1;
     if((item=animation_cell[cell])==65535)return;
     animation_fallback_dirty=1;
@@ -134,6 +138,14 @@ static void animation_cell_changed(unsigned short cell){
         if(mismatch)++animation_differences[item];else --animation_differences[item];
         animation_mismatch[cell]=mismatch;
     }
+}
+#if defined(__GNUC__)
+static inline __attribute__((always_inline))
+#else
+static __forceinline
+#endif
+void animation_cell_changed(unsigned short cell){
+    if(animation_count)animation_cell_changed_active(cell);
 }
 static void rebuild_animation_fallback(void){
     unsigned short cell;animation_fallback_count=0;animation_fallback_dirty=0;
@@ -333,6 +345,47 @@ static void source_transition(unsigned char sx,unsigned char sy,unsigned char ro
 #else
 #define SOURCE_INLINE static __forceinline
 #endif
+#if defined(__GNUC__)
+#define SOURCE_NOINLINE __attribute__((noinline,noclone))
+#else
+#define SOURCE_NOINLINE __declspec(noinline)
+#endif
+/* Color-only observer; all callers have already established index_ready and
+ * the source $D878-$DBE7 range. Metadata effects match source_written. */
+SOURCE_INLINE void source_color_written(unsigned short address){
+        unsigned short cell=address-0xd800;unsigned char color=m[address]&15;
+        if(color!=indexed_color[cell]){
+            unsigned char physical=(unsigned char)(((color&7)==0)!=((indexed_color[cell]&7)==0));
+            indexed_color[cell]=color;release_cell_cache(cell);
+            /* The active observer has no effect without either an animated
+             * glyph or a cached animation-cell membership. Keep its exact
+             * body for all cells for which it can change metadata. */
+            if(animation_count){
+                unsigned char code=m[0x8c00 + cell]&127;
+                if((code>=0x61 && code<=0x63) || animation_cell[cell]!=65535)
+                    animation_cell_changed_active(cell);
+            }
+            if(loaded==19 && flash_cells[cell]){
+                flash_changed=1;display_dirty=1;
+                if(physical)contact_cells[cell]=1;
+            }
+            else mark_cell(cell,physical,255);
+        }
+}
+/* Source $42A1-$42BA: eight stores per descending column, no IRQ/service
+ * seam. The original DEX leaves X=$FF,N=1,Z=0; A/Y/C/V/D/SP are unchanged.
+ * Entry guard in the generator retains the original path for X>$1C. */
+static SOURCE_NOINLINE void source_final_colors(void){
+    unsigned char column=x,row,value=a,ready=index_ready;
+    do{
+        unsigned short address=(unsigned short)(0xdaac+column);
+        for(row=0;row<8;row++){
+            m[address]=value;if(ready)source_color_written(address);
+            address+=40;
+        }
+    }while(--column<128);
+    x=column;z=0;n=1;
+}
 /* Native decoding of $17E2-$1817 and its $1A67 helper. Preserve source RAM,
  * source stack bytes, registers and terminating CMP flags, without paying a
  * generic native subroutine dispatch for every character in a room string. */
@@ -609,31 +662,59 @@ static unsigned short source_stack_return(void){
 }
 /* Decoded $26A0-$2702 and $52AD-$5309 hot loops. These retain scratch RAM,
  * stack, final flags and source self-modifying operands, not just pixels. */
-static void source_sprite_copy(void){
+static void source_sprite_copy_c(void){
     unsigned char remaining=63,wide=(unsigned char)!z,value;
     unsigned short dest=W(0x0e),first=W(0x26ab),left=W(0x26e4),right=W(0x26ee);
+    m[0x277f]=remaining;
     if(!wide){
         x=m[0xe0 + x];
         for(;;){
-            m[(unsigned short)(dest+y)]=m[(unsigned short)(first+x)];--remaining;--x;
+            m[(unsigned short)(dest+y)]=m[(unsigned short)(first+x)];--remaining;m[0x277f]=remaining;--x;
             if(x&128)break;
-            --y;m[(unsigned short)(dest+y)]=0;--remaining;
-            --y;m[(unsigned short)(dest+y)]=0;--remaining;--y;if(y&128)break;
+            --y;m[(unsigned short)(dest+y)]=0;--remaining;m[0x277f]=remaining;
+            --y;m[(unsigned short)(dest+y)]=0;--remaining;m[0x277f]=remaining;--y;if(y&128)break;
         }
     }else{
         value=m[0xe0 + x];c=value>>7;x=(unsigned char)(value*2-1);y-=2;
         for(;;){
-            m[(unsigned short)(dest+y)]=m[(unsigned short)(left+x)];--remaining;--x;--y;
-            m[(unsigned short)(dest+y)]=m[(unsigned short)(right+x)];--remaining;--x;
+            m[(unsigned short)(dest+y)]=m[(unsigned short)(left+x)];--remaining;m[0x277f]=remaining;--x;--y;
+            m[(unsigned short)(dest+y)]=m[(unsigned short)(right+x)];--remaining;m[0x277f]=remaining;--x;
             if(x&128)break;
-            --y;m[(unsigned short)(dest+y)]=0;--remaining;--y;
+            --y;m[(unsigned short)(dest+y)]=0;--remaining;m[0x277f]=remaining;--y;
             if(y&128){source_fault=0x2703;return;}
         }
     }
     y=(unsigned char)(remaining^63);
-    do{m[(unsigned short)(dest+y++)]=0;--remaining;}while(!(remaining&128));
+    do{m[(unsigned short)(dest+y++)]=0;--remaining;m[0x277f]=remaining;}while(!(remaining&128));
     m[0x277f]=remaining;a=0;z=0;n=1;sp+=2;
 }
+typedef struct {
+    unsigned short dest,first,left,right;
+    unsigned char xx,yy,wide,carry;
+} SourceSpriteCopy;
+typedef char SourceSpriteCopyLayout[(sizeof(SourceSpriteCopy)==12 && offsetof(SourceSpriteCopy,xx)==8)?1:-1];
+#if defined(__m68k__)
+extern void bl_sprite_copy(unsigned char *ram,SourceSpriteCopy *q);
+#endif
+/* Source pointers/operands and count scratch must not be overwritten by
+ * destination writes. Unusual low/straddling destinations use source code. */
+static unsigned char source_sprite_copy(void){
+    unsigned short dest=W(0x0e);unsigned char height=m[0xe0+x];
+    if(dest<0x8000 || dest>0xff00 || (!z && y!=(unsigned char)(height*3)))return 0;
+#if defined(__m68k__)
+    SourceSpriteCopy q;
+    q.dest=dest;q.first=W(0x26ab);q.left=W(0x26e4);q.right=W(0x26ee);
+    if(q.first<=0xff00 && q.left<=0xff00 && q.right<=0xff00){
+        q.xx=height;q.yy=y;q.wide=(unsigned char)!z;q.carry=c;
+        bl_sprite_copy(m,&q);x=q.xx;y=q.yy;c=q.carry;
+        a=0;z=0;n=1;sp+=2;return 1;
+    }
+    return 0;
+#else
+    source_sprite_copy_c();return 1;
+#endif
+}
+
 #if defined(__m68k__) && defined(__GNUC__)
 __attribute__((optimize("O2")))
 #endif
@@ -894,6 +975,7 @@ SOURCE_INLINE void source_contact_scan(SourceContactBatch *batch){
 #if defined(BL_SOURCE_PERF_TEST) && BL_SOURCE_PERF_TEST && (!defined(BL_C64_PROFILE) || !BL_C64_PROFILE)
 /* Separate native kernel controls fit in the benchmark image without
  * duplicating the portable references in the full53-fixture game image. */
+#if BL_C64_CONTACT_PREPARE_CASES
 static void source_prepare_image(unsigned char *out,unsigned char restore){
     static const unsigned short operands[8]={0x43bb,0x43bc,0x5381,0x5382,0x539b,0x539c,0x53b5,0x53b6};
     unsigned short i,at=0;
@@ -901,10 +983,12 @@ static void source_prepare_image(unsigned char *out,unsigned char restore){
     for(i=0;i<85;i++,at++){if(restore)m[0x4eec+i]=out[at];else out[at]=m[0x4eec+i];}
     for(i=0;i<8;i++,at++){if(restore)m[operands[i]]=out[at];else out[at]=m[operands[i]];}
 }
+#endif
 static void source_prepare_registers(unsigned short test,unsigned char classes,unsigned char stack){
     a=(unsigned char)(test*3);x=(unsigned char)(test*7);y=(unsigned char)(test*11);
     c=test&1;z=(test>>1)&1;n=(test>>2)&1;v=(test>>3)&1;d=classes?((test>>4)&1):0;sp=stack;
 }
+#if BL_C64_CONTACT_PREPARE_CASES
 static unsigned short source_prepare_selftest(void){
     static const unsigned short glyphs[8]={0xa000,0x0100,0x43bb,0x5381,0x539b,0x4eed,0xfff0,0x0040};
     static const unsigned char stacks[4]={0,1,254,255},ys[4]={0,38,254,255};
@@ -941,6 +1025,10 @@ static unsigned short source_prepare_selftest(void){
     }
     return errors;
 }
+#endif
+#endif
+#if defined(BL_SPRITE_COPY_TEST) && BL_SPRITE_COPY_TEST
+static unsigned short source_sprite_copy_selftest(void);
 #endif
 unsigned short bl_c64_contact_kernel_selftest(void){
     unsigned short test,i,errors=0;unsigned char before[70],expected[70];
@@ -1008,8 +1096,44 @@ unsigned short bl_c64_contact_kernel_selftest(void){
         if(bl_contact_classes4(m)!=wanted_mask)++errors;
     }
 #if defined(BL_SOURCE_PERF_TEST) && BL_SOURCE_PERF_TEST && (!defined(BL_C64_PROFILE) || !BL_C64_PROFILE)
+#if BL_C64_CONTACT_PREPARE_CASES
     errors+=source_prepare_selftest();
 #endif
+#if defined(BL_SPRITE_COPY_TEST) && BL_SPRITE_COPY_TEST
+    errors+=source_sprite_copy_selftest();
+#endif
+#endif
+    return errors;
+}
+#endif
+
+#if defined(__m68k__) && defined(BL_SPRITE_COPY_TEST) && BL_SPRITE_COPY_TEST
+static unsigned short source_sprite_copy_selftest(void){
+    static const unsigned char ys[8]={0,1,62,63,127,128,254,255};
+    unsigned char before[256],wanted[256],wr[13],gr[13],scratch,wanted_scratch,height;
+    unsigned short test,i,errors=0,dest,glyph;
+    for(test=0;test<BL_C64_SPRITE_COPY_CASES;test++){
+        dest=(unsigned short)(0xa000+((test>>2)&1));
+        for(i=0;i<1024;i++)m[0xa000+i]=(unsigned char)(i*37+test*19);
+        for(i=0;i<256;i++)m[0xff00+i]=(unsigned char)(i*23+test);
+        glyph=test<64?0xa200:test<128?dest:test<192?0x2770:0xff00;
+        height=(unsigned char)((test>>1)&31);
+        m[0x0e]=(unsigned char)dest;m[0x0f]=(unsigned char)(dest>>8);
+        m[0x26ab]=m[0x26e4]=m[0x26ee]=(unsigned char)glyph;
+        m[0x26ac]=m[0x26e5]=m[0x26ef]=(unsigned char)(glyph>>8);
+        m[0x277f]=(unsigned char)(test*13);scratch=m[0x277f];
+        source_prepare_registers(test,0,(unsigned char)(test*17));x=(unsigned char)(test&7);
+        m[0xe0+x]=height;z=(unsigned char)(test&1);y=z?ys[(test>>3)&7]:(unsigned char)(height*3);
+        for(i=0;i<256;i++)before[i]=m[dest+i];
+        source_sprite_copy_c();for(i=0;i<256;i++)wanted[i]=m[dest+i];wanted_scratch=m[0x277f];bl_c64_actor_registers(wr);
+        for(i=0;i<256;i++)m[dest+i]=before[i];
+        m[0x277f]=scratch;
+        source_prepare_registers(test,0,(unsigned char)(test*17));x=(unsigned char)(test&7);z=(unsigned char)(test&1);y=z?ys[(test>>3)&7]:(unsigned char)(height*3);
+        if(!source_sprite_copy())++errors;
+        bl_c64_actor_registers(gr);for(i=0;i<256;i++)if(m[dest+i]!=wanted[i])++errors;
+        if(m[0x277f]!=wanted_scratch)++errors;
+        for(i=0;i<13;i++)if(gr[i]!=wr[i])++errors;
+    }
     return errors;
 }
 #endif
@@ -1204,20 +1328,6 @@ static unsigned char source_direction(unsigned char input){
     return (unsigned char)(15^((input&BL_UP?1:0)|(input&BL_DOWN?2:0)|
         (input&BL_LEFT?4:0)|(input&BL_RIGHT?8:0)));
 }
-static void source_vic_row(unsigned short pointer,unsigned char row,unsigned char multi,unsigned char wide,unsigned long *hi,unsigned long *lo){
-    unsigned char j,b;unsigned short expanded;unsigned long high=0,low=0;
-    for(j=0;j<3;j++){
-        b=m[(unsigned short)(pointer+row*3+j)];
-        if(multi)b=(unsigned char)(((b|(b>>1))&85)*3);
-        if(wide){
-            expanded=b;expanded=(unsigned short)((expanded|(expanded<<4))&0x0f0f);
-            expanded=(unsigned short)((expanded|(expanded<<2))&0x3333);
-            expanded=(unsigned short)((expanded|(expanded<<1))&0x5555);expanded|=(unsigned short)(expanded<<1);
-            if(j==0)high=(unsigned long)expanded<<16;else if(j==1)high|=expanded;else low=(unsigned long)expanded<<16;
-        }else high|=(unsigned long)b<<(24-j*8);
-    }
-    *hi=high;*lo=low;
-}
 static unsigned char source_vic_same(unsigned char sprite,unsigned short pointer,unsigned char multi,unsigned char wide){
     unsigned char i,layout=(unsigned char)((multi?1:0)|(wide?2:0));
     if((vic_valid&(1<<sprite)) && vic_layout[sprite]==layout){
@@ -1240,10 +1350,25 @@ static unsigned char source_vic_same(unsigned char sprite,unsigned short pointer
     return 0;
 }
 static void source_vic_cache(unsigned char sprite,unsigned short pointer,unsigned char multi,unsigned char wide){
-    unsigned char row,i,layout=(unsigned char)((multi?1:0)|(wide?2:0));
-    for(i=0;i<63;i++)vic_bytes[sprite][i]=m[(unsigned short)(pointer+i)];
-    for(row=0;row<21;row++)source_vic_row(pointer,row,multi,wide,&vic_high[sprite][row],&vic_low[sprite][row]);
-    vic_layout[sprite]=layout;vic_valid|=(unsigned char)(1<<sprite);
+    unsigned char row,j,b,*raw=vic_bytes[sprite];unsigned short expanded;
+    unsigned long high,low,*out_high=vic_high[sprite],*out_low=vic_low[sprite];
+    /* One read per source byte; raw cache retains original bits before
+     * opacity/width conversion. Pointer wraps at16 bits; pad63 untouched. */
+    for(row=0;row<21;row++){
+        high=low=0;
+        for(j=0;j<3;j++){
+            b=m[(unsigned short)(pointer+row*3+j)];*raw++=b;
+            if(multi)b=(unsigned char)(((b|(b>>1))&85)*3);
+            if(wide){
+                expanded=b;expanded=(unsigned short)((expanded|(expanded<<4))&0x0f0f);
+                expanded=(unsigned short)((expanded|(expanded<<2))&0x3333);
+                expanded=(unsigned short)((expanded|(expanded<<1))&0x5555);expanded|=(unsigned short)(expanded<<1);
+                if(j==0)high=(unsigned long)expanded<<16;else if(j==1)high|=expanded;else low=(unsigned long)expanded<<16;
+            }else high|=(unsigned long)b<<(24-j*8);
+        }
+        *out_high++=high;*out_low++=low;
+    }
+    vic_layout[sprite]=(unsigned char)((multi?1:0)|(wide?2:0));vic_valid|=(unsigned char)(1<<sprite);
 }
 /* Opaque source VIC sprite pixels, including component sprites and sai.
  * The collision latch accumulates until $D01E is read. Raster/border timing
@@ -2007,9 +2132,41 @@ void bl_c64_prepare_paint(void){
         }
     animation_phase_valid=1;
 }
+/* A displayed frame must not mix the two background-work groups. Only
+ * verified cache rectangles are overlaid, using one source $64 phase.
+ * Whole covered words may bypass the background-copy budget; masked edge
+ * words still need their normal copy for the adjacent non-animated byte. */
+static void paint_animation_rect(unsigned char *planes,unsigned short scene_top,unsigned short item,unsigned char phase){
+    AnimationRect *rect=&animation_rects[item];BlC64Block request;
+    request.bitmap=planes;request.pixels=animation_cache+rect->offset+(unsigned long)phase*rect->size;
+    request.left=rect->left&~1;request.top=scene_top+rect->top*8;
+    request.width=((rect->right+1)&~1)-request.left;request.height=(rect->bottom-rect->top)*8;
+    request.first_mask=(rect->left&1)?0x00ff:0xffff;request.last_mask=(rect->right&1)?0xff00:0xffff;
+    block_painter(&request);
+}
+const unsigned long *bl_c64_animation_coverage(void){
+    unsigned short item,row;
+    if(!block_painter || !animation_phase_valid || !animation_count)return 0;
+    /* The caller has consumed this paint-part metadata before presentation.
+     * Reuse it as coverage scratch; no additional Chip/slow allocation. */
+    for(row=0;row<25;row++)part_priority_words[row]=0;
+    for(item=0;item<animation_count;item++)if(!animation_differences[item]){
+        AnimationRect *rect=&animation_rects[item];
+        unsigned short first=(rect->left+1)>>1,last=rect->right>>1;
+        unsigned long words=((1UL<<last)-1)^((1UL<<first)-1);
+        for(row=rect->top;row<rect->bottom;row++)part_priority_words[row]|=words;
+    }
+    return part_priority_words;
+}
+void bl_c64_paint_animation_frame(unsigned char *planes,long scene_top){
+    unsigned short item;unsigned char phase=m[0x64]&7;
+    if(!block_painter || !animation_phase_valid)return;
+    for(item=0;item<animation_count;item++)if(!animation_differences[item])
+        paint_animation_rect(planes,(unsigned short)scene_top,item,phase);
+}
 static void paint_animation_blocks(unsigned char *planes,unsigned short scene_top){
     PROFILE_START(bulk_start);
-    unsigned short item,row;unsigned char phase=m[0x64]&7,needed=0;BlC64Block request;
+    unsigned short item,row;unsigned char phase=m[0x64]&7,needed=0;
     profile[4]=0;
     if(!animation_started){
         animation_started=1;animation_ready=0;animation_part=0;
@@ -2021,16 +2178,11 @@ static void paint_animation_blocks(unsigned char *planes,unsigned short scene_to
         animation_ready=1;
     }
     if(!animation_ready || animation_part>=2)return;
-    request.bitmap=planes;
     for(item=0;item<animation_count;item++){
         AnimationRect *rect=&animation_rects[item];
         if(animation_done[item] || animation_differences[item] || rect->group!=animation_part)continue;
         animation_done[item]=1;
-        request.pixels=animation_cache+rect->offset+(unsigned long)phase*rect->size;
-        request.left=rect->left&~1;request.top=scene_top+rect->top*8;
-        request.width=((rect->right+1)&~1)-request.left;request.height=(rect->bottom-rect->top)*8;
-        request.first_mask=(rect->left&1)?0x00ff:0xffff;request.last_mask=(rect->right&1)?0xff00:0xffff;
-        {PROFILE_START(t);block_painter(&request);PROFILE_END(t,0);}
+        {PROFILE_START(t);paint_animation_rect(planes,scene_top,item,phase);PROFILE_END(t,0);}
         for(row=rect->top;row<rect->bottom;row++){part_words[row]|=rect->words;part_rows[row]=255;}
     }
     ++animation_part;
@@ -2146,11 +2298,25 @@ void bl_c64_debug_complete_before(long room){
         }
     }
 }
+SOURCE_INLINE unsigned short source_collected_mask(long room){
+    unsigned short table=(unsigned short)(0x4ce2 + room*2),p,bits=0,mask=1;
+    /* Presentation query only: same live records, terminator and13-bit cap.
+     * Read the little-endian pointer inline; advance a one-bit mask rather
+     * than repeating a variable68000 shift for each collected record. */
+    p=(unsigned short)(m[table]|((unsigned short)m[(unsigned short)(table+1)]<<8));
+    while(!(m[p]&128) && mask<8192){if(!m[p])bits|=mask;mask=(unsigned short)(mask<<1);p+=4;}
+    return bits;
+}
+/* One read-only projection call replaces20 cross-module calls. Records
+ * remain live, in room order; no progress cache or competing game state. */
 unsigned short bl_c64_collected(long room){
     unsigned short p,bits=0;unsigned char bit=0;
     p=W((unsigned short)(0x4ce2 + room*2));
     while(!(m[p]&128) && bit<13){if(!m[p])bits|=(unsigned short)(1u<<bit);++bit;p+=4;}
     return bits;
+}
+void bl_c64_collected_all(unsigned short *out){
+    unsigned short room;for(room=0;room<20;room++)out[room]=source_collected_mask(room);
 }
 static unsigned char object_base_pose(const BlGame *g){
     /* $2780 consumes the actor state BEFORE the next object pass ($1C0D/10).

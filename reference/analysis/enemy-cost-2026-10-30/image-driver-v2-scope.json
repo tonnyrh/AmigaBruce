@@ -1,0 +1,36 @@
+{
+  "production_changed": false,
+  "method": "Source-visible stores and same copy primitive; source CPU intermediate values are local until exit. No I/O observers inside original image driver.",
+  "inputs": [
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver/image_driver.h",
+      "sha256": "7458c78e7e3ae08852883ac43c019c09e05e2dad046a40f2288a07d564b3d59b"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2/image_driver.h",
+      "sha256": "445dca3cbe2482866e1a097618ad5245a2dfc1eda6725fa50b8165d5d23a18cf"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2-bridge.c",
+      "sha256": "14bfba64bb2e1362fdc3751510a989a1599ccabc6c56e02a2d3d7e86d94dc44e"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2-build.ps1",
+      "sha256": "20dacbdfe5b3ce9674884d8e323df9c2651002f7e19c9d2e1a527e433359a8a7"
+    }
+  ]
+}

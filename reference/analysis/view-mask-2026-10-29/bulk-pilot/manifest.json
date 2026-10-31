@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "60dafc9f3341ff1b5f7e63eb3dc230e91ca2425b63bd335001c71d119174dc75"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "0abd7c6531b3722d62ddbbc149e8cbd805cddc67551826502c41ff1907337ad1"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "status": "passed_native_loader_blank_then_complete_publication",
+  "room": 6,
+  "pid": 20040,
+  "normal_elf_sha256": "7def677b2066b687cec631188ada253f4c4f6d8b24db9227468dacbea7947bf9",
+  "method": "Owned fresh normal build; debug room/infinite/invincible; injected terminal death state from existing C64 death fixture. Loader flag and Copper list modes polled, then emulator paused for complete captures; no source state writes after death injection. Sampling does not prove every raster position.",
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "source_behavior": "$09BC-$09C1 clears DEN; $0B33 calls $50DB-$50E5 to set DEN after decompression; room init continues before native publication.",
+  "before": {
+    "loading": 0,
+    "epoch": 23,
+    "source_den": 16,
+    "copper": [
+      395840,
+      437824
+    ],
+    "modes": [
+      16896,
+      16896
+    ],
+    "fault": 0,
+    "cpu": "VPOS: 312 ($138) HPOS: 001 ($001) COP: $00060ac8\n  D0 00002778   D1 00000100   D2 00000001   D3 00000000 \n  D4 00000000   D5 0000D010   D6 00C4C422   D7 00C79C00 \n  A0 00C65F24   A1 00000000   A2 0000276D   A3 00C12ED4 \n  A4 00C12F66   A5 00C79A76   A6 00C65F24   A7 00C79A0A \nUSP  00C79A0A ISP  00C80000 \nSR=0000 T=00 S=0 M=0 X=0 N=0 Z=0 V=0 C=0 IM=0 STP=0\nPrefetch 0280 (AND) 0000 (OR) Chip latch 00000000\n00c1b386 0280 0000 ffff           and.l #$0000ffff,d0\nNext PC: 00c1b38c\n",
+    "custom": "A: CRA 00 CRB 08 ICR 00 IM 0a TA ffff (ffff) TB 0863 (0863)\n   PRA c0 [fc] PRB 00 [ff] DDRA 03 DDRB 00 SDR 00\n   TOD 002a66 (002a66) ALARM 000000 -- CYC=0000005CD4BF0800\nB: CRA 00 CRB 80 ICR e4 IM 04 TA ffff (ffff) TB ffff (ffff)\n   PRA ff [ff] PRB ff [ff] DDRA c0 DDRB ff SDR 00\n   TOD 31bf60 (31bf3e) ALARM 000000 --\nDEBUG: drive 0 motor off cylinder  0 sel no ro mfmpos 0/101344\nDEBUG: drive 1 motor off cylinder  1 sel no ro mfmpos 0/101344\nside 0 dma 0 off 9 word 0000 pt 00000000 len 4000 bytr 8000 adk 0000 sync 0000\nDMACON: $07c7 INTENA: $0000 ($0000) INTREQ: $23e8 ($23e8) VPOS: 104 ($068) HPOS: 001 ($001)\nINT: $0000 IPL: 0\nCOP1LC: $0006ae40, COP2LC: $000004c0 COPPTR: $0006aec8\nDIWSTRT: $2c81 DIWSTOP: $2cc1 DDFSTRT: $0038 DDFSTOP: $00d0\nBPLCON 0: $4200 1: $0000 2: $0000 3: $0c00 4: $0011 LOF=1/1 HDIW=0 VDIW=1\nAverage frame time: 519297.01 ms [frames: 10960 time: 1397047189]\n"
+  },
+  "blank": {
+    "loading": 1,
+    "epoch": 24,
+    "source_den": 0,
+    "copper": [
+      395840,
+      437824
+    ],
+    "modes": [
+      0,
+      0
+    ],
+    "fault": 0,
+    "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $0006aec8\n  D0 00004AA9   D1 0000DAA9   D2 000000A9   D3 00000001 \n  D4 000000A9   D5 00002FFC   D6 00002770   D7 00C78CF7 \n  A0 00C57D5C   A1 00C5852C   A2 00C65F24   A3 00C14CB0 \n  A4 00C14CB0   A5 00C79A7A   A6 0000009E   A7 00C79A04 \nUSP  00C79A04 ISP  00C80000 \nSR=0014 T=00 S=0 M=0 X=1 N=0 Z=1 V=0 C=0 IM=0 STP=0\nPrefetch 4e75 (RTS) 3f3c (MOVE) Chip latch 000000C1\n00c14f14 4e75                     rts  == $00c16394\nNext PC: 00c14f16\n",
+    "custom": "A: CRA 00 CRB 08 ICR 00 IM 0a TA ffff (ffff) TB 0863 (0863)\n   PRA c0 [fc] PRB 00 [ff] DDRA 03 DDRB 00 SDR 00\n   TOD 002ac4 (002ac2) ALARM 000000 -- CYC=0000005DA20ADA00\nB: CRA 00 CRB 80 ICR e4 IM 04 TA ffff (ffff) TB ffff (ffff)\n   PRA ff [ff] PRB ff [ff] DDRA c0 DDRB ff SDR 00\n   TOD 323322 (321349) ALARM 000000 --\nDEBUG: drive 0 motor off cylinder  0 sel no ro mfmpos 0/101344\nDEBUG: drive 1 motor off cylinder  1 sel no ro mfmpos 0/101344\nside 0 dma 0 off 9 word 0000 pt 00000000 len 4000 bytr 8000 adk 0000 sync 0000\nDMACON: $07c7 INTENA: $0000 ($0000) INTREQ: $23e8 ($23e8) VPOS: 004 ($004) HPOS: 001 ($001)\nINT: $0000 IPL: 0\nCOP1LC: $0006ae40, COP2LC: $000004c0 COPPTR: $0006aec8\nDIWSTRT: $2c81 DIWSTOP: $2cc1 DDFSTRT: $0038 DDFSTOP: $00d0\nBPLCON 0: $0000 1: $0000 2: $0000 3: $0c00 4: $0011 LOF=1/1 HDIW=0 VDIW=0\nAverage frame time: 518558.31 ms [frames: 11055 time: 1438213404]\n"
+  },
+  "publication": {
+    "loading": 0,
+    "epoch": 24,
+    "source_den": 16,
+    "copper": [
+      395840,
+      437824
+    ],
+    "modes": [
+      16896,
+      0
+    ],
+    "fault": 0,
+    "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $00060ac8\n  D0 00000013   D1 00000300   D2 00000003   D3 0000000F \n  D4 00000000   D5 0000001A   D6 00000031   D7 00000300 \n  A0 00062D30   A1 00000019   A2 000003FC   A3 00000036 \n  A4 00000002   A5 00062B50   A6 0000002E   A7 00C79A78 \nUSP  00C79A78 ISP  00C80000 \nSR=0000 T=00 S=0 M=0 X=0 N=0 Z=0 V=0 C=0 IM=0 STP=0\nPrefetch 675e (Bcc) 675e (Bcc) Chip latch 0000675E\n00c10170 b083                     cmp.l d3,d0\nNext PC: 00c10172\n",
+    "custom": "A: CRA 00 CRB 08 ICR 00 IM 0a TA ffff (ffff) TB 0863 (0863)\n   PRA c0 [fc] PRB 00 [ff] DDRA 03 DDRB 00 SDR 00\n   TOD 002b0e (002b0d) ALARM 000000 -- CYC=0000005E427F3600\nB: CRA 00 CRB 80 ICR e4 IM 04 TA ffff (ffff) TB ffff (ffff)\n   PRA ff [ff] PRB ff [ff] DDRA c0 DDRB ff SDR 00\n   TOD 328d9c (3289c6) ALARM 000000 --\nDEBUG: drive 0 motor off cylinder  0 sel no ro mfmpos 0/101344\nDEBUG: drive 1 motor off cylinder  1 sel no ro mfmpos 0/101344\nside 0 dma 0 off 9 word 0000 pt 00000000 len 4000 bytr 8000 adk 0000 sync 0000\nDMACON: $07c7 INTENA: $0000 ($0000) INTREQ: $23e8 ($23e8) VPOS: 004 ($004) HPOS: 001 ($001)\nINT: $0000 IPL: 0\nCOP1LC: $00060a40, COP2LC: $000004c0 COPPTR: $00060ac8\nDIWSTRT: $2c81 DIWSTOP: $2cc1 DDFSTRT: $0038 DDFSTOP: $00d0\nBPLCON 0: $4200 1: $0000 2: $0000 3: $0c00 4: $0011 LOF=1/1 HDIW=0 VDIW=0\nAverage frame time: 520489.03 ms [frames: 11129 time: 1498075604]\n"
+  },
+  "background_pixel_errors": 0,
+  "checked_pixels": 56320,
+  "pending_source_cells": [
+    708,
+    748
+  ],
+  "pending_pixel_errors": 24,
+  "pause_stability_checks": [
+    true,
+    true,
+    true
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/blank-source.bin",
+      "sha256": "7e08b994ebd337d8ec49dea8e9a73198c3cc8b1fbc4e87c0b4f20f7bc885da8d"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-background.bpl",
+      "sha256": "17654bfdf5c7f641f802e80119f50cd09f3f30774bd6b9d87441d9f3921ff914"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-background.png",
+      "sha256": "dd142b10829e7292f49e846c2323224933f664e0707b1c83a4ae4fe87e74e779"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-front.bpl",
+      "sha256": "6548da0276ce6345270165c9d4088cbdf515c35d0b5ec135570d3e4efb35aeba"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-front.png",
+      "sha256": "91505acecf46d8e4977428e02d26eb07ee0ae39f3baad724174d762992e9e714"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-queue.bin",
+      "sha256": "def53e583c61381f35aee84e9346f5f65d432fb266dd4730f9ac58bdd233ccdc"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-source.bin",
+      "sha256": "9e2eb1cd1de2b2b8234f165f4b0b0a9e633843a5800c2bc2e33ac416eba7766a"
+    }
+  ]
+}

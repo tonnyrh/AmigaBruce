@@ -1,0 +1,65 @@
+{
+  "status": "measured_normal_runtime_gate_passed",
+  "method": "Unmodified normal EXE, boundary-only paused scalar counter reads. No IPC/profile/framebuffer capture/source writes during interval. Stationary debug invincible/infinite-lives session.",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "original_irq_phase_verified": false,
+  "physical_a500": false,
+  "pid": 18536,
+  "room": 12,
+  "wall_seconds": 145.60899999999674,
+  "normal_exe_sha256": "9f4b2f7de024230282d8217ac7756ee5853db73a4209b4af31b5acade7ede0f8",
+  "normal_elf_sha256": "3ad2c2de6704cdec5a28206915177d87b172038a320de5da61bf1eec1d819e1c",
+  "before": {
+    "source_clock_elapsed": 1580,
+    "source_clock_missed": 151,
+    "source_audio_fields": 541,
+    "source_clock_paused_fields": 241,
+    "source_music_fields": 890,
+    "game_field_last": 2457,
+    "actor_logic_steps": 159,
+    "actor_loading_epoch": 2,
+    "source_fault": 0,
+    "source_dma_faults": 0,
+    "room": 12,
+    "active_actors": [
+      1,
+      0,
+      0
+    ],
+    "source_age": 541,
+    "menu_or_delay": [
+      0,
+      0
+    ]
+  },
+  "after": {
+    "source_clock_elapsed": 8522,
+    "source_clock_missed": 151,
+    "source_audio_fields": 7483,
+    "source_clock_paused_fields": 241,
+    "source_music_fields": 890,
+    "game_field_last": 9400,
+    "actor_logic_steps": 2247,
+    "actor_loading_epoch": 2,
+    "source_fault": 0,
+    "source_dma_faults": 0,
+    "room": 12,
+    "active_actors": [
+      1,
+      0,
+      0
+    ],
+    "source_age": 7484,
+    "menu_or_delay": [
+      0,
+      0
+    ]
+  },
+  "measured_fields": 6943,
+  "source_steps": 2088,
+  "fields_per_step": 3.325191570881226,
+  "missed_audio_ticks": 0,
+  "gate_no_missed_audio_ticks": true,
+  "full_realtime_accepted": false
+}

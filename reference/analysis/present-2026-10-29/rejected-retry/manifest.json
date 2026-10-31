@@ -1,0 +1,41 @@
+{
+  "status": "rejected_small_clock_gain_audio_regression",
+  "files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "53f97f733065ed1602704c8bbe394f49f11ec330b70f371caf99a0b793143c22"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "c567c25ae5eb9144f4206013298e7830fe2c0eab7b7a519b1e466e2f22be23af"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "ccea26c4b5be253d14d47409c7eaba77a9a02eed824ef4357dda83aa71797380"
+    },
+    {
+      "path": "test-source-performance.ps1",
+      "sha256": "155e4b1c437a5c3914d5024108b7070892daec242ae47ea56b8b48e475a06efc"
+    },
+    {
+      "path": "tests/scene_copy_bridge.c",
+      "sha256": "df9b6ca38ce2e4add8f94e6404bfc2d78de175b056841aa79a6f914c1ef52fdc"
+    },
+    {
+      "path": "test-scene-copy.ps1",
+      "sha256": "ed722f2bbe62d76fd6451c1a214e9119e7977bba9480f3f4c615fc0a3d70e5f5"
+    },
+    {
+      "path": "tools/verify_scene_copy.py",
+      "sha256": "a5213c670ce135d6ecd0e712191aadfa145cda357fe4c2c9fc0c2ca7b4f1109d"
+    }
+  ],
+  "baseline_fields": 1429,
+  "candidate_fields": 1415,
+  "baseline_audio_missed": 25,
+  "candidate_audio_missed": 44,
+  "source_steps": 360,
+  "baseline_presentations": 360,
+  "candidate_presentations": 422,
+  "production_changed": false
+}

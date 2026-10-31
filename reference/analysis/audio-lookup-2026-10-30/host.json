@@ -1,0 +1,27 @@
+{
+  "status": "passed_exact_existing_renderer_equivalence",
+  "cases": 200238,
+  "sorted_wave_keys": 66,
+  "frequency_keys": 52,
+  "source_sid_logic_changed": false,
+  "natural_playthrough": false,
+  "files": [
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "tools/verify_audio_lookup.py",
+      "sha256": "dc69f6ae25b9bc89261d9264b0fadcabfe8e976172494de0439d10f4416b68e7"
+    },
+    {
+      "path": "test-audio-lookup.ps1",
+      "sha256": "a9c794299c87898a72ac4b8fa8a6adeff499dc98c0597bcdecfc7334382a726e"
+    }
+  ],
+  "candidate_sha256": "e3a6d27c20c34b9b8da418eb5e89b98e5c2662d373206d33fe8366903fcdf6e8"
+}

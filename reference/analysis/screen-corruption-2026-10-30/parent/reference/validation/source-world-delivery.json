@@ -1,0 +1,988 @@
+{
+  "date": "2026-10-30",
+  "status": "scoped_complete_audio_boundary_acceptance_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_controls": 3034,
+  "integrated_scenarios": 5,
+  "source_instructions": 7055873,
+  "native_controls": 53,
+  "native_replay_loops": 1200,
+  "largest_chip_block": 52632,
+  "realtime_gate_passed": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "full_original_parity": false,
+  "converted_jsrs": 444,
+  "pairs": [
+    {
+      "before_fields": 9044,
+      "after_fields": 8965,
+      "before_missed": 131,
+      "after_missed": 126,
+      "slow_gain": 13248
+    },
+    {
+      "before_fields": 9046,
+      "after_fields": 8956,
+      "before_missed": 127,
+      "after_missed": 121,
+      "slow_gain": 13248
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "79c09ce3150db6d61ffd0eb78ff3de31bfc27166f3d604512e21478e518a6697"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "862bf7cabaa7148a3fb7fa2ad4d3e63134f31d14944cb72ac0408b585d433618"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "abc35cc00bb9d87b0860c8ba7204610d04f3343be70ed1bbc9b8c4fa93bf9291"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "79c09ce3150db6d61ffd0eb78ff3de31bfc27166f3d604512e21478e518a6697"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/AUDIO_SERVICE_BOUNDARY.md",
+      "sha256": "1e6236a51fd6ee21c9dd01b2fed135fe173ee7c2c015c3a9170dd776ae95186c"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
+      "sha256": "eadb17a59e0139b4f73590fb6fcaa386d2fe9e4fe200df17c37889bdcccda7da"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/boundary-scope.json",
+      "sha256": "4a52df66634118a6a1bf6cb717b862a33219f8545afadba6231ce2d92c58b6ff"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/diagnosis.json",
+      "sha256": "487d2ec9f4e6c2394a8538f2d334952a3f6ccadb47de6840639302b389fddab3"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/normal-boot.json",
+      "sha256": "dc4682e631f00f2f8019a1ed07a131920764ee08c94b149407c85836ac1e10d8"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/parent/manifest.json",
+      "sha256": "104e46a9028ffc5ae313846220e90c76ca44be1623444eee1aff505069a1776e"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/parent/reference/validation/compact-actor-delivery.json",
+      "sha256": "18615549a9e79c8e813293e8e95cd4f3240216949727cb94085bf4a519ac16fa"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/source-audio-contract.json",
+      "sha256": "7c816b6a396ec8869dbc44bf699ea296081a67b0fa68ed9b78f68c2593370af0"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-kernels.json",
+      "sha256": "3b7b137d8cae9ae0d5bf5fb16ec7c72d532de769228f0b5e330cafc2218779bc"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change00-complete.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change01-complete.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change02-complete.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change03-complete.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change04-complete.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change05-complete.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change06-complete.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change07-complete.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change08-complete.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change09-complete.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/change10-complete.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/menu-source-0.bin",
+      "sha256": "78f17fb6e35311379026e344ad26cc1c7e5157619eff437e15637ce8868a2d91"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/menu-source-1.bin",
+      "sha256": "78f17fb6e35311379026e344ad26cc1c7e5157619eff437e15637ce8868a2d91"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/menu-source-2.bin",
+      "sha256": "3f6ada0c89cba27469b1d38de805902af564901fa031feb460f0a5efb7080179"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/report.json",
+      "sha256": "f93ae4e85fc56e67dbd401461259f39eb46e2d15fa0e97d547a8cb02f87f2e8f"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample000-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample000-hidden.bpl",
+      "sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample001-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample001-hidden.bpl",
+      "sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample002-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample002-hidden.bpl",
+      "sha256": "c63a123d58b157be33c154198e8c6145b856d8eb0acc4bc7ffca14c616299541"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample003-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample003-hidden.bpl",
+      "sha256": "41d4b3395eb448a47390a1ca6dbe7ab1743f12fc53a776edbcb7e161b77589fe"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample004-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample004-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample005-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample005-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample006-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample006-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample007-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample007-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample008-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample008-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample009-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample009-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample010-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample010-hidden.bpl",
+      "sha256": "0f3328dbe4a2ad8ef60233074941c54e951defe00662165635bec2bc499a3dd5"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample011-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample011-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample012-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample012-hidden.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample013-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample013-hidden.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample014-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample014-hidden.bpl",
+      "sha256": "dd27755187e712830fc17eb4a136dcc89a44b0c12c218d46e4dd4af219f8390c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample015-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample015-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample016-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample016-hidden.bpl",
+      "sha256": "0f3328dbe4a2ad8ef60233074941c54e951defe00662165635bec2bc499a3dd5"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample017-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample017-hidden.bpl",
+      "sha256": "a81c2605e42e75f0e39bd3743f0088132fba4ad4910d9cdeb7c2579ef5438cf2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample018-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample018-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample019-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample019-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample020-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample020-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample021-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample021-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample022-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample022-hidden.bpl",
+      "sha256": "cfc204c120bde37e0fc74de6602c3631a14d2881368b523f46d7e9e61cd489da"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample023-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample023-hidden.bpl",
+      "sha256": "a81c2605e42e75f0e39bd3743f0088132fba4ad4910d9cdeb7c2579ef5438cf2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample024-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample024-hidden.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample025-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample025-hidden.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample026-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample026-hidden.bpl",
+      "sha256": "9456fb46be2d24bd2787f27e7363fcb08f727e2ad56fc18243528b8f5df3df69"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample027-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample027-hidden.bpl",
+      "sha256": "c6f20bbaace44493b3fffc12ba9832c1162257f516772851c94a483c4526c912"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample028-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample028-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample029-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample029-hidden.bpl",
+      "sha256": "6667dc635669965dc248f0c3b9ece548297fd297856cd5ad5b38e742b5406caf"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample030-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample030-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample031-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample031-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample032-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample032-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample033-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample033-hidden.bpl",
+      "sha256": "e3559ea2386fb001c00f884b7b7dbbd04802712c9cd1ef3e86e64c79de87b1d3"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample034-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample034-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample035-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample035-hidden.bpl",
+      "sha256": "d1fa7a093576fc29b39aea4349a5f802a405fb03e260cbc1091a9b75ef1500e5"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample036-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample036-hidden.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample037-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample037-hidden.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample038-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample038-hidden.bpl",
+      "sha256": "f8a0ab3fa4045e0e2104cb8dfa155e989aff9834983a8d28af54ae6d03bf802c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample039-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample039-hidden.bpl",
+      "sha256": "046838daa8776856dcb63a16baa36ce2179723645ca30772759bdd966fa38107"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample040-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample040-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample041-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample041-hidden.bpl",
+      "sha256": "665632c0035bafbb52c53535b4e18cf35874176f2353b2efcc0b1baa84cde869"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample042-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample042-hidden.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample043-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample043-hidden.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample044-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample044-hidden.bpl",
+      "sha256": "2d42b7b4e0f6016bd726e20c755fdd1bf49d34eef77028d049a2da93dd50f6ad"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample045-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample045-hidden.bpl",
+      "sha256": "a65c0939dbe59e8038f693baed3daceff35a03d09b593ee227f0c9673e02dca4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample046-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample046-hidden.bpl",
+      "sha256": "581f1dc868d12af59cfce3f5a6ebff9d9e4346109ecbf98b49521039f0d41333"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample047-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample047-hidden.bpl",
+      "sha256": "c2b9fbbcdbaeed6d72b874a3068155d35b8f18019cc088e522acf096051c49f4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample048-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample048-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample049-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample049-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample050-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample050-hidden.bpl",
+      "sha256": "6bd82badcbbe61fad62441eab90df2dc54f6a12aae948278f42252152fc653e9"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample051-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample051-hidden.bpl",
+      "sha256": "a839bf4743d11d96be2c0fab7ce81fb26c93ad20c1b46303e4b00403da15358f"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample052-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample052-hidden.bpl",
+      "sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample053-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample053-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample054-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample054-hidden.bpl",
+      "sha256": "412a393e95b4968b653ca4f3cfbdf47028f7485bb58e4139732a9ac87736cde4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample055-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample055-hidden.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample056-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample056-hidden.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample057-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample057-hidden.bpl",
+      "sha256": "7d3e0298fc0d66e9fd1ceeba3d4cf6f347b4643abeefa586b1e54191f6ef6fa7"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample058-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample058-hidden.bpl",
+      "sha256": "f555ee22bc7be2f2479aa34f9b7be1363c5cf5fa9f46031b7230c27fca1fb7bf"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample059-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample059-hidden.bpl",
+      "sha256": "a647ca016ea248af40aa078bc9c462a8a310da25d2ae853294482754cda88656"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample060-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample060-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample061-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample061-hidden.bpl",
+      "sha256": "a239361927542679a733ff0a62784f60b004f24088f255c38e23a07675eeced5"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample062-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample062-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample063-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample063-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample064-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample064-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample065-front.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample065-hidden.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample066-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample066-hidden.bpl",
+      "sha256": "d42966213759274e6526e4ade7f80f815227a0b9b7bb7adf795ebbf1793b24a8"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample067-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample067-hidden.bpl",
+      "sha256": "6dd599f361c2ba318c82edf7b4468f97581c8d70154a24d6f9ade51cee1db4d4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample068-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample068-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample069-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample069-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample070-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample070-hidden.bpl",
+      "sha256": "562535200daf36def6b986b531059707b8734a23234e2a81992cc8b174681731"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample071-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample071-hidden.bpl",
+      "sha256": "3dccd8b9a863b473ff26f6bbad8389e0434d656fd5e8360f9c458da34b5b0a26"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample072-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample072-hidden.bpl",
+      "sha256": "2b8572f67d9ff390efbe50052873935240bc7e3aa65269c90aa3eb2c83191c01"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample073-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample073-hidden.bpl",
+      "sha256": "059db86bf6bed54489e00312faf6205d137c7ad0fd0c7725988c664def322894"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample074-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample074-hidden.bpl",
+      "sha256": "1c21c01ed95db8b1147bef8e6848d7454d87ff2af7806d209dcadb759319fa48"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample075-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample075-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample076-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample076-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample077-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/audio-boundary-menu/sample077-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-r01/bruce_test.adf",
+      "sha256": "55c6d79064784b18edfb0daf9e44887c3200821ebc455c596124f75fce197d8f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-r01/bruce_test.elf",
+      "sha256": "81d2e9c37a8bd9c1dd99a0e1791772911c71be8a1185c8dce993a5138dc167ff"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-r01/bruce_test.exe",
+      "sha256": "d49bb6aae703cec9100a092e79dee24ba31571ad0e7249614d03b6a17e5ed334"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-r01/identity.json",
+      "sha256": "2025ccd5d7327d957f11867d673aea5891add76ea7f6dfcdf3678f2aedc8e6e7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-r01/native.txt",
+      "sha256": "c96c2d574b6a40785956c9067645d77cfe02e24a80fc8cf1a0565f0e5d910579"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-tour/bruce_test.adf",
+      "sha256": "502fb0adce2a0931618bcb010ae56aeaf8219b0a9e51b5bd81acdc288921d7e0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-tour/bruce_test.elf",
+      "sha256": "ea1ca6eea84453cd7a576192fb4078c436a9b0d83885a52b4bacee31df3678f0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-tour/bruce_test.exe",
+      "sha256": "97ab6b9a7bd55d52e447746f7043c893098c6aeedf4aa0388b57f8b7e0e41f22"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-tour/build.ps1",
+      "sha256": "e6e098b08aa3239152fb0e6236f04ef5a5806e4800b83d6df7d030e57eb1b7be"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-tour/compiled-main.c",
+      "sha256": "ed6534587dc3d2f00ff570ca9338eb006f4977fd71013dc5ee5a82e6094d75ee"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-tour/controller-generation.json",
+      "sha256": "587e5c03bce4252f425ca33068a6d1f4f2785d28217b0cda77aa85100ae9d902"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-tour/identity.json",
+      "sha256": "7a90aa91e12876bae484250f27607a3c159d27235ce27e61ae39eff51a1321c0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-after-tour/native.txt",
+      "sha256": "3522f983de866f4f284d2a158fdcfcc37ba86a1f89e814027946a8f8dc64b49b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-r01/bruce_test.adf",
+      "sha256": "f2472a54e1a1e764f90dab4bf312536dfa5f6440275e0c62690b6d846c9026fb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-r01/bruce_test.elf",
+      "sha256": "21dc0bddda14a3fb85f2c4cd06c54486e6fbc11e11371f6926b6ca8d798fc5fe"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-r01/bruce_test.exe",
+      "sha256": "653ed66248da682190d78ec77e9b47fef16bf2cde6b4eeceed528efe3b5cd558"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-r01/identity.json",
+      "sha256": "f8c027f23583e110ba10a316b7e39c9161a4c83cfcec6fc655675b4d0ba1964e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-r01/native.txt",
+      "sha256": "54b942faa28547c040650aa4cd776edef07dc786c7722cf3081b265072c0a40f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-tour/bruce_test.adf",
+      "sha256": "b0db8e2c1a8eaf99064c0d116fd0da2ec15b5bdbccc75607d1c2cb7fb2763f8d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-tour/bruce_test.elf",
+      "sha256": "645b3a3c069ae0da7a9bcbe91c8faf93376ff0acf66cae04595b169f66480df5"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-tour/bruce_test.exe",
+      "sha256": "1f1cdea28c5a23a46b2601c8a08ad32662a4fa5be63dea9868a93292bb68aec4"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-tour/build.ps1",
+      "sha256": "00cfc13a83582715f9c5bf759503cc592fb26e734ad09d528393fcdfe7295485"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-tour/compiled-main.c",
+      "sha256": "a14b5bd56cd33038cde892ed5ba03064592215b2aa9b76f4ba87d3d03e3e314b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-tour/controller-generation.json",
+      "sha256": "587e5c03bce4252f425ca33068a6d1f4f2785d28217b0cda77aa85100ae9d902"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-tour/identity.json",
+      "sha256": "d5a9ac51707b3b66001ebf250f193318fcdd77ea02800d8d227069be7f2fd9a0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-before-tour/native.txt",
+      "sha256": "add5c241e31825caa2a3e479f613739699a4b77884e552c8a44e5293be08d123"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-delivered-r01/bruce_test.adf",
+      "sha256": "7a757045aabc4b8fa335c2bc7149a1aa1d3ac2adc1017b6f1c80712dc6ef2f24"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-delivered-r01/bruce_test.elf",
+      "sha256": "81d2e9c37a8bd9c1dd99a0e1791772911c71be8a1185c8dce993a5138dc167ff"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-delivered-r01/bruce_test.exe",
+      "sha256": "8472c214b787ee936716056391813d7955db8192ae1f4f9cedf28b09045df041"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-delivered-r01/identity.json",
+      "sha256": "cc67494070aa4f27449f05f21fc7ea8cc95129ceb76bd44b51bc026cc77db384"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-boundary-delivered-r01/native.txt",
+      "sha256": "07db2a859781893f5e454ff061e08472117a7a08138a4373b07492f69e5b09eb"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/audio-boundary-native-death/front.bpl",
+      "sha256": "f63f3f84926fc97074c3ae565380380a06da1d37f28bf5d33fba4fc9a78519cb"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/audio-boundary-native-death/report.json",
+      "sha256": "6a1a05ea271547c263ac15b0c146db3a6e4c74095a62bcfa970ea15e605b4caf"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/audio-boundary-native-death/source.bin",
+      "sha256": "0548162ed14321e3e79170bcc839cb781b218a9c261e56047dfedbb4cf0c4af6"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/audio-boundary-native/front.bpl",
+      "sha256": "0b154385259a672f36e9eb4c8b04279325dd0e4d5de11a270c6952c40d4266b5"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/audio-boundary-native/report.json",
+      "sha256": "012c74a874914542f6bfca58e7c9cb213d33e1cde1582327d438e380870bc828"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/audio-boundary-native/source.bin",
+      "sha256": "0f644524814abb62681c9ba1809af6d810113d611ee4cd29b2cb5cf61b24513e"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "27ce8a0912f97d4a3e88d6adf1bbdea9a7fbdbf0a65a52b1f2bf76bda025e9df"
+    },
+    {
+      "path": "tools/audio_boundary_parent.py",
+      "sha256": "e0f2309595f7186ead766538b6a3c43d08fee105f53b7332ad68cac883dbd460"
+    },
+    {
+      "path": "tools/freeze_audio_boundary_parent.py",
+      "sha256": "57b06e4360312cc3e39d32a64a0592d14162216afa9d5171749ce0a67c003988"
+    },
+    {
+      "path": "tools/verify_audio_boundary_delivery.py",
+      "sha256": "9dfa57356d8d1d8121eb61b240ae4e591dfa3bab17d4e556862d8521bb888ad0"
+    },
+    {
+      "path": "tools/verify_compact_actor_delivery.py",
+      "sha256": "c7eee4e6c391ddd2b3a44589a138f89f1dd244dfa23e9a36b2dbe39f6b6f39f3"
+    },
+    {
+      "path": "reference/validation/compact-actor-delivery.json",
+      "sha256": "fcb6440c23d3fd7e114d72b0f5737423b0f2493fccb78dc18524919b12a39fac"
+    }
+  ],
+  "open_gates": [
+    "Verified untouched 1984 edition",
+    "Full PAL real-time cadence and natural IRQ/input phase",
+    "Whole native stack high-water",
+    "Complete natural playthrough and physical A500"
+  ],
+  "audio_boundary": {
+    "pairs": {
+      "r01": [
+        {
+          "fields": 1414,
+          "missed": 6,
+          "source_steps": 360
+        },
+        {
+          "fields": 1423,
+          "missed": 0,
+          "source_steps": 360
+        }
+      ],
+      "tour": [
+        {
+          "fields": 8892,
+          "missed": 135,
+          "source_steps": 2400
+        },
+        {
+          "fields": 8972,
+          "missed": 9,
+          "source_steps": 2400
+        }
+      ]
+    },
+    "method": "Existing audio service polled after complete field calls; same game-field count; SID guards/order/data unchanged"
+  }
+}

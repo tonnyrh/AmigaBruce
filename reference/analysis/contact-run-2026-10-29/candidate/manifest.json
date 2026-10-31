@@ -1,0 +1,31 @@
+{
+  "status": "rejected_no_speed_gain",
+  "files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "b4631f1e14cd3b6db6a3bc94c50f7ac5faa2fa515467dd92b36618eec009a175"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "d18d7179a2feb809211219ef84ad5436fc5734b62b6e4cca8d0db0e59a1ad085"
+    },
+    {
+      "path": "amiga/contact_run.s",
+      "sha256": "b25381c619a513e5d437a8c9d44bdf95b5d9a82ada182b3f3acb04fbf1b0c85d"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "f0ed76832b318568026134eb79913a36d8f92c084544ab1569a0e141165a00f6"
+    },
+    {
+      "path": "test-source-performance.ps1",
+      "sha256": "588cd94a25d3dfc37441b8b43346e536b9e70aeaa16149cc4b573c17baa783d7"
+    }
+  ],
+  "baseline_fields": 1428,
+  "candidate_fields": 1440,
+  "baseline_row_mean": 15.343,
+  "candidate_row_mean": 16.008,
+  "scoped_native_cases": 710,
+  "scoped_native_errors": 0
+}

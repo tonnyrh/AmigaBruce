@@ -1,0 +1,232 @@
+{
+  "status": "verified_isolated_irq_context_candidate",
+  "production_changed": false,
+  "source_cases": 3352,
+  "source_instructions": 479308,
+  "compiler_flags": [
+    "-m68000",
+    "-Os",
+    "-g",
+    "-nostdlib",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-tree-loop-distribute-patterns",
+    "-fomit-frame-pointer",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-mshort",
+    "-DBL_AUTOTEST=0",
+    "-fstack-usage"
+  ],
+  "compiler_builds": [
+    {
+      "object": {
+        "path": "reference/analysis/irq-input-2026-10-30/compiler/before.o",
+        "sha256": "be176f6c246c3f16e47c2a0ca56e4f688ae245a7e0f13b0ad311c08c1eb6e02a"
+      },
+      "sections": {
+        ".text": 176640,
+        ".data": 3,
+        ".bss": 195424,
+        ".rodata": 42185
+      },
+      "stack_file": {
+        "path": "reference/analysis/irq-input-2026-10-30/compiler/before.su",
+        "sha256": "dfaf4a1656653a534d8a8f06a96bf2d2dd2eec83781bee14738fed4d6e492989"
+      },
+      "selected_stack_frames": [
+        {
+          "function": "audio_driver",
+          "local_bytes": 48,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "actor_code",
+          "local_bytes": 88,
+          "classification": "dynamic,bounded"
+        }
+      ]
+    },
+    {
+      "object": {
+        "path": "reference/analysis/irq-input-2026-10-30/compiler/candidate.o",
+        "sha256": "51b9a0c11d113b11e3e38a1ed1ef60378994fe533af752f4e4b3fec165a49a38"
+      },
+      "sections": {
+        ".text": 180346,
+        ".data": 3,
+        ".bss": 195426,
+        ".rodata": 42221
+      },
+      "stack_file": {
+        "path": "reference/analysis/irq-input-2026-10-30/compiler/candidate.su",
+        "sha256": "d748cfc8b56467cedcf8810ddac633ed109bd7df4ba0353d618792ee7643ea28"
+      },
+      "selected_stack_frames": [
+        {
+          "function": "irq_context_push",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "irq_context_pop",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "irq_context_frame",
+          "local_bytes": 6,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "irq_context_rts",
+          "local_bytes": 8,
+          "classification": "static"
+        },
+        {
+          "function": "irq_context_read",
+          "local_bytes": 2,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "irq_context_gate",
+          "local_bytes": 4,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "irq_context_voice",
+          "local_bytes": 50,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "audio_driver",
+          "local_bytes": 48,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "irq_context_next_band",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "actor_code",
+          "local_bytes": 88,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "bl_irq_context_prepare",
+          "local_bytes": 16,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "bl_irq_context_seed",
+          "local_bytes": 4,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_run",
+          "local_bytes": 46,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "bl_irq_context_copy",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_regs",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_pc",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_fault",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_gates",
+          "local_bytes": 0,
+          "classification": "static"
+        }
+      ]
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "d2a74039ef2a05a746000edbfc4b21e49276422b520f58ea2d61b39b8a55a140"
+    }
+  ],
+  "full_stack_high_water_verified": false,
+  "realtime_accepted": false,
+  "natural_playthrough": false,
+  "limits": [
+    "Unlinked object includes public test bridge, not a normal HUNK footprint",
+    "Compiler stack values are local frames, not maximum whole-call-chain use",
+    "Host source proof; candidate has not executed in a native Amiga test",
+    "Explicit PC/pin/raster fixtures, not original interrupt timing; title/$152C music state remains open"
+  ],
+  "artifacts": [
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "docs/IRQ_CONTEXT_CANDIDATE.md",
+      "sha256": "515626a7f6bf640729bfdf27182a13a21e83c5425bf7c29e621deaaaac6c522f"
+    },
+    {
+      "path": "reference/analysis/irq-input-2026-10-30/candidate/input_slot.h",
+      "sha256": "9c6602b7c63e70f1f1649a2c2043b7a5f0a3a2497f45b7ff74de62918bcc5571"
+    },
+    {
+      "path": "reference/analysis/irq-input-2026-10-30/candidate/irq_context.h",
+      "sha256": "b5ef39c535824788ad42882f95404c2cdf6b07ab09a21f2e5c14c0bf1bb57123"
+    },
+    {
+      "path": "reference/analysis/irq-input-2026-10-30/game-irq-disassembly.txt",
+      "sha256": "ff7eb52a40a493d9399b9db5f5e4fbadca25e051ff03be098660430c7f2f78d0"
+    },
+    {
+      "path": "reference/analysis/irq-input-2026-10-30/irq-context-candidate.json",
+      "sha256": "298bd6606758ca8080715b880cbf5c1e92eb9b60800ba2f1964b33ba49faf9d0"
+    },
+    {
+      "path": "test-source-irq-context.ps1",
+      "sha256": "41cf6e82779ccf6ec217b2a674f4be17e3a38b8c41fe9b747f39165a645d3f5c"
+    },
+    {
+      "path": "tests/source_irq_context_bridge.c",
+      "sha256": "cf9abb11cbd3c4790853a8371caaf1e70807682c197f3f7a0270e6b2505f09d6"
+    },
+    {
+      "path": "tools/audit_irq_context_candidate.py",
+      "sha256": "5fe99fdf67c644b84ef7611595e9cdddd55c605a23a0266078908a3d24e7704d"
+    },
+    {
+      "path": "tools/verify_source_irq_context.py",
+      "sha256": "462b3f7da7946d1796c17013f09ee6aa67fd7d356238e2e50bb300961af1c0d1"
+    }
+  ]
+}

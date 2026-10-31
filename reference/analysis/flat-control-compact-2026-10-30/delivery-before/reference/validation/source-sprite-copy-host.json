@@ -1,0 +1,33 @@
+{
+  "status": "passed_original_sprite_copy_bytes",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "checks": 1536,
+  "instructions": 373464,
+  "brk_controls": 312,
+  "alias_controls": 512,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "scope": "Full64KiB/register/return comparisons; injected widths/heights, byte Y/SP, source/count/destination aliases and wrapping sources",
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
+    },
+    {
+      "path": "tools/verify_source_sprite_copy.py",
+      "sha256": "12a6b8598c1e2d5ba5edf4ce19f4975de65c6542b42959a8a799914e561fc17a"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    }
+  ]
+}

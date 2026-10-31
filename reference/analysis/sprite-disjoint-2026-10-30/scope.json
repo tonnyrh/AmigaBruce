@@ -1,0 +1,47 @@
+{
+  "status": "isolated_disjoint_sprite_candidate",
+  "production_changed": false,
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "artifacts": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/before/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/before/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/before/sprite_copy.s",
+      "sha256": "13d8de7f778bfb73a1410e7ec2997cc79790969a4a5768c67e4c70bac17c968c"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/candidate/c64_rooms.c",
+      "sha256": "ed749230a026524395c24bec4f29920c1f4bc1e56f4adddd79f198ad1dd9b89c"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/candidate/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/candidate/sprite_copy.s",
+      "sha256": "7a07b3c3795864c0b832e45eefe23a60b6e9a52431bc149bbdad51a4fd22b450"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/bridge.c",
+      "sha256": "dcfc87780ce785b490dd0867d8ce67470e5643cefd3fb0f5ee507371a67c4ae9"
+    }
+  ]
+}

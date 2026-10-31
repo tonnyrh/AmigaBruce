@@ -1,0 +1,198 @@
+{
+  "status": "verified_private_native_continuation_experiment",
+  "production_changed": false,
+  "promoted": false,
+  "realtime_accepted": false,
+  "converted_source_jsrs": 444,
+  "source_hash": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "controls": [
+    {
+      "variant": "default",
+      "actor_cases": 3034,
+      "integrated_modes": 5,
+      "original_instructions": 7055873
+    },
+    {
+      "variant": "capacity1",
+      "actor_cases": 3034,
+      "integrated_modes": 5,
+      "original_instructions": 7055873
+    }
+  ],
+  "irq_cases": 3352,
+  "irq_instructions": 479308,
+  "compiler_builds": [
+    {
+      "label": "before",
+      "sections": {
+        ".text": 176640,
+        ".data": 3,
+        ".bss": 195424,
+        ".rodata": 42185
+      },
+      "actor_stack": [
+        "C:\\vscode\\_EXT\\AmigaBruceLee\\core\\c64_actor_programs.h:2:13:actor_code\t88\tdynamic,bounded"
+      ]
+    },
+    {
+      "label": "candidate",
+      "sections": {
+        ".text": 161668,
+        ".data": 3,
+        ".bss": 195424,
+        ".rodata": 43961
+      },
+      "actor_stack": [
+        "C:\\vscode\\_EXT\\AmigaBruceLee\\reference\\analysis\\flat-control-compact-2026-10-30\\candidate\\c64_actor_programs.h:2:13:actor_code\t124\tdynamic,bounded"
+      ]
+    }
+  ],
+  "first_wide_shape": "rejected_before_runtime_due_code_growth_21424_bytes",
+  "native_r01": {
+    "fields": 1413,
+    "missed": 6,
+    "chip_largest": 85408,
+    "source_steps": 360
+  },
+  "native_fixture": {
+    "cases": 53,
+    "loops": 1200,
+    "chip_largest": 52632,
+    "realtime_accepted": false
+  },
+  "native_tour": {
+    "rooms": 20,
+    "steps": 2400,
+    "totals": {
+      "fields": 8965,
+      "lines": 2806120,
+      "missed": 126
+    },
+    "chip_min": 68136,
+    "room12": {
+      "missed": 0,
+      "preparation_lines": 59990,
+      "room": 12,
+      "slow_largest": 15752,
+      "animation_bytes": 52224,
+      "chip_largest": 68136,
+      "held": 117,
+      "drawn": 120,
+      "lines": 131981,
+      "fields": 422,
+      "steps": 120
+    }
+  },
+  "artifacts": [
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/probe.json",
+      "sha256": "63d6d917c306cd971f3b305d5c633b0415db7b2e8e90b8a15a57fabf527789af"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/controls/default/build.ps1",
+      "sha256": "475a3a3447318085e3be5392097d9589ac64383bf63e353798ed718d3961e6e4"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/controls/default/audit.py",
+      "sha256": "4ee2de96e72590b01e410655d737b92527552a3db0a88b577800d12cd9f1bcea"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/controls/default/world.py",
+      "sha256": "f55d823bf6dcbc2290dbb3fd9ac6bf2cf1cb60cfa4ff2829ff297175a1b42ffb"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/report.json",
+      "sha256": "ee4f8ffae10edbdf1c0865702897fb0f43021550648fdd7d522d27ef2efb1475"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/integrated-controls.json",
+      "sha256": "7da5b226aa481972d0a80ddbca1548edd9cebcdce2d556072785ed604ff34515"
+    },
+    {
+      "path": ".tmp/flat-control-compact/actors.dll",
+      "sha256": "84215e5cb2df31e8152cd08b3cd3e5ad4a808e6259ef3daf7492c0fc066b16e8"
+    },
+    {
+      "path": ".tmp/flat-control-compact/compiled-sources.json",
+      "sha256": "8eeea84db306d11c08e6649ba5a83796040bc5997c1c34541343bbd42e8c64ad"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/controls/capacity1/build.ps1",
+      "sha256": "0aeff5370e6dfe7edd4679ac7f0a12399d9ed6a25aaaa47be5e00c357fae2086"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/controls/capacity1/audit.py",
+      "sha256": "2ecc07d9e57c158b0ba58e1c604117d56f62332e70d36443c1cc051c299f0087"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/controls/capacity1/world.py",
+      "sha256": "5a9a9546b0ac06fba73586c57a566a26c95d792ecd6a81a0c989003505fc484e"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/capacity1/report.json",
+      "sha256": "d1cb4f5d4076d8d439b20aaf18e17f0eeb191eb031cdd48fed055979ef3c940a"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/capacity1/integrated-controls.json",
+      "sha256": "f56b7b33bd4f5e1ed949c67763455bde40f88d5c8c7b026a58c1691d2887e603"
+    },
+    {
+      "path": ".tmp/flat-control-compact-cap1/actors.dll",
+      "sha256": "a275c119d611c827084b23c20aa89a7d8574ca9f61e235dc8277cd822d7e142c"
+    },
+    {
+      "path": ".tmp/flat-control-compact-cap1/compiled-sources.json",
+      "sha256": "ee193564b2b44eafa5d81994a8df74e0eb34a9dad28895f9b714fb91ed023e96"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/irq-context-candidate.json",
+      "sha256": "31704342104a5fbf655220894a78dd6b46bebda4dbe488705e9581d288ac7488"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-r01/identity.json",
+      "sha256": "d001c219e9b44de146a2c53a4849e12d8ac0274c3fa7eaad489beb4be594da83"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-r01/compile-overrides.json",
+      "sha256": "ab45599f766fd6e3f18885a940494ecf15cae54ca3030ce521462f78bc24ca01"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/native-fixture.json",
+      "sha256": "adb994e7e8c2b6a6f405cb84adad6280e5b5a89537ed55f444149ed9decf8988"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/native-fixture.txt",
+      "sha256": "5fe379abe5a15bcbf42cc3fe477e7d802a9885c007775a8966d7233061707cf0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-tour/identity.json",
+      "sha256": "e49fd95eb864f286ff805d44e0b7ad1d1036343813ef1603984e05db716694db"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/flat-control-compact-tour/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-before-repeat/identity.json",
+      "sha256": "0d39f920f3998977f5f2c268e88f7bad8e77421933d50c4ba8a9807a0662dcad"
+    },
+    {
+      "path": "reference/analysis/flat-control-2026-10-30/probe.json",
+      "sha256": "ca7e959dc11e552ba752d56286cd1e1f923fb8c30d24581aef69299e0e372aa2"
+    },
+    {
+      "path": "tools/audit_native_continuation_experiment.py",
+      "sha256": "618a1dc31124678afbb133d02895943cc6efd7081b315182634fb79ac13f2911"
+    },
+    {
+      "path": "docs/NATIVE_CONTINUATION_EXPERIMENT.md",
+      "sha256": "d4b350391515ab4ca736389d640956b4c537bc28383da404075225220f014518"
+    }
+  ],
+  "limits": [
+    "Native array handles C continuations only; original guest stack bytes retained",
+    "One-slot test deliberately exercises recursive fallback; no original source rule changed",
+    "Unlinked footprint and local stack frames do not prove loaded memory or full native stack margin",
+    "Host equality is not natural beam/input timing; full target tests and repeated performance still required"
+  ]
+}

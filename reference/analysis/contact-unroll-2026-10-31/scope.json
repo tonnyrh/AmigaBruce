@@ -1,0 +1,112 @@
+{
+  "production_changed": false,
+  "inputs": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "6150ad3145c02756035e492f08247b98f5c8cc3394c68f8d0ef942b8c0b06de3"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "7def677b2066b687cec631188ada253f4c4f6d8b24db9227468dacbea7947bf9"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline-build.ps1",
+      "sha256": "dbe2a38bbe8bb0e578172f384cf9e51b583607af8afcf8f45597d7d8244610e0"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-build.ps1",
+      "sha256": "bfb01d6f034fa563641c38ca049058ea6887af3b9e67a8f25426b893e34b27cf"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte-build.ps1",
+      "sha256": "7eee488107f90a5b7b50768760f8e0a3481942d95d641aa5bbb34a5aa76dcd9e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact-build.ps1",
+      "sha256": "bc1c2e80ce4e81b23b6d8bc262b89424a90289e346d947f883c7eec6af634a21"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline/main.c",
+      "sha256": "7f2178dfe3c61406bc5ad899b48d2c8a67d43ef6a92c1d350682785ba46ad5d1"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate/main.c",
+      "sha256": "7f2178dfe3c61406bc5ad899b48d2c8a67d43ef6a92c1d350682785ba46ad5d1"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate/contact_align.s",
+      "sha256": "6cc3c1fa1a15a214c92be712693d24777608475f58b6a9b63ac87e11d2373791"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte/main.c",
+      "sha256": "7f2178dfe3c61406bc5ad899b48d2c8a67d43ef6a92c1d350682785ba46ad5d1"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte/contact_align.s",
+      "sha256": "e3773282e1fc0c9d9c0089b4f3625992c8ed765b140adde6c1dec9fd20126a40"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact/main.c",
+      "sha256": "7f2178dfe3c61406bc5ad899b48d2c8a67d43ef6a92c1d350682785ba46ad5d1"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact/contact_align.s",
+      "sha256": "abbcd8e35685db4a8b958df70bed09d501f747047a640a97aabbd724372b3fb3"
+    }
+  ],
+  "method": "Same ordered byte/long accesses and same guards; unroll only fixed-length loops. Identical current-main stationary + PAL harness for all variants. No extra service seam."
+}

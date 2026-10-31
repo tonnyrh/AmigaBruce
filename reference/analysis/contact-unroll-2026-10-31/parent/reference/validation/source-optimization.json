@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-30",
+  "status": "loader_display_corrected_realtime_open",
+  "converted_jsrs": 444,
+  "pairs": [
+    {
+      "before_fields": 9044,
+      "after_fields": 8965,
+      "before_missed": 131,
+      "after_missed": 126,
+      "slow_gain": 13248
+    },
+    {
+      "before_fields": 9046,
+      "after_fields": 8956,
+      "before_missed": 127,
+      "after_missed": 121,
+      "slow_gain": 13248
+    }
+  ],
+  "native_controls": 53,
+  "reference_controls": 710,
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "7def677b2066b687cec631188ada253f4c4f6d8b24db9227468dacbea7947bf9"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "85746165e154e3c661f4d587028c264cbb26ca641a8826583b95eebe51521458"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    }
+  ],
+  "realtime_accepted": false,
+  "natural_playthrough": false,
+  "full_stack_verified": false,
+  "prior_stage_history": {
+    "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-optimization.json",
+    "sha256": "bc9ec5c92d2f2ed8f87d859277e4a0b6c5f905457f40a4c0294ac5590768337e"
+  },
+  "artifacts": [
+    {
+      "path": "reference/validation/compact-actor-delivery.json",
+      "sha256": "ab6372be4f616a5693d21bd9d93c253822b7a6c078293305e806faa8d7b340fe"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "9fa63115aca132d8c97be0668c1fa392c0c1329e6f4a25fd3fe482892c673a02"
+    },
+    {
+      "path": "tools/verify_source_optimization.py",
+      "sha256": "a3d1fe174a4e112e833bd66bbb43e0dee3ef49f779394f554227e4cf8a2308a1"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-optimization.json",
+      "sha256": "bc9ec5c92d2f2ed8f87d859277e4a0b6c5f905457f40a4c0294ac5590768337e"
+    }
+  ],
+  "audio_boundary": {
+    "pairs": {
+      "r01": [
+        {
+          "fields": 1414,
+          "missed": 6,
+          "source_steps": 360
+        },
+        {
+          "fields": 1423,
+          "missed": 0,
+          "source_steps": 360
+        }
+      ],
+      "tour": [
+        {
+          "fields": 8892,
+          "missed": 135,
+          "source_steps": 2400
+        },
+        {
+          "fields": 8972,
+          "missed": 9,
+          "source_steps": 2400
+        }
+      ]
+    },
+    "method": "Existing audio service polled after complete field calls; same game-field count; SID guards/order/data unchanged"
+  },
+  "immediate_parent_history": {
+    "path": "reference/analysis/screen-corruption-2026-10-30/parent/reference/validation/source-optimization.json",
+    "sha256": "8dfd7a515055c4ad64a7d2151554145e1a7aaeff6dbfc6572d2cb7116d72dfc9"
+  },
+  "loader_blank": {
+    "source_disable": "$09BC-$09C1",
+    "source_enable": "$0B33 -> $50DB-$50E5",
+    "normal_section_deltas": {
+      ".text": 98,
+      ".rodata": 0,
+      ".data": 0,
+      ".bss": 0
+    },
+    "gameplay_core_unchanged": true,
+    "prior_host_engine_controls_reused_as_historical": true,
+    "fresh_native_controls": 53,
+    "fresh_native_loops": 1200
+  }
+}

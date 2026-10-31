@@ -1,0 +1,77 @@
+{
+  "status": "verified_r13_short_source_spawn_counters_no_logic_difference_found",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "cases": 12,
+  "comparisons": 3697,
+  "source_instructions": 267118,
+  "field_checks": 60,
+  "production_changed": false,
+  "exact_user_route_verified": false,
+  "natural_reader_distribution_verified": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "new_native_hardware_route_test": false,
+  "source_initial_and_base_return": {
+    "kage": 4,
+    "yamo": 32
+  },
+  "spawn_countdown_unit": "Main-loop service pass; not one PAL field",
+  "artifacts": [
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "85746165e154e3c661f4d587028c264cbb26ca641a8826583b95eebe51521458"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "7def677b2066b687cec631188ada253f4c4f6d8b24db9227468dacbea7947bf9"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "docs/R13_SPAWN_RATE.md",
+      "sha256": "d5f0db26a4612d6531dc76de8ac9c8cb70b6ee0946575aeaf5a89178e6702671"
+    },
+    {
+      "path": "reference/analysis/spawn-r13-2026-10-30/bridge.c",
+      "sha256": "23f5d564a0d080516ea744e7dabec7faf93d978762391ef3383d88a12c4495b3"
+    },
+    {
+      "path": "reference/analysis/spawn-r13-2026-10-30/build.ps1",
+      "sha256": "b97abfdbffbea2fe15b7ea0624a37907f47591d06c37d1d70d98043b72348e08"
+    },
+    {
+      "path": "reference/analysis/spawn-r13-2026-10-30/report.json",
+      "sha256": "1f38fb89f2c64add2dfb5abe6a8b03eef45485c7a3c7df8185d55560ee71c1b9"
+    },
+    {
+      "path": "reference/analysis/spawn-r13-2026-10-30/source-disassembly.txt",
+      "sha256": "d3e2fc972accd59831d639ee9584bc06df6ac116f0cf62be3dcecafd17451f72"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    },
+    {
+      "path": "tools/audit_r13_spawn_pressure.py",
+      "sha256": "33cb6bb3ffc9f020af00e6e0ad30d19ec25c61d51e5f05596129b94cbabe7e48"
+    },
+    {
+      "path": "tools/verify_r13_spawn_evidence.py",
+      "sha256": "97464f7df5cdc5ea83369221b38d2c4c50524dcf9fd3fc31815baf2fa1c9d0d3"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "compiler_probe_only",
+  "generic_writer": [
+    {
+      "label": "before",
+      "path": ".tmp/final-colors-stack/before.o",
+      "bytes": 810,
+      "raw_section_sha256": "ca37dd8b1eced96f988762591ec2604d5c7176f942696581a2a6eb091cfd5cb4"
+    },
+    {
+      "label": "variant2",
+      "path": ".tmp/final-colors-stack-v2/candidate.o",
+      "bytes": 812,
+      "raw_section_sha256": "8baa317a9049347aa900b2c8bf12ae38d09e1e2416dbd3b2f9869861c9337de5"
+    },
+    {
+      "label": "compiler_variant3",
+      "path": ".tmp/final-colors-stack-v3/candidate.o",
+      "bytes": 810,
+      "raw_section_sha256": "ca37dd8b1eced96f988762591ec2604d5c7176f942696581a2a6eb091cfd5cb4"
+    }
+  ],
+  "variant3_equals_baseline_raw_section": true,
+  "limits": [
+    "Unlinked code only; relocation target equivalence must be checked separately.",
+    "Variant3 is not the running/production source and has no native timing or source-control approval yet."
+  ]
+}

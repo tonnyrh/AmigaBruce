@@ -1,0 +1,272 @@
+
+.tmp/final-colors-stack-v2/candidate.o:     file format elf32-m68k
+
+
+Disassembly of section .text.source_written:
+
+00000000 <source_written>:
+   0:	48e7 3f38      	movem.l d2-d7/a2-a4,-(sp)
+   4:	342f 0028      	move.w 40(sp),d2
+   8:	3002           	move.w d2,d0
+   a:	0640 7000      	addi.w #28672,d0
+   e:	0c40 0a1f      	cmpi.w #2591,d0
+  12:	620a           	bhi.s 1e <source_written+0x1e>
+  14:	4cdf 1cfc      	movem.l (sp)+,d2-d7/a2-a4
+  18:	4ef9 0000 0000 	jmp 0 <source_written>
+			1a: R_68K_32	.text.reset_contact_masks
+  1e:	4a39 0000 0000 	tst.b 0 <source_written>
+			20: R_68K_32	.bss.index_ready
+  24:	6700 015a      	beq.w 180 <source_written+0x180>
+  28:	3002           	move.w d2,d0
+  2a:	0640 7388      	addi.w #29576,d0
+  2e:	0c40 036f      	cmpi.w #879,d0
+  32:	6200 0186      	bhi.w 1ba <source_written+0x1ba>
+  36:	3802           	move.w d2,d4
+  38:	0644 7400      	addi.w #29696,d4
+  3c:	0282 0000 ffff 	andi.l #65535,d2
+  42:	41f9 0000 0000 	lea 0 <source_written>,a0
+			44: R_68K_32	.bss.m
+  48:	1a30 2800      	move.b (0,a0,d2.l),d5
+  4c:	45f9 0000 0000 	lea 0 <source_written>,a2
+			4e: R_68K_32	.bss.indexed_screen
+  52:	7c00           	moveq #0,d6
+  54:	3c04           	move.w d4,d6
+  56:	1632 6800      	move.b (0,a2,d6.l),d3
+  5a:	1439 0000 0000 	move.b 0 <source_written>,d2
+			5c: R_68K_32	.bss.m+0xf2
+  60:	0c02 0038      	cmpi.b #56,d2
+  64:	6700 0120      	beq.w 186 <source_written+0x186>
+  68:	0c02 003a      	cmpi.b #58,d2
+  6c:	57c2           	seq d2
+  6e:	4402           	neg.b d2
+  70:	d402           	add.b d2,d2
+  72:	b605           	cmp.b d5,d3
+  74:	6700 010a      	beq.w 180 <source_written+0x180>
+  78:	4240           	clr.w d0
+  7a:	1003           	move.b d3,d0
+  7c:	47f9 0000 0000 	lea 0 <source_written>,a3
+			7e: R_68K_32	.bss.glyph_tracking
+  82:	7e00           	moveq #0,d7
+  84:	1e03           	move.b d3,d7
+  86:	1202           	move.b d2,d1
+  88:	c233 7800      	and.b (0,a3,d7.l),d1
+  8c:	6700 010c      	beq.w 19a <source_written+0x19a>
+  90:	3f00           	move.w d0,-(sp)
+  92:	4eb9 0000 0000 	jsr 0 <source_written>
+			94: R_68K_32	.text.glyph_first
+  98:	43f9 0000 0000 	lea 0 <source_written>,a1
+			9a: R_68K_32	.bss.glyph_previous
+  9e:	2006           	move.l d6,d0
+  a0:	d086           	add.l d6,d0
+  a2:	3071 0800      	movea.w (0,a1,d0.l),a0
+  a6:	49f9 0000 0000 	lea 0 <source_written>,a4
+			a8: R_68K_32	.bss.glyph_next
+  ac:	3034 0800      	move.w (0,a4,d0.l),d0
+  b0:	548f           	addq.l #2,sp
+  b2:	72ff           	moveq #-1,d1
+  b4:	b248           	cmp.w a0,d1
+  b6:	6600 00d4      	bne.w 18c <source_written+0x18c>
+  ba:	de87           	add.l d7,d7
+  bc:	49f9 0000 0000 	lea 0 <source_written>,a4
+			be: R_68K_32	.bss.glyph_head
+  c2:	3980 7800      	move.w d0,(0,a4,d7.l)
+  c6:	0c40 ffff      	cmpi.w #-1,d0
+  ca:	670c           	beq.s d8 <source_written+0xd8>
+  cc:	0280 0000 ffff 	andi.l #65535,d0
+  d2:	d080           	add.l d0,d0
+  d4:	3388 0800      	move.w a0,(0,a1,d0.l)
+  d8:	4240           	clr.w d0
+  da:	1005           	move.b d5,d0
+  dc:	7e00           	moveq #0,d7
+  de:	1e05           	move.b d5,d7
+  e0:	c433 7800      	and.b (0,a3,d7.l),d2
+  e4:	6700 00c4      	beq.w 1aa <source_written+0x1aa>
+  e8:	3f00           	move.w d0,-(sp)
+  ea:	4eb9 0000 0000 	jsr 0 <source_written>
+			ec: R_68K_32	.text.glyph_first
+  f0:	41f9 0000 0000 	lea 0 <source_written>,a0
+			f2: R_68K_32	.bss.glyph_next
+  f6:	2206           	move.l d6,d1
+  f8:	d286           	add.l d6,d1
+  fa:	3180 1800      	move.w d0,(0,a0,d1.l)
+  fe:	41f9 0000 0000 	lea 0 <source_written>,a0
+			100: R_68K_32	.bss.glyph_previous
+ 104:	31bc ffff 1800 	move.w #-1,(0,a0,d1.l)
+ 10a:	548f           	addq.l #2,sp
+ 10c:	0c40 ffff      	cmpi.w #-1,d0
+ 110:	670c           	beq.s 11e <source_written+0x11e>
+ 112:	0280 0000 ffff 	andi.l #65535,d0
+ 118:	d080           	add.l d0,d0
+ 11a:	3184 0800      	move.w d4,(0,a0,d0.l)
+ 11e:	de87           	add.l d7,d7
+ 120:	41f9 0000 0000 	lea 0 <source_written>,a0
+			122: R_68K_32	.bss.glyph_head
+ 126:	3184 7800      	move.w d4,(0,a0,d7.l)
+ 12a:	4a79 0000 0000 	tst.w 0 <source_written>
+			12c: R_68K_32	.bss.animation_count
+ 130:	6726           	beq.s 158 <source_written+0x158>
+ 132:	3005           	move.w d5,d0
+ 134:	0240 007f      	andi.w #127,d0
+ 138:	0640 ff9f      	addi.w #-97,d0
+ 13c:	0c40 0002      	cmpi.w #2,d0
+ 140:	630e           	bls.s 150 <source_written+0x150>
+ 142:	0243 007f      	andi.w #127,d3
+ 146:	0643 ff9f      	addi.w #-97,d3
+ 14a:	0c43 0002      	cmpi.w #2,d3
+ 14e:	6208           	bhi.s 158 <source_written+0x158>
+ 150:	13fc 0001 0000 	move.b #1,0 <source_written>
+ 156:	0000 
+			154: R_68K_32	.bss.animation_fallback_dirty
+ 158:	1585 6800      	move.b d5,(0,a2,d6.l)
+ 15c:	3f04           	move.w d4,-(sp)
+ 15e:	4eb9 0000 0000 	jsr 0 <source_written>
+			160: R_68K_32	.text.release_cell_cache
+ 164:	3f04           	move.w d4,-(sp)
+ 166:	4eb9 0000 0000 	jsr 0 <source_written>
+			168: R_68K_32	.text.animation_cell_changed
+ 16c:	3f3c 00ff      	move.w #255,-(sp)
+ 170:	3f3c 0001      	move.w #1,-(sp)
+ 174:	3f04           	move.w d4,-(sp)
+ 176:	4eb9 0000 0000 	jsr 0 <source_written>
+			178: R_68K_32	.text.mark_cell
+ 17c:	4fef 000a      	lea 10(sp),sp
+ 180:	4cdf 1cfc      	movem.l (sp)+,d2-d7/a2-a4
+ 184:	4e75           	rts
+ 186:	7401           	moveq #1,d2
+ 188:	6000 fee8      	bra.w 72 <source_written+0x72>
+ 18c:	7200           	moveq #0,d1
+ 18e:	3208           	move.w a0,d1
+ 190:	d281           	add.l d1,d1
+ 192:	3980 1800      	move.w d0,(0,a4,d1.l)
+ 196:	6000 ff2e      	bra.w c6 <source_written+0xc6>
+ 19a:	41f9 0000 0000 	lea 0 <source_written>,a0
+			19c: R_68K_32	.bss.glyph_index_dirty
+ 1a0:	11bc 0001 7800 	move.b #1,(0,a0,d7.l)
+ 1a6:	6000 ff30      	bra.w d8 <source_written+0xd8>
+ 1aa:	41f9 0000 0000 	lea 0 <source_written>,a0
+			1ac: R_68K_32	.bss.glyph_index_dirty
+ 1b0:	11bc 0001 7800 	move.b #1,(0,a0,d7.l)
+ 1b6:	6000 ff72      	bra.w 12a <source_written+0x12a>
+ 1ba:	3002           	move.w d2,d0
+ 1bc:	0640 2788      	addi.w #10120,d0
+ 1c0:	0c40 036f      	cmpi.w #879,d0
+ 1c4:	6200 00ac      	bhi.w 272 <source_written+0x272>
+ 1c8:	3802           	move.w d2,d4
+ 1ca:	0644 2800      	addi.w #10240,d4
+ 1ce:	0282 0000 ffff 	andi.l #65535,d2
+ 1d4:	41f9 0000 0000 	lea 0 <source_written>,a0
+			1d6: R_68K_32	.bss.m
+ 1da:	1430 2800      	move.b (0,a0,d2.l),d2
+ 1de:	1002           	move.b d2,d0
+ 1e0:	0200 000f      	andi.b #15,d0
+ 1e4:	41f9 0000 0000 	lea 0 <source_written>,a0
+			1e6: R_68K_32	.bss.indexed_color
+ 1ea:	7a00           	moveq #0,d5
+ 1ec:	3a04           	move.w d4,d5
+ 1ee:	1630 5800      	move.b (0,a0,d5.l),d3
+ 1f2:	b600           	cmp.b d0,d3
+ 1f4:	678a           	beq.s 180 <source_written+0x180>
+ 1f6:	0202 0007      	andi.b #7,d2
+ 1fa:	57c2           	seq d2
+ 1fc:	4402           	neg.b d2
+ 1fe:	0203 0007      	andi.b #7,d3
+ 202:	57c3           	seq d3
+ 204:	4403           	neg.b d3
+ 206:	1180 5800      	move.b d0,(0,a0,d5.l)
+ 20a:	3f04           	move.w d4,-(sp)
+ 20c:	4eb9 0000 0000 	jsr 0 <source_written>
+			20e: R_68K_32	.text.release_cell_cache
+ 212:	3f04           	move.w d4,-(sp)
+ 214:	4eb9 0000 0000 	jsr 0 <source_written>
+			216: R_68K_32	.text.animation_cell_changed
+ 21a:	588f           	addq.l #4,sp
+ 21c:	0c39 0013 0000 	cmpi.b #19,0 <source_written>
+ 222:	0000 
+			220: R_68K_32	.data.loaded
+ 224:	6632           	bne.s 258 <source_written+0x258>
+ 226:	41f9 0000 0000 	lea 0 <source_written>,a0
+			228: R_68K_32	.bss.flash_cells
+ 22c:	4a30 5800      	tst.b (0,a0,d5.l)
+ 230:	6726           	beq.s 258 <source_written+0x258>
+ 232:	13fc 0001 0000 	move.b #1,0 <source_written>
+ 238:	0000 
+			236: R_68K_32	.bss.flash_changed
+ 23a:	13fc 0001 0000 	move.b #1,0 <source_written>
+ 240:	0000 
+			23e: R_68K_32	.bss.display_dirty
+ 242:	b602           	cmp.b d2,d3
+ 244:	6700 ff3a      	beq.w 180 <source_written+0x180>
+ 248:	41f9 0000 0000 	lea 0 <source_written>,a0
+			24a: R_68K_32	.bss.contact_cells
+ 24e:	11bc 0001 5800 	move.b #1,(0,a0,d5.l)
+ 254:	6000 ff2a      	bra.w 180 <source_written+0x180>
+ 258:	3f3c 00ff      	move.w #255,-(sp)
+ 25c:	b702           	eor.b d3,d2
+ 25e:	0242 00ff      	andi.w #255,d2
+ 262:	3f02           	move.w d2,-(sp)
+ 264:	3f04           	move.w d4,-(sp)
+ 266:	4eb9 0000 0000 	jsr 0 <source_written>
+			268: R_68K_32	.text.mark_cell
+ 26c:	5c8f           	addq.l #6,sp
+ 26e:	6000 ff10      	bra.w 180 <source_written+0x180>
+ 272:	3002           	move.w d2,d0
+ 274:	0640 6000      	addi.w #24576,d0
+ 278:	0c40 1fff      	cmpi.w #8191,d0
+ 27c:	6200 ff02      	bhi.w 180 <source_written+0x180>
+ 280:	4eb9 0000 0000 	jsr 0 <source_written>
+			282: R_68K_32	.text.charset
+ 286:	3202           	move.w d2,d1
+ 288:	0241 f800      	andi.w #-2048,d1
+ 28c:	b041           	cmp.w d1,d0
+ 28e:	6600 fef0      	bne.w 180 <source_written+0x180>
+ 292:	7000           	moveq #0,d0
+ 294:	3002           	move.w d2,d0
+ 296:	41f9 0000 0000 	lea 0 <source_written>,a0
+			298: R_68K_32	.bss.m
+ 29c:	1230 0800      	move.b (0,a0,d0.l),d1
+ 2a0:	41f9 0000 0000 	lea 0 <source_written>,a0
+			2a2: R_68K_32	.bss.indexed_glyph
+ 2a6:	2002           	move.l d2,d0
+ 2a8:	0280 0000 07ff 	andi.l #2047,d0
+ 2ae:	b230 0800      	cmp.b (0,a0,d0.l),d1
+ 2b2:	6700 fecc      	beq.w 180 <source_written+0x180>
+ 2b6:	3802           	move.w d2,d4
+ 2b8:	e64c           	lsr.w #3,d4
+ 2ba:	1181 0800      	move.b d1,(0,a0,d0.l)
+ 2be:	43f9 0000 0000 	lea 0 <source_written>,a1
+			2c0: R_68K_32	.bss.glyph_changes
+ 2c4:	7000           	moveq #0,d0
+ 2c6:	1004           	move.b d4,d0
+ 2c8:	1631 0800      	move.b (0,a1,d0.l),d3
+ 2cc:	664c           	bne.s 31a <source_written+0x31a>
+ 2ce:	3239 0000 0000 	move.w 0 <source_written>,d1
+			2d0: R_68K_32	.bss.glyph_changed_count
+ 2d4:	3041           	movea.w d1,a0
+ 2d6:	5248           	addq.w #1,a0
+ 2d8:	33c8 0000 0000 	move.w a0,0 <source_written>
+			2da: R_68K_32	.bss.glyph_changed_count
+ 2de:	0281 0000 ffff 	andi.l #65535,d1
+ 2e4:	41f9 0000 0000 	lea 0 <source_written>,a0
+			2e6: R_68K_32	.bss.glyph_changed_list
+ 2ea:	1184 1800      	move.b d4,(0,a0,d1.l)
+ 2ee:	41f9 0000 0000 	lea 0 <source_written>,a0
+			2f0: R_68K_32	.bss.glyph_epoch
+ 2f4:	2800           	move.l d0,d4
+ 2f6:	d880           	add.l d0,d4
+ 2f8:	3230 4800      	move.w (0,a0,d4.l),d1
+ 2fc:	5241           	addq.w #1,d1
+ 2fe:	3181 4800      	move.w d1,(0,a0,d4.l)
+ 302:	6616           	bne.s 31a <source_written+0x31a>
+ 304:	41f9 0000 0000 	lea 0 <source_written>,a0
+			306: R_68K_32	.bss.character_cache+0x6
+ 30a:	30bc ffff      	move.w #-1,(a0)
+ 30e:	41e8 0028      	lea 40(a0),a0
+ 312:	b1fc 0000 0000 	cmpa.l #0,a0
+			314: R_68K_32	.bss.character_cache+0xa006
+ 318:	66f0           	bne.s 30a <source_written+0x30a>
+ 31a:	0242 0007      	andi.w #7,d2
+ 31e:	7201           	moveq #1,d1
+ 320:	e569           	lsl.w d2,d1
+ 322:	8601           	or.b d1,d3
+ 324:	1383 0800      	move.b d3,(0,a1,d0.l)
+ 328:	6000 fe56      	bra.w 180 <source_written+0x180>

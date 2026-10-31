@@ -58,7 +58,7 @@
   "instructions": 7055873,
   "source_files": [
     {
-      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
       "path": "core/c64_rooms.c"
     },
     {
@@ -66,7 +66,7 @@
       "path": "tests/source_actor_bridge.c"
     },
     {
-      "sha256": "14e3f03cd2fbc6e541c372746db8dc1b31da88081a22c4363bd0f67a2206ecd2",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7",
       "path": "core/c64_rooms.h"
     },
     {
@@ -86,7 +86,7 @@
       "path": "core/c64_actor_data.h"
     },
     {
-      "sha256": "131727831db097b479aa98ec4c8f6b9f7439f0e9cc04e770d2081af604f702a6",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e",
       "path": "core/c64_actor_programs.h"
     },
     {
@@ -106,15 +106,19 @@
       "path": "core/c64_sound_data.h"
     },
     {
-      "sha256": "106e0dc72a5f1a0aa53e4ae1a02fa3645efb62ab19e06c2e8078b7415f642448",
+      "sha256": "4761e14f38fe762840bb12e6da73de610f3b7b6185cfc8271b11319fd7fa9824",
       "path": "tools/build_c64_actors.py"
     },
     {
-      "sha256": "5c5bd7147ff2af45257ccb46f6ece9a53a1a4f57046b3a7c1729787dc983a499",
+      "sha256": "b1721f8fb468d77c70c57eb99fa56955586d5a0413970b3a41613f985cd922b1",
+      "path": "tools/native_actor_continuations.py"
+    },
+    {
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e",
       "path": "tools/build_c64_rooms.py"
     },
     {
-      "sha256": "43648d8c8d08fe3f55f9a3f73507e887d4bde8cb35aa850e9a9243be8f30907b",
+      "sha256": "33099c5e5ab6d4130a2869a5326945adf3f0c70f807e316d3337a7ec951afc97",
       "path": "test-c64-actors.ps1"
     }
   ],

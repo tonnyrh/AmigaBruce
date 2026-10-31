@@ -1,0 +1,230 @@
+{
+  "status": "verified_private_sprite_publication_experiments",
+  "production_changed": false,
+  "promoted": false,
+  "realtime_accepted": false,
+  "natural_playthrough": false,
+  "tours": [
+    {
+      "label": "sprite-publish-heap-before",
+      "main_sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a",
+      "totals": {
+        "fields": 8980,
+        "lines": 2810128,
+        "missed": 131
+      },
+      "room12": {
+        "drawn": 118,
+        "chip_largest": 68136,
+        "room": 12,
+        "fields": 410,
+        "preparation_lines": 60952,
+        "steps": 120,
+        "missed": 0,
+        "lines": 128203,
+        "slow_largest": 2504,
+        "animation_bytes": 52224,
+        "held": 115
+      },
+      "chip_min": 68136
+    },
+    {
+      "label": "sprite-publish-heap-candidate",
+      "main_sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a",
+      "totals": {
+        "fields": 8973,
+        "lines": 2809420,
+        "missed": 123
+      },
+      "room12": {
+        "drawn": 119,
+        "chip_largest": 68136,
+        "room": 12,
+        "fields": 415,
+        "preparation_lines": 60957,
+        "steps": 120,
+        "missed": 0,
+        "lines": 129787,
+        "slow_largest": 1560,
+        "animation_bytes": 52224,
+        "held": 115
+      },
+      "chip_min": 68136
+    },
+    {
+      "label": "sprite-publish-direct-tour",
+      "main_sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a",
+      "totals": {
+        "fields": 8905,
+        "lines": 2788266,
+        "missed": 121
+      },
+      "room12": {
+        "fields": 407,
+        "missed": 0,
+        "room": 12,
+        "held": 116,
+        "animation_bytes": 52224,
+        "preparation_lines": 60949,
+        "chip_largest": 68136,
+        "slow_largest": 1568,
+        "lines": 127257,
+        "steps": 120,
+        "drawn": 119
+      },
+      "chip_min": 68136
+    },
+    {
+      "label": "sprite-publish-direct-before-repeat",
+      "main_sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a",
+      "totals": {
+        "fields": 9044,
+        "lines": 2831345,
+        "missed": 131
+      },
+      "room12": {
+        "missed": 0,
+        "drawn": 116,
+        "animation_bytes": 52224,
+        "steps": 120,
+        "preparation_lines": 60950,
+        "chip_largest": 68136,
+        "room": 12,
+        "lines": 126952,
+        "held": 113,
+        "fields": 406,
+        "slow_largest": 2504
+      },
+      "chip_min": 68136
+    },
+    {
+      "label": "sprite-publish-direct-tour-repeat",
+      "main_sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a",
+      "totals": {
+        "fields": 8981,
+        "lines": 2811349,
+        "missed": 131
+      },
+      "room12": {
+        "missed": 0,
+        "drawn": 117,
+        "animation_bytes": 52224,
+        "steps": 120,
+        "preparation_lines": 60950,
+        "chip_largest": 68136,
+        "room": 12,
+        "lines": 126623,
+        "held": 113,
+        "fields": 405,
+        "slow_largest": 1568
+      },
+      "chip_min": 68136
+    }
+  ],
+  "direct_r01": {
+    "fields": 1420,
+    "missed": 4,
+    "chip_largest": 69016
+  },
+  "normal": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/host.json",
+      "sha256": "67e544ab12fa5485075cfb81a527e1608d102bfd4f9f7dfdd278b7c7872d8620"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/host.json",
+      "sha256": "848f4a21bbe6feb41b06cb9a8eea001b46e6c3feb1ca9cae8aa18db76f387641"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/native-fixture.json",
+      "sha256": "c92600e29d1c75c7d0eda7256ee682605d2d544baaf22353b71c5a8d5ecc8c60"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-heap-before/identity.json",
+      "sha256": "c417cf5bdb28e5051a10154a25b13b3b55ac57c76f629a35fcd6948c6242099c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-heap-before/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-heap-before/controller-generation.json",
+      "sha256": "9cf243eb5faf180c8b2fa1c265d7b62060273358979bf9b9152c0dadfa3c25f1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-heap-candidate/identity.json",
+      "sha256": "8e6882c99b3a3fa6e8a76e15192ba9211ee710e1f9be2d43f59709355f5a919f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-heap-candidate/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-heap-candidate/controller-generation.json",
+      "sha256": "9cf243eb5faf180c8b2fa1c265d7b62060273358979bf9b9152c0dadfa3c25f1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-tour/identity.json",
+      "sha256": "9609b37af2f2ca7cfb95818c91f8453dc7811b4668ab391554cf8619f3bf5cf1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-tour/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-tour/controller-generation.json",
+      "sha256": "9cf243eb5faf180c8b2fa1c265d7b62060273358979bf9b9152c0dadfa3c25f1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-before-repeat/identity.json",
+      "sha256": "0d39f920f3998977f5f2c268e88f7bad8e77421933d50c4ba8a9807a0662dcad"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-before-repeat/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-before-repeat/controller-generation.json",
+      "sha256": "9cf243eb5faf180c8b2fa1c265d7b62060273358979bf9b9152c0dadfa3c25f1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-tour-repeat/identity.json",
+      "sha256": "1c71ccc804f51e3a2f5671137f281fdf0c9c8e066e3e6b25155b1d7ccb5256f5"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-tour-repeat/compiled-main.c",
+      "sha256": "2a1c4ba618d4523b1265c7a24a68513d19949f137b12e01f069c6cf0245b1c2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-tour-repeat/controller-generation.json",
+      "sha256": "9cf243eb5faf180c8b2fa1c265d7b62060273358979bf9b9152c0dadfa3c25f1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-r01/identity.json",
+      "sha256": "de36ff963528ec7a62b5c03754d045032f2a0a13a9d726f3787f294bf3a73af9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-r01/compile-overrides.json",
+      "sha256": "37c7ca40db1d393b8cc8569b3a9b1c12c6828ccc817fb0ccb23c666efd465b4a"
+    }
+  ],
+  "limits": [
+    "Small workload changes require paired repeated target measurements before promotion",
+    "Diagnostic stats allocation differs from production; original field and reserve gates unchanged",
+    "Source equality controls do not establish physical beam timing or natural input phase"
+  ]
+}

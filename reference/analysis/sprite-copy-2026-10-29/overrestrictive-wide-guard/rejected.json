@@ -1,0 +1,11 @@
+{
+  "status": "rejected_wide_y63_guard_not_natural_call_contract",
+  "source_callers": [
+    "$2598/$25A4-$25AB",
+    "$25C1/$25CD-$25D4",
+    "$2731/$2748-$2749"
+  ],
+  "decoded_y": "3*height for binary mode and height<32; ASL clears input carry",
+  "measured_fields": 1444,
+  "baseline_fields": 1428
+}

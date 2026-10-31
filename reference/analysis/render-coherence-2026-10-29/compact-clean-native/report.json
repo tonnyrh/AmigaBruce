@@ -1,0 +1,494 @@
+{
+  "method": "Owned normal WinUAE; invincible debug start in room12; actual C64 glyph phase candidates; no source-state injection",
+  "snapshots_paused": true,
+  "controlled_death": null,
+  "room_roundtrip": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "elf": {
+    "path": "C:\\vscode\\_EXT\\AmigaBruceLee\\amiga\\out\\bruce_amiga.elf",
+    "sha256": "2560d20e497e1a9e5a04078a72ba38a9072794e6d70b07632794183bcb465a64"
+  },
+  "samples": [
+    {
+      "source_phase": 7,
+      "best_phase": 3,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 7824,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 1,
+      "best_phase": 1,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 7792,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 3,
+      "best_phase": 3,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 7760,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 6,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 7744,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 1,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 7776,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            32,
+            32
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            4,
+            4
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            4,
+            4
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 5,
+      "best_phase": 1,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 7840,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            48,
+            48
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 7888,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 4,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 7944,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 6,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 7968,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8000,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8032,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    },
+    {
+      "source_phase": 4,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8064,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {
+        "147": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 16,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        },
+        "148": {
+          "illegal_pixels": 0,
+          "visible_pair": [
+            0,
+            0
+          ],
+          "equivalent_pairs": 1,
+          "checked_pixels": 32,
+          "source_pair": [
+            0,
+            0
+          ],
+          "source_pair_complete": true
+        }
+      }
+    }
+  ],
+  "mixed_phase_samples": 0,
+  "max_pixel_mismatch": 0,
+  "max_static_pixel_mismatch": 0,
+  "max_flicker_illegal_pixels": 0,
+  "flicker_motion": {
+    "147": {
+      "source_variants": 2,
+      "visible_variants": 2
+    },
+    "148": {
+      "source_variants": 2,
+      "visible_variants": 2
+    }
+  },
+  "flicker_stuck_codes": [],
+  "flicker_contract": {
+    "source": "$40BC-$4132",
+    "rows": [
+      2,
+      3
+    ],
+    "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+    "method": "Every visible flicker glyph row pair must match a complete source AND/ORA/STA output or original initialization; no pixel tolerance"
+  }
+}

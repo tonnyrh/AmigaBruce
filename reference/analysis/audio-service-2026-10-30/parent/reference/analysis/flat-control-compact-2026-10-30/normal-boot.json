@@ -1,0 +1,58 @@
+{
+  "status": "passed_current_cli_and_adf_boot",
+  "cli_passed": true,
+  "adf_passed": true,
+  "normal_exe_sha256": "f1047de7ded0a9087abefcec46e963aa8369019bc700172c60a99529cbea533d",
+  "adf_game_progress": [
+    {
+      "steps": 10,
+      "fault": 0,
+      "room": 1
+    },
+    {
+      "steps": 29,
+      "fault": 0,
+      "room": 1
+    },
+    {
+      "steps": 48,
+      "fault": 0,
+      "room": 1
+    }
+  ],
+  "natural_playthrough": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/normal-ui/cli/report.json",
+      "sha256": "7f7108154493d0f25fdf6130f7d19ccd4e1832447f106550832274cadb489558"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/normal-ui/cli/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/normal-ui/adf/report.json",
+      "sha256": "c9f3d6de80ad5b0e1878b7f54355fe06e5e12882a7afe50e50f27e422b5a5477"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/normal-ui/adf/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/normal-ui/adf/config.uae",
+      "sha256": "f46d3760097aec240e57aa6dcd02abfd26c8e787aa022985a8c5716d27ede99a"
+    },
+    {
+      "path": "tools/check_compact_boot.py",
+      "sha256": "798b92b0166347c53ff72af430c8f632ffc50de2b7cec2d8bba083415c0567bc"
+    },
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "49afe4b105c36df77d2eec52bbbce0734b27fc6caa5293e702396fb73b08425c"
+    },
+    {
+      "path": ".tmp/compact-delivery/ui-room-adf.ps1",
+      "sha256": "d690436014ee9bd8c4af4f478af7cd7fd368afdbed9ba83f2ac81ba483b42cbe"
+    }
+  ]
+}

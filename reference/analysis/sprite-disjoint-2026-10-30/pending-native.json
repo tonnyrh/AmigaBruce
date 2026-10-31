@@ -1,0 +1,29 @@
+{
+  "status": "host_source_proof_passed_native_execution_pending",
+  "production_changed": false,
+  "owned_emulator_pid": 19624,
+  "owned_emulator_stopped": true,
+  "reason": "No boot log/test output; almost no emulator CPU; LogonUI present. Windows unlock requested; no native timing result.",
+  "artifacts": [
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/compiled-candidate/bruce_test.exe",
+      "sha256": "24acf68a48eae9eb6490dc9b82388ea7ae0826f01740ae34b2ebe46c5dc881ba"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/compiled-candidate/bruce_test.elf",
+      "sha256": "09d5260d87368502280b07f651b0dd715d6f47ae54c51557c36574e0c2424ac4"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/compiled-candidate/bruce_test.adf",
+      "sha256": "f273e46a497e5bd7f241b9783e1fcecf2f95a9c11a6e0ec81b563410ee55af07"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/compiled-candidate/sprite_copy.o",
+      "sha256": "09e7ac8e46fc3aa5428fe9dc1b990c5d7ea45027d7a78443c8b8cd371f667993"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/compiled-candidate/c64_rooms.o",
+      "sha256": "bc9f66a02e037400a4e23375ab4d632d0b3f7e50254b209c766174c7aac1164e"
+    }
+  ]
+}

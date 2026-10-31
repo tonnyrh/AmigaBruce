@@ -1,0 +1,288 @@
+{
+  "status": "measured_scoped_color_store_optimization_realtime_open",
+  "source_controls": 7424,
+  "renderer_controls": 192,
+  "native_controls": 53,
+  "rooms": [
+    {
+      "room": 1,
+      "before_lines": 113273,
+      "after_lines": 112950,
+      "delta_lines": -323,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 2,
+      "before_lines": 112936,
+      "after_lines": 113203,
+      "delta_lines": 267,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 3,
+      "before_lines": 113268,
+      "after_lines": 113571,
+      "delta_lines": 303,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 4,
+      "before_lines": 113546,
+      "after_lines": 113540,
+      "delta_lines": -6,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 5,
+      "before_lines": 152055,
+      "after_lines": 153000,
+      "delta_lines": 945,
+      "before_missed": 4,
+      "after_missed": 4
+    },
+    {
+      "room": 6,
+      "before_lines": 144577,
+      "after_lines": 144601,
+      "delta_lines": 24,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 7,
+      "before_lines": 125458,
+      "after_lines": 124824,
+      "delta_lines": -634,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 8,
+      "before_lines": 125802,
+      "after_lines": 123926,
+      "delta_lines": -1876,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 9,
+      "before_lines": 158886,
+      "after_lines": 158893,
+      "delta_lines": 7,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 10,
+      "before_lines": 167745,
+      "after_lines": 169618,
+      "delta_lines": 1873,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 11,
+      "before_lines": 163773,
+      "after_lines": 163142,
+      "delta_lines": -631,
+      "before_missed": 3,
+      "after_missed": 4
+    },
+    {
+      "room": 12,
+      "before_lines": 128519,
+      "after_lines": 127887,
+      "delta_lines": -632,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 13,
+      "before_lines": 155205,
+      "after_lines": 154578,
+      "delta_lines": -627,
+      "before_missed": 4,
+      "after_missed": 4
+    },
+    {
+      "room": 14,
+      "before_lines": 150053,
+      "after_lines": 150989,
+      "delta_lines": 936,
+      "before_missed": 3,
+      "after_missed": 3
+    },
+    {
+      "room": 15,
+      "before_lines": 138655,
+      "after_lines": 136158,
+      "delta_lines": -2497,
+      "before_missed": 5,
+      "after_missed": 5
+    },
+    {
+      "room": 16,
+      "before_lines": 156395,
+      "after_lines": 154512,
+      "delta_lines": -1883,
+      "before_missed": 14,
+      "after_missed": 12
+    },
+    {
+      "room": 17,
+      "before_lines": 167853,
+      "after_lines": 166611,
+      "delta_lines": -1242,
+      "before_missed": 3,
+      "after_missed": 2
+    },
+    {
+      "room": 18,
+      "before_lines": 128860,
+      "after_lines": 127642,
+      "delta_lines": -1218,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 19,
+      "before_lines": 117314,
+      "after_lines": 117000,
+      "delta_lines": -314,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 20,
+      "before_lines": 217754,
+      "after_lines": 188932,
+      "delta_lines": -28822,
+      "before_missed": 219,
+      "after_missed": 129
+    }
+  ],
+  "before_lines": 2851927,
+  "after_lines": 2815577,
+  "work_reduction_percent": 1.275,
+  "r20_reduction_percent": 13.236,
+  "audio_misses": [
+    255,
+    163
+  ],
+  "r01_elapsed": [
+    1425,
+    1425
+  ],
+  "r01_missed": [
+    11,
+    11
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/source-scope.json",
+      "sha256": "f46457dde8628990bf3710c755a4ce0d2d17ee487e810a8980bb55e13b6e3a47"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/host.json",
+      "sha256": "67eb19b21c1010338a869fb48806e070e0c1188c95b79e36607b1fb72ec10c75"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/native-images.json",
+      "sha256": "3564d3b4a32d558bf18e78f103a84d834c96f34dc745edb7052a2e9caaa06a99"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/before/manifest.json",
+      "sha256": "6639a959d5b31420b524a496347a1602a1750541ac00d0b9d1cd1ca53624518e"
+    },
+    {
+      "path": "tools/verify_final_color_optimization.py",
+      "sha256": "fa3b263f1f125c9c32aee9ee0a582f2f4d74f671690c4c2ca8f6608dfd282ebe"
+    },
+    {
+      "path": "tools/verify_final_color_scope.py",
+      "sha256": "4fc7325734fd28403359a1745d4c25c2284c1f605ec05bb36f52b7e276a264a6"
+    },
+    {
+      "path": "docs/FINAL_COLOR_OPTIMIZATION.md",
+      "sha256": "331eef6d4fc4d4a7e480bee0bcff87cde22e8252a435c12bbfa7b6a6e7a33452"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-before/identity.json",
+      "sha256": "e9c1394b641ebabcf42d1324ad284e77f10b50dbf772d26c53d019cb009e310d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-before/native.txt",
+      "sha256": "0cbc560eda2af88814bbef004fa6760ae0bb5e7d354ab0a7dda1a3c8da50dbd2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-before/compiled-main.c",
+      "sha256": "85e7c87b4c09b111be7167e18c3a6d825a7e558a704daf0a73bf7174590ce652"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-before/build.ps1",
+      "sha256": "eb4266053f16aabb4fef957eb08ba3b128ea42cfe20552c99ae7bef74f228bfc"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-before/controller-generation.json",
+      "sha256": "8a7f565ca2fa3d879ce56f76708993696b0ea2824795c1a15397663bc1cb5673"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-v3/identity.json",
+      "sha256": "2ecc66163af5457596b086180e35da0efbc4f0d33abdce4696223dfa88b4878e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-v3/native.txt",
+      "sha256": "8f33994c37e293ef15e311153cac407747fc7a135745770072afe5a4c373a57e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-v3/compiled-main.c",
+      "sha256": "85e7c87b4c09b111be7167e18c3a6d825a7e558a704daf0a73bf7174590ce652"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-v3/build.ps1",
+      "sha256": "5e26bd0fc66e21cdc33b5aa09d9c49b1186ace12f38a7addaca873a96c5a1695"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-v3/controller-generation.json",
+      "sha256": "8a7f565ca2fa3d879ce56f76708993696b0ea2824795c1a15397663bc1cb5673"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-r01-v3/identity.json",
+      "sha256": "8c5d1e1807440b1a35a8e7d36dc5150046a89501429d2db8bebda29f00e84b8a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-r01-v3/native.txt",
+      "sha256": "18335026e769f4a5e6aaf7204040905ab66536891e64144ead5eccaec2763b51"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-r01-v3-repeat/identity.json",
+      "sha256": "2d59f924af6fa223e404f6bd87e277cfa7868a03476f13ca0b248b42a78f55c0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-r01-v3-repeat/native.txt",
+      "sha256": "18335026e769f4a5e6aaf7204040905ab66536891e64144ead5eccaec2763b51"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "fac20ec0f7e8938c96752589bd30f089906c6223afa641c2dc97bc73f4ec757a"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/native-footprint.json",
+      "sha256": "3e265a1d5ab53d4afdc7e015ed14e5b62f51eb3a1ddb86496fcf381f63cd6b28"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/compiler-probes/report.json",
+      "sha256": "2f8e331bd7024b82e4df7009bd7a626c94a13b045659e7d15e05e21ad79583a7"
+    }
+  ],
+  "limits": [
+    "Continuous debug-jump source history; no isolated per-room initial-state equivalence or natural play claim",
+    "Some room intervals increase; R10+1.117 percent is the largest in this pair",
+    "R01 short counter includes title; repeated11 misses vs historical9 remain an open timing issue",
+    "No real-time, input/IRQ-phase, whole-call-stack or physical A500 acceptance"
+  ]
+}

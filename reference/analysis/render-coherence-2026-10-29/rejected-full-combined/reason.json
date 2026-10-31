@@ -1,0 +1,18 @@
+{
+  "status": "rejected_allocation_failure_before_replay",
+  "tested_builds": [
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/fc8fb0f4f563-15b3f721d995/bruce_test.exe",
+      "sha256": "fc8fb0f4f56334874a7247e100327083b87067d954d3f940d35c9469d514b631"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/fc8fb0f4f563-15b3f721d995/bruce_test.elf",
+      "sha256": "a114a39c92d79b21dd498799109a1450d4cf450335d5375d32f59d054ddc71a5"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/fc8fb0f4f563-15b3f721d995/bruce_test.adf",
+      "sha256": "15b3f721d995c7549b056301b701cdbfd05310c41454cc330a8883dd75c68ec3"
+    }
+  ],
+  "note": "Combined53 actor fixtures plus454 kernel references exceeded diagnostic load placement; no production RAM requirement is changed."
+}

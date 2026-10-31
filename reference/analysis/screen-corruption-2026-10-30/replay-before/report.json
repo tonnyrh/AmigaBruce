@@ -1,0 +1,94 @@
+{
+  "method": "Resume private USS copy in owned PAL A500 process; captures paused. No source RAM injection.",
+  "pid": 8944,
+  "elf_sha256": "2560d20e497e1a9e5a04078a72ba38a9072794e6d70b07632794183bcb465a64",
+  "samples": [
+    {
+      "room": 6,
+      "actors": [
+        1,
+        129,
+        65
+      ],
+      "hunks": [
+        "0xc077d0",
+        "0xc33340",
+        "0xc46e88",
+        "0xc46ea0"
+      ],
+      "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $0005bbe0\n  D0 0000C224   D1 00000024   D2 00000000   D3 00000000 \n  D4 0000A000   D5 0000A000   D6 0000A000   D7 00C0C284 \n  A0 00000000   A1 00000100   A2 00C60AEC   A3 00C0AA54 \n  A4 00000101   A5 00C714D0   A6 00C3AA4C   A7 00C71488 \nUSP  00C71488 ISP  00C80000 \nSR=0004 T=00 S=0 M=0 X=0 N=0 Z=1 V=0 C=0 IM=0 STP=0\nPrefetch 13fc (MOVE) 13fc (MOVE) Chip latch 000013FC\n00c0c2ec 0282 00ff ffff           and.l #$00ffffff,d2\nNext PC: 00c0c2f2\n",
+      "loaded": 5,
+      "paint_bank": 56,
+      "actor_loading_pending": 0,
+      "game_field_loading": 0,
+      "actor_logic_steps": 11777,
+      "actor_loading_epoch": 11,
+      "source_fault": 0,
+      "paint_count": 3,
+      "paint_cursor": 0,
+      "contact_generation": 12,
+      "index_ready": 1,
+      "background0": "0x34170",
+      "buffers0": "0x51b58",
+      "buffers1": "0x5bf58"
+    },
+    {
+      "room": 6,
+      "actors": [
+        1,
+        129,
+        65
+      ],
+      "hunks": [
+        "0xc077d0",
+        "0xc33340",
+        "0xc46e88",
+        "0xc46ea0"
+      ],
+      "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $0005bbe0\n  D0 00000501   D1 00000100   D2 00000000   D3 000001B6 \n  D4 00000000   D5 000025AE   D6 000067FD   D7 00C70028 \n  A0 00C60AEC   A1 00C68DAC   A2 00C0DA70   A3 00C0F87C \n  A4 00C71A6C   A5 00C7156C   A6 0000C289   A7 00C71500 \nUSP  00C71500 ISP  00C80000 \nSR=0004 T=00 S=0 M=0 X=0 N=0 Z=1 V=0 C=0 IM=0 STP=0\nPrefetch 13c1 (MOVE) 4a00 (TST) Chip latch 00004A00\n00c15dfc 13c1 00c6 0ae6           move.b d1,$00c60ae6 [00]\nNext PC: 00c15e02\n",
+      "loaded": 5,
+      "paint_bank": 56,
+      "actor_loading_pending": 0,
+      "game_field_loading": 0,
+      "actor_logic_steps": 11801,
+      "actor_loading_epoch": 11,
+      "source_fault": 0,
+      "paint_count": 0,
+      "paint_cursor": 0,
+      "contact_generation": 12,
+      "index_ready": 1,
+      "background0": "0x34170",
+      "buffers0": "0x51b58",
+      "buffers1": "0x5bf58"
+    },
+    {
+      "room": 6,
+      "actors": [
+        1,
+        129,
+        65
+      ],
+      "hunks": [
+        "0xc077d0",
+        "0xc33340",
+        "0xc46e88",
+        "0xc46ea0"
+      ],
+      "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $0005bbe0\n  D0 0000C2F1   D1 00000000   D2 00000000   D3 00005500 \n  D4 0005BF58   D5 00000003   D6 00C4701D   D7 00C7181F \n  A0 00000000   A1 00C335EE   A2 00C0B1C6   A3 00000007 \n  A4 00C71A6C   A5 00C71A90   A6 00000068   A7 00C7160C \nUSP  00C7160C ISP  00C80000 \nSR=0004 T=00 S=0 M=0 X=0 N=0 Z=1 V=0 C=0 IM=0 STP=0\nPrefetch 1239 (MOVE) 7984 (ILLEGAL) Chip latch 00007984\n00c0b2ee 1239 00c4 7984           move.b $00c47984 [01],d1\nNext PC: 00c0b2f4\n",
+      "loaded": 5,
+      "paint_bank": 56,
+      "actor_loading_pending": 0,
+      "game_field_loading": 0,
+      "actor_logic_steps": 11825,
+      "actor_loading_epoch": 11,
+      "source_fault": 0,
+      "paint_count": 0,
+      "paint_cursor": 0,
+      "contact_generation": 12,
+      "index_ready": 1,
+      "background0": "0x34170",
+      "buffers0": "0x51b58",
+      "buffers1": "0x5bf58"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+52AD: a9 00  LDA #$00
+52AF: a8  TAY
+52B0: c4 1c  CPY $1c
+52B2: f0 06  BEQ $52ba
+52B4: 99 e0 ca  STA $cae0,Y
+52B7: c8  INY
+52B8: d0 f6  BNE $52b0
+52BA: a6 1b  LDX $1b
+52BC: e0 03  CPX #$03
+52BE: d0 09  BNE $52c9
+52C0: a2 1f  LDX #$1f
+52C2: 99 e0 ca  STA $cae0,Y
+52C5: c8  INY
+52C6: ca  DEX
+52C7: 10 f9  BPL $52c2
+52C9: a2 00  LDX #$00
+52CB: bd 00 e0  LDA $e000,X
+52CE: 99 e0 ca  STA $cae0,Y
+52D1: c8  INY
+52D2: e8  INX
+52D3: e0 60  CPX #$60
+52D5: 90 f4  BCC $52cb
+52D7: a5 1b  LDA $1b
+52D9: f0 17  BEQ $52f2
+52DB: c9 03  CMP #$03
+52DD: f0 14  BEQ $52f3
+52DF: 0a  ASL A
+52E0: a8  TAY
+52E1: a2 1f  LDX #$1f
+52E3: 5e e0 ca  LSR $cae0,X
+52E6: 7e 00 cb  ROR $cb00,X
+52E9: 7e 20 cb  ROR $cb20,X
+52EC: ca  DEX
+52ED: 10 f4  BPL $52e3
+52EF: 88  DEY
+52F0: d0 ef  BNE $52e1
+52F2: 60  RTS
+52F3: a0 02  LDY #$02
+52F5: a2 1f  LDX #$1f
+52F7: 1e 40 cb  ASL $cb40,X
+52FA: 3e 20 cb  ROL $cb20,X
+52FD: 3e 00 cb  ROL $cb00,X
+5300: 3e e0 ca  ROL $cae0,X
+5303: ca  DEX
+5304: 10 f1  BPL $52f7
+5306: 88  DEY
+5307: d0 ec  BNE $52f5
+5309: 60  RTS

@@ -1,0 +1,28 @@
+{
+  "label": "color-final-room5",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "072a3a11ecc987adb7030a1fcf13a88f976e5b01c7ee80617fff3ffaebf4a430"
+  },
+  "source_room": 5,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    354880,
+    354920,
+    354960,
+    355000
+  ],
+  "source_music_fields": 610,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/color-final-room5.bpl",
+      "sha256": "3090ac173c4932edbb165035e291f4bbd835c83037a91037a5def8c92874e319"
+    },
+    {
+      "path": "docs/images/session-color-final-room5.png",
+      "sha256": "5585dd78883622dd7bd5da3f0e37c0bd4f0bdbcb338c13bd18d78a109314c314"
+    }
+  ]
+}

@@ -1,0 +1,524 @@
+{
+  "files": [
+    {
+      "path": "core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "9fa114e2c7a9e56ff7dc7105cee70343c68ba112ace8a4433bb46f68e74be2eb"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "ee7fb51449d755e20991a9ba8197bfbafe61b28443119cb84e113c89c8bd3cb8"
+    },
+    {
+      "path": "core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "143b6eb93713e73b71a7cdd5375f980abe14891fed594308fefd9b688d8614d6"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "98dcd24df04e1b6f778543d395b029dcb1fc2a6627fd83b5df74bf1268af8d05"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "5a09053558b66d8c453ad8c58a058fb44752967bbd900f74a54593c3e6678cc3"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "0abd7c6531b3722d62ddbbc149e8cbd805cddc67551826502c41ff1907337ad1"
+    },
+    {
+      "path": "core/session.h",
+      "sha256": "08ec809cffb30dbb5221e4af164f998e792eaac001d892179ef9fc96da18accf"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/source_climb.c",
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b"
+    },
+    {
+      "path": "core/source_climb.h",
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433"
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+    },
+    {
+      "path": "core/source_dma.h",
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "amiga/c64_sprite_data.h",
+      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203"
+    },
+    {
+      "path": "amiga/combat_audio.h",
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10"
+    },
+    {
+      "path": "amiga/combat_audio_data.h",
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f"
+    },
+    {
+      "path": "amiga/fighter_dma_data.h",
+      "sha256": "4e534017bb7b769ae5f8d6f96f2064582f965b8b8f3d9aa884767c55cc3367b2"
+    },
+    {
+      "path": "amiga/intro_audio.h",
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027"
+    },
+    {
+      "path": "amiga/intro_audio_data.h",
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "f59554ba211b9034648d0bb2f7ff053b1d73b2450dd5356742a04dcb7e09b5e0"
+    },
+    {
+      "path": "amiga/room_background_data.h",
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d"
+    },
+    {
+      "path": "amiga/runtime.c",
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "amiga/start.s",
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291"
+    },
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "a2dc45c4d481342ed1e350eaa1f6af9e95a89e234af4068fdd6357eaddbcb263"
+    },
+    {
+      "path": "docs/AMIGA_ART_PIPELINE.md",
+      "sha256": "8f88b92994201c1f4e96afe9702dbdc220fe84be60c74e51973126a0c1d15489"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
+      "sha256": "6c96ee78b7e40a7a9b9ae87368c3c4f7088c8c390794f9ae5bac23a26773d148"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_REPORT.md",
+      "sha256": "acb5723372d0b3c91f3ac660a1db18ae3b434b24469e98cafd35690699c8531d"
+    },
+    {
+      "path": "docs/ANIMATION_AND_OPENINGS_2026-10-24.md",
+      "sha256": "1f5dcd505066824f2ccb21b79c8927b1f4a25fbe610570f12f03713191ba5b04"
+    },
+    {
+      "path": "docs/ATTACK_INPUT_PHASE.md",
+      "sha256": "acde7bbca9fcbb4ea9fa046e3b746ed5d0ef1259f81912fc0325b9103acc027c"
+    },
+    {
+      "path": "docs/AUDIO_PLAYBACK.md",
+      "sha256": "a9d68dcab92cc82e082559a76a280818c830678a9430bf32ca110ce46e271c07"
+    },
+    {
+      "path": "docs/BOMBS_ENTRY.md",
+      "sha256": "4a9b4e7ec63a5ea48ada95b472beb63ce5c411c1e60fa3ad671253448f292cbe"
+    },
+    {
+      "path": "docs/BRUCE_STARTUP.md",
+      "sha256": "01cae0fb55275b98c62bf88e279fa2205c2aee62466e377f9571cc9eb4f0af93"
+    },
+    {
+      "path": "docs/C64_AI.md",
+      "sha256": "601fc59108ce7b36a40fe1c435c5f0a4005bab8b7c8632c3ccd5b616183fcb1e"
+    },
+    {
+      "path": "docs/C64_CLIMB.md",
+      "sha256": "85e43df851fe36d8829d6650093eebddf2b17b95f22510516e324a16ecd027fe"
+    },
+    {
+      "path": "docs/C64_CONTACTS.md",
+      "sha256": "a23fabc86682aa29898aee9b0a506dbe11d1315585477968d394f26ac83c7f59"
+    },
+    {
+      "path": "docs/C64_MOVEMENT.md",
+      "sha256": "796566a459fb91d1954006418bd3c2644477923133dcdb5edf5185dccbc152dc"
+    },
+    {
+      "path": "docs/C64_SPRITES.md",
+      "sha256": "70b4af9ee66b7cd06214209e4366b7e5758a0302b5d6cfa3402ea7576afe90ff"
+    },
+    {
+      "path": "docs/CEILING_R06.md",
+      "sha256": "af8f29486bbf37ed4eaa37bbbb0778e1cbc76a52c4360303ea707f8ecb6fab6f"
+    },
+    {
+      "path": "docs/CHEAT_PROGRESS.md",
+      "sha256": "b784e291babd0b41ced18c8a63d1ec3895facf961644ffd38fd8ecf46647e944"
+    },
+    {
+      "path": "docs/CLIMB_FIX.md",
+      "sha256": "ad3d21cda244c2507c1f4cfcd51a7d44d19ba2e8b7a0f715c004bd48bacce041"
+    },
+    {
+      "path": "docs/COMBAT_AUDIO.md",
+      "sha256": "011320c0d11fecbaf7e1a7ec04d4db0b8384389bada80b8f306fafc6d0dd131b"
+    },
+    {
+      "path": "docs/COMBAT_PROTOTYPE.md",
+      "sha256": "69a2d70d81661cccb04d736bf75665c82764496602bf706647abba274eeee356"
+    },
+    {
+      "path": "docs/CONTACT_KERNEL_OPTIMIZATION.md",
+      "sha256": "eb964bbb238d5bfc3d59f78f235ee8929fa0e2379aaecbe4ada438356b698e85"
+    },
+    {
+      "path": "docs/CONTACT_OPTIMIZATION.md",
+      "sha256": "2e6f6f3bca6059ec32e55144afcde97844052de2bc6ac04383956a41fc5daa5d"
+    },
+    {
+      "path": "docs/CONTACT_PREPARATION_OPTIMIZATION.md",
+      "sha256": "4e983d5410603e2f2d5bc0901364ca12c6754c280224b1cbba5218ef509a5912"
+    },
+    {
+      "path": "docs/CONTACT_REGISTERS_OPTIMIZATION.md",
+      "sha256": "01e9465000b2198ea6997f6c700c599c0983d560936e699a4acee8d5e2b52d82"
+    },
+    {
+      "path": "docs/CONTACT_SEGMENT_OPTIMIZATION.md",
+      "sha256": "089d57d6c2bc4a4e2e9ee668e004fccd013b41c25cfbd8f5a13465239f938d10"
+    },
+    {
+      "path": "docs/ENEMY_SPAWNS.md",
+      "sha256": "42b641f003ae2ccb8f287eb67ceb76b6965516d0baa19c2b43fa7345ea5a2909"
+    },
+    {
+      "path": "docs/FALL_AND_CONTACT.md",
+      "sha256": "1b2a11b80e66a65e3a9d7f4ef60fae7a430c82590430b34f452c171be3b42b55"
+    },
+    {
+      "path": "docs/FINAL_COLOR_OPTIMIZATION.md",
+      "sha256": "331eef6d4fc4d4a7e480bee0bcff87cde22e8252a435c12bbfa7b6a6e7a33452"
+    },
+    {
+      "path": "docs/HARRIER_AUDIO_REVIEW.md",
+      "sha256": "657bca9855a93e4cdb481ce4b4deb61fce735dd396c3e05c070f369dcbc9c240"
+    },
+    {
+      "path": "docs/LEDGE_AND_PRONE.md",
+      "sha256": "975bb2a044b7e3cb65b41de9449007f0f26c098917c0df05443bd6225762135d"
+    },
+    {
+      "path": "docs/M0_STATUS.md",
+      "sha256": "ed1741e0a9691abea7c78ee98e4eba93110066a1a3193c6b789431f0cf4a8adc"
+    },
+    {
+      "path": "docs/M3_COMBAT.md",
+      "sha256": "cb267dbaa8c4bdb0a38453dd2b411176df319227da35aa8ee231e8335db1e459"
+    },
+    {
+      "path": "docs/M4_ROOMS.md",
+      "sha256": "11294e3d7cecbe086d96de7861e39cde2db07c6456c8b8ca4286782edc8310fc"
+    },
+    {
+      "path": "docs/M4_ROOM_EXPLORER.md",
+      "sha256": "e65253f1c34b907dda77bb8f1d1627a3691c1d14e9cc498bcd68ddaff17852dd"
+    },
+    {
+      "path": "docs/MANUAL_TEST_2026-10-22.md",
+      "sha256": "fd95646a9b134add2c9b17500de99637b20ed16dec2bbdfade4ac56362a78ab9"
+    },
+    {
+      "path": "docs/MENU_PUBLICATION.md",
+      "sha256": "fd723c6dc97f8d8f57a6424c9a2b22e90b411808d8ffd3a3e63a6ab7480a3686"
+    },
+    {
+      "path": "docs/MILESTONE_COMPLETION.md",
+      "sha256": "223064275395e1eb404d1444180b6cfce1597108360e7487d7d2d52a63d0e88f"
+    },
+    {
+      "path": "docs/MOVEMENT_TIMING.md",
+      "sha256": "21c003c8b6e430912682c711c4896d34c8aa4ee76c7f5b5b6ec7c52ac7845e5c"
+    },
+    {
+      "path": "docs/MOVING_NET.md",
+      "sha256": "02804490bd37bc7996c01b3bf8d9bf8a26b9c2ec5d4d40010612c095a69f5c2e"
+    },
+    {
+      "path": "docs/NATIVE_ENGINE_OPTIMIZATION.md",
+      "sha256": "e2502afb9c30e9d8f2705db0687f38289e7355ca5e33855c6f9c1ecfb043fc8b"
+    },
+    {
+      "path": "docs/NEXT_CANDIDATE_2026-10-24.md",
+      "sha256": "87d4d1fc23af3a51c42c78419e8966d55bc519157b8d9fe378ab8068659eea77"
+    },
+    {
+      "path": "docs/NIGHT_HANDOFF.md",
+      "sha256": "3e14acdf7b1b9392b7484a8c1f8f765335ce1bc98e7493ed93673cf709cae9ab"
+    },
+    {
+      "path": "docs/NINJA_WALL.md",
+      "sha256": "aff49d26fbddfdb6a02ee804cd7d0b9bced207323fe03c0dcd0e2f9df0d5ee9e"
+    },
+    {
+      "path": "docs/NPC_RECOIL.md",
+      "sha256": "dec5f824d328caf84658fb2a2b27494e075048d89d8f1a56a4e666dcbf800db0"
+    },
+    {
+      "path": "docs/PACKED_MASK_OPTIMIZATION.md",
+      "sha256": "00c6cf08b77d2674924bc257fd19bd7ff1beb29585872c70d1e8c8d3fd4132cb"
+    },
+    {
+      "path": "docs/PAULA_STREAM.md",
+      "sha256": "adfb76e1ba82180d88a2ded966547eff79a1610b6fc43a18b2ad7321c5c1f9cf"
+    },
+    {
+      "path": "docs/PRESENTATION_EXPERIMENTS.md",
+      "sha256": "77f1550bd5949412e66e6b3b173b541cc260613537b4d67c31c7b03eba3105b4"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "sha256": "ef7aa9dec9dc3b6615b53f47e12b95551dc030c16ecafb05cc8cf9c97801b488"
+    },
+    {
+      "path": "docs/PROTOTYPE.md",
+      "sha256": "0f73c9895ec1bc2e3ed77b2324177d8debf75d607a723363aeca4f9b8ef97e21"
+    },
+    {
+      "path": "docs/PUNCH_WALL.md",
+      "sha256": "dcbc30ee1d8494a580e1041e2c9339e71e969c43d53fb4178c18b471aef95dba"
+    },
+    {
+      "path": "docs/RENDER_COHERENCE.md",
+      "sha256": "97f51dd3299aa56348cd16d646222c7b1e1170cd735b2540da326ef03a5f3110"
+    },
+    {
+      "path": "docs/ROOM10_ELECTRIC.md",
+      "sha256": "7cde71ad6d74b70faf27d1d1c1addee0d66a55b65193ee4681546e8d304eae09"
+    },
+    {
+      "path": "docs/ROOM8_BLASTS.md",
+      "sha256": "e3cc4c1cf7a56d9a8aca820aed5a408d0ef3541cb69744e63b210b88109fc3d4"
+    },
+    {
+      "path": "docs/ROOM_LOAD_PERFORMANCE.md",
+      "sha256": "59bd0b674f0bf695bb9954bb1716ffa4f497c211937a1e30907ade02261c049e"
+    },
+    {
+      "path": "docs/ROOM_RECONSTRUCTION.md",
+      "sha256": "92e631fd18af5c02848f473f209918844ed1111ee9a5c98adbac93809600d8db"
+    },
+    {
+      "path": "docs/SESSION_WALLS.md",
+      "sha256": "f911ea08b7dbac0ae5ef23051a9a3b990612617ad056042c1413b1a200c77de0"
+    },
+    {
+      "path": "docs/SOURCE_AUDIO.md",
+      "sha256": "d0efc8b586d560aeec034a47e80224bf4c86c5ddacc6b383170b19679a4e1ddf"
+    },
+    {
+      "path": "docs/SPRITE_COPY_OPTIMIZATION.md",
+      "sha256": "c7f6d6c76786c1b174c7c3f7ee377c5622a7fd9d3dfe82cea7edaa4681483fa8"
+    },
+    {
+      "path": "docs/TEST_AUDIT_2026-10-25.md",
+      "sha256": "55ce2bdcd5dcaf63f56f93e4633352a928a9af87a5e3795109bbeae0d4a0aa5b"
+    },
+    {
+      "path": "docs/TRAP_R06_2026-10-28.md",
+      "sha256": "e8730e361e36a8668f551b740ac7d05640718a34e454c6ec76be20fcaa4749e7"
+    },
+    {
+      "path": "docs/VIC_CACHE_OPTIMIZATION.md",
+      "sha256": "dabf252ae92ed8b3b6c2543eb5bcac988741ced502b6edfded118ac3d41d2052"
+    },
+    {
+      "path": "docs/VIC_NATIVE_OPTIMIZATION.md",
+      "sha256": "950e173491222814bd33c2c92f9c1b984ab41069e8bbdfddd5749d8261400786"
+    },
+    {
+      "path": "docs/VIC_REPEAT_OPTIMIZATION.md",
+      "sha256": "75d3793e0a6c6e83846b22500333319e3fa8f6ce438dbb3e870a239beda0d3c0"
+    },
+    {
+      "path": "docs/VIEW_PROJECTION_OPTIMIZATION.md",
+      "sha256": "02fc08feb0caf34a9df6c6e01efdf85aaf1926f9fab45b601f551b6c42f2dd81"
+    },
+    {
+      "path": "docs/WALL_ESCAPE.md",
+      "sha256": "e720dd4ca4707c222eb9e96d8b38cc89a5a93fc4dd554a66e62fe200fb4417e6"
+    },
+    {
+      "path": "docs/YAMO_AND_HEALTH_HUD.md",
+      "sha256": "3c5784652fc03f66e498d3198cf63bd6511562c7fc86d3d9acb64d9d820ac159"
+    },
+    {
+      "path": "docs/YAMO_VISIBILITY_PERFORMANCE.md",
+      "sha256": "0185e4a4b11048f5f9e0214017e5d5ecb2dae699f8de380337083b99ebf0a7fe"
+    },
+    {
+      "path": "docs/history/M3_COMBAT_BEFORE_TEST_AUDIT.md",
+      "sha256": "5aa24a023b03429c9c75e5d354229c11d556770515756867c1acc8c86f676ca2"
+    },
+    {
+      "path": "docs/history/MANUAL_TEST_2026-10-24.md",
+      "sha256": "7421d460a87ced5414f0b20922905bcbbca95cee1a34519ab3567d6c9405ed03"
+    },
+    {
+      "path": "docs/history/PROJECT_PLAN_M4_CANDIDATE_2026-10-24.md",
+      "sha256": "e71190c21b927ce3bf67c1c8ddbd38c9957525c173582f9ccbcde32ac339d76c"
+    },
+    {
+      "path": "docs/history/ROOM_RECONSTRUCTION_BEFORE_RUNTIME.md",
+      "sha256": "8576993dd5aabe08d80e1d81a01bfaa0b938613c96163a2b6f6e815ac3387edc"
+    },
+    {
+      "path": "docs/parity/README.md",
+      "sha256": "67dec15fb4cf7b337c0a1fe07b695c3df2152a29df37d4adf07d01ec031b64de"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "sha256": "7d8afca2090e672171f3178fce3dc3f18d80e843c068fcbf6dd45a9b0f62f83d"
+    },
+    {
+      "path": "docs/parity/rooms.csv",
+      "sha256": "59d4dae4a7e43ed14eb5ac4a1ca21d26e675032978a12d8e294d2e134eddcb52"
+    },
+    {
+      "path": "docs/parity/evidence/ENEMY-EDGE-0001.md",
+      "sha256": "5640653343d60cb1f59e88ba750c8af3ca5e111c95b43c5e0962ed9734be56dc"
+    },
+    {
+      "path": "docs/parity/evidence/FALL-0001.md",
+      "sha256": "08674a71d54c8fab9ded8aa47222c3e8081c0c91a6133ef5cdf20306a2c33ba9"
+    },
+    {
+      "path": "docs/reference/C64_REFERENCE.md",
+      "sha256": "d2d84469b0ecda11a19717d24c9fc4c7f4fac3d24f68d1ef0a6aa5343bbe729e"
+    },
+    {
+      "path": "docs/reference/SOURCES.md",
+      "sha256": "f9dd14f34650996924948559d12249652fd34aa5f9d81fb00a4d8aeb0a5599dc"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a7017a59b509b850d321ebd642098f8a447c8dd989d63ac21fb31e6dca276435"
+    }
+  ]
+}

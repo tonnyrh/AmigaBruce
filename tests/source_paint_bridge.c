@@ -39,3 +39,56 @@ long bl_paint_requeue_contract(void){
  CHECK(bl_c64_check_interleaved(bitmap,0)==0);
  return 0;
 }
+
+static void block_copy(const BlC64Block *q){
+ unsigned long y,p,c,w=q->width;
+ for(y=0;y<q->height;y++)for(p=0;p<4;p++)for(c=0;c<w;c++){
+  unsigned char mask=255;unsigned long dst=(q->top+y)*160+p*40+q->left+c,src=(y*4+p)*w+c;
+  if(c<2)mask&=(unsigned char)(q->first_mask>>(c?0:8));
+  if(c>=w-2)mask&=(unsigned char)(q->last_mask>>((c==w-2)?8:0));
+  q->bitmap[dst]=(q->bitmap[dst]&~mask)|(q->pixels[src]&mask);
+ }
+}
+
+static unsigned char animation_test_cache[106496];
+long bl_paint_frame_contract(void){
+ unsigned short room,step,i,count,loops;unsigned long before;unsigned char saw_split=0;
+ bl_c64_set_block_painter(block_copy);bl_c64_set_painter(interleaved_tile);
+ /* Full loads and same-room reloads must produce exact source pixels. */
+ bl_c64_reset();
+ for(room=0;room<20;room++)for(step=0;step<3;step++){
+  bl_c64_load(room);
+  for(i=0;i<40960;i++)bitmap[i]=0xa5;
+  bl_c64_paint_room(bitmap,0);CHECK(bl_c64_check_interleaved(bitmap,0)==0);
+ }
+ bl_c64_world_start(1,0);bl_c64_world_jump(11);
+ for(i=0;i<40960;i++)bitmap[i]=0;
+ bl_c64_paint_room(bitmap,0);bl_c64_clear_dirty();
+ CHECK(bl_c64_build_animation_cache(animation_test_cache,sizeof(animation_test_cache))==52224);
+ for(step=0;step<96;step++){
+  const unsigned long *coverage;
+  bl_c64_field();bl_c64_field();bl_c64_field();bl_c64_world_step(1,1);bl_c64_prepare_paint();
+  (void)bl_c64_paint_part(bitmap,0,160,&count);
+  if(animation_part==1 && bl_c64_check_interleaved(bitmap,0))saw_split=1;
+  before=bl_c64_actor_ram_hash();coverage=bl_c64_animation_coverage();
+  for(i=0;i<25;i++)CHECK(!(coverage[i]&~0xfffffUL));
+  bl_c64_paint_animation_frame(bitmap,0);
+  CHECK(before==bl_c64_actor_ram_hash());
+  CHECK(bl_c64_check_interleaved(bitmap,0)==0);
+  if(bl_c64_paint_done())bl_c64_clear_dirty();
+ }
+ CHECK(saw_split);
+ /* A changed cell invalidates its cache rectangle, including word coverage. */
+ for(i=120;i<1000;i++)if(animation_cell[i]!=65535)break;
+ CHECK(i<1000);m[0x8c00+i]=0;source_written(0x8c00+i);bl_c64_prepare_paint();
+ {unsigned short item=animation_cell[i],word=(i%40)>>1;
+  CHECK(animation_differences[item]);
+  CHECK(!(bl_c64_animation_coverage()[i/40]&(1UL<<word)));
+ }
+ for(loops=0;loops<32 && bl_c64_has_dirty();loops++){
+  (void)bl_c64_paint_part(bitmap,0,160,&count);bl_c64_paint_animation_frame(bitmap,0);
+  if(bl_c64_paint_done())bl_c64_clear_dirty();
+ }
+ CHECK(!bl_c64_has_dirty());CHECK(bl_c64_check_interleaved(bitmap,0)==0);
+ return 0;
+}

@@ -27,40 +27,36 @@ bl_contact_align4:
     bne.s 4f
     btst #0,%d4
     bne.s 20f
-    moveq #7,%d0
-3:
+    .rept 8
     clr.l (%a1)+
-    dbra %d0,3b
+    .endr
     bra.s 4f
 20:
-    moveq #31,%d0
-21:
+    .rept 32
     clr.b (%a1)+
-    dbra %d0,21b
+    .endr
 4:
     /* Long copy only if both addresses are even and byte-forward
      * dependency cannot exist. Reads occur after all prefix zeroing. */
     move.l %a1,%d0
     or.l %d2,%d0
     btst #0,%d0
-    bne.s 7f
+    bne 7f
     cmpa.l %a1,%a2
     bcc.s 5f
     move.l %a2,%a4
     adda.w #96,%a4
     cmpa.l %a4,%a1
-    bcs.s 7f
+    bcs 7f
 5:
-    moveq #23,%d0
-6:
+    .rept 24
     move.l (%a2)+,(%a1)+
-    dbra %d0,6b
-    bra.s 9f
+    .endr
+    bra 9f
 7:
-    moveq #95,%d0
-8:
+    .rept 96
     move.b (%a2)+,(%a1)+
-    dbra %d0,8b
+    .endr
 9:
     moveq #1,%d7
     tst.w %d3
@@ -79,7 +75,7 @@ bl_contact_align4:
     andi.w #1,%d7
     move.l #0x3f3f3f3f,%d6
     cmpi.w #2,%d3
-    beq.s 10f
+    beq 10f
     move.l #0x0f0f0f0f,%d6
 10:
     move.l (%a3),%d2

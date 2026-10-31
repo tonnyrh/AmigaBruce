@@ -1,0 +1,93 @@
+{
+  "status": "mapped_owned_native_memory_task_stack_bounds_do_not_cover_usp",
+  "method": "Paused read-only KS1.3 CLI HUNK chain, ELF symbol/section offsets and SDK-compiled Exec/Task offsets; no source-memory mutation",
+  "normal_elf_sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb",
+  "sections": [
+    {
+      "section": ".text",
+      "bytes": 194016,
+      "address": "0xc0cb88",
+      "memory": "slow"
+    },
+    {
+      "section": ".rodata",
+      "bytes": 78920,
+      "address": "0xc3c178",
+      "memory": "slow"
+    },
+    {
+      "section": ".data",
+      "bytes": 9,
+      "address": "0xc4f5d0",
+      "memory": "slow"
+    },
+    {
+      "section": ".bss",
+      "bytes": 171088,
+      "address": "0xc4f5e8",
+      "memory": "slow"
+    }
+  ],
+  "objects": {
+    "m": {
+      "address": "0xc69234",
+      "memory": "slow",
+      "section": ".bss"
+    },
+    "character_cache": {
+      "address": "0xc5b83c",
+      "memory": "slow",
+      "section": ".bss"
+    },
+    "source_audio": {
+      "address": "0xc5010c",
+      "memory": "slow",
+      "section": ".bss"
+    },
+    "actor_seed_packed": {
+      "address": "0xc43cc3",
+      "memory": "slow",
+      "section": ".rodata"
+    },
+    "bl_source_frequencies": {
+      "address": "0xc4e93a",
+      "memory": "slow",
+      "section": ".rodata"
+    },
+    "bl_source_waves": {
+      "address": "0xc4eada",
+      "memory": "slow",
+      "section": ".rodata"
+    },
+    "source_final_colors": {
+      "address": "0xc12fa0",
+      "memory": "slow",
+      "section": ".text"
+    }
+  },
+  "stack": {
+    "lower": "0xc067ec",
+    "upper": "0xc06e2c",
+    "reported_span": 1600,
+    "sampled_usp": "0xc7ccec",
+    "sampled_unused_below_usp": null,
+    "task_bounds_cover_current_usp": false,
+    "process_fields": {
+      "size": 1600,
+      "high_end_bptr": 3152379,
+      "previous_frame": "0xc7d240",
+      "cli_default_stack_words": 4096
+    },
+    "saved_task_sp": "0xc7cd4e",
+    "full_call_chain_high_water_verified": false
+  },
+  "sdk_offsets": {
+    "this_task": 276,
+    "saved_sp": 54,
+    "lower": 58,
+    "upper": 62,
+    "object_sha256": "a505d32b13debe194896bbbe07a26be611ed178be306a8e9732170d70ca5b585"
+  },
+  "physical_a500": false,
+  "realtime_accepted": false
+}

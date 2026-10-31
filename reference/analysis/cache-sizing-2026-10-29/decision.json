@@ -1,0 +1,131 @@
+{
+  "status": "candidate_archived_baseline_restored",
+  "candidate_manifest": {
+    "status": "not_promoted",
+    "reason": "Continuous 20-room timing regresses room15 by12890 HSYNC lines; audio misses remain237. Production binary not replaced. Candidate preserved for later controlled analysis.",
+    "files": [
+      {
+        "path": "core/c64_rooms.c",
+        "sha256": "a76d8103dcd8145860498ef2f450146a1a8c87daf1e7df57768707d52181a19f"
+      },
+      {
+        "path": "core/c64_rooms.h",
+        "sha256": "2b5b9bff847fd443fa90084946f0f0a848d743f2f6ac651a6191bdb59f7f6da6"
+      },
+      {
+        "path": "amiga-build.ps1",
+        "sha256": "f7ab7786d24d9fba8dc573f6fe5af9a508cfcf500147644a8fb0fe3560220bf8"
+      },
+      {
+        "path": "test-source-performance.ps1",
+        "sha256": "f462c25637ec27f7a9975762cf0d226b06af6ddddbde8b5a622e28b5030db8b7"
+      }
+    ]
+  },
+  "restored_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "b9141711fcf16dd3e56a295be74aa6421b0da0f6e91c3b1f53974d509335f3f6"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "533c39c8475143b38ce63da1f57a6bd5fc8536b928f794faffadd42d5a313c42"
+    },
+    {
+      "path": "test-source-performance.ps1",
+      "sha256": "f2d4a2c72d885bc611d818931f7c181dee133266d5f3a91091696b814160059e"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "dae1f7aee576e3839e9b135f2b18009e94659c7890299e107430f835c01c8810"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "343dbcaed8b7978bffb8ef691ca9f75073a8303f156742636c2a8e5765e3423a"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "96bb14db669da4c973674e52fa7b69a71cfb55896a665195c43db746380277b0"
+    }
+  ],
+  "continuous_tour": {
+    "rooms": 20,
+    "steps_each": 120,
+    "baseline_lines": 2846304,
+    "candidate_lines": 2839756,
+    "baseline_missed_audio": 246,
+    "candidate_missed_audio": 237,
+    "room15_delta_lines": 12890,
+    "independent_room_initial_states": false,
+    "natural_playthrough": false
+  },
+  "r20_profile": "reference/analysis/optimization-2026-10-27/cache-lookup-r20-profile/native.json",
+  "limitations": [
+    "Continuous debug jumps carry source random/time state; isolate room15 before attributing regression to one routine.",
+    "No real-time acceptance. No production binary from candidate.",
+    "Short legacy elapsed counter includes title and game; counter-scope.json records accounting."
+  ],
+  "next": "Isolate room20 original room-run cost (largest measured self time:400.589 HSYNC lines/call, cold first step included) and normalize independent room start states before another candidate is promoted. VIC-only changes do not address the measured largest component.",
+  "r20_profile_scope": {
+    "source_steps": 90,
+    "frames": 90,
+    "start_room_zero_based": 19,
+    "legacy_room_tour_first_jump_frame": 360,
+    "instrumented": true,
+    "cold_first_room_step_included": true,
+    "top_exclusive": [
+      {
+        "name": "room",
+        "calls": 90,
+        "exclusive_lines": 36053,
+        "average_exclusive": 400.589
+      },
+      {
+        "name": "wait",
+        "calls": 90,
+        "exclusive_lines": 12840,
+        "average_exclusive": 142.667
+      },
+      {
+        "name": "game",
+        "calls": 90,
+        "exclusive_lines": 8720,
+        "average_exclusive": 96.889
+      },
+      {
+        "name": "restore",
+        "calls": 90,
+        "exclusive_lines": 8309,
+        "average_exclusive": 92.322
+      },
+      {
+        "name": "loop",
+        "calls": 91,
+        "exclusive_lines": 7851,
+        "average_exclusive": 86.275
+      },
+      {
+        "name": "vic",
+        "calls": 439,
+        "exclusive_lines": 7511,
+        "average_exclusive": 17.109
+      },
+      {
+        "name": "field",
+        "calls": 439,
+        "exclusive_lines": 7069,
+        "average_exclusive": 16.103
+      },
+      {
+        "name": "contact",
+        "calls": 90,
+        "exclusive_lines": 6913,
+        "average_exclusive": 76.811
+      }
+    ]
+  }
+}

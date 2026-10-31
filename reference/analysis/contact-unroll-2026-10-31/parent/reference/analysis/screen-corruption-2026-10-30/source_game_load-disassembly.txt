@@ -1,0 +1,53 @@
+
+C:\vscode\_EXT\AmigaBruceLee\amiga\out\bruce_amiga.elf:     file format elf32-m68k
+
+
+Disassembly of section .text:
+
+00003466 <source_game_load>:
+    3466:	2f02           	move.l d2,-(sp)
+    3468:	4aaf 0008      	tst.l 8(sp)
+    346c:	6764           	beq.s 34d2 <source_game_load+0x6c>
+    346e:	2079 0004 0270 	movea.l 40270 <copper+0x4>,a0
+    3474:	4268 0002      	clr.w 2(a0)
+    3478:	2079 0004 026c 	movea.l 4026c <copper>,a0
+    347e:	4268 0002      	clr.w 2(a0)
+    3482:	33fc 0000 00df 	move.w #0,dff100 <_end+0xd954a4>
+    3488:	f100 
+    348a:	13fc 0001 0004 	move.b #1,40ab0 <game_field_loading>
+    3490:	0ab0 
+    3492:	1039 00bf ea01 	move.b bfea01 <_end+0xb94da5>,d0
+    3498:	1239 00bf e901 	move.b bfe901 <_end+0xb94ca5>,d1
+    349e:	1439 00bf e801 	move.b bfe801 <_end+0xb94ba5>,d2
+    34a4:	0280 0000 00ff 	andi.l #255,d0
+    34aa:	4840           	swap d0
+    34ac:	4240           	clr.w d0
+    34ae:	0281 0000 00ff 	andi.l #255,d1
+    34b4:	e189           	lsl.l #8,d1
+    34b6:	8081           	or.l d1,d0
+    34b8:	8002           	or.b d2,d0
+    34ba:	23c0 0004 0ab4 	move.l d0,40ab4 <game_field_last>
+    34c0:	1039 0004 0af0 	move.b 40af0 <source_audio_active>,d0
+    34c6:	13c0 0004 0ac0 	move.b d0,40ac0 <source_audio_load_resume>
+    34cc:	664e           	bne.s 351c <source_game_load+0xb6>
+    34ce:	241f           	move.l (sp)+,d2
+    34d0:	4e75           	rts
+    34d2:	4239 0004 0ab0 	clr.b 40ab0 <game_field_loading>
+    34d8:	1039 00bf ea01 	move.b bfea01 <_end+0xb94da5>,d0
+    34de:	1239 00bf e901 	move.b bfe901 <_end+0xb94ca5>,d1
+    34e4:	1439 00bf e801 	move.b bfe801 <_end+0xb94ba5>,d2
+    34ea:	0280 0000 00ff 	andi.l #255,d0
+    34f0:	4840           	swap d0
+    34f2:	4240           	clr.w d0
+    34f4:	0281 0000 00ff 	andi.l #255,d1
+    34fa:	e189           	lsl.l #8,d1
+    34fc:	8081           	or.l d1,d0
+    34fe:	8002           	or.b d2,d0
+    3500:	23c0 0004 0ab4 	move.l d0,40ab4 <game_field_last>
+    3506:	4a39 0004 0ac0 	tst.b 40ac0 <source_audio_load_resume>
+    350c:	67c0           	beq.s 34ce <source_game_load+0x68>
+    350e:	4239 0004 0ac0 	clr.b 40ac0 <source_audio_load_resume>
+    3514:	241f           	move.l (sp)+,d2
+    3516:	4ef9 0000 340e 	jmp 340e <source_audio_resume>
+    351c:	241f           	move.l (sp)+,d2
+    351e:	4ef9 0000 33ae 	jmp 33ae <source_audio_mute>

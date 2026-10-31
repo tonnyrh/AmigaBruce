@@ -1,0 +1,146 @@
+{
+  "snapshot_sha256": "48b20637149ec00aef4d9b15f9ddc99b8fb4d9810a82b7d00d0db2f0f3afb6c1",
+  "snapshot_unchanged": true,
+  "room": 6,
+  "source_display_control": "0xb",
+  "source_den": false,
+  "task": "0xc05128",
+  "hunks": [
+    "0xc077d0",
+    "0xc33340",
+    "0xc46e88",
+    "0xc46ea0"
+  ],
+  "source_ram": "0xc60aec",
+  "elf_path": "reference/analysis/audio-service-2026-10-30/parent/amiga/out/bruce_amiga.elf",
+  "elf_sha256": "2560d20e497e1a9e5a04078a72ba38a9072794e6d70b07632794183bcb465a64",
+  "text_bytes": 179044,
+  "text_relocations": 11495,
+  "text_matches_selected_elf": true,
+  "text_diff_offsets": [],
+  "globals": {
+    "background": {
+      "address": "0xc47940",
+      "bytes": "00010170"
+    },
+    "fighter_dma": {
+      "address": "0xc478dc",
+      "bytes": "0003e170"
+    },
+    "tile_dma": {
+      "address": "0xc478d8",
+      "bytes": "0001a170"
+    },
+    "actor_logic_steps": {
+      "address": "0xc48182",
+      "bytes": "2a460000"
+    },
+    "actor_loading_epoch": {
+      "address": "0xc48180",
+      "bytes": "000b2a46"
+    },
+    "source_fault": {
+      "address": "0xc60ade",
+      "bytes": "00000600"
+    },
+    "game_field_last": {
+      "address": "0xc47948",
+      "bytes": "0000b34a"
+    },
+    "game_field_loading": {
+      "address": "0xc47944",
+      "bytes": "01000100"
+    },
+    "game_field_active": {
+      "address": "0xc47946",
+      "bytes": "01000000"
+    },
+    "actor_loading_pending": {
+      "address": "0xc48188",
+      "bytes": "01000000"
+    },
+    "actor_delay_pending": {
+      "address": "0xc4817c",
+      "bytes": "00000000"
+    },
+    "actor_gameover_pending": {
+      "address": "0xc4818c",
+      "bytes": "00010000"
+    },
+    "actor_reset_pending": {
+      "address": "0xc4818f",
+      "bytes": "00000000"
+    },
+    "transition_pending": {
+      "address": "0xc60ae2",
+      "bytes": "00fd0000"
+    },
+    "animation_count": {
+      "address": "0xc50666",
+      "bytes": "00000022"
+    }
+  },
+  "frames": [
+    {
+      "copper": "0x5bb7c",
+      "planes": [
+        "0x51b58",
+        "0x51b80",
+        "0x51ba8",
+        "0x51bd0"
+      ],
+      "bitmap": "reference/analysis/screen-corruption-2026-10-30/copper-05bb7c.bpl"
+    },
+    {
+      "copper": "0x65f7c",
+      "planes": [
+        "0x5bf58",
+        "0x5bf80",
+        "0x5bfa8",
+        "0x5bfd0"
+      ],
+      "bitmap": "reference/analysis/screen-corruption-2026-10-30/copper-065f7c.bpl"
+    }
+  ],
+  "chunks": {
+    "ASF ": 27,
+    "CYCS": 20,
+    "CPU ": 156,
+    "CPUX": 18,
+    "CPUT": 164,
+    "DSK0": 205,
+    "DSK1": 31,
+    "DSK2": 31,
+    "DSK3": 31,
+    "DISK": 17,
+    "CHIP": 360,
+    "CHPX": 48,
+    "BLTX": 226,
+    "BLIT": 63,
+    "CHSL": 191,
+    "CINP": 12,
+    "AGAC": 1024,
+    "BPLX": 292,
+    "SPR0": 25,
+    "SPR1": 25,
+    "SPR2": 25,
+    "SPR3": 25,
+    "SPR4": 25,
+    "SPR5": 25,
+    "SPR6": 25,
+    "SPR7": 25,
+    "AUD0": 25,
+    "AUD1": 25,
+    "AUD2": 25,
+    "AUD3": 25,
+    "CIAA": 49,
+    "CIAB": 49,
+    "KEYB": 15,
+    "EXPA": 20,
+    "CRAM": 524288,
+    "BRAM": 524288,
+    "ROM ": 95
+  },
+  "cpu_head": "000109a0fe00000100008f000000000800000001000000300000000000000aea0000277000c78cb000c60aec0000002800c60aec00c0f87c00c0da7000c715e20000009e00c0da8effff028100c7156e00c80000000800000000000ad303000000000000",
+  "method": "Read-only stored RAM/ELF relocation comparison and Copper bitmap reconstruction; no resume or failed-input inference"
+}

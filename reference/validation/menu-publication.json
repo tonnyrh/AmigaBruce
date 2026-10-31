@@ -1,0 +1,927 @@
+{
+  "status": "passed_menu_publication_and_start_buffers",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "samples": 78,
+  "partial_hidden_samples": 41,
+  "changed_partial_hidden_samples": 33,
+  "f10_partial_hidden_samples": 2,
+  "f10_changed_hidden_samples": 1,
+  "held_room_checked_pixels": 54280,
+  "held_room_static_pixel_errors": 0,
+  "source_ram_preserved": true,
+  "game_start_fronts": [
+    1,
+    0
+  ],
+  "unchanged_engine_files": [
+    {
+      "path": "core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "ee7fb51449d755e20991a9ba8197bfbafe61b28443119cb84e113c89c8bd3cb8"
+    },
+    {
+      "path": "core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "143b6eb93713e73b71a7cdd5375f980abe14891fed594308fefd9b688d8614d6"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "98dcd24df04e1b6f778543d395b029dcb1fc2a6627fd83b5df74bf1268af8d05"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "5a09053558b66d8c453ad8c58a058fb44752967bbd900f74a54593c3e6678cc3"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "0abd7c6531b3722d62ddbbc149e8cbd805cddc67551826502c41ff1907337ad1"
+    },
+    {
+      "path": "core/session.h",
+      "sha256": "08ec809cffb30dbb5221e4af164f998e792eaac001d892179ef9fc96da18accf"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/source_climb.c",
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b"
+    },
+    {
+      "path": "core/source_climb.h",
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433"
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+    },
+    {
+      "path": "core/source_dma.h",
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "amiga/c64_sprite_data.h",
+      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203"
+    },
+    {
+      "path": "amiga/combat_audio.h",
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10"
+    },
+    {
+      "path": "amiga/combat_audio_data.h",
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f"
+    },
+    {
+      "path": "amiga/fighter_dma_data.h",
+      "sha256": "4e534017bb7b769ae5f8d6f96f2064582f965b8b8f3d9aa884767c55cc3367b2"
+    },
+    {
+      "path": "amiga/intro_audio.h",
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027"
+    },
+    {
+      "path": "amiga/intro_audio_data.h",
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b"
+    },
+    {
+      "path": "amiga/room_background_data.h",
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d"
+    },
+    {
+      "path": "amiga/runtime.c",
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "amiga/start.s",
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291"
+    },
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2"
+    }
+  ],
+  "later_scoped_engine_sources": [
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    }
+  ],
+  "footprint": [
+    {
+      "build": {
+        "path": "reference/analysis/menu-publication-2026-10-29/before/amiga/out/bruce_amiga.elf",
+        "sha256": "15d131802916d9a70664eec558beb47d913771e04c808e7c596a470e24ac47c2"
+      },
+      "sections": {
+        ".text": 193712,
+        ".rodata": 78932,
+        ".data": 9,
+        ".bss": 171088
+      }
+    },
+    {
+      "build": {
+        "path": "amiga/out/bruce_amiga.elf",
+        "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+      },
+      "sections": {
+        ".text": 194016,
+        ".rodata": 78920,
+        ".data": 9,
+        ".bss": 171088
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/before/manifest.json",
+      "sha256": "b31d3bc64e83f6e4e9c4dc4fa5e578378aabcf2d992e9e6e40df10027911706d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/menu-paint-disassembly.txt",
+      "sha256": "269228ca0b3e26a2f2fb211e5966a051f1679cb6df6ceac638a66c8e975b8bc0"
+    },
+    {
+      "path": "tools/verify_menu_publication.py",
+      "sha256": "3af06aa64721c35490fbe089ebe0787913960f2572ad40e2eb8e84ec6ee9b9ea"
+    },
+    {
+      "path": "tools/audit_native_menu_publication.py",
+      "sha256": "3619cae63ebded4d72f9720914eca608a694d0f1201fb2cbc84bc92328ed0425"
+    },
+    {
+      "path": "docs/MENU_PUBLICATION.md",
+      "sha256": "fd723c6dc97f8d8f57a6424c9a2b22e90b411808d8ffd3a3e63a6ab7480a3686"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/source-scope.json",
+      "sha256": "f46457dde8628990bf3710c755a4ce0d2d17ee487e810a8980bb55e13b6e3a47"
+    },
+    {
+      "path": "tools/verify_final_color_scope.py",
+      "sha256": "4fc7325734fd28403359a1745d4c25c2284c1f605ec05bb36f52b7e276a264a6"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/report.json",
+      "sha256": "d81b11ea8ed1bb1cdb60111c5c62eab72cbc52cd3397916cbc3bd76a8c9132d7"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample000-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample000-hidden.bpl",
+      "sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample001-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample001-hidden.bpl",
+      "sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample002-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample002-hidden.bpl",
+      "sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample003-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample003-hidden.bpl",
+      "sha256": "193dc76af96cf38841568d298d5a7fa40f6c2379c4a263f901da083061d078bc"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample004-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample004-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample005-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample005-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample006-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample006-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample007-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample007-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample008-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample008-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample009-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample009-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample010-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample010-hidden.bpl",
+      "sha256": "b86f07c01389e9ac6907bd14de4d9a75bc2f974809729a0a5d26302c15ae633c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample011-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample011-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample012-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample012-hidden.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample013-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample013-hidden.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample014-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample014-hidden.bpl",
+      "sha256": "dd27755187e712830fc17eb4a136dcc89a44b0c12c218d46e4dd4af219f8390c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample015-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample015-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample016-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample016-hidden.bpl",
+      "sha256": "d2cd007ec13f128253bc520ab7b148aa5d14520337749a61c6b571b828a28b9a"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample017-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample017-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample018-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample018-hidden.bpl",
+      "sha256": "a277de95a2ee7d3745bcc0b67b441cf5b06f525100e8471003767257001b2259"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample019-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample019-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample020-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample020-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample021-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample021-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample022-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample022-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample023-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample023-hidden.bpl",
+      "sha256": "d2cd007ec13f128253bc520ab7b148aa5d14520337749a61c6b571b828a28b9a"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample024-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample024-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample025-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample025-hidden.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample026-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample026-hidden.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample027-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample027-hidden.bpl",
+      "sha256": "9456fb46be2d24bd2787f27e7363fcb08f727e2ad56fc18243528b8f5df3df69"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample028-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample028-hidden.bpl",
+      "sha256": "c6f20bbaace44493b3fffc12ba9832c1162257f516772851c94a483c4526c912"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample029-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample029-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample030-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample030-hidden.bpl",
+      "sha256": "4006edeb681e4bac936b48258eb5b419ec9f9db6538e23cc05f57615ba613494"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample031-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample031-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample032-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample032-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample033-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample033-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample034-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample034-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample035-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample035-hidden.bpl",
+      "sha256": "53c4940fbcfec6ca324cfa32086ddbb1df6c715ea016690ba22f84e979ea59c3"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample036-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample036-hidden.bpl",
+      "sha256": "665632c0035bafbb52c53535b4e18cf35874176f2353b2efcc0b1baa84cde869"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample037-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample037-hidden.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample038-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample038-hidden.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample039-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample039-hidden.bpl",
+      "sha256": "f8a0ab3fa4045e0e2104cb8dfa155e989aff9834983a8d28af54ae6d03bf802c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample040-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample040-hidden.bpl",
+      "sha256": "a65c0939dbe59e8038f693baed3daceff35a03d09b593ee227f0c9673e02dca4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample041-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample041-hidden.bpl",
+      "sha256": "42528f92c6cbdf3f1cc5743f5d1a06e1402f44e3c9d22614da071fd9b9a7fc7f"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample042-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample042-hidden.bpl",
+      "sha256": "ec262a746ba0c084d8b0f05f01143c1fe88cfd34e601fd966b01bd67b712a5c3"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample043-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample043-hidden.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample044-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample044-hidden.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample045-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample045-hidden.bpl",
+      "sha256": "2bc6acd999f22b7df625a1f65947cdca0fdddbb5b15443db91bacfbb19477f41"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample046-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample046-hidden.bpl",
+      "sha256": "a65c0939dbe59e8038f693baed3daceff35a03d09b593ee227f0c9673e02dca4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample047-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample047-hidden.bpl",
+      "sha256": "9bb71d8de01706c7846407956a02b6a90a3ce9bb91949b7cf2c03f7342abcde8"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample048-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample048-hidden.bpl",
+      "sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample049-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample049-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample050-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample050-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample051-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample051-hidden.bpl",
+      "sha256": "6bd82badcbbe61fad62441eab90df2dc54f6a12aae948278f42252152fc653e9"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample052-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample052-hidden.bpl",
+      "sha256": "79422531060b0c8a01831d1e21f2d5be318e3dfefb1cdf9abdcdd204c2bd3d28"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample053-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample053-hidden.bpl",
+      "sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample054-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample054-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample055-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample055-hidden.bpl",
+      "sha256": "e45d76383f8718a868734a609caeab1bf77aff4e5b27d707b4fb7e3ba371342c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample056-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample056-hidden.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample057-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample057-hidden.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample058-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample058-hidden.bpl",
+      "sha256": "50ccbca7ea241e5fb1d6ae6fde3588a90cd816c0470140e4f1ff18076d03ff51"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample059-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample059-hidden.bpl",
+      "sha256": "a65c0939dbe59e8038f693baed3daceff35a03d09b593ee227f0c9673e02dca4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample060-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample060-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample061-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample061-hidden.bpl",
+      "sha256": "c2d0e5ce8ef62b1babf9f64135a59c6a3476fbe16fa87b397ed8af6a345fdf6d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample062-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample062-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample063-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample063-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample064-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample064-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample065-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample065-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample066-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample066-hidden.bpl",
+      "sha256": "d42966213759274e6526e4ade7f80f815227a0b9b7bb7adf795ebbf1793b24a8"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample067-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample067-hidden.bpl",
+      "sha256": "66e8acef3364e02e903e396a8788ce5b8a28e937af71e3bf780b14f8df4aab31"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample068-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample068-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample069-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample069-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample070-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample070-hidden.bpl",
+      "sha256": "a1d8cc492e9c4fc1a97bf662f51c0c47b23a474195ff540f82f06e5be16c1870"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample071-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample071-hidden.bpl",
+      "sha256": "a854db5500b6a8c8f1449ffcf8fe969175c9cd7ff3c2d5d1934a294a0ed738d8"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample072-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample072-hidden.bpl",
+      "sha256": "81d64edbaa87d3ac47b8873b7e2914674f179fd0f9711cd6b005b86bde2d20cf"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample073-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample073-hidden.bpl",
+      "sha256": "e15bef58bca5495fd8a8a828ba580b4d79c6e8bc21924d13573c93ee4c8afc28"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample074-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample074-hidden.bpl",
+      "sha256": "9b248a12d83a0a9f690f89ab2ad30729c33aba640b0be58e17c989ecf3c9df10"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample075-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample075-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample076-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample076-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample077-front.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/sample077-hidden.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/menu-source-0.bin",
+      "sha256": "78f17fb6e35311379026e344ad26cc1c7e5157619eff437e15637ce8868a2d91"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/menu-source-1.bin",
+      "sha256": "78f17fb6e35311379026e344ad26cc1c7e5157619eff437e15637ce8868a2d91"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/observer-final/menu-source-2.bin",
+      "sha256": "7eacd21fd3a92dc6dca6f24d1ff3310ecc3691d0f626dca51a765625c70860a7"
+    }
+  ],
+  "limits": [
+    "Paused controlled UI snapshots, not whole-game or timing acceptance",
+    "Menu choices and source-start calls retained; no new C64 rule",
+    "Background start copies use existing blocking OCS blit; no clean startup timing claim yet"
+  ]
+}

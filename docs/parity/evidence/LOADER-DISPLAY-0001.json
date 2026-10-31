@@ -1,0 +1,43 @@
+{
+  "id": "LOADER-DISPLAY-0001",
+  "date": "2026-10-30",
+  "status": "candidate_code_derived_scoped_native_verified",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_addresses": [
+    "$09BC-$09C1",
+    "$0B33",
+    "$50DB-$50E5"
+  ],
+  "source_condition": "DEN clears before room rebuild and sets after decompression; snapshot room6 stores $D011=$0B.",
+  "amiga_effect": "Both Copper lists and BPLCON0 blank on existing loader entry; only a complete published list reenables bitplanes.",
+  "core_unchanged": true,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_gate_passed": false,
+  "controls": {
+    "native_fixtures": 53,
+    "native_replay_loops": 1200,
+    "blank_rooms": [
+      6,
+      12
+    ],
+    "phase_snapshots": 24,
+    "menu_snapshots": 80
+  },
+  "artifacts": [
+    {
+      "path": "reference/validation/loader-display-blank.json",
+      "sha256": "845bbbc061a79c4379d9c085f08f372cb37b31d5609adadb2d422a661d29068d"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "9fa63115aca132d8c97be0668c1fa392c0c1329e6f4a25fd3fe482892c673a02"
+    }
+  ],
+  "limitations": [
+    "Verified untouched 1984 edition",
+    "Full PAL real-time cadence and natural IRQ/input phase",
+    "Whole native stack high-water",
+    "Complete natural playthrough and physical A500"
+  ]
+}

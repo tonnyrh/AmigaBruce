@@ -1,0 +1,39 @@
+{
+  "status": "passed_scoped_original_color_loop_and_renderer_state",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_entry": "$42A1",
+  "source_stop": "$42BC",
+  "source_cases": 7424,
+  "source_instructions": 1113600,
+  "renderer_cases": 192,
+  "renderer_reference": "reference/analysis/final-colors-2026-10-30/before/core/c64_rooms.c",
+  "full_ram_and_registers": true,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "69f9d3226f6260159daf346fb685523e902d8c2dacd6b388d286a7183136921b"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
+    },
+    {
+      "path": "tests/final_colors_bridge.c",
+      "sha256": "328ad7e14ad07b51851c45552f12eb13cdf33a0be821e17ed9a01e34b9eb760b"
+    },
+    {
+      "path": "tools/verify_final_colors.py",
+      "sha256": "8fa11e6d51f2e673d1a4b6ee99b6477e0b95432a91b51b181c4d263072b7c9e3"
+    },
+    {
+      "path": "test-final-colors.ps1",
+      "sha256": "34b56bf53086df208828ff2c03bcb328a9372e0c4ab18069e7e63ce9983def21"
+    }
+  ]
+}

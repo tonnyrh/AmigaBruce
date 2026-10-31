@@ -1,0 +1,407 @@
+{
+  "status": "passed_scoped_native_audio_starvation_diagnostics",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "production_changed": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "diagnostics_change_cpu_cost_and_field_phase": true,
+  "record_semantics": "Audio-end-to-next-start includes healthy polling/waiting; it is not all unpolled CPU time. Recorded last field/prefix intervals are classified only when inside the same observed interval.",
+  "runs": [
+    {
+      "variant": "probe",
+      "elapsed": 1424,
+      "missed": 10,
+      "events": [
+        {
+          "index": 0,
+          "previous_audio_lines": 27,
+          "tick_end_to_next_start_lines": 541,
+          "current_audio_lines": 26,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 0,
+          "previous_context": 6,
+          "current_context": 6,
+          "row": 24
+        },
+        {
+          "index": 1,
+          "previous_audio_lines": 41,
+          "tick_end_to_next_start_lines": 576,
+          "current_audio_lines": 40,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 9
+        },
+        {
+          "index": 2,
+          "previous_audio_lines": 45,
+          "tick_end_to_next_start_lines": 602,
+          "current_audio_lines": 45,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 1
+        },
+        {
+          "index": 3,
+          "previous_audio_lines": 26,
+          "tick_end_to_next_start_lines": 578,
+          "current_audio_lines": 27,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20
+        },
+        {
+          "index": 4,
+          "previous_audio_lines": 26,
+          "tick_end_to_next_start_lines": 603,
+          "current_audio_lines": 27,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20
+        },
+        {
+          "index": 5,
+          "previous_audio_lines": 27,
+          "tick_end_to_next_start_lines": 595,
+          "current_audio_lines": 27,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20
+        },
+        {
+          "index": 6,
+          "previous_audio_lines": 26,
+          "tick_end_to_next_start_lines": 605,
+          "current_audio_lines": 27,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20
+        },
+        {
+          "index": 7,
+          "previous_audio_lines": 26,
+          "tick_end_to_next_start_lines": 599,
+          "current_audio_lines": 26,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 16
+        },
+        {
+          "index": 8,
+          "previous_audio_lines": 26,
+          "tick_end_to_next_start_lines": 608,
+          "current_audio_lines": 26,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 17
+        },
+        {
+          "index": 9,
+          "previous_audio_lines": 27,
+          "tick_end_to_next_start_lines": 596,
+          "current_audio_lines": 26,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20
+        }
+      ]
+    },
+    {
+      "variant": "split",
+      "elapsed": 1432,
+      "missed": 8,
+      "events": [
+        {
+          "index": 0,
+          "previous_audio_lines": 27,
+          "tick_end_to_next_start_lines": 541,
+          "current_audio_lines": 26,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 0,
+          "previous_context": 6,
+          "current_context": 6,
+          "row": 24,
+          "last_field_call_lines": 18,
+          "field_call_inside_tick_interval": false,
+          "source_prefix_sections_lines": [
+            16,
+            11,
+            7
+          ],
+          "prefix_inside_tick_interval": false
+        },
+        {
+          "index": 1,
+          "previous_audio_lines": 41,
+          "tick_end_to_next_start_lines": 594,
+          "current_audio_lines": 40,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 9,
+          "last_field_call_lines": 306,
+          "field_call_inside_tick_interval": true,
+          "source_prefix_sections_lines": [
+            16,
+            35,
+            8
+          ],
+          "prefix_inside_tick_interval": true
+        },
+        {
+          "index": 2,
+          "previous_audio_lines": 27,
+          "tick_end_to_next_start_lines": 602,
+          "current_audio_lines": 27,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20,
+          "last_field_call_lines": 257,
+          "field_call_inside_tick_interval": true,
+          "source_prefix_sections_lines": [
+            26,
+            23,
+            7
+          ],
+          "prefix_inside_tick_interval": true
+        },
+        {
+          "index": 3,
+          "previous_audio_lines": 26,
+          "tick_end_to_next_start_lines": 602,
+          "current_audio_lines": 26,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20,
+          "last_field_call_lines": 257,
+          "field_call_inside_tick_interval": true,
+          "source_prefix_sections_lines": [
+            16,
+            30,
+            7
+          ],
+          "prefix_inside_tick_interval": true
+        },
+        {
+          "index": 4,
+          "previous_audio_lines": 27,
+          "tick_end_to_next_start_lines": 602,
+          "current_audio_lines": 27,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20,
+          "last_field_call_lines": 257,
+          "field_call_inside_tick_interval": true,
+          "source_prefix_sections_lines": [
+            16,
+            32,
+            7
+          ],
+          "prefix_inside_tick_interval": true
+        },
+        {
+          "index": 5,
+          "previous_audio_lines": 26,
+          "tick_end_to_next_start_lines": 630,
+          "current_audio_lines": 27,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20,
+          "last_field_call_lines": 305,
+          "field_call_inside_tick_interval": true,
+          "source_prefix_sections_lines": [
+            16,
+            10,
+            8
+          ],
+          "prefix_inside_tick_interval": true
+        },
+        {
+          "index": 6,
+          "previous_audio_lines": 27,
+          "tick_end_to_next_start_lines": 607,
+          "current_audio_lines": 27,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 20,
+          "last_field_call_lines": 257,
+          "field_call_inside_tick_interval": true,
+          "source_prefix_sections_lines": [
+            26,
+            27,
+            7
+          ],
+          "prefix_inside_tick_interval": true
+        },
+        {
+          "index": 7,
+          "previous_audio_lines": 26,
+          "tick_end_to_next_start_lines": 603,
+          "current_audio_lines": 27,
+          "field_gap": 2,
+          "previous_poll_site": 0,
+          "current_site": 2,
+          "previous_context": 1,
+          "current_context": 2,
+          "row": 15,
+          "last_field_call_lines": 24,
+          "field_call_inside_tick_interval": true,
+          "source_prefix_sections_lines": [
+            17,
+            10,
+            7
+          ],
+          "prefix_inside_tick_interval": true
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/build.ps1",
+      "sha256": "09355e2f07d8946289ce071dd2cff56d5bbd10010c2e051d35e6f02445a50980"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/probe/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/probe/c64_rooms.c",
+      "sha256": "0b4d1b37c8b357ce1efa3c03e5f25785af1894d7ad26862f614cb5a368bfb4ca"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/probe/main.c",
+      "sha256": "a5c253772f5f1121d19795cc56a7dd402cd74ea4f45d5a9a5c0c8da2be357751"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/probe/source_audio.h",
+      "sha256": "4452a4a3c01efc05386f21126d053a9e2a661410967f78515c9f8feee712cca9"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/scope.json",
+      "sha256": "337c946c6a4a376ec2e548bb60ff93b985ae1835412590c17f2df60a2952b71e"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/source-audio-contract.json",
+      "sha256": "7c816b6a396ec8869dbc44bf699ea296081a67b0fa68ed9b78f68c2593370af0"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/split-build.ps1",
+      "sha256": "bc16d4f68dedd6e2cfbb09673dca8b65c41e3cf4507bf6483b4ede3628bddc94"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/split-scope.json",
+      "sha256": "0fbbd4393262a0ba02a4b234f570c08dac5cd97c703e92e463a814c191ab3c6b"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/split/c64_actor_programs.h",
+      "sha256": "e88063e87a3714399ff2aa89a79ddff47d0e93a49066867ce26b7053962c4773"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/split/c64_rooms.c",
+      "sha256": "e1edf892aa48fa1d41cf65e24b35aa91539fcc1329864a400f6906593d136e21"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/split/main.c",
+      "sha256": "303194802ce10470b5cd0979b9b2cee107019d2d2ff8c8d8af62e760afd39a0e"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/split/source_audio.h",
+      "sha256": "fb1a9dddaee2191f34adef9ad5b3e40b40faad36a980f11e93a22540631e9400"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-probe-r01/bruce_test.adf",
+      "sha256": "7413b12d496b4a850838b007edc5a07df91e8216b6511f0d05d71be459f1f7c9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-probe-r01/bruce_test.elf",
+      "sha256": "204efee1f7a402c42cd58d7ea218e881bbcd1c79a6f8734e13b4304961f836cf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-probe-r01/bruce_test.exe",
+      "sha256": "5a3f557b19fc34af7b0fab56bdc6084f7147531f5bc9d0e4974ff32f5ab01286"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-probe-r01/identity.json",
+      "sha256": "3acce757985ca497b184f43c3f1427940e04ef1ade68c4a108d6614f2bd9170b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-probe-r01/native.txt",
+      "sha256": "e1ebcf12d5310aea2504a7c9a89c59bb8e56f8af17c4461ffcfb40ee791f4e78"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-split-r01/bruce_test.adf",
+      "sha256": "916809894693d20c1030ebdb854072193e0babb7746ccf3b99c2e044052eefed"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-split-r01/bruce_test.elf",
+      "sha256": "51065c5e87be20b844f486f30b8d3c225b80b234bf592f8db821a252a5934240"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-split-r01/bruce_test.exe",
+      "sha256": "40674ea75586c36ff0ec99892d35caf4b71b527362fb80e3a88598d6a65f03eb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-split-r01/identity.json",
+      "sha256": "7e1f01f7ed2507fcea0ce725b37d1cc93246f5ff28a1a0b7ba7dc2373aa670be"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/audio-service-split-r01/native.txt",
+      "sha256": "23a47bc8b93043625d132987affc251ae1668054bee1ae47fdcad1aaacdb0489"
+    },
+    {
+      "path": "tools/audit_audio_service_probe.py",
+      "sha256": "858c362dc602e6d26c482b89a452fbe8ea1a3fdebf376208ffad508d0cb3b648"
+    },
+    {
+      "path": "tools/build_audio_service_probe.py",
+      "sha256": "ef333edc87d3ed955010757a691496f705c1ccdc85923bae95068cca30ccc1fe"
+    }
+  ]
+}

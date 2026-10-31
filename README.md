@@ -145,3 +145,24 @@ Videre optimalisering: [pakkede kontaktmasker, 28. oktober](docs/PACKED_MASK_OPT
 Siste kontaktløft: [pekeroppsett, klassifisering og kildebasert fellerettelse](docs/CONTACT_PREPARATION_OPTIMIZATION.md).
 
 Siste VIC-løft: [gjenbruk av uendret pikselkontakt på 68000](docs/VIC_REPEAT_OPTIMIZATION.md).
+
+Siste måleøkt: [tre kontaktsegment-varianter forkastet uten samlet gevinst](docs/CONTACT_SEGMENT_OPTIMIZATION.md); den validerte motoren er beholdt.
+
+Ny CPU-margin: [native spritekopiering](docs/SPRITE_COPY_OPTIMIZATION.md) reduserer målt kopieringskostnad23,14 %. Samlet feltkadens og lydservice er fortsatt åpne.
+
+29. oktober: [retting av trappefaser, første buffer og HUD-overlapp ved gjenopptegning](docs/RENDER_COHERENCE.md). C64-reglene beholdes; naturlig spilling og full PAL-akseptanse står fortsatt åpne.
+
+OP4: [raskere lesing av levende lanternetilstand](docs/VIEW_PROJECTION_OPTIMIZATION.md), med bevart maskerepresentasjon og egne før/etter-målinger.
+
+VIC-cache: [målt enkeltlesing og avviste varianter](docs/VIC_CACHE_OPTIMIZATION.md).
+
+Meny og oppstart: [skjult publisering og native bufferkontroller](docs/MENU_PUBLICATION.md).
+
+30. oktober: [målt R20-fargeskriver og kompilatorvakt](docs/FINAL_COLOR_OPTIMIZATION.md) i lokal EXE/ADF. Kontrollert20-romspar: R20-13,236 %, samlet arbeid-1,275 %; ingen ekstra produksjons-BSS.53 native fixturer og oppstarts-/renderkontroller består. R01-lydservice, IRQ/input, sanntid og fysisk A500 er fortsatt åpne porter.
+
+
+30. oktober: [bufferpublisering](docs/BUFFER_PUBLICATION.md) og samlet
+trappefase er rettet i ny EXE/ADF.12+12 kontrollerte rom12-/døds-/rombyttebilder
+har null fase- eller statiske grafikkavvik; menyens78 bilder består også.
+Ny naturlig prøve av OP3-R12 og OP3-REDRAW står åpen. Samlet A500-tempo er
+fortsatt under målet; ingen full sanntids- eller originalparitet hevdes.

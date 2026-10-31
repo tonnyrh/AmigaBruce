@@ -1,0 +1,25 @@
+{
+  "production_changed": false,
+  "generated": [
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary-image-v2/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary-image-v2/c64_rooms.c",
+      "sha256": "d08fc0863aaddb351207cfb1e91f49f901eb2e8c9cec8bee69d64442dc3b3959"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary-image-v2/image_driver.h",
+      "sha256": "445dca3cbe2482866e1a097618ad5245a2dfc1eda6725fa50b8165d5d23a18cf"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary-image-v2/main.c",
+      "sha256": "4641939739db2c9ef9aa728d3210dfa506b40441602f3451ff10ae1b7913aaaf"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary-image-v2-build.ps1",
+      "sha256": "09fdb725fb5db04e8bd6373b9c89ffbd550dcd7ef6fa88d8c9ceb67a60da3d6f"
+    }
+  ]
+}

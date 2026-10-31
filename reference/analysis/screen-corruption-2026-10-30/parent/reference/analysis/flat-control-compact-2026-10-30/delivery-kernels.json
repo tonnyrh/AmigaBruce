@@ -1,0 +1,98 @@
+{
+  "status": "passed_current_compact_primitive_linkage",
+  "contact_kernels": 8,
+  "sprite_vic_kernels": {
+    "bl_sprite_copy": {
+      "bytes": 250,
+      "sha256": "0fe481c8aad05fec8acc29577de2bc745322d9ee9a5fc899e8e0b8d00965c927"
+    },
+    "bl_vic_repeat": {
+      "bytes": 352,
+      "sha256": "8670f8c4e34321bd7926a46ecfc403b52ddc989ab3f500987c446ce593b3c2ab"
+    },
+    "bl_vic_equal63": {
+      "bytes": 88,
+      "sha256": "ac5e7f32f3d106e14213cc57ba999edbb515bb8169ccdffb96db88156a73533a"
+    }
+  },
+  "entry_gate_rejects_real_counterexample": true,
+  "footprints": [
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/amiga/out/bruce_amiga.elf",
+      "sections": {
+        ".text": 194016,
+        ".rodata": 78920,
+        ".data": 9,
+        ".bss": 171088
+      }
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sections": {
+        ".text": 179070,
+        ".rodata": 80696,
+        ".data": 9,
+        ".bss": 171088
+      }
+    }
+  ],
+  "loaded_code_table_saving": 13170,
+  "artifacts": [
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "862bf7cabaa7148a3fb7fa2ad4d3e63134f31d14944cb72ac0408b585d433618"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/b44eef393c14-bb9f8f20c91f/bruce_test.elf",
+      "sha256": "b54ca49e1c32c9659d381d78417902dfa4e47de4f4e91dfef8654f497969f4c3"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/amiga/out/bruce_amiga.elf",
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-contact-kernels.json",
+      "sha256": "a4a39d3fe330920de1159cb792f0711d635c0b5e162d009cda116f0cea275314"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/compact-call-r01/bruce_test.elf",
+      "sha256": "21dc0bddda14a3fb85f2c4cd06c54486e6fbc11e11371f6926b6ca8d798fc5fe"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped-controls/bruce_test.elf",
+      "sha256": "6674b9a79bb207d4d4d5ce82f86db7f9c32ffbc7d1044270245fbfae1e869e11"
+    },
+    {
+      "path": "tools/audit_contact_kernel_images.py",
+      "sha256": "ffa74855b41af914a049cf34ad5efe6ef828401aebcc623e713a3f81e691368e"
+    },
+    {
+      "path": "tools/verify_amiga_entry.py",
+      "sha256": "857be561143af60741a1db39ab6044799cd5c11413c34a81d76e7d97dce3aea8"
+    },
+    {
+      "path": "tools/verify_compact_kernel_linkage.py",
+      "sha256": "31aeb073dc1d1ed7bb2ebbb31d3b77286369ea28a45db20c148c3e15d47293a9"
+    }
+  ]
+}

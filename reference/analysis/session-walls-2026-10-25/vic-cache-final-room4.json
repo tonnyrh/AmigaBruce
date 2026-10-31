@@ -1,0 +1,28 @@
+{
+  "label": "vic-cache-final-room4",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "16159f9571ac93125434de2958cbaf1cfd9255ecea24a8a55d4fc34d1fa50013"
+  },
+  "source_room": 4,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    354880,
+    354920,
+    354960,
+    355000
+  ],
+  "source_music_fields": 628,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room4.bpl",
+      "sha256": "e39416fed2bb6bf12bdced4c0f99f295f3a2d914b5b3ea20908a5be6ae432506"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-room4.png",
+      "sha256": "c91781414c49dfa5433764b9433927ba1019cd661ff45cf5daab28ae14ce8838"
+    }
+  ]
+}

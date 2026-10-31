@@ -1,0 +1,27 @@
+{
+  "method": "Diagnostic translation unit; unchanged actual PAL scheduler, fixed no-input source route; intervals begin/end at original ready boundary; source room jumps and bitmap preparation outside timed interval",
+  "source_main_sha256": "8784338a6bc92f5246831bd92c500ae371ed3aecd13f3dd90d1e08007a376a89",
+  "generated_sha256": "110efbbac7738c9280e7b00952c3e0942d6b47d2812c3eebbda6aee47845258f",
+  "steps_per_room": 120,
+  "normal_main_edited": false,
+  "unmodified_generated_sha256": "c94c769dfc31dc9aad935ff074a18da207c13a428d21b77dca8583a7c37e2919",
+  "pre_compact_sha256": "30ddc57e383dfc6a13e00947f3727794d05e31d69631de319a4a960f6b07999d",
+  "diagnostic_compact_stats": true,
+  "stats_record_bytes_before": 44,
+  "stats_record_bytes_after": 28,
+  "stats_bss_saved": 320,
+  "guarded_narrowing": [
+    "fields",
+    "missed",
+    "drawn",
+    "held"
+  ],
+  "validated_fixed_outputs": [
+    "steps=120",
+    "actual_room=sample_index+1"
+  ],
+  "overflow_error": 5,
+  "room_mismatch_error": 6,
+  "production_source_edited": false,
+  "unused_capture_allocation_omitted": true
+}

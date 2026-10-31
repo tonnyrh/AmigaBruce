@@ -1,0 +1,52 @@
+{
+  "status": "verified_private_layout_actor_controls",
+  "source_cases": 3034,
+  "production_changed": false,
+  "native_execution": false,
+  "exact_actor_auditor_derivation": true,
+  "artifacts": [
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/report.json",
+      "sha256": "91ac3b93fb1afe65d160f22ad7c3dcc6a84049d1cc294e8223dd66962f939651"
+    },
+    {
+      "path": "tools/audit_c64_actor_chain.py",
+      "sha256": "8354a223b6a45f82d276074551ded6a36885b6e3aed99cc013c08941356439fe"
+    },
+    {
+      "path": "tools/probe_cpu_register_layout.py",
+      "sha256": "555aa7e8ac555326c71da761e5f603eb57030be42d2613d0c93f1d9274cb70c1"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/controls/build.ps1",
+      "sha256": "bf0b53a53cf6e9bfa739caedab2095835a6d85c15f689c59db8575a4273a9bc0"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/controls/audit.py",
+      "sha256": "bbe6c0898045e55e7f511407350f2ad958bc2a4a30e88009c3d19100cac2ba42"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/controls/world.py",
+      "sha256": "1cfad3101f797ef1a52f166968222debf4e7733804e5d6f5dd04316d8cce0ec2"
+    },
+    {
+      "path": ".tmp/cpu-register-layout/actors.dll",
+      "sha256": "4b12b33e50fcdd165be26c8524cf085ea507c1daec1afb3555415d39b7c8c5ac"
+    },
+    {
+      "path": ".tmp/cpu-register-layout/compiled-sources.json",
+      "sha256": "7e94597e58a1836ec4ffdf3d8decaa68578cfdf4409ba1073ea47368c992ff16"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/integrated-controls.json",
+      "sha256": "e83962573c91ab253ea7c7552bbf83fea29f909b04affdcc8acdec17e66d9fb3"
+    }
+  ],
+  "limits": [
+    "Private host layout only; no native execution or timing",
+    "Auditor differs only in explicit paths/output and production-enabled metadata",
+    "Compiler script and actual private header identities are retained"
+  ],
+  "integrated_modes": 5,
+  "integrated_original_instructions": 7055873
+}

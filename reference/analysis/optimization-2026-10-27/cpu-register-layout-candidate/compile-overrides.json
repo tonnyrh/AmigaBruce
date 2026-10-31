@@ -1,0 +1,28 @@
+{
+  "core": "reference/analysis/cpu-register-layout-2026-10-30/candidate/c64_rooms.c",
+  "main": "compiled-main.c",
+  "builder": "compiled-build.ps1",
+  "production_core_compiled": false,
+  "actual_inputs": [
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/candidate/c64_rooms.c",
+      "sha256": "ae1596d404531150f00837c6a9ab890658145fa511ba8927b2feb49cbc66abb8"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/candidate/c64_actor_programs.h",
+      "sha256": "3820d18dfd422010155ee6d50ae1ee9131e8435be4ac9788bd240ebef6135497"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/candidate/c64_sfx.h",
+      "sha256": "37e095dc33253c8908997c930d488adc3395b4ada9cedd72f5c9373aceb54f8f"
+    },
+    {
+      "path": ".tmp/cpu-register-layout-performance/build.ps1",
+      "sha256": "1748e5a35176ccd4dcc495fcaf23da95e16972f7c6f6a759b9994c5956e9aa23"
+    },
+    {
+      "path": ".tmp/op0-r01-profile/main.c",
+      "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1"
+    }
+  ]
+}

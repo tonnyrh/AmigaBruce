@@ -1,0 +1,47 @@
+{
+  "status": "not_selected_for_integration_after_pilot",
+  "production_changed": false,
+  "native_fixture_cases": 53,
+  "native_loops": 1200,
+  "chip_largest": 52632,
+  "before": {
+    "fields": 1433,
+    "missed": 8
+  },
+  "candidate": {
+    "fields": 1423,
+    "missed": 10
+  },
+  "reason": "Small time saving and additional nominal audio misses in pilot; no case for broad register-access rewrite while compact native call-control offers larger memory savings. No statistically established audio regression is claimed from one pair.",
+  "realtime_accepted": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/probe.json",
+      "sha256": "a30b17712ffc736817e6983fd5de3a3514c25eedbf4604b6c17e3ac3d05ff800"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/controls-binding.json",
+      "sha256": "17ab14086fb07fee41cd06dc9c7db758f712d40ab53bb175a849a7fc20a979d2"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/native-fixture.json",
+      "sha256": "f099b6787da5321e506a705b050c5a03883bb396c3fb76a87e7e582a87a72657"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/native-fixture.txt",
+      "sha256": "4fa00bf9c7a666ad4978b3cb5a9b104bab2ada5488afccb663cb434743816eac"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/cpu-register-layout-before/identity.json",
+      "sha256": "826cc2f2e060d39f6a73a11174ed408d4f5b41b4401f98e1e84c6f9b5185b4cb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/cpu-register-layout-candidate/identity.json",
+      "sha256": "cf8482e78cad780ac5e57c1d15ceaf8db34fb3cb20895741f8be24e8cf4159c4"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/cpu-register-layout-candidate/compile-overrides.json",
+      "sha256": "e650f36f0f0534f92623ddc52ef92154df1a519a52a9a81155729de5257b434f"
+    }
+  ]
+}

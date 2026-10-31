@@ -9595,11 +9595,11 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
+      "sha256": "b9141711fcf16dd3e56a295be74aa6421b0da0f6e91c3b1f53974d509335f3f6"
     },
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "131727831db097b479aa98ec4c8f6b9f7439f0e9cc04e770d2081af604f702a6"
+      "sha256": "185a0a3a6fa2cb7ea4ca3525ddd3d4d66bf5fab49fe0f5e037ba5720e005dc1c"
     },
     {
       "path": "amiga/contact_prepare.s",
@@ -9630,7 +9630,7 @@
       "sha256": "52efe4a923ab20adb3971cc4d99c02c6778ec382726555ca457467abd016ff3a"
     }
   ],
-  "host_library_sha256": "0231c6c4ba1bbcb28f92e42c19797afff2bb0ff785fbdbfe47c8af36883d1ca7",
+  "host_library_sha256": "4e58cd4a4f902e221429ea26aabd1b19ea281d8e3f09973dabf7a1d7a3a75fd4",
   "artifacts": [
     {
       "path": "reference/analysis/ceiling-r06-2026-10-28/roof-tip-contact.png",

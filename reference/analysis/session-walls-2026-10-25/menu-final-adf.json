@@ -1,0 +1,28 @@
+{
+  "label": "menu-final-adf",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "dae1f7aee576e3839e9b135f2b18009e94659c7890299e107430f835c01c8810"
+  },
+  "source_room": 1,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    353792,
+    353832,
+    353872,
+    353912
+  ],
+  "source_music_fields": 948,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/menu-final-adf.bpl",
+      "sha256": "0a5ea307a9bf2b5753217330d0dc859d4d55cc9d6bdee752e41125f29459bd72"
+    },
+    {
+      "path": "docs/images/session-menu-final-adf.png",
+      "sha256": "566592e75f7f2bcede53927318cef7509ce5549013cb504ba683b21760042056"
+    }
+  ]
+}

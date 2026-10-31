@@ -23,13 +23,13 @@ static void source_fighter(BlFighter *f,unsigned char actor){
     f->reaction=(unsigned char)(state==25?BL_REACTION_DEAD:state==19||state==27?BL_REACTION_DOWN:state==18?BL_REACTION_HURT:BL_REACTION_NONE);
 }
 static void source_session_view(BlSession *s,BlProgress *p,BlCombat *w){
-    unsigned char i,room=bl_c64_room();unsigned short old_revision=(unsigned short)bl_c64_world_stat(9);
+    unsigned char room=bl_c64_room();unsigned short old_revision=(unsigned short)bl_c64_world_stat(9);
     PERF_BEGIN(BL_PERF_VIEW);
     /* saved[].revision is a renderer epoch only, never source progress. */
     if(s->saved[0].revision!=old_revision){++p->revision;s->saved[0].revision=old_revision;}
     if(p->room!=room)++p->transitions;
     p->room=room;p->score=bl_c64_world_stat(7);
-    for(i=0;i<20;i++)p->collected[i]=bl_c64_collected(i);
+    bl_c64_collected_all(p->collected);
     source_fighter(&w->player,0);source_fighter(&w->enemy[BL_YAMO],1);source_fighter(&w->enemy[BL_NINJA],2);
     w->step=(unsigned short)bl_c64_world_stat(0);w->spawns=(unsigned short)bl_c64_world_stat(1);
     w->player_respawns=w->player_deaths=(unsigned short)bl_c64_world_stat(2);

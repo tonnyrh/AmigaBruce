@@ -1,0 +1,102 @@
+{
+  "method": "Owned normal WinUAE; invincible debug start in room12; actual C64 glyph phase candidates; no source-state injection",
+  "snapshots_paused": true,
+  "controlled_death": null,
+  "room_roundtrip": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "elf": {
+    "path": "reference/analysis/render-coherence-2026-10-29/intermediate/amiga/out/bruce_amiga.elf",
+    "sha256": "65f1a9aaeeba06c7badc386a73b8d176ad265cd9f5305e25ddac0a85809bae1c"
+  },
+  "samples": [
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8352,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8352,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8352,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8352,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8352,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8352,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 1,
+      "best_phase": 1,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8352,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8288,
+      "static_pixel_mismatches": 20
+    },
+    {
+      "source_phase": 3,
+      "best_phase": 3,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8224,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 4,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8160,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 5,
+      "best_phase": 1,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8096,
+      "static_pixel_mismatches": 16
+    },
+    {
+      "source_phase": 6,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8064,
+      "static_pixel_mismatches": 16
+    }
+  ],
+  "mixed_phase_samples": 0,
+  "max_pixel_mismatch": 0,
+  "max_static_pixel_mismatch": 20,
+  "identity_note": "Process booted the archived intermediate ELF; normal output file was rebuilt while this older private process remained running. It is not a test of the final image."
+}

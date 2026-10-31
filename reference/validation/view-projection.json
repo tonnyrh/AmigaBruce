@@ -1,0 +1,125 @@
+{
+  "status": "measured_live_projection_cpu_reduction",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "source_steps": 360,
+  "view_mean_before": 55.839,
+  "view_mean_after": 48.394,
+  "view_cpu_reduction_percent": 13.332,
+  "unprofiled_fields_before": 1432,
+  "unprofiled_fields_after": 1426,
+  "audio_misses_before": 23,
+  "audio_misses_after": 17,
+  "artifacts": [
+    {
+      "path": "reference/analysis/view-mask-2026-10-29/baseline/manifest.json",
+      "sha256": "850d3e2e44c29c22661bb117614109844263600757d3858f8d22fd59cc03e222"
+    },
+    {
+      "path": "reference/analysis/view-mask-2026-10-29/bulk-pilot/manifest.json",
+      "sha256": "9d41772e1186a5b9e99e72de82a6a2a6e5d965648a494b1f6b6deb73df2c42d3"
+    },
+    {
+      "path": "reference/analysis/view-mask-2026-10-29/final/manifest.json",
+      "sha256": "68f647cf519e592b48d1ed3a49b9f04210557e3e762457f816ad32ec578e1bab"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/render-coherence-kernels/identity.json",
+      "sha256": "4aaaa88f61856d280e9b25b3ed941ccd36a8059104b80e838fdc560aeb2ad0e7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/render-coherence-kernels/native.txt",
+      "sha256": "77423ca674c4edfeb7000aab29111861abf8a072c66aa59a33bf051409ecea46"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/render-coherence-kernels/native.json",
+      "sha256": "0d870b26e9923e151379830c145ac0523e7013b69513b117e126cd534c3a55e4"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-mask-before-profile/identity.json",
+      "sha256": "9a88d7808f8dc8f103587ebcd8aef3d07c7f9c2f02e2b78fafd01562f3f26009"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-mask-before-profile/native.txt",
+      "sha256": "e78d55a37a78dbc2013ddf44ad790fe2816ddb251b97c43bdd59c5863d6ad82b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-mask-before-profile/native.json",
+      "sha256": "8ace4d463c1e2a09fbf286f1c45b99699d5f9d6ba0721a5f83bac2eef4cd1ae9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-mask-after-profile/identity.json",
+      "sha256": "a316f3581da94bb63a3a2544600df8516cfce89766b429cd381835518106ae85"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-mask-after-profile/native.txt",
+      "sha256": "16640e9e33de307ac201109674d4ad1b7ad1c530b3558b9e4bad14307c074c3b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-mask-after-profile/native.json",
+      "sha256": "447b9aaf1dfcb59e7505a84cfa2722ecab7f4e2fdf47a989576640a77e3433cd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-pilot-profile/identity.json",
+      "sha256": "0ee0de571f4943a905c328b0f78a0fece0c9b5f2633a4bceba23831452297396"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-pilot-profile/native.txt",
+      "sha256": "1148e7006e7ee058e6ed68807e1017f2229c070f9f450ede6437228a82a2b247"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-pilot-profile/native.json",
+      "sha256": "4e7b16430dd5381b2e7b7a6f9d1cd9185c34dab0192a2a821ef001633439333f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-profile/identity.json",
+      "sha256": "876858860f7ee8bf348ee7a607b25ca13f1da446de58ecf03caf5b2f8a53495c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-profile/native.txt",
+      "sha256": "1c8c4b9ba0d5cfc877a0e0a54e6d0ca7c9fa88f27263ae09e77b78d4584cb97b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-profile/native.json",
+      "sha256": "4eedca974aa3821aff460fba635d27d55d71c9c8bca704bbe58b64ffcc540452"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-timing/identity.json",
+      "sha256": "42a6e912ce7810c5d67958157913e9def1eecb6c88e9e1419e9fa85618e54c4b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-timing/native.txt",
+      "sha256": "136986f57b78034e496ff17c578311d45e0153c9154817b93905a685a70205ac"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-timing/native.json",
+      "sha256": "e72efe5e9ddd4316988cf48a5477c648496c80f031e1d17093cfe381edb15171"
+    },
+    {
+      "path": "reference/validation/view-mask-host.json",
+      "sha256": "008a27b544e219fda7b4ecb4ebe3c41e6e3b38320b27a4ff027551e8846d6098"
+    },
+    {
+      "path": "tools/verify_view_projection.py",
+      "sha256": "51c1acac2f2e190b59296d2b025cc46753e3537d5fc099c731845db29fe203f0"
+    },
+    {
+      "path": "docs/VIEW_PROJECTION_OPTIMIZATION.md",
+      "sha256": "02fc08feb0caf34a9df6c6e01efdf85aaf1926f9fab45b601f551b6c42f2dd81"
+    },
+    {
+      "path": "reference/analysis/view-mask-2026-10-29/mask-only/manifest.json",
+      "sha256": "c0321a3f63062e6cd5aa1f127fbd678afbd9a9bc39c8fd401e30a15eb4a1c977"
+    },
+    {
+      "path": "reference/analysis/view-mask-2026-10-29/source-record-disassembly.txt",
+      "sha256": "2294cb65f810f6ff3a7314cb96286719d17d06baeeb069dbb5c175f47370ad86"
+    }
+  ],
+  "limits": [
+    "One unprofiled pair; two final bulk profiles support local CPU result",
+    "R01 idle/invincible diagnostic route, not a whole-game speed claim",
+    "13-bit cap is the existing projection limit; no new C64 rule or temporal cache"
+  ]
+}

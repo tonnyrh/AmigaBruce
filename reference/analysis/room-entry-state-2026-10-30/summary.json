@@ -1,0 +1,78 @@
+{
+  "status": "verified_normal_room_entry_resets_action",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "cases": 36,
+  "main_entries": 252,
+  "source_instructions": 2268645,
+  "production_changed": false,
+  "normal_action_reset": true,
+  "entry_state": 0,
+  "entry_counter": 4,
+  "facing_preserved_in_cases": true,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_phase_verified": false,
+  "new_native_hardware_route_test": false,
+  "artifacts": [
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "85746165e154e3c661f4d587028c264cbb26ca641a8826583b95eebe51521458"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "7def677b2066b687cec631188ada253f4c4f6d8b24db9227468dacbea7947bf9"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "0abd7c6531b3722d62ddbbc149e8cbd805cddc67551826502c41ff1907337ad1"
+    },
+    {
+      "path": "docs/ROOM_ENTRY_STATE.md",
+      "sha256": "1467e5a2a15f723f3a0ef8650366dfc9c4d4033cd7008f56899a70e29e36095f"
+    },
+    {
+      "path": "reference/analysis/floor-walk-2026-10-30/bridge.c",
+      "sha256": "61e102679718418adedbc85b3f39f3bbe1fdf70a8a50493519d9ab5b0fc4022a"
+    },
+    {
+      "path": "reference/analysis/floor-walk-2026-10-30/build.ps1",
+      "sha256": "cd66cec125a5ff57ee3fac1a820518d2111450774b265bdd2f92294bec58d246"
+    },
+    {
+      "path": "reference/analysis/floor-walk-2026-10-30/report.json",
+      "sha256": "ff61111c8e2104a5ca564875ba3f354741697c18c63499f5dfa969485aa6a442"
+    },
+    {
+      "path": "reference/analysis/room-entry-state-2026-10-30/report.json",
+      "sha256": "fdd8755e102d1917faee7f29b4c7afb67886b74f4c784ded2b38fc97b8e07994"
+    },
+    {
+      "path": "reference/analysis/room-entry-state-2026-10-30/source-disassembly.txt",
+      "sha256": "659bcc63c95fea38f32580b7931e335f051c1e90bb1fdfcd76235ebb42f8eb45"
+    },
+    {
+      "path": "tools/audit_room_entry_state.py",
+      "sha256": "847c36f3c9b8cca7f7e5bde8362ad7403ba6a71d54327c70a6acb3c868e5b0d8"
+    },
+    {
+      "path": "tools/verify_room_entry_state_evidence.py",
+      "sha256": "96d5ef6928ff392af500167850008a632d4e5f818a642f94f260d41b8d425099"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "not_promoted_view_cost_regressed",
+  "source_sha256": "ae95eb770f31c00fd02b2d680968ab6b17ea8d45088f88ac8e1617ebbed18b9c",
+  "before_view_mean": 55.839,
+  "after_view_mean": 57.217
+}

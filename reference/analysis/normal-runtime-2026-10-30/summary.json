@@ -1,0 +1,34 @@
+{
+  "status": "normal_runtime_acceptance_not_met",
+  "normal_exe_sha256": "9f4b2f7de024230282d8217ac7756ee5853db73a4209b4af31b5acade7ede0f8",
+  "configuration": {
+    "path": "reference/analysis/normal-runtime-2026-10-30/normal.uae",
+    "sha256": "39de973f7242b97e84eb0b0fe8241bdd479aa6a2b892020e9bb1e47914d664f7"
+  },
+  "runs": [
+    {
+      "room": 1,
+      "path": "reference/analysis/normal-runtime-2026-10-30/room1-publication/report.json",
+      "sha256": "012ad19be0795222cc66987f6be929e6228c7049c0c7ca20150d1fd3cfb96955",
+      "fields": 6877,
+      "steps": 1647,
+      "fields_per_step": 4.175470552519733,
+      "audio_misses": 235,
+      "three_field_gate": false
+    },
+    {
+      "room": 12,
+      "path": "reference/analysis/normal-runtime-2026-10-30/room12-publication/report.json",
+      "sha256": "1b891351b682d340bebfc868f3be9915bfa916fc74672af393fb611899a842c6",
+      "fields": 6943,
+      "steps": 2088,
+      "fields_per_step": 3.325191570881226,
+      "audio_misses": 0,
+      "three_field_gate": false
+    }
+  ],
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "physical_a500": false,
+  "full_realtime_accepted": false
+}

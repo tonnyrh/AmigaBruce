@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-24",
+  "reference_only": true,
+  "production_art_generated": false,
+  "original_pixels_shipped": false,
+  "tile_components": 384,
+  "sprite_components": 210,
+  "unique_component_source_hashes": 486,
+  "manifest_path": ".reference/c64/art-extracted/manifest.json",
+  "manifest_sha256": "d17965f1a288f9db472081c46a2a489774e8037638945e1f6cd2c75074fa196b",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "extraction_script_sha256": "d7bd468e1e409d938940b8e9a936785bc3c8151994faccd69a05b483d46807fe",
+  "prompt_path": "docs/AMIGA_ART_PIPELINE.md",
+  "prompt_document_sha256": "55039b3623f77912f008c8afc7de6fea4f8a060e21a12bb8ab55ee48b95b3c4f"
+}

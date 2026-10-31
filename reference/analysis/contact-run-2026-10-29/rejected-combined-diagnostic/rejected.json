@@ -1,0 +1,27 @@
+{
+  "status": "allocation_failed_before_measurement",
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "77e0962ff8b75b3c26a5160aeef9ebeb924396d4bf42cc82a8a594d8dd5a0a79"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "4d132300fb45b3167b2df0c8b60d9bb4cad1c87d6fa54bf6e55c51ea87f592ad"
+    },
+    {
+      "path": "amiga/contact_run.s",
+      "sha256": "a69564740f76fec840bae64131b93c0588c0f9bb3343a6f4abddc2df8364c813"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "c0963d7120cff92b8c547c41ea7d54b721585ae7723c931a4ea62771bce7a6e5"
+    },
+    {
+      "path": "test-source-performance.ps1",
+      "sha256": "2e3a143d2970a2212cf50ec09818a85de14590ec428071e51b4f4d334ddfb332"
+    }
+  ],
+  "frames": 0,
+  "measurements_accepted": false
+}

@@ -1,0 +1,379 @@
+{
+  "date": "2026-10-28",
+  "status": "scoped_complete_source_chain_implemented_acceptance_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "full_original_parity": false,
+  "source_controls": 3034,
+  "integrated_scenarios": 5,
+  "source_instructions": 7055873,
+  "native_controls": 53,
+  "native_replay_loops": 1200,
+  "largest_chip_block": 52632,
+  "realtime_gate_passed": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "70eb4e3c0b27ef151489e43439599ba869200f9426335e8e845b2bc6ae2f0cc3"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "bb646f0ac9fdb87c9cd06d801a833c76bb13750efea819e1acac1e45cc9aeba4"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "5c5a19a2b817858426c6c597d9a6dec47dba78b2ed5cd958fecd77cdbc4767d7"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-fixture.json",
+      "sha256": "9ae6eea4c8998e7d5e0c78f172b780e4c3bf678054df360a0acebb021bb3ec15"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-final.txt",
+      "sha256": "063fc088df7df54094bf8f8934dd78fda2995cdbb5d1e68e8b6dc5aa3992db9c"
+    },
+    {
+      "path": "tools/audit_normal_source_clock.py",
+      "sha256": "fcf7ca8b3296cb340217ea62230f68deca30e68bbcc83741c3f0e3bb56182f53"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
+      "sha256": "db1b62ef5c47501e2a1030d07d272bdae81f8fe6a131b59780bf16fc0719cc66"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "b49fe360cc846681a045057be833a86191939a9cd9fdad796e0d17675885de60"
+    },
+    {
+      "path": "docs/MILESTONE_COMPLETION.md",
+      "sha256": "223064275395e1eb404d1444180b6cfce1597108360e7487d7d2d52a63d0e88f"
+    },
+    {
+      "path": "docs/ACTIVE_TESTS.md",
+      "sha256": "7942c4ee51c85312412f078be80a902bb413f5292bd8d4423c341196efa971c6"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.md",
+      "sha256": "ef7aa9dec9dc3b6615b53f47e12b95551dc030c16ecafb05cc8cf9c97801b488"
+    },
+    {
+      "path": "docs/parity/register.csv",
+      "sha256": "bcfe272db65e9298820186a1a830df3972371ae6429080ada5fbf51bab22850c"
+    },
+    {
+      "path": "tools/verify_source_world_delivery.py",
+      "sha256": "c6306d27332eeeb88bfc86e32f3177f22d3e18a939bbdb88a3073f363936f657"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "21bf3f54b2121ccb792ab2c593e5ded77dda53b8e8bf37d13dc6b4a6080e06e7"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f2763fca82ad352d91ef8d921a691789c113c18d2db9ecc8c39d333390e2af8f"
+    },
+    {
+      "path": "reference/validation/source-vic-host.json",
+      "sha256": "8f2ef0ea931fdadb24465d04cbe9805b10c80fb0b4b4f71b62b37624c39c8ce8"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
+      "sha256": "89899872c14a659efc78976171a6aed29ff2fae84091b79b0e4b1d8489c37354"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_REPORT.md",
+      "sha256": "acb5723372d0b3c91f3ac660a1db18ae3b434b24469e98cafd35690699c8531d"
+    },
+    {
+      "path": "reference/validation/source-native-boot.json",
+      "sha256": "fa7789c63bc30df07203153a4c8f8f13a0be9fdf3ecfe1dd5eabc0ae14a37202"
+    },
+    {
+      "path": "reference/validation/menu-publication.json",
+      "sha256": "68407281e5d4607e5a822a204ddc5acc3ae4531783ae77d7069e02f19bd8dc41"
+    },
+    {
+      "path": "tools/verify_menu_publication.py",
+      "sha256": "903929757ae841a810f2322db19ba582265c2cb46423f9ff3affcb69cddda2eb"
+    },
+    {
+      "path": "tools/audit_native_menu_publication.py",
+      "sha256": "3619cae63ebded4d72f9720914eca608a694d0f1201fb2cbc84bc92328ed0425"
+    },
+    {
+      "path": "docs/MENU_PUBLICATION.md",
+      "sha256": "f01ce3f749b84d7706f03c9b4b989a977b426beca88b8b868d432b7869251a2f"
+    },
+    {
+      "path": "docs/parity/evidence/MENU-PUBLICATION-0001.json",
+      "sha256": "d02673f6a15b17ca7ae3a16e4db4edc58d0f6ea442ae452714097e3489c8e30e"
+    },
+    {
+      "path": "reference/validation/vic-cache-optimization.json",
+      "sha256": "c722911c0da3babaee3220b648662c1a6b713b83fecd60b8ed34de43ff921c89"
+    },
+    {
+      "path": "reference/validation/vic-cache-host.json",
+      "sha256": "bc17adbf6097105055aa5fb1424ae1d342e5742da08cca3094055c1d10844653"
+    },
+    {
+      "path": "tools/verify_vic_cache_optimization.py",
+      "sha256": "fd1ed41c2b8ac31d12f9a32886f67a9caecd75388a02d242871e780d930d2bb9"
+    },
+    {
+      "path": "tools/verify_vic_cache.py",
+      "sha256": "19eba73e41c08945411da93d755571b5e1ed13c24cf4b7e37e748977a05abab4"
+    },
+    {
+      "path": "tests/vic_cache_bridge.c",
+      "sha256": "762dee151e25a5bcfdbd8f0920955ea7413e29549f0ca3ee2c24d8d29ab86ee1"
+    },
+    {
+      "path": "test-vic-cache.ps1",
+      "sha256": "9fd134af6afb2d6e5d274ab027cc0d4d566e9bb3817f14423d637bfc57521f31"
+    },
+    {
+      "path": "docs/VIC_CACHE_OPTIMIZATION.md",
+      "sha256": "dabf252ae92ed8b3b6c2543eb5bcac988741ced502b6edfded118ac3d41d2052"
+    },
+    {
+      "path": "docs/parity/evidence/VIC-CACHE-0001.json",
+      "sha256": "5bd6891c683ce3ce9e89f89c7e1fb3bf7819bad5811d6001436c548dd34a4694"
+    },
+    {
+      "path": "reference/validation/view-projection.json",
+      "sha256": "5be8c3f195daed30118f4ab6e919105bd4a66c932036205049e95b713de2bb05"
+    },
+    {
+      "path": "reference/validation/view-mask-host.json",
+      "sha256": "509bedfbfb4fc884828b46e51e207059386866dd3cd08592881c14eb42969585"
+    },
+    {
+      "path": "tools/verify_view_projection.py",
+      "sha256": "51c1acac2f2e190b59296d2b025cc46753e3537d5fc099c731845db29fe203f0"
+    },
+    {
+      "path": "docs/VIEW_PROJECTION_OPTIMIZATION.md",
+      "sha256": "02fc08feb0caf34a9df6c6e01efdf85aaf1926f9fab45b601f551b6c42f2dd81"
+    },
+    {
+      "path": "test-view-mask.ps1",
+      "sha256": "eeded1edf43059523dae87d6867e0c6393f508aafc1a01e9344ccc3a8c537ca6"
+    },
+    {
+      "path": "docs/parity/evidence/VIEW-PROJECTION-0001.json",
+      "sha256": "0f5a6c8f936fb3be54a1b24d3258ed794b6cd42a27fbb3ba97c8005af209dd3e"
+    },
+    {
+      "path": "docs/parity/evidence/RENDER-COHERENCE-0001.json",
+      "sha256": "896e076c1e0c9d800e343182abd10d006c8944d59ef61ba03fb24037acc333e2"
+    },
+    {
+      "path": "reference/validation/render-coherence.json",
+      "sha256": "304691c4ab76afe0a5da5212e445ecce5a6ecdeec5351a78c07ce441e650cdae"
+    },
+    {
+      "path": "tools/verify_render_coherence.py",
+      "sha256": "ef5b7050a3f837e22198e9641db14fd9ec10b8827b97281062b0b5b82fd3a13d"
+    },
+    {
+      "path": "tools/audit_native_animation_frame.py",
+      "sha256": "00cc7bd18aca5d4a508bb7d34e0e0244d5a27873a428c9d975fca006d054def7"
+    },
+    {
+      "path": "docs/RENDER_COHERENCE.md",
+      "sha256": "a2c34081b9b76fd2a92d619962b44baa5bcaea52ba0ead5e7a40e7803ea29ec5"
+    },
+    {
+      "path": "tools/audit_contact_kernel_images.py",
+      "sha256": "d20cd2964673b363aa23a6c268ee25d8f0e71d3e05d51abd546c9d713d6c95a0"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/contact-kernel-images.json",
+      "sha256": "40df4327e80afd8401b7d9ba8d21f114e8f5d1ff74a79ea05f9b3128bbdd312b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-timing/identity.json",
+      "sha256": "0bf72a5fbf0a8c4d917373bd96f2f6262c9884d43b5ff09311282e84f1a15d94"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-timing/native.txt",
+      "sha256": "bfdb8a9e7e74c9b2fe4f8878d8286a57396780db7459468952f1ca277593b2bf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-timing/native.json",
+      "sha256": "a786a557976c5a15347c3d7359312b5ecaa3710c65eccf5a5fe48f8cf0a75310"
+    },
+    {
+      "path": "reference/validation/source-object-host.json",
+      "sha256": "315eea6f5421d742aadb9b5727535a7748e04038bad3901b2d2610bb079707ed"
+    },
+    {
+      "path": "reference/validation/source-score-host.json",
+      "sha256": "97a4e9d18699f06d44f05534b5d35dfc2c3a394aa08946d3af97028d8c2a355d"
+    },
+    {
+      "path": "docs/NATIVE_ENGINE_OPTIMIZATION.md",
+      "sha256": "e2502afb9c30e9d8f2705db0687f38289e7355ca5e33855c6f9c1ecfb043fc8b"
+    },
+    {
+      "path": "docs/CONTACT_KERNEL_OPTIMIZATION.md",
+      "sha256": "eb964bbb238d5bfc3d59f78f235ee8929fa0e2379aaecbe4ada438356b698e85"
+    },
+    {
+      "path": "docs/PACKED_MASK_OPTIMIZATION.md",
+      "sha256": "00c6cf08b77d2674924bc257fd19bd7ff1beb29585872c70d1e8c8d3fd4132cb"
+    },
+    {
+      "path": "reference/validation/source-contact-host.json",
+      "sha256": "ba9fdba4a3069d88c691af06a742033707b8618c9be061fdf3034ad961bcf248"
+    },
+    {
+      "path": "docs/CONTACT_OPTIMIZATION.md",
+      "sha256": "2e6f6f3bca6059ec32e55144afcde97844052de2bc6ac04383956a41fc5daa5d"
+    },
+    {
+      "path": "docs/VIC_NATIVE_OPTIMIZATION.md",
+      "sha256": "950e173491222814bd33c2c92f9c1b984ab41069e8bbdfddd5749d8261400786"
+    },
+    {
+      "path": "reference/validation/source-visibility-native.json",
+      "sha256": "af5a24c92b26d6e25f54aadb749ef1c3985a4a3df758d60fd11df1c1e567a02a"
+    },
+    {
+      "path": "reference/validation/source-visibility-host.json",
+      "sha256": "3b2a434aedf4285eaca42c13fd0738b97fc677423c0978dcba6decab043a1c97"
+    },
+    {
+      "path": "reference/analysis/yamo-r02-2026-10-27/snapshot.json",
+      "sha256": "e16380e10ce451c3902b3465891e643ea70cbf2f6366005575a2085804709ecb"
+    },
+    {
+      "path": "reference/analysis/yamo-r02-2026-10-27/source-memory.bin",
+      "sha256": "70ed4f18ab2f93aff99995c6ddfc7515c86a9c6caa55115f647008c1983e1ab3"
+    },
+    {
+      "path": "tools/inspect_source_snapshot.py",
+      "sha256": "98b3b2d0f48e06e505feceb279cde1f4e79179818caccc8bc239b83bbe9204f0"
+    },
+    {
+      "path": "docs/YAMO_VISIBILITY_PERFORMANCE.md",
+      "sha256": "0185e4a4b11048f5f9e0214017e5d5ecb2dae699f8de380337083b99ebf0a7fe"
+    },
+    {
+      "path": "docs/CONTACT_REGISTERS_OPTIMIZATION.md",
+      "sha256": "01e9465000b2198ea6997f6c700c599c0983d560936e699a4acee8d5e2b52d82"
+    },
+    {
+      "path": "docs/VIC_REPEAT_OPTIMIZATION.md",
+      "sha256": "75d3793e0a6c6e83846b22500333319e3fa8f6ce438dbb3e870a239beda0d3c0"
+    },
+    {
+      "path": "reference/analysis/vic-repeat-2026-10-28/baseline/manifest.json",
+      "sha256": "662836ac8a71e9f69afa653a50a0f922332231dc5b30e9ef362be79b48ed8313"
+    },
+    {
+      "path": "reference/analysis/vic-repeat-2026-10-28/native-kernel-bytes.json",
+      "sha256": "aa502e4328cea6e70786a27557f00dc80756768c649a497f5b4a3a03a0ab88f6"
+    },
+    {
+      "path": "reference/analysis/vic-repeat-2026-10-28/source-register-seams.json",
+      "sha256": "b7c574a4dcf32d3a065ce4a7cc03c626ff0010a83dbf0e07a54ee2f538f78f19"
+    },
+    {
+      "path": "reference/validation/source-paint-host.json",
+      "sha256": "e1e1bdee3cfb6ed1ba17fa3a4b4f2c66f576ca0d16216967ef874f36d74e8469"
+    },
+    {
+      "path": "reference/validation/source-trap-native.json",
+      "sha256": "2a71904be4a2de767a682d9cdf89308f88293ecf3a5453b4474744728368879c"
+    },
+    {
+      "path": "docs/CONTACT_PREPARATION_OPTIMIZATION.md",
+      "sha256": "4e983d5410603e2f2d5bc0901364ca12c6754c280224b1cbba5218ef509a5912"
+    },
+    {
+      "path": "docs/TRAP_R06_2026-10-28.md",
+      "sha256": "e8730e361e36a8668f551b740ac7d05640718a34e454c6ec76be20fcaa4749e7"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/room-loop-controls.json",
+      "sha256": "6d99b92e3dcabb240305f3df3bb21c5ce16faf743d4f0e3d3962e48ff0fd6551"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/trap-pixels.json",
+      "sha256": "4b829bb705a395f0e78dd2ddc300bdfeff93ee1ce841429ba09d063df19736a0"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/requeue-before.json",
+      "sha256": "f8798935424f31cecda5c71672574da1806bcf65424ecf1180f0f329b8407587"
+    },
+    {
+      "path": "reference/analysis/trap-r06-2026-10-28/kage-r01-exit-gate.json",
+      "sha256": "d03163eb98d4b12661dc25e0cf92b4ce1094554677eb68dde97a0082a7248fd6"
+    },
+    {
+      "path": "docs/parity/evidence/SPRITE-COPY-0001.json",
+      "sha256": "3a5282e3a1e1d4f61f7eacf42038e671e95e113b8bd557d08e6bcec2cbcd1661"
+    },
+    {
+      "path": "reference/validation/source-sprite-copy-host.json",
+      "sha256": "76fcd6d39b37b4a1ffa49316b3c3999c6bbb629d3ebdc0dd2e8dec00ec998ee7"
+    },
+    {
+      "path": "docs/SPRITE_COPY_OPTIMIZATION.md",
+      "sha256": "c7f6d6c76786c1b174c7c3f7ee377c5622a7fd9d3dfe82cea7edaa4681483fa8"
+    },
+    {
+      "path": "tools/audit_sprite_native_kernel.py",
+      "sha256": "dd86b08e427906f4017f6d86db51d8ae937234638521a82c6774e1ab55d4195e"
+    },
+    {
+      "path": "tools/verify_source_sprite_copy.py",
+      "sha256": "12a6b8598c1e2d5ba5edf4ce19f4975de65c6542b42959a8a799914e561fc17a"
+    },
+    {
+      "path": "tools/verify_amiga_entry.py",
+      "sha256": "857be561143af60741a1db39ab6044799cd5c11413c34a81d76e7d97dce3aea8"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "reference/analysis/sprite-copy-2026-10-29/source-contract.json",
+      "sha256": "3c5675706f533ea86828eca3470b713099d15b2572db1692d0f3d35e073521fb"
+    },
+    {
+      "path": "reference/analysis/sprite-copy-2026-10-29/source-copy-disassembly.txt",
+      "sha256": "c2dd06f63574ce2d0ae859d8e31561da8962069f7d2d9d590a805cacc47e9b7a"
+    },
+    {
+      "path": "reference/analysis/sprite-copy-2026-10-29/native-kernel-bytes.json",
+      "sha256": "5aacb265f1ffa26070e3b8cb573d043c7dae9be2755562671593dc987ebaac6b"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "dae1f7aee576e3839e9b135f2b18009e94659c7890299e107430f835c01c8810"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "343dbcaed8b7978bffb8ef691ca9f75073a8303f156742636c2a8e5765e3423a"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "96bb14db669da4c973674e52fa7b69a71cfb55896a665195c43db746380277b0"
+    }
+  ],
+  "open_gates": [
+    "Verified untouched1984 edition",
+    "PAL real-time budget across all rooms",
+    "Natural VIC/IRQ phase and reader distribution",
+    "Complete natural playthrough and next round",
+    "Physical A500 and final distribution"
+  ]
+}

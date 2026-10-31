@@ -1,0 +1,7 @@
+{
+  "method": "Diagnostic translation unit; unchanged actual PAL scheduler, fixed no-input source route; intervals begin/end at original ready boundary; source room jumps and bitmap preparation outside timed interval",
+  "source_main_sha256": "62b42aa86300423934c65a555468b3be9596c8db1fdf0d7eff572e93ce3362d6",
+  "generated_sha256": "8fd6aa3f6f90300528b56224d7055791ff75d59a27a3c81333269cb03f2d2515",
+  "steps_per_room": 120,
+  "normal_main_edited": false
+}

@@ -1,0 +1,6 @@
+{
+  "before_sha256": "9fa114e2c7a9e56ff7dc7105cee70343c68ba112ace8a4433bb46f68e74be2eb",
+  "candidate_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+  "scope": "Only source_color_written: omit calls whose existing active body cannot write any metadata; original C64 stores and general writer unchanged",
+  "production_changed": false
+}

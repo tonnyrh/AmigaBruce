@@ -1,0 +1,9 @@
+{
+  "diagnostic_difference": "Only unused SourcePerfTest capture allocation and its allocation guard omitted; all source/control/memory gates retained",
+  "main": "compiled-main.c",
+  "production_core_compiled": true,
+  "actor_program": "core/c64_actor_programs.h",
+  "builder": "compiled-build.ps1",
+  "core": "core/c64_rooms.c",
+  "normal_main": "amiga/main.c"
+}

@@ -1,0 +1,34 @@
+{
+  "stationary_actors": false,
+  "builder": "compiled-build.ps1",
+  "main": "compiled-main.c",
+  "source": "current production core",
+  "mask": 3,
+  "actual_inputs": [
+    {
+      "sha256": "7e2ee65e342803dfd711a6fc0513ec080666aee82841b4a7b63073b1e6ef0f99",
+      "path": "amiga/main.c"
+    },
+    {
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e",
+      "path": "core/c64_actor_programs.h"
+    },
+    {
+      "sha256": "18bbff5da0c3ba7120abaf35b797173b171b4ec2f7cf7880308d465a91edc103",
+      "path": "reference/analysis/enemy-cost-2026-10-30/main.c"
+    },
+    {
+      "sha256": "ba1c6d05901dc2d27f43ed2dfbec92e6a10c1c14a8026b7e3d229baae31e76a8",
+      "path": "reference/analysis/enemy-cost-2026-10-30/build.ps1"
+    },
+    {
+      "sha256": "8d03a179cea12fb22099aca509961260463b9d7e4e17fc5dde3a0cb6f9157dea",
+      "path": "reference/analysis/enemy-cost-2026-10-30/scope.json"
+    }
+  ],
+  "production_changed": false
+}

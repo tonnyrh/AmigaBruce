@@ -1,0 +1,28 @@
+{
+  "label": "render-coherence-final-room3",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "dff32c92068677c13a4313da213db06eeffbb4ffc05bbbaaf9c3f4cc709866be"
+  },
+  "source_room": 3,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    396864,
+    396904,
+    396944,
+    396984
+  ],
+  "source_music_fields": 573,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/render-coherence-final-room3.bpl",
+      "sha256": "1d6cacb4478b851bdace97b7d4284482354cb8132f6f5692bde2458039d08dfc"
+    },
+    {
+      "path": "docs/images/session-render-coherence-final-room3.png",
+      "sha256": "674012c09e90c0c09e2c837841b1448c1177791a6abb15ba44cfd0f0fc75e133"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-25",
+  "status": "implemented_host_checked_native_validation_pending",
+  "native_validation_complete": false,
+  "edition_verified": false,
+  "full_c64_game_parity": false,
+  "sid_analog_emulation": false,
+  "natural_playthrough": false,
+  "source_waveform_chip_bytes": 2260,
+  "fixed_dma_image_bytes": 3072,
+  "total_audio_chip_bytes": 5332,
+  "host_dma_fields": 1518,
+  "host_dma_channel_images": 4554,
+  "source_rules_changed": false,
+  "source_files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "7f6f55f73c191b96795a47cc8fa657f5cc86396e10fd20033a00fb1113b3b07f"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "da96632904302a8054d65e2075720a95152d9df596f9cce8517c17f8392b7b0a"
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+    },
+    {
+      "path": "core/source_dma.h",
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "73d55bac838bb93e973afe64305d8375431516b648e53b430b69f44fc507eac0"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "8230b5a3dd98aae1bc16586267485c49bc8936b0f5d30673d3ee2fb25cefd2c2"
+    },
+    {
+      "path": "tests/source_dma_fixture.h",
+      "sha256": "a0badaf7bb633cde1745835d5ea3d9ce88e60ef0fa2735a0820c4824084d58c5"
+    },
+    {
+      "path": "tests/packed_capture.h",
+      "sha256": "c6c69e5b051ae9123c44bfda6d02ac92fd91df80fce2fcc471a20d011fd7857e"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "af0e1603c3678c59f0bc88f4764a7a3c34780786e5aedbd49976f05e7a02a12f"
+    },
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "5f6be3b48e3a593184eef6dce41149e767d4bbeae507eff82d9d1cb46c3f01e2"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "sha256": "8d9b073a221210a4af7850e18eeaad977ed2e472fc5278876b8f981e39f94c4d"
+    },
+    {
+      "path": "tools/verify_source_dma.py",
+      "sha256": "63ea2d3ec0fce613608917ef8fd3cbb173c78ace9eddeaeaabb300cd9bea4939"
+    },
+    {
+      "path": "test-source-dma.ps1",
+      "sha256": "fc6104d0a6a155984d515e696166641af22b305cb1d3e53e1988ef7f2041d66d"
+    },
+    {
+      "path": "tools/verify_paula_stream_delivery.py",
+      "sha256": "cab94be556a44e64d963f9dae21db4f9b7ae21bc36e7f3872b981a4f8cdd957a"
+    },
+    {
+      "path": "tools/verify_c64_candidate.py",
+      "sha256": "8222bdedc9c5154fea697d1dd811f78a740e33b42dbfc3d1ec3f4d1a9cd50f32"
+    },
+    {
+      "path": "docs/PAULA_STREAM.md",
+      "sha256": "94c92f6485e38b8efdcda73bd19a3b7940fc44c1bd183f285d177f1d72cbec84"
+    },
+    {
+      "path": "reference/validation/source-dma-host.json",
+      "sha256": "05087d93ea935714f404439c29b1e3ea96d0056304976536bd453c459e1fe2ee"
+    },
+    {
+      "path": "reference/validation/source-audio-host.json",
+      "sha256": "b4ba90d0c46b1316ce656e3915ad7c2e4058215d8ee2d02a5f8d60ba7caa0742"
+    },
+    {
+      "path": "reference/validation/c64-core.json",
+      "sha256": "ca4c0a0c850c76535e382541f6e42230378754363d1df912d7917b46ebc8612f"
+    },
+    {
+      "path": "reference/validation/c64-room-runtime.json",
+      "sha256": "48a936baaf2f52d488c9f6e220590dbef60b68a42f0ece01c768086155da2e0d"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "32a9e1e593a2f85459f103abe3efdc50a75ca741a46b4578ef53ec4ea00b1023"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "7e7516a95d225eb05bdc69aa1500f84ee44d1c45c4deca5156e0a8f37e5f72e8"
+    }
+  ],
+  "prior_build_archive": "reference/validation/history/before-paula-stream-2026-10-25",
+  "pending": [
+    "Two current native6000-loop captures and current native music/SFX recordings"
+  ],
+  "limitations": [
+    "Fixed in-place images retain prefetched-word/current-period/copy-boundary effects",
+    "Cooperative service exposes missed fields; no independent audio interrupt or blanket50Hz guarantee",
+    "Actor/gameplay/full natural C64 parity and strict A500 rendering gate remain open"
+  ],
+  "superseded_by": "reference/validation/session-walls-delivery.json",
+  "historical_build": true
+}

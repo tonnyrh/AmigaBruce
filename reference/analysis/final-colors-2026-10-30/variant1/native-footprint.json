@@ -1,0 +1,40 @@
+{
+  "status": "native_fixture_bss_unchanged",
+  "builds": [
+    {
+      "label": "before",
+      "elf": {
+        "sha256": "ff9aee2c20e7ff27e6e613e93b190b5f39810f3877de5c752a1898eef0750363",
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/3b00c638af91-2cd3447aa431/bruce_test.elf"
+      },
+      "sections": {
+        ".text": 207304,
+        ".rodata": 85324,
+        ".data": 21,
+        ".bss": 171696
+      },
+      "exe": {
+        "sha256": "3b00c638af91d81a45632cecddbd8a710142a2d906fd988c8cef3484b06be25d",
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/3b00c638af91-2cd3447aa431/bruce_test.exe"
+      }
+    },
+    {
+      "label": "candidate",
+      "elf": {
+        "sha256": "d41b7d3af7f034b6f5d89ce667c16f5068c23d77f4b9096c91b1de0e47415653",
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/fd9fefc871e5-3a39aaba118f/bruce_test.elf"
+      },
+      "sections": {
+        ".text": 207356,
+        ".rodata": 85324,
+        ".data": 21,
+        ".bss": 171696
+      },
+      "exe": {
+        "sha256": "fd9fefc871e5426ba6e5881b3eae3d74322b99fa139e552d4949ebf4eab14cd2",
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/fd9fefc871e5-3a39aaba118f/bruce_test.exe"
+      }
+    }
+  ],
+  "scope": "Same full53-fixture build mode; normal build and stack acceptance separate"
+}

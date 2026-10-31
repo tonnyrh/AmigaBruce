@@ -1,0 +1,46 @@
+{
+  "status": "private_complete_field_audio_poll_candidate",
+  "production_changed": false,
+  "change": "Same precomputed game-field gap and same field calls; extra existing audio poll only after each complete field. Existing active/busy/same-field gates retained; no catch-up SID bursts.",
+  "inputs": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": ".tmp/compact-delivery/math-main.c",
+      "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1"
+    },
+    {
+      "path": ".tmp/compact-delivery/math-build.ps1",
+      "sha256": "38cecc4f422c5da488cf8feaa3f923007f18b3de96c10bb0adb21397a2eef37e"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/boundary/main.c",
+      "sha256": "18bbff5da0c3ba7120abaf35b797173b171b4ec2f7cf7880308d465a91edc103"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/boundary-build.ps1",
+      "sha256": "dc517f73963fbfd485d370b00d734eef7602b0002d631c2454f6c43dfc109fca"
+    }
+  ],
+  "limits": [
+    "Not integrated",
+    "Natural C64 IRQ/PC mapping remains open",
+    "Must measure cost, source/control results and missed ticks"
+  ]
+}

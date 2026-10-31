@@ -1,0 +1,241 @@
+{
+  "status": "passed_scoped_host_and_native_frame_coherence",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "full_room_paints": 60,
+  "source_room12_steps": 96,
+  "runtime_signature": "8e1d6217b2647d9d5c94f57792b30e875071b741a7b8d8aa940850230ee9aa1e",
+  "runs": [
+    {
+      "label": "native-before-frozen",
+      "samples": 16,
+      "mixed_phase_samples": 8,
+      "max_pixel_mismatch": 1888,
+      "max_static_pixel_mismatch": 28
+    },
+    {
+      "label": "vic-cache-native",
+      "samples": 12,
+      "mixed_phase_samples": 0,
+      "max_pixel_mismatch": 0,
+      "max_static_pixel_mismatch": 0
+    },
+    {
+      "label": "vic-cache-native-death",
+      "samples": 12,
+      "mixed_phase_samples": 0,
+      "max_pixel_mismatch": 0,
+      "max_static_pixel_mismatch": 0
+    }
+  ],
+  "source_files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "fe20aa9fc72942e55055e652c54e58ecfdf98270fe2509c0264cc1777da4babf"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "b9141711fcf16dd3e56a295be74aa6421b0da0f6e91c3b1f53974d509335f3f6"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/before/manifest.json",
+      "sha256": "fa5fb023856d41f4934040f0e98c33b2fd41491ae9dba1b516ca74672f1a517c"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/intermediate/manifest.json",
+      "sha256": "ffd43f35a7ca664531fe47d9ed3c862d6382b616a8da2d2194634824319e8b66"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/source-scroll-disassembly.txt",
+      "sha256": "d2f2c9cfa5390b7e73ea2fe081212f7500b0bd0423c51254956dfe890618d61e"
+    },
+    {
+      "path": "reference/validation/source-paint-host.json",
+      "sha256": "1bc99bdc010ef17206eacbe6c51b8b7afb47d4de0c6468cda39114846b55d0d7"
+    },
+    {
+      "path": "tools/verify_render_coherence.py",
+      "sha256": "e2c614e4b39d05234cd299ba9cbdc47e795a4dfd341dea33bf95b96a78c382a9"
+    },
+    {
+      "path": "tools/audit_native_animation_frame.py",
+      "sha256": "00cc7bd18aca5d4a508bb7d34e0e0244d5a27873a428c9d975fca006d054def7"
+    },
+    {
+      "path": "docs/RENDER_COHERENCE.md",
+      "sha256": "c61b38a484314ad7104b6e793a5b79a20aabc8933f37f9d0a8c241d7996d8254"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/report.json",
+      "sha256": "dfb2bb6fc880276b3d2e45764fba10503f41984e481a53ea5a4186c0738ea51a"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/front.bpl",
+      "sha256": "a424fa990fb34a99e293cdc9104fae28050315a3c1eb8f086fe7afed3dbcbfa1"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample0-front.bpl",
+      "sha256": "e85a2b3680f329b853cfd6076583fe7a7bc9bb49392eb3a18f6d2f737138f330"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample0-source.bin",
+      "sha256": "a4ba604cfe43f91b71e2bb9de481c186ce6e54c41afaaa29a8a9a1326876d592"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample1-front.bpl",
+      "sha256": "5dfdca9a80fe2028150b9c6fdebceee72e78b83eea5dfde74088ba389c440f59"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample1-source.bin",
+      "sha256": "09f1bd723d1e0af5ff0ede8fdfd636d54c794de5c2eca6160fa689c85ebf73e0"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample10-front.bpl",
+      "sha256": "44ab0e737ad68f06ec324cd0110941869449295aefca5633990e893630fb160e"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample10-source.bin",
+      "sha256": "9e750fdf2e6ddeaaab88b5f3f13b1f0c398bd1064ff9151c2ce1ce4d6516464b"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample11-front.bpl",
+      "sha256": "a5c6a775f9a7f6f286ae1ec2c80e1a36832e3547ab01c6eb7256b4328eb11aa4"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample11-source.bin",
+      "sha256": "93f9d0c6b49f3371e32c11f45cd89038e69b268ae3c08439bedc87f4b5b734b3"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample12-front.bpl",
+      "sha256": "7bc7108839314af612f15c2845ca72f113dbb393faa09fed005096e1cd55d7ab"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample12-source.bin",
+      "sha256": "70fb58fbadcb8f8b9aa0814f30b73f3386bad5f726ad1dccf0a2ebf3b00b9458"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample13-front.bpl",
+      "sha256": "b6900221429e10a09b0cf46ebfe3b057e0398ba954fad96f8491a4c25ff5fd19"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample13-source.bin",
+      "sha256": "6bd504c6e03ff67f72ec242bb8497b5fedbbc6f77a496190999135cc7511e0b0"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample14-front.bpl",
+      "sha256": "bda48345d30f38a25544f9974aec36d1b50381bd7051f903d3f863f64fd7599d"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample14-source.bin",
+      "sha256": "a69494bde4edf7f0cb93b1061be24a203423e0d66b148a971533b0d262ef1b45"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample15-front.bpl",
+      "sha256": "a424fa990fb34a99e293cdc9104fae28050315a3c1eb8f086fe7afed3dbcbfa1"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample15-source.bin",
+      "sha256": "095794686f1f9907a47dd34b863459f972d79db55727a19bd8dc742b0f800efc"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample2-front.bpl",
+      "sha256": "ffbc0bc7e53abb18f591042bf4fb547859c381c77136b8550edcad0b4669cab2"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample2-source.bin",
+      "sha256": "6e681e6e24337b49094095a9ae22a4afa6a09dac43e946bbf256cd37d734f359"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample3-front.bpl",
+      "sha256": "9eecf4423576afdce84a3680bf47528f6a05d71db907aba4ba7856b0287ab1c8"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample3-source.bin",
+      "sha256": "0120f0af7a7c2eec2ceebeae56bd472f05d041f8272e15b12ab30315593d318c"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample4-front.bpl",
+      "sha256": "4bb355a1865ac997c3f4104bfda04508315a6cb9357bbddf3add530657dd6f76"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample4-source.bin",
+      "sha256": "02116658a7ee111cc4a0e74a3efa01975e15684a596a43cd200d43e2cce2120b"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample5-front.bpl",
+      "sha256": "60c7a243be8f95d18fc4b20aeb974ae64aa268d5d2700b1944aa15b016c88253"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample5-source.bin",
+      "sha256": "bca2d4b8b1d0334fb8756137b0f069403b18a46f8610f516b7ff96b3ba09a6ae"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample6-front.bpl",
+      "sha256": "dcc7b39dcd1f91fbb2f77f8304eae16ed141833e5ec28a7d5406b625a021b883"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample6-source.bin",
+      "sha256": "8c119b05e1e35942926b920646622baba0b180da0081db1f40b2f3e59ff01322"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample7-front.bpl",
+      "sha256": "76810fdd41ccae782a7a4dcafb375c185c1671141f3258c12315d48486253ef9"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample7-source.bin",
+      "sha256": "a18c8fc3f9debcd9e77cfd9b9a355f9181af8f84ecaafba2f99f86cdf1122075"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample8-front.bpl",
+      "sha256": "260ac699c66a59677c079e5616623c589a0f706707129422f292a58b4d164013"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample8-source.bin",
+      "sha256": "fedd85c466901a479b459898c3acfcfc2f6c611238037dd94df3952b6585ebb6"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample9-front.bpl",
+      "sha256": "376bc22d7a1e4fbfe8283754f54bf17728cf4ec1e045a236917796b10f3bd754"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/sample9-source.bin",
+      "sha256": "847f6dca1811155b7ff9c6278f994c32988f8abff229c5f4c13a056260c6d6d5"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/native-before-frozen/source.bin",
+      "sha256": "095794686f1f9907a47dd34b863459f972d79db55727a19bd8dc742b0f800efc"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/vic-cache-native/report.json",
+      "sha256": "182620791bec1d47f5c52c00beb6fb4b0bfbf3a80bb4111c9d1d2f4a70343f1b"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/vic-cache-native/front.bpl",
+      "sha256": "22991deec02578b2f06d84fa0c24b48370857c4d7694d7db3e8c4c92790874a5"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/vic-cache-native/source.bin",
+      "sha256": "83dcbc9ac2f0144d729274a8a5407f6bf40e1abb7cecde773a430f721a2292d6"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/vic-cache-native-death/report.json",
+      "sha256": "6a307ae29621ad42c39ece7309e7fdc4dd0f59546b7b048776c3f68faa43dc5d"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/vic-cache-native-death/front.bpl",
+      "sha256": "1efbcb3eb6a2bd451b60a327e429909faf8576286e2742c158c5e608afcf0ef9"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/vic-cache-native-death/source.bin",
+      "sha256": "4a118be5ec52ec3786dd32cbfac13181520a50a626921d0b9bdaf92181e4ea57"
+    }
+  ]
+}

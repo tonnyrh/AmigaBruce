@@ -1,0 +1,585 @@
+{
+  "status": "frozen_before_compact_call_integration",
+  "files": [
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "d2a74039ef2a05a746000edbfc4b21e49276422b520f58ea2d61b39b8a55a140"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "533c39c8475143b38ce63da1f57a6bd5fc8536b928f794faffadd42d5a313c42"
+    },
+    {
+      "path": "core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "ee7fb51449d755e20991a9ba8197bfbafe61b28443119cb84e113c89c8bd3cb8"
+    },
+    {
+      "path": "core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "143b6eb93713e73b71a7cdd5375f980abe14891fed594308fefd9b688d8614d6"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "98dcd24df04e1b6f778543d395b029dcb1fc2a6627fd83b5df74bf1268af8d05"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "5a09053558b66d8c453ad8c58a058fb44752967bbd900f74a54593c3e6678cc3"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "0abd7c6531b3722d62ddbbc149e8cbd805cddc67551826502c41ff1907337ad1"
+    },
+    {
+      "path": "core/session.h",
+      "sha256": "08ec809cffb30dbb5221e4af164f998e792eaac001d892179ef9fc96da18accf"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/source_climb.c",
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b"
+    },
+    {
+      "path": "core/source_climb.h",
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433"
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+    },
+    {
+      "path": "core/source_dma.h",
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "docs/AMIGA_OPTIMIZATION_PLAN.md",
+      "sha256": "eb5e09311df34aa058e0bba88492d3b41395e22d67b3be7ff664935461eee3bf"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "533912a4b7cf30a8faa1c33269724b6830c37230c3ad372f5bd6e37e5e2ff325"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-final.txt",
+      "sha256": "0f3c180fafd9a5f5b91d957b0b88294c42b0c5b9f2357725f670558c523905e6"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-fixture.json",
+      "sha256": "9ae6eea4c8998e7d5e0c78f172b780e4c3bf678054df360a0acebb021bb3ec15"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/normal-clock.json",
+      "sha256": "b54b0d66357b67cabe311aad2cc4e769e02d5ceab5c9e7632149c96b64adf4d3"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "321b0da7db9c7b25cb199402ee645461b99ec1255ef0867ad64b81fe9f75b8a8"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "6bc512d155e594ce2ef7c862936d17b97484ee680d0896f6ca485a88b59aafb7"
+    },
+    {
+      "path": "reference/validation/a500-adf-boot.json",
+      "sha256": "e58a9dd65d8acfa72f8ac0934d68778e90a9a36002936f07a9a7fffae7562681"
+    },
+    {
+      "path": "reference/validation/a500-c64-combat-diagnostic.json",
+      "sha256": "128f65f651890cf0b8015e944c48ee2a222253e5678d5d8ec5433c9004fb19c3"
+    },
+    {
+      "path": "reference/validation/a500-c64-rooms-diagnostic.json",
+      "sha256": "7aed99fe578c8d73dc1af5f8e43024ad6922e5e79a33b4a6a5f46d1c96aa6358"
+    },
+    {
+      "path": "reference/validation/a500-enemy-edges.json",
+      "sha256": "a2ab80477354bbf2813b40756b2ccecb862217bf9afb6ce85a4208592d7390b9"
+    },
+    {
+      "path": "reference/validation/a500-gates.json",
+      "sha256": "473f30083a734a8a296e998ded6016ee944cd641aa48d72bf1a1dd5b560d3c0a"
+    },
+    {
+      "path": "reference/validation/a500-m3-combat.json",
+      "sha256": "c2bd5a779b18047ea530c7cbf64d04da12e3df26f51a8bb4a07117b394af0c9a"
+    },
+    {
+      "path": "reference/validation/a500-m3-debug.json",
+      "sha256": "5963973be4613fc0e4001c60240cbda331b7d713bb3d27f567f8efcd10a9b299"
+    },
+    {
+      "path": "reference/validation/a500-m4-rooms.json",
+      "sha256": "b987d4fe4b05bf9849d967566e622a7c23cd0c703c898c40db7c4fe45fde32cf"
+    },
+    {
+      "path": "reference/validation/a500-repeat-launch.json",
+      "sha256": "8541ca49306dc2075c0155577b1f90e648d7989a1fd70831a727de3bfd2b8bab"
+    },
+    {
+      "path": "reference/validation/a500-room-load-baseline.json",
+      "sha256": "b80d83cef1235fe32791d59f8ffa845fda3c4bd87693d89e056314d23e825b1a"
+    },
+    {
+      "path": "reference/validation/a500-room-load.json",
+      "sha256": "806012ee9ed274e2887d457d55ee9a27456d8c0568a424b6057308bad8aebc81"
+    },
+    {
+      "path": "reference/validation/a500-room-tour.json",
+      "sha256": "4cdc1f88c885dc535e77c98f7b27395270d012835e5c2fb8279758a1b51fe308"
+    },
+    {
+      "path": "reference/validation/a500-soak.json",
+      "sha256": "bf90931ff54af6eaaa0e28b9d4ba2047b73e4f44b9511acab97444fe3c736593"
+    },
+    {
+      "path": "reference/validation/art-inventory.json",
+      "sha256": "47b679b6d802f1f60edbcd02117d663423164e6f917c85b55a1c81151d2f92e0"
+    },
+    {
+      "path": "reference/validation/bombs-entry-delivery.json",
+      "sha256": "a0c33d38f28213de2975af3f2c08b4449e5dc3a251162d0c8e61b138bb4aa9c6"
+    },
+    {
+      "path": "reference/validation/c64-candidate.json",
+      "sha256": "53380a6e89e85a861662389fa6c939461c0ceb6aa48f868d7e3282594d2c653b"
+    },
+    {
+      "path": "reference/validation/c64-core.json",
+      "sha256": "b7f04fb2b81f802b8f8ba2bae657344eb40ede36c38cd886097c4c8d583cc8c2"
+    },
+    {
+      "path": "reference/validation/c64-room-code.json",
+      "sha256": "476d9bacd64e2b08b86c47c036b2eea2dc18e79d6c557f5bca8a5fd5db54d2a7"
+    },
+    {
+      "path": "reference/validation/c64-room-reconstruction.json",
+      "sha256": "64eeab0c361eb289061a3f4a20ce56a596bbd6804206cc2ef968627972301f03"
+    },
+    {
+      "path": "reference/validation/c64-room-runtime.json",
+      "sha256": "642b07b8a1fe716bebaaa6127fef80811a78fa031ae6c465610d5823858ba73b"
+    },
+    {
+      "path": "reference/validation/c64-sprites-delivery.json",
+      "sha256": "639ea800eeb706b7094125cb909a3ed95bd0b9e7470341a2aa7284e43f5037a0"
+    },
+    {
+      "path": "reference/validation/c64-sprites-host.json",
+      "sha256": "8d984dda1f8352500a03a2babefae09907ba9cda832d177446ed8029c5fbbc25"
+    },
+    {
+      "path": "reference/validation/c64-stack-frames.json",
+      "sha256": "30b4579e13bccf56aa2ab2e6c4bc051f7a3e7fc07a81c8809d86a9bc11cb6b26"
+    },
+    {
+      "path": "reference/validation/candidate-attacks-phased-edges.json",
+      "sha256": "52b6974713866be19e3294c74391435834fdc4ea5c89eb6b9d9a2cabd3c0c0e3"
+    },
+    {
+      "path": "reference/validation/candidate-attacks-phased.json",
+      "sha256": "2ac4dac8d376da86c75a4b35055ca593480d6c50c262128fc2f7b632192e1d4b"
+    },
+    {
+      "path": "reference/validation/candidate-attacks.json",
+      "sha256": "b583490e337f44c5371528cf27cc0ab08062c0be7b5bdb58f03345fbf802961c"
+    },
+    {
+      "path": "reference/validation/candidate-climb.json",
+      "sha256": "8e96962f154c59ba78f7f19f8f9cee83a5873a325f713944d041c0047a12a6d1"
+    },
+    {
+      "path": "reference/validation/candidate-combat-reactions.json",
+      "sha256": "ad74dc215e8ee16b40b836ce1e376e3dc9e65703c9d596e14e04445b37605f0a"
+    },
+    {
+      "path": "reference/validation/candidate-combat.json",
+      "sha256": "e18939753293d68437427c71ac538df08bd75ae5f420f22d44770c78e4d3a4e3"
+    },
+    {
+      "path": "reference/validation/candidate-enemy-contacts.json",
+      "sha256": "ef244ad6a7525d6bf35548ebbdcd8a2351fbbaed9f7ff30c2e6c355f050dd8ea"
+    },
+    {
+      "path": "reference/validation/candidate-fall-contact-code.json",
+      "sha256": "79b584161cc470e56a7ee15b2a9f18179183db393645661ebfa076368ce90cb7"
+    },
+    {
+      "path": "reference/validation/candidate-fall-rate.json",
+      "sha256": "b2666df04263c28d0b952d8cc634ec5ebed661853fab489c4ae7ec1606d9d919"
+    },
+    {
+      "path": "reference/validation/candidate-fall.json",
+      "sha256": "f7b7a58104917c746bf774a910030f499166a3ec980de33620b2c42ee82a9781"
+    },
+    {
+      "path": "reference/validation/candidate-ledge-prone.json",
+      "sha256": "1415619aa361f263d850be98f87c090ba683f103407c0cfb016ff3e053b9eaaf"
+    },
+    {
+      "path": "reference/validation/candidate-movement.json",
+      "sha256": "c6be3566584cf2d85f9348a127e963c6ed5e5515746f080561b56f9bf262de5c"
+    },
+    {
+      "path": "reference/validation/candidate-net-top.json",
+      "sha256": "420b42402560bbfec099e9c2e5c3ab81e7c7b932f770123d7837fcfb24f42daf"
+    },
+    {
+      "path": "reference/validation/candidate-openings.json",
+      "sha256": "0f27cff687831707315be9a4960052010f0972afcef4c61a1c69604a47e7a43f"
+    },
+    {
+      "path": "reference/validation/candidate-room-routes.json",
+      "sha256": "7c32af70afcd19892d6f54951b5ea125865f62f78c8cc944180295f5f907d02f"
+    },
+    {
+      "path": "reference/validation/candidate-rooms.json",
+      "sha256": "d06ffb17c031164dde741dd7658fae32bdf8de41671730092e3a0e6ab5bb83da"
+    },
+    {
+      "path": "reference/validation/candidate-wall-escape.json",
+      "sha256": "738140cc7941c9171c8080f10f78136da6e13fdcc817f0df5de60d2be507f027"
+    },
+    {
+      "path": "reference/validation/cheat-progress-delivery.json",
+      "sha256": "785cefb13820b957ab94c3c055e3c4caa9e9664f6608f45ba8e4d58b9c0c4693"
+    },
+    {
+      "path": "reference/validation/climb-delivery.json",
+      "sha256": "dc96dc86de22f7a90a8917fbe4ec540c6f08d5a3a5d0a832c9a287550503f63c"
+    },
+    {
+      "path": "reference/validation/color-observer-optimization.json",
+      "sha256": "c2e22e0428e33a806504076c2c8d1cc7dcad501598eda14e7e5503cbcacff373"
+    },
+    {
+      "path": "reference/validation/combat-audio.json",
+      "sha256": "6e792dc3e2d974cf67868940e4d82b735df03ef0215a3b711a9e2395dd0efc06"
+    },
+    {
+      "path": "reference/validation/contact-delivery.json",
+      "sha256": "af06f7274e01e83c722e161cb805c19000230796a3684c11ddad5588e607a906"
+    },
+    {
+      "path": "reference/validation/contact-segment-experiments.json",
+      "sha256": "a97a456b6b2681c0a9a04aee5f24123be5af6f708a2d35d52bd11ef061b70867"
+    },
+    {
+      "path": "reference/validation/enemy-room-edges.json",
+      "sha256": "6744bbe9d41cf4c7715b5a9a38806cf56d90b9359369f335bb75a1c1880fa11f"
+    },
+    {
+      "path": "reference/validation/fall-control.json",
+      "sha256": "2ab39ccabfc2d27229f0939982f853fca4479742606cbf871217e7e9698ae3a8"
+    },
+    {
+      "path": "reference/validation/final-colors-optimization.json",
+      "sha256": "c62d70d7dc1758aa3f567a7ec9bd9169daef394e5e4b0d2fbe15c64108b2c365"
+    },
+    {
+      "path": "reference/validation/interactive-build.json",
+      "sha256": "a41dfebedc70350ff3f2b526813a04b683032346be40a90d91a86386ca8c0a61"
+    },
+    {
+      "path": "reference/validation/intro-codec-audit.json",
+      "sha256": "0e3cc5a32846aecfec8b74188bf2e6ac629a77d18f4d4a4eb57d4cbc2c7390e9"
+    },
+    {
+      "path": "reference/validation/m3-core.json",
+      "sha256": "b7f04fb2b81f802b8f8ba2bae657344eb40ede36c38cd886097c4c8d583cc8c2"
+    },
+    {
+      "path": "reference/validation/menu-publication.json",
+      "sha256": "acab55547db6113d535df9a3e4533cf35b8e45b97eb35656bdadb65ffa2a9555"
+    },
+    {
+      "path": "reference/validation/movement-delivery.json",
+      "sha256": "d61c81a7e52019ceb7484130334bbeabbcc831cb8968166b4364ecaa4bebb19a"
+    },
+    {
+      "path": "reference/validation/movement-timing.json",
+      "sha256": "ab5a5d9baec7ac6d6d4932dce8b2e3cb2348cb299093bdf0f2755c306b859a6c"
+    },
+    {
+      "path": "reference/validation/moving-net-delivery.json",
+      "sha256": "c02df3de556a93594b7ade409dd9853e40e80d8e47be90418b9c26a271ef5dbc"
+    },
+    {
+      "path": "reference/validation/ninja-wall-delivery.json",
+      "sha256": "c54f3743152e7fba07ffaed6df6f12e7014bbb94c3f1c48983b0da646bfe39c6"
+    },
+    {
+      "path": "reference/validation/npc-recoil-delivery.json",
+      "sha256": "cd5c90bce2a69ecc95f7f0f5f358eccbaf13f35f6586be334f8b104ad134de19"
+    },
+    {
+      "path": "reference/validation/op-followup.json",
+      "sha256": "998c00427ac9fd05ede4a9abc590611479931fe526dd3f36846115bc1955e966"
+    },
+    {
+      "path": "reference/validation/paula-stream-delivery.json",
+      "sha256": "afa71a1830f18aeb0c1b50ce73197a41696d7a4b38fc657c0ebff1b5c351455c"
+    },
+    {
+      "path": "reference/validation/presentation-experiments.json",
+      "sha256": "e1d0ca279d70cb34ea5cae8713ecb528f0f3703d715ccfd2064c4661e3c5dff4"
+    },
+    {
+      "path": "reference/validation/render-coherence.json",
+      "sha256": "438a00f1c0287a21324550ebdc19ee99fe747d295e4516dc12c983c6faebb8e5"
+    },
+    {
+      "path": "reference/validation/room-backgrounds.json",
+      "sha256": "2fbabbf2c1c99bef1553472b25ed50231698526045aa3f2095cef0259835231e"
+    },
+    {
+      "path": "reference/validation/room-blockouts.json",
+      "sha256": "2b20eeabbdcb1775ed5d1636c5e3134980aaed78b94b052a2eb3a11b653bbc9e"
+    },
+    {
+      "path": "reference/validation/room-load-delivery.json",
+      "sha256": "51f7e729de33eec50aa6f3cc95586d447059588fa5c4e993e2d8660375e40552"
+    },
+    {
+      "path": "reference/validation/room-tile-catalog.json",
+      "sha256": "2040ae9a0a260e5a715fa01d0dc7c4e9df3fc83d25eb2b6fe893c838fe83966e"
+    },
+    {
+      "path": "reference/validation/room10-electric-delivery.json",
+      "sha256": "955b4ecd302d178fefc679eab7979e3e4d664127850b420d886ef430749c5d17"
+    },
+    {
+      "path": "reference/validation/room8-blasts-delivery.json",
+      "sha256": "a9526481b7c1e745eadc21c0bf6174429de0707057b7675d03d6ee2fa2a4a0da"
+    },
+    {
+      "path": "reference/validation/session-walls-delivery.json",
+      "sha256": "e47af11b4e88bd21241b6442a9bcee1fb5f69e3726bd5c74b79325e0fa46e424"
+    },
+    {
+      "path": "reference/validation/source-audio-delivery.json",
+      "sha256": "619768cf87d51fb1d7185f85bf301f5b9e523fb39df2ccb08a2d4e8f70a763a0"
+    },
+    {
+      "path": "reference/validation/source-audio-host.json",
+      "sha256": "c229c4382876d599ca46d7a96834e82e29eb2712bd7ebb73aaf142dd1f32f825"
+    },
+    {
+      "path": "reference/validation/source-audio-raw.json",
+      "sha256": "41a19100e10c064cf2e1d683ecddb135e56ebc7e2924e7e0cb0d901e1e736a29"
+    },
+    {
+      "path": "reference/validation/source-contact-host.json",
+      "sha256": "7bc6c6fe66e50bf0e02cdb793bbaaeae6f5dc78d20b7c8f5c6abec774f2d5a20"
+    },
+    {
+      "path": "reference/validation/source-dma-host.json",
+      "sha256": "05087d93ea935714f404439c29b1e3ea96d0056304976536bd453c459e1fe2ee"
+    },
+    {
+      "path": "reference/validation/source-native-boot.json",
+      "sha256": "3c5a698c865e664fc71da307ec1758d35f97e0adc4dd964f8f47319878607a0c"
+    },
+    {
+      "path": "reference/validation/source-object-host.json",
+      "sha256": "6a7984237a235c607620beca176b56c5e7aec96a04a0bcf1d5bb7111bd484141"
+    },
+    {
+      "path": "reference/validation/source-optimization.json",
+      "sha256": "bc9ec5c92d2f2ed8f87d859277e4a0b6c5f905457f40a4c0294ac5590768337e"
+    },
+    {
+      "path": "reference/validation/source-paint-host.json",
+      "sha256": "45bdc4c3c38b9bcd21f2901d04fc6b2defa56ec0193e86e1d3ea46e949381fd0"
+    },
+    {
+      "path": "reference/validation/source-score-host.json",
+      "sha256": "ab46330a29fa7c2bb6fc5b25bb91dde54d7b6a2a62fea1e0a09757a3aaa4f7d2"
+    },
+    {
+      "path": "reference/validation/source-sprite-copy-host.json",
+      "sha256": "50d659e8dd295b1eafa4f65d314cb6b4b53cf03e9d9c1d1cb2eb5033ebfecf73"
+    },
+    {
+      "path": "reference/validation/source-trap-native.json",
+      "sha256": "2f95c7a2aa42ea34016c85d1a9b5dde27967c84e60cf8c687fb3b4e0a1aa669e"
+    },
+    {
+      "path": "reference/validation/source-vic-host.json",
+      "sha256": "d0d19795235efbc1b1a23b526af2755639368775fffb218d039c1539068d8d22"
+    },
+    {
+      "path": "reference/validation/source-visibility-host.json",
+      "sha256": "bc2fe6f8316870f3086b6e38aafe9e9220c7afa57556f6d4b65a66e868862859"
+    },
+    {
+      "path": "reference/validation/source-visibility-native.json",
+      "sha256": "9678480f001c52e47e21771745976779154ba7d5c63a44ba7ca7356312cfcc66"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "0f7573355c3406477e9c75435f8015496fcc87e94fcb42c72b5ea34d114e6ac2"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "fac20ec0f7e8938c96752589bd30f089906c6223afa641c2dc97bc73f4ec757a"
+    },
+    {
+      "path": "reference/validation/spawn-delivery.json",
+      "sha256": "42fce157714564bb1f4789cc9fa2b6461689d0a17a289b25fe34aa688b882484"
+    },
+    {
+      "path": "reference/validation/test-audit.json",
+      "sha256": "8c8274ab34bc40b955c579d3275c5d10dcb4e5b8927a9bb8cc6d7cea955c940a"
+    },
+    {
+      "path": "reference/validation/vic-cache-host.json",
+      "sha256": "354da4bdbf56d85a1226f100e9451ac762e63733dda8173cdfa1dc81042caada"
+    },
+    {
+      "path": "reference/validation/vic-cache-optimization.json",
+      "sha256": "a5523a70b35e836f5eb168f84a340017a37316fe1ffb266592d24febd44e278c"
+    },
+    {
+      "path": "reference/validation/view-mask-host.json",
+      "sha256": "008a27b544e219fda7b4ecb4ebe3c41e6e3b38320b27a4ff027551e8846d6098"
+    },
+    {
+      "path": "reference/validation/view-projection.json",
+      "sha256": "f5d3b6a3defdb1c3db705cc06f00f353052657edf05e1941142b9bb6c83dc7d6"
+    },
+    {
+      "path": "reference/validation/visual-candidate.json",
+      "sha256": "53380a6e89e85a861662389fa6c939461c0ceb6aa48f868d7e3282594d2c653b"
+    },
+    {
+      "path": "tools/build_c64_actors.py",
+      "sha256": "106e0dc72a5f1a0aa53e4ae1a02fa3645efb62ab19e06c2e8078b7415f642448"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
+    },
+    {
+      "path": "test-c64-actors.ps1",
+      "sha256": "43648d8c8d08fe3f55f9a3f73507e887d4bde8cb35aa850e9a9243be8f30907b"
+    },
+    {
+      "path": "test-source-world.ps1",
+      "sha256": "ff522a4d3569a8f0724c025960b1fc9b638228ff718fe9b5a71e5569fd0f5d8b"
+    }
+  ]
+}

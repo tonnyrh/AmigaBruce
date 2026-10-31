@@ -1,0 +1,36 @@
+{
+  "id": "CONTACT-UNROLL-0001",
+  "date": "2026-10-31",
+  "status": "unchanged_source_rule_native_implementation_optimized",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_addresses": [
+    "$52AD-$5309"
+  ],
+  "source_condition": "Prefix clear, phase3 extra32-byte clear, ordered96-byte copy, then phase-specific shifts; C64 rule and native alias guards unchanged.",
+  "amiga_effect": "Unroll fixed clear/copy loops only; +296 CODE bytes, no extra buffers, same RAM access order and service boundaries.",
+  "controls": {
+    "fresh_native_fixtures": 53,
+    "fresh_native_loops": 1200,
+    "separate_native_reference_cases": 710,
+    "align_cases_per_reference_image": 256
+  },
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_gate_passed": false,
+  "artifacts": [
+    {
+      "path": "reference/validation/contact-unroll.json",
+      "sha256": "5770937d82efc7f081f8ce062ccfa2ce3c71d8cec87fb1ebf9b43307cf2a9991"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "566baeca46df42b244ba97f3d268392b5951cadac0f0ccd9a72daa8410adb0da"
+    }
+  ],
+  "limitations": [
+    "Verified untouched 1984 edition",
+    "Full PAL real-time cadence and natural IRQ/input phase",
+    "Whole native stack high-water",
+    "Complete natural playthrough and physical A500"
+  ]
+}

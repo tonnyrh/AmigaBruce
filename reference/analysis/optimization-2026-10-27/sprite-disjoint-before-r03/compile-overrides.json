@@ -1,0 +1,28 @@
+{
+  "native_test_difference": "First64 of256 controls now use source glyph region and Y=3*height; other192 alias/tail cases retained",
+  "actual_inputs": [
+    {
+      "sha256": "ed749230a026524395c24bec4f29920c1f4bc1e56f4adddd79f198ad1dd9b89c",
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/candidate/c64_rooms.c"
+    },
+    {
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e",
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/candidate/c64_actor_programs.h"
+    },
+    {
+      "sha256": "13d8de7f778bfb73a1410e7ec2997cc79790969a4a5768c67e4c70bac17c968c",
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/before/sprite_copy.s"
+    },
+    {
+      "sha256": "415b3501dcf235644d58f3e82af587ef87629e2bd1bfc48b9bdd250e39f306d0",
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/before-build.ps1"
+    },
+    {
+      "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1",
+      "path": ".tmp/compact-delivery/math-main.c"
+    }
+  ],
+  "variant": "before",
+  "production_changed": false,
+  "only_measured_difference": "sprite_copy.s"
+}

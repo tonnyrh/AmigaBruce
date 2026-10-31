@@ -1,0 +1,61 @@
+{
+  "method": "Owned normal WinUAE; invincible debug start in room12; actual C64 glyph phase candidates; no source-state injection",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "elf": {
+    "path": "reference\\analysis\\render-coherence-2026-10-29\\before\\amiga\\out\\bruce_amiga.elf",
+    "sha256": "25acc260d13786bd250916104724d4aaa4b2bc87dadd752b9aeae47548b76852"
+  },
+  "samples": [
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8352
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 8352
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 3,
+      "mismatched_animation_pixels": 1856,
+      "checked_pixels": 8064
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 1408,
+      "checked_pixels": 8064
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 1408,
+      "checked_pixels": 8064
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 736,
+      "checked_pixels": 8352
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 768,
+      "checked_pixels": 8288
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 1136,
+      "checked_pixels": 8064
+    }
+  ],
+  "mixed_phase_samples": 6,
+  "max_pixel_mismatch": 1856
+}

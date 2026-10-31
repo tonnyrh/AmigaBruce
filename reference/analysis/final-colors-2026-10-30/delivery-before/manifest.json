@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "tools/verify_menu_publication.py",
+      "sha256": "903929757ae841a810f2322db19ba582265c2cb46423f9ff3affcb69cddda2eb"
+    },
+    {
+      "path": "tools/verify_render_coherence.py",
+      "sha256": "ef5b7050a3f837e22198e9641db14fd9ec10b8827b97281062b0b5b82fd3a13d"
+    },
+    {
+      "path": "tools/verify_source_world_delivery.py",
+      "sha256": "c6306d27332eeeb88bfc86e32f3177f22d3e18a939bbdb88a3073f363936f657"
+    },
+    {
+      "path": "tools/audit_contact_kernel_images.py",
+      "sha256": "d20cd2964673b363aa23a6c268ee25d8f0e71d3e05d51abd546c9d713d6c95a0"
+    }
+  ]
+}

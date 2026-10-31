@@ -1,0 +1,141 @@
+{
+  "status": "passed_equivalent_relocated_contact_primitives_in_separate_images",
+  "kernels": {
+    "bl_contact_rows8": {
+      "bytes": 202,
+      "sha256": "1c2702ac3c4ca9acb61f7f002eb094ee243295d2bf7b8eba68007534fe95d761"
+    },
+    "bl_contact_classes4": {
+      "bytes": 304,
+      "sha256": "e23c178a0353aea747ce68f72b28b386f733b05af1abafd009978e8ce43be6e2"
+    },
+    "bl_contact_align4": {
+      "bytes": 346,
+      "sha256": "d4641546418cb6199d5d2dcfa81edd279bc818312b934351c391d75a552a872a"
+    },
+    "bl_contact_pointers3": {
+      "bytes": 650,
+      "sha256": "b9a5f62197315ecc94163f5b2e58c4af016c352affc0d1556544004f0fb29f93"
+    },
+    "bl_contact_classify_full": {
+      "bytes": 154,
+      "sha256": "e85123600e1253c59c4e294cc46f3ede5a31839c9e7e63fdac01d18207ca2344"
+    },
+    "bl_contact_swap_lane": {
+      "bytes": 114,
+      "sha256": "d92a29d89f735ac4346185cdab9ff209f7b51319d22fca2713c97c5b63b07c69"
+    },
+    "bl_contact_clear72": {
+      "bytes": 24,
+      "sha256": "64d3a7b2713f98df83ccbc6ae6b322248bd4dfe67cbc88a42a881cb57280cd44"
+    },
+    "bl_contact_body": {
+      "bytes": 298,
+      "sha256": "ad6259b14ca5779d2a42f468ce3b04a4a1d5a81d8a4d8ec34a2bc943b0fb48b3"
+    }
+  },
+  "relocations": {
+    "bl_contact_rows8": [],
+    "bl_contact_classes4": [],
+    "bl_contact_align4": [],
+    "bl_contact_pointers3": [
+      [
+        204,
+        "bl_contact_swap_lane",
+        14
+      ],
+      [
+        350,
+        "bl_contact_swap_lane",
+        14
+      ],
+      [
+        504,
+        "bl_contact_swap_lane",
+        14
+      ]
+    ],
+    "bl_contact_classify_full": [
+      [
+        58,
+        "bl_contact_swap_lane",
+        14
+      ],
+      [
+        96,
+        "bl_contact_swap_lane",
+        14
+      ],
+      [
+        134,
+        "bl_contact_swap_lane",
+        14
+      ],
+      [
+        142,
+        "bl_contact_classes4",
+        0
+      ]
+    ],
+    "bl_contact_swap_lane": [],
+    "bl_contact_clear72": [],
+    "bl_contact_body": [
+      [
+        66,
+        "bl_contact_classify_full",
+        0
+      ],
+      [
+        136,
+        "bl_contact_swap_lane",
+        14
+      ],
+      [
+        182,
+        "bl_contact_swap_lane",
+        14
+      ],
+      [
+        236,
+        "bl_contact_swap_lane",
+        14
+      ]
+    ]
+  },
+  "builds": [
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/24ce92aab8cc-76d646994c62/bruce_test.elf",
+      "sha256": "cb8a5614641993c679ff6cb41c08852b7cc4574c54dcbb61afe476c6650af56c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-r01/bruce_test.elf",
+      "sha256": "cda9bc3e9e7a74a74fcaef26f6a7c395962e71d4406e6e7749232b5c955e19d4"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-copy-final-timing/bruce_test.elf",
+      "sha256": "86ea845101ca1c0f4302bb0d82c54eb87edd14c1b2b0b77310fc5bb443014386"
+    }
+  ],
+  "sources": [
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    },
+    {
+      "path": "tools/audit_contact_kernel_images.py",
+      "sha256": "3bc41b747428036d6fb244ca57e74f2ae4c7f433d185ce588c04f2c8223e69af"
+    }
+  ]
+}

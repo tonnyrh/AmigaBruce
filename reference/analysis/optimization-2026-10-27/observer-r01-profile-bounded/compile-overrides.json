@@ -1,0 +1,21 @@
+{
+  "source_main_sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185",
+  "overrides": [
+    {
+      "path": "reference/analysis/optimization-2026-10-27/observer-r01-profile-bounded/compiled-main.c",
+      "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/observer-r01-profile-bounded/compiled-build.ps1",
+      "sha256": "743917b927430a7c1ea5e8b56c466fcbead67baa14f0ed500bb790eecaff45c5"
+    }
+  ],
+  "production_changed": false,
+  "changes": [
+    "Only remove unused test framebuffer-capture allocation and matching allocation guard"
+  ],
+  "limits": [
+    "Diagnostic memory configuration differs from normal build",
+    "Cold initial paint is included; profile ranks work but does not establish steady-state acceptance"
+  ]
+}

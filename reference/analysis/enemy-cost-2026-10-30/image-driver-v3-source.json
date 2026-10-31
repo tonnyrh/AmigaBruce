@@ -1,0 +1,36 @@
+{
+  "status": "passed_native_image_driver_original_bytes",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "cases": 3328,
+  "alias_height_controls": 320,
+  "instructions": 3836708,
+  "all_ram_register_return": true,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v3/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v3/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v3/image_driver.h",
+      "sha256": "8d0d9d560f737104e9875f704de463bb3c3121b624cfbb4ff59448a4c3f31485"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v3-bridge.c",
+      "sha256": "7e0a2f9a654a1bf27527c11a970f84ffacacf1673a273db9c4aa36bec825fc42"
+    },
+    {
+      "path": "tools/verify_native_image_driver_v3.py",
+      "sha256": "331a242b5da94f24dc676cef4b829158f95d18c00bbb63a4c2c3464b76557219"
+    },
+    {
+      "path": "test-native-image-driver-v3.ps1",
+      "sha256": "65fc9421f8abd56a171295d305a2693361cfca3cd22b3a16a078777c0672b9a0"
+    }
+  ]
+}

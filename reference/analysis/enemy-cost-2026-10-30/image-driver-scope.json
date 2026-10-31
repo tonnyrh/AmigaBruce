@@ -1,0 +1,40 @@
+{
+  "production_changed": false,
+  "method": "Native source2584 driver. Original source stack/RAM stores and ordered copy primitive; preflight guards are read-only. Height<32 proves dead intermediate ADC flags; original fallback otherwise.",
+  "inputs": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver/image_driver.h",
+      "sha256": "7458c78e7e3ae08852883ac43c019c09e05e2dad046a40f2288a07d564b3d59b"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-bridge.c",
+      "sha256": "033e538955c879910abd5b4c06e639265be2d27a517061e491234c0d046916a4"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-build.ps1",
+      "sha256": "cea85afc7ca71c84a3185d96082246af8b832510ee2e5b111e407835ada57aad"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "method": "Diagnostic translation unit; unchanged actual PAL scheduler, fixed no-input source route; intervals begin/end at original ready boundary; source room jumps and bitmap preparation outside timed interval",
+  "source_main_sha256": "8784338a6bc92f5246831bd92c500ae371ed3aecd13f3dd90d1e08007a376a89",
+  "generated_sha256": "5cfa2b26d4a4528e2402c03bbb6d88bddfb22720b33810f22ed6de1a1ae1e92d",
+  "steps_per_room": 120,
+  "normal_main_edited": false,
+  "unmodified_generated_sha256": "c94c769dfc31dc9aad935ff074a18da207c13a428d21b77dca8583a7c37e2919",
+  "pre_heap_stats_sha256": "30ddc57e383dfc6a13e00947f3727794d05e31d69631de319a4a960f6b07999d",
+  "diagnostic_heap_stats": true,
+  "stats_record_bytes": 44,
+  "stats_allocation_bytes": 880,
+  "stats_net_bss_saved": 876,
+  "stats_allocation": "MEMF_CHIP|MEMF_CLEAR; freed in cleanup; actual memory type/address included in report",
+  "production_source_edited": false,
+  "unused_capture_allocation_omitted": true,
+  "limits": [
+    "Diagnostic Chip allocation counts against unchanged 49152-byte reserve",
+    "All source values remain 32-bit; no narrowed counters or assumed fixed outputs"
+  ]
+}

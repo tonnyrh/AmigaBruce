@@ -69,3 +69,39 @@ Takspissen i rom6 har svart kontaktklasse også etter at lanternen er tatt.
 [Adresser, faktisk kollisjonsgren og kontrollerte hoppforløp](CEILING_R06.md).
 Ingen ny geometri-/bevegelsesregel legges til. Naturlig spilling og generell
 rasterparitet står fortsatt under de åpne portene over.
+
+29. oktober: [tre radløkke-forsøk](CONTACT_SEGMENT_OPTIMIZATION.md) er målt og forkastet uten samlet gevinst. Motor og tidligere validerte spillbygg er gjenopprettet; ingen nye manuelle spilltester kreves for disse forsøkene.
+
+Native spritekopiering er [kilde-/maskinverifisert](SPRITE_COPY_OPTIMIZATION.md), med23,14 % lavere kopieringskostnad i profilen. Totalmålingen og sanntidsporten er ikke forbedret til godkjent nivå; A500-TIME og lydservice står fortsatt åpne.
+
+- OP3-R12: kontroller jevn trappefase i rom12 ved stillstand og klatring.
+- OP3-REDRAW: kontroller ny spillstart, død/gjenoppståing og rombytte uten blandede rombilder eller avkuttet øverste pikselrad. [Arbeid og kildegrunnlag](RENDER_COHERENCE.md).
+
+- OP1-R20-COLOR: ved neste naturlige spilling, kontroller blinkefeltet og slutt-timeren i rom20 med den nye EXE/ADF-en.232 kildefargelagringer per steg beholdes. R10-tid og R01-lydservice forblir under A500-TIME; ikke omtal hele spillet som13 % raskere. [Målinger og avgrensninger](FINAL_COLOR_OPTIMIZATION.md).
+
+
+30. oktober: [bufferpublisering](BUFFER_PUBLICATION.md) og samlet
+trappefase er rettet i ny EXE/ADF.12+12 kontrollerte rom12-/døds-/rombyttebilder
+har null fase- eller statiske grafikkavvik; menyens78 bilder består også.
+Ny naturlig prøve av OP3-R12 og OP3-REDRAW står åpen. Samlet A500-tempo er
+fortsatt under målet; ingen full sanntids- eller originalparitet hevdes.
+
+- R06/LOAD-DISPLAY: Start ny EXE/ADF og mist liv i rom6, deretter rombytte
+  og død i rom12. Kort blank skjerm under innlasting er forventet som i
+  kildekodens DEN-av-gren. Mursteinsmønster eller delvis tegnet rom skal ikke
+  vises under innlastingen. Ikke gjenopprett 30.10.2026.uss for å teste ny kode.
+  Se [kildespor og native-kontroll](LOADER_DISPLAY_BLANK.md).
+
+- RUN-UNEVEN: Brukerens konkrete rom/avsats og retning må stedfestes.
+  [Ny kildekontroll](FLOOR_WALK_AUDIT.md) finner ingen hovedløkkeavvik i
+  2271 kontrollerte innganger. Kilden har korte fall-/landingsstopp.
+  Dagens normalbygg måles til 3,338 felt/steg i en stasjonær rom12-scene;
+  tre-feltsmålet står åpent. Skill flere kontaktstopp fra lengre pauser i tid.
+  Ingen gulvregel er endret av denne undersøkelsen.
+
+- R13-SPAWN: Stedfest Kage/Yamo og ankomst kontra retur etter nederlag ved
+  første avsats. [Rom13-kontrollen](R13_SPAWN_RATE.md) finner samme
+  grunnverdier 4/32 i C64 og porten; Kage kan utsettes når Yamo er aktiv.
+  3697 RAM-/registersammenligninger og 60 feltkontroller består.
+  Naturlig kampforløp, RAM-leserfordeling og faktisk trykk på brukerens
+  konkrete rute står åpent; tellere og spillregler er ikke endret.

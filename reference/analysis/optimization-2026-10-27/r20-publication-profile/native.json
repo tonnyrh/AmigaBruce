@@ -1,0 +1,721 @@
+{
+  "method": "Native PAL raster-line timer, nested samples; quantiles are histogram intervals",
+  "instrumentation_32_empty_pairs_lines": 138,
+  "profile": [
+    {
+      "name": "loop",
+      "calls": 120,
+      "inclusive_lines": 185201,
+      "exclusive_lines": 9915,
+      "average_inclusive": 1543.342,
+      "average_exclusive": 82.625,
+      "max_inclusive_lines": 37561,
+      "max_context": {
+        "room": 20,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        64,
+        79
+      ],
+      "p95_self_lines": [
+        96,
+        111
+      ],
+      "p99_self_lines": [
+        96,
+        111
+      ]
+    },
+    {
+      "name": "field",
+      "calls": 613,
+      "inclusive_lines": 20111,
+      "exclusive_lines": 9765,
+      "average_inclusive": 32.808,
+      "average_exclusive": 15.93,
+      "max_inclusive_lines": 163,
+      "max_context": {
+        "room": 20,
+        "states": [
+          5,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        14,
+        14
+      ],
+      "p95_self_lines": [
+        16,
+        31
+      ],
+      "p99_self_lines": [
+        16,
+        31
+      ]
+    },
+    {
+      "name": "vic",
+      "calls": 613,
+      "inclusive_lines": 10346,
+      "exclusive_lines": 10346,
+      "average_inclusive": 16.878,
+      "average_exclusive": 16.878,
+      "max_inclusive_lines": 140,
+      "max_context": {
+        "room": 20,
+        "states": [
+          5,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        8,
+        8
+      ],
+      "p95_self_lines": [
+        32,
+        47
+      ],
+      "p99_self_lines": [
+        128,
+        143
+      ]
+    },
+    {
+      "name": "game",
+      "calls": 119,
+      "inclusive_lines": 110108,
+      "exclusive_lines": 13543,
+      "average_inclusive": 925.277,
+      "average_exclusive": 113.807,
+      "max_inclusive_lines": 12762,
+      "max_context": {
+        "room": 20,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        80,
+        95
+      ],
+      "p95_self_lines": [
+        112,
+        127
+      ],
+      "p99_self_lines": [
+        112,
+        127
+      ]
+    },
+    {
+      "name": "room",
+      "calls": 122,
+      "inclusive_lines": 32493,
+      "exclusive_lines": 32493,
+      "average_inclusive": 266.336,
+      "average_exclusive": 266.336,
+      "max_inclusive_lines": 536,
+      "max_context": {
+        "room": 20,
+        "states": [
+          5,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        128,
+        143
+      ],
+      "p95_self_lines": [
+        256,
+        511
+      ],
+      "p99_self_lines": [
+        512,
+        767
+      ]
+    },
+    {
+      "name": "contact",
+      "calls": 120,
+      "inclusive_lines": 31972,
+      "exclusive_lines": 10067,
+      "average_inclusive": 266.433,
+      "average_exclusive": 83.892,
+      "max_inclusive_lines": 437,
+      "max_context": {
+        "room": 20,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        80,
+        95
+      ],
+      "p95_self_lines": [
+        96,
+        111
+      ],
+      "p99_self_lines": [
+        96,
+        111
+      ]
+    },
+    {
+      "name": "objects",
+      "calls": 120,
+      "inclusive_lines": 4275,
+      "exclusive_lines": 4275,
+      "average_inclusive": 35.625,
+      "average_exclusive": 35.625,
+      "max_inclusive_lines": 36,
+      "max_context": {
+        "room": 20,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        32,
+        47
+      ],
+      "p95_self_lines": [
+        32,
+        47
+      ],
+      "p99_self_lines": [
+        32,
+        47
+      ]
+    },
+    {
+      "name": "combat",
+      "calls": 0,
+      "inclusive_lines": 0,
+      "exclusive_lines": 0,
+      "average_inclusive": null,
+      "average_exclusive": null,
+      "max_inclusive_lines": 0,
+      "max_context": {
+        "room": 1,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "actors",
+      "calls": 120,
+      "inclusive_lines": 14018,
+      "exclusive_lines": 13502,
+      "average_inclusive": 116.817,
+      "average_exclusive": 112.517,
+      "max_inclusive_lines": 9753,
+      "max_context": {
+        "room": 20,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        32,
+        47
+      ],
+      "p95_self_lines": [
+        48,
+        63
+      ],
+      "p99_self_lines": [
+        48,
+        63
+      ]
+    },
+    {
+      "name": "sprites",
+      "calls": 120,
+      "inclusive_lines": 14323,
+      "exclusive_lines": 6654,
+      "average_inclusive": 119.358,
+      "average_exclusive": 55.45,
+      "max_inclusive_lines": 147,
+      "max_context": {
+        "room": 20,
+        "states": [
+          5,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        48,
+        63
+      ],
+      "p95_self_lines": [
+        48,
+        63
+      ],
+      "p99_self_lines": [
+        48,
+        63
+      ]
+    },
+    {
+      "name": "align",
+      "calls": 120,
+      "inclusive_lines": 1533,
+      "exclusive_lines": 1533,
+      "average_inclusive": 12.775,
+      "average_exclusive": 12.775,
+      "max_inclusive_lines": 15,
+      "max_context": {
+        "room": 20,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        14,
+        14
+      ],
+      "p95_self_lines": [
+        15,
+        15
+      ],
+      "p99_self_lines": [
+        15,
+        15
+      ]
+    },
+    {
+      "name": "rows",
+      "calls": 432,
+      "inclusive_lines": 8195,
+      "exclusive_lines": 6936,
+      "average_inclusive": 18.97,
+      "average_exclusive": 16.056,
+      "max_inclusive_lines": 87,
+      "max_context": {
+        "room": 20,
+        "states": [
+          24,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        14,
+        14
+      ],
+      "p95_self_lines": [
+        16,
+        31
+      ],
+      "p99_self_lines": [
+        16,
+        31
+      ]
+    },
+    {
+      "name": "sprite_copy",
+      "calls": 240,
+      "inclusive_lines": 2563,
+      "exclusive_lines": 2563,
+      "average_inclusive": 10.679,
+      "average_exclusive": 10.679,
+      "max_inclusive_lines": 12,
+      "max_context": {
+        "room": 20,
+        "states": [
+          24,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        10,
+        10
+      ],
+      "p95_self_lines": [
+        12,
+        12
+      ],
+      "p99_self_lines": [
+        12,
+        12
+      ]
+    },
+    {
+      "name": "audio_source",
+      "calls": 453,
+      "inclusive_lines": 3753,
+      "exclusive_lines": 3753,
+      "average_inclusive": 8.285,
+      "average_exclusive": 8.285,
+      "max_inclusive_lines": 15,
+      "max_context": {
+        "room": 20,
+        "states": [
+          5,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        8,
+        8
+      ],
+      "p95_self_lines": [
+        9,
+        9
+      ],
+      "p99_self_lines": [
+        14,
+        14
+      ]
+    },
+    {
+      "name": "audio_render",
+      "calls": 453,
+      "inclusive_lines": 2449,
+      "exclusive_lines": 2449,
+      "average_inclusive": 5.406,
+      "average_exclusive": 5.406,
+      "max_inclusive_lines": 10,
+      "max_context": {
+        "room": 20,
+        "states": [
+          5,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        5,
+        5
+      ],
+      "p95_self_lines": [
+        6,
+        6
+      ],
+      "p99_self_lines": [
+        10,
+        10
+      ]
+    },
+    {
+      "name": "audio_dma",
+      "calls": 453,
+      "inclusive_lines": 2065,
+      "exclusive_lines": 2065,
+      "average_inclusive": 4.558,
+      "average_exclusive": 4.558,
+      "max_inclusive_lines": 27,
+      "max_context": {
+        "room": 20,
+        "states": [
+          5,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        5,
+        5
+      ],
+      "p95_self_lines": [
+        5,
+        5
+      ],
+      "p99_self_lines": [
+        5,
+        5
+      ]
+    },
+    {
+      "name": "audio_publish",
+      "calls": 453,
+      "inclusive_lines": 6550,
+      "exclusive_lines": 6550,
+      "average_inclusive": 14.459,
+      "average_exclusive": 14.459,
+      "max_inclusive_lines": 15,
+      "max_context": {
+        "room": 20,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        14,
+        14
+      ],
+      "p95_self_lines": [
+        15,
+        15
+      ],
+      "p99_self_lines": [
+        15,
+        15
+      ]
+    },
+    {
+      "name": "view",
+      "calls": 119,
+      "inclusive_lines": 5772,
+      "exclusive_lines": 5772,
+      "average_inclusive": 48.504,
+      "average_exclusive": 48.504,
+      "max_inclusive_lines": 49,
+      "max_context": {
+        "room": 20,
+        "states": [
+          24,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        48,
+        63
+      ],
+      "p95_self_lines": [
+        48,
+        63
+      ],
+      "p99_self_lines": [
+        48,
+        63
+      ]
+    },
+    {
+      "name": "background",
+      "calls": 78,
+      "inclusive_lines": 2111,
+      "exclusive_lines": 2111,
+      "average_inclusive": 27.064,
+      "average_exclusive": 27.064,
+      "max_inclusive_lines": 29,
+      "max_context": {
+        "room": 20,
+        "states": [
+          5,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        16,
+        31
+      ],
+      "p95_self_lines": [
+        16,
+        31
+      ],
+      "p99_self_lines": [
+        16,
+        31
+      ]
+    },
+    {
+      "name": "restore",
+      "calls": 119,
+      "inclusive_lines": 13760,
+      "exclusive_lines": 11695,
+      "average_inclusive": 115.63,
+      "average_exclusive": 98.277,
+      "max_inclusive_lines": 442,
+      "max_context": {
+        "room": 20,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        80,
+        95
+      ],
+      "p95_self_lines": [
+        96,
+        111
+      ],
+      "p99_self_lines": [
+        256,
+        511
+      ]
+    },
+    {
+      "name": "draw",
+      "calls": 119,
+      "inclusive_lines": 6325,
+      "exclusive_lines": 5906,
+      "average_inclusive": 53.151,
+      "average_exclusive": 49.63,
+      "max_inclusive_lines": 468,
+      "max_context": {
+        "room": 20,
+        "states": [
+          24,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        32,
+        47
+      ],
+      "p95_self_lines": [
+        48,
+        63
+      ],
+      "p99_self_lines": [
+        256,
+        511
+      ]
+    },
+    {
+      "name": "load",
+      "calls": 1,
+      "inclusive_lines": 23859,
+      "exclusive_lines": 23859,
+      "average_inclusive": 23859.0,
+      "average_exclusive": 23859.0,
+      "max_inclusive_lines": 23859,
+      "max_context": {
+        "room": 20,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        2304,
+        null
+      ],
+      "p95_self_lines": [
+        2304,
+        null
+      ],
+      "p99_self_lines": [
+        2304,
+        null
+      ]
+    },
+    {
+      "name": "wait",
+      "calls": 119,
+      "inclusive_lines": 17238,
+      "exclusive_lines": 16687,
+      "average_inclusive": 144.857,
+      "average_exclusive": 140.227,
+      "max_inclusive_lines": 316,
+      "max_context": {
+        "room": 20,
+        "states": [
+          14,
+          0,
+          0
+        ]
+      },
+      "p50_self_lines": [
+        128,
+        143
+      ],
+      "p95_self_lines": [
+        256,
+        511
+      ],
+      "p99_self_lines": [
+        256,
+        511
+      ]
+    },
+    {
+      "name": "contact_lanes",
+      "calls": 0,
+      "inclusive_lines": 0,
+      "exclusive_lines": 0,
+      "average_inclusive": null,
+      "average_exclusive": null,
+      "max_inclusive_lines": 0,
+      "max_context": {
+        "room": 1,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "contact_classes",
+      "calls": 0,
+      "inclusive_lines": 0,
+      "exclusive_lines": 0,
+      "average_inclusive": null,
+      "average_exclusive": null,
+      "max_inclusive_lines": 0,
+      "max_context": {
+        "room": 1,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "contact_swap",
+      "calls": 0,
+      "inclusive_lines": 0,
+      "exclusive_lines": 0,
+      "average_inclusive": null,
+      "average_exclusive": null,
+      "max_inclusive_lines": 0,
+      "max_context": {
+        "room": 1,
+        "states": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "held_changed": 0,
+  "held_unchanged": 0,
+  "stage_loop": 3,
+  "stage_valid": 63,
+  "runtime_max_gap": 6,
+  "audio_missed": 85,
+  "source_steps": 120,
+  "realtime_accepted": false,
+  "natural_playthrough": false
+}

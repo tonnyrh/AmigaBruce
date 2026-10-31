@@ -1,0 +1,163 @@
+{
+  "status": "both_audio_lookup_candidates_rejected",
+  "production_sources_and_normal_binary_unchanged_at_decision": true,
+  "production_exe_sha256": "9f4b2f7de024230282d8217ac7756ee5853db73a4209b4af31b5acade7ede0f8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "baseline_identity": {
+    "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour/identity.json",
+    "sha256": "eb013cf2df5b78d19ddde5cc46fef9c983e31aadca9d2b18fb5c9dbb097be4af"
+  },
+  "experiments": [
+    {
+      "name": "binary_search",
+      "decision": "rejected_increased_missed_audio_ticks",
+      "before": {
+        "lines": 2837562,
+        "fields": 9062,
+        "missed": 148
+      },
+      "after": {
+        "lines": 2836972,
+        "fields": 9062,
+        "missed": 167
+      },
+      "room12_before": {
+        "lines": 130734,
+        "animation_bytes": 52224,
+        "slow_largest": 984,
+        "fields": 418,
+        "steps": 120,
+        "drawn": 117,
+        "room": 12,
+        "held": 114,
+        "preparation_lines": 60951,
+        "chip_largest": 77976,
+        "missed": 0
+      },
+      "room12_after": {
+        "held": 114,
+        "fields": 414,
+        "drawn": 118,
+        "lines": 129780,
+        "steps": 120,
+        "missed": 0,
+        "animation_bytes": 52224,
+        "room": 12,
+        "preparation_lines": 60948,
+        "chip_largest": 69016,
+        "slow_largest": 928
+      },
+      "room20_before": {
+        "lines": 188320,
+        "animation_bytes": 18432,
+        "slow_largest": 984,
+        "fields": 600,
+        "steps": 120,
+        "drawn": 115,
+        "room": 20,
+        "held": 4,
+        "preparation_lines": 49852,
+        "chip_largest": 77976,
+        "missed": 118
+      },
+      "room20_after": {
+        "held": 4,
+        "fields": 615,
+        "drawn": 116,
+        "lines": 192389,
+        "steps": 120,
+        "missed": 129,
+        "animation_bytes": 18432,
+        "room": 20,
+        "preparation_lines": 49853,
+        "chip_largest": 69016,
+        "slow_largest": 928
+      },
+      "native_identity": {
+        "path": "reference/analysis/optimization-2026-10-27/audio-lookup-tour/identity.json",
+        "sha256": "4a5a096e5ea9fc0449dfc4e488c57c82a2933aafc27285fe35a43f87af5bf7af"
+      },
+      "host_report": {
+        "path": "reference/analysis/audio-lookup-2026-10-30/host.json",
+        "sha256": "0ce1a7c4f457c3da382541bb22469c0f6b6108e2e448ac24934b7e1f63fdd52f"
+      }
+    },
+    {
+      "name": "validated_last_wave",
+      "decision": "rejected_increased_missed_audio_ticks",
+      "before": {
+        "lines": 2837562,
+        "fields": 9062,
+        "missed": 148
+      },
+      "after": {
+        "lines": 2808930,
+        "fields": 8970,
+        "missed": 176
+      },
+      "room12_before": {
+        "lines": 130734,
+        "animation_bytes": 52224,
+        "slow_largest": 984,
+        "fields": 418,
+        "steps": 120,
+        "drawn": 117,
+        "room": 12,
+        "held": 114,
+        "preparation_lines": 60951,
+        "chip_largest": 77976,
+        "missed": 0
+      },
+      "room12_after": {
+        "preparation_lines": 60952,
+        "held": 116,
+        "drawn": 119,
+        "missed": 0,
+        "room": 12,
+        "animation_bytes": 52224,
+        "steps": 120,
+        "chip_largest": 69016,
+        "lines": 131041,
+        "fields": 419,
+        "slow_largest": 928
+      },
+      "room20_before": {
+        "lines": 188320,
+        "animation_bytes": 18432,
+        "slow_largest": 984,
+        "fields": 600,
+        "steps": 120,
+        "drawn": 115,
+        "room": 20,
+        "held": 4,
+        "preparation_lines": 49852,
+        "chip_largest": 77976,
+        "missed": 118
+      },
+      "room20_after": {
+        "preparation_lines": 49854,
+        "held": 2,
+        "drawn": 118,
+        "missed": 128,
+        "room": 20,
+        "animation_bytes": 18432,
+        "steps": 120,
+        "chip_largest": 69016,
+        "lines": 189265,
+        "fields": 605,
+        "slow_largest": 928
+      },
+      "native_identity": {
+        "path": "reference/analysis/optimization-2026-10-27/audio-cache-tour/identity.json",
+        "sha256": "292f038380538bdbc986efb7164729159eb4d584fca836fef64f6b6919c1bcf8"
+      },
+      "host_report": {
+        "path": "reference/analysis/audio-lookup-2026-10-30/host-candidate2.json",
+        "sha256": "7c9612987f2ddabf2897e6018fd9652d117728363ea913350edfdb80f0f3c5e2"
+      }
+    }
+  ],
+  "next_priority": "R20 room work and bounded source IRQ/input dependency analysis, not the waveform lookup"
+}

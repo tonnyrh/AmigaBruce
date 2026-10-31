@@ -1,0 +1,5 @@
+{
+  "status": "rejected_host_wrap_regression",
+  "case": "pointer=$FFFC, raw byte4 expected219 actual0 under MSVC /O2",
+  "profile": "vic-cache-compact-profile"
+}

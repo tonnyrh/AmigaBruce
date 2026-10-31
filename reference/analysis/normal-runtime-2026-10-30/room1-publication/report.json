@@ -1,0 +1,72 @@
+{
+  "status": "measured_normal_runtime_gates_not_met",
+  "method": "Unmodified normal EXE, boundary-only paused scalar counter reads. No IPC/profile/framebuffer capture/source writes during interval. Stationary debug invincible/infinite-lives session.",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "original_irq_phase_verified": false,
+  "physical_a500": false,
+  "pid": 32544,
+  "room": 1,
+  "wall_seconds": 145.60999999998603,
+  "normal_exe_sha256": "9f4b2f7de024230282d8217ac7756ee5853db73a4209b4af31b5acade7ede0f8",
+  "normal_elf_sha256": "3ad2c2de6704cdec5a28206915177d87b172038a320de5da61bf1eec1d819e1c",
+  "before": {
+    "source_clock_elapsed": 1233,
+    "source_clock_missed": 41,
+    "source_audio_fields": 654,
+    "source_clock_paused_fields": 140,
+    "source_music_fields": 540,
+    "game_field_last": 2011,
+    "actor_logic_steps": 215,
+    "actor_loading_epoch": 1,
+    "source_fault": 0,
+    "source_dma_faults": 0,
+    "room": 1,
+    "active_actors": [
+      1,
+      0,
+      65
+    ],
+    "source_age": 655,
+    "menu_or_delay": [
+      0,
+      0
+    ]
+  },
+  "after": {
+    "source_clock_elapsed": 8110,
+    "source_clock_missed": 276,
+    "source_audio_fields": 7296,
+    "source_clock_paused_fields": 140,
+    "source_music_fields": 540,
+    "game_field_last": 8888,
+    "actor_logic_steps": 1862,
+    "actor_loading_epoch": 1,
+    "source_fault": 0,
+    "source_dma_faults": 0,
+    "room": 1,
+    "active_actors": [
+      1,
+      129,
+      65
+    ],
+    "source_age": 7532,
+    "menu_or_delay": [
+      0,
+      0
+    ]
+  },
+  "measured_fields": 6877,
+  "source_steps": 1647,
+  "fields_per_step": 4.175470552519733,
+  "missed_audio_ticks": 235,
+  "gate_no_missed_audio_ticks": false,
+  "full_realtime_accepted": false,
+  "gate_three_field_cadence": false,
+  "requested_unobserved_wall_seconds": 140,
+  "wall_seconds_includes_post_interval_boundary_reads": true,
+  "original_controller": {
+    "path": "reference/analysis/normal-runtime-2026-10-30/controller-original.py",
+    "sha256": "9082e0acaa551ff33f25e46bc816b6fe8cff991d28d515eafb06863c539fb527"
+  }
+}

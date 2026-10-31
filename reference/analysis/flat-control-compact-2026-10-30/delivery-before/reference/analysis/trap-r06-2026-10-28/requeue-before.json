@@ -1,0 +1,6 @@
+{
+  "status": "reproduced_painter_failure_before_fix",
+  "checkpoint": "b003d04_painter_queue",
+  "failure": "tests/source_paint_bridge.c line21: consumed cell changed again, but dirty queue was discarded at completion",
+  "source_logic_changed": false
+}

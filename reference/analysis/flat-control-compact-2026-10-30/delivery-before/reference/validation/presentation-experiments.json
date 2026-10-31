@@ -1,0 +1,72 @@
+{
+  "status": "rejected_audio_regression_production_restored",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "source_steps": 360,
+  "runs": [
+    {
+      "label": "present-r01-before-scoped",
+      "pal_fields": 1429,
+      "missed_audio_ticks": 25,
+      "presentations": 360,
+      "deferrals": 100,
+      "blank_reuse_opportunities": 2
+    },
+    {
+      "label": "present-r01-retry-scoped",
+      "pal_fields": 1415,
+      "missed_audio_ticks": 44,
+      "presentations": 422,
+      "deferrals": 101,
+      "blank_reuse_opportunities": 6
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/present-2026-10-29/baseline/manifest.json",
+      "sha256": "9348219e6631157568b33e21889a42e5fc2a4765e31feb3f8534f8df006ae3c3"
+    },
+    {
+      "path": "reference/analysis/present-2026-10-29/probe-before/manifest.json",
+      "sha256": "e89b833adb8577af963ce0ce8c3b7913c018e9d8c98820a20d3d6140b1148459"
+    },
+    {
+      "path": "reference/analysis/present-2026-10-29/rejected-retry/manifest.json",
+      "sha256": "524eaf77096c7213ab49efb3b5b870e61951bf483a22067816168b415c680f42"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/present-r01-before-scoped/identity.json",
+      "sha256": "c27568bf9dedb7cec2638793e9b286251ed644eab962499050fd0cb1567fdabb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/present-r01-before-scoped/native.txt",
+      "sha256": "8761497714c4cf28960e2579adf67502d6a7277633a2399775e8bdb397ecfb54"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/present-r01-before-scoped/native.json",
+      "sha256": "11edfd0bde24ea51a6cfe4d8d941f87a0a5b76f1cd517bf791965e67db2159e3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/present-r01-retry-scoped/identity.json",
+      "sha256": "50b4c2d1e0e09798d8c98902026116dc0e55a164b6ebc238fe6809f1b2ae80a9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/present-r01-retry-scoped/native.txt",
+      "sha256": "1a03df6dda9da18c2f8f89de97b3b0a7b7a62ad6770e63721b34393b34d77467"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/present-r01-retry-scoped/native.json",
+      "sha256": "f9e1c50cbbbeb6419477e6bf6ed353b83a0b9fc8b6015b0307fa91e0fe37413a"
+    },
+    {
+      "path": "tools/verify_presentation_experiments.py",
+      "sha256": "83498c3ccf50823216e1266c6b7676988dd71f14198a4b865135d640db201b2e"
+    },
+    {
+      "path": "docs/PRESENTATION_EXPERIMENTS.md",
+      "sha256": "77f1550bd5949412e66e6b3b173b541cc260613537b4d67c31c7b03eba3105b4"
+    }
+  ]
+}

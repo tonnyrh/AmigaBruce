@@ -1,0 +1,29 @@
+{
+  "status": "rejected_wrong_hunk_entry_cold_function_at_zero",
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "a79bd6feb5c194b7876e0c7783ea029bb9d7690d40a9b55646b380e90b9326f6"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "d18d7179a2feb809211219ef84ad5436fc5734b62b6e4cca8d0db0e59a1ad085"
+    },
+    {
+      "path": "amiga/contact_run.s",
+      "sha256": "a69564740f76fec840bae64131b93c0588c0f9bb3343a6f4abddc2df8364c813"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "5f0c8091a41ce3e36698e48bb8e7c9985554f2050b5dc782053ff08b92128207"
+    },
+    {
+      "path": "test-source-performance.ps1",
+      "sha256": "588cd94a25d3dfc37441b8b43346e536b9e70aeaa16149cc4b573c17baa783d7"
+    }
+  ],
+  "main_address": 794,
+  "cold_function_address": 0,
+  "measured_frames": 0,
+  "measurements_accepted": false
+}

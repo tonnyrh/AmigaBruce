@@ -7,6 +7,7 @@ from pathlib import Path
 import hashlib,json,sys
 from build_c64_rooms import translate,array,word
 from build_fighter_dma import pack,unpack
+from native_actor_continuations import compact_actor_calls
 ROOT=Path(__file__).resolve().parents[1]
 SHA='092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8'
 def main():
@@ -17,6 +18,8 @@ def main():
         0x15b8,0x1703,0x3175,0x331c,0x0f71,0x52a4]
     roots += [word(b,t+2*r)+1 for t in (0x4e9c,0x4ec4) for r in range(20)]
     code,meta=translate(b,roots,actors=True)
+    code,native_calls=compact_actor_calls(code,b)
+    meta['native_continuations']=native_calls
     out=ROOT/'core/c64_actor_programs.h';out.write_text(code,encoding='utf-8')
     packed=pack(b);assert bytes(unpack(packed))==b and len(packed)<65536
     data=[array('actor_seed_packed',packed),

@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "52e3dd9e0ee20e9a7b2544d01932e0ea31bd085c2ffd8aac6066847b944d226b"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "b0f5b1a6d6fc2c7197776a011ad314ecc570b47b4132f36016178df8564e69cf"
+    },
+    {
+      "path": "test-source-performance.ps1",
+      "sha256": "1e2d4f1cc1b2160175205f4446d6e0a969a990c5cf0874ce35a3120a78bbea40"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "5a09053558b66d8c453ad8c58a058fb44752967bbd900f74a54593c3e6678cc3"
+    }
+  ]
+}

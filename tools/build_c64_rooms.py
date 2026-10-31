@@ -104,10 +104,14 @@ def translate(memory, roots, *, actors=False):
         if actors and pc==0x304b:lines.append('if(actor_invincible && !m[0x51]){sp+=2;actor_return=source_stack_return();return;}')
         if actors and pc==0x407d:lines.append('if(actor_invincible && !x){sp+=2;actor_return=source_stack_return();return;}')
         return_helper='actor_return=source_stack_return();' if actors else ''
+        if actors and pc==0x42a1:
+            assert (op,mode,size,o)==('sta','abx',3,0xdaac)
+            assert memory[0x42a1:0x42bc]==bytes.fromhex('9dacda9dd4da9dfcda9d24db9d4cdb9d74db9d9cdb9dc4dbca10e5')
+            lines.append('if(x<=0x1c){source_final_colors();goto L42bc;}')
         if pc==0x2cf1:lines.append('if(!d && m[0x64]<8){source_animation();'+return_helper+'return;}')
         if pc==0x104b:lines.append('if(!d){source_movers();'+return_helper+'return;}')
         if pc==0x2509:lines.append('source_sound();'+return_helper+'return;')
-        if actors and pc==0x26a0:lines.append('if(!d && m[0xe0+x]<32){PERF_BEGIN(BL_PERF_SPRITE_COPY);source_sprite_copy();PERF_END(BL_PERF_SPRITE_COPY);'+return_helper+'return;}')
+        if actors and pc==0x26a0:lines.append('if(!d && m[0xe0+x]<32){PERF_BEGIN(BL_PERF_SPRITE_COPY);if(source_sprite_copy()){PERF_END(BL_PERF_SPRITE_COPY);'+return_helper+'return;}PERF_END(BL_PERF_SPRITE_COPY);}')
         if actors and pc==0x2e39:lines.append('if(source_object_driver()){'+return_helper+'}return;')
         if actors and pc==0x2e6e:lines.append('source_object_row();return;')
         if actors and pc==0x55ab:lines.append('source_contact_clear();'+return_helper+'return;')

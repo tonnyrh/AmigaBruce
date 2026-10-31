@@ -1,0 +1,52 @@
+{
+  "status": "private_current_enemy_cost_profile",
+  "production_changed": false,
+  "masks": {
+    "0": "Bruce only",
+    "1": "Bruce and Yamo",
+    "2": "Bruce and Kage",
+    "3": "all three"
+  },
+  "source_actors": {
+    "1": "Yamo",
+    "2": "Kage"
+  },
+  "method": "Identical source-step target; source AI unchanged for retained actors. Exclusion uses existing diagnostic flag/D015 gates, not a game rule. These profiles do not force actors stationary.",
+  "inputs": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "7e2ee65e342803dfd711a6fc0513ec080666aee82841b4a7b63073b1e6ef0f99"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "533c39c8475143b38ce63da1f57a6bd5fc8536b928f794faffadd42d5a313c42"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/main.c",
+      "sha256": "18bbff5da0c3ba7120abaf35b797173b171b4ec2f7cf7880308d465a91edc103"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/build.ps1",
+      "sha256": "ba1c6d05901dc2d27f43ed2dfbec92e6a10c1c14a8026b7e3d229baae31e76a8"
+    }
+  ],
+  "limits": [
+    "Profiler overhead changes timing",
+    "Fixed source-step count does not equate to a natural playthrough",
+    "Static actor/field work requires a separate controlled probe"
+  ]
+}

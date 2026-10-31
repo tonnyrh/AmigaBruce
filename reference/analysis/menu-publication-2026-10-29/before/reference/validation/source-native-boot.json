@@ -1,0 +1,211 @@
+{
+  "status": "passed_owned_cli_adf_smoke",
+  "binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "16159f9571ac93125434de2958cbaf1cfd9255ecea24a8a55d4fc34d1fa50013"
+  },
+  "adf": {
+    "path": "amiga/out/bruce_amiga.adf",
+    "sha256": "6e60ecdda29467d9fc1c4f3440dd92a896ad8830da24687a515d945371ab518c"
+  },
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-menu.json",
+      "sha256": "d6d5b8eeeddc7302c64b951f23c154a747093b8fec9ca27f5d8f53a47af82b66"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-menu.png",
+      "sha256": "2c8656e6a1bae54efa5586b47d16aada856a3248621ada1978f38daf54f39002"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-options.json",
+      "sha256": "896b133dfe0a1963c42be37b904ddc62d06f1029fa7f25e9c2e08ec159b88497"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-options.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-options.png",
+      "sha256": "76a666ce3a65e2dbf70db6854ffd24d6ceb72d1e2dbbc6b4b87df2a544994e13"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-cli.json",
+      "sha256": "6bbea6d6c197dc87dbd4af94f4ec167d6bbc92015f32526ced714ffd0c4c59eb"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-cli.bpl",
+      "sha256": "ba6c6221b48cacc8284d978772c07aead321ef3c495116bfb5b708e1bfd18233"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-cli.png",
+      "sha256": "ddd1e3c8736e717ec1a2f92b6b16f9079d2561c4dd0ab643ef6db08ac64cdf04"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room2.json",
+      "sha256": "56493201fe3ea4314a9b44e1c2e7180aaeaf79cf44a278e327bbcdc756f1e641"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room2.bpl",
+      "sha256": "ea7295ae6854ad30ce158941472d103151d930f0c47b4f118245fafaeb2b6dc9"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-room2.png",
+      "sha256": "ed07d75f175afe298452c922b542144ed022e81aca930db1fc81a729fae323c3"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room3.json",
+      "sha256": "6be3641d75a27793c4542142de78f881d555fd73e570f6d8a1a4912319f265ce"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room3.bpl",
+      "sha256": "8d28b82bcc5a5ebbcbe4eb3347be414c413264c8d0a8f175de79a367cace27c2"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-room3.png",
+      "sha256": "0f2cfdb982afb78f8f6e5764f98a52990bef815b103072619b90e308236fef0d"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room4.json",
+      "sha256": "4814436913e96c0b5626df089940bc555e1b3f24353006ef360e660e1afe1fe4"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room4.bpl",
+      "sha256": "e39416fed2bb6bf12bdced4c0f99f295f3a2d914b5b3ea20908a5be6ae432506"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-room4.png",
+      "sha256": "c91781414c49dfa5433764b9433927ba1019cd661ff45cf5daab28ae14ce8838"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room5.json",
+      "sha256": "1d5a3731c839629bc214b7ba883210161d32378592f58f4f5bcca33ccb668576"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room5.bpl",
+      "sha256": "84132daf288b6d5100faddf62fe0af784d3b4be57253d8aa0d3cfe68c9f15c1c"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-room5.png",
+      "sha256": "e9448c906973d6d333bc9785a5a4486eb8d89f2aaec42fb85773e383c872520f"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room6.json",
+      "sha256": "790c79fdd96229606821973aeddf17076a4fbf883d1059131b394e181bdd55f8"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-room6.bpl",
+      "sha256": "ab5770e29e333cc4de007c7f37afca79a85de2c9e72d1fa4b11e70aad141f442"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-room6.png",
+      "sha256": "e6efc7beda78cbf99471671990c40cf8609d9e628f97fa5b4a812fb62adc368f"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-adf-menu.json",
+      "sha256": "4bae7c90ff4022a5ac077d412fedeec36dc2e4bb60efdc103388579af848bc65"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-adf-menu.bpl",
+      "sha256": "e691bcf13ddf9666f26647f0e6af91c88c8272d489c3ffef448f54b2df047f62"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-adf-menu.png",
+      "sha256": "ce2e0658fad66e6882f706fcc3be6ed125534b87ded4ef6350c3f94094ea0d8b"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-adf-options.json",
+      "sha256": "2ef6aa52a9a80efc4a96a9dc8532d55449e881893f7a47d54940f1329a84f602"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-adf-options.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-adf-options.png",
+      "sha256": "76a666ce3a65e2dbf70db6854ffd24d6ceb72d1e2dbbc6b4b87df2a544994e13"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-adf.json",
+      "sha256": "3be454f3288a52d84aeed165b3188a927cf515e6b219435912fc22bc693d58d2"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-final-adf.bpl",
+      "sha256": "71c373fa86348460498cac1f977f15ac6a9644c5a128456bf177f4212a812ddf"
+    },
+    {
+      "path": "docs/images/session-vic-cache-final-adf.png",
+      "sha256": "44458874c8e3ee4bd564b4de654b48eb95d0bcda8133d0333e52ba6b84007b85"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-final-early-clock.json",
+      "sha256": "7db93dfa24ff0931ce870f63e5b214c0d8aee4eff0b37e2e033e0d4d706cbd63"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-final-late-clock.json",
+      "sha256": "ecded673b28845f1591ec605eca028ba76e18ff09dcef5b2a1c039b48470e4e2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-final-adf-clock.json",
+      "sha256": "47dcd18fe01f44c05b8ce9a8bf722eea2e408f14295159da1b13e0eb84e1b884"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-adf-ready-menu.json",
+      "sha256": "f0fc74ead156692cde53f6d595fc7764298ae610cbaaf9660cad559d94e23823"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-adf-ready-menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "docs/images/session-vic-cache-adf-ready-menu.png",
+      "sha256": "2c8656e6a1bae54efa5586b47d16aada856a3248621ada1978f38daf54f39002"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-adf-ready-options.json",
+      "sha256": "64c9b59f637276af77ad756c177e0afaaa4a4ef261aafa3fd4a1d4d0cd8dbc22"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-adf-ready-options.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "docs/images/session-vic-cache-adf-ready-options.png",
+      "sha256": "76a666ce3a65e2dbf70db6854ffd24d6ceb72d1e2dbbc6b4b87df2a544994e13"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-adf-ready-game.json",
+      "sha256": "4a31b3cd8fd58d2c243421b2dd3716ea1a68bb06db3708a553a9b219a532a07e"
+    },
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/vic-cache-adf-ready-game.bpl",
+      "sha256": "a97d9005aca4e4448f7610acc0e4b013dcd789b3c71f6bc6e391f31a6c450951"
+    },
+    {
+      "path": "docs/images/session-vic-cache-adf-ready-game.png",
+      "sha256": "bcf590d10a55dc9a7365bc1d3a3d897e7d6dd653e42954eb3aa6df401978fe60"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-adf-ready-clock.json",
+      "sha256": "c1dbb086a09c2b985073dc6fe0ad1f01084aa061a23a6ad8cc52f518696f1ea3"
+    }
+  ],
+  "settings": {
+    "cpu_model": "68000",
+    "cpu_speed": "real",
+    "chipset": "ocs",
+    "chipmem_size": "1",
+    "bogomem_size": "2",
+    "fastmem_size": "0",
+    "ntsc": "false"
+  },
+  "method": "Owned current normal CLI and actual ADF boot; First timed ADF-menu sample was mid-paint and is retained as such. Separate ADF boot requires exact complete initial-menu pixel hash, title-music readiness and actual menu inspection before start keys; new game, rooms1..6, normal PAL clocks, source-active visibility lifecycle and R06 negative-phase trap pixels. Separate paused R12 death/transition pixel controls are recorded in render-coherence.json.",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "natural_playthrough": false,
+  "physical_a500": false,
+  "menu_readiness": "reference/analysis/session-walls-2026-10-25/vic-cache-adf-ready-menu.json"
+}

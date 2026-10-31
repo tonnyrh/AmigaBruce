@@ -1,0 +1,374 @@
+
+amiga/out/bruce_amiga.elf:     file format elf32-m68k
+
+
+Disassembly of section .text:
+
+000040f4 <menu_paint>:
+    40f4:	4fef ffdc      	lea -36(sp),sp
+    40f8:	48e7 3e34      	movem.l d2-d6/a2-a3/a5,-(sp)
+    40fc:	266f 0054      	movea.l 84(sp),a3
+    4100:	1a2f 004f      	move.b 79(sp),d5
+    4104:	1c2f 0053      	move.b 83(sp),d6
+    4108:	162b 0003      	move.b 3(a3),d3
+    410c:	0a03 0001      	eori.b #1,d3
+    4110:	0283 0000 00ff 	andi.l #255,d3
+    4116:	2803           	move.l d3,d4
+    4118:	d883           	add.l d3,d4
+    411a:	2004           	move.l d4,d0
+    411c:	d084           	add.l d4,d0
+    411e:	41f9 0004 4aa4 	lea 44aa4 <buffers>,a0
+			4120: R_68K_32	.bss+0xa98
+    4124:	2a70 0800      	movea.l (0,a0,d0.l),a5
+    4128:	1f7c 0046 0023 	move.b #70,35(sp)
+    412e:	1f7c 0033 0024 	move.b #51,36(sp)
+    4134:	1f7c 0020 0025 	move.b #32,37(sp)
+    413a:	1f7c 0050 0026 	move.b #80,38(sp)
+    4140:	1f7c 004c 0027 	move.b #76,39(sp)
+    4146:	1f7c 0041 0028 	move.b #65,40(sp)
+    414c:	1f7c 0059 0029 	move.b #89,41(sp)
+    4152:	1f7c 0045 002a 	move.b #69,42(sp)
+    4158:	1f7c 0052 002b 	move.b #82,43(sp)
+    415e:	1f7c 0053 002c 	move.b #83,44(sp)
+    4164:	1f7c 0020 002d 	move.b #32,45(sp)
+    416a:	1f7c 0031 002e 	move.b #49,46(sp)
+    4170:	422f 002f      	clr.b 47(sp)
+    4174:	2f7c 4633 2046 	move.l #1177755718,48(sp)
+    417a:	0030 
+    417c:	2f7c 3420 5354 	move.l #874533716,52(sp)
+    4182:	0034 
+    4184:	2f7c 4152 5420 	move.l #1095914528,56(sp)
+    418a:	0038 
+    418c:	2f7c 524f 4f4d 	move.l #1380929357,60(sp)
+    4192:	003c 
+    4194:	2f7c 2030 3100 	move.l #540029184,64(sp)
+    419a:	0040 
+    419c:	4eb9 0000 3b8e 	jsr 3b8e <wait_blitter>
+			419e: R_68K_32	.text+0x3b8e
+    41a2:	7400           	moveq #0,d2
+    41a4:	45f9 0000 3a1c 	lea 3a1c <source_audio_service.part.0>,a2
+			41a6: R_68K_32	.text+0x3a1c
+    41aa:	4235 2800      	clr.b (0,a5,d2.l)
+    41ae:	2002           	move.l d2,d0
+    41b0:	0280 0000 03ff 	andi.l #1023,d0
+    41b6:	6700 0180      	beq.w 4338 <menu_paint+0x244>
+    41ba:	5282           	addq.l #1,d2
+    41bc:	0c82 0000 a000 	cmpi.l #40960,d2
+    41c2:	66e6           	bne.s 41aa <menu_paint+0xb6>
+    41c4:	4878 0007      	pea 7 <main+0x7>
+    41c8:	4879 0002 f53c 	pea 2f53c <bl_source_dma_update+0xe8>
+			41ca: R_68K_32	.rodata
+    41ce:	4878 0026      	pea 26 <main+0x26>
+    41d2:	4878 008e      	pea 8e <main+0x8e>
+    41d6:	2f0d           	move.l a5,-(sp)
+    41d8:	45f9 0000 3632 	lea 3632 <text>,a2
+			41da: R_68K_32	.text+0x3632
+    41de:	4e92           	jsr (a2)
+    41e0:	4fef 0014      	lea 20(sp),sp
+    41e4:	4a06           	tst.b d6
+    41e6:	6600 0258      	bne.w 4440 <menu_paint+0x34c>
+    41ea:	4a05           	tst.b d5
+    41ec:	6700 0162      	beq.w 4350 <menu_paint+0x25c>
+    41f0:	4878 000d      	pea d <main+0xd>
+    41f4:	4879 0002 f5fa 	pea 2f5fa <bl_source_dma_update+0x1a6>
+			41f6: R_68K_32	.rodata+0xbe
+    41fa:	4878 004e      	pea 4e <main+0x4e>
+    41fe:	4878 005e      	pea 5e <main+0x5e>
+    4202:	2f0d           	move.l a5,-(sp)
+    4204:	4e92           	jsr (a2)
+    4206:	4fef 0014      	lea 20(sp),sp
+    420a:	206f 0048      	movea.l 72(sp),a0
+    420e:	4a28 0003      	tst.b 3(a0)
+    4212:	6700 02ca      	beq.w 44de <menu_paint+0x3ea>
+    4216:	203c 0002 f57e 	move.l #193918,d0
+			4218: R_68K_32	.rodata+0x42
+    421c:	4878 0001      	pea 1 <main+0x1>
+    4220:	2f00           	move.l d0,-(sp)
+    4222:	4878 0064      	pea 64 <main+0x64>
+    4226:	4878 003a      	pea 3a <main+0x3a>
+    422a:	2f0d           	move.l a5,-(sp)
+    422c:	4e92           	jsr (a2)
+    422e:	4fef 0014      	lea 20(sp),sp
+    4232:	206f 0048      	movea.l 72(sp),a0
+    4236:	4a28 0004      	tst.b 4(a0)
+    423a:	6700 02ca      	beq.w 4506 <menu_paint+0x412>
+    423e:	203c 0002 f5a9 	move.l #193961,d0
+			4240: R_68K_32	.rodata+0x6d
+    4244:	4878 0001      	pea 1 <main+0x1>
+    4248:	2f00           	move.l d0,-(sp)
+    424a:	4878 0074      	pea 74 <main+0x74>
+    424e:	4878 003a      	pea 3a <main+0x3a>
+    4252:	2f0d           	move.l a5,-(sp)
+    4254:	4e92           	jsr (a2)
+    4256:	206f 005c      	movea.l 92(sp),a0
+    425a:	7400           	moveq #0,d2
+    425c:	1428 0002      	move.b 2(a0),d2
+    4260:	4fef 0014      	lea 20(sp),sp
+    4264:	4878 000a      	pea a <main+0xa>
+    4268:	2042           	movea.l d2,a0
+    426a:	4868 0001      	pea 1(a0)
+    426e:	4eb9 0000 4c8e 	jsr 4c8e <__divsi3>
+			4270: R_68K_32	__divsi3
+    4274:	508f           	addq.l #8,sp
+    4276:	0600 0030      	addi.b #48,d0
+    427a:	1f40 0041      	move.b d0,65(sp)
+    427e:	4878 000a      	pea a <main+0xa>
+    4282:	2042           	movea.l d2,a0
+    4284:	4868 0001      	pea 1(a0)
+    4288:	4eb9 0000 4cfe 	jsr 4cfe <__modsi3>
+			428a: R_68K_32	__modsi3
+    428e:	508f           	addq.l #8,sp
+    4290:	0600 0030      	addi.b #48,d0
+    4294:	1f40 0042      	move.b d0,66(sp)
+    4298:	4878 0001      	pea 1 <main+0x1>
+    429c:	486f 0034      	pea 52(sp)
+    42a0:	4878 0084      	pea 84 <main+0x84>
+    42a4:	4878 003a      	pea 3a <main+0x3a>
+    42a8:	2f0d           	move.l a5,-(sp)
+    42aa:	4e92           	jsr (a2)
+    42ac:	4878 0005      	pea 5 <main+0x5>
+    42b0:	4879 0002 f607 	pea 2f607 <bl_source_dma_update+0x1b3>
+			42b2: R_68K_32	.rodata+0xcb
+    42b6:	4878 0098      	pea 98 <main+0x98>
+    42ba:	4878 003a      	pea 3a <main+0x3a>
+    42be:	2f0d           	move.l a5,-(sp)
+    42c0:	4e92           	jsr (a2)
+    42c2:	4fef 0028      	lea 40(sp),sp
+    42c6:	4878 000c      	pea c <main+0xc>
+    42ca:	4879 0002 f620 	pea 2f620 <bl_source_dma_update+0x1cc>
+			42cc: R_68K_32	.rodata+0xe4
+    42d0:	4878 00c2      	pea c2 <main+0xc2>
+    42d4:	4878 0022      	pea 22 <main+0x22>
+    42d8:	2f0d           	move.l a5,-(sp)
+    42da:	4e92           	jsr (a2)
+    42dc:	4878 000c      	pea c <main+0xc>
+    42e0:	4879 0002 f63a 	pea 2f63a <bl_source_dma_update+0x1e6>
+			42e2: R_68K_32	.rodata+0xfe
+    42e6:	4878 00d2      	pea d2 <main+0xd2>
+    42ea:	4878 0022      	pea 22 <main+0x22>
+    42ee:	2f0d           	move.l a5,-(sp)
+    42f0:	4e92           	jsr (a2)
+    42f2:	4fef 0028      	lea 40(sp),sp
+    42f6:	4878 000c      	pea c <main+0xc>
+    42fa:	4879 0002 f6bb 	pea 2f6bb <bl_source_dma_update+0x267>
+			42fc: R_68K_32	.rodata+0x17f
+    4300:	4878 00ee      	pea ee <main+0xee>
+    4304:	4878 0064      	pea 64 <main+0x64>
+    4308:	2f0d           	move.l a5,-(sp)
+    430a:	4e92           	jsr (a2)
+    430c:	45f9 0000 3ad0 	lea 3ad0 <wait_frame>,a2
+			430e: R_68K_32	.text+0x3ad0
+    4312:	4e92           	jsr (a2)
+    4314:	d884           	add.l d4,d4
+    4316:	41f9 0004 426c 	lea 4426c <copper>,a0
+			4318: R_68K_32	.bss+0x260
+    431c:	2030 4800      	move.l (0,a0,d4.l),d0
+    4320:	23c0 00df f080 	move.l d0,dff080 <_end+0xd91424>
+    4326:	4e92           	jsr (a2)
+    4328:	2683           	move.l d3,(a3)
+    432a:	4fef 0014      	lea 20(sp),sp
+    432e:	4cdf 2c7c      	movem.l (sp)+,d2-d6/a2-a3/a5
+    4332:	4fef 0024      	lea 36(sp),sp
+    4336:	4e75           	rts
+    4338:	4a39 0004 4af0 	tst.b 44af0 <source_audio_active>
+			433a: R_68K_32	.bss+0xae4
+    433e:	670a           	beq.s 434a <menu_paint+0x256>
+    4340:	4a39 0004 4aee 	tst.b 44aee <source_audio_busy>
+			4342: R_68K_32	.bss+0xae2
+    4346:	6602           	bne.s 434a <menu_paint+0x256>
+    4348:	4e92           	jsr (a2)
+    434a:	5282           	addq.l #1,d2
+    434c:	6000 fe5c      	bra.w 41aa <menu_paint+0xb6>
+    4350:	206f 0048      	movea.l 72(sp),a0
+    4354:	1010           	move.b (a0),d0
+    4356:	0600 0030      	addi.b #48,d0
+    435a:	1f40 002e      	move.b d0,46(sp)
+    435e:	4878 0001      	pea 1 <main+0x1>
+    4362:	486f 0027      	pea 39(sp)
+    4366:	4878 0060      	pea 60 <main+0x60>
+    436a:	4878 0040      	pea 40 <main+0x40>
+    436e:	2f0d           	move.l a5,-(sp)
+    4370:	4e92           	jsr (a2)
+    4372:	4fef 0014      	lea 20(sp),sp
+    4376:	206f 0048      	movea.l 72(sp),a0
+    437a:	4a28 0001      	tst.b 1(a0)
+    437e:	6700 00de      	beq.w 445e <menu_paint+0x36a>
+    4382:	203c 0002 f5cc 	move.l #193996,d0
+			4384: R_68K_32	.rodata+0x90
+    4388:	4878 0001      	pea 1 <main+0x1>
+    438c:	2f00           	move.l d0,-(sp)
+    438e:	4878 0074      	pea 74 <main+0x74>
+    4392:	4878 0040      	pea 40 <main+0x40>
+    4396:	2f0d           	move.l a5,-(sp)
+    4398:	4e92           	jsr (a2)
+    439a:	4878 0005      	pea 5 <main+0x5>
+    439e:	4879 0002 f656 	pea 2f656 <bl_source_dma_update+0x202>
+			43a0: R_68K_32	.rodata+0x11a
+    43a4:	4878 0092      	pea 92 <main+0x92>
+    43a8:	4878 0040      	pea 40 <main+0x40>
+    43ac:	2f0d           	move.l a5,-(sp)
+    43ae:	4e92           	jsr (a2)
+    43b0:	4fef 0028      	lea 40(sp),sp
+    43b4:	4878 000c      	pea c <main+0xc>
+    43b8:	4879 0002 f66b 	pea 2f66b <bl_source_dma_update+0x217>
+			43ba: R_68K_32	.rodata+0x12f
+    43be:	4878 00ac      	pea ac <main+0xac>
+    43c2:	4878 0040      	pea 40 <main+0x40>
+    43c6:	2f0d           	move.l a5,-(sp)
+    43c8:	4e92           	jsr (a2)
+    43ca:	4878 000c      	pea c <main+0xc>
+    43ce:	4879 0002 f680 	pea 2f680 <bl_source_dma_update+0x22c>
+			43d0: R_68K_32	.rodata+0x144
+    43d4:	4878 00c8      	pea c8 <main+0xc8>
+    43d8:	4878 0022      	pea 22 <main+0x22>
+    43dc:	2f0d           	move.l a5,-(sp)
+    43de:	4e92           	jsr (a2)
+    43e0:	4fef 0028      	lea 40(sp),sp
+    43e4:	4878 000c      	pea c <main+0xc>
+    43e8:	4879 0002 f69e 	pea 2f69e <bl_source_dma_update+0x24a>
+			43ea: R_68K_32	.rodata+0x162
+    43ee:	4878 00d8      	pea d8 <main+0xd8>
+    43f2:	4878 0022      	pea 22 <main+0x22>
+    43f6:	2f0d           	move.l a5,-(sp)
+    43f8:	4e92           	jsr (a2)
+    43fa:	4fef 0014      	lea 20(sp),sp
+    43fe:	4878 000c      	pea c <main+0xc>
+    4402:	4879 0002 f6bb 	pea 2f6bb <bl_source_dma_update+0x267>
+			4404: R_68K_32	.rodata+0x17f
+    4408:	4878 00ee      	pea ee <main+0xee>
+    440c:	4878 0064      	pea 64 <main+0x64>
+    4410:	2f0d           	move.l a5,-(sp)
+    4412:	4e92           	jsr (a2)
+    4414:	45f9 0000 3ad0 	lea 3ad0 <wait_frame>,a2
+			4416: R_68K_32	.text+0x3ad0
+    441a:	4e92           	jsr (a2)
+    441c:	d884           	add.l d4,d4
+    441e:	41f9 0004 426c 	lea 4426c <copper>,a0
+			4420: R_68K_32	.bss+0x260
+    4424:	2030 4800      	move.l (0,a0,d4.l),d0
+    4428:	23c0 00df f080 	move.l d0,dff080 <_end+0xd91424>
+    442e:	4e92           	jsr (a2)
+    4430:	2683           	move.l d3,(a3)
+    4432:	4fef 0014      	lea 20(sp),sp
+    4436:	4cdf 2c7c      	movem.l (sp)+,d2-d6/a2-a3/a5
+    443a:	4fef 0024      	lea 36(sp),sp
+    443e:	4e75           	rts
+    4440:	4878 0002      	pea 2 <main+0x2>
+    4444:	4879 0002 f5f0 	pea 2f5f0 <bl_source_dma_update+0x19c>
+			4446: R_68K_32	.rodata+0xb4
+    444a:	4878 003b      	pea 3b <main+0x3b>
+    444e:	4878 0082      	pea 82 <main+0x82>
+    4452:	2f0d           	move.l a5,-(sp)
+    4454:	4e92           	jsr (a2)
+    4456:	4fef 0014      	lea 20(sp),sp
+    445a:	6000 fd8e      	bra.w 41ea <menu_paint+0xf6>
+    445e:	203c 0002 f5df 	move.l #194015,d0
+			4460: R_68K_32	.rodata+0xa3
+    4464:	4878 0001      	pea 1 <main+0x1>
+    4468:	2f00           	move.l d0,-(sp)
+    446a:	4878 0074      	pea 74 <main+0x74>
+    446e:	4878 0040      	pea 40 <main+0x40>
+    4472:	2f0d           	move.l a5,-(sp)
+    4474:	4e92           	jsr (a2)
+    4476:	4878 0005      	pea 5 <main+0x5>
+    447a:	4879 0002 f656 	pea 2f656 <bl_source_dma_update+0x202>
+			447c: R_68K_32	.rodata+0x11a
+    4480:	4878 0092      	pea 92 <main+0x92>
+    4484:	4878 0040      	pea 40 <main+0x40>
+    4488:	2f0d           	move.l a5,-(sp)
+    448a:	4e92           	jsr (a2)
+    448c:	4fef 0028      	lea 40(sp),sp
+    4490:	4878 000c      	pea c <main+0xc>
+    4494:	4879 0002 f66b 	pea 2f66b <bl_source_dma_update+0x217>
+			4496: R_68K_32	.rodata+0x12f
+    449a:	4878 00ac      	pea ac <main+0xac>
+    449e:	4878 0040      	pea 40 <main+0x40>
+    44a2:	2f0d           	move.l a5,-(sp)
+    44a4:	4e92           	jsr (a2)
+    44a6:	4878 000c      	pea c <main+0xc>
+    44aa:	4879 0002 f680 	pea 2f680 <bl_source_dma_update+0x22c>
+			44ac: R_68K_32	.rodata+0x144
+    44b0:	4878 00c8      	pea c8 <main+0xc8>
+    44b4:	4878 0022      	pea 22 <main+0x22>
+    44b8:	2f0d           	move.l a5,-(sp)
+    44ba:	4e92           	jsr (a2)
+    44bc:	4fef 0028      	lea 40(sp),sp
+    44c0:	4878 000c      	pea c <main+0xc>
+    44c4:	4879 0002 f69e 	pea 2f69e <bl_source_dma_update+0x24a>
+			44c6: R_68K_32	.rodata+0x162
+    44ca:	4878 00d8      	pea d8 <main+0xd8>
+    44ce:	4878 0022      	pea 22 <main+0x22>
+    44d2:	2f0d           	move.l a5,-(sp)
+    44d4:	4e92           	jsr (a2)
+    44d6:	4fef 0014      	lea 20(sp),sp
+    44da:	6000 ff22      	bra.w 43fe <menu_paint+0x30a>
+    44de:	203c 0002 f593 	move.l #193939,d0
+			44e0: R_68K_32	.rodata+0x57
+    44e4:	4878 0001      	pea 1 <main+0x1>
+    44e8:	2f00           	move.l d0,-(sp)
+    44ea:	4878 0064      	pea 64 <main+0x64>
+    44ee:	4878 003a      	pea 3a <main+0x3a>
+    44f2:	2f0d           	move.l a5,-(sp)
+    44f4:	4e92           	jsr (a2)
+    44f6:	4fef 0014      	lea 20(sp),sp
+    44fa:	206f 0048      	movea.l 72(sp),a0
+    44fe:	4a28 0004      	tst.b 4(a0)
+    4502:	6600 fd3a      	bne.w 423e <menu_paint+0x14a>
+    4506:	203c 0002 f5ba 	move.l #193978,d0
+			4508: R_68K_32	.rodata+0x7e
+    450c:	4878 0001      	pea 1 <main+0x1>
+    4510:	2f00           	move.l d0,-(sp)
+    4512:	4878 0074      	pea 74 <main+0x74>
+    4516:	4878 003a      	pea 3a <main+0x3a>
+    451a:	2f0d           	move.l a5,-(sp)
+    451c:	4e92           	jsr (a2)
+    451e:	206f 005c      	movea.l 92(sp),a0
+    4522:	7400           	moveq #0,d2
+    4524:	1428 0002      	move.b 2(a0),d2
+    4528:	4fef 0014      	lea 20(sp),sp
+    452c:	4878 000a      	pea a <main+0xa>
+    4530:	2042           	movea.l d2,a0
+    4532:	4868 0001      	pea 1(a0)
+    4536:	4eb9 0000 4c8e 	jsr 4c8e <__divsi3>
+			4538: R_68K_32	__divsi3
+    453c:	508f           	addq.l #8,sp
+    453e:	0600 0030      	addi.b #48,d0
+    4542:	1f40 0041      	move.b d0,65(sp)
+    4546:	4878 000a      	pea a <main+0xa>
+    454a:	2042           	movea.l d2,a0
+    454c:	4868 0001      	pea 1(a0)
+    4550:	4eb9 0000 4cfe 	jsr 4cfe <__modsi3>
+			4552: R_68K_32	__modsi3
+    4556:	508f           	addq.l #8,sp
+    4558:	0600 0030      	addi.b #48,d0
+    455c:	1f40 0042      	move.b d0,66(sp)
+    4560:	4878 0001      	pea 1 <main+0x1>
+    4564:	486f 0034      	pea 52(sp)
+    4568:	4878 0084      	pea 84 <main+0x84>
+    456c:	4878 003a      	pea 3a <main+0x3a>
+    4570:	2f0d           	move.l a5,-(sp)
+    4572:	4e92           	jsr (a2)
+    4574:	4878 0005      	pea 5 <main+0x5>
+    4578:	4879 0002 f607 	pea 2f607 <bl_source_dma_update+0x1b3>
+			457a: R_68K_32	.rodata+0xcb
+    457e:	4878 0098      	pea 98 <main+0x98>
+    4582:	4878 003a      	pea 3a <main+0x3a>
+    4586:	2f0d           	move.l a5,-(sp)
+    4588:	4e92           	jsr (a2)
+    458a:	4fef 0028      	lea 40(sp),sp
+    458e:	4878 000c      	pea c <main+0xc>
+    4592:	4879 0002 f620 	pea 2f620 <bl_source_dma_update+0x1cc>
+			4594: R_68K_32	.rodata+0xe4
+    4598:	4878 00c2      	pea c2 <main+0xc2>
+    459c:	4878 0022      	pea 22 <main+0x22>
+    45a0:	2f0d           	move.l a5,-(sp)
+    45a2:	4e92           	jsr (a2)
+    45a4:	4878 000c      	pea c <main+0xc>
+    45a8:	4879 0002 f63a 	pea 2f63a <bl_source_dma_update+0x1e6>
+			45aa: R_68K_32	.rodata+0xfe
+    45ae:	4878 00d2      	pea d2 <main+0xd2>
+    45b2:	4878 0022      	pea 22 <main+0x22>
+    45b6:	2f0d           	move.l a5,-(sp)
+    45b8:	4e92           	jsr (a2)
+    45ba:	4fef 0028      	lea 40(sp),sp
+    45be:	6000 fd36      	bra.w 42f6 <menu_paint+0x202>

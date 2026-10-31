@@ -1,6 +1,6 @@
 #Requires -Version 5.1
 [CmdletBinding()]
-param([ValidateRange(0,3)][int]$PerfEnemies=3,[ValidateRange(0,30000)][int]$PerfSourceSteps=0,[switch]$Autotest,[switch]$SourceWorldTest,[switch]$SourcePerfTest,[switch]$SourceProfile,[switch]$CollectFrameDrops,[switch]$CombatTest,[switch]$RoomsTest,[switch]$EnemyEdgeTest,[switch]$RoomTour,[switch]$GateTest,[switch]$RoomLoadTest,[switch]$RoomLoadBaseline,[switch]$ElectricTest,[ValidateRange(0,19)][int]$TestStartRoom=0,[ValidateRange(0,2000)][int]$CombatWarmupSteps=0,[ValidateRange(360,30000)][int]$TestFrames=360)
+param([ValidateRange(0,3)][int]$PerfEnemies=3,[ValidateRange(0,30000)][int]$PerfSourceSteps=0,[switch]$Autotest,[switch]$SourceWorldTest,[switch]$SourcePerfTest,[switch]$SourceProfile,[switch]$SeparateContactTest,[switch]$SpriteCopyTest,[switch]$CollectFrameDrops,[switch]$CombatTest,[switch]$RoomsTest,[switch]$EnemyEdgeTest,[switch]$RoomTour,[switch]$GateTest,[switch]$RoomLoadTest,[switch]$RoomLoadBaseline,[switch]$ElectricTest,[ValidateRange(0,19)][int]$TestStartRoom=0,[ValidateRange(0,2000)][int]$CombatWarmupSteps=0,[ValidateRange(360,30000)][int]$TestFrames=360)
 $ErrorActionPreference='Stop'
 if($PerfSourceSteps -and !$SourcePerfTest){throw 'PerfSourceSteps requires SourcePerfTest'}
 if($RoomsTest -or $EnemyEdgeTest -or $RoomTour -or $GateTest -or $RoomLoadTest){$CombatTest=$true}
@@ -29,6 +29,8 @@ $flags=@('-m68000','-O2','-g','-nostdlib','-ffreestanding','-fno-builtin','-fno-
 $flags += if($Autotest){'-DBL_AUTOTEST=1'}else{'-DBL_AUTOTEST=0'}
 if($SourcePerfTest){if(!$Autotest){throw 'SourcePerfTest requires Autotest'};$SourceWorldTest=$true;$flags+='-DBL_SOURCE_PERF_TEST=1';$flags+="-DBL_SOURCE_PERF_ENEMIES=$PerfEnemies";$flags+="-DBL_SOURCE_PERF_STEPS=$PerfSourceSteps"}
 if($SourceWorldTest){if(!$Autotest){throw 'SourceWorldTest requires Autotest'};$flags+='-DBL_SOURCE_WORLD_TEST=1';$flags+='-DBL_COMBAT_TEST=1';$flags+='-DBL_COLLECT_FRAME_DROPS=1'}
+if($SpriteCopyTest){if(!$SourcePerfTest -or $SourceProfile){throw 'SpriteCopyTest requires unprofiled SourcePerfTest'};$flags+='-DBL_SPRITE_COPY_TEST=1'}
+if($SeparateContactTest){if(!$SourceWorldTest -or $SourcePerfTest){throw 'SeparateContactTest requires full SourceWorldTest'};$flags+='-DBL_SEPARATE_CONTACT_TEST=1'}
 if($SourceProfile){$flags+='-DBL_C64_PROFILE=1'}
 if($CollectFrameDrops){if(!$Autotest -or (!$RoomTour -and !$CombatTest)){throw 'CollectFrameDrops requires an autotest room tour or combat replay'};$flags+='-DBL_COLLECT_FRAME_DROPS=1'}
 if($TestStartRoom){if(!$Autotest -or !$RoomTour){throw 'TestStartRoom requires an autotest room tour'};$flags+="-DBL_TEST_START_ROOM=$TestStartRoom"}
@@ -41,7 +43,7 @@ if($RoomTour){$flags+='-DBL_ROOM_TOUR=1'}
 if($GateTest){$flags+='-DBL_GATE_TEST=1'}
 if($RoomLoadTest){if(!$Autotest){throw 'RoomLoadTest requires Autotest'};$flags+='-DBL_ROOM_LOAD_TEST=1'}
 if($RoomLoadBaseline){if(!$RoomLoadTest){throw 'RoomLoadBaseline requires RoomLoadTest'};$flags+='-DBL_ROOM_REUSE=0'}
-$sources=@('amiga/start.s','amiga/vic_compare.s','amiga/contact_rows.s','amiga/contact_align.s','amiga/contact_prepare.s','amiga/main.c','amiga/runtime.c','core/game.c','core/source_wall.c','core/source_climb.c','core/presentation.c','core/c64_sprites.c','core/combat.c','core/rooms.c','core/session.c','core/c64_rooms.c','core/source_audio.c','core/source_dma.c')
+$sources=@('amiga/start.s','amiga/vic_compare.s','amiga/contact_rows.s','amiga/sprite_copy.s','amiga/contact_align.s','amiga/contact_prepare.s','amiga/main.c','amiga/runtime.c','core/game.c','core/source_wall.c','core/source_climb.c','core/presentation.c','core/c64_sprites.c','core/combat.c','core/rooms.c','core/session.c','core/c64_rooms.c','core/source_audio.c','core/source_dma.c')
 $objects=@()
 foreach($source in $sources){
     $obj=Join-Path $out ([IO.Path]::GetFileNameWithoutExtension($source)+'.o')
@@ -53,6 +55,8 @@ foreach($source in $sources){
 $program=Join-Path $out $(if($Autotest){'bruce_test'}else{'bruce_amiga'})
 & $compiler @flags '-Wl,--emit-relocs,--gc-sections,-Ttext=0,-e,_start' "-Wl,-Map=$program.map" @objects -o "$program.elf"
 if($LASTEXITCODE){throw 'Link failed'}
+& python (Join-Path $taskRoot 'tools/verify_amiga_entry.py') "$program.elf"
+if($LASTEXITCODE){throw 'AmigaDOS entry validation failed'}
 & $converter "$program.elf" "$program.exe"
 if($LASTEXITCODE){throw 'ELF to Hunk conversion failed'}
 & (Join-Path $bin 'exe2adf.exe') -i "$program.exe" -l 'Bruce' -a "$program.adf"

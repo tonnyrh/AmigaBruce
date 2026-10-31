@@ -1,0 +1,69 @@
+{
+  "status": "passed_isolated_direct_call_source_prefix",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_cases": 640,
+  "source_instructions": 81112,
+  "decimal_before_after_cases": 640,
+  "all_ram_and_registers": true,
+  "entry": "$15B8",
+  "stop": "$169D",
+  "safe_stack_range": "$E0-$FD",
+  "production_changed": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/candidate/c64_rooms.c",
+      "sha256": "93d48fab4028f510f60012040012723a87070974ef850a288771b6bec3bb40db"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/candidate/c64_actor_programs.h",
+      "sha256": "0c6414bfd074691ab0f4fd5e7d2dd536e555a13c86e6ccdedf1c464acd23a235"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/candidate/publish.h",
+      "sha256": "4e008765211195668adf1bf598ecb1eb4dff93dd01b291589bc57aa0f9e2d51e"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/c64_rooms.c",
+      "sha256": "93d48fab4028f510f60012040012723a87070974ef850a288771b6bec3bb40db"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/c64_actor_programs.h",
+      "sha256": "5d1560f8553ae2a2ff8f3b6457112376ef9753461cc09888280502409e5eaa00"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/publish.h",
+      "sha256": "141dd5ef0685b94b5d7db1b78563fa3a3bd9b1811d803a45d31b4a4e54a062a6"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/bridge.c",
+      "sha256": "e839b60993db65cc84a0b6a7c7bf8ae96805f38e3a2760b7ad8dbeeceaec5a1f"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/bridge-before.c",
+      "sha256": "daf93a2572db063b87a88765113c21bd29193e787946d2ec372f2f2f607f4618"
+    },
+    {
+      "path": "tools/verify_source_sprite_direct.py",
+      "sha256": "45b281a96f093cfc94c5c87b0e8916054f7593ed505b3fcbf03a50ba154e84be"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/scope.json",
+      "sha256": "c0866db43d6cbee675f836218b4d00f2253cb5ea3c29b7b4c828fe625cc1013d"
+    },
+    {
+      "path": "tools/build_source_sprite_direct.py",
+      "sha256": "a12e9179cfb3724e7953eb35210c937007fcffdc7360e7f3c5105b4d71a35ddd"
+    },
+    {
+      "path": "test-source-sprite-direct.ps1",
+      "sha256": "3c3f04dd22b717305c17ad149839ca6d7d96a417b3d320f8aa75b561da221177"
+    }
+  ],
+  "limitations": [
+    "Room seeds from current native loader; prefix executed from frozen original bytes",
+    "Fixed input memory, no natural IRQ/beam timing",
+    "Decimal fallbacks before/after only, not a source decimal parity claim"
+  ]
+}

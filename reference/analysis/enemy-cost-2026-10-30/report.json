@@ -1,0 +1,592 @@
+{
+  "status": "diagnosed_private_candidates_not_delivered",
+  "production_changed": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_gate_passed": false,
+  "historical_baseline_inputs": [
+    "reference/analysis/screen-corruption-2026-10-30/parent/amiga/main.c",
+    "reference/analysis/screen-corruption-2026-10-30/parent/amiga/out/bruce_amiga.exe"
+  ],
+  "source_routines": {
+    "contact": "$5212-$52AC; rows $5380-$542D",
+    "image_build": "$2584-$25E1; glyph $2719-$274E; pointer $2704-$2718",
+    "copy": "$26A0-$2702"
+  },
+  "method": "Fixed actor poses, two controlled layouts, 8 warm-up + 64 measured calls per kernel; original source bytes compared separately. Stationary microprobe excludes AI and Amiga actor drawing. Actual PAL/OCS/68000/512+512 timing run retains normal scheduler and diagnostic overhead.",
+  "runs": {
+    "enemy-cost-none-timing": {
+      "fields": 1203,
+      "missed": 0,
+      "chip_largest": 85408
+    },
+    "enemy-cost-both-timing": {
+      "fields": 1423,
+      "missed": 0,
+      "chip_largest": 85408
+    },
+    "enemy-cost-stationary-r01": {
+      "fields": 1423,
+      "missed": 0,
+      "chip_largest": 85408,
+      "stationary_lines_64_calls": [
+        [
+          1159,
+          4308,
+          3055,
+          0,
+          3
+        ],
+        [
+          1379,
+          8583,
+          5853,
+          0,
+          15
+        ],
+        [
+          1173,
+          8230,
+          4484,
+          0,
+          19
+        ],
+        [
+          1394,
+          12505,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4839,
+          3056,
+          0,
+          3
+        ],
+        [
+          1379,
+          9424,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9387,
+          4482,
+          0,
+          19
+        ],
+        [
+          1489,
+          13970,
+          7283,
+          0,
+          31
+        ]
+      ]
+    },
+    "enemy-cost-image-driver-r01": {
+      "fields": 1389,
+      "missed": 28,
+      "chip_largest": 85408
+    },
+    "enemy-cost-image-driver-v2-r02": {
+      "fields": 1376,
+      "missed": 8,
+      "chip_largest": 85408
+    },
+    "enemy-cost-stationary-image-v2-r01": {
+      "fields": 1378,
+      "missed": 7,
+      "chip_largest": 85408,
+      "stationary_lines_64_calls": [
+        [
+          1159,
+          4309,
+          1655,
+          0,
+          3
+        ],
+        [
+          1379,
+          8585,
+          3064,
+          0,
+          15
+        ],
+        [
+          1174,
+          8231,
+          2394,
+          0,
+          19
+        ],
+        [
+          1394,
+          12506,
+          3803,
+          0,
+          31
+        ],
+        [
+          1160,
+          4840,
+          1654,
+          0,
+          3
+        ],
+        [
+          1379,
+          9423,
+          3064,
+          0,
+          15
+        ],
+        [
+          1270,
+          9387,
+          2395,
+          0,
+          19
+        ],
+        [
+          1488,
+          13972,
+          3802,
+          0,
+          31
+        ]
+      ]
+    },
+    "enemy-cost-image-driver-v3-r01": {
+      "fields": 1375,
+      "missed": 5,
+      "chip_largest": 85408
+    }
+  },
+  "sprite_kernel_reduction_both": 0.4778250720856789,
+  "limitations": [
+    "Injected stationary controls do not establish natural C64 behavior.",
+    "Elapsed PAL counters include startup and diagnostic overhead.",
+    "Source comparison validates the portable native driver; existing 256 target controls validate its assembly copy primitive.",
+    "Private candidates have missed audio ticks; no performance or audio acceptance is claimed.",
+    "Contact computation remains the dominant fixed-actor cost; enemy AI is not the primary explanation for stationary slowdown."
+  ],
+  "artifacts": [
+    {
+      "path": ".reference/c64/work/untrained-memory.bin",
+      "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "docs/ENEMY_COST.md",
+      "sha256": "bdbccdaa8519d033038af27abdfe1e9f7a3ab838df559820e7ae8bdbe271fc96"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/build.ps1",
+      "sha256": "ba1c6d05901dc2d27f43ed2dfbec92e6a10c1c14a8026b7e3d229baae31e76a8"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-bridge.c",
+      "sha256": "033e538955c879910abd5b4c06e639265be2d27a517061e491234c0d046916a4"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-source.json",
+      "sha256": "5ebd37334d0190dfea808ff2685cbf89a76b160ff98aeea45ec7dbb2fe3b72b4"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2-bridge.c",
+      "sha256": "14bfba64bb2e1362fdc3751510a989a1599ccabc6c56e02a2d3d7e86d94dc44e"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2-source.json",
+      "sha256": "ab71a6b88196a5629ad46673f417986605211880e4068458598a184e905c5943"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2/image_driver.h",
+      "sha256": "445dca3cbe2482866e1a097618ad5245a2dfc1eda6725fa50b8165d5d23a18cf"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v3-bridge.c",
+      "sha256": "7e0a2f9a654a1bf27527c11a970f84ffacacf1673a273db9c4aa36bec825fc42"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v3-source.json",
+      "sha256": "f28c7251739fde1371dff044f2884c7a7883f9fd57a74016c1ea2d4efc49ea09"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v3/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v3/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v3/image_driver.h",
+      "sha256": "8d0d9d560f737104e9875f704de463bb3c3121b624cfbb4ff59448a4c3f31485"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver/image_driver.h",
+      "sha256": "7458c78e7e3ae08852883ac43c019c09e05e2dad046a40f2288a07d564b3d59b"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/main.c",
+      "sha256": "18bbff5da0c3ba7120abaf35b797173b171b4ec2f7cf7880308d465a91edc103"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/run-matrix.ps1",
+      "sha256": "3ae3cc2cc663b91b9f6bb85073fd2920d186d0f87534ed78eee646c2790558a8"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/scope.json",
+      "sha256": "8d03a179cea12fb22099aca509961260463b9d7e4e17fc5dde3a0cb6f9157dea"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-both-timing/bruce_test.adf",
+      "sha256": "826e470a1e03017ddcd4f5ee10eed45baabc607ace3e7435f0144e636f6532fb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-both-timing/bruce_test.elf",
+      "sha256": "b2679f2a24842e117bf0d2c2606c63dd31de87f0351bf0da90a3af70bb203ef6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-both-timing/bruce_test.exe",
+      "sha256": "7894277468b3b7d6459dbf0f0e09c795dac32324b5179bc89b63e60fb71d281d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-both-timing/identity.json",
+      "sha256": "8bb4a548a97e9b101d5403f239bb7f126678efd938fc6dfad0efd42ef7163e04"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-both-timing/native.txt",
+      "sha256": "043f2b433cba2f47f05a3dfbf7411b0974cfb8a277b2b6a03e0277431bb10c60"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/bruce_test.adf",
+      "sha256": "631b5f93425adb19d0c0b84addb216c6973bd42f722ac216479ac24482413bbf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/bruce_test.elf",
+      "sha256": "c58c08ae10d3c55b67e1b09fa696e932f6189a99018634c1aaa5b0a327c2d1d7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/bruce_test.exe",
+      "sha256": "7a150899b919c2ed069977c11c35739bd0a244ebf19448b0cc926f3b187c9bdd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/compile-overrides.json",
+      "sha256": "9aa204a26119bd9e97e59e186753e8e1d4ce6e9e8b8463a9ea5422bc2d9b1f06"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/compiled-inputs/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/compiled-inputs/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/compiled-inputs/image-driver-build.ps1",
+      "sha256": "cea85afc7ca71c84a3185d96082246af8b832510ee2e5b111e407835ada57aad"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/compiled-inputs/image_driver.h",
+      "sha256": "7458c78e7e3ae08852883ac43c019c09e05e2dad046a40f2288a07d564b3d59b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/compiled-inputs/main.c",
+      "sha256": "18bbff5da0c3ba7120abaf35b797173b171b4ec2f7cf7880308d465a91edc103"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/identity.json",
+      "sha256": "60dbb690c640d24e45d8e010d143b983de299580cd5b8f71326b5895fe53fcf3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-r01/native.txt",
+      "sha256": "2ef2ddc1d505a855375a87f4bb6646feba866e48b44614147d2d8ae8a7728d09"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/bruce_test.adf",
+      "sha256": "56fdcd90eff8b04c7df7cc76655b58b80d58c26ea5adb1acd4d4787fdc456b76"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/bruce_test.elf",
+      "sha256": "0e028dd51f19693240bb17c5d80b589088a0cac39a7046c2e77415fc08dac088"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/bruce_test.exe",
+      "sha256": "3ec182acb023f25e075f7d84f49b2bdacff8693b7f121986193d935621f95f30"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compile-overrides.json",
+      "sha256": "aad95550bb9737e59c10032cdbf03d855114647d054a26ab7ab9a7a08f34eff0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/image-driver-v2-build.ps1",
+      "sha256": "20dacbdfe5b3ce9674884d8e323df9c2651002f7e19c9d2e1a527e433359a8a7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/image_driver.h",
+      "sha256": "445dca3cbe2482866e1a097618ad5245a2dfc1eda6725fa50b8165d5d23a18cf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/main.c",
+      "sha256": "18bbff5da0c3ba7120abaf35b797173b171b4ec2f7cf7880308d465a91edc103"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/identity.json",
+      "sha256": "ff623a0f3184c7fec75e13f60178325fdd58b45b592e22c904f95ec4080612de"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/native.txt",
+      "sha256": "403d27efdd0d6dc8c41c39345018c82fedb432b8f5a03033c95e63eb0b20a72d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/bruce_test.adf",
+      "sha256": "d5479de2a5034f1f88ecddb432c85dcb0d63691eff0d216a43265c0ee20edc87"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/bruce_test.elf",
+      "sha256": "b2fc31124d2dd4b61cf8bde858749b724f50b55d051ecaf7cebea167085fd07a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/bruce_test.exe",
+      "sha256": "116366241b9d390f4f46dc79a324322d68fc8acf63ab47287b661d248e5ab63e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/compile-overrides.json",
+      "sha256": "b9f84943e4e2a9734e80bcb279655ef25d3c716df45497cfe5168cde8518a16b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/compiled-inputs/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/compiled-inputs/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/compiled-inputs/image-driver-v3-build.ps1",
+      "sha256": "2f3df8ed20d3bb32d7cd62a5d6da496bc1281bf260ed321e5e4ace98cef4934c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/compiled-inputs/image_driver.h",
+      "sha256": "8d0d9d560f737104e9875f704de463bb3c3121b624cfbb4ff59448a4c3f31485"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/compiled-inputs/main.c",
+      "sha256": "18bbff5da0c3ba7120abaf35b797173b171b4ec2f7cf7880308d465a91edc103"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/identity.json",
+      "sha256": "8713a2b8deb9c04c63bdad190c6fb2293f4693a357ac4ce67a9bda935917453a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v3-r01/native.txt",
+      "sha256": "898fc9f4dd51e35db757c71ca78fad7300728952b088c58aa562359035fd2c15"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-none-timing/bruce_test.adf",
+      "sha256": "0b37c70915aec0363e2e0829835e2fe3527be5e379f26edaf19a5ecce7f72da7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-none-timing/bruce_test.elf",
+      "sha256": "ed3bcc50a74e4f779471ca04e6bbd745d215782921cc00882134bb0333c010eb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-none-timing/bruce_test.exe",
+      "sha256": "50411449ce4f3108569fd3cb51ec434532d9b79334584615467b5a294913df31"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-none-timing/identity.json",
+      "sha256": "2bf53908119556d8ba57e9408816c269b87cc6dfd0ea66ab06275dc28ca3c0b2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-none-timing/native.txt",
+      "sha256": "0b4e17bcd9f1720620c07746fe26003fae8e9fca8c0fc1f4fccfd557b8ed5b90"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/bruce_test.adf",
+      "sha256": "831f87fd8b9de4dd1096ef2ca3afcb3ffe681d07e89edfa55f6929fc2c67288b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/bruce_test.elf",
+      "sha256": "61d9c7fb1bf075f933295ea3d707fcf0db3e36763f513ba1b59a9c4b179c1f2f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/bruce_test.exe",
+      "sha256": "5c579b5c7fcab152a45ec95c6796fbca92d69429522ec03d4ea03dd1867517cf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/compile-overrides.json",
+      "sha256": "28997c5e5b86b308c43782bdbdd23580659745a19eda0ede0bf2cd8b00464b18"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/compiled-inputs/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/compiled-inputs/c64_rooms.c",
+      "sha256": "d08fc0863aaddb351207cfb1e91f49f901eb2e8c9cec8bee69d64442dc3b3959"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/compiled-inputs/image_driver.h",
+      "sha256": "445dca3cbe2482866e1a097618ad5245a2dfc1eda6725fa50b8165d5d23a18cf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/compiled-inputs/main.c",
+      "sha256": "4641939739db2c9ef9aa728d3210dfa506b40441602f3451ff10ae1b7913aaaf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/compiled-inputs/stationary-image-v2-build.ps1",
+      "sha256": "09fdb725fb5db04e8bd6373b9c89ffbd550dcd7ef6fa88d8c9ceb67a60da3d6f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/identity.json",
+      "sha256": "a7b66e425fbbd0aed6535da23bfcb0583de30acf1e9898c17018e60aed1936bc"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-image-v2-r01/native.txt",
+      "sha256": "b286400f14bf269b33e24134a4db491976a556b933d245a222c4d256a0854959"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/bruce_test.adf",
+      "sha256": "091ecc386e877c231aec8e1b013417071ea6a35410f0c04070c453c449065646"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/bruce_test.elf",
+      "sha256": "d21c75beca5ba895b51a73ac8d512c1ba983f12b579e4dacc80861cf8a068b99"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/bruce_test.exe",
+      "sha256": "bb1d1ab41482abc8854c5146e0d5b389f72c9e04513431e8d105596199de0328"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/compile-overrides.json",
+      "sha256": "51c10c81c1aeac379b5045b6812cec4904d041362b84195bf8d0f7ed8a8c08e2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/compiled-inputs/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/compiled-inputs/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/compiled-inputs/main.c",
+      "sha256": "4641939739db2c9ef9aa728d3210dfa506b40441602f3451ff10ae1b7913aaaf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/compiled-inputs/stationary-build.ps1",
+      "sha256": "76e682ad5b4db9bd69a50df20cefee64cd26b5b0744b64fc53cdd9cd1c724a03"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/identity.json",
+      "sha256": "036b703e18496465512ad9e448c7e20120e484791b616a98ab5d6360b9dd38bd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/native.txt",
+      "sha256": "935a4a2e5d1b599debd63e53b22edde6f11efeb099320b99bfe87091b40782aa"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/parent/amiga/main.c",
+      "sha256": "7e2ee65e342803dfd711a6fc0513ec080666aee82841b4a7b63073b1e6ef0f99"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/parent/amiga/out/bruce_amiga.exe",
+      "sha256": "79c09ce3150db6d61ffd0eb78ff3de31bfc27166f3d604512e21478e518a6697"
+    },
+    {
+      "path": "test-native-image-driver-v2.ps1",
+      "sha256": "76a4fa0ab93f83e682a9274142c488c305c10e1fb86251b10ef5bd0ee39cb6bb"
+    },
+    {
+      "path": "test-native-image-driver-v3.ps1",
+      "sha256": "65fc9421f8abd56a171295d305a2693361cfca3cd22b3a16a078777c0672b9a0"
+    },
+    {
+      "path": "test-native-image-driver.ps1",
+      "sha256": "377327c0d7174321ea6bd859b39309c084ff2a4c0398d667276f507e959808fc"
+    },
+    {
+      "path": "tools/archive_enemy_cost_run.py",
+      "sha256": "d9dba7231b2927f5655d394f57bb9482b390836fdf719be5f364c85803547409"
+    },
+    {
+      "path": "tools/build_enemy_cost_probe.py",
+      "sha256": "088cee27ebd6a326323ee9c27be6fc2294cf6e96ee7bdc82a3bb509ed7ec1f1e"
+    },
+    {
+      "path": "tools/build_native_sprite_driver.py",
+      "sha256": "88669dd7353065a7818046411505339703bcb5a2da859c71efcb2111e27433c0"
+    },
+    {
+      "path": "tools/build_native_sprite_driver_v2.py",
+      "sha256": "a2527681a121518d2b6bf7369f5821eec9db90019dc88841b14113bba3520fec"
+    },
+    {
+      "path": "tools/build_native_sprite_driver_v3.py",
+      "sha256": "227b70489943442f2732d7423bd9f0fa08afcbd75ed50f8f4526f213bf3f6101"
+    },
+    {
+      "path": "tools/build_stationary_enemy_probe.py",
+      "sha256": "072566a1ef5e91830a3f1bc518fd24935da42e3d5ca09260870ffd5f21defed8"
+    },
+    {
+      "path": "tools/build_stationary_image_probe.py",
+      "sha256": "23cc6a2332321bb43caedc359ca00eda035a940562b87947804244ffd947281f"
+    },
+    {
+      "path": "tools/verify_enemy_cost.py",
+      "sha256": "d47c26f59f122c1e5f42415e62529d91c41dfe78593cc16d66089f947ae5f994"
+    },
+    {
+      "path": "tools/verify_native_image_driver.py",
+      "sha256": "610ecb7857f9c4504eff77b961295a4b4fa4e1c065a1784dc57f9fb5fda7ffed"
+    },
+    {
+      "path": "tools/verify_native_image_driver_v2.py",
+      "sha256": "54e9e17db90c53f7cad962ae3113d6f8a743771200984faa9598589da11ec10c"
+    },
+    {
+      "path": "tools/verify_native_image_driver_v3.py",
+      "sha256": "331a242b5da94f24dc676cef4b829158f95d18c00bbb63a4c2c3464b76557219"
+    }
+  ]
+}

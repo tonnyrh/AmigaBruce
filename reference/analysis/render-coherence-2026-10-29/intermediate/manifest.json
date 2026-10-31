@@ -1,0 +1,41 @@
+{
+  "status": "rejected_intermediate_full_diagnostic_allocation_failure",
+  "files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "e8811817c5b8dd1703eaa6939c1db1b1d4602c9555ec63f658aa9211414fce07"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "be76d52041699c6de7ac1a930c6130f778771c127731e2c950b331d5195c6d87"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "09ccaf8b677deb8285e426952fa22d43d285b5f1a8054f11fcc51f1011ceb774"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "581f7cb5564db7b214c0b88bb3989530c4f9b24d605a72a5396eb841a9291f61"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "65f1a9aaeeba06c7badc386a73b8d176ad265cd9f5305e25ddac0a85809bae1c"
+    },
+    {
+      "path": "amiga/out/bruce_test.exe",
+      "sha256": "a118251ea27fc0b56720e0b50831b7d4be7fd8b0984bac570495d63a921e9257"
+    },
+    {
+      "path": "amiga/out/bruce_test.elf",
+      "sha256": "b4f75eb73c8978fe2f7b212849b6c21f06fba51e5697c7fba3e70ff65b94d234"
+    },
+    {
+      "path": "amiga/out/autotest-1.txt",
+      "sha256": "fe453f2a5d161cd2d06957efd67e01a0d0add983b5e8cafdeb5ddd4c7b477361"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "f3a9b0c7411b62889b30969fde1d1a2b85d7275e1a94f5656d9e977469454e20"
+    }
+  ]
+}

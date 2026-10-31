@@ -1,0 +1,7 @@
+{
+  "status": "allocation_failed_before_measurement",
+  "frames": 0,
+  "probe_and_full_extra_references": true,
+  "accepted": false,
+  "reason": "Run probe with separate sprite controls; production memory target and49152-byte Chip gate unchanged"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "VIEW-PROJECTION-0001",
+  "date": "2026-10-29",
+  "status": "candidate_projection_equivalence_and_scoped_native_measured",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "source_ranges": [
+    "$331C-$336D",
+    "$4CE2-$4D09"
+  ],
+  "condition": "Read all twenty live lantern record lists every step; retain prior terminator, zero-byte collected interpretation and existing Amiga presentation mask cap",
+  "effect": "Bulk presentation query removes repeated cross-module calls; no temporal cache, source RAM mutation or gameplay change",
+  "artifacts": [
+    {
+      "path": "docs/VIEW_PROJECTION_OPTIMIZATION.md",
+      "sha256": "02fc08feb0caf34a9df6c6e01efdf85aaf1926f9fab45b601f551b6c42f2dd81"
+    },
+    {
+      "path": "reference/validation/view-projection.json",
+      "sha256": "f5d3b6a3defdb1c3db705cc06f00f353052657edf05e1941142b9bb6c83dc7d6"
+    }
+  ]
+}

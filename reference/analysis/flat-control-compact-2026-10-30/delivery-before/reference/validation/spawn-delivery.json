@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-26",
+  "status": "verified_scoped_source_spawn_services_and_entry_phases",
+  "source_files": [
+    {
+      "path": "core/combat.c",
+      "sha256": "59df52babdba8330b78ffcabcda466af0f37f6200251297716d5b2dba8542bad"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "3b3d695a2e93b274ed6f3ea2338ec8bf054f5de32a263bbd4acc3eb15a3a7eb9"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a4faab307fd692995a67deee3900a694c11ef7c8fd13a5e3e1b8b05b37024bb8"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "8a63248355b77fc9a41ca12315509a7f893522e31bf6eca28d957688047733d5"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "6fcbf402b25472c7701f71484eeb047cf4dd0e83ad7af5d0c95e42b0ee6383cf"
+    },
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "00436908bea47f0b2a3cf64a7555c3ba298f6782d4d3d0da3e530adf8cd42770"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "d51ee2ee59787459bd955f7071c4e063ade1d79ba6cefd14cc14f96aa41eaec7"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "305804951f2e718a976d0ce14778a46eccac9f29800353801f97c2bb9c44ccee"
+    },
+    {
+      "path": "tests/spawn_bridge.c",
+      "sha256": "99b81b89d048153839bf874d9ed2e30e768467d49d8aab79ea7f78c1e23dc630"
+    },
+    {
+      "path": "tests/spawn_fixture.h",
+      "sha256": "db91ce8bb9d1956c22a20e8b6aa52e84c7e8c7b14fe7895ce881fed3975aba93"
+    },
+    {
+      "path": "tests/session_fixture.h",
+      "sha256": "5b3fc2a2353f3553b233c92f2c8fba06cd41ad45e95ce0aa6a5c0d377120803c"
+    },
+    {
+      "path": "tools/audit_spawn.py",
+      "sha256": "6f15e9ef4d9efa98978496abf099e621f4bc8a66a064c89442add6b493f8b80b"
+    },
+    {
+      "path": "tools/audit_spawn_world.py",
+      "sha256": "2a4c62aa44b58f86987e1bc764e184210aff95ed57af69da9c4e9f3daa549d9c"
+    },
+    {
+      "path": "tools/build_spawn_fixture.py",
+      "sha256": "d443c45487b6899402cae230ad5a52d2f12c0988cb304e569dc476c273f39faa"
+    },
+    {
+      "path": "tools/verify_spawn_delivery.py",
+      "sha256": "94204ad7bae102ac651ea06a64c9325ad4caf90b1bbc0c7f22ff9582ee85077a"
+    },
+    {
+      "path": "tools/verify_c64_candidate.py",
+      "sha256": "b8f4ede0a0be916514aae3ea4fdade2f157623629f5827a2970eed5aa76df87e"
+    },
+    {
+      "path": "tools/verify_spawn_native_report.ps1",
+      "sha256": "b33dd73f5ea733e73207d9df4fe3f9f4367242595748c39835a4c2a1d4a6b397"
+    },
+    {
+      "path": "tools/merge_spawn_native_runs.py",
+      "sha256": "df13f8e0cbdeeb4c54dce40b9f05dd01ac89467e4c871f8466864d0e1f75e40f"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "d6202014bb867a97c8b33dbd53451e461451885c1d650676562490a11200c75e"
+    },
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "9bf13052a3b140541f4f7b2aeee03677eaa9c6e9222691f71b3109645f71cd7b"
+    },
+    {
+      "path": "test-spawn.ps1",
+      "sha256": "12190fe3dd600e0717cf02ed8fcd6249e8fe3ffb92a775e7f39fb7e29aa0f277"
+    },
+    {
+      "path": "test-parity.ps1",
+      "sha256": "5328a936a3da89cbf5b746d58aa8b29254b3870091277db0692254723cdd98e2"
+    },
+    {
+      "path": "test-amiga.ps1",
+      "sha256": "a0779777a9bdeed635696d561abec7fdd07fa205769c6298799517f53bc07d46"
+    },
+    {
+      "path": "test-core.ps1",
+      "sha256": "f037b200803ac93d7d4375a30870e34a26f0fd2af881e0876c50e569bb420b90"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "7d30ce2c8bd4216f5166ca57be41ff18847824fd884570c69ef8cf7cc28bc5f2"
+    },
+    {
+      "path": "docs/ENEMY_SPAWNS.md",
+      "sha256": "42b641f003ae2ccb8f287eb67ceb76b6965516d0baa19c2b43fa7345ea5a2909"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/report.json",
+      "sha256": "cb3f4bfd14553d70418c92234e3fcb47054f505490198e34652f69824269548e"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/world-controls.json",
+      "sha256": "1ff8617feb8875a3bab077ed1ea03af1290c17529e6fbfa4f5c57fa572c36cd9"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/source-disassembly.txt",
+      "sha256": "ee7a52bd1a6befa2910009d214bd7e85d6c1a7477f86d388af96004677b76987"
+    },
+    {
+      "path": "reference/analysis/spawn-audit-2026-10-26/room-table.md",
+      "sha256": "a54151c7ad0d01071bed00086dbce0421e7cd8aa7fc7496ab894028b79dcf2c5"
+    },
+    {
+      "path": "reference/validation/c64-room-runtime.json",
+      "sha256": "642b07b8a1fe716bebaaa6127fef80811a78fa031ae6c465610d5823858ba73b"
+    },
+    {
+      "path": "reference/analysis/ai-audit-2026-10-25/report.json",
+      "sha256": "f72424cc6da7d89f096be2472f6127f7af5f07c760bea3fca5c1ae0266455eca"
+    },
+    {
+      "path": "reference/validation/c64-core.json",
+      "sha256": "b7f04fb2b81f802b8f8ba2bae657344eb40ede36c38cd886097c4c8d583cc8c2"
+    },
+    {
+      "path": "reference/validation/a500-c64-combat-diagnostic.json",
+      "sha256": "128f65f651890cf0b8015e944c48ee2a222253e5678d5d8ec5433c9004fb19c3"
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "37bd23435653d3766183c06cbcf4be2493c9a24793e2c2a97875bae041276e80"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "cef42be9f82eb3c58133710940e69879944ae119a0c91a030df4ae00fb1f2fe1"
+    }
+  ],
+  "native_build": [
+    {
+      "path": "amiga/out/bruce_test.exe",
+      "sha256": "8557bf53b4151d2ee83791552cdb43a8ebf9b1a65758a796bbf43d57cbe509da"
+    },
+    {
+      "path": "amiga/out/bruce_test.adf",
+      "sha256": "9bdc16090813dfe42b6c30b022c8e67298e37636d146eb619daf831296efaa94"
+    }
+  ],
+  "checks": {
+    "initial": 80,
+    "services": 4320,
+    "removal": 960,
+    "clock": 60,
+    "entry_steps": 908
+  },
+  "source_main_updates": 123,
+  "birth_blast_cases": 30,
+  "native_fixture_cases_per_run": 223,
+  "native_validation_complete": true,
+  "native_runs": 2,
+  "native_loop_iterations_per_run": 6000,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "full_actor_parity": false,
+  "full_m4_complete": false,
+  "realtime_gate_passed": false,
+  "limits": [
+    "Injected RAM/contact/register seams, not natural C64 play",
+    "Full actor/IRQ context and natural memory-read distribution not certified",
+    "Logical timer progression does not certify wall-clock or strict field cadence",
+    "Ordinary AI wait/retreat/collect-all combat and complete human-Yamo input remain open"
+  ]
+}

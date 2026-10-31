@@ -1,0 +1,71 @@
+{
+  "status": "passed_original_byte_contact_controls",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "checks": 4239,
+  "instructions": 2320683,
+  "entries": {
+    "$52AD": 384,
+    "$530A": 1138,
+    "$55AB": 256,
+    "$5431": 1192,
+    "$55E6": 96,
+    "$5658": 96,
+    "$56CA": 96,
+    "$537E": 725,
+    "$5212": 256
+  },
+  "service_register_cases": 489,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
+    },
+    {
+      "path": "tools/build_contact_class_kernel.py",
+      "sha256": "4818bc96edf6a4ac741e6a54fd2b50fa2ac8d137db254cac1e5499483f05b153"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    },
+    {
+      "path": "tools/verify_source_contact.py",
+      "sha256": "97854a7e01bd9971043e17221b72fcc94fd6def3cadb527d76b00c9987560044"
+    },
+    {
+      "path": "test-source-contact.ps1",
+      "sha256": "13be2b4a3df84fa7d86a20a5bcc15a6283619559b68f851f36e580146b9f606c"
+    }
+  ]
+}

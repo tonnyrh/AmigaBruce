@@ -1,0 +1,191 @@
+{
+  "status": "measured_variant2_not_promoted",
+  "rows": [
+    {
+      "room": 1,
+      "old_lines": 113273,
+      "new_lines": 112969,
+      "delta_lines": -304,
+      "percent": -0.268,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 2,
+      "old_lines": 112936,
+      "new_lines": 113201,
+      "delta_lines": 265,
+      "percent": 0.235,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 3,
+      "old_lines": 113268,
+      "new_lines": 113272,
+      "delta_lines": 4,
+      "percent": 0.004,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 4,
+      "old_lines": 113546,
+      "new_lines": 113539,
+      "delta_lines": -7,
+      "percent": -0.006,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 5,
+      "old_lines": 152055,
+      "new_lines": 152989,
+      "delta_lines": 934,
+      "percent": 0.614,
+      "old_missed": 4,
+      "new_missed": 4
+    },
+    {
+      "room": 6,
+      "old_lines": 144577,
+      "new_lines": 144585,
+      "delta_lines": 8,
+      "percent": 0.006,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 7,
+      "old_lines": 125458,
+      "new_lines": 124825,
+      "delta_lines": -633,
+      "percent": -0.505,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 8,
+      "old_lines": 125802,
+      "new_lines": 125800,
+      "delta_lines": -2,
+      "percent": -0.002,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 9,
+      "old_lines": 158886,
+      "new_lines": 158905,
+      "delta_lines": 19,
+      "percent": 0.012,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 10,
+      "old_lines": 167745,
+      "new_lines": 168374,
+      "delta_lines": 629,
+      "percent": 0.375,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 11,
+      "old_lines": 163773,
+      "new_lines": 164408,
+      "delta_lines": 635,
+      "percent": 0.388,
+      "old_missed": 3,
+      "new_missed": 4
+    },
+    {
+      "room": 12,
+      "old_lines": 128519,
+      "new_lines": 129771,
+      "delta_lines": 1252,
+      "percent": 0.974,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 13,
+      "old_lines": 155205,
+      "new_lines": 154276,
+      "delta_lines": -929,
+      "percent": -0.599,
+      "old_missed": 4,
+      "new_missed": 3
+    },
+    {
+      "room": 14,
+      "old_lines": 150053,
+      "new_lines": 150048,
+      "delta_lines": -5,
+      "percent": -0.003,
+      "old_missed": 3,
+      "new_missed": 3
+    },
+    {
+      "room": 15,
+      "old_lines": 138655,
+      "new_lines": 156903,
+      "delta_lines": 18248,
+      "percent": 13.161,
+      "old_missed": 5,
+      "new_missed": 2
+    },
+    {
+      "room": 16,
+      "old_lines": 156395,
+      "new_lines": 155445,
+      "delta_lines": -950,
+      "percent": -0.607,
+      "old_missed": 14,
+      "new_missed": 13
+    },
+    {
+      "room": 17,
+      "old_lines": 167853,
+      "new_lines": 166613,
+      "delta_lines": -1240,
+      "percent": -0.739,
+      "old_missed": 3,
+      "new_missed": 3
+    },
+    {
+      "room": 18,
+      "old_lines": 128860,
+      "new_lines": 127604,
+      "delta_lines": -1256,
+      "percent": -0.975,
+      "old_missed": 0,
+      "new_missed": 2
+    },
+    {
+      "room": 19,
+      "old_lines": 117314,
+      "new_lines": 116378,
+      "delta_lines": -936,
+      "percent": -0.798,
+      "old_missed": 0,
+      "new_missed": 0
+    },
+    {
+      "room": 20,
+      "old_lines": 217754,
+      "new_lines": 186463,
+      "delta_lines": -31291,
+      "percent": -14.37,
+      "old_missed": 219,
+      "new_missed": 110
+    }
+  ],
+  "before_lines": 2851927,
+  "after_lines": 2836368,
+  "before_missed": 255,
+  "after_missed": 144,
+  "independent_initial_states": false,
+  "natural_playthrough": false
+}

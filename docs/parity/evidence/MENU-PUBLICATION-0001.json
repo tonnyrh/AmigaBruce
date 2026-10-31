@@ -1,0 +1,25 @@
+{
+  "id": "MENU-PUBLICATION-0001",
+  "date": "2026-10-29",
+  "status": "scoped_native_ui_publication_verified",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "source_ranges": [
+    "$42C9-$42CC",
+    "$0743"
+  ],
+  "condition": "Amiga menu chooses the hidden existing bitmap; source options/start seam and source engine remain unchanged",
+  "effect": "Complete menu before Copper publication, latch fence before buffer reuse, game background copied into the actual hidden buffer; no new framebuffer or C64 rule",
+  "artifacts": [
+    {
+      "path": "docs/MENU_PUBLICATION.md",
+      "sha256": "fd723c6dc97f8d8f57a6424c9a2b22e90b411808d8ffd3a3e63a6ab7480a3686"
+    },
+    {
+      "path": "reference/validation/menu-publication.json",
+      "sha256": "acab55547db6113d535df9a3e4533cf35b8e45b97eb35656bdadb65ffa2a9555"
+    }
+  ]
+}

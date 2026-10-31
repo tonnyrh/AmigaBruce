@@ -1,0 +1,19 @@
+{
+  "source_main_sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185",
+  "overrides": [
+    {
+      "path": "reference/analysis/optimization-2026-10-27/r20-publication-profile/compiled-main.c",
+      "sha256": "a89dbf4e92907a74fa97cd13714ea8f712f5054df2d03fd5d6bc1f81a1144af3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/r20-publication-profile/compiled-build.ps1",
+      "sha256": "8b56818d28067cde88454d8f66b6f229b5a19587f3cab52416b33a0f9764ffbc"
+    }
+  ],
+  "changes": [
+    "Force diagnostic start_room=19 through source session start",
+    "Omit unused framebuffer capture allocation and matching allocation guard"
+  ],
+  "production_main_changed": false,
+  "method": "Profile includes first runtime full paint and cold work; priority evidence only, not clean unprofiled steady-state acceptance"
+}

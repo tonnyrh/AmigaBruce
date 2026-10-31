@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 [CmdletBinding()]
 param([Parameter(Mandatory=$true)][ValidatePattern('^[a-z0-9-]+$')][string]$Label,
-    [ValidateRange(0,3)][int]$PerfEnemies=3,[switch]$Profile,[switch]$Controlled,[switch]$SkipBuild,
+    [ValidateRange(0,3)][int]$PerfEnemies=3,[switch]$Profile,[switch]$SpriteCopy,[switch]$Controlled,[switch]$SkipBuild,
     [ValidateRange(360,30000)][int]$TestFrames=360,[ValidateRange(0,30000)][int]$SourceSteps=0)
 $ErrorActionPreference='Stop'
 if($SourceSteps -and ($Controlled -or $TestFrames -lt $SourceSteps)){throw 'Fixed source steps require PAL benchmark and sufficient outer-loop safety limit'}
@@ -10,7 +10,7 @@ $folder=Join-Path $taskRoot "reference/analysis/optimization-2026-10-27/$Label"
 if(Test-Path -LiteralPath $folder){throw 'Benchmark label already exists; keep previous measurements'}
 New-Item -ItemType Directory -Force $folder | Out-Null
 if(!$SkipBuild){
-    $build=@{Autotest=$true;TestFrames=$TestFrames;SourceProfile=$Profile;PerfEnemies=$PerfEnemies;PerfSourceSteps=$SourceSteps}
+    $build=@{Autotest=$true;TestFrames=$TestFrames;SourceProfile=$Profile;SpriteCopyTest=$SpriteCopy;PerfEnemies=$PerfEnemies;PerfSourceSteps=$SourceSteps}
     if($Controlled){$build.SourceWorldTest=$true}else{$build.SourcePerfTest=$true}
     & (Join-Path $taskRoot 'amiga-build.ps1') @build
 }
@@ -38,9 +38,9 @@ try{
         if($run['source_perf_steps'] -ne [string]$SourceSteps -or $run['source_world_steps'] -ne [string]$SourceSteps -or [int]$run['frames'] -ge $TestFrames){throw 'Benchmark did not reach exactly the requested source steps before safety limit'}
     }elseif($run['frames'] -ne [string]$TestFrames){throw 'Benchmark did not finish outer loops'}
     if($run['restored_os'] -ne '1'){throw 'Benchmark did not restore OS'}
-    $expectedKernelCases=if($Profile -or $Controlled){'454'}else{'1046'}
+    $expectedKernelCases=if($SpriteCopy){'710'}elseif($Profile -or $Controlled){'454'}else{'1046'}
     if($run['contact_kernel_cases'] -ne $expectedKernelCases){throw 'Native contact kernel controls missing'}
-    $expectedVicCases=if($Profile -or $Controlled){'0'}else{'1536'}
+    $expectedVicCases=if($Profile -or $Controlled -or $SpriteCopy){'0'}else{'1536'}
     if($run['vic_repeat_cases'] -ne $expectedVicCases){throw 'Native VIC repeat controls missing'}
     foreach($item in $identity){if((Get-FileHash (Join-Path $taskRoot $item.path)).Hash.ToLower() -ne $item.sha256){throw "Source changed during benchmark: $($item.path)"}}
     foreach($key in @('c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors','vic_compare_errors','contact_kernel_errors')){
@@ -48,7 +48,7 @@ try{
     if($Profile -and $run['perf_errors'] -ne '0'){throw 'Unbalanced profiler nesting'}
     Copy-Item -LiteralPath $report -Destination (Join-Path $folder 'native.txt')
     @{source_files=$identity;build=$buildIdentity;run=$run;controlled=[bool]$Controlled;
-        profile=[bool]$Profile;enemy_mask=$PerfEnemies;source_steps_target=$SourceSteps;outer_loop_limit=$TestFrames;edition_verified=$false;natural_playthrough=$false;
+        sprite_copy=[bool]$SpriteCopy;profile=[bool]$Profile;enemy_mask=$PerfEnemies;source_steps_target=$SourceSteps;outer_loop_limit=$TestFrames;edition_verified=$false;natural_playthrough=$false;
         method=$(if($Controlled){'One injected field per loop, source-world control route'}else{'Actual PAL scheduler, stationary invincible Bruce, source-world path; no fixture/capture in measured loop'});
         limits=@('Benchmark only; does not replace 53 native controls or real-time acceptance','Profile overhead and native diagnostic bookkeeping affect timing')} |
         ConvertTo-Json -Depth 8 | Set-Content (Join-Path $folder 'identity.json') -Encoding utf8

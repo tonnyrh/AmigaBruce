@@ -1,0 +1,22 @@
+{
+  "room": 12,
+  "glyph": "$93",
+  "source_writes": [
+    "$40D0->$AC9A",
+    "$40D3->$AC9B"
+  ],
+  "source_current_pair": [
+    32,
+    32
+  ],
+  "front_check": {
+    "illegal_pixels": 0,
+    "visible_pair": [
+      0,
+      0
+    ],
+    "equivalent_pairs": 1,
+    "checked_pixels": 16
+  },
+  "original_static_mismatches": 4
+}

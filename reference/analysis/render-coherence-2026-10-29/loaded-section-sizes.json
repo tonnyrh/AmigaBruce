@@ -1,0 +1,20 @@
+[
+  {
+    "label": "before",
+    "sections": {
+      ".text": 193166,
+      ".rodata": 78932,
+      ".data": 9,
+      ".bss": 171088
+    }
+  },
+  {
+    "label": "after",
+    "sections": {
+      ".text": 193728,
+      ".rodata": 78932,
+      ".data": 9,
+      ".bss": 171088
+    }
+  }
+]

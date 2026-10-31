@@ -1,0 +1,19 @@
+{
+  "status": "passed_current_normal_boot",
+  "method": "Owned paused complete menu against existing font/UI reference; optional source-main progression; no source-state writes",
+  "mode": "cli",
+  "normal_exe_sha256": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561",
+  "elf": {
+    "path": "amiga/out/bruce_amiga.elf",
+    "sha256": "bc37ad112d3bb47825adea9e1262e1ef8cc11503e3f3b47800d5a783d275b452"
+  },
+  "complete_menu": true,
+  "game_states": [],
+  "artifacts": [
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/normal-ui/cli/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    }
+  ],
+  "natural_playthrough": false
+}

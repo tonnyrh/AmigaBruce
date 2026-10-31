@@ -13,7 +13,7 @@
   "builds": [
     {
       "path": "amiga/out/bruce_amiga.elf",
-      "sha256": "f6fb4854b3a9b45ed58f72dfe72fc835201735d54b1fcd3476d9fb18675caac5"
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
     },
     {
       "path": "reference/analysis/optimization-2026-10-27/vic-repeat-scoped-final-timing/bruce_test.elf",
@@ -24,8 +24,8 @@
       "sha256": "23d6444a9c7bb11e1ccced2eb36aa532826346af25b7979ad2aa74118f4900ca"
     },
     {
-      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/521d8a57192f-1d21d84f3e72/bruce_test.elf",
-      "sha256": "1b7e406959542884d6583ed4e94bb01e3f995e8f947081755344a8e1f167206e"
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/24ce92aab8cc-76d646994c62/bruce_test.elf",
+      "sha256": "cb8a5614641993c679ff6cb41c08852b7cc4574c54dcbb61afe476c6650af56c"
     }
   ],
   "natural_playthrough": false,

@@ -1,0 +1,91 @@
+{
+  "status": "compiler_per_function_stack_report_only",
+  "cli_stack_reservation": 16384,
+  "whole_call_chain_bound_proven": false,
+  "flags": [
+    "-m68000",
+    "-O2",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fomit-frame-pointer",
+    "-fstack-usage",
+    "room module: -mshort",
+    "main: BL_AUTOTEST=0"
+  ],
+  "largest_frames": [
+    {
+      "function": "amiga/main.c:560:5:main",
+      "bytes": 716,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "function": "core/c64_rooms.c:390:6:bl_c64_load_at",
+      "bytes": 146,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "function": "core/c64_rooms.c:949:6:bl_c64_player_sprite_contact",
+      "bytes": 144,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "function": "core/c64_rooms.c:707:6:bl_c64_build_animation_cache",
+      "bytes": 108,
+      "kind": "static"
+    },
+    {
+      "function": "core/c64_rooms.c:819:23:bl_c64_paint_part",
+      "bytes": 96,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "function": "amiga/main.c:386:13:draw_fighter",
+      "bytes": 88,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "function": "core/c64_room_programs.h:2:13:room_code",
+      "bytes": 80,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "function": "core/c64_rooms.c:471:15:bl_c64_contact",
+      "bytes": 80,
+      "kind": "static"
+    },
+    {
+      "function": "core/c64_rooms.c:290:13:source_movers",
+      "bytes": 68,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "function": "core/c64_rooms.c:196:13:flush_glyph_changes",
+      "bytes": 62,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "function": "amiga/main.c:181:13:draw_room",
+      "bytes": 56,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "function": "amiga/main.c:161:13:text",
+      "bytes": 52,
+      "kind": "static"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "9f23ba6842887eacc43a9d61f6fcb9a59869ef2920f8be198df5aa55d8daa1f9"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "50f5c290af85409528cf8959a4ab4153ecfc92883d107f5ef706b495052e41f1"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "8787316c83872b14bd44a19e6871d56892c2c9fbf56b3c45372d5344c97c3616"
+    }
+  ]
+}

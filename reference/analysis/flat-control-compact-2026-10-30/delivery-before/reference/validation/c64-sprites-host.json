@@ -1,0 +1,68 @@
+{
+  "status": "passed_actual6502_pose_and_ripped_pixel_controls",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "full_actor_fsm_ported": false,
+  "natural_playthrough": false,
+  "selector_cases": 17280,
+  "native_fixture_cases": 324,
+  "pixel_checks": 211680,
+  "frames": 210,
+  "components": 210,
+  "cache_bytes": 73680,
+  "inputs": "Injected source state/counter/previous/contact/width/lock; unmodified source instructions",
+  "source_files": [
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "00436908bea47f0b2a3cf64a7555c3ba298f6782d4d3d0da3e530adf8cd42770"
+    },
+    {
+      "path": "core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a4faab307fd692995a67deee3900a694c11ef7c8fd13a5e3e1b8b05b37024bb8"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "tools/build_c64_sprites.py",
+      "sha256": "a8e60cf9f9c8fc1a6acc0ffc6d129e1b15232900e0a0223f5b41372cbe6895d7"
+    },
+    {
+      "path": "tools/build_fighter_dma.py",
+      "sha256": "8282019910f73e054f395b88cdf350fd8398afa778c0dc1f5146a254786d4d44"
+    },
+    {
+      "path": "tools/verify_c64_sprites.py",
+      "sha256": "fc85157571de9d4f9fdc1ce49435e41790d1e0d5d0c99c34bfa4d09ef903f76b"
+    },
+    {
+      "path": "test-c64-sprites.ps1",
+      "sha256": "960d8223c53f3926c9f92d1b4fda3c1caa710d1622c10197874182091fc5b19a"
+    },
+    {
+      "path": "assets/c64/sprites-v1/manifest.json",
+      "sha256": "6eec4a328b4b3b05cb20ed37c18b1c8aad3b896d5114dff4ed6fa135399bb298"
+    }
+  ],
+  "native_fixture": {
+    "path": "tests/sprite_fixture.h",
+    "sha256": "7bb591b6eec71c5d6ca366117324c09edf5ec8be43b3b5eba8d3a99baf6a9cc7"
+  },
+  "host_library": {
+    "path": ".tmp/c64-sprites-test/sprites.dll",
+    "sha256": "97e379644bf321ed56f2d9067dac7c5228564f2b3705afeff23f0096ec0fae5c"
+  }
+}

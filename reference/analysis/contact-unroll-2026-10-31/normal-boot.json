@@ -1,0 +1,37 @@
+{
+  "cli_complete_menu": true,
+  "adf_complete_menu": true,
+  "adf_source_progress": true,
+  "elf_sha256": "bc37ad112d3bb47825adea9e1262e1ef8cc11503e3f3b47800d5a783d275b452",
+  "artifacts": [
+    {
+      "path": "tools/check_contact_unroll_boot.py",
+      "sha256": "32094daa8ae56264cdbcf2ffd9b8c59d6ceee101bb12a3ce4ceca4cfff90ab16"
+    },
+    {
+      "path": "tools/test-contact-unroll-normal.ps1",
+      "sha256": "7bd6fb0f2bc43b85df5d0d85e27026bbc796e80bddeef637060367f24787bbc4"
+    },
+    {
+      "path": "tools/record_contact_unroll_boot.py",
+      "sha256": "cf07a9412ae07d09b9c7edc5de4c2089b86d31be484cfd8f35743d92383894a5"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/normal-ui/cli/report.json",
+      "sha256": "ab9f1f97a5d97abb84e427bd69868fce23909504fc9d344cb3eea065562c5c51"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/normal-ui/cli/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/normal-ui/adf/report.json",
+      "sha256": "17b20d3b62f50e3299cb5736c29a68d5081bae5cbcff33a7d18b626e4793a1be"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/normal-ui/adf/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    }
+  ],
+  "natural_playthrough": false
+}

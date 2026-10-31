@@ -1,0 +1,188 @@
+{
+  "status": "scoped_source_world_cache_occupancy",
+  "method": "Actual source-world start and explicit debug room jumps, then120 controlled source steps per room, invincible/no input; complete repaint and exact source pixels at every step. Host-only, not natural progression or timing.",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "cache_slots": 1024,
+  "peak_protected_slots": 162,
+  "rows": [
+    {
+      "requested_room": 1,
+      "max_protected_slots": 141,
+      "max_references": 880,
+      "largest_slot_references": 108,
+      "cumulative_source_steps": 120,
+      "final_room": 1
+    },
+    {
+      "requested_room": 2,
+      "max_protected_slots": 117,
+      "max_references": 880,
+      "largest_slot_references": 82,
+      "cumulative_source_steps": 240,
+      "final_room": 2
+    },
+    {
+      "requested_room": 3,
+      "max_protected_slots": 146,
+      "max_references": 880,
+      "largest_slot_references": 63,
+      "cumulative_source_steps": 360,
+      "final_room": 3
+    },
+    {
+      "requested_room": 4,
+      "max_protected_slots": 92,
+      "max_references": 880,
+      "largest_slot_references": 109,
+      "cumulative_source_steps": 480,
+      "final_room": 4
+    },
+    {
+      "requested_room": 5,
+      "max_protected_slots": 68,
+      "max_references": 880,
+      "largest_slot_references": 122,
+      "cumulative_source_steps": 601,
+      "final_room": 5
+    },
+    {
+      "requested_room": 6,
+      "max_protected_slots": 64,
+      "max_references": 880,
+      "largest_slot_references": 142,
+      "cumulative_source_steps": 721,
+      "final_room": 6
+    },
+    {
+      "requested_room": 7,
+      "max_protected_slots": 72,
+      "max_references": 880,
+      "largest_slot_references": 125,
+      "cumulative_source_steps": 841,
+      "final_room": 7
+    },
+    {
+      "requested_room": 8,
+      "max_protected_slots": 54,
+      "max_references": 880,
+      "largest_slot_references": 115,
+      "cumulative_source_steps": 961,
+      "final_room": 8
+    },
+    {
+      "requested_room": 9,
+      "max_protected_slots": 60,
+      "max_references": 880,
+      "largest_slot_references": 163,
+      "cumulative_source_steps": 1081,
+      "final_room": 9
+    },
+    {
+      "requested_room": 10,
+      "max_protected_slots": 64,
+      "max_references": 880,
+      "largest_slot_references": 160,
+      "cumulative_source_steps": 1201,
+      "final_room": 10
+    },
+    {
+      "requested_room": 11,
+      "max_protected_slots": 89,
+      "max_references": 880,
+      "largest_slot_references": 130,
+      "cumulative_source_steps": 1321,
+      "final_room": 11
+    },
+    {
+      "requested_room": 12,
+      "max_protected_slots": 58,
+      "max_references": 880,
+      "largest_slot_references": 126,
+      "cumulative_source_steps": 1441,
+      "final_room": 12
+    },
+    {
+      "requested_room": 13,
+      "max_protected_slots": 100,
+      "max_references": 880,
+      "largest_slot_references": 84,
+      "cumulative_source_steps": 1561,
+      "final_room": 13
+    },
+    {
+      "requested_room": 14,
+      "max_protected_slots": 36,
+      "max_references": 880,
+      "largest_slot_references": 246,
+      "cumulative_source_steps": 1681,
+      "final_room": 14
+    },
+    {
+      "requested_room": 15,
+      "max_protected_slots": 120,
+      "max_references": 880,
+      "largest_slot_references": 106,
+      "cumulative_source_steps": 1801,
+      "final_room": 15
+    },
+    {
+      "requested_room": 16,
+      "max_protected_slots": 69,
+      "max_references": 880,
+      "largest_slot_references": 193,
+      "cumulative_source_steps": 1921,
+      "final_room": 16
+    },
+    {
+      "requested_room": 17,
+      "max_protected_slots": 86,
+      "max_references": 880,
+      "largest_slot_references": 100,
+      "cumulative_source_steps": 2041,
+      "final_room": 17
+    },
+    {
+      "requested_room": 18,
+      "max_protected_slots": 55,
+      "max_references": 880,
+      "largest_slot_references": 217,
+      "cumulative_source_steps": 2161,
+      "final_room": 18
+    },
+    {
+      "requested_room": 19,
+      "max_protected_slots": 162,
+      "max_references": 880,
+      "largest_slot_references": 127,
+      "cumulative_source_steps": 2281,
+      "final_room": 19
+    },
+    {
+      "requested_room": 20,
+      "max_protected_slots": 80,
+      "max_references": 880,
+      "largest_slot_references": 111,
+      "cumulative_source_steps": 2402,
+      "final_room": 20
+    }
+  ],
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "b9141711fcf16dd3e56a295be74aa6421b0da0f6e91c3b1f53974d509335f3f6"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "185a0a3a6fa2cb7ea4ca3525ddd3d4d66bf5fab49fe0f5e037ba5720e005dc1c"
+    },
+    {
+      "path": "tests/source_paint_bridge.c",
+      "sha256": "71ab69cc2ec5fc91027619913992bdb1affe678d88ee8ee2e3f19df1758e7443"
+    },
+    {
+      "path": "reference/analysis/cache-sizing-2026-10-29/probe.c",
+      "sha256": "fe34efba47a0f864b0b615285ccf1315b1673fd1619d08ac33468304f2d339b8"
+    }
+  ]
+}

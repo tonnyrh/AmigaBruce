@@ -1,0 +1,28 @@
+{
+  "label": "sprite-copy-final-room3",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "cec3aed78363eb5d8d5fc85b0b4334027e7a13e5ce1461f5e17cb518dca96044"
+  },
+  "source_room": 3,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    354880,
+    354920,
+    354960,
+    355000
+  ],
+  "source_music_fields": 556,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/sprite-copy-final-room3.bpl",
+      "sha256": "d768d50631954177f24caeefa443250c8d0a626f3a52977307d2fae08bf857d8"
+    },
+    {
+      "path": "docs/images/session-sprite-copy-final-room3.png",
+      "sha256": "bac3a4ac7668a699803acfaf52b4889edfa67a1ffd7ff5133230fa927afdc2c4"
+    }
+  ]
+}

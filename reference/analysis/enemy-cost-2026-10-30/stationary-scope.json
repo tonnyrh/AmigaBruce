@@ -1,0 +1,37 @@
+{
+  "production_changed": false,
+  "method": "Injected static legal pose components from existing ripper; separated and overlapping layouts, no AI/main logic/Amiga actor painting during timed kernels. 8warm+64measured calls for field,contact,sprite expansion. Reset before normal measured main starts.",
+  "iterations": 64,
+  "inputs": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "7e2ee65e342803dfd711a6fc0513ec080666aee82841b4a7b63073b1e6ef0f99"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary/main.c",
+      "sha256": "4641939739db2c9ef9aa728d3210dfa506b40441602f3451ff10ae1b7913aaaf"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary-build.ps1",
+      "sha256": "76e682ad5b4db9bd69a50df20cefee64cd26b5b0744b64fc53cdd9cd1c724a03"
+    }
+  ]
+}

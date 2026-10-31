@@ -1,0 +1,24 @@
+{
+  "status": "rejected_counter_packing_diagnostic_allocation_failure",
+  "production_changed": false,
+  "frames": 0,
+  "before": {
+    "label": "sprite-publish-tour-before",
+    "sections": {
+      ".text": 210394,
+      ".rodata": 82064,
+      ".data": 21,
+      ".bss": 172580
+    }
+  },
+  "packed": {
+    "label": "sprite-publish-compact-before",
+    "sections": {
+      ".text": 210896,
+      ".rodata": 82064,
+      ".data": 21,
+      ".bss": 172260
+    }
+  },
+  "reason": "320 fewer BSS bytes but 502 additional code bytes; net load footprint worsened by182 bytes; no valid candidate workload measurement"
+}

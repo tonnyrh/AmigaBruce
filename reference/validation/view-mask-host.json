@@ -1,0 +1,37 @@
+{
+  "status": "passed_exhaustive_view_query_compatibility",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "method": "All13-bit masks and record lengths, plus wrapped/aliased pointers; previous C query and independent expected masks; selected full64KiB unchanged checks. This query is presentation metadata, not original6502 execution.",
+  "cases": 2293920,
+  "bulk_vectors": 1280,
+  "bulk_mask_checks": 25600,
+  "full_ram_compares": 1280,
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "tests/view_mask_bridge.c",
+      "sha256": "1f0c50d2ba6ef03127c097a44589a36d72554193411a99aff7833c606f127f38"
+    },
+    {
+      "path": "tools/verify_view_mask.py",
+      "sha256": "000d225a963ad518fe8633bb3b25390db637916481b73305328498b6ee0482d6"
+    },
+    {
+      "path": "test-view-mask.ps1",
+      "sha256": "eeded1edf43059523dae87d6867e0c6393f508aafc1a01e9344ccc3a8c537ca6"
+    },
+    {
+      "path": "reference/analysis/view-mask-2026-10-29/baseline/core/c64_rooms.c",
+      "sha256": "a50098fba4bf3bbbacb2493b5028c1413399e2f620ece23cbedeecc888689d9c"
+    }
+  ]
+}

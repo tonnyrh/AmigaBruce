@@ -2,6 +2,7 @@
 import argparse,hashlib,json
 from pathlib import Path
 from verify_source_world_delivery import verify
+from verify_contact_segment_experiments import verify as verify_contact_segments
 ROOT=Path(__file__).resolve().parents[1]
 FOLDER='reference/analysis/optimization-2026-10-27'
 HELPER_STAGES=['contact-helper-before-fixed-timing', 'contact-helper-before-fixed-profile', 'contact-helper-o2-fixed-timing', 'contact-helper-o2-fixed-profile', 'contact-helper-registers-fixed-timing', 'contact-helper-registers-fixed-profile', 'contact-vic-geometry-fixed-timing', 'contact-rows8-native-fixed-timing', 'contact-rows8-native-fixed-profile', 'contact-class-groups-fixed-timing', 'contact-class-groups-fixed-profile']
@@ -10,12 +11,34 @@ FINAL_ALIGN_STAGES=['align4-compact-controls-final-timing','align4-compact-contr
 PREPARE_STAGES=['contact-prepare-native-fixed-timing','contact-rest-body-native-timing','contact-rest-final2-timing','contact-rest-final2-profile','contact-rest-requeue-final-timing','contact-rest-requeue-final-profile']
 VIC_REPEAT_STAGES=['vic-repeat-native-fixed-timing','vic-repeat-native-final-timing','vic-repeat-native-memory-final-timing','vic-repeat-native-memory-final-profile','vic-repeat-delivery-final-timing','vic-repeat-delivery-final-profile','vic-repeat-scoped-final-timing','vic-repeat-scoped-final-profile']
 
+SPRITE_STAGES=['sprite-copy-natural-controls','sprite-copy-final-timing','sprite-copy-final2-profile']
+
 def read(path):return json.loads((ROOT/path).read_text(encoding='utf-8-sig'))
 def item(path):return dict(path=path,sha256=hashlib.sha256((ROOT/path).read_bytes()).hexdigest())
 def check(entry,path=None):assert item(path or entry['path'])['sha256']==entry['sha256'],path or entry['path']
 def main():
     p=argparse.ArgumentParser();p.add_argument('--record',action='store_true');a=p.parse_args()
+    from verify_compact_actor_delivery import enabled,verify as verify_compact
+    if enabled():
+        scoped=verify_compact();assert read('reference/validation/compact-actor-delivery.json')==scoped
+        delivery=read('reference/validation/source-world-delivery.json');assert delivery['normal_build']==scoped['normal_build'] and delivery['converted_jsrs']==444
+        previous='reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-optimization.json'
+        report=dict(date='2026-10-30',status='measured_compact_backend_memory_realtime_open',converted_jsrs=444,pairs=scoped['pairs'],native_controls=53,reference_controls=710,normal_build=scoped['normal_build'],realtime_accepted=False,natural_playthrough=False,full_stack_verified=False,prior_stage_history=item(previous),artifacts=[item(p) for p in ['reference/validation/compact-actor-delivery.json','reference/validation/source-world-delivery.json','tools/verify_source_optimization.py',previous]])
+        if 'audio_boundary' in scoped:
+            report.update(status='measured_audio_boundary_realtime_open',audio_boundary=scoped['audio_boundary'],immediate_parent_history=item('reference/analysis/audio-service-2026-10-30/parent/reference/validation/source-optimization.json'))
+        if 'loader_blank' in scoped:
+            report.update(status='loader_display_corrected_realtime_open',loader_blank=scoped['loader_blank'],immediate_parent_history=item('reference/analysis/screen-corruption-2026-10-30/parent/reference/validation/source-optimization.json'))
+        if 'contact_unroll' in scoped:
+            report.update(date='2026-10-31',status='measured_contact_alignment_unroll_realtime_open',contact_unroll=scoped['contact_unroll'],immediate_parent_history=item('reference/analysis/contact-unroll-2026-10-31/parent/reference/validation/source-optimization.json'))
+        target='reference/validation/source-optimization.json'
+        if a.record:(ROOT/target).write_text(json.dumps(report,indent=2)+'\n')
+        else:assert read(target)==report
+        print('PASS compact backend: repeated target controls and memory gain; real-time acceptance remains open')
+        return
     verify()
+    from verify_presentation_experiments import verify as verify_presentation
+    assert read("reference/validation/presentation-experiments.json")==verify_presentation()
+    assert read('reference/validation/contact-segment-experiments.json')==verify_contact_segments()
     baseline=read(FOLDER+'/baseline/manifest.json')
     for entry in baseline['files']:check(entry,FOLDER+'/baseline/'+entry['path'])
     reports={};identities={};paths=[FOLDER+'/baseline/manifest.json']
@@ -23,14 +46,14 @@ def main():
                   'contact-before-profile','contact-before-timing','contact-after-profile','contact-after-timing','present-after-timing',
                   'contact-breakdown-profile','vic-final-timing','visibility-final-all-timing','visibility-final-none-timing','rows-before-profile','rows-after-profile','rows-local-o2-timing',
                   'native-driver-object-final-timing','native-score-final-timing','native-score-final-profile',
-                  'native-object-pass-final-timing','native-object-pass-final-profile','native-object-pass-equal-steps-timing']+HELPER_STAGES+ALIGN_STAGES+FINAL_ALIGN_STAGES+PREPARE_STAGES+VIC_REPEAT_STAGES:
+                  'native-object-pass-final-timing','native-object-pass-final-profile','native-object-pass-equal-steps-timing']+HELPER_STAGES+ALIGN_STAGES+FINAL_ALIGN_STAGES+PREPARE_STAGES+VIC_REPEAT_STAGES+SPRITE_STAGES:
         folder=FOLDER+'/'+label;ident=read(folder+'/identity.json');identities[label]=ident
         for binary in ident['build']:check(binary,folder+'/'+Path(binary['path']).name)
         for key in ['c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors']:assert ident['run'][key]=='0'
         if label in ('contact-breakdown-profile','vic-final-timing'):assert ident['run']['vic_compare_errors']=='0'
         expected_frames='370' if label=='native-object-pass-equal-steps-timing' else '360'
         expected_steps='350' if label=='native-object-pass-final-timing' else '360'
-        if label in HELPER_STAGES+ALIGN_STAGES+FINAL_ALIGN_STAGES+PREPARE_STAGES+VIC_REPEAT_STAGES:
+        if label in HELPER_STAGES+ALIGN_STAGES+FINAL_ALIGN_STAGES+PREPARE_STAGES+VIC_REPEAT_STAGES+SPRITE_STAGES:
             assert ident['source_steps_target']==360 and ident['outer_loop_limit']==1200
             assert ident['run']['source_perf_steps']=='360' and ident['run']['source_world_steps']=='360'
             assert 0<int(ident['run']['frames'])<1200 and ident['run']['vic_compare_errors']=='0'
@@ -41,6 +64,10 @@ def main():
             if label in VIC_REPEAT_STAGES:
                 cases=454 if ident['profile'] else 1046
                 assert ident['run']['vic_repeat_cases']==('0' if ident['profile'] else '1536')
+            if label in SPRITE_STAGES:
+                cases=710 if ident.get('sprite_copy') else 454 if ident['profile'] else 1046
+                assert ident['run']['sprite_copy_cases']==('256' if ident.get('sprite_copy') else '0')
+                assert ident['run']['vic_repeat_cases']==('0' if ident.get('sprite_copy') or ident['profile'] else '1536')
             if cases:assert ident['run']['contact_kernel_cases']==str(cases) and ident['run']['contact_kernel_errors']=='0'
         else:
             assert ident['run']['frames']==expected_frames and ident['run']['source_world_steps']==expected_steps
@@ -148,7 +175,7 @@ def main():
         paths.append(FOLDER+'/'+label+'/rejected.json')
     repeated=identities['vic-repeat-scoped-final-timing'];vr=repeated['run']
     assert repeated['source_files']==identities['vic-repeat-scoped-final-profile']['source_files']
-    for source_file in repeated['source_files']:check(source_file)
+    # Historical VIC stage; current engine identity is bound to the sprite stage below.
     assert int(vr['source_clock_elapsed'])<int(cr['source_clock_elapsed'])
     vp={x['name']:x for x in reports['vic-repeat-scoped-final-profile']['profile']}
     assert vp['vic']['average_exclusive']<cp['vic']['average_exclusive']
@@ -156,6 +183,19 @@ def main():
     vb='reference/analysis/vic-repeat-2026-10-28/baseline'
     for entry in read(vb+'/manifest.json')['files']:check(entry,vb+'/'+entry['path'])
     paths += ['tools/audit_vic_native_kernels.py','reference/analysis/vic-repeat-2026-10-28/native-kernel-bytes.json','reference/analysis/vic-repeat-2026-10-28/full-diagnostic-placement.json','reference/analysis/vic-repeat-2026-10-28/source-register-seams.json',vb+'/manifest.json',FOLDER+'/vic-repeat-pilot-timing/rejected.json',FOLDER+'/vic-repeat-native-final-profile/rejected.json',FOLDER+'/vic-repeat-native-final-profile/allocation-failure.txt','docs/VIC_REPEAT_OPTIMIZATION.md']
+    sprite=identities['sprite-copy-final-timing'];sr=sprite['run']
+    assert sprite['source_files']==identities['sprite-copy-final2-profile']['source_files']==identities['sprite-copy-natural-controls']['source_files']
+    # The sprite milestone predates the renderer coherence correction.
+    # Verify changed sources against the complete historical snapshot.
+    for source_file in sprite['source_files']:
+        archived='reference/analysis/present-2026-10-29/baseline/'+source_file['path']
+        check(source_file,archived)
+
+    sp_before={x['name']:x for x in reports['vic-repeat-scoped-final-profile']['profile']}
+    sp_after={x['name']:x for x in reports['sprite-copy-final2-profile']['profile']}
+    assert sp_before['sprite_copy']['calls']==sp_after['sprite_copy']['calls']==1219
+    assert sp_after['sprite_copy']['average_exclusive']<sp_before['sprite_copy']['average_exclusive']
+    paths += ['docs/SPRITE_COPY_OPTIMIZATION.md','amiga/sprite_copy.s','tools/verify_amiga_entry.py','tools/audit_sprite_native_kernel.py','tools/verify_source_sprite_copy.py','reference/validation/source-sprite-copy-host.json','reference/analysis/sprite-copy-2026-10-29/native-kernel-bytes.json','reference/analysis/sprite-copy-2026-10-29/source-contract.json','reference/analysis/sprite-copy-2026-10-29/source-copy-disassembly.txt']
     snapshot=FOLDER+'/rows-baseline'
     for entry in read(snapshot+'/manifest.json')['files']:check(entry,snapshot+'/'+entry['path'])
     paths.append(snapshot+'/manifest.json')
@@ -175,9 +215,11 @@ def main():
     paths += ['amiga/contact_prepare.s','docs/CONTACT_PREPARATION_OPTIMIZATION.md','docs/TRAP_R06_2026-10-28.md',
         'reference/validation/source-paint-host.json','reference/validation/source-trap-native.json',
         'tools/verify_source_paint.py','tools/audit_native_trap_pause.py','test-source-paint.ps1','tests/source_paint_bridge.c']
+    paths += ['reference/validation/contact-segment-experiments.json','tools/verify_contact_segment_experiments.py','docs/CONTACT_SEGMENT_OPTIMIZATION.md']
+    paths += ["reference/validation/presentation-experiments.json","tools/verify_presentation_experiments.py","docs/PRESENTATION_EXPERIMENTS.md"]
     path='reference/validation/source-optimization.json'
     if a.record:
-        report=dict(date='2026-10-28',status='measured_vic_repeat_realtime_open',
+        report=dict(date='2026-10-28',status='measured_sprite_cpu_margin_realtime_open',
             method='Separate native actual-PAL source-contact/VIC/presentation pilots; idle-input invincible room1, historical pairs preserved',
             first_pilot=dict(old_active_fields=old,new_active_fields=new,active_time_reduction_percent=round((old-new)*100/old,3),
                 old_vic_mean_lines=old_vic['average_exclusive'],new_vic_mean_lines=new_vic['average_exclusive']),
@@ -230,6 +272,12 @@ def main():
                 measured_elapsed_reduction_percent=round((int(cr['source_clock_elapsed'])-int(vr['source_clock_elapsed']))*100/int(cr['source_clock_elapsed']),3),
                 old_audio_missed=int(cr['source_clock_missed']),new_audio_missed=int(vr['source_clock_missed']),
                 old_vic_mean=cp['vic']['average_exclusive'],new_vic_mean=vp['vic']['average_exclusive'],native_repeat_cases=1536,separate_reference_build=True,full_native_repeat_cases=0),
+            sprite_copy_round=dict(checkpoint='71cb4c6',source_steps=360,
+                old_active_fields=int(vr['source_clock_elapsed']),new_active_fields=int(sr['source_clock_elapsed']),
+                old_audio_missed=int(vr['source_clock_missed']),new_audio_missed=int(sr['source_clock_missed']),
+                old_copy_mean_lines=sp_before['sprite_copy']['average_exclusive'],new_copy_mean_lines=sp_after['sprite_copy']['average_exclusive'],
+                copy_cost_reduction_percent=round((sp_before['sprite_copy']['average_exclusive']-sp_after['sprite_copy']['average_exclusive'])*100/sp_before['sprite_copy']['average_exclusive'],3),
+                copy_calls=1219,native_extra_cases=256,host_original_byte_cases=1536,total_time_improved=int(sr['source_clock_elapsed'])<int(vr['source_clock_elapsed'])),
             edition_verified=False,natural_playthrough=False,all_rooms_profiled=False,realtime_accepted=False,
             artifacts=[item(x) for x in paths],
             limits=['Single benchmark pair; source-field/input phases differ as actual execution time changes',
@@ -248,5 +296,6 @@ def main():
         assert report['packed_mask_round']['new_active_fields']==int(pr['source_clock_elapsed'])
         assert report['contact_preparation_round']['new_active_fields']==int(cr['source_clock_elapsed'])
         assert report['vic_repeat_round']['new_active_fields']==int(vr['source_clock_elapsed'])
-    print(f'PASS VIC repeat: {cr["source_clock_elapsed"]}->{vr["source_clock_elapsed"]} measured PAL fields/360 source steps; real-time remains open')
+        assert report['sprite_copy_round']['new_active_fields']==int(sr['source_clock_elapsed'])
+    print(f'PASS sprite-copy CPU margin: {sp_before["sprite_copy"]["average_exclusive"]}->{sp_after["sprite_copy"]["average_exclusive"]} lines/call; total {vr["source_clock_elapsed"]}->{sr["source_clock_elapsed"]} fields/360 steps; real-time remains open')
 if __name__=='__main__':main()

@@ -1,0 +1,738 @@
+{
+  "status": "historical_rejected_no_total_speed_gain",
+  "date": "2026-10-29",
+  "checkpoint": "71cb4c6",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "baseline_pal_fields": 1428,
+  "baseline_missed_audio_ticks": 21,
+  "measurements": [
+    {
+      "label": "contact-segment-before-detail",
+      "variant": "baseline",
+      "detail_profile": true,
+      "source_steps": 360,
+      "pal_fields": 1759,
+      "missed_audio_ticks": 51,
+      "contact_kernel_cases": 454,
+      "contact_kernel_errors": 0,
+      "row_inclusive_lines": 28.273,
+      "row_exclusive_lines": 14.795,
+      "lane_exclusive_lines": 4.68
+    },
+    {
+      "label": "contact-segment-native-pilot2-timing",
+      "variant": "selector-pilot",
+      "detail_profile": false,
+      "source_steps": 360,
+      "pal_fields": 1428,
+      "missed_audio_ticks": 21,
+      "contact_kernel_cases": 1558,
+      "contact_kernel_errors": 0,
+      "row_inclusive_lines": null,
+      "row_exclusive_lines": null,
+      "lane_exclusive_lines": null
+    },
+    {
+      "label": "contact-segment-after-detail",
+      "variant": "selector-pilot",
+      "detail_profile": true,
+      "source_steps": 360,
+      "pal_fields": 1756,
+      "missed_audio_ticks": 51,
+      "contact_kernel_cases": 454,
+      "contact_kernel_errors": 0,
+      "row_inclusive_lines": 28.169,
+      "row_exclusive_lines": 14.359,
+      "lane_exclusive_lines": 5.083
+    },
+    {
+      "label": "contact-live-pilot-timing",
+      "variant": "live-pilot",
+      "detail_profile": false,
+      "source_steps": 360,
+      "pal_fields": 1431,
+      "missed_audio_ticks": 25,
+      "contact_kernel_cases": 1558,
+      "contact_kernel_errors": 0,
+      "row_inclusive_lines": null,
+      "row_exclusive_lines": null,
+      "lane_exclusive_lines": null
+    },
+    {
+      "label": "contact-flags-pilot-timing",
+      "variant": "final-candidate",
+      "detail_profile": false,
+      "source_steps": 360,
+      "pal_fields": 1428,
+      "missed_audio_ticks": 24,
+      "contact_kernel_cases": 1558,
+      "contact_kernel_errors": 0,
+      "row_inclusive_lines": null,
+      "row_exclusive_lines": null,
+      "lane_exclusive_lines": null
+    },
+    {
+      "label": "contact-flags-final-detail",
+      "variant": "final-candidate",
+      "detail_profile": true,
+      "source_steps": 360,
+      "pal_fields": 1760,
+      "missed_audio_ticks": 52,
+      "contact_kernel_cases": 454,
+      "contact_kernel_errors": 0,
+      "row_inclusive_lines": 28.215,
+      "row_exclusive_lines": 14.292,
+      "lane_exclusive_lines": 5.088
+    }
+  ],
+  "rejected_complete_row_run": [
+    {
+      "label": "contact-run-scoped3-controls",
+      "fields": 1428,
+      "kernel_cases": 710,
+      "errors": 0
+    },
+    {
+      "label": "contact-run-final-timing",
+      "fields": 1440,
+      "kernel_cases": 1046,
+      "errors": 0
+    },
+    {
+      "label": "contact-run-final-profile",
+      "fields": 1706,
+      "kernel_cases": 454,
+      "errors": 0
+    }
+  ],
+  "production_runtime_changed_in_round": false,
+  "archived_baseline_build": [
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/bruce_amiga.exe",
+      "sha256": "feb553d0bfd04277622ea23dedeec8ad65b550e111e0216c5dd97b81a7fcfa62"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/bruce_amiga.elf",
+      "sha256": "f6fb4854b3a9b45ed58f72dfe72fc835201735d54b1fcd3476d9fb18675caac5"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/bruce_amiga.adf",
+      "sha256": "51d0598673e4b19b487f32980e8e04c507b90b0c163dc3b75dc1893a1244e937"
+    }
+  ],
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "limits": [
+    "Single deterministic idle-input room1 route per variant; not all-room timing",
+    "Detailed profiler overhead changes timing and call attribution",
+    "Candidate512 extra tests passed separately; candidate53-fixture/full acceptance was not claimed",
+    "Historical baseline restored after this rejected round; subsequent production work is verified separately"
+  ],
+  "artifacts": [
+    {
+      "path": "tools/verify_contact_segment_experiments.py",
+      "sha256": "b64ac0386177c7da15c64289848003bcffe20bb0d6bf716691bd178524067c64"
+    },
+    {
+      "path": "docs/CONTACT_SEGMENT_OPTIMIZATION.md",
+      "sha256": "089d57d6c2bc4a4e2e9ee668e004fccd013b41c25cfbd8f5a13465239f938d10"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/source-row-disassembly.txt",
+      "sha256": "af5b3615a62dee2151d4a31fa5efba180fef790eb6f5d75d1c89bdde3860e382"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/manifest.json",
+      "sha256": "320af4273b826488e201eb5fd4efe461bd6f4212d49455fe277802da5660d1c7"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_rooms.c",
+      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_rooms.h",
+      "sha256": "14e3f03cd2fbc6e541c372746db8dc1b31da88081a22c4363bd0f67a2206ecd2"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/main.c",
+      "sha256": "871640d5964d33e31efab1cc4d6f960f8ed383a49affe8af10e729c889747da6"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/bruce_amiga.exe",
+      "sha256": "feb553d0bfd04277622ea23dedeec8ad65b550e111e0216c5dd97b81a7fcfa62"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/bruce_amiga.elf",
+      "sha256": "f6fb4854b3a9b45ed58f72dfe72fc835201735d54b1fcd3476d9fb18675caac5"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/bruce_amiga.adf",
+      "sha256": "51d0598673e4b19b487f32980e8e04c507b90b0c163dc3b75dc1893a1244e937"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_actor_programs.h",
+      "sha256": "131727831db097b479aa98ec4c8f6b9f7439f0e9cc04e770d2081af604f702a6"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_sprites.c",
+      "sha256": "ee7fb51449d755e20991a9ba8197bfbafe61b28443119cb84e113c89c8bd3cb8"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/combat.c",
+      "sha256": "143b6eb93713e73b71a7cdd5375f980abe14891fed594308fefd9b688d8614d6"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/game.c",
+      "sha256": "98dcd24df04e1b6f778543d395b029dcb1fc2a6627fd83b5df74bf1268af8d05"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/game.h",
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/rooms.c",
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/scene_copy.h",
+      "sha256": "5a09053558b66d8c453ad8c58a058fb44752967bbd900f74a54593c3e6678cc3"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/session.c",
+      "sha256": "c9a09029ce46c43b7c3c15ed05bdee43255565e385684524ca3a34b02d0f162e"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/session.h",
+      "sha256": "08ec809cffb30dbb5221e4af164f998e792eaac001d892179ef9fc96da18accf"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_climb.c",
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_climb.h",
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_dma.h",
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/c64_sprite_data.h",
+      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/combat_audio_data.h",
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/combat_audio.h",
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/fighter_art_data.h",
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/fighter_dma_data.h",
+      "sha256": "4e534017bb7b769ae5f8d6f96f2064582f965b8b8f3d9aa884767c55cc3367b2"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/intro_audio_data.h",
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/intro_audio.h",
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/room_background_data.h",
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/runtime.c",
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/source_audio.h",
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/start.s",
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/baseline/amiga/vic_compare.s",
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/selector-pilot/manifest.json",
+      "sha256": "cc5322e24ddea771c62f3582570042469919a769f3322da8d981b5165ba2d53b"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/selector-pilot/core/c64_rooms.c",
+      "sha256": "063d34f0e0cb3ee169d1ca3995ebd041fcb10012bf7a3b5fd411d70752199d2b"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/selector-pilot/core/c64_rooms.h",
+      "sha256": "465cbc51bb6125c413f6a8858036f11f3a1de6c3a51c01b10b5a697dde7d88c0"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/selector-pilot/amiga/contact_rows.s",
+      "sha256": "ae89a8257d41a264632451b406088928aefe097f897b41ea6b92651df7a80bce"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/live-pilot/manifest.json",
+      "sha256": "4dbe22b73675b790f25839c6ec84cbf846caaa641b94a9d1f02adfa495913c22"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/live-pilot/core/c64_rooms.c",
+      "sha256": "28bfbd3f5ea5445c0e4ccd43e3e3396cfc30af3f0d8a7c285953eefdf4879bb6"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/live-pilot/core/c64_rooms.h",
+      "sha256": "465cbc51bb6125c413f6a8858036f11f3a1de6c3a51c01b10b5a697dde7d88c0"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/live-pilot/amiga/contact_rows.s",
+      "sha256": "ae89a8257d41a264632451b406088928aefe097f897b41ea6b92651df7a80bce"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/final-candidate/manifest.json",
+      "sha256": "599d8125ff0f755df8116b6f33c976078aaa96c8e8182040052cb98992e07a2c"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/final-candidate/core/c64_rooms.c",
+      "sha256": "cb5c22f460b8bfc93aadd37e4e43eb831897e457e561786f5f596ddb8b13b96f"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/final-candidate/core/c64_rooms.h",
+      "sha256": "465cbc51bb6125c413f6a8858036f11f3a1de6c3a51c01b10b5a697dde7d88c0"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/final-candidate/amiga/contact_rows.s",
+      "sha256": "ae89a8257d41a264632451b406088928aefe097f897b41ea6b92651df7a80bce"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/final-candidate/amiga-build.ps1",
+      "sha256": "32ebfcd270edbe91a11da077a8a5b21d5fa7ad2d67cd429a4a13f46d9708c951"
+    },
+    {
+      "path": "reference/analysis/contact-segments-2026-10-29/final-candidate/test-source-performance.ps1",
+      "sha256": "4907266e5ad91fda4023e4ac562125da38ae638d6262161cab3c8e2a4ccc3a64"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-repeat-scoped-final-timing/identity.json",
+      "sha256": "768628d063b03a822a4a30118aa8b93f1995fb3b10c564c8065abf6e828bd9c3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-repeat-scoped-final-profile/identity.json",
+      "sha256": "fe50f5d2e002385295d1bbae8d6b3b98c723d746de891a94d4053e38d78f0627"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-before-detail/bruce_test.exe",
+      "sha256": "d1e132d0b68bab72a2e18ddc8fe723e1260f5f2f9c71a690ccae5d332e3cb1ca"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-before-detail/bruce_test.elf",
+      "sha256": "21178ee5f168cbcb7f465ba4770f598a10223618d9d5c2f682b6a381ed320a1b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-before-detail/bruce_test.adf",
+      "sha256": "52a39b4e35914088b47862b47de69180dc58d54fd31426d3ed6f0244ebf5a139"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-before-detail/identity.json",
+      "sha256": "8f9fc0572d8fc6446e4a363e46859880f8939c3fe8b79be21c5e7d4b1b50f830"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-before-detail/native.txt",
+      "sha256": "4248ff59eb83ed7c1dd445ba6cdf362adb770ff892ac9c2d9694d764ba3ad57d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-before-detail/native.json",
+      "sha256": "8add34aa5f2ab6981dc463f1cb528336df1097f1263d1aa56d41be36c862d282"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-native-pilot2-timing/bruce_test.exe",
+      "sha256": "bd09d41562d0a9e6ec06f58cc0f071df14886b9455fbdcf4a6fedaf07438092a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-native-pilot2-timing/bruce_test.elf",
+      "sha256": "ccf6ea3bc7dc72c62bb6eb36f84b333ef7a111c29cea4b10ed0b6b0b90ba5f8e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-native-pilot2-timing/bruce_test.adf",
+      "sha256": "12bf5957d32d16679c2d7a49b5c0af9a071618a50b3c3a03991a399fafbcc1bb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-native-pilot2-timing/identity.json",
+      "sha256": "761b0341faea8cb68bed7004bae6d0982682ea43f128d6e3590264b13ff69658"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-native-pilot2-timing/native.txt",
+      "sha256": "d190424686c963af98e075359da7edcf7a04146a188ad20babf272fc53b785e1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-native-pilot2-timing/native.json",
+      "sha256": "56c0627f9d529f27a8d9d4226d21b85c4d21121662adebd19428088148ef698f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-after-detail/bruce_test.exe",
+      "sha256": "5948b8324c2d0af60d989a6f0e5161400a273ed3867abe8bdfb15f4e9ec13f3a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-after-detail/bruce_test.elf",
+      "sha256": "b99efb1484789e0784a5011646e6310712d65e11ba20d72250e2433c5ef7015e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-after-detail/bruce_test.adf",
+      "sha256": "5814ebcc1858c997bbc68263c39410d8ac2eaa8e539654dc756eb86fae92e2da"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-after-detail/identity.json",
+      "sha256": "e225edc4a7c33c9fafbb0624fa3bc5f4736974684f2d3895c15a75c4836db884"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-after-detail/native.txt",
+      "sha256": "5892f488a5d524f63eaba40be461ac599b18125d21d25a82172727b49de045cd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-segment-after-detail/native.json",
+      "sha256": "c9d7690eac2ab7f957e374c88b4dfb817b21d9df2dd681036235e5b82eac74fb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-live-pilot-timing/bruce_test.exe",
+      "sha256": "9c8a7c81d8d9af9ce2ab5858a43961a7ba224858e37f0942aeffcff526bc2795"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-live-pilot-timing/bruce_test.elf",
+      "sha256": "098a5b5b8db8ea396c9349e64ac5cbdb3e56f75e43fb3acfc8cc7b1aebf10461"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-live-pilot-timing/bruce_test.adf",
+      "sha256": "461ca360b657c4aa9e220892788dc494860a4bd0377d989775710fcfe0f8eec6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-live-pilot-timing/identity.json",
+      "sha256": "940b49097eebf4450a2fe6c618bb14a1a41345ce913df03532754d989f3aaabc"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-live-pilot-timing/native.txt",
+      "sha256": "2b44be0aea251c3159709c2db3f051e94b37fbfe813e013d43a35b8d81f151ce"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-live-pilot-timing/native.json",
+      "sha256": "11edfd0bde24ea51a6cfe4d8d941f87a0a5b76f1cd517bf791965e67db2159e3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-pilot-timing/bruce_test.exe",
+      "sha256": "2c1794cfed28f444e8e09552338600be29efb45aafa1844520706135e80d5c2c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-pilot-timing/bruce_test.elf",
+      "sha256": "4d0cc6f57757a0239095b243b3bee8a08f1d114cafc6fd9003a118a70c5eeb46"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-pilot-timing/bruce_test.adf",
+      "sha256": "8f2d31e56f3cb1529bb6a50d6aa57a2d02f2409979b2b311b7e152cdf862f5d6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-pilot-timing/identity.json",
+      "sha256": "3a5d18caa145438d5a9c2fadc6601ab1efb21735601ca64d8401be316e5dc085"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-pilot-timing/native.txt",
+      "sha256": "ac60dfa23c8de4e577c03e13ac4ca2407b95a3627433281424b13f158b654cef"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-pilot-timing/native.json",
+      "sha256": "8199c54c1248fbaa9773e6361740d0b07263e0f417ad40be90bc65a8e6d17c2c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-final-detail/bruce_test.exe",
+      "sha256": "950dd5c56b02821bb93a748882988664a5b41309715fee84151d1ae5d451cf38"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-final-detail/bruce_test.elf",
+      "sha256": "f1f1bd2654c61e7d6abdd76a9385755bc5f15392dc617f3cc7d70e97dbf74c14"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-final-detail/bruce_test.adf",
+      "sha256": "57c62269cc6d3948d6473f90874f6dceafa069915b64fb94fc3a403d1a63c3a9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-final-detail/identity.json",
+      "sha256": "a551f3d566834c7640fcb2ed5cffcc2b6e71068a0ece21ba29638b6aa72c98a1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-final-detail/native.txt",
+      "sha256": "2e5d63ad11cb2567c338f0300ce556b7b07bbaf4dcb9c0e0b8837126239953ad"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-flags-final-detail/native.json",
+      "sha256": "cc78937f159dee1b66d809329ec7763459bf7ab1c3f8bfd6a5dcd38b216cf5dc"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/baseline/manifest.json",
+      "sha256": "f25255df13a31cda35ac9b1b339c1fd0a7ae77c93edd721c0cc754894f299bc0"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/baseline/core/c64_rooms.c",
+      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/baseline/core/c64_rooms.h",
+      "sha256": "14e3f03cd2fbc6e541c372746db8dc1b31da88081a22c4363bd0f67a2206ecd2"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/baseline/amiga-build.ps1",
+      "sha256": "2611b57303cb8783e4c1f1457be960bebfd43b40ae0e3c86409aa81dcb69feb1"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/baseline/test-source-performance.ps1",
+      "sha256": "f7003e015eefc1e418eb180d5eddee555a5cc650b2bda170c949d40790251c58"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/candidate/manifest.json",
+      "sha256": "a0147d88fff59cbfea211df85191d0087e89cac839c2a379cfdd8715517b4968"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/candidate/core/c64_rooms.c",
+      "sha256": "b4631f1e14cd3b6db6a3bc94c50f7ac5faa2fa515467dd92b36618eec009a175"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/candidate/core/c64_rooms.h",
+      "sha256": "d18d7179a2feb809211219ef84ad5436fc5734b62b6e4cca8d0db0e59a1ad085"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/candidate/amiga/contact_run.s",
+      "sha256": "b25381c619a513e5d437a8c9d44bdf95b5d9a82ada182b3f3acb04fbf1b0c85d"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/candidate/amiga-build.ps1",
+      "sha256": "f0ed76832b318568026134eb79913a36d8f92c084544ab1569a0e141165a00f6"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/candidate/test-source-performance.ps1",
+      "sha256": "588cd94a25d3dfc37441b8b43346e536b9e70aeaa16149cc4b573c17baa783d7"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-combined-diagnostic/rejected.json",
+      "sha256": "0ab5c36f8619d9efebf2c70775f81025eed2a5701c74b6601d954c580249c4b0"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-combined-diagnostic/core/c64_rooms.c",
+      "sha256": "77e0962ff8b75b3c26a5160aeef9ebeb924396d4bf42cc82a8a594d8dd5a0a79"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-combined-diagnostic/core/c64_rooms.h",
+      "sha256": "4d132300fb45b3167b2df0c8b60d9bb4cad1c87d6fa54bf6e55c51ea87f592ad"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-combined-diagnostic/amiga/contact_run.s",
+      "sha256": "a69564740f76fec840bae64131b93c0588c0f9bb3343a6f4abddc2df8364c813"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-combined-diagnostic/amiga-build.ps1",
+      "sha256": "c0963d7120cff92b8c547c41ea7d54b721585ae7723c931a4ea62771bce7a6e5"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-combined-diagnostic/test-source-performance.ps1",
+      "sha256": "2e3a143d2970a2212cf50ec09818a85de14590ec428071e51b4f4d334ddfb332"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-cold-entry/rejected.json",
+      "sha256": "8b58262e04ae2ca0fb8d3d169e06e04182fce0a9a469cb9bc720407d13533d0e"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-cold-entry/core/c64_rooms.c",
+      "sha256": "a79bd6feb5c194b7876e0c7783ea029bb9d7690d40a9b55646b380e90b9326f6"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-cold-entry/core/c64_rooms.h",
+      "sha256": "d18d7179a2feb809211219ef84ad5436fc5734b62b6e4cca8d0db0e59a1ad085"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-cold-entry/amiga/contact_run.s",
+      "sha256": "a69564740f76fec840bae64131b93c0588c0f9bb3343a6f4abddc2df8364c813"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-cold-entry/amiga-build.ps1",
+      "sha256": "5f0c8091a41ce3e36698e48bb8e7c9985554f2050b5dc782053ff08b92128207"
+    },
+    {
+      "path": "reference/analysis/contact-run-2026-10-29/rejected-cold-entry/test-source-performance.ps1",
+      "sha256": "588cd94a25d3dfc37441b8b43346e536b9e70aeaa16149cc4b573c17baa783d7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped3-controls/bruce_test.exe",
+      "sha256": "e1b5a0c5a48f592bee28e8ed5a8f7f52f685e3d92435a6d22a966bff4a7c91d7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped3-controls/bruce_test.elf",
+      "sha256": "6e111c91cb44529038708e604857dd00fb514e1bdb59d2d3ae3a2705402ce32e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped3-controls/bruce_test.adf",
+      "sha256": "e5c5faae449e0449b1bd54b62fd4c766471c40d4802c402be2fef3520b3444f1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped3-controls/identity.json",
+      "sha256": "564281a48c2c581ff7c08abdb7c4149555f1322d2a1becf28f2e94cdeebf1550"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped3-controls/native.txt",
+      "sha256": "0a3cb67a014abd38c8f2d1ab5699298a31e245d9f2c7e92a387b665376de68d8"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped3-controls/native.json",
+      "sha256": "56c0627f9d529f27a8d9d4226d21b85c4d21121662adebd19428088148ef698f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-timing/bruce_test.exe",
+      "sha256": "19092bff2f34035b77685f908b2ee058e00275e1f90dcd22e6f9e3387bf52bee"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-timing/bruce_test.elf",
+      "sha256": "05b48ae6c59108f4c33360d3319a3698c6ce2ba054c8139c2fca5c0cbb3f94d2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-timing/bruce_test.adf",
+      "sha256": "68ca70a4440c32382c8b6e76ef6ab9d008c1e04172e0e6eb85dccfc4747aa13f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-timing/identity.json",
+      "sha256": "78e068aefd528be0f048a04b292bdc3fd290a5fb29db31484a04215f5f504d80"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-timing/native.txt",
+      "sha256": "62cc0a55d6d031ca206cc7e77c59f98d2e7a3fb1f2290b69d08cbbb83a3ad7c2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-timing/native.json",
+      "sha256": "56c0627f9d529f27a8d9d4226d21b85c4d21121662adebd19428088148ef698f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-profile/bruce_test.exe",
+      "sha256": "c20611e9e0b82d13e8620a5b9e65d2fe7428ff33cb40c2233398481bb461cbd9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-profile/bruce_test.elf",
+      "sha256": "41d4085dda35f9e03a39d69bd81212ccb911bd59e11a1e37be89de96380298a1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-profile/bruce_test.adf",
+      "sha256": "e08962a1356cd0d657b4b66f788c892f28f700d85cac60de9415fd87e57679fa"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-profile/identity.json",
+      "sha256": "d45ffe4608db19d1b3f7667ef5cd63dc0de7cca91aa986874f33ba8718d794a5"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-profile/native.txt",
+      "sha256": "0491d1423a97cd6080a417829c878fda1fbefbd016b997598f37c3ce04a10d07"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-final-profile/native.json",
+      "sha256": "1f11e2e79e71c6c51d9104c8552099eee662937aec83cbd9b6b3a899a9f9eb08"
+    }
+  ]
+}

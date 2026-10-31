@@ -1,0 +1,21 @@
+
+C:\vscode\_EXT\AmigaBruceLee\amiga\out\bruce_amiga.elf:     file format elf32-m68k
+
+
+Disassembly of section .text:
+
+000040ce <present_frame.isra.0>:
+    40ce:	2f0a           	move.l a2,-(sp)
+    40d0:	4eb9 0000 3b68 	jsr 3b68 <wait_blitter>
+    40d6:	45f9 0000 3aaa 	lea 3aaa <wait_frame>,a2
+    40dc:	4e92           	jsr (a2)
+    40de:	2039 00df f004 	move.l dff004 <_end+0xd913a8>,d0
+    40e4:	e088           	lsr.l #8,d0
+    40e6:	0240 01ff      	andi.w #511,d0
+    40ea:	0640 fed4      	addi.w #-300,d0
+    40ee:	0c40 0008      	cmpi.w #8,d0
+    40f2:	62e8           	bhi.s 40dc <present_frame.isra.0+0xe>
+    40f4:	23ef 0008 00df 	move.l 8(sp),dff080 <_end+0xd91424>
+    40fa:	f080 
+    40fc:	245f           	movea.l (sp)+,a2
+    40fe:	4e75           	rts

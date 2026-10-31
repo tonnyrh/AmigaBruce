@@ -1,39 +1,32 @@
 {
   "id": "ACTOR-CHAIN-0001",
-  "date": "2026-10-28",
-  "status": "scoped_complete_source_chain_implemented_acceptance_open",
+  "date": "2026-10-30",
+  "status": "scoped_complete_contact_alignment_unroll_acceptance_open",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "primary_edition_verified": false,
   "natural_playthrough": false,
   "full_original_parity": false,
-  "source_ranges": [
-    "$0743-$1100",
-    "$15A8-$1981",
-    "$1BC2-$33CA",
-    "$40BC",
-    "$5212-$56FF"
-  ],
-  "condition": "Complete source main/actor/contact/object/combat/lifetime/score chain in shared RAM; explicit CIA/VIC/field-wait seams",
+  "condition": "Complete source chain with byte-preserving native continuation plumbing; source RAM/register/return, forced recursive fallback, native primitives and normal image controls",
   "controls": {
     "source": 3034,
     "integrated": 5,
-    "native": 53
+    "native": 53,
+    "reference": 710
   },
   "artifacts": [
     {
-      "path": "reference/validation/source-world-delivery.json",
-      "sha256": "57edf284038831c725244dc2c07947ee21777b1239ea88fa82dd4b2117563cc5"
+      "path": "reference/validation/compact-actor-delivery.json",
+      "sha256": "f79adac2cd89654c55c74fd5fcf19d2170768971a30d8db9fa13c5c14e19f677"
     },
     {
-      "path": "docs/MILESTONE_COMPLETION.md",
-      "sha256": "223064275395e1eb404d1444180b6cfce1597108360e7487d7d2d52a63d0e88f"
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "566baeca46df42b244ba97f3d268392b5951cadac0f0ccd9a72daa8410adb0da"
     }
   ],
   "limitations": [
-    "Verified untouched1984 edition",
-    "PAL real-time budget across all rooms",
-    "Natural VIC/IRQ phase and reader distribution",
-    "Complete natural playthrough and next round",
-    "Physical A500 and final distribution"
+    "Verified untouched 1984 edition",
+    "Full PAL real-time cadence and natural IRQ/input phase",
+    "Whole native stack high-water",
+    "Complete natural playthrough and physical A500"
   ]
 }

@@ -24,12 +24,13 @@
     },
     {
       "path": "reference/analysis/ceiling-r06-2026-10-28/report.json",
-      "sha256": "b0da75e8b143c9d21fb7eaf87bd3dc0823d31ed7e70cc9472227459bc3251021"
+      "sha256": "75c91b5ed9f36f0d7b4944e99d0d84c6971f28b7847d0cdfe687d09701874c95"
     }
   ],
   "limitations": [
     "Injected source calls and whole-RAM host comparisons; no IRQ/raster/room-loop/combat or natural-play claim",
     "No snapshot/input history for the exact user head bump"
   ],
-  "rechecked_with_vic_repeat_host_port": true
+  "rechecked_with_vic_repeat_host_port": true,
+  "rechecked_with_sprite_copy_host_port": true
 }

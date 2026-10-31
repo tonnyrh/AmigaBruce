@@ -1,0 +1,61 @@
+{
+  "status": "passed_original_writer_and_native_color_kernel_linkage",
+  "builds": [
+    {
+      "path": "reference/analysis/publication-2026-10-30/before/amiga/out/bruce_amiga.elf",
+      "sha256": "2d57a281fbd96c86a7182bb18e728851c4389fabf69c0747f5aeae4a66550022"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/529258031cb9-e998a45620a0/bruce_test.elf",
+      "sha256": "2004f355a2a73438725d2081d75c07bdf00723b3a1baf4f60b3e5b5a9d0c1495"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-r01-v3/bruce_test.elf",
+      "sha256": "bce276495fc0eb23eda3407e92def97c87ada0071d8186b075d846c400ded1f0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/final-colors-tour-v3/bruce_test.elf",
+      "sha256": "1cf7e813be596c440dd2f60ccd5838332401f1aa501be80d5710a7a5336a08f3"
+    }
+  ],
+  "kernels": {
+    "source_written": {
+      "bytes": 810,
+      "unlinked_sha256": "ca37dd8b1eced96f988762591ec2604d5c7176f942696581a2a6eb091cfd5cb4",
+      "relocations": 41
+    },
+    "animation_cell_changed_active": {
+      "bytes": 200,
+      "unlinked_sha256": "ee9cec98c6ba57f2e41baeba678407f98b631e5ff792695907dab8b244c32b20",
+      "relocations": 8
+    },
+    "source_final_colors": {
+      "bytes": 306,
+      "unlinked_sha256": "f91fd6c33a632891ac5497968097df760092ff717bf4902d14ca8b7122706816",
+      "relocations": 17
+    }
+  },
+  "artifacts": [
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/compiler-probes/before.o",
+      "sha256": "fa7020c8f8ff588292707a3f989d80cd15f4a4a8b9904ca70e3f527278cdf3b3"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/compiler-probes/production.o",
+      "sha256": "201b1b299eec6872c2e595679e966937a99cee1f5d71c49a97c117f6e557b274"
+    },
+    {
+      "path": "tools/audit_final_color_images.py",
+      "sha256": "631a86a2d33708e811491eceadaae6f4c1e0ffa7520e4d00f7bee9b69e5e9eb7"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/v3-image-paths.json",
+      "sha256": "8f01bbb0e0c6cfdce8f52f464641196de74cf940d3baa76e79ca1260ba11cd6b"
+    }
+  ],
+  "limits": [
+    "Original writer/active-metadata object bytes and resolved call/data references preserved",
+    "Historical V3 color kernel matched across its archived normal,53-fixture,710-control and20-room images; current renderer has a separate exact derivation",
+    "No original-edition, natural-play or real-time certification"
+  ]
+}

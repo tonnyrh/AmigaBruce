@@ -1,0 +1,25 @@
+{
+  "builder": "compiled-build.ps1",
+  "reference": "reference/analysis/optimization-2026-10-27/cpu-register-layout-before/identity.json",
+  "core": "reference/analysis/flat-control-compact-2026-10-30/candidate/c64_rooms.c",
+  "production_core_compiled": false,
+  "actual_inputs": [
+    {
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+      "path": "reference/analysis/flat-control-compact-2026-10-30/candidate/c64_rooms.c"
+    },
+    {
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e",
+      "path": "reference/analysis/flat-control-compact-2026-10-30/candidate/c64_actor_programs.h"
+    },
+    {
+      "sha256": "8bc74fd83a9eef7922430393a673de0d7c4e06ebe66f42a78e2641f2602b85c4",
+      "path": ".tmp/flat-control-compact-performance/build.ps1"
+    },
+    {
+      "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1",
+      "path": ".tmp/op0-r01-profile/main.c"
+    }
+  ],
+  "main": "compiled-main.c"
+}

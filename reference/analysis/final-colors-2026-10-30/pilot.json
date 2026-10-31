@@ -1,0 +1,127 @@
+{
+  "status": "variant3_incremental_delivery_native_and_ui_verified_realtime_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "r20_unprofiled": [
+    {
+      "label": "final-colors-before-timing",
+      "source_clock_elapsed": 660,
+      "source_clock_missed": 178,
+      "source_clock_starts": 2,
+      "source_audio_fields": 364,
+      "source_music_fields": 120,
+      "max_held_image_streak": 0,
+      "held_changed": 0,
+      "chip_largest_loaded": 44440,
+      "drawn_image_fields": 120,
+      "frames": 120
+    },
+    {
+      "label": "final-colors-after-timing",
+      "source_clock_elapsed": 574,
+      "source_clock_missed": 82,
+      "source_clock_starts": 2,
+      "source_audio_fields": 374,
+      "source_music_fields": 120,
+      "max_held_image_streak": 1,
+      "held_changed": 6,
+      "chip_largest_loaded": 44440,
+      "drawn_image_fields": 115,
+      "frames": 121
+    }
+  ],
+  "elapsed_reduction_percent": 13.03,
+  "limitations": [
+    "Elapsed includes title and game; compare identical boot/input/step protocols only.",
+    "RoomTour diagnostic binary has extra code; Chip44440 is below49152 delivery gate. No memory acceptance claimed for this research image.",
+    "Before-profile image failed allocation; raw failure retained.",
+    "Normal production EXE/ADF have not been replaced.",
+    "Original-byte and renderer-state controls do not certify original edition/raster/natural play."
+  ],
+  "native_fixture": {
+    "variant": 3,
+    "current_candidate": true,
+    "cases": 53,
+    "loops": 1200,
+    "chip_largest": 52632,
+    "realtime_contract_passed": false,
+    "report_sha256": "dc44751dcaee668553fa64a572c058c2d7fddd8bdf60cddbe4c4f5535d99f0ae",
+    "build": [
+      {
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/529258031cb9-e998a45620a0/bruce_test.exe",
+        "sha256": "529258031cb9da9f3d20c9d3a5fb3d7a3f6ceb75d3606df939c2da8a0fc9476b"
+      },
+      {
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/529258031cb9-e998a45620a0/bruce_test.elf",
+        "sha256": "2004f355a2a73438725d2081d75c07bdf00723b3a1baf4f60b3e5b5a9d0c1495"
+      },
+      {
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/529258031cb9-e998a45620a0/bruce_test.adf",
+        "sha256": "e998a45620a04620c528bfda9e952d70fce3640d2b7afe858c3e176de401cb8d"
+      }
+    ]
+  },
+  "current_variant": 3,
+  "prior_variant_decisions": [
+    {
+      "variant": 1,
+      "status": "not_promoted_room15_regression",
+      "archive": "variant1/manifest.json"
+    },
+    {
+      "variant": 2,
+      "status": "not_promoted_room15_regression",
+      "archive": "variant2/manifest.json"
+    }
+  ],
+  "variant3_tour": "tour-v3-comparison.json",
+  "variant3_native_fixture": "passed",
+  "prior_normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "dae1f7aee576e3839e9b135f2b18009e94659c7890299e107430f835c01c8810"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "343dbcaed8b7978bffb8ef691ca9f75073a8303f156742636c2a8e5765e3423a"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "96bb14db669da4c973674e52fa7b69a71cfb55896a665195c43db746380277b0"
+    }
+  ],
+  "current_normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "072a3a11ecc987adb7030a1fcf13a88f976e5b01c7ee80617fff3ffaebf4a430"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "2d57a281fbd96c86a7182bb18e728851c4389fabf69c0747f5aeae4a66550022"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "61726dc100554f5bc8204bd0ce258f2b634997588b867bbbe0036c85b332846f"
+    }
+  ],
+  "current_ui": {
+    "menu_samples": 76,
+    "changed_hidden_samples": 34,
+    "r12_samples": 12,
+    "r12_death_room_samples": 12,
+    "pixel_errors": 0,
+    "cli_adf_boot": true
+  },
+  "variant3_r01": {
+    "elapsed": [
+      1425,
+      1425
+    ],
+    "missed": [
+      11,
+      11
+    ],
+    "historical_elapsed": 1430,
+    "historical_missed": 9,
+    "local_audio_regression_open": true
+  }
+}

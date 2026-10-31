@@ -1,0 +1,44 @@
+{
+  "status": "passed_original_decimal_score_loops",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "checks": 2852,
+  "instructions": 1791056,
+  "score_values": 1042,
+  "entry_status_patterns": 64,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
+    },
+    {
+      "path": "tools/build_c64_actors.py",
+      "sha256": "106e0dc72a5f1a0aa53e4ae1a02fa3645efb62ab19e06c2e8078b7415f642448"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    },
+    {
+      "path": "tests/source_score_bridge.c",
+      "sha256": "0b0ea8eaaa11e2b980da0d35d35d0bc20992535f70ac0a17e3ae082ee82e5d99"
+    },
+    {
+      "path": "tools/verify_source_score.py",
+      "sha256": "f44356c6b1059b700a83ea684a370e771c1bb52e5b9daacbd64aba761d57bedd"
+    },
+    {
+      "path": "test-source-score.ps1",
+      "sha256": "db64823d06b27ffbedc48bd8c114d778b1b65f2f2a71bdff2691732987b6afcd"
+    }
+  ]
+}

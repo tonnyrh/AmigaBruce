@@ -1,0 +1,150 @@
+{
+  "status": "compiled_isolated_m68000_stack_and_size_probe",
+  "binding": "../irq-context-binding.json",
+  "production_changed": false,
+  "builds": [
+    {
+      "object": {
+        "path": "reference/analysis/irq-input-2026-10-30/compiler/before.o",
+        "sha256": "be176f6c246c3f16e47c2a0ca56e4f688ae245a7e0f13b0ad311c08c1eb6e02a"
+      },
+      "sections": {
+        ".text": 176640,
+        ".data": 3,
+        ".bss": 195424,
+        ".rodata": 42185
+      },
+      "stack_file": {
+        "path": "reference/analysis/irq-input-2026-10-30/compiler/before.su",
+        "sha256": "dfaf4a1656653a534d8a8f06a96bf2d2dd2eec83781bee14738fed4d6e492989"
+      },
+      "selected_stack_frames": [
+        {
+          "function": "audio_driver",
+          "local_bytes": 48,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "actor_code",
+          "local_bytes": 88,
+          "classification": "dynamic,bounded"
+        }
+      ]
+    },
+    {
+      "object": {
+        "path": "reference/analysis/irq-input-2026-10-30/compiler/candidate.o",
+        "sha256": "51b9a0c11d113b11e3e38a1ed1ef60378994fe533af752f4e4b3fec165a49a38"
+      },
+      "sections": {
+        ".text": 180346,
+        ".data": 3,
+        ".bss": 195426,
+        ".rodata": 42221
+      },
+      "stack_file": {
+        "path": "reference/analysis/irq-input-2026-10-30/compiler/candidate.su",
+        "sha256": "d748cfc8b56467cedcf8810ddac633ed109bd7df4ba0353d618792ee7643ea28"
+      },
+      "selected_stack_frames": [
+        {
+          "function": "irq_context_push",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "irq_context_pop",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "irq_context_frame",
+          "local_bytes": 6,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "irq_context_rts",
+          "local_bytes": 8,
+          "classification": "static"
+        },
+        {
+          "function": "irq_context_read",
+          "local_bytes": 2,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "irq_context_gate",
+          "local_bytes": 4,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "irq_context_voice",
+          "local_bytes": 50,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "audio_driver",
+          "local_bytes": 48,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "irq_context_next_band",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "actor_code",
+          "local_bytes": 88,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "bl_irq_context_prepare",
+          "local_bytes": 16,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "bl_irq_context_seed",
+          "local_bytes": 4,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_run",
+          "local_bytes": 46,
+          "classification": "dynamic,bounded"
+        },
+        {
+          "function": "bl_irq_context_copy",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_regs",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_pc",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_fault",
+          "local_bytes": 0,
+          "classification": "static"
+        },
+        {
+          "function": "bl_irq_context_gates",
+          "local_bytes": 0,
+          "classification": "static"
+        }
+      ]
+    }
+  ],
+  "full_stack_high_water_verified": false,
+  "limits": [
+    "Unlinked object includes public test bridge, not a normal HUNK footprint",
+    "Compiler stack values are local frames, not maximum whole-call-chain use",
+    "Host source proof; candidate has not executed in a native Amiga test",
+    "Explicit PC/pin/raster fixtures, not original interrupt timing; title/$152C music state remains open"
+  ]
+}

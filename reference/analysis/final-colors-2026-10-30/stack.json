@@ -1,0 +1,91 @@
+{
+  "status": "per_function_stack_comparison_only",
+  "before": {
+    "actor_code": {
+      "bytes": 88,
+      "kind": "dynamic,bounded"
+    },
+    "source_written": {
+      "bytes": 42,
+      "kind": "dynamic,bounded"
+    }
+  },
+  "candidate": {
+    "actor_code": {
+      "bytes": 88,
+      "kind": "dynamic,bounded"
+    },
+    "source_written": {
+      "bytes": 42,
+      "kind": "dynamic,bounded"
+    },
+    "source_final_colors": {
+      "bytes": 54,
+      "kind": "dynamic,bounded"
+    },
+    "animation_cell_changed_active": {
+      "bytes": 12,
+      "kind": "static"
+    }
+  },
+  "main": {
+    "bytes": 1164,
+    "kind": "dynamic,bounded"
+  },
+  "changed_common_functions": {},
+  "new_functions": {
+    "animation_cell_changed": {
+      "bytes": 12,
+      "kind": "static"
+    }
+  },
+  "normal_compile_flags": [
+    "-m68000",
+    "-O2",
+    "-g",
+    "-nostdlib",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-tree-loop-distribute-patterns",
+    "-fomit-frame-pointer",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-DBL_AUTOTEST=0",
+    "-fstack-usage"
+  ],
+  "core_extra_flags": [
+    "-mshort",
+    "-Os"
+  ],
+  "limits": [
+    "GCC per-function own frame, not complete call-chain maximum.",
+    "Recursive actor_code depth, interrupt/callback nesting and runtime DOS stack bounds remain to verify.",
+    "Separate objects in .tmp/final-colors-stack; production and native timing objects untouched.",
+    "CLI launch explicitly requests16KiB; actual DOS bounds and ADF startup stack still need runtime measurement. Do not infer safety from own-frame sizes alone."
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/before.su",
+      "sha256": "219b37a88ac5755b8c2ba5a61a842f0fac670caccf9c7f4366bff2918540bcff"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/candidate.su",
+      "sha256": "6d6ec2820d48f7f408dd84c250ef0318f231bc700a3b5ca6095a305c6fe89277"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/main.su",
+      "sha256": "c7df0df4dfd7e3034ade2386d3be706c57d92b8fc038ef35d543fc06465c95b9"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/candidate-v3.su",
+      "sha256": "ebdec6920fea2762ea6a4a550fd39382fce932654b2180a7ff7c66be55d64be6"
+    }
+  ],
+  "cli_startup": {
+    "script": "amiga-run.ps1",
+    "script_sha256": "49afe4b105c36df77d2eec52bbbce0734b27fc6caa5293e702396fb73b08425c",
+    "explicit_bytes": 16384,
+    "startup_file": ".tmp/amiga-boot/s/startup-sequence"
+  },
+  "current_variant": 3
+}

@@ -1,0 +1,101 @@
+{
+  "status": "scoped_walking_logic_matches_timing_target_not_met",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "cases": 48,
+  "main_entries": 2271,
+  "source_instructions": 14565502,
+  "production_changed": false,
+  "exact_user_route_verified": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "original_irq_phase_verified": false,
+  "physical_a500": false,
+  "realtime_accepted": false,
+  "fields_per_step": 3.3378248315688164,
+  "target_fields_per_step": 3,
+  "mean_step_duration_increase_percent": 11.260827718960552,
+  "conclusion": "No extra walking/main-operator difference in controlled cases. Original code contains short fall/landing pauses. Current stationary R12 cadence can lengthen pauses in time; this does not settle the unspecified user route.",
+  "enemy_activations_after_entry": 505,
+  "artifacts": [
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "85746165e154e3c661f4d587028c264cbb26ca641a8826583b95eebe51521458"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "7def677b2066b687cec631188ada253f4c4f6d8b24db9227468dacbea7947bf9"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "docs/FLOOR_WALK_AUDIT.md",
+      "sha256": "8299ae1e7c2c58ba58a39ed74fd2b1c74d41e76726e63200d45bddf515d8ac45"
+    },
+    {
+      "path": "reference/analysis/floor-walk-2026-10-30/bridge.c",
+      "sha256": "61e102679718418adedbc85b3f39f3bbe1fdf70a8a50493519d9ab5b0fc4022a"
+    },
+    {
+      "path": "reference/analysis/floor-walk-2026-10-30/build.ps1",
+      "sha256": "cd66cec125a5ff57ee3fac1a820518d2111450774b265bdd2f92294bec58d246"
+    },
+    {
+      "path": "reference/analysis/floor-walk-2026-10-30/report.json",
+      "sha256": "ff61111c8e2104a5ca564875ba3f354741697c18c63499f5dfa969485aa6a442"
+    },
+    {
+      "path": "reference/analysis/floor-walk-2026-10-30/source-disassembly.txt",
+      "sha256": "beeb5bea102f5df1d0efc09593264c2048fb5d5d1d21589a86b46d33b63f7e4e"
+    },
+    {
+      "path": "reference/analysis/floor-walk-2026-10-30/source-wait-disassembly.txt",
+      "sha256": "2fb375b2fabd28fddb2d30a5e73da8a4f75f3d867994f060f7c04629c2002c26"
+    },
+    {
+      "path": "reference/analysis/normal-runtime-2026-10-30/floor-walk-room12-current/report.json",
+      "sha256": "99ba3e527d245a25bb7f1bc6ff9fda95b60f56c21534fc605816b4a2687fcc5f"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    },
+    {
+      "path": "tools/audit_floor_walking.py",
+      "sha256": "5f7243f644737e9a045a64bf8a4912bf757017a5c79f6a3a9b00b277ac4d2380"
+    },
+    {
+      "path": "tools/audit_normal_runtime.py",
+      "sha256": "7259bca8f93bb573a99ff728facaf09c24441957c993293daa0c7b6b86ab818f"
+    },
+    {
+      "path": "tools/c64_room_model.py",
+      "sha256": "79789dd6fdc3ebf9e0d1725cbdd908d80c9269ddc23ea851fc0db8403e1b0c4b"
+    },
+    {
+      "path": "tools/rip_c64_room_graphics.py",
+      "sha256": "e2d441d8ef20845513c3aaffecf48a51076649dd1f3915711f7ec10d7d617081"
+    },
+    {
+      "path": "tools/verify_c64_room_runtime.py",
+      "sha256": "0fde7f0ca9a34ed5912ea94ee7279d48f41a4527622616d237a1e594352df057"
+    },
+    {
+      "path": "tools/verify_floor_walking_evidence.py",
+      "sha256": "2c263821624d62015208742ab33bb025eed01f49d28625a9bd5fbf7d94841a92"
+    }
+  ]
+}

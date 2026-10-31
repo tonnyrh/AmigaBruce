@@ -1,0 +1,62 @@
+{
+  "status": "passed_scoped_source_color_store_change",
+  "later_renderer_derivation": {
+    "status": "passed_exact_renderer_source_derivation",
+    "publication_applied": true,
+    "color_observer_applied": true,
+    "main_sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185",
+    "core_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+    "candidate_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+    "effective_prior_main": {
+      "path": "reference/analysis/publication-2026-10-30/before/amiga/main.c",
+      "sha256": "f59554ba211b9034648d0bb2f7ff053b1d73b2450dd5356742a04dcb7e09b5e0"
+    },
+    "effective_prior_core": {
+      "path": "reference/analysis/audio-lookup-2026-10-30/before/core/c64_rooms.c",
+      "sha256": "9fa114e2c7a9e56ff7dc7105cee70343c68ba112ace8a4433bb46f68e74be2eb"
+    },
+    "source_cases": 7424,
+    "renderer_cases": 192,
+    "observer_domain_cases": 4096,
+    "gameplay_rules_outside_observer_unchanged": true,
+    "extra_service_points": 0,
+    "extra_production_bss": 0,
+    "realtime_accepted": false
+  },
+  "original_bytes_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "changed_engine_sources": [
+    "core/c64_actor_programs.h",
+    "core/c64_rooms.c",
+    "tools/build_c64_rooms.py"
+  ],
+  "unchanged_source_rules_outside_slice": true,
+  "extra_production_bss": 0,
+  "source_cases": 7424,
+  "renderer_cases": 192,
+  "artifacts": [
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/before/manifest.json",
+      "sha256": "6639a959d5b31420b524a496347a1602a1750541ac00d0b9d1cd1ca53624518e"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/host.json",
+      "sha256": "67eb19b21c1010338a869fb48806e070e0c1188c95b79e36607b1fb72ec10c75"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/source-disassembly.txt",
+      "sha256": "bc36d9b8ebbf8698f7236a7de484ce2f69cb597e27de2622776fdc2382eb4101"
+    },
+    {
+      "path": "tools/verify_renderer_delta_scope.py",
+      "sha256": "1336dfc3ca5c9977f00fe0aa912ea78a7418b78e30d3f1bc046dedd873de5244"
+    },
+    {
+      "path": "reference/analysis/color-observer-2026-10-30/source-scope.json",
+      "sha256": "f33e7147e781e92d9e75a9b6774eac22e85b8b588e959d4274488ed110eb9e96"
+    }
+  ],
+  "limits": [
+    "Bounded source slice and old/new renderer metadata controls",
+    "Native controls, normal build, all-room timing and final acceptance remain separate"
+  ]
+}

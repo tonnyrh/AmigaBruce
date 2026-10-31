@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-30",
+  "status": "candidate_validated_pending_production_integration_and_aggregate_delivery",
+  "production_changed": false,
+  "candidate_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+  "pairs": [
+    {
+      "before": {
+        "lines": 2837562,
+        "fields": 9062,
+        "missed": 148
+      },
+      "after": {
+        "lines": 2819874,
+        "fields": 9012,
+        "missed": 132
+      },
+      "room20_before": {
+        "lines": 188320,
+        "animation_bytes": 18432,
+        "slow_largest": 984,
+        "fields": 600,
+        "steps": 120,
+        "drawn": 115,
+        "room": 20,
+        "held": 4,
+        "preparation_lines": 49852,
+        "chip_largest": 77976,
+        "missed": 118
+      },
+      "room20_after": {
+        "room": 20,
+        "slow_largest": 936,
+        "held": 4,
+        "fields": 575,
+        "preparation_lines": 49523,
+        "missed": 99,
+        "drawn": 116,
+        "lines": 179889,
+        "animation_bytes": 18432,
+        "steps": 120,
+        "chip_largest": 69016
+      },
+      "total_reduction_percent": 0.6233520183876159,
+      "room20_reduction_percent": 4.4769541206457095,
+      "before_identity": {
+        "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour/identity.json",
+        "sha256": "eb013cf2df5b78d19ddde5cc46fef9c983e31aadca9d2b18fb5c9dbb097be4af"
+      },
+      "after_identity": {
+        "path": "reference/analysis/optimization-2026-10-27/color-observer-tour/identity.json",
+        "sha256": "3512636a12e7aeb0db1ad7a69689c06aef06eb351e478bc42d97e5877c2be09e"
+      }
+    },
+    {
+      "before": {
+        "lines": 2839196,
+        "fields": 9069,
+        "missed": 156
+      },
+      "after": {
+        "lines": 2815830,
+        "fields": 8997,
+        "missed": 127
+      },
+      "room20_before": {
+        "held": 0,
+        "missed": 131,
+        "lines": 192076,
+        "slow_largest": 984,
+        "drawn": 119,
+        "animation_bytes": 18432,
+        "room": 20,
+        "steps": 120,
+        "chip_largest": 69016,
+        "fields": 614,
+        "preparation_lines": 49850
+      },
+      "room20_after": {
+        "held": 4,
+        "missed": 96,
+        "lines": 179575,
+        "slow_largest": 936,
+        "drawn": 116,
+        "animation_bytes": 18432,
+        "room": 20,
+        "steps": 120,
+        "chip_largest": 69016,
+        "fields": 574,
+        "preparation_lines": 49211
+      },
+      "total_reduction_percent": 0.8229794632001454,
+      "room20_reduction_percent": 6.5083612736625085,
+      "before_identity": {
+        "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour-repeat/identity.json",
+        "sha256": "73dbdc62243ace8e0e9b50b5db599141fdaf8fc60056cdfbccbf0d937e71c9fc"
+      },
+      "after_identity": {
+        "path": "reference/analysis/optimization-2026-10-27/color-observer-tour-repeat/identity.json",
+        "sha256": "0f586b4bfdddfe18eb6f971b2b2e91ab0b89151764ee800a685393a7f2bc6b9c"
+      }
+    }
+  ],
+  "host": {
+    "path": "reference/analysis/color-observer-2026-10-30/host.json",
+    "sha256": "66133273cbf053447620affcdfc744f51e3f790d7926dffc2374d56e57774d3b",
+    "original_cases": 7424,
+    "renderer_cases": 192,
+    "observer_domain_cases": 4096
+  },
+  "native_fixture": {
+    "path": "reference/analysis/color-observer-2026-10-30/native-fixture.json",
+    "sha256": "9f04ed5940d3ca309ba6760b7527ed2b5960d923196c6c76990bd05ddd0690e3",
+    "cases": 53,
+    "loops": 1200,
+    "chip_largest": 52632
+  },
+  "native_images": {
+    "path": "reference/analysis/color-observer-2026-10-30/native-images.json",
+    "sha256": "6f396be77af45d5ff0824266a4dfd07cc93b723687adf3a380e4f9f2b2b1f523"
+  },
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "notes": [
+    "Other room intervals carry phase/history variation; the changed helper is reached through room20 code",
+    "Some per-room audio-miss samples still rise; strict no-miss acceptance is not achieved",
+    "Current normal EXE remains the checked Copper-publication build; this is not a new delivered normal build"
+  ]
+}

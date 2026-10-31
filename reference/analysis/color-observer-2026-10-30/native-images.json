@@ -1,0 +1,49 @@
+{
+  "status": "passed_unchanged_generic_writer_and_active_observer",
+  "builds": [
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour/bruce_test.elf",
+      "sha256": "420cffdd0bab169537a80ea0b9bc0588875d0be216a76094ebe79eb1c4963c1a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-tour/bruce_test.elf",
+      "sha256": "c08054b3702adfebfafe02a83fad69b4d6ca653a8442c72dd47ce5e793dabcdc"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/be4c7371e15b-809cbe870abb/bruce_test.elf",
+      "sha256": "a05d687c7fabb9d19763fe98c2fbc3c26106683a473e161335f3a36d83097780"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/24ce92aab8cc-76d646994c62/bruce_test.elf",
+      "sha256": "cb8a5614641993c679ff6cb41c08852b7cc4574c54dcbb61afe476c6650af56c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-r01/bruce_test.elf",
+      "sha256": "cda9bc3e9e7a74a74fcaef26f6a7c395962e71d4406e6e7749232b5c955e19d4"
+    }
+  ],
+  "kernels": {
+    "source_written": {
+      "bytes": 810,
+      "relocations": 41,
+      "unlinked_sha256": "ca37dd8b1eced96f988762591ec2604d5c7176f942696581a2a6eb091cfd5cb4"
+    },
+    "animation_cell_changed_active": {
+      "bytes": 200,
+      "relocations": 8,
+      "unlinked_sha256": "ee9cec98c6ba57f2e41baeba678407f98b631e5ff792695907dab8b244c32b20"
+    },
+    "source_final_colors": {
+      "bytes": 356,
+      "relocations": 18,
+      "unlinked_sha256": "abc3064b9029355de506f6e5b56056c67236458c7a1c3dd8f66dcc52ba315fb5"
+    }
+  },
+  "candidate_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+  "production_changed": true,
+  "compiler_object_sha256": "dde3075d13efca5a69762304e886ba666f500ecf3a2f7b8c3a01b655871a9a25"
+}

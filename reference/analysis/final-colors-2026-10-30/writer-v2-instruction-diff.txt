@@ -1,0 +1,192 @@
+--- before
+
++++ v2
+
+@@ -8,9 +8,9 @@
+
+ jmp 0 <source_written>
+ tst.b 0 <source_written>
+-beq.w 260 <source_written+0x260>
++beq.w 180 <source_written+0x180>
+ move.w d2,d0
+ addi.w #29576,d0
+ cmpi.w #879,d0
+-bhi.w 1be <source_written+0x1be>
++bhi.w 1ba <source_written+0x1ba>
+ move.w d2,d4
+ addi.w #29696,d4
+@@ -24,5 +24,5 @@
+
+ move.b 0 <source_written>,d2
+ cmpi.b #56,d2
+-beq.w 18a <source_written+0x18a>
++beq.w 186 <source_written+0x186>
+ cmpi.b #58,d2
+ seq d2
+@@ -30,5 +30,5 @@
+
+ add.b d2,d2
+ cmp.b d5,d3
+-beq.w 260 <source_written+0x260>
++beq.w 180 <source_written+0x180>
+ clr.w d0
+ move.b d3,d0
+@@ -38,5 +38,5 @@
+
+ move.b d2,d1
+ and.b (0,a3,d7.l),d1
+-beq.w 19e <source_written+0x19e>
++beq.w 19a <source_written+0x19a>
+ move.w d0,-(sp)
+ jsr 0 <source_written>
+@@ -50,5 +50,5 @@
+
+ moveq #-1,d1
+ cmp.w a0,d1
+-bne.w 190 <source_written+0x190>
++bne.w 18c <source_written+0x18c>
+ add.l d7,d7
+ lea 0 <source_written>,a4
+@@ -64,5 +64,5 @@
+
+ move.b d5,d7
+ and.b (0,a3,d7.l),d2
+-beq.w 1ae <source_written+0x1ae>
++beq.w 1aa <source_written+0x1aa>
+ move.w d0,-(sp)
+ jsr 0 <source_written>
+@@ -82,5 +82,5 @@
+
+ lea 0 <source_written>,a0
+ move.w d4,(0,a0,d7.l)
+-move.w 0 <source_written>,d2
++tst.w 0 <source_written>
+ beq.s 158 <source_written+0x158>
+ move.w d5,d0
+@@ -97,16 +97,13 @@
+
+ move.w d4,-(sp)
+ jsr 0 <source_written>
+-addq.l #2,sp
+-tst.w d2
+-beq.s 174 <source_written+0x174>
+-move.w d4,-(sp)
+-jsr 0 <source_written>
+-addq.l #2,sp
++move.w d4,-(sp)
++jsr 0 <source_written>
+ move.w #255,-(sp)
+ move.w #1,-(sp)
+ move.w d4,-(sp)
+ jsr 0 <source_written>
+-addq.l #6,sp
+-bra.w 260 <source_written+0x260>
++lea 10(sp),sp
++movem.l (sp)+,d2-d7/a2-a4
++rts
+ moveq #1,d2
+ bra.w 72 <source_written+0x72>
+@@ -125,5 +122,5 @@
+
+ addi.w #10120,d0
+ cmpi.w #879,d0
+-bhi.w 276 <source_written+0x276>
++bhi.w 272 <source_written+0x272>
+ move.w d2,d4
+ addi.w #10240,d4
+@@ -138,5 +135,5 @@
+
+ move.b (0,a0,d5.l),d3
+ cmp.b d0,d3
+-beq.s 260 <source_written+0x260>
++beq.s 180 <source_written+0x180>
+ andi.b #7,d2
+ seq d2
+@@ -148,37 +145,36 @@
+
+ move.w d4,-(sp)
+ jsr 0 <source_written>
+-addq.l #2,sp
+-tst.w 0 <source_written>
+-beq.s 22a <source_written+0x22a>
+-move.w d4,-(sp)
+-jsr 0 <source_written>
+-addq.l #2,sp
++move.w d4,-(sp)
++jsr 0 <source_written>
++addq.l #4,sp
+ cmpi.b #19,0 <source_written>
+-bne.s 266 <source_written+0x266>
++bne.s 258 <source_written+0x258>
+ lea 0 <source_written>,a0
+ tst.b (0,a0,d5.l)
+-beq.s 266 <source_written+0x266>
++beq.s 258 <source_written+0x258>
+ move.b #1,0 <source_written>
+ move.b #1,0 <source_written>
+ cmp.b d2,d3
+-beq.s 260 <source_written+0x260>
++beq.w 180 <source_written+0x180>
+ lea 0 <source_written>,a0
+ move.b #1,(0,a0,d5.l)
+-movem.l (sp)+,d2-d7/a2-a4
+-rts
++bra.w 180 <source_written+0x180>
+ move.w #255,-(sp)
+ eor.b d3,d2
+ andi.w #255,d2
+ move.w d2,-(sp)
+-bra.w 17c <source_written+0x17c>
++move.w d4,-(sp)
++jsr 0 <source_written>
++addq.l #6,sp
++bra.w 180 <source_written+0x180>
+ move.w d2,d0
+ addi.w #24576,d0
+ cmpi.w #8191,d0
+-bhi.s 260 <source_written+0x260>
++bhi.w 180 <source_written+0x180>
+ jsr 0 <source_written>
+ move.w d2,d1
+ andi.w #-2048,d1
+ cmp.w d1,d0
+-bne.s 260 <source_written+0x260>
++bne.w 180 <source_written+0x180>
+ moveq #0,d0
+ move.w d2,d0
+@@ -189,5 +185,5 @@
+
+ andi.l #2047,d0
+ cmp.b (0,a0,d0.l),d1
+-beq.s 260 <source_written+0x260>
++beq.w 180 <source_written+0x180>
+ move.w d2,d4
+ lsr.w #3,d4
+@@ -197,5 +193,5 @@
+
+ move.b d4,d0
+ move.b (0,a1,d0.l),d3
+-bne.s 318 <source_written+0x318>
++bne.s 31a <source_written+0x31a>
+ move.w 0 <source_written>,d1
+ movea.w d1,a0
+@@ -211,10 +207,10 @@
+
+ addq.w #1,d1
+ move.w d1,(0,a0,d4.l)
+-bne.s 318 <source_written+0x318>
++bne.s 31a <source_written+0x31a>
+ lea 0 <source_written>,a0
+ move.w #-1,(a0)
+ lea 40(a0),a0
+ cmpa.l #0,a0
+-bne.s 308 <source_written+0x308>
++bne.s 30a <source_written+0x30a>
+ andi.w #7,d2
+ moveq #1,d1
+@@ -222,3 +218,3 @@
+
+ or.b d1,d3
+ move.b d3,(0,a1,d0.l)
+-bra.w 260 <source_written+0x260>
++bra.w 180 <source_written+0x180>

@@ -1,0 +1,18 @@
+{
+  "status": "failed_controller_room_selection",
+  "observed_room": 1,
+  "expected_room": 12,
+  "source_memory_injected": false,
+  "process_closed": true,
+  "correction": "Wait for exact complete menu before sending unchanged debug-start key sequence",
+  "artifacts": [
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/ui-failed-room-selection/front.bpl",
+      "sha256": "399b16d2857a7fc651f1c2daf5ac172117653651defa4f8e0ce7542453e531f4"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/ui-failed-room-selection/source.bin",
+      "sha256": "1a53293aa2abc3054a7bd31065ff2d61c038b7424fab14c90315130a6e908eb1"
+    }
+  ]
+}

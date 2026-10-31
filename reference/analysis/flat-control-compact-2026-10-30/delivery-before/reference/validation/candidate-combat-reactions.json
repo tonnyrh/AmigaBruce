@@ -1,0 +1,147 @@
+{
+  "checks_passed": true,
+  "full_combat_parity": false,
+  "primary_edition_verified": false,
+  "instructions": [
+    {
+      "rule": "punch_state17_dispatch_without_phase_counter_gate",
+      "address": "0x2a63",
+      "bytes": "c9 11 f0 3e"
+    },
+    {
+      "rule": "punch_path_front_distance_height_and_hit_no_counter_gate",
+      "address": "0x2aa5",
+      "bytes": "a9 06 85 61 20 54 2c 90 c8 30 c6 b9 a1 00 38 f5 a1 10 04 49 ff 69 01 c9 16 b0 b6 20 29 2e 20 3e 2b b5 bc 09 04 c0 00 d0 02 09 80 95 bc"
+    },
+    {
+      "rule": "sai_front_distance_minimum_4_half_pixels",
+      "address": "0x2a82",
+      "bytes": "a9 04 85 61 20 54 2c 90 eb 30 e9"
+    },
+    {
+      "rule": "punch_front_distance_minimum_6_half_pixels",
+      "address": "0x2aa5",
+      "bytes": "a9 06 85 61 20 54 2c 90 c8 30 c6"
+    },
+    {
+      "rule": "kick_front_distance_minimum_6_half_pixels",
+      "address": "0x2adb",
+      "bytes": "a9 06 85 61 20 54 2c 90 57 30 55"
+    },
+    {
+      "rule": "signed_distance_uses_attacker_facing",
+      "address": "0x2c54",
+      "bytes": "b9 9e 00 38 f5 9e 48 08 b9 a4 00 c9 01 d0 08 28 68 49 ff 69 01 48 08 28 68 c5 61 60"
+    },
+    {
+      "rule": "victim_turns_opposite_attacker_before_recoil",
+      "address": "0x2b46",
+      "bytes": "b9 a4 00 49 01 95 a4 60"
+    },
+    {
+      "rule": "sai_active_below_counter_8",
+      "address": "0x2a7b",
+      "bytes": "b9 ce 00 c9 08 b0 f4"
+    },
+    {
+      "rule": "sai_hurt_counter_3",
+      "address": "0x2ba9",
+      "bytes": "a9 0f 95 bf a9 03 95 ce"
+    },
+    {
+      "rule": "punch_hurt_counter_4",
+      "address": "0x2bcd",
+      "bytes": "a9 0f 95 bf a9 04 95 ce"
+    },
+    {
+      "rule": "kick_down_counter_12",
+      "address": "0x2bf1",
+      "bytes": "a9 13 95 bf a9 0c 95 ce"
+    },
+    {
+      "rule": "fall_counter_8",
+      "address": "0x2c15",
+      "bytes": "a9 1b 95 bf a9 08 95 ce"
+    },
+    {
+      "rule": "hurt_recoil_left_two_half_pixels",
+      "address": "0x241f",
+      "bytes": "20 86 1e 20 86 1e"
+    },
+    {
+      "rule": "hurt_recoil_right_two_half_pixels",
+      "address": "0x242e",
+      "bytes": "20 c4 1e 20 c4 1e"
+    },
+    {
+      "rule": "living_npc_down_stops_before_last_move",
+      "address": "0x2444",
+      "bytes": "8a f0 08 b5 d1 30 04 c0 02 90 61"
+    },
+    {
+      "rule": "keep_facing_until_distance_33_half_pixels",
+      "address": "0x230b",
+      "bytes": "b5 a4 a4 63 30 02 49 01 c9 01 f0 64 98 29 7f c9 21 90 09"
+    },
+    {
+      "rule": "retreat_target_15_half_pixels",
+      "address": "0x2327",
+      "bytes": "a5 9e a4 63 10 05 38 e9 0f d0 03 18 69 0f"
+    },
+    {
+      "rule": "retreat_turns_only_at_last_counter",
+      "address": "0x23d7",
+      "bytes": "b5 ce c9 01 d0 14 b5 a4 49 01 95 a4"
+    }
+  ],
+  "native_bruce_slide": {
+    "ticks": [
+      363,
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "x": [
+      80,
+      76,
+      72,
+      68,
+      64,
+      60
+    ],
+    "pixels_per_step": 4,
+    "pal_fields_per_step": 3
+  },
+  "limitations": [
+    "Yamo complete knockdown duration is instruction-derived; no natural Yamo kick-hit recording yet",
+    "Room edges, collision masks, death/respawn and complete AI trajectories remain open"
+  ],
+  "source_files": [
+    {
+      "path": ".reference/c64/work/untrained-memory.bin",
+      "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+    },
+    {
+      "path": "reference/traces/COMBAT-0001.json",
+      "sha256": "df8dab9a0794bf4fb7848d592c2fadb62f4b79f0edfac08b88118e7b08f39e7b"
+    },
+    {
+      "path": "tools/analyze_combat_reactions.py",
+      "sha256": "b059a4751d4edc61c0cac8d39bfb8a931c3628e0a91c26086fae11a2793aefc5"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "e6441e3bb7f2ef220c7bfb34aefa1bdcb99edcad6e4531b61da40ec5fff3940e"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "89d4074a5d1667945ac2e04f3b3caeb63384eb3e508436fc3f275062233e7716"
+    },
+    {
+      "path": "tests/combat_test.c",
+      "sha256": "f686324af37328450ce907c13a12f94f430b898706c0f92e697aac5db058d373"
+    }
+  ]
+}

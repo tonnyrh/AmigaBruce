@@ -1,0 +1,18 @@
+[
+  {
+    "path": "amiga/main.c",
+    "sha256": "f59554ba211b9034648d0bb2f7ff053b1d73b2450dd5356742a04dcb7e09b5e0"
+  },
+  {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "072a3a11ecc987adb7030a1fcf13a88f976e5b01c7ee80617fff3ffaebf4a430"
+  },
+  {
+    "path": "amiga/out/bruce_amiga.elf",
+    "sha256": "2d57a281fbd96c86a7182bb18e728851c4389fabf69c0747f5aeae4a66550022"
+  },
+  {
+    "path": "amiga/out/bruce_amiga.adf",
+    "sha256": "61726dc100554f5bc8204bd0ce258f2b634997588b867bbbe0036c85b332846f"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "status": "not_promoted",
+  "reason": "Continuous 20-room timing regresses room15 by12890 HSYNC lines; audio misses remain237. Production binary not replaced. Candidate preserved for later controlled analysis.",
+  "files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "a76d8103dcd8145860498ef2f450146a1a8c87daf1e7df57768707d52181a19f"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "2b5b9bff847fd443fa90084946f0f0a848d743f2f6ac651a6191bdb59f7f6da6"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "f7ab7786d24d9fba8dc573f6fe5af9a508cfcf500147644a8fb0fe3560220bf8"
+    },
+    {
+      "path": "test-source-performance.ps1",
+      "sha256": "f462c25637ec27f7a9975762cf0d226b06af6ddddbde8b5a622e28b5030db8b7"
+    }
+  ]
+}

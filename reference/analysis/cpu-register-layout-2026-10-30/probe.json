@@ -1,0 +1,85 @@
+{
+  "status": "isolated_compiler_layout_probe_only",
+  "production_changed": false,
+  "register_access_counts": {
+    "c64_rooms.c": 608,
+    "c64_actor_programs.h": 11898,
+    "c64_sfx.h": 19
+  },
+  "compiler": "C:\\Users\\TonnyRogerHolm(Test)\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.8.2\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe",
+  "flags": [
+    "-m68000",
+    "-Os",
+    "-g",
+    "-nostdlib",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-tree-loop-distribute-patterns",
+    "-fomit-frame-pointer",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-mshort",
+    "-DBL_AUTOTEST=0",
+    "-fstack-usage",
+    "-IC:\\vscode\\_EXT\\AmigaBruceLee\\core"
+  ],
+  "builds": [
+    {
+      "label": "before",
+      "sections": {
+        ".text": 176640,
+        ".data": 3,
+        ".bss": 195424,
+        ".rodata": 42185
+      }
+    },
+    {
+      "label": "candidate",
+      "sections": {
+        ".text": 175274,
+        ".data": 3,
+        ".bss": 195424,
+        ".rodata": 42185
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/before.o",
+      "sha256": "1647aeb9f05a35efe767725b0169f4ffa70fb6962ccfbe47ec141d5726c9f7a5"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/candidate.o",
+      "sha256": "83925e5d759841ea17c7d7fef010c31ab8db3de7b4c43ea0b3f8049612627473"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/candidate/c64_rooms.c",
+      "sha256": "ae1596d404531150f00837c6a9ab890658145fa511ba8927b2feb49cbc66abb8"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/candidate/c64_actor_programs.h",
+      "sha256": "3820d18dfd422010155ee6d50ae1ee9131e8435be4ac9788bd240ebef6135497"
+    },
+    {
+      "path": "reference/analysis/cpu-register-layout-2026-10-30/candidate/c64_sfx.h",
+      "sha256": "37e095dc33253c8908997c930d488adc3395b4ada9cedd72f5c9373aceb54f8f"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    }
+  ],
+  "limitations": [
+    "Unlinked object sizes; not normal linked game footprint",
+    "No native execution or timing yet",
+    "Lexically transformed scalar register accesses require source and target checks before acceptance"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "label": "observer-final-room2",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
+  },
+  "source_room": 2,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    396864,
+    396904,
+    396944,
+    396984
+  ],
+  "source_music_fields": 617,
+  "source_audio_mode": 0,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/observer-final-room2.bpl",
+      "sha256": "500bb772297ac618040e08d29e06f7f10efc3c0d32271f56f1abdf428a6719c4"
+    },
+    {
+      "path": "docs/images/session-observer-final-room2.png",
+      "sha256": "d7e4488e8624b809b02694a3eac53c5abf33ded8538405721434117595e0e111"
+    }
+  ]
+}

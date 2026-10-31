@@ -1,0 +1,816 @@
+{
+  "source_files": [
+    {
+      "path": ".tmp/audio-lookup-tour2.ps1",
+      "sha256": "78ceac5feec5b71a5c36b5b02c932a2f2fae08e7177b1ac9c7440d95660a7ff4"
+    },
+    {
+      "path": ".tmp/source-tour-audio-cache-tour/build.ps1",
+      "sha256": "59d11fdf03d1862a4dbf2b328626fb96dc0a7a426d5094ed14cdc339ac882bab"
+    },
+    {
+      "path": ".tmp/source-tour-audio-cache-tour/main.c",
+      "sha256": "a14b5bd56cd33038cde892ed5ba03064592215b2aa9b76f4ba87d3d03e3e314b"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "533c39c8475143b38ce63da1f57a6bd5fc8536b928f794faffadd42d5a313c42"
+    },
+    {
+      "path": "amiga/c64_sprite_data.h",
+      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203"
+    },
+    {
+      "path": "amiga/combat_audio_data.h",
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0"
+    },
+    {
+      "path": "amiga/combat_audio.h",
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f"
+    },
+    {
+      "path": "amiga/fighter_dma_data.h",
+      "sha256": "4e534017bb7b769ae5f8d6f96f2064582f965b8b8f3d9aa884767c55cc3367b2"
+    },
+    {
+      "path": "amiga/intro_audio_data.h",
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b"
+    },
+    {
+      "path": "amiga/intro_audio.h",
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185"
+    },
+    {
+      "path": "amiga/room_background_data.h",
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d"
+    },
+    {
+      "path": "amiga/runtime.c",
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "amiga/start.s",
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291"
+    },
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2"
+    },
+    {
+      "path": "core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "9fa114e2c7a9e56ff7dc7105cee70343c68ba112ace8a4433bb46f68e74be2eb"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "ee7fb51449d755e20991a9ba8197bfbafe61b28443119cb84e113c89c8bd3cb8"
+    },
+    {
+      "path": "core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "143b6eb93713e73b71a7cdd5375f980abe14891fed594308fefd9b688d8614d6"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "98dcd24df04e1b6f778543d395b029dcb1fc2a6627fd83b5df74bf1268af8d05"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "5a09053558b66d8c453ad8c58a058fb44752967bbd900f74a54593c3e6678cc3"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "0abd7c6531b3722d62ddbbc149e8cbd805cddc67551826502c41ff1907337ad1"
+    },
+    {
+      "path": "core/session.h",
+      "sha256": "08ec809cffb30dbb5221e4af164f998e792eaac001d892179ef9fc96da18accf"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_climb.c",
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b"
+    },
+    {
+      "path": "core/source_climb.h",
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433"
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+    },
+    {
+      "path": "core/source_dma.h",
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "reference/analysis/audio-lookup-2026-10-30/candidate2/source_audio.c",
+      "sha256": "18d9275295d71265db26bb557c07f06c9a0cb3a964ebec05dd3eaae72b4727dd"
+    },
+    {
+      "path": "tools/build_source_perf_tour.py",
+      "sha256": "34f5cae18a4d83271cd060329b17c204aec00b000b1613bb6f473ee2a22955f0"
+    }
+  ],
+  "rooms": [
+    {
+      "preparation_lines": 3233,
+      "held": 101,
+      "drawn": 120,
+      "missed": 0,
+      "room": 1,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 112972,
+      "fields": 361,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 40062,
+      "held": 118,
+      "drawn": 120,
+      "missed": 0,
+      "room": 2,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 112919,
+      "fields": 361,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 40409,
+      "held": 118,
+      "drawn": 120,
+      "missed": 0,
+      "room": 3,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 112907,
+      "fields": 360,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 39185,
+      "held": 118,
+      "drawn": 120,
+      "missed": 0,
+      "room": 4,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 113556,
+      "fields": 363,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 50127,
+      "held": 100,
+      "drawn": 115,
+      "missed": 4,
+      "room": 5,
+      "animation_bytes": 20480,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 153021,
+      "fields": 489,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 46648,
+      "held": 16,
+      "drawn": 120,
+      "missed": 0,
+      "room": 6,
+      "animation_bytes": 20480,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 142400,
+      "fields": 454,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 51956,
+      "held": 41,
+      "drawn": 119,
+      "missed": 0,
+      "room": 7,
+      "animation_bytes": 34816,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 123265,
+      "fields": 392,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 41018,
+      "held": 65,
+      "drawn": 116,
+      "missed": 0,
+      "room": 8,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 123638,
+      "fields": 395,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 78297,
+      "held": 79,
+      "drawn": 117,
+      "missed": 0,
+      "room": 9,
+      "animation_bytes": 104448,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 160156,
+      "fields": 512,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 72339,
+      "held": 38,
+      "drawn": 112,
+      "missed": 0,
+      "room": 10,
+      "animation_bytes": 87040,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 169308,
+      "fields": 541,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 41962,
+      "held": 5,
+      "drawn": 119,
+      "missed": 3,
+      "room": 11,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 163457,
+      "fields": 522,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 60952,
+      "held": 116,
+      "drawn": 119,
+      "missed": 0,
+      "room": 12,
+      "animation_bytes": 52224,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 131041,
+      "fields": 419,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 40405,
+      "held": 2,
+      "drawn": 120,
+      "missed": 16,
+      "room": 13,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 157036,
+      "fields": 500,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 40136,
+      "held": 60,
+      "drawn": 120,
+      "missed": 1,
+      "room": 14,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 148925,
+      "fields": 476,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 40743,
+      "held": 6,
+      "drawn": 120,
+      "missed": 5,
+      "room": 15,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 137406,
+      "fields": 439,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 40338,
+      "held": 6,
+      "drawn": 120,
+      "missed": 17,
+      "room": 16,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 148318,
+      "fields": 474,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 41059,
+      "held": 4,
+      "drawn": 120,
+      "missed": 2,
+      "room": 17,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 165648,
+      "fields": 528,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 40585,
+      "held": 69,
+      "drawn": 114,
+      "missed": 0,
+      "room": 18,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 126690,
+      "fields": 405,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 42899,
+      "held": 80,
+      "drawn": 105,
+      "missed": 0,
+      "room": 19,
+      "animation_bytes": 0,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 117002,
+      "fields": 374,
+      "slow_largest": 928
+    },
+    {
+      "preparation_lines": 49854,
+      "held": 2,
+      "drawn": 118,
+      "missed": 128,
+      "room": 20,
+      "animation_bytes": 18432,
+      "steps": 120,
+      "chip_largest": 69016,
+      "lines": 189265,
+      "fields": 605,
+      "slow_largest": 928
+    }
+  ],
+  "run": {
+    "canvas_residue_unexplained": "0",
+    "pose_bruce_hi": "4",
+    "c64_profile_13": "0",
+    "runtime_arithmetic_errors": "0",
+    "first_missed_hsync": "626",
+    "fighter_cache_bytes": "73680",
+    "capture_fault": "0",
+    "canvas_residue_pending": "0",
+    "fighter_cache_hash": "2572544731",
+    "air_periods": "191",
+    "room_event_13_id": "13",
+    "source_clock_miss_14": "4725,2",
+    "pose_ninja_hi": "4",
+    "room_reuse_stat_2": "2",
+    "source_clock_miss_2": "1114,2",
+    "source_tour_error": "0",
+    "room_event_2_id": "3",
+    "room_event_9_work": "53367",
+    "session_wall_fixture_failure": "0",
+    "c64_profile_10": "0",
+    "cia_miss_hsync": "626",
+    "room_event_0_id": "1",
+    "source_audio_voice_mask": "7",
+    "c64_profile_9": "0",
+    "source_tour_10": "120,522,163457,3,119,5,41962,11,69016,928,0",
+    "room_event_1_id": "2",
+    "source_clock_miss_7": "2724,2",
+    "room_transitions": "19",
+    "vic_repeat_cases": "0",
+    "c64_profile_2": "0",
+    "source_music_hash": "2708371906",
+    "source_clock_pauses": "44",
+    "stage1": "554",
+    "room_reuse_stat_3": "19",
+    "source_reader_page": "0",
+    "source_audio_chip_bytes": "5332",
+    "test_start_room": "0",
+    "canvas_residue_bytes": "0",
+    "room_event_11_id": "11",
+    "movement_fixture_failure": "0",
+    "stage2": "0",
+    "source_tour_1": "120,361,112919,0,120,118,40062,2,69016,928,0",
+    "source_clock_miss_3": "1485,2",
+    "enemy_edge_test": "0",
+    "room_event_8_check": "12951",
+    "chip_largest_before": "421792",
+    "source_dma_fixture_failure": "0",
+    "room_event_15_id": "15",
+    "enemy_edge_checks": "0",
+    "source_audio_hash": "1268787892",
+    "intro_dma_stopped": "1",
+    "room_load_fields": "4851",
+    "source_clock_miss_15": "5155,2",
+    "room_event_15_check": "12940",
+    "contact_kernel_cases": "710",
+    "source_profile": "0",
+    "session_fixture_failure": "0",
+    "room_event_12_check": "12947",
+    "source_tour_8": "120,512,160156,0,117,79,78297,9,69016,928,104448",
+    "timing_jump_fields": "0",
+    "source_clock_elapsed": "9134",
+    "chip_available_before": "421792",
+    "source_tour_5": "120,454,142400,0,120,16,46648,6,69016,928,20480",
+    "c64_profile_15": "0",
+    "room_event_14_id": "14",
+    "canvas_residue_scene": "0",
+    "room_work_max_3": "37520",
+    "lantern_pickups": "0",
+    "room_event_13_check": "12942",
+    "combat_mode": "1",
+    "max_held_image_streak": "1",
+    "source_clock_max_gap": "12",
+    "source_clock_miss_10": "4198,2",
+    "room_work_sum_3": "136891",
+    "intro_finished": "1",
+    "room_event_17_id": "17",
+    "restored_os": "1",
+    "source_clock_miss_9": "3647,2",
+    "room_event_12_work": "23762",
+    "frames": "3538",
+    "c64_profile_6": "0",
+    "room_event_0_check": "12942",
+    "c64_profile_3": "0",
+    "room_load_max_gap": "1717",
+    "stage5": "0",
+    "room_test": "0",
+    "room_event_1_check": "12947",
+    "moving_net_fixture_cases": "0",
+    "room_event_18_work": "25689",
+    "room_event_14_check": "12954",
+    "moving_net_fixture_failure": "0",
+    "room_event_1_work": "23354",
+    "source_tour_17": "120,405,126690,0,114,69,40585,18,69016,928,0",
+    "c64_profile_1": "0",
+    "room_event_6_id": "6",
+    "explicit_chip_bytes": "352772",
+    "room_event_7_check": "12946",
+    "intro_bitmap_restored": "1",
+    "room_event_4_id": "4",
+    "fall_starts": "24",
+    "room_event_10_id": "10",
+    "room_event_5_id": "5",
+    "source_dma_backend": "2",
+    "capture_packed_bytes": "0",
+    "source_tour_16": "120,528,165648,2,120,4,41059,17,69016,928,0",
+    "spawn_fixture_cases": "0",
+    "c64_profile_0": "0",
+    "contact_fixture_failure": "0",
+    "room_tour": "0",
+    "room_event_3_work": "32381",
+    "gate_checks": "0",
+    "room_event_14_work": "23809",
+    "room_work_sum_2": "271970",
+    "session_wall_fixture_cases": "0",
+    "room_event_7_work": "24339",
+    "timing_walk_fields": "0",
+    "source_tour_12": "120,500,157036,16,120,2,40405,13,69016,928,0",
+    "room_event_8_work": "58866",
+    "pose_yamo": "14706563",
+    "score": "38500",
+    "room_event_9_id": "9",
+    "timing_pal_lines": "313",
+    "c64_render_checks": "22",
+    "chip_largest_loaded": "69016",
+    "final_room": "19",
+    "room_event_13_work": "23438",
+    "sprite_fixture_cases": "0",
+    "room_work_sum_0": "260598",
+    "target_respawns": "0",
+    "room_event_2_work": "22381",
+    "contact_reference_separate": "0",
+    "source_perf_test": "1",
+    "stage_valid": "3",
+    "combat_warmup_steps": "0",
+    "room_event_3_check": "12945",
+    "vic_compare_errors": "0",
+    "missed_frames": "2578",
+    "c64_render_mismatches": "0",
+    "enemy_spawns": "18",
+    "room_event_17_work": "23415",
+    "source_perf_steps": "0",
+    "sprite_copy_cases": "256",
+    "kick_periods": "0",
+    "room_event_19_check": "13001",
+    "cpu_stamp_chip_bytes": "0",
+    "room_event_7_id": "7",
+    "source_clock_miss_6": "2324,2",
+    "jump_starts": "0",
+    "climb_fixture_failure": "0",
+    "room_event_5_check": "12944",
+    "stage0": "2",
+    "max_gap_excluding_framebuffer_capture": "7",
+    "held_image_fields": "1144",
+    "source_tour_9": "120,541,169308,0,112,38,72339,10,69016,928,87040",
+    "c64_profile_5": "0",
+    "intro_pcm_hash": "508731667",
+    "pose_ninja": "201328515",
+    "gate_test": "0",
+    "punch_periods": "0",
+    "source_tour_15": "120,474,148318,17,120,6,40338,16,69016,928,0",
+    "contact_fixture_cases": "0",
+    "room_reuse_stat_0": "9",
+    "c64_profile_14": "0",
+    "movement_fixture_cases": "0",
+    "room_event_5_work": "29399",
+    "target_stomps": "0",
+    "room_event_20_id": "19",
+    "player_respawns": "0",
+    "source_tour_6": "120,392,123265,0,119,41,51956,7,69016,928,34816",
+    "capture_original_hash": "0",
+    "present_max_line": "301",
+    "source_clock_miss_13": "4719,2",
+    "room_event_6_work": "34409",
+    "room_event_11_work": "41992",
+    "room_event_19_id": "19",
+    "intro_fields": "427",
+    "final_y": "147",
+    "sprite_fixture_failure": "0",
+    "room_event_19_work": "31441",
+    "room_event_10_check": "12951",
+    "canvas_residue_hud": "0",
+    "chip_free_loaded": "69016",
+    "contact_kernel_errors": "0",
+    "max_work_lines": "1946",
+    "source_clock_miss_1": "744,2",
+    "source_tour_14": "120,439,137406,5,120,6,40743,15,69016,928,0",
+    "room_event_20_check": "12998",
+    "source_tour_0": "120,361,112972,0,120,101,3233,1,69016,928,0",
+    "prone_periods": "0",
+    "source_sfx_request_mask": "25335",
+    "room_work_max_2": "13001",
+    "room_event_15_work": "23480",
+    "room_event_9_check": "12951",
+    "collect_frame_drops": "1",
+    "c64_profile_12": "0",
+    "room_event_3_id": "4",
+    "source_clock_miss_0": "374,2",
+    "timing_fall_fields": "12466",
+    "room_event_10_work": "24719",
+    "source_tour_4": "120,489,153021,4,115,100,50127,5,69016,928,20480",
+    "source_clock_paused_fields": "2814",
+    "room_event_2_check": "12947",
+    "player_deaths": "0",
+    "source_tour_2": "120,360,112907,0,120,118,40409,3,69016,928,0",
+    "c64_room_revision": "1122",
+    "room_event_16_check": "12944",
+    "stage3": "0",
+    "max_pal_field_gap": "233",
+    "room_event_4_work": "22983",
+    "room_event_17_check": "12945",
+    "perf_enemy_mask": "3",
+    "parity": "PROVISIONAL",
+    "expansion_available_before": "1480",
+    "c64_profile_7": "0",
+    "c64_room_fault": "0",
+    "held_changed": "1143",
+    "max_work_frame": "2420",
+    "c64_profile_11": "0",
+    "source_tour_13": "120,476,148925,1,120,60,40136,14,69016,928,0",
+    "room_reuse_stat_1": "12",
+    "source_clock_miss_11": "4495,2",
+    "final_x": "12",
+    "source_audio_fields": "8737",
+    "held_unchanged": "1",
+    "stage4": "0",
+    "visited_rooms_mask": "1048575",
+    "source_tour_completed": "20",
+    "pose_yamo_hi": "4",
+    "timing_seen": "32",
+    "drawn_image_fields": "2394",
+    "source_tour_7": "120,395,123638,0,116,65,41018,8,69016,928,0",
+    "source_clock_miss_4": "1494,2",
+    "room_event_16_id": "16",
+    "bad_presents": "0",
+    "room_event_20_work": "23065",
+    "room_work_max_1": "10289",
+    "room_event_8_id": "8",
+    "source_tour_11": "120,419,131041,0,119,116,60952,12,69016,928,52224",
+    "source_dma_changes": "146",
+    "npc_recoil_fixture_failure": "0",
+    "source_clock_miss_5": "1863,2",
+    "room_work_max_4": "1555",
+    "room_event_0_work": "23059",
+    "room_reuse": "1",
+    "capture_decoded_hash": "0",
+    "room_work_sum_1": "182865",
+    "enemy_defeats": "0",
+    "source_clock_miss_12": "4698,2",
+    "climb_periods": "706",
+    "room_event_12_id": "12",
+    "source_tour_18": "120,374,117002,0,105,80,42899,19,69016,928,0",
+    "source_dma_fixture_cases": "0",
+    "framebuffer_capture_gap": "1",
+    "room_event_16_work": "23513",
+    "source_dma_image_bytes": "3072",
+    "room_event_18_check": "12953",
+    "source_tour_3": "120,363,113556,0,120,118,39185,4,69016,928,0",
+    "timing_mode_changes": "0",
+    "room_event_18_id": "18",
+    "source_music_fields": "120",
+    "source_clock_starts": "2",
+    "max_hsync_gap": "2190",
+    "pose_bruce": "98323",
+    "source_audio_faults": "0",
+    "room_event_11_check": "12933",
+    "stage_loop": "2",
+    "source_dma_faults": "0",
+    "room_event_4_check": "12944",
+    "room_work_max_0": "13636",
+    "source_clock_missed": "279",
+    "present_min_line": "300",
+    "source_clock_miss_8": "3127,2",
+    "room_work_sum_4": "32507",
+    "c64_profile_8": "0",
+    "c64_profile_4": "24",
+    "intro_silence_reload": "1",
+    "source_world_steps": "2421",
+    "source_world_test": "1",
+    "room_event_6_check": "12945",
+    "intro_samples": "26460",
+    "presentation_hold_fields": "3",
+    "room_load_events": "21",
+    "npc_recoil_fixture_cases": "0",
+    "first_missed_frame": "2",
+    "capture_color15": "0",
+    "room_load_test": "0",
+    "source_tick_max_lines": "153",
+    "combat_hits": "0",
+    "target_defeats": "0",
+    "source_tour_19": "120,605,189265,128,118,2,49854,20,69016,928,18432",
+    "climb_fixture_cases": "0",
+    "target_hits": "0"
+  },
+  "compile_overrides": {
+    "audio": "reference/analysis/audio-lookup-2026-10-30/candidate2/source_audio.c",
+    "core": "core/c64_rooms.c",
+    "main": "compiled-main.c"
+  },
+  "status": "passed_scoped_20_room_timing_route",
+  "build": [
+    {
+      "path": "bruce_test.exe",
+      "sha256": "ccc5b042a7a66e1528d1fefae7d0afdcb0664633e0a63af2fdc445f303b0f680"
+    },
+    {
+      "path": "bruce_test.elf",
+      "sha256": "60fa028e6a682ce061338f0ca759edf29704e2d5c9461972a9705a4edc4bb663"
+    },
+    {
+      "path": "bruce_test.adf",
+      "sha256": "ce4e31d47167ba127bab1f6625eb4c003d99470ed26b41df8a676f4fbfcf5aa7"
+    }
+  ],
+  "method": "Actual PAL intervals,120 source steps per room, continuous debug-jump history; setup excluded; unused SourcePerfTest capture allocation omitted; normal main and production allocations untouched",
+  "realtime_accepted": false,
+  "natural_playthrough": false,
+  "baseline": false
+}

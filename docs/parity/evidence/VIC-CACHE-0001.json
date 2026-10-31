@@ -1,0 +1,27 @@
+{
+  "id": "VIC-CACHE-0001",
+  "date": "2026-10-29",
+  "status": "candidate_cache_equivalence_scoped_native_measured",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "source_ranges": [
+    "$29CE",
+    "$3D20",
+    "$1703",
+    "$2584-$25E1"
+  ],
+  "condition": "Existing field-sampled VIC seam: actual63 raw bitmap bytes, multicolor opacity, X expansion and accumulating read-cleared D01E",
+  "effect": "Read each raw byte once when rebuilding21 opaque rows; same cache bytes, pad and metadata; no source write or new collision rule",
+  "artifacts": [
+    {
+      "path": "docs/VIC_CACHE_OPTIMIZATION.md",
+      "sha256": "dabf252ae92ed8b3b6c2543eb5bcac988741ced502b6edfded118ac3d41d2052"
+    },
+    {
+      "path": "reference/validation/vic-cache-optimization.json",
+      "sha256": "a5523a70b35e836f5eb168f84a340017a37316fe1ffb266592d24febd44e278c"
+    }
+  ]
+}

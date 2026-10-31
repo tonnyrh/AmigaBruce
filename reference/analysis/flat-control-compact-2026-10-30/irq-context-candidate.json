@@ -1,0 +1,76 @@
+{
+  "status": "passed_candidate_original_game_irq_context",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "cases": 3352,
+  "instructions": 479308,
+  "room_chain_cases": 960,
+  "gate_cases": 64,
+  "injected_command_cases": 24,
+  "source_stream_cases": 1920,
+  "announcement_and_gameover_tail_cases": 360,
+  "handlers": {
+    "0x48c1": 977,
+    "0x491e": 869,
+    "0x4982": 1146,
+    "0x14a4": 240,
+    "0x1574": 120
+  },
+  "commands": {
+    "4": 33,
+    "0": 55,
+    "3": 40,
+    "1": 71,
+    "2": 314,
+    "5": 3,
+    "6": 15,
+    "7": 3
+  },
+  "all_ram_and_registers": true,
+  "returned_pc_verified": true,
+  "sid_gate_edges_verified": true,
+  "production_changed": false,
+  "original_raster_phase_verified": false,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "limitations": [
+    "Explicit caller PCs and safe stack range $E0-$FD, not a natural PC/stack distribution",
+    "Fixed CIA pins and chosen raster reads to exit polling; no cycle/raster model",
+    "No VIC collision generation or physical A500 acceptance",
+    "Three game handlers, $14A4 announcement and $1574 tail only; $152C/title music state and other IRQs remain open",
+    "Native candidate only; production field/audio scheduling remains unchanged"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/candidate/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/candidate/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/irq-bridge.c",
+      "sha256": "699e2889d224d61a40d90a2862c3d3f859632fd772019b09fca07b70936cb93e"
+    },
+    {
+      "path": ".tmp/flat-control-irq/audit.py",
+      "sha256": "c3e0a00a507415977eee2b00c735e74f14d6ec8f83ad12b1dcc1d56ce551960f"
+    },
+    {
+      "path": ".tmp/flat-control-irq/build.ps1",
+      "sha256": "af0ced1e01a4a083c27ca3e68d50dcbc5c5cd8965c30d01ce1ffeae70ec96db6"
+    },
+    {
+      "path": "reference/analysis/irq-input-2026-10-30/candidate/irq_context.h",
+      "sha256": "b5ef39c535824788ad42882f95404c2cdf6b07ab09a21f2e5c14c0bf1bb57123"
+    },
+    {
+      "path": "reference/analysis/irq-input-2026-10-30/candidate/input_slot.h",
+      "sha256": "9c6602b7c63e70f1f1649a2c2043b7a5f0a3a2497f45b7ff74de62918bcc5571"
+    }
+  ]
+}

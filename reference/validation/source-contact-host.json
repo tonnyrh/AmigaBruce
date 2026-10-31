@@ -21,11 +21,11 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "14e3f03cd2fbc6e541c372746db8dc1b31da88081a22c4363bd0f67a2206ecd2"
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
     },
     {
       "path": "core/source_perf.h",
@@ -33,11 +33,11 @@
     },
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "131727831db097b479aa98ec4c8f6b9f7439f0e9cc04e770d2081af604f702a6"
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
     },
     {
       "path": "tools/build_c64_rooms.py",
-      "sha256": "5c5bd7147ff2af45257ccb46f6ece9a53a1a4f57046b3a7c1729787dc983a499"
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
     },
     {
       "path": "tools/build_contact_class_kernel.py",

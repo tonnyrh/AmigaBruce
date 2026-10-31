@@ -1,0 +1,25 @@
+{
+  "status": "decoded_bytes_host_and_scoped_native_verified",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "ranges": [
+    "$2584-$25E1",
+    "$26A0-$2703",
+    "$2719-$274E"
+  ],
+  "condition": "Binary mode and height<32 at existing hook; height from$5B61/pose stored in$E0+actor. TYA/ASL/ADC$E0 in each caller yields Y=3*height, ASL carry0.",
+  "ordered_effects": [
+    "Read self-modified glyph bases$26AB/$26E4/$26EE; destination through$0E/$0F",
+    "Initialize$277F=63; publish decrements before subsequent source reads",
+    "Retain descending source/destination reads and clear interleaving",
+    "Clear suffix after last glyph read; final$277F/A/X/Y/C/N/Z/SP preserved"
+  ],
+  "fallback": "Low or straddling destination and nonstandard wide Y run original translated instruction path; wrapped glyph bases run original path on68000.",
+  "limitations": [
+    "Remember/T64 candidate is not certified untouched1984",
+    "Original VIC/IRQ raster phase and natural playback remain separate acceptance gates"
+  ],
+  "host_controls": 1536,
+  "native_extra_controls": 256,
+  "full_native_controls": 53,
+  "full_original_parity": false
+}

@@ -2,33 +2,37 @@
   "status": "passed_source_paint_requeue_controls",
   "cases": [
     "repaint_consumed_cell_after_source_mutation",
-    "full880_queue_repeated_mutation_coalescing"
+    "full880_queue_repeated_mutation_coalescing",
+    "60_full_room_loads_exact_pixels",
+    "96_room12_source_steps_single_phase_overlay",
+    "source_ram_unchanged_by_overlay",
+    "changed_cell_invalidates_overlay_rectangle"
   ],
   "natural_playthrough": false,
   "source_files": [
     {
       "path": "amiga/main.c",
-      "sha256": "871640d5964d33e31efab1cc4d6f960f8ed383a49affe8af10e729c889747da6"
+      "sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185"
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "14e3f03cd2fbc6e541c372746db8dc1b31da88081a22c4363bd0f67a2206ecd2"
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
     },
     {
       "path": "tests/source_paint_bridge.c",
-      "sha256": "6098fee2eadcea995f8abf75d10c4ef1981769d94f354feb9db73bbdd4e895b1"
+      "sha256": "71ab69cc2ec5fc91027619913992bdb1affe678d88ee8ee2e3f19df1758e7443"
     },
     {
       "path": "tools/verify_source_paint.py",
-      "sha256": "6055839094b912228264049294e232bb72f58aab9ef7e6138713acd07863ded2"
+      "sha256": "6aa9ad89c6477cffe8a6a8d25412f5c99809d8cd23f7f0688b0108d0f121f330"
     },
     {
       "path": "test-source-paint.ps1",
-      "sha256": "753c27af983ffce6e43a83a955057560ee56697596ba9d4821d37298d2b76052"
+      "sha256": "8dbb4740787ab7653bb211821bc118bd733d61f6877f774385cdac33570ff4fc"
     }
   ]
 }

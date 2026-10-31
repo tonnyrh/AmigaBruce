@@ -1,0 +1,19 @@
+{
+  "status": "passed_current_normal_boot",
+  "method": "Owned paused complete menu against existing font/UI reference; optional source-main progression; no source-state writes",
+  "mode": "cli",
+  "normal_exe_sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112",
+  "elf": {
+    "path": "amiga/out/bruce_amiga.elf",
+    "sha256": "7def677b2066b687cec631188ada253f4c4f6d8b24db9227468dacbea7947bf9"
+  },
+  "complete_menu": true,
+  "game_states": [],
+  "artifacts": [
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/normal-ui/cli/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    }
+  ],
+  "natural_playthrough": false
+}

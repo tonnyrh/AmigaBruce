@@ -1,0 +1,28 @@
+{
+  "label": "incident-menu",
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "cec3aed78363eb5d8d5fc85b0b4334027e7a13e5ce1461f5e17cb518dca96044"
+  },
+  "source_room": 12,
+  "source_spare_falls": 4,
+  "bitplanes": [
+    354880,
+    354920,
+    354960,
+    355000
+  ],
+  "source_music_fields": 1029,
+  "source_audio_mode": 1,
+  "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
+  "artifacts": [
+    {
+      "path": "reference/analysis/session-walls-2026-10-25/incident-menu.bpl",
+      "sha256": "be0ca13e965bdadeef584f445d224bdda6a5b22248bda337188a0f50de939d89"
+    },
+    {
+      "path": "docs/images/session-incident-menu.png",
+      "sha256": "13d6a0fc35974fda5585dfe1a1576829b7dcbde60f514c071ba168e00e4d3c71"
+    }
+  ]
+}

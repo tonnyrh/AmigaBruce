@@ -1,0 +1,59 @@
+{
+  "status": "normal_and_native_bss_unchanged",
+  "builds": [
+    {
+      "label": "before_normal",
+      "elf": {
+        "path": "reference/analysis/final-colors-2026-10-30/before/amiga/out/bruce_amiga.elf",
+        "sha256": "343dbcaed8b7978bffb8ef691ca9f75073a8303f156742636c2a8e5765e3423a"
+      },
+      "sections": {
+        ".text": 193852,
+        ".rodata": 78920,
+        ".data": 9,
+        ".bss": 171088
+      }
+    },
+    {
+      "label": "current_normal",
+      "elf": {
+        "path": "reference/analysis/publication-2026-10-30/before/amiga/out/bruce_amiga.elf",
+        "sha256": "2d57a281fbd96c86a7182bb18e728851c4389fabf69c0747f5aeae4a66550022"
+      },
+      "sections": {
+        ".text": 193944,
+        ".rodata": 78920,
+        ".data": 9,
+        ".bss": 171088
+      }
+    },
+    {
+      "label": "before_native",
+      "elf": {
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/3b00c638af91-2cd3447aa431/bruce_test.elf",
+        "sha256": "ff9aee2c20e7ff27e6e613e93b190b5f39810f3877de5c752a1898eef0750363"
+      },
+      "sections": {
+        ".text": 207304,
+        ".rodata": 85324,
+        ".data": 21,
+        ".bss": 171696
+      }
+    },
+    {
+      "label": "current_native",
+      "elf": {
+        "path": "reference/analysis/actor-chain-2026-10-26/native-builds/529258031cb9-e998a45620a0/bruce_test.elf",
+        "sha256": "2004f355a2a73438725d2081d75c07bdf00723b3a1baf4f60b3e5b5a9d0c1495"
+      },
+      "sections": {
+        ".text": 207396,
+        ".rodata": 85324,
+        ".data": 21,
+        ".bss": 171696
+      }
+    }
+  ],
+  "current_variant": 3,
+  "scope": "Historical selected V3 images; later renderer changes have independent source and binary controls"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "SPRITE-COPY-0001",
+  "date": "2026-10-29",
+  "status": "candidate_code_derived_and_scoped_native_verified",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "source_ranges": [
+    "$2584-$25E1",
+    "$26A0-$2703",
+    "$2719-$274E"
+  ],
+  "condition": "Binary height<32, safe sprite destination and non-wrapping glyph bases; natural wide Y=3*height; unsupported states retain source path",
+  "effect": "Same source data/overlap/count scratch/register/return effects; aligned zero suffix on68000; no new game rules",
+  "controls": {
+    "host": 1536,
+    "source_instructions": 373464,
+    "native_extra": 256,
+    "full_native": 53
+  },
+  "measured_copy_mean_lines": {
+    "before": 14.468,
+    "after": 11.12
+  },
+  "total_benchmark_fields": {
+    "before": 1428,
+    "after": 1429
+  },
+  "realtime_accepted": false,
+  "artifacts": [
+    {
+      "path": "docs/SPRITE_COPY_OPTIMIZATION.md",
+      "sha256": "c7f6d6c76786c1b174c7c3f7ee377c5622a7fd9d3dfe82cea7edaa4681483fa8"
+    },
+    {
+      "path": "reference/validation/source-sprite-copy-host.json",
+      "sha256": "50d659e8dd295b1eafa4f65d314cb6b4b53cf03e9d9c1d1cb2eb5033ebfecf73"
+    },
+    {
+      "path": "reference/analysis/sprite-copy-2026-10-29/source-contract.json",
+      "sha256": "3c5675706f533ea86828eca3470b713099d15b2572db1692d0f3d35e073521fb"
+    },
+    {
+      "path": "reference/analysis/sprite-copy-2026-10-29/source-copy-disassembly.txt",
+      "sha256": "c2dd06f63574ce2d0ae859d8e31561da8962069f7d2d9d590a805cacc47e9b7a"
+    },
+    {
+      "path": "reference/analysis/sprite-copy-2026-10-29/native-kernel-bytes.json",
+      "sha256": "2c94fbfd0787228b49c7cd4cee9dd19f4e276b5955d7f8459810ca5b6cbc562b"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "fac20ec0f7e8938c96752589bd30f089906c6223afa641c2dc97bc73f4ec757a"
+    }
+  ],
+  "limitations": [
+    "Remember/T64 candidate, untouched1984 identity unverified",
+    "Native controls are injected and not natural gameplay",
+    "Original VIC/IRQ phase, full PAL cadence, sound gaps and physical A500 remain open"
+  ]
+}

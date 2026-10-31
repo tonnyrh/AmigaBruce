@@ -1,0 +1,32 @@
+{
+  "id": "ACTOR-CHAIN-0001",
+  "date": "2026-10-30",
+  "status": "scoped_complete_loader_display_blank_acceptance_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "natural_playthrough": false,
+  "full_original_parity": false,
+  "condition": "Complete source chain with byte-preserving native continuation plumbing; source RAM/register/return, forced recursive fallback, native primitives and normal image controls",
+  "controls": {
+    "source": 3034,
+    "integrated": 5,
+    "native": 53,
+    "reference": 710
+  },
+  "artifacts": [
+    {
+      "path": "reference/validation/compact-actor-delivery.json",
+      "sha256": "ab6372be4f616a5693d21bd9d93c253822b7a6c078293305e806faa8d7b340fe"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "9fa63115aca132d8c97be0668c1fa392c0c1329e6f4a25fd3fe482892c673a02"
+    }
+  ],
+  "limitations": [
+    "Verified untouched 1984 edition",
+    "Full PAL real-time cadence and natural IRQ/input phase",
+    "Whole native stack high-water",
+    "Complete natural playthrough and physical A500"
+  ]
+}

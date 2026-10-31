@@ -1,0 +1,118 @@
+{
+  "status": "measured_one_pass_vic_cache",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "vic_mean_before": 25.188,
+  "vic_mean_after": 24.803,
+  "unprofiled_fields": [
+    1426,
+    1422,
+    1422
+  ],
+  "audio_misses": [
+    17,
+    9,
+    9
+  ],
+  "minimum_chip_block": 52632,
+  "artifacts": [
+    {
+      "path": "reference/analysis/vic-cache-2026-10-29/before/manifest.json",
+      "sha256": "5118d75132d784bd32b1e2dedff6a9b23e016d10eac5d5a121cd3ff941d1bf5e"
+    },
+    {
+      "path": "reference/analysis/vic-cache-2026-10-29/candidate/manifest.json",
+      "sha256": "51e95f661c296c0a02604de7b0f56f21373a59a1ffa783b267ba8beadacb8306"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-profile/identity.json",
+      "sha256": "876858860f7ee8bf348ee7a607b25ca13f1da446de58ecf03caf5b2f8a53495c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-profile/native.txt",
+      "sha256": "1c8c4b9ba0d5cfc877a0e0a54e6d0ca7c9fa88f27263ae09e77b78d4584cb97b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-profile/native.json",
+      "sha256": "4eedca974aa3821aff460fba635d27d55d71c9c8bca704bbe58b64ffcc540452"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-timing/identity.json",
+      "sha256": "42a6e912ce7810c5d67958157913e9def1eecb6c88e9e1419e9fa85618e54c4b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-timing/native.txt",
+      "sha256": "136986f57b78034e496ff17c578311d45e0153c9154817b93905a685a70205ac"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/view-bulk-final-timing/native.json",
+      "sha256": "e72efe5e9ddd4316988cf48a5477c648496c80f031e1d17093cfe381edb15171"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-profile/identity.json",
+      "sha256": "3054e582f2aeb5488b829a68bbb840e111c88397f54ccbb86afc0d61e9d82540"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-profile/native.txt",
+      "sha256": "612f7a8d35397f9d9ebb7276b42d418ddce535b37870d1fc06df6aa083f609c2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-profile/native.json",
+      "sha256": "25c4cba8758199a165e4946f70381783aecb0638dac679f22eb4b735bf22b6fe"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-timing/identity.json",
+      "sha256": "0bf72a5fbf0a8c4d917373bd96f2f6262c9884d43b5ff09311282e84f1a15d94"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-timing/native.txt",
+      "sha256": "bfdb8a9e7e74c9b2fe4f8878d8286a57396780db7459468952f1ca277593b2bf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-timing/native.json",
+      "sha256": "a786a557976c5a15347c3d7359312b5ecaa3710c65eccf5a5fe48f8cf0a75310"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-repeat-timing/identity.json",
+      "sha256": "1817fc6bdfe2902df08edc1915ef4f8f4e8704f7a40bfac2f17f3389b501f050"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-repeat-timing/native.txt",
+      "sha256": "253133ae6f6006c961453063dc64906a74c20870593f3a150867541e36956455"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-repeat-timing/native.json",
+      "sha256": "a786a557976c5a15347c3d7359312b5ecaa3710c65eccf5a5fe48f8cf0a75310"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/before/manifest.json",
+      "sha256": "b31d3bc64e83f6e4e9c4dc4fa5e578378aabcf2d992e9e6e40df10027911706d"
+    },
+    {
+      "path": "reference/validation/vic-cache-host.json",
+      "sha256": "354da4bdbf56d85a1226f100e9451ac762e63733dda8173cdfa1dc81042caada"
+    },
+    {
+      "path": "tools/verify_vic_cache_optimization.py",
+      "sha256": "fd1ed41c2b8ac31d12f9a32886f67a9caecd75388a02d242871e780d930d2bb9"
+    },
+    {
+      "path": "docs/VIC_CACHE_OPTIMIZATION.md",
+      "sha256": "dabf252ae92ed8b3b6c2543eb5bcac988741ced502b6edfded118ac3d41d2052"
+    },
+    {
+      "path": "reference/analysis/vic-cache-2026-10-29/rejected-unrolled/result.json",
+      "sha256": "25345efeda1f5842ed6ad9756ee15b922f283d3a4bd067772d843415fd9bcff2"
+    },
+    {
+      "path": "reference/analysis/vic-cache-2026-10-29/rejected-postincrement/result.json",
+      "sha256": "c830e97b5c71f696075c37fe51fde9d07c1485d6d74cc0137ee72d300ddeee2c"
+    }
+  ],
+  "limits": [
+    "R01 diagnostic route; no whole-game speed or original raster certification",
+    "Allocator largest blocks vary across boots; only minimum margin accepted",
+    "No temporal cache/version assumption; same63 raw bytes and21 opaque rows"
+  ]
+}

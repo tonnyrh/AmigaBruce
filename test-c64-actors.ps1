@@ -18,7 +18,7 @@ $command='call "'+$vcvars+'" >nul && cl /nologo /LD /O2 /W3 /Fe:"'+$out+'\actors
 & $env:ComSpec /d /s /c $command
 if($LASTEXITCODE){throw 'Source actor compilation failed'}
 $identity=@($sources + @('core/c64_rooms.h','core/source_perf.h','core/game.h','core/combat.h','core/c64_actor_data.h','core/c64_actor_programs.h',
-    'core/c64_room_data.h','core/c64_room_programs.h','core/c64_sfx.h','core/c64_sound_data.h','tools/build_c64_actors.py',
+    'core/c64_room_data.h','core/c64_room_programs.h','core/c64_sfx.h','core/c64_sound_data.h','tools/build_c64_actors.py','tools/native_actor_continuations.py',
     'tools/build_c64_rooms.py','test-c64-actors.ps1') | ForEach-Object {
     @{path=$_;sha256=(Get-FileHash (Join-Path $actorRoot $_)).Hash.ToLower()}
 })

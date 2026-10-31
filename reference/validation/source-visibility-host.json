@@ -3858,15 +3858,15 @@
   "source_files": [
     {
       "path": "core/session.c",
-      "sha256": "c9a09029ce46c43b7c3c15ed05bdee43255565e385684524ca3a34b02d0f162e"
+      "sha256": "0abd7c6531b3722d62ddbbc149e8cbd805cddc67551826502c41ff1907337ad1"
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "14e3f03cd2fbc6e541c372746db8dc1b31da88081a22c4363bd0f67a2206ecd2"
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
     },
     {
       "path": "tests/source_visibility_bridge.c",

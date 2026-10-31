@@ -1,0 +1,93 @@
+{
+  "status": "mapped_owned_native_memory_task_stack_bounds_do_not_cover_usp",
+  "method": "Paused read-only KS1.3 CLI HUNK chain, ELF symbol/section offsets and SDK-compiled Exec/Task offsets; no source-memory mutation",
+  "normal_elf_sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb",
+  "sections": [
+    {
+      "section": ".text",
+      "bytes": 194016,
+      "address": "0xc0b6a0",
+      "memory": "slow"
+    },
+    {
+      "section": ".rodata",
+      "bytes": 78920,
+      "address": "0xc3ac90",
+      "memory": "slow"
+    },
+    {
+      "section": ".data",
+      "bytes": 9,
+      "address": "0xc4e0e8",
+      "memory": "slow"
+    },
+    {
+      "section": ".bss",
+      "bytes": 171088,
+      "address": "0xc4e100",
+      "memory": "slow"
+    }
+  ],
+  "objects": {
+    "m": {
+      "address": "0xc67d4c",
+      "memory": "slow",
+      "section": ".bss"
+    },
+    "character_cache": {
+      "address": "0xc5a354",
+      "memory": "slow",
+      "section": ".bss"
+    },
+    "source_audio": {
+      "address": "0xc4ec24",
+      "memory": "slow",
+      "section": ".bss"
+    },
+    "actor_seed_packed": {
+      "address": "0xc427db",
+      "memory": "slow",
+      "section": ".rodata"
+    },
+    "bl_source_frequencies": {
+      "address": "0xc4d452",
+      "memory": "slow",
+      "section": ".rodata"
+    },
+    "bl_source_waves": {
+      "address": "0xc4d5f2",
+      "memory": "slow",
+      "section": ".rodata"
+    },
+    "source_final_colors": {
+      "address": "0xc11ab8",
+      "memory": "slow",
+      "section": ".text"
+    }
+  },
+  "stack": {
+    "lower": "0xc06794",
+    "upper": "0xc06dd4",
+    "reported_span": 1600,
+    "sampled_usp": "0xc78744",
+    "sampled_unused_below_usp": null,
+    "task_bounds_cover_current_usp": false,
+    "process_fields": {
+      "size": 1600,
+      "high_end_bptr": 3152357,
+      "previous_frame": "0xc78cf8",
+      "cli_default_stack_words": 1000
+    },
+    "saved_task_sp": "0xc78806",
+    "full_call_chain_high_water_verified": false
+  },
+  "sdk_offsets": {
+    "this_task": 276,
+    "saved_sp": 54,
+    "lower": 58,
+    "upper": 62,
+    "object_sha256": "a505d32b13debe194896bbbe07a26be611ed178be306a8e9732170d70ca5b585"
+  },
+  "physical_a500": false,
+  "realtime_accepted": false
+}

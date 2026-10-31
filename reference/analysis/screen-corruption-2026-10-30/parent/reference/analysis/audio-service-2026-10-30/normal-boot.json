@@ -1,0 +1,78 @@
+{
+  "status": "passed_audio_boundary_normal_boot",
+  "normal_exe_sha256": "79c09ce3150db6d61ffd0eb78ff3de31bfc27166f3d604512e21478e518a6697",
+  "cli_passed": true,
+  "adf_passed": true,
+  "target": [
+    "cpu_model=68000",
+    "cpu_speed=real",
+    "cpu_cycle_exact=true",
+    "cpu_memory_cycle_exact=true",
+    "blitter_cycle_exact=true",
+    "cycle_exact=true",
+    "ntsc=false",
+    "chipset=ocs",
+    "chipmem_size=1",
+    "bogomem_size=2",
+    "fastmem_size=0"
+  ],
+  "natural_playthrough": false,
+  "artifacts": [
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "49afe4b105c36df77d2eec52bbbce0734b27fc6caa5293e702396fb73b08425c"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/check-boot.py",
+      "sha256": "b0157ec2cbe712bbf27d71a388983b2d25c2f0bac2d70e787138a5c25413339f"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/normal-ui/adf/config.uae",
+      "sha256": "f46d3760097aec240e57aa6dcd02abfd26c8e787aa022985a8c5716d27ede99a"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/normal-ui/adf/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/normal-ui/adf/report.json",
+      "sha256": "11ce0c065f59623d328e42d3e263b5300bffdf4bb77ee3dccd0e67ce68beaed5"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/normal-ui/cli/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/normal-ui/cli/report.json",
+      "sha256": "b34c1e080d02e3d8ac73d6e14231580163b6aeac18f0769ec4805d43c34f2329"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/ui-adf-retry.ps1",
+      "sha256": "b3407cbb506fd135b137b8e0cdc0a32e6ec0a25b8be1fd1fac27bd2bd7bd753d"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/ui-failed-room-selection/report.json",
+      "sha256": "ebb76d97ff72c1dbc92caed12ca5e4aecded4a567b4e42b37dde3b80ad9192a9"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/ui-rooms-retry.ps1",
+      "sha256": "76a30de80026f01bc321fc87f33c4a4a8b9a9b1ddd89d50b2d519736b1784963"
+    },
+    {
+      "path": "reference/analysis/audio-service-2026-10-30/ui-run.ps1",
+      "sha256": "8f9f9a2f1051a32402fca2f7be1fa40371222a855fb43b6e30f1433f3c267712"
+    },
+    {
+      "path": "tools/check_compact_boot.py",
+      "sha256": "798b92b0166347c53ff72af430c8f632ffc50de2b7cec2d8bba083415c0567bc"
+    },
+    {
+      "path": "tools/prepare_audio_boundary_ui.py",
+      "sha256": "2e4c07a351a3567983a39ca04578520dfb711a0c0f81d76dc9d52f7d6258e936"
+    },
+    {
+      "path": "tools/record_audio_boundary_boot.py",
+      "sha256": "fb27cc8b226f2c283335b53e407057a35bd638935152233eef8e7a2fc3874a1e"
+    }
+  ]
+}

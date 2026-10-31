@@ -1,0 +1,36 @@
+{
+  "status": "passed_field_sampled_pixel_and_latch_controls",
+  "calls": 8741,
+  "natural_playthrough": false,
+  "original_raster_verified": false,
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "b9141711fcf16dd3e56a295be74aa6421b0da0f6e91c3b1f53974d509335f3f6"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2"
+    },
+    {
+      "path": "tests/source_vic_bridge.c",
+      "sha256": "d7b8317338406825e2c0d3b42477be88023552b8d8bc2f39fd7f8ff482b53a00"
+    },
+    {
+      "path": "tools/verify_source_vic.py",
+      "sha256": "dceaa8d82ef2a0b24bea0a4881d1c8bb47dc8b40c142833bd3ce04d3caa5662e"
+    },
+    {
+      "path": "test-source-vic.ps1",
+      "sha256": "afbc7de467a58b27f014b9ac57da0a333e05498e6fe3461b103c930376b87ba0"
+    }
+  ]
+}

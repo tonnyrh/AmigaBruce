@@ -1,0 +1,578 @@
+{
+  "status": "measured_private_contact_alignment_unroll",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "rows": [
+    {
+      "variant": "baseline",
+      "label": "contact-unroll-baseline-r01",
+      "pal_fields": 1423,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "kernel_bytes": 346,
+      "stationary": [
+        [
+          1159,
+          4308,
+          3055,
+          0,
+          3
+        ],
+        [
+          1379,
+          8583,
+          5853,
+          0,
+          15
+        ],
+        [
+          1173,
+          8230,
+          4484,
+          0,
+          19
+        ],
+        [
+          1394,
+          12505,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4839,
+          3056,
+          0,
+          3
+        ],
+        [
+          1378,
+          9424,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9387,
+          4483,
+          0,
+          19
+        ],
+        [
+          1489,
+          13971,
+          7283,
+          0,
+          31
+        ]
+      ]
+    },
+    {
+      "variant": "candidate",
+      "label": "contact-unroll-candidate-r01",
+      "pal_fields": 1418,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "kernel_bytes": 1288,
+      "stationary": [
+        [
+          1159,
+          4308,
+          3055,
+          0,
+          3
+        ],
+        [
+          1379,
+          8583,
+          5854,
+          0,
+          15
+        ],
+        [
+          1173,
+          8230,
+          4484,
+          0,
+          19
+        ],
+        [
+          1394,
+          12505,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4839,
+          3056,
+          0,
+          3
+        ],
+        [
+          1379,
+          9424,
+          5855,
+          0,
+          15
+        ],
+        [
+          1269,
+          9387,
+          4483,
+          0,
+          19
+        ],
+        [
+          1489,
+          13971,
+          7283,
+          0,
+          31
+        ]
+      ],
+      "untouched_kernel_timing_deltas": [
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 1,
+          "image": 0
+        },
+        {
+          "field": -1,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 0
+        }
+      ]
+    },
+    {
+      "variant": "candidate-byte",
+      "label": "contact-unroll-byte-r01",
+      "pal_fields": 1417,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 69016,
+      "kernel_bytes": 1530,
+      "stationary": [
+        [
+          1159,
+          4155,
+          3056,
+          0,
+          3
+        ],
+        [
+          1379,
+          8282,
+          5854,
+          0,
+          15
+        ],
+        [
+          1174,
+          7925,
+          4482,
+          0,
+          19
+        ],
+        [
+          1392,
+          12049,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4687,
+          3057,
+          0,
+          3
+        ],
+        [
+          1378,
+          9123,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9080,
+          4483,
+          0,
+          19
+        ],
+        [
+          1490,
+          13516,
+          7283,
+          0,
+          31
+        ]
+      ],
+      "untouched_kernel_timing_deltas": [
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 1,
+          "image": -2
+        },
+        {
+          "field": -2,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 1,
+          "image": 0
+        }
+      ]
+    },
+    {
+      "variant": "candidate-compact",
+      "label": "contact-unroll-compact-r01",
+      "pal_fields": 1410,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "kernel_bytes": 642,
+      "stationary": [
+        [
+          1159,
+          4155,
+          3056,
+          0,
+          3
+        ],
+        [
+          1379,
+          8282,
+          5854,
+          0,
+          15
+        ],
+        [
+          1174,
+          7925,
+          4481,
+          0,
+          19
+        ],
+        [
+          1393,
+          12049,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4687,
+          3057,
+          0,
+          3
+        ],
+        [
+          1378,
+          9124,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9080,
+          4483,
+          0,
+          19
+        ],
+        [
+          1490,
+          13516,
+          7283,
+          0,
+          31
+        ]
+      ],
+      "untouched_kernel_timing_deltas": [
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 1,
+          "image": -3
+        },
+        {
+          "field": -1,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 1,
+          "image": 0
+        }
+      ]
+    }
+  ],
+  "controls_per_image": 710,
+  "align_controls_per_image": 256,
+  "production_promotion_requires_separate_delivery": true,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_gate_passed": false,
+  "limits": [
+    "Stationary layout uses phase0 with odd destination; other phases covered by native differential controls, not this isolated timing",
+    "PAL count includes startup and diagnostic work",
+    "Host original-byte contact controls reused only through unchanged C reference and frozen prior proof",
+    "No claim of full PAL budget, natural IRQ phases, or physical A500 acceptance"
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline-build.ps1",
+      "sha256": "dbe2a38bbe8bb0e578172f384cf9e51b583607af8afcf8f45597d7d8244610e0"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline/contact_align.o",
+      "sha256": "bb1d3f4784ccbe98c958fcb4f786dd2c070651cecc04be8be78ca00a053b4e34"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/baseline/main.c",
+      "sha256": "7f2178dfe3c61406bc5ad899b48d2c8a67d43ef6a92c1d350682785ba46ad5d1"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-build.ps1",
+      "sha256": "bfb01d6f034fa563641c38ca049058ea6887af3b9e67a8f25426b893e34b27cf"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte-build.ps1",
+      "sha256": "7eee488107f90a5b7b50768760f8e0a3481942d95d641aa5bbb34a5aa76dcd9e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte/contact_align.s",
+      "sha256": "e3773282e1fc0c9d9c0089b4f3625992c8ed765b140adde6c1dec9fd20126a40"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte/main.c",
+      "sha256": "7f2178dfe3c61406bc5ad899b48d2c8a67d43ef6a92c1d350682785ba46ad5d1"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-byte/out/contact_align.o",
+      "sha256": "c25ec0ce449f4be886e581a9d6b38f02abea6c927647354f68b5cf6e644da825"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact-build.ps1",
+      "sha256": "bc1c2e80ce4e81b23b6d8bc262b89424a90289e346d947f883c7eec6af634a21"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact/contact_align.s",
+      "sha256": "abbcd8e35685db4a8b958df70bed09d501f747047a640a97aabbd724372b3fb3"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact/main.c",
+      "sha256": "7f2178dfe3c61406bc5ad899b48d2c8a67d43ef6a92c1d350682785ba46ad5d1"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate-compact/out/contact_align.o",
+      "sha256": "fd7a6e8fdd74c67533947d1242e08e1b8e6a6b05a8f30e2d1502411c74007c68"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate/contact_align.s",
+      "sha256": "6cc3c1fa1a15a214c92be712693d24777608475f58b6a9b63ac87e11d2373791"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate/main.c",
+      "sha256": "7f2178dfe3c61406bc5ad899b48d2c8a67d43ef6a92c1d350682785ba46ad5d1"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/candidate/out/contact_align.o",
+      "sha256": "c2123d698b751d8727b76fa4c8e8855c798dc8c5f61eda293420ba9af48ab7de"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/scope.json",
+      "sha256": "5b861c3e7a503225e907f36ba06328a03b51441d59506af32f16a456a4dd3dbf"
+    },
+    {
+      "path": "reference/analysis/contact-unroll-2026-10-31/source-align-disassembly.txt",
+      "sha256": "db0199bb9ff95e97904fb69ab998bf7b7fbf556161622c4f415d01f422c9920c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-baseline-r01/bruce_test.adf",
+      "sha256": "9086063843fb37ec732f0b84ffdedf86c519f5608818f7af7aff57182dc51bf2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-baseline-r01/bruce_test.elf",
+      "sha256": "62c9500162b38919961a4aa13bf533dc341e8b3346554b2cf3ed5479808140a2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-baseline-r01/bruce_test.exe",
+      "sha256": "299973accb04f878c3043c300e1f6e318253544cebb3e231a16585eb1d06e18e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-baseline-r01/identity.json",
+      "sha256": "2ed3f2134956f9d4d73fd8dcf7c8e688de9e5a25177fe31803c83ac1094a50c9"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-baseline-r01/native.txt",
+      "sha256": "0659f630ecce8baab030eedb16e7bc9c9bab55a92b58d8b0a91ab6b97ef13bce"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-byte-r01/bruce_test.adf",
+      "sha256": "4a96b2dd16c8c596f7f46f4245d2af2fbe75c7ef0f744b95a4de53d7e3c90cb3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-byte-r01/bruce_test.elf",
+      "sha256": "d13af4d99efb3620bb4ff95dae64429a429b8067bbf1b24903b71130a1761a13"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-byte-r01/bruce_test.exe",
+      "sha256": "c8aa80981b538953a6d79f5ae063f2f141809e85d5ba082292ec5b695463a4cb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-byte-r01/identity.json",
+      "sha256": "049fa00ae741c95fbee82d1c374adb4476bd34ef3131b9aa6358801787a56dd3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-byte-r01/native.txt",
+      "sha256": "b8bb6cd411074078efbdce7935b90565e8524522c89854ed47513877e2bb1ee8"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-candidate-r01/bruce_test.adf",
+      "sha256": "30ce953a0f20f4b40cfbbf7cab5d9da5b9b91daa977aeed0ec137ba5b49d24f3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-candidate-r01/bruce_test.elf",
+      "sha256": "5cae6931610b57d706972a66ef7b421de61a0713dfd136f5772dbd9f023806c7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-candidate-r01/bruce_test.exe",
+      "sha256": "509c25c23513f16e3c8e6cb35fd6f94c81cb74d7f72966b73f5ac324b1ff069a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-candidate-r01/identity.json",
+      "sha256": "2e01fb61f25f462e36d91e65ca8d4dd03c93cfc5ed5a86077c5bd67c3e76702d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-candidate-r01/native.txt",
+      "sha256": "d68e52c513f7e950dbd9263d05f770cd9d3cc65e9a95a6d7e20c7a347703c4bd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-compact-r01/bruce_test.adf",
+      "sha256": "ac81b6b5425ab4d099561c058804a20bea25f780f4945aae503b693aa400951e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-compact-r01/bruce_test.elf",
+      "sha256": "27a54e60ab42d528058835d82e8f7bbf36c8523757ddcc88b1ab63df1a89f966"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-compact-r01/bruce_test.exe",
+      "sha256": "306ae48f02ed60839ae75d846ba217fca3ed56d368d2529faa3b59e80a08af69"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-compact-r01/identity.json",
+      "sha256": "a6afa9d24abef2910bc3284e54a2cf13f63c5db31b39624045704fb2124e3588"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-unroll-compact-r01/native.txt",
+      "sha256": "338a5f7d873dc042d6b94be01440a87e76ebf4def34fb71675cb47b1dc7aa62b"
+    },
+    {
+      "path": "tools/build_contact_unroll_probe.py",
+      "sha256": "c83e2857b111f7f6ef2d7b2734732500ea012cd2f1791a5c20a15f2578732467"
+    },
+    {
+      "path": "tools/verify_contact_unroll_experiment.py",
+      "sha256": "4fc32e9040d5341be8ddcd28ff8837596dbe4f9ae62a325d61078d318a2d2465"
+    }
+  ]
+}

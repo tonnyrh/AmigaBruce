@@ -1,0 +1,14 @@
+{
+  "method": "Native PAL raster-line timer, nested samples; quantiles are histogram intervals",
+  "instrumentation_32_empty_pairs_lines": 0,
+  "profile": [],
+  "held_changed": 1154,
+  "held_unchanged": 1,
+  "stage_loop": 2,
+  "stage_valid": 3,
+  "runtime_max_gap": 7,
+  "audio_missed": 343,
+  "source_steps": 2421,
+  "realtime_accepted": false,
+  "natural_playthrough": false
+}

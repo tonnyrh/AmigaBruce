@@ -1,0 +1,1024 @@
+{
+  "status": "passed_scoped_loader_display_blank",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "7def677b2066b687cec631188ada253f4c4f6d8b24db9227468dacbea7947bf9"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "85746165e154e3c661f4d587028c264cbb26ca641a8826583b95eebe51521458"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "f1e66b765482900374d9c020426d3a42e34301872f4e95a3c1e989e31ef84112"
+    }
+  ],
+  "native_fixtures": 53,
+  "native_replay_loops": 1200,
+  "blank_rooms": [
+    6,
+    12
+  ],
+  "phase_snapshots": 24,
+  "menu_snapshots": 80,
+  "loader_blank": {
+    "source_disable": "$09BC-$09C1",
+    "source_enable": "$0B33 -> $50DB-$50E5",
+    "normal_section_deltas": {
+      ".text": 98,
+      ".rodata": 0,
+      ".data": 0,
+      ".bss": 0
+    },
+    "gameplay_core_unchanged": true,
+    "prior_host_engine_controls_reused_as_historical": true,
+    "fresh_native_controls": 53,
+    "fresh_native_loops": 1200
+  },
+  "largest_chip_block": 52632,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_gate_passed": false,
+  "limitations": [
+    "Verified untouched 1984 edition",
+    "Full PAL real-time cadence and natural IRQ/input phase",
+    "Whole native stack high-water",
+    "Complete natural playthrough and physical A500"
+  ],
+  "artifacts": [
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "a9ebab14c0e9d3c207db1153ae61214e9ec89e7ede7e2f999d6cd618df134c8b"
+    },
+    {
+      "path": "amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "6150ad3145c02756035e492f08247b98f5c8cc3394c68f8d0ef942b8c0b06de3"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "7def677b2066b687cec631188ada253f4c4f6d8b24db9227468dacbea7947bf9"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "docs/LOADER_DISPLAY_BLANK.md",
+      "sha256": "959f87bfa840a585b2cbca2647febf6bcbf4d04b8d850fd5c3344167d4d6530e"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/7cc83bb24e7c-481785e37b65/bruce_test.adf",
+      "sha256": "481785e37b65d5747cfb0541b1a6222fc9409ae6c550d2759e8c6b0a2ea59ce7"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/7cc83bb24e7c-481785e37b65/bruce_test.elf",
+      "sha256": "56c876e48243db9177948fdc46b274df7cec74441033cab909bbedc7a7cb1d78"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/7cc83bb24e7c-481785e37b65/bruce_test.exe",
+      "sha256": "7cc83bb24e7cdfa7a1e731a42787af9d69ffba213df7f43af07749ec4bcfcbff"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/amiga/out/bruce_amiga.elf",
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-contact-kernels.json",
+      "sha256": "b9050be2431eab50b54e5b6d5b59aed332428cc88f8f7e562b81caa6f6f543f1"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-kernels.json",
+      "sha256": "76527ddeeaef7988dd39abcf0b073b721702f8d6728842f448bbeb1bae4b2e19"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change00-complete.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change01-complete.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change02-complete.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change03-complete.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change04-complete.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change05-complete.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change06-complete.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change07-complete.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change08-complete.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/change09-complete.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/hidden.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/menu-source-0.bin",
+      "sha256": "e0c6cd359659abb93c24ee0aa49993bcd1729f929ca52ca3881d5a22d426d038"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/menu-source-1.bin",
+      "sha256": "e0c6cd359659abb93c24ee0aa49993bcd1729f929ca52ca3881d5a22d426d038"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/menu-source-2.bin",
+      "sha256": "2de344185cc1ae689f94d29c08bb28a4d794683aa8bba118dfc7337420dd0557"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/report.json",
+      "sha256": "18b12d78f8946958454cc8b579806c4910b45595be36b1c4dde8ecbb73a5ec6d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample000-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample000-hidden.bpl",
+      "sha256": "ca3db2663f48b567d01dced917b1062d8b5b3c298e8f393f2115106e1a6f3751"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample001-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample001-hidden.bpl",
+      "sha256": "68caaac060a419162bae5719b27cc550ccd78d77b5a17ea3257af82b6449d99e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample002-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample002-hidden.bpl",
+      "sha256": "d147fd2f4c88ebbfbee055bbd1141a289367bde09fa77ff16eeba1cb473c6562"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample003-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample003-hidden.bpl",
+      "sha256": "e028cc7a62b74c028e7a55c484f38e2e4777569434075af4b9bf560f7b528f00"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample004-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample004-hidden.bpl",
+      "sha256": "7beefcda024e9a40d1677726242912de5c70aa7f20949660b6d38119b43f9cb3"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample005-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample005-hidden.bpl",
+      "sha256": "d7d992960a9575ca7d7f92b034c76de4f2ecbcda6bc40733bbada98ec2b384a3"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample006-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample006-hidden.bpl",
+      "sha256": "7c7d5287a2fa1833acfd0218f52795143537bfc04ee55b3a4d0ba8c6bf35265e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample007-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample007-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample008-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample008-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample009-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample009-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample010-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample010-hidden.bpl",
+      "sha256": "312a9e6b9e38f22adde4ec086c84249629c90ddfd1ccd296b3fdb1ca9bd32401"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample011-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample011-hidden.bpl",
+      "sha256": "d2cd007ec13f128253bc520ab7b148aa5d14520337749a61c6b571b828a28b9a"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample012-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample012-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample013-front.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample013-hidden.bpl",
+      "sha256": "69860e8773bea67b06a670ce8f974a19102339f745541e3fed30f3c4305b5ac5"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample014-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample014-hidden.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample015-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample015-hidden.bpl",
+      "sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample016-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample016-hidden.bpl",
+      "sha256": "dd27755187e712830fc17eb4a136dcc89a44b0c12c218d46e4dd4af219f8390c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample017-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample017-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample018-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample018-hidden.bpl",
+      "sha256": "d2cd007ec13f128253bc520ab7b148aa5d14520337749a61c6b571b828a28b9a"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample019-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample019-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample020-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample020-hidden.bpl",
+      "sha256": "3a65cd8c02c7f411140da2102f1c4b0f49a2e2997613bb4ae6d41b355b6b267a"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample021-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample021-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample022-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample022-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample023-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample023-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample024-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample024-hidden.bpl",
+      "sha256": "312a9e6b9e38f22adde4ec086c84249629c90ddfd1ccd296b3fdb1ca9bd32401"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample025-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample025-hidden.bpl",
+      "sha256": "13f17698106bc3a6eb6f2589c76a2f1a90a1bd5640d2400bd40516a11e80837a"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample026-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample026-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample027-front.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample027-hidden.bpl",
+      "sha256": "5f169d01ded29b85ee66f2733a199b27d340fe6e76c4f25dd9fb2feb0ae40a47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample028-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample028-hidden.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample029-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample029-hidden.bpl",
+      "sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample030-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample030-hidden.bpl",
+      "sha256": "8f06c42c878bdc676d999add8cff196a4f7c5e4b906a22e39a2ea3d0c939d361"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample031-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample031-hidden.bpl",
+      "sha256": "9456fb46be2d24bd2787f27e7363fcb08f727e2ad56fc18243528b8f5df3df69"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample032-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample032-hidden.bpl",
+      "sha256": "d2cd007ec13f128253bc520ab7b148aa5d14520337749a61c6b571b828a28b9a"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample033-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample033-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample034-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample034-hidden.bpl",
+      "sha256": "721653fd23595efe5c09713c35c321ecc328c9d5b78c4a34dcc2e49f7dce4b0f"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample035-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample035-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample036-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample036-hidden.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample037-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample037-hidden.bpl",
+      "sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample038-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample038-hidden.bpl",
+      "sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample039-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample039-hidden.bpl",
+      "sha256": "d2cd007ec13f128253bc520ab7b148aa5d14520337749a61c6b571b828a28b9a"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample040-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample040-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample041-front.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample041-hidden.bpl",
+      "sha256": "fdae80c4a8ff3bbf9962e4e9157a9fcb6cc99b0dde58bf5bf5dfdd263748d567"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample042-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample042-hidden.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample043-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample043-hidden.bpl",
+      "sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample044-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample044-hidden.bpl",
+      "sha256": "2a6f4ab1d459f0bb4ed4a6401303b53003d016eea34014db3e8de3f1f4f4701f"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample045-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample045-hidden.bpl",
+      "sha256": "f8a0ab3fa4045e0e2104cb8dfa155e989aff9834983a8d28af54ae6d03bf802c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample046-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample046-hidden.bpl",
+      "sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample047-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample047-hidden.bpl",
+      "sha256": "12bec0e514d1ddf92b03d600f4384a52106f7301bddcc0599363f22a0b184ef8"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample048-front.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample048-hidden.bpl",
+      "sha256": "3fe38eb2041505b2ac82b823a27253c55f8e65b05392e39e82f2a4b721b87557"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample049-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample049-hidden.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample050-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample050-hidden.bpl",
+      "sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample051-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample051-hidden.bpl",
+      "sha256": "d2b0374437a269479df6466e5b35dc2195d019548fbcdd6e3d28caeb612d8648"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample052-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample052-hidden.bpl",
+      "sha256": "40cca68a8d6ca3642963a46b08a09572571d4507b4f7a402640d2d65703ad371"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample053-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample053-hidden.bpl",
+      "sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample054-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample054-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample055-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample055-hidden.bpl",
+      "sha256": "1e6f60b8e00748b0e898d725752f3be92c54003ee7596c323cfb323dbe2339b1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample056-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample056-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample057-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample057-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample058-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample058-hidden.bpl",
+      "sha256": "6bd82badcbbe61fad62441eab90df2dc54f6a12aae948278f42252152fc653e9"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample059-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample059-hidden.bpl",
+      "sha256": "a839bf4743d11d96be2c0fab7ce81fb26c93ad20c1b46303e4b00403da15358f"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample060-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample060-hidden.bpl",
+      "sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample061-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample061-hidden.bpl",
+      "sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample062-front.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample062-hidden.bpl",
+      "sha256": "810b36b14b41e46f9641e84d033e75f7f009c52c2dd0890446a53ee109e16be4"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample063-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample063-hidden.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample064-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample064-hidden.bpl",
+      "sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample065-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample065-hidden.bpl",
+      "sha256": "7d3e0298fc0d66e9fd1ceeba3d4cf6f347b4643abeefa586b1e54191f6ef6fa7"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample066-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample066-hidden.bpl",
+      "sha256": "5a3c6eae5f0733e922b7ad38be3dad6b9cf6f501fd94a87db092a29a38f28be0"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample067-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample067-hidden.bpl",
+      "sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample068-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample068-hidden.bpl",
+      "sha256": "42528f92c6cbdf3f1cc5743f5d1a06e1402f44e3c9d22614da071fd9b9a7fc7f"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample069-front.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample069-hidden.bpl",
+      "sha256": "6fcb1fd02333e1bdea3ab924c6cd2abe87a8bf5226f018b009071406b6f0f982"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample070-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample070-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample071-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample071-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample072-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample072-hidden.bpl",
+      "sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample073-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample073-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample074-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample074-hidden.bpl",
+      "sha256": "87ec9bfb9f2ea6cc7e6086d232a8725b2d6d4bd66bab22586f565603163cdc8f"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample075-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample075-hidden.bpl",
+      "sha256": "f87b9bb82216ab3d6bf23e774e562f0e97e2aaf02fdd5b78cc09d9b14eef8f73"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample076-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample076-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample077-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample077-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample078-front.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample078-hidden.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample079-front.bpl",
+      "sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/loader-blank-menu/sample079-hidden.bpl",
+      "sha256": "d20c3c035e8fd3935241445a0f8bc8ee501b4b14cd93c3285c66a9c29f7b12a2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/compact-call-r01/bruce_test.elf",
+      "sha256": "21dc0bddda14a3fb85f2c4cd06c54486e6fbc11e11371f6926b6ca8d798fc5fe"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped-controls/bruce_test.elf",
+      "sha256": "6674b9a79bb207d4d4d5ce82f86db7f9c32ffbc7d1044270245fbfae1e869e11"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/loader-blank-r12-death/front.bpl",
+      "sha256": "60d559dff7d624dd45d1baa78a0e2d25de93ee4611b14bc58d151ce14bfaf706"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/loader-blank-r12-death/report.json",
+      "sha256": "89eff8ad7217f7a9ec41899b6e55b12810e264d75015ff32059aa0ccbd3bae03"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/loader-blank-r12-death/source.bin",
+      "sha256": "aa30d0ac423d874ac7511be9707ed5d3935661427d0ac78ebb260fb158d48d63"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/loader-blank-r12/front.bpl",
+      "sha256": "8b65fb47aead7a45637bbeb2d2b95c83f6e50470025a43c76b7d322434bfd4b0"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/loader-blank-r12/report.json",
+      "sha256": "3f996919a2e4dfb42c48e5ac023f8eb8f5a009c09bc6c592841d89be67a1948d"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/loader-blank-r12/source.bin",
+      "sha256": "0d7056257d6f5e0ccd9c100d80a27bc605c03f8ecd1ca31be2b1ee5559ace6d2"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/background.bpl",
+      "sha256": "e8c6bc6725374aa779b58f456d1de7b2a9951d3d394f473f5836ce37fa35cf70"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/copper-05bb7c.bpl",
+      "sha256": "7c1ee260fe7b515c25f156ee15f3540800f780fb5772585c6ea211ba24fa5bb1"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/copper-065f7c.bpl",
+      "sha256": "7c1ee260fe7b515c25f156ee15f3540800f780fb5772585c6ea211ba24fa5bb1"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/loader-disassembly.txt",
+      "sha256": "f1b40bae4440506fb4d9995994be5c12c36ece2af8af85159d3b237126215c45"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank-r12/blank-source.bin",
+      "sha256": "e6096b81f9231e6c9bbdf71a8ce1edb37bfdf85a33672fedc190ed749138cd6a"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank-r12/published-background.bpl",
+      "sha256": "4fd5bfe690939bdd651dcd9358fea08660e985aab96407b084a019136ff5edbb"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank-r12/published-background.png",
+      "sha256": "545dd206c24234a5ad462c18718df4d7e672cb56e8e1f2aa69ce5b00a6e57841"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank-r12/published-front.bpl",
+      "sha256": "8ad06986d581e4b213f891e9684ebdf1f9a494eb50017fe0af2523c0210d1585"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank-r12/published-front.png",
+      "sha256": "7c62dbfd822d8c054df24f70faec3601146eaab0dd7f3bf25661252a48d059a9"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank-r12/published-queue.bin",
+      "sha256": "541b3e9daa09b20bf85fa273e5cbd3e80185aa4ec298e765db87742b70138a53"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank-r12/published-source.bin",
+      "sha256": "f272905630ff9920cd569f12832ac416a52e2d86b5e8cd4bb917e13ddc1ad160"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank-r12/report.json",
+      "sha256": "d1f1cd02d51fd4df484b92f758a57c52daac42fccd6281880c76601258cf6a7b"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/blank-source.bin",
+      "sha256": "7e08b994ebd337d8ec49dea8e9a73198c3cc8b1fbc4e87c0b4f20f7bc885da8d"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-background.bpl",
+      "sha256": "17654bfdf5c7f641f802e80119f50cd09f3f30774bd6b9d87441d9f3921ff914"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-background.png",
+      "sha256": "dd142b10829e7292f49e846c2323224933f664e0707b1c83a4ae4fe87e74e779"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-front.bpl",
+      "sha256": "6548da0276ce6345270165c9d4088cbdf515c35d0b5ec135570d3e4efb35aeba"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-front.png",
+      "sha256": "91505acecf46d8e4977428e02d26eb07ee0ae39f3baad724174d762992e9e714"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-queue.bin",
+      "sha256": "def53e583c61381f35aee84e9346f5f65d432fb266dd4730f9ac58bdd233ccdc"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/published-source.bin",
+      "sha256": "9e2eb1cd1de2b2b8234f165f4b0b0a9e633843a5800c2bc2e33ac416eba7766a"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-blank/report.json",
+      "sha256": "b3320f169d34c73d31e560e95d36f9cd76b6b1a649abe2e3fb4ea8e66a4f1d65"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/native-snapshot.json",
+      "sha256": "32017918db5bd81ac3b5e03d623a9694e6204af98a2a005aa26381efed10ff65"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/normal-ui/adf/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/normal-ui/adf/report.json",
+      "sha256": "31b7db5a870e9bc350366b5049c79d123c71815742530f05f067eaea16bddde7"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/normal-ui/cli/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/normal-ui/cli/report.json",
+      "sha256": "d1ac79a0549a56c04d1b6fd1b7d1d917a8dd318a5b0fb7221a08f4bd96987645"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/parent/manifest.json",
+      "sha256": "c27f2eb02a34fa48f8e9230921caa2f82a5e228df9201de06c2725ec46874909"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/parent/verified-report.json",
+      "sha256": "fcb6440c23d3fd7e114d72b0f5737423b0f2493fccb78dc18524919b12a39fac"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/present_frame-isra-0-disassembly.txt",
+      "sha256": "4c498e168fc871462ba7bc5d291680ebd965957787c5d318bb6087c02f570ae4"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/snapshot.json",
+      "sha256": "5a0abed0fafae709ba9bd7fdae5aaf9894c0d78b39f733a045269e1af2918c83"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/source-memory.bin",
+      "sha256": "8236700990fbfe2d63434d45a828cab2eb4d2a3bbaebc75a893c484f94e12162"
+    },
+    {
+      "path": "reference/analysis/screen-corruption-2026-10-30/source_game_load-disassembly.txt",
+      "sha256": "a88529cf9a465f823ffe8cc65711a4c2d4fc32754e0cebb51919f838d49e7c89"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "ac7e0799479a97254f3f0ac3fa57c0188412520f0b315f9541238b54120b3927"
+    },
+    {
+      "path": "tools/audit_contact_kernel_images.py",
+      "sha256": "ffa74855b41af914a049cf34ad5efe6ef828401aebcc623e713a3f81e691368e"
+    },
+    {
+      "path": "tools/audit_native_loader_blank.py",
+      "sha256": "a3937a588768f5d1039f7f6cf3eae3645a7c660f4d35710ac89b505894812f23"
+    },
+    {
+      "path": "tools/capture_corrupt_screen_replay.py",
+      "sha256": "52a11194194707380a920d8c3edc132af3b8dffbca8a2ccc716fc3f590141601"
+    },
+    {
+      "path": "tools/inspect_corrupt_screen_snapshot.py",
+      "sha256": "75761d50e137e9f912090cd7ad27b8e8c37b2f061aa954ab62237496efcbff24"
+    },
+    {
+      "path": "tools/recover_loader_parent_contact_proof.py",
+      "sha256": "e13dad00ce9bef353e1b9c85cca2704f09ea19d15577d7a6313012381a56c626"
+    },
+    {
+      "path": "tools/verify_amiga_entry.py",
+      "sha256": "857be561143af60741a1db39ab6044799cd5c11413c34a81d76e7d97dce3aea8"
+    },
+    {
+      "path": "tools/verify_compact_actor_delivery.py",
+      "sha256": "b1b8af4e6c8aef033c68c8fac7bac46d8e0a8aec382a9747247cba43de47aaaa"
+    },
+    {
+      "path": "tools/verify_compact_kernel_linkage.py",
+      "sha256": "31aeb073dc1d1ed7bb2ebbb31d3b77286369ea28a45db20c148c3e15d47293a9"
+    },
+    {
+      "path": "tools/verify_loader_blank_delivery.py",
+      "sha256": "31f7649cf75fcef42185177c08818dc5e97b5c7bd7300fb5524f77b05227aa63"
+    },
+    {
+      "path": "tools/record_loader_blank_delivery.py",
+      "sha256": "0d959819215fc69b37837304cd5eafbd96035a6d94e66ed07d25755da0ff93cf"
+    }
+  ]
+}

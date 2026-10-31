@@ -1,0 +1,37 @@
+4272  a5 49     LDA $49
+4274  05 4a     ORA $4a
+4276  d0 20     BNE $4298
+4278  e6 40     INC $40
+427A  a5 03     LDA $03
+427C  0a        ASL A
+427D  0a        ASL A
+427E  aa        TAX
+427F  a0 03     LDY #$03
+4281  a9 01     LDA #$01
+4283  9d 4b 01  STA $014b,X
+4286  e8        INX
+4287  88        DEY
+4288  10 f9     BPL $4283
+428A  20 c5 10  JSR $10c5
+428D  20 ca 33  JSR $33ca
+4290  20 e0 10  JSR $10e0
+4293  a2 00     LDX #$00
+4295  4c 17 32  JMP $3217
+4298  20 59 11  JSR $1159
+429B  29 07     AND #$07
+429D  09 f8     ORA #$f8
+429F  a2 1c     LDX #$1c
+42A1  9d ac da  STA $daac,X
+42A4  9d d4 da  STA $dad4,X
+42A7  9d fc da  STA $dafc,X
+42AA  9d 24 db  STA $db24,X
+42AD  9d 4c db  STA $db4c,X
+42B0  9d 74 db  STA $db74,X
+42B3  9d 9c db  STA $db9c,X
+42B6  9d c4 db  STA $dbc4,X
+42B9  ca        DEX
+42BA  10 e5     BPL $42a1
+42BC  a9 04     LDA #$04
+42BE  a2 00     LDX #$00
+42C0  a0 0a     LDY #$0a
+42C2  4c e2 17  JMP $17e2

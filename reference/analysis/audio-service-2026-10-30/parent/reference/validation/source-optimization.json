@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-30",
+  "status": "measured_compact_backend_memory_realtime_open",
+  "converted_jsrs": 444,
+  "pairs": [
+    {
+      "before_fields": 9044,
+      "after_fields": 8965,
+      "before_missed": 131,
+      "after_missed": 126,
+      "slow_gain": 13248
+    },
+    {
+      "before_fields": 9046,
+      "after_fields": 8956,
+      "before_missed": 127,
+      "after_missed": 121,
+      "slow_gain": 13248
+    }
+  ],
+  "native_controls": 53,
+  "reference_controls": 710,
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "f1047de7ded0a9087abefcec46e963aa8369019bc700172c60a99529cbea533d"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "2560d20e497e1a9e5a04078a72ba38a9072794e6d70b07632794183bcb465a64"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "e44dacf87e569551aa88ffc04680b08aab3865f7646699c70a7fee8a3feb4056"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "f1047de7ded0a9087abefcec46e963aa8369019bc700172c60a99529cbea533d"
+    }
+  ],
+  "realtime_accepted": false,
+  "natural_playthrough": false,
+  "full_stack_verified": false,
+  "prior_stage_history": {
+    "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-optimization.json",
+    "sha256": "bc9ec5c92d2f2ed8f87d859277e4a0b6c5f905457f40a4c0294ac5590768337e"
+  },
+  "artifacts": [
+    {
+      "path": "reference/validation/compact-actor-delivery.json",
+      "sha256": "18615549a9e79c8e813293e8e95cd4f3240216949727cb94085bf4a519ac16fa"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "c5613f2dd8a875f2137b374ec2d86f296ea8bfb1c00bf94db08134d69b1ab5e2"
+    },
+    {
+      "path": "tools/verify_source_optimization.py",
+      "sha256": "b2eddd70113c1ee791030b143cf3aefb0c3cd7be8daa0bbd0c41b590406cc751"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-optimization.json",
+      "sha256": "bc9ec5c92d2f2ed8f87d859277e4a0b6c5f905457f40a4c0294ac5590768337e"
+    }
+  ]
+}

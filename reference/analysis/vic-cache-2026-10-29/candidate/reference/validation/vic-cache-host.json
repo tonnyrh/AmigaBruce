@@ -1,0 +1,30 @@
+{
+  "status": "passed_cache_representation_equivalence",
+  "cases": 25600,
+  "full_ram_preservation_cases": 1024,
+  "natural_playthrough": false,
+  "original_raster_verified": false,
+  "scope": "All256 bytes in each of3 positions and4 opacity/width modes for8 sprites; dense/wrapped pointers; all rows/raw bytes/pad/metadata/other sprites unchanged against frozen C",
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "b9141711fcf16dd3e56a295be74aa6421b0da0f6e91c3b1f53974d509335f3f6"
+    },
+    {
+      "path": "tests/vic_cache_bridge.c",
+      "sha256": "762dee151e25a5bcfdbd8f0920955ea7413e29549f0ca3ee2c24d8d29ab86ee1"
+    },
+    {
+      "path": "tools/verify_vic_cache.py",
+      "sha256": "19eba73e41c08945411da93d755571b5e1ed13c24cf4b7e37e748977a05abab4"
+    },
+    {
+      "path": "test-vic-cache.ps1",
+      "sha256": "9fd134af6afb2d6e5d274ab027cc0d4d566e9bb3817f14423d637bfc57521f31"
+    },
+    {
+      "path": "reference/analysis/vic-cache-2026-10-29/before/core/c64_rooms.c",
+      "sha256": "96efd3c2ce6212712b221ad1d2f46482666e6e06c0db8f711c3e0e90d7365a56"
+    }
+  ]
+}

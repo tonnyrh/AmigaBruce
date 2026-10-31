@@ -1,0 +1,6 @@
+{
+  "status": "rejected_allocation_failure",
+  "host_cases": 25600,
+  "profile_exe_bytes": 365812,
+  "baseline_profile_exe_bytes": 365644
+}

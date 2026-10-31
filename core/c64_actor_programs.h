@@ -1,6 +1,9 @@
 /* GENERATED from frozen bytes by tools/build_c64_rooms.py. */
 static void actor_code(unsigned short entry){
 unsigned short address;unsigned char q,old;
+unsigned short native_calls[16],native_depth=0,native_id=0;
+static const unsigned short native_returns[444]={0x0749,0x074c,0x074f,0x075a,0x076c,0x076f,0x077a,0x0795,0x079a,0x0802,0x0805,0x080d,0x0810,0x0813,0x0816,0x09f3,0x09f6,0x0a23,0x0a2a,0x0aea,0x0af3,0x0afc,0x0aff,0x0b02,0x0b12,0x0b1b,0x0b21,0x0b24,0x0b27,0x0b33,0x0b36,0x0ba2,0x0bae,0x0cd8,0x0ce8,0x0d1e,0x0d31,0x0d66,0x0d8d,0x0da1,0x0dc7,0x0de2,0x0dec,0x0dfb,0x0e00,0x0e1e,0x0ed3,0x0f2c,0x0f99,0x0fa4,0x0fb9,0x0fbc,0x0ffe,0x1024,0x1027,0x1086,0x108c,0x10af,0x10bf,0x13ef,0x13f5,0x15bd,0x163c,0x163f,0x1774,0x1797,0x17a1,0x17db,0x17de,0x181b,0x183b,0x184e,0x1873,0x1889,0x1891,0x1894,0x18d9,0x1930,0x194c,0x1955,0x195e,0x19cc,0x19e0,0x1a31,0x1a38,0x1a3f,0x1a4a,0x1a5e,0x1a61,0x1b1b,0x1b31,0x1b88,0x1bb0,0x1bc9,0x1bd1,0x1bd4,0x1bd7,0x1bee,0x1bf1,0x1bf8,0x1bfb,0x1bfe,0x1c0d,0x1c29,0x1c32,0x1ce2,0x1ced,0x1cfa,0x1d07,0x1d60,0x1d66,0x1daa,0x1db0,0x1dbc,0x1dbf,0x1ddf,0x1de6,0x1de9,0x1dec,0x1e2c,0x1e33,0x1e36,0x1e39,0x1e66,0x1e6d,0x1e70,0x1ea7,0x1eae,0x1eb1,0x1f49,0x1f5f,0x1fbf,0x1fce,0x202b,0x202e,0x203a,0x203d,0x2040,0x2043,0x205d,0x2068,0x206b,0x2077,0x2085,0x2088,0x20a2,0x20ad,0x20b0,0x20bc,0x20ca,0x20cd,0x20e5,0x20e8,0x20eb,0x20ee,0x20fd,0x2100,0x210e,0x2111,0x2118,0x211b,0x2133,0x2136,0x2139,0x213c,0x2148,0x214b,0x2159,0x215c,0x2163,0x2166,0x21bb,0x21be,0x21c8,0x21cb,0x21d5,0x21d8,0x21e2,0x21e5,0x21ee,0x21fb,0x21fe,0x2204,0x2207,0x2262,0x227f,0x229f,0x22a9,0x22d5,0x2303,0x235b,0x2369,0x236f,0x2392,0x23fa,0x2402,0x2422,0x2425,0x2431,0x2434,0x2458,0x2469,0x246c,0x246f,0x2472,0x2475,0x2478,0x247b,0x247e,0x2481,0x2484,0x2498,0x249b,0x249e,0x24a1,0x24a4,0x24a7,0x2594,0x259b,0x25ae,0x25bc,0x25c4,0x25d7,0x2a89,0x2a96,0x2a9d,0x2aac,0x2ac3,0x2ac6,0x2ae2,0x2ae9,0x2aec,0x2b2f,0x2b6e,0x2b86,0x2bc2,0x2be6,0x2c0a,0x2c36,0x2c3d,0x2c47,0x2d75,0x2dc3,0x2dca,0x2e33,0x2e55,0x2e5e,0x2e61,0x2e68,0x2e74,0x2e83,0x2f0a,0x2f0d,0x2f13,0x2f2d,0x2f34,0x2f39,0x2f3f,0x2f54,0x2f69,0x2f7e,0x2f95,0x2fc2,0x2fc9,0x2fcf,0x2fea,0x2fef,0x2ff8,0x302a,0x3036,0x3042,0x3048,0x305c,0x315a,0x315d,0x3165,0x316d,0x31fc,0x3204,0x3240,0x324e,0x325d,0x3270,0x327f,0x3296,0x32b8,0x32d6,0x3395,0x33d5,0x33f1,0x35c3,0x3659,0x3662,0x3670,0x369b,0x36bd,0x36c6,0x36cf,0x36e2,0x36eb,0x36f9,0x371c,0x3726,0x3742,0x3757,0x3778,0x378d,0x379d,0x37a6,0x37af,0x37b4,0x37cc,0x37e1,0x37fa,0x3803,0x380c,0x3811,0x3822,0x3830,0x3856,0x3864,0x388a,0x3898,0x38bf,0x38c6,0x38cb,0x38df,0x38e8,0x3907,0x390e,0x3915,0x3926,0x3934,0x395a,0x3968,0x3989,0x3997,0x39bd,0x39c0,0x39c6,0x3a1a,0x3a28,0x3a8d,0x3a96,0x3a9b,0x3aa3,0x3aad,0x3ab7,0x3ac0,0x3ac5,0x3ad1,0x3aea,0x3b0f,0x3b28,0x3b3c,0x3b51,0x3b62,0x3b70,0x3b91,0x3b9f,0x3bdc,0x3bfd,0x3c06,0x3c2f,0x3c40,0x3c4e,0x3c6f,0x3c7d,0x3ca7,0x3cd9,0x3cef,0x3d00,0x3d07,0x3d0e,0x3d20,0x3d38,0x3d5e,0x3d6b,0x3d70,0x3d7b,0x3d80,0x3da6,0x3e10,0x3e25,0x3e32,0x3e3f,0x3e60,0x3e79,0x3eb5,0x3ec3,0x3ee3,0x3ef9,0x3f02,0x3f08,0x3f21,0x3f2a,0x3f30,0x3f42,0x3f4b,0x3f54,0x3f57,0x3f6e,0x3fa9,0x3fbf,0x3fd5,0x3fd8,0x3ff3,0x3ffd,0x4003,0x401f,0x4029,0x402f,0x4051,0x405a,0x4066,0x406f,0x415c,0x416f,0x4259,0x428d,0x4290,0x4293,0x5248,0x5259,0x5274,0x5277,0x5283,0x5286,0x5292,0x5295,0x52a1,0x52a4,0x5312,0x5319,0x5339,0x5361,0x53f2,0x5406,0x5416,0x5426,0x542c,0x5446,0x5451,0x545c};
+static const unsigned short native_targets[444]={0x0f72,0x0763,0x09bc,0x50db,0x082d,0x1386,0x0869,0x1a56,0x09a9,0x315a,0x31c2,0x1a96,0x1abb,0x1ac7,0x1aed,0x423f,0x255e,0x3175,0x3175,0x0b5f,0x4786,0x0b51,0x0b58,0x485b,0x0b5f,0x4786,0x0b51,0x0b58,0x485b,0x336e,0x50db,0x0e21,0x0e21,0x10b5,0x0b8e,0x0cd5,0x10d0,0x10d0,0x10d0,0x0d46,0x10d0,0x0df8,0x10d0,0x10b5,0x0b8e,0x2ddd,0x255e,0x50db,0x255e,0x10c5,0x33ca,0x0fe2,0x1007,0x3a7c,0x0b43,0x404e,0x4063,0x404e,0x2509,0x142c,0x1462,0x25e2,0x1a42,0x102b,0x424f,0x1aed,0x2d7c,0x1c5b,0x2780,0x255e,0x423f,0x0ea7,0x0fed,0x0763,0x423f,0x1a56,0x09a9,0x32dc,0x1984,0x1984,0x50db,0x139e,0x094b,0x1bb6,0x103b,0x1abb,0x1a96,0x1a67,0x1a8a,0x320e,0x139e,0x320e,0x17e2,0x19b8,0x1b29,0x19ec,0x1a08,0x1a96,0x40bc,0x0da4,0x0d0f,0x0db1,0x3a6f,0x3184,0x2d55,0x1e39,0x1df2,0x1ec4,0x1e86,0x1ec4,0x1e86,0x1ec4,0x1e86,0x1e39,0x1e39,0x1fc4,0x1dec,0x1dec,0x1dec,0x1fc4,0x1e39,0x1e39,0x1e39,0x1fc4,0x1e70,0x1e70,0x1fc4,0x1eb1,0x1eb1,0x1fc4,0x1fc4,0x1fae,0x2509,0x1e39,0x1e39,0x1df2,0x1df2,0x1df2,0x1df2,0x2509,0x1df2,0x1e86,0x1e86,0x1e39,0x1e86,0x2509,0x1df2,0x1ec4,0x1ec4,0x1e39,0x1ec4,0x1df2,0x1df2,0x1e86,0x1e86,0x1e86,0x1e86,0x1e86,0x1e86,0x1e39,0x1e39,0x1df2,0x1df2,0x1ec4,0x1ec4,0x1ec4,0x1ec4,0x1ec4,0x1ec4,0x1e39,0x1e39,0x1df2,0x1df2,0x1e39,0x1e39,0x1e86,0x1e86,0x1ec4,0x1ec4,0x1fc4,0x1e39,0x1e39,0x1df2,0x1df2,0x2509,0x2509,0x10d0,0x10d0,0x2509,0x2ddd,0x1eae,0x2e1c,0x1e6d,0x1f7e,0x1eae,0x1e6d,0x1e86,0x1e86,0x1ec4,0x1ec4,0x1e39,0x1e86,0x1e86,0x1e86,0x1e86,0x1e86,0x1e86,0x1e86,0x1e86,0x1e86,0x1e86,0x1ec4,0x1ec4,0x1ec4,0x1ec4,0x1ec4,0x1ec4,0x2704,0x2719,0x26a0,0x2704,0x2719,0x26a0,0x2c54,0x2509,0x2b3e,0x2c54,0x2e29,0x2b3e,0x2c54,0x2e29,0x2b3e,0x2e29,0x10d0,0x10d0,0x3175,0x3175,0x3175,0x3175,0x3175,0x3175,0x3001,0x228c,0x10d0,0x2509,0x2e10,0x1c39,0x2e6e,0x2e6e,0x1a67,0x2e89,0x330e,0x331c,0x3315,0x330e,0x3175,0x2509,0x30d4,0x30d4,0x30d4,0x30d4,0x3001,0x3001,0x0d42,0x09bc,0x1aed,0x2509,0x17e2,0x0e21,0x0e21,0x1131,0x1145,0x2509,0x1aed,0x32dc,0x1b17,0x1b17,0x1b17,0x1b17,0x32cc,0x17e2,0x17e2,0x17e2,0x17e2,0x17e2,0x17e2,0x2509,0x1a67,0x33da,0x3a63,0x2fef,0x2509,0x17e2,0x17e2,0x424f,0x424f,0x17e2,0x17e2,0x2509,0x17e2,0x17e2,0x424f,0x17e2,0x17e2,0x17e2,0x17e2,0x17e2,0x424f,0x17e2,0x17e2,0x4090,0x17e2,0x17e2,0x424f,0x17e2,0x17e2,0x409a,0x40a4,0x40a4,0x4090,0x4090,0x409a,0x409a,0x3a8a,0x3a8a,0x4090,0x3a8a,0x17e2,0x17e2,0x3a8a,0x3a8a,0x4086,0x4086,0x4090,0x4090,0x40b4,0x40b4,0x3aa0,0x3228,0x3228,0x40a4,0x40a4,0x424f,0x3aca,0x3aca,0x3a8a,0x3a8a,0x424f,0x3aca,0x3aca,0x17e2,0x3a8a,0x3a8a,0x3aaa,0x3a8a,0x3a8a,0x4086,0x4086,0x4090,0x4090,0x3a8a,0x424f,0x17e2,0x404e,0x40a4,0x40a4,0x40ac,0x40ac,0x3ab4,0x3228,0x423f,0x17e2,0x3175,0x3175,0x4133,0x407d,0x17e2,0x3d81,0x3d8e,0x3d81,0x3d8e,0x17e2,0x2509,0x17e2,0x17e2,0x17e2,0x3ab4,0x3ab4,0x3175,0x104b,0x3ab4,0x17e2,0x17e2,0x424f,0x17e2,0x17e2,0x424f,0x17e2,0x17e2,0x17e2,0x424f,0x3ab4,0x404e,0x17e2,0x17e2,0x3228,0x4086,0x4090,0x409a,0x4086,0x4090,0x409a,0x4078,0x17e2,0x4078,0x17e2,0x4201,0x4220,0x2509,0x10c5,0x33ca,0x10e0,0x52ad,0x55ab,0x530a,0x537e,0x530a,0x537e,0x530a,0x537e,0x530a,0x537e,0x55c5,0x55d7,0x5649,0x56bb,0x5431,0x55e6,0x5658,0x56ca,0x5431,0x55e6,0x5658,0x56ca};
 switch(entry){
 case 0x050f:goto L050f;
 case 0x0584:goto L0584;
@@ -781,12 +784,12 @@ case 0x5649:goto L5649;
 case 0x5658:goto L5658;
 case 0x56bb:goto L56bb;
 case 0x56ca:goto L56ca;
-default:source_fault=entry;return;
+default:source_fault=entry;goto actor_native_unwind;
 }
 L050f:; /* $050F */
-actor_reset_pending=1;return;
+actor_reset_pending=1;goto actor_native_unwind;
 L0584:; /* $0584 */
-actor_reset_pending=1;return;
+actor_reset_pending=1;goto actor_native_unwind;
 L0743:; /* $0743 */
 x=0xfd;NZ(x);
 goto L0745;
@@ -794,13 +797,19 @@ L0745:; /* $0745 */
 sp=x;
 goto L0746;
 L0746:; /* $0746 */
-m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x48;actor_code(0x0f72);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0749)return;
+m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x48;
+if(native_depth==16){native_id=0;goto actor_native_overflow;}
+native_calls[native_depth++]=0;goto L0f72;
 goto L0749;
 L0749:; /* $0749 */
-m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x4b;actor_code(0x0763);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x074c)return;
+m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x4b;
+if(native_depth==16){native_id=1;goto actor_native_overflow;}
+native_calls[native_depth++]=1;goto L0763;
 goto L074c;
 L074c:; /* $074C */
-m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x4e;actor_code(0x09bc);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x074f)return;
+m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x4e;
+if(native_depth==16){native_id=2;goto actor_native_overflow;}
+native_calls[native_depth++]=2;goto L09bc;
 goto L074f;
 L074f:; /* $074F */
 a=0x00;NZ(a);
@@ -815,7 +824,9 @@ L0755:; /* $0755 */
 address=0x001e;m[address]=a;
 goto L0757;
 L0757:; /* $0757 */
-m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x59;actor_code(0x50db);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x075a)return;
+m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x59;
+if(native_depth==16){native_id=3;goto actor_native_overflow;}
+native_calls[native_depth++]=3;goto L50db;
 goto L075a;
 L075a:; /* $075A */
 
@@ -847,10 +858,14 @@ L0767:; /* $0767 */
 address=0x008c;m[address]=a;
 goto L0769;
 L0769:; /* $0769 */
-m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x6b;actor_code(0x082d);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x076c)return;
+m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x6b;
+if(native_depth==16){native_id=4;goto actor_native_overflow;}
+native_calls[native_depth++]=4;goto L082d;
 goto L076c;
 L076c:; /* $076C */
-m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x6e;actor_code(0x1386);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x076f)return;
+m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x6e;
+if(native_depth==16){native_id=5;goto actor_native_overflow;}
+native_calls[native_depth++]=5;goto L1386;
 goto L076f;
 L076f:; /* $076F */
 a=0xff;NZ(a);
@@ -865,7 +880,9 @@ L0775:; /* $0775 */
 a=0xd8;NZ(a);
 goto L0777;
 L0777:; /* $0777 */
-m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x79;actor_code(0x0869);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x077a)return;
+m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x79;
+if(native_depth==16){native_id=6;goto actor_native_overflow;}
+native_calls[native_depth++]=6;goto L0869;
 goto L077a;
 L077a:; /* $077A */
 a=0x00;NZ(a);
@@ -895,13 +912,17 @@ L078f:; /* $078F */
 address=0x4375;m[address]=a;
 goto L0792;
 L0792:; /* $0792 */
-m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x94;actor_code(0x1a56);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0795)return;
+m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x94;
+if(native_depth==16){native_id=7;goto actor_native_overflow;}
+native_calls[native_depth++]=7;goto L1a56;
 goto L0795;
 L0795:; /* $0795 */
 a=0xf8;NZ(a);
 goto L0797;
 L0797:; /* $0797 */
-m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x99;actor_code(0x09a9);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x079a)return;
+m[0x100 + sp--]=0x07;m[0x100 + sp--]=0x99;
+if(native_depth==16){native_id=8;goto actor_native_overflow;}
+native_calls[native_depth++]=8;goto L09a9;
 goto L079a;
 L079a:; /* $079A */
 x=0x27;NZ(x);
@@ -1033,10 +1054,14 @@ L07fd:; /* $07FD */
 a=0x80;NZ(a);
 goto L07ff;
 L07ff:; /* $07FF */
-m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x01;actor_code(0x315a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0802)return;
+m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x01;
+if(native_depth==16){native_id=9;goto actor_native_overflow;}
+native_calls[native_depth++]=9;goto L315a;
 goto L0802;
 L0802:; /* $0802 */
-m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x04;actor_code(0x31c2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0805)return;
+m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x04;
+if(native_depth==16){native_id=10;goto actor_native_overflow;}
+native_calls[native_depth++]=10;goto L31c2;
 goto L0805;
 L0805:; /* $0805 */
 a=0x11;NZ(a);
@@ -1045,16 +1070,24 @@ L0807:; /* $0807 */
 address=0x43bd;m[address]=a;
 goto L080a;
 L080a:; /* $080A */
-m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x0c;actor_code(0x1a96);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x080d)return;
+m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x0c;
+if(native_depth==16){native_id=11;goto actor_native_overflow;}
+native_calls[native_depth++]=11;goto L1a96;
 goto L080d;
 L080d:; /* $080D */
-m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x0f;actor_code(0x1abb);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0810)return;
+m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x0f;
+if(native_depth==16){native_id=12;goto actor_native_overflow;}
+native_calls[native_depth++]=12;goto L1abb;
 goto L0810;
 L0810:; /* $0810 */
-m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x12;actor_code(0x1ac7);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0813)return;
+m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x12;
+if(native_depth==16){native_id=13;goto actor_native_overflow;}
+native_calls[native_depth++]=13;goto L1ac7;
 goto L0813;
 L0813:; /* $0813 */
-m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x15;actor_code(0x1aed);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0816)return;
+m[0x100 + sp--]=0x08;m[0x100 + sp--]=0x15;
+if(native_depth==16){native_id=14;goto actor_native_overflow;}
+native_calls[native_depth++]=14;goto L1aed;
 goto L0816;
 L0816:; /* $0816 */
 a=0x01;NZ(a);
@@ -1158,7 +1191,7 @@ L0865:; /* $0865 */
 address=0xd412;m[address]=a;
 goto L0868;
 L0868:; /* $0868 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0869:; /* $0869 */
 x=0x00;NZ(x);
 goto L086b;
@@ -1253,7 +1286,7 @@ L08ae:; /* $08AE */
 if(!c)goto L089a;
 goto L08b0;
 L08b0:; /* $08B0 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L094b:; /* $094B */
 a=m[0xdc00];NZ(a);
 goto L094e;
@@ -1267,7 +1300,7 @@ L0953:; /* $0953 */
 if(z)goto L094b;
 goto L0955;
 L0955:; /* $0955 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L09a9:; /* $09A9 */
 x=0x00;NZ(x);
 goto L09ab;
@@ -1290,7 +1323,7 @@ L09b8:; /* $09B8 */
 if(!z)goto L09ab;
 goto L09ba;
 L09ba:; /* $09BA */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L09bc:; /* $09BC */
 source_actor_loading_begin();
 a=m[0xd011];NZ(a);
@@ -1359,10 +1392,14 @@ L09ee:; /* $09EE */
 if(!z)goto L09e1;
 goto L09f0;
 L09f0:; /* $09F0 */
-m[0x100 + sp--]=0x09;m[0x100 + sp--]=0xf2;actor_code(0x423f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x09f3)return;
+m[0x100 + sp--]=0x09;m[0x100 + sp--]=0xf2;
+if(native_depth==16){native_id=15;goto actor_native_overflow;}
+native_calls[native_depth++]=15;goto L423f;
 goto L09f3;
 L09f3:; /* $09F3 */
-m[0x100 + sp--]=0x09;m[0x100 + sp--]=0xf5;actor_code(0x255e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x09f6)return;
+m[0x100 + sp--]=0x09;m[0x100 + sp--]=0xf5;
+if(native_depth==16){native_id=16;goto actor_native_overflow;}
+native_calls[native_depth++]=16;goto L255e;
 goto L09f6;
 L09f6:; /* $09F6 */
 if(actor_debug_target==11)goto L0a0e;
@@ -1425,7 +1462,9 @@ L0a1e:; /* $0A1E */
 x=0x01;NZ(x);
 goto L0a20;
 L0a20:; /* $0A20 */
-m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0x22;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0a23)return;
+m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0x22;
+if(native_depth==16){native_id=17;goto actor_native_overflow;}
+native_calls[native_depth++]=17;goto L3175;
 goto L0a23;
 L0a23:; /* $0A23 */
 a=0xd0;NZ(a);
@@ -1434,7 +1473,9 @@ L0a25:; /* $0A25 */
 x=0x02;NZ(x);
 goto L0a27;
 L0a27:; /* $0A27 */
-m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0x29;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0a2a)return;
+m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0x29;
+if(native_depth==16){native_id=18;goto actor_native_overflow;}
+native_calls[native_depth++]=18;goto L3175;
 goto L0a2a;
 L0a2a:; /* $0A2A */
 a=0x00;NZ(a);
@@ -1704,7 +1745,9 @@ L0ae5:; /* $0AE5 */
 if(!n)goto L0aea;
 goto L0ae7;
 L0ae7:; /* $0AE7 */
-m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xe9;actor_code(0x0b5f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0aea)return;
+m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xe9;
+if(native_depth==16){native_id=19;goto actor_native_overflow;}
+native_calls[native_depth++]=19;goto L0b5f;
 goto L0aea;
 L0aea:; /* $0AEA */
 address=(unsigned short)(W(0x04)+y);m[address]=a;source_written(address);
@@ -1716,7 +1759,9 @@ L0aee:; /* $0AEE */
 address=(unsigned short)(W(0x08)+y);m[address]=a;source_written(address);
 goto L0af0;
 L0af0:; /* $0AF0 */
-m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xf2;actor_code(0x4786);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0af3)return;
+m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xf2;
+if(native_depth==16){native_id=20;goto actor_native_overflow;}
+native_calls[native_depth++]=20;goto L4786;
 goto L0af3;
 L0af3:; /* $0AF3 */
 m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xf5;if(++m[6]){NZ(m[6]);}else{++m[7];NZ(m[7]);}sp+=2;
@@ -1725,13 +1770,19 @@ L0af6:; /* $0AF6 */
 m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xf8;if(++m[8]){NZ(m[8]);}else{++m[9];NZ(m[9]);}sp+=2;
 goto L0af9;
 L0af9:; /* $0AF9 */
-m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xfb;actor_code(0x0b51);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0afc)return;
+m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xfb;
+if(native_depth==16){native_id=21;goto actor_native_overflow;}
+native_calls[native_depth++]=21;goto L0b51;
 goto L0afc;
 L0afc:; /* $0AFC */
-m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xfe;actor_code(0x0b58);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0aff)return;
+m[0x100 + sp--]=0x0a;m[0x100 + sp--]=0xfe;
+if(native_depth==16){native_id=22;goto actor_native_overflow;}
+native_calls[native_depth++]=22;goto L0b58;
 goto L0aff;
 L0aff:; /* $0AFF */
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x01;actor_code(0x485b);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0b02)return;
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x01;
+if(native_depth==16){native_id=23;goto actor_native_overflow;}
+native_calls[native_depth++]=23;goto L485b;
 goto L0b02;
 L0b02:; /* $0B02 */
 x--;NZ(x);
@@ -1755,7 +1806,9 @@ L0b0d:; /* $0B0D */
 if(!n)goto L0b12;
 goto L0b0f;
 L0b0f:; /* $0B0F */
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x11;actor_code(0x0b5f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0b12)return;
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x11;
+if(native_depth==16){native_id=24;goto actor_native_overflow;}
+native_calls[native_depth++]=24;goto L0b5f;
 goto L0b12;
 L0b12:; /* $0B12 */
 address=(unsigned short)(W(0x04)+y);m[address]=a;source_written(address);
@@ -1767,19 +1820,27 @@ L0b16:; /* $0B16 */
 address=(unsigned short)(W(0x08)+y);m[address]=a;source_written(address);
 goto L0b18;
 L0b18:; /* $0B18 */
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x1a;actor_code(0x4786);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0b1b)return;
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x1a;
+if(native_depth==16){native_id=25;goto actor_native_overflow;}
+native_calls[native_depth++]=25;goto L4786;
 goto L0b1b;
 L0b1b:; /* $0B1B */
 m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x1d;if(++m[8]){NZ(m[8]);}else{++m[9];NZ(m[9]);}sp+=2;
 goto L0b1e;
 L0b1e:; /* $0B1E */
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x20;actor_code(0x0b51);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0b21)return;
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x20;
+if(native_depth==16){native_id=26;goto actor_native_overflow;}
+native_calls[native_depth++]=26;goto L0b51;
 goto L0b21;
 L0b21:; /* $0B21 */
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x23;actor_code(0x0b58);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0b24)return;
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x23;
+if(native_depth==16){native_id=27;goto actor_native_overflow;}
+native_calls[native_depth++]=27;goto L0b58;
 goto L0b24;
 L0b24:; /* $0B24 */
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x26;actor_code(0x485b);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0b27)return;
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x26;
+if(native_depth==16){native_id=28;goto actor_native_overflow;}
+native_calls[native_depth++]=28;goto L485b;
 goto L0b27;
 L0b27:; /* $0B27 */
 x--;NZ(x);
@@ -1793,11 +1854,15 @@ goto L0b2d;
 L0b2d:; /* $0B2D */
 goto L0ad7;
 L0b30:; /* $0B30 */
-if(actor_legacy_load){sp+=2;actor_return=source_stack_return();return;}
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x32;actor_code(0x336e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0b33)return;
+if(actor_legacy_load){sp+=2;actor_return=source_stack_return();goto actor_native_unwind;}
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x32;
+if(native_depth==16){native_id=29;goto actor_native_overflow;}
+native_calls[native_depth++]=29;goto L336e;
 goto L0b33;
 L0b33:; /* $0B33 */
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x35;actor_code(0x50db);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0b36)return;
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0x35;
+if(native_depth==16){native_id=30;goto actor_native_overflow;}
+native_calls[native_depth++]=30;goto L50db;
 goto L0b36;
 L0b36:; /* $0B36 */
 
@@ -1832,7 +1897,7 @@ L0b47:; /* $0B47 */
 address=0x0005;m[address]++;NZ(m[address]);
 goto L0b49;
 L0b49:; /* $0B49 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0b51:; /* $0B51 */
 address=0x0010;m[address]++;NZ(m[address]);
 goto L0b53;
@@ -1843,7 +1908,7 @@ L0b55:; /* $0B55 */
 address=0x0011;m[address]++;NZ(m[address]);
 goto L0b57;
 L0b57:; /* $0B57 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0b58:; /* $0B58 */
 address=0x0012;m[address]++;NZ(m[address]);
 goto L0b5a;
@@ -1854,7 +1919,7 @@ L0b5c:; /* $0B5C */
 address=0x0013;m[address]++;NZ(m[address]);
 goto L0b5e;
 L0b5e:; /* $0B5E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0b5f:; /* $0B5F */
 m[0x100 + sp--]=a;
 goto L0b60;
@@ -1874,7 +1939,7 @@ L0b67:; /* $0B67 */
 a&=0x7f;NZ(a);
 goto L0b69;
 L0b69:; /* $0B69 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0b8e:; /* $0B8E */
 a|=0x01;NZ(a);
 goto L0b90;
@@ -1906,7 +1971,9 @@ L0b9d:; /* $0B9D */
 address=(unsigned char)(0xec + x);m[address]=a;
 goto L0b9f;
 L0b9f:; /* $0B9F */
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0xa1;actor_code(0x0e21);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0ba2)return;
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0xa1;
+if(native_depth==16){native_id=31;goto actor_native_overflow;}
+native_calls[native_depth++]=31;goto L0e21;
 goto L0ba2;
 L0ba2:; /* $0BA2 */
 y=m[0x0052];NZ(y);
@@ -1921,7 +1988,9 @@ L0ba9:; /* $0BA9 */
 if(z)goto L0bae;
 goto L0bab;
 L0bab:; /* $0BAB */
-m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0xad;actor_code(0x0e21);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0bae)return;
+m[0x100 + sp--]=0x0b;m[0x100 + sp--]=0xad;
+if(native_depth==16){native_id=32;goto actor_native_overflow;}
+native_calls[native_depth++]=32;goto L0e21;
 goto L0bae;
 L0bae:; /* $0BAE */
 y=m[0x0052];NZ(y);
@@ -2324,10 +2393,12 @@ L0cd1:; /* $0CD1 */
 address=0xd015;m[address]=a;
 goto L0cd4;
 L0cd4:; /* $0CD4 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0cd5:; /* $0CD5 */
 ++actor_spawn_events;
-m[0x100 + sp--]=0x0c;m[0x100 + sp--]=0xd7;actor_code(0x10b5);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0cd8)return;
+m[0x100 + sp--]=0x0c;m[0x100 + sp--]=0xd7;
+if(native_depth==16){native_id=33;goto actor_native_overflow;}
+native_calls[native_depth++]=33;goto L10b5;
 goto L0cd8;
 L0cd8:; /* $0CD8 */
 a=m[0xcf79];NZ(a);
@@ -2345,7 +2416,9 @@ L0ce3:; /* $0CE3 */
 a=0x80;NZ(a);
 goto L0ce5;
 L0ce5:; /* $0CE5 */
-m[0x100 + sp--]=0x0c;m[0x100 + sp--]=0xe7;actor_code(0x0b8e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0ce8)return;
+m[0x100 + sp--]=0x0c;m[0x100 + sp--]=0xe7;
+if(native_depth==16){native_id=34;goto actor_native_overflow;}
+native_calls[native_depth++]=34;goto L0b8e;
 goto L0ce8;
 L0ce8:; /* $0CE8 */
 a=0x10;NZ(a);
@@ -2399,7 +2472,7 @@ L0d0c:; /* $0D0C */
 address=(unsigned char)(0xd1 + x);m[address]=a;
 goto L0d0e;
 L0d0e:; /* $0D0E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0d0f:; /* $0D0F */
 a=m[0x005e];NZ(a);
 goto L0d11;
@@ -2419,7 +2492,9 @@ L0d19:; /* $0D19 */
 if(!z)goto L0d3c;
 goto L0d1b;
 L0d1b:; /* $0D1B */
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x1d;actor_code(0x0cd5);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0d1e)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x1d;
+if(native_depth==16){native_id=35;goto actor_native_overflow;}
+native_calls[native_depth++]=35;goto L0cd5;
 goto L0d1e;
 L0d1e:; /* $0D1E */
 x=m[0x0029];NZ(x);
@@ -2443,7 +2518,9 @@ L0d2c:; /* $0D2C */
 address=0x005e;m[address]=a;
 goto L0d2e;
 L0d2e:; /* $0D2E */
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x30;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0d31)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x30;
+if(native_depth==16){native_id=36;goto actor_native_overflow;}
+native_calls[native_depth++]=36;goto L10d0;
 goto L0d31;
 L0d31:; /* $0D31 */
 if(v)goto L0d3d;
@@ -2458,12 +2535,12 @@ L0d37:; /* $0D37 */
 if(!z)goto L0d3d;
 goto L0d39;
 L0d39:; /* $0D39 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0d3a:; /* $0D3A */
 old=m[0x005e];m[0x005e]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x005e]);
 goto L0d3c;
 L0d3c:; /* $0D3C */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0d3d:; /* $0D3D */
 a=0x03;NZ(a);
 goto L0d3f;
@@ -2471,7 +2548,7 @@ L0d3f:; /* $0D3F */
 address=0x005e;m[address]=a;
 goto L0d41;
 L0d41:; /* $0D41 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0d42:; /* $0D42 */
 c=x>=0x01;NZ((unsigned char)(x-0x01));
 goto L0d44;
@@ -2518,7 +2595,9 @@ L0d61:; /* $0D61 */
 address=0x005e;m[address]=a;
 goto L0d63;
 L0d63:; /* $0D63 */
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x65;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0d66)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x65;
+if(native_depth==16){native_id=37;goto actor_native_overflow;}
+native_calls[native_depth++]=37;goto L10d0;
 goto L0d66;
 L0d66:; /* $0D66 */
 if(v)goto L0d3d;
@@ -2533,12 +2612,12 @@ L0d6c:; /* $0D6C */
 if(!z)goto L0d3d;
 goto L0d6e;
 L0d6e:; /* $0D6E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0d6f:; /* $0D6F */
 old=m[0x005e];m[0x005e]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x005e]);
 goto L0d71;
 L0d71:; /* $0D71 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0d72:; /* $0D72 */
 c=x>=0x02;NZ((unsigned char)(x-0x02));
 goto L0d74;
@@ -2573,7 +2652,9 @@ L0d88:; /* $0D88 */
 address=0x005d;m[address]=a;
 goto L0d8a;
 L0d8a:; /* $0D8A */
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x8c;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0d8d)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0x8c;
+if(native_depth==16){native_id=38;goto actor_native_overflow;}
+native_calls[native_depth++]=38;goto L10d0;
 goto L0d8d;
 L0d8d:; /* $0D8D */
 if(v)goto L0d99;
@@ -2588,12 +2669,12 @@ L0d93:; /* $0D93 */
 if(!z)goto L0d99;
 goto L0d95;
 L0d95:; /* $0D95 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0d96:; /* $0D96 */
 old=m[0x005d];m[0x005d]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x005d]);
 goto L0d98;
 L0d98:; /* $0D98 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0d99:; /* $0D99 */
 a=0x03;NZ(a);
 goto L0d9b;
@@ -2601,9 +2682,11 @@ L0d9b:; /* $0D9B */
 address=0x005d;m[address]=a;
 goto L0d9d;
 L0d9d:; /* $0D9D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0d9e:; /* $0D9E */
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xa0;actor_code(0x0d46);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0da1)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xa0;
+if(native_depth==16){native_id=39;goto actor_native_overflow;}
+native_calls[native_depth++]=39;goto L0d46;
 goto L0da1;
 L0da1:; /* $0DA1 */
 goto L0d76;
@@ -2626,7 +2709,7 @@ L0dae:; /* $0DAE */
 address=0x005e;m[address]--;NZ(m[address]);
 goto L0db0;
 L0db0:; /* $0DB0 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0db1:; /* $0DB1 */
 a=m[0x005d];NZ(a);
 goto L0db3;
@@ -2655,7 +2738,9 @@ L0dc2:; /* $0DC2 */
 if(!z)goto L0dd7;
 goto L0dc4;
 L0dc4:; /* $0DC4 */
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xc6;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0dc7)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xc6;
+if(native_depth==16){native_id=40;goto actor_native_overflow;}
+native_calls[native_depth++]=40;goto L10d0;
 goto L0dc7;
 L0dc7:; /* $0DC7 */
 if(v)goto L0dd7;
@@ -2679,7 +2764,7 @@ L0dd4:; /* $0DD4 */
 address=0x005d;m[address]=a;
 goto L0dd6;
 L0dd6:; /* $0DD6 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0dd7:; /* $0DD7 */
 x=0x02;NZ(x);
 goto L0dd9;
@@ -2693,7 +2778,9 @@ L0ddd:; /* $0DDD */
 if(!z)goto L0df7;
 goto L0ddf;
 L0ddf:; /* $0DDF */
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xe1;actor_code(0x0df8);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0de2)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xe1;
+if(native_depth==16){native_id=41;goto actor_native_overflow;}
+native_calls[native_depth++]=41;goto L0df8;
 goto L0de2;
 L0de2:; /* $0DE2 */
 x=m[0x0029];NZ(x);
@@ -2705,7 +2792,9 @@ L0de7:; /* $0DE7 */
 address=0x005d;m[address]=a;
 goto L0de9;
 L0de9:; /* $0DE9 */
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xeb;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0dec)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xeb;
+if(native_depth==16){native_id=42;goto actor_native_overflow;}
+native_calls[native_depth++]=42;goto L10d0;
 goto L0dec;
 L0dec:; /* $0DEC */
 if(v)goto L0d99;
@@ -2720,21 +2809,25 @@ L0df2:; /* $0DF2 */
 if(!z)goto L0d99;
 goto L0df4;
 L0df4:; /* $0DF4 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0df5:; /* $0DF5 */
 old=m[0x005d];m[0x005d]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x005d]);
 goto L0df7;
 L0df7:; /* $0DF7 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0df8:; /* $0DF8 */
 ++actor_spawn_events;
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xfa;actor_code(0x10b5);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0dfb)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xfa;
+if(native_depth==16){native_id=43;goto actor_native_overflow;}
+native_calls[native_depth++]=43;goto L10b5;
 goto L0dfb;
 L0dfb:; /* $0DFB */
 a=0x40;NZ(a);
 goto L0dfd;
 L0dfd:; /* $0DFD */
-m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xff;actor_code(0x0b8e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0e00)return;
+m[0x100 + sp--]=0x0d;m[0x100 + sp--]=0xff;
+if(native_depth==16){native_id=44;goto actor_native_overflow;}
+native_calls[native_depth++]=44;goto L0b8e;
 goto L0e00;
 L0e00:; /* $0E00 */
 a=0x82;NZ(a);
@@ -2773,7 +2866,9 @@ L0e19:; /* $0E19 */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L0e1b;
 L0e1b:; /* $0E1B */
-m[0x100 + sp--]=0x0e;m[0x100 + sp--]=0x1d;actor_code(0x2ddd);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0e1e)return;
+m[0x100 + sp--]=0x0e;m[0x100 + sp--]=0x1d;
+if(native_depth==16){native_id=45;goto actor_native_overflow;}
+native_calls[native_depth++]=45;goto L2ddd;
 goto L0e1e;
 L0e1e:; /* $0E1E */
 goto L2e1c;
@@ -2799,7 +2894,7 @@ L0e2a:; /* $0E2A */
 address=(unsigned short)(0x4f40 + y);m[address]=a;
 goto L0e2d;
 L0e2d:; /* $0E2D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0ea7:; /* $0EA7 */
 actor_i=1;
 goto L0ea8;
@@ -2852,7 +2947,9 @@ L0ece:; /* $0ECE */
 if(!z)goto L0ec1;
 goto L0ed0;
 L0ed0:; /* $0ED0 */
-m[0x100 + sp--]=0x0e;m[0x100 + sp--]=0xd2;actor_code(0x255e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0ed3)return;
+m[0x100 + sp--]=0x0e;m[0x100 + sp--]=0xd2;
+if(native_depth==16){native_id=46;goto actor_native_overflow;}
+native_calls[native_depth++]=46;goto L255e;
 goto L0ed3;
 L0ed3:; /* $0ED3 */
 a=m[0x0003];NZ(a);
@@ -2966,7 +3063,9 @@ L0f26:; /* $0F26 */
 address=0xd016;m[address]=a;
 goto L0f29;
 L0f29:; /* $0F29 */
-m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0x2b;actor_code(0x50db);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0f2c)return;
+m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0x2b;
+if(native_depth==16){native_id=47;goto actor_native_overflow;}
+native_calls[native_depth++]=47;goto L50db;
 goto L0f2c;
 L0f2c:; /* $0F2C */
 
@@ -3017,9 +3116,9 @@ L0f45:; /* $0F45 */
 old=m[0x0048];m[0x0048]=(unsigned char)(old<<1);c=(old&128)!=0;NZ(m[0x0048]);
 goto L0f47;
 L0f47:; /* $0F47 */
-actor_delay_pending=1;return;
+actor_delay_pending=1;goto actor_native_unwind;
 L0f71:; /* $0F71 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0f72:; /* $0F72 */
 a=0x00;NZ(a);
 goto L0f74;
@@ -3075,7 +3174,9 @@ L0f94:; /* $0F94 */
 if(!n)goto L0f8d;
 goto L0f96;
 L0f96:; /* $0F96 */
-m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0x98;actor_code(0x255e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0f99)return;
+m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0x98;
+if(native_depth==16){native_id=48;goto actor_native_overflow;}
+native_calls[native_depth++]=48;goto L255e;
 goto L0f99;
 L0f99:; /* $0F99 */
 a=0x05;NZ(a);
@@ -3087,7 +3188,9 @@ L0f9e:; /* $0F9E */
 address=0x4e96;m[address]=a;
 goto L0fa1;
 L0fa1:; /* $0FA1 */
-m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0xa3;actor_code(0x10c5);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0fa4)return;
+m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0xa3;
+if(native_depth==16){native_id=49;goto actor_native_overflow;}
+native_calls[native_depth++]=49;goto L10c5;
 goto L0fa4;
 L0fa4:; /* $0FA4 */
 x=0x27;NZ(x);
@@ -3114,10 +3217,14 @@ L0fb3:; /* $0FB3 */
 address=0x0301;m[address]=a;
 goto L0fb6;
 L0fb6:; /* $0FB6 */
-m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0xb8;actor_code(0x33ca);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0fb9)return;
+m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0xb8;
+if(native_depth==16){native_id=50;goto actor_native_overflow;}
+native_calls[native_depth++]=50;goto L33ca;
 goto L0fb9;
 L0fb9:; /* $0FB9 */
-m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0xbb;actor_code(0x0fe2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0fbc)return;
+m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0xbb;
+if(native_depth==16){native_id=51;goto actor_native_overflow;}
+native_calls[native_depth++]=51;goto L0fe2;
 goto L0fbc;
 L0fbc:; /* $0FBC */
 a=0x04;NZ(a);
@@ -3171,7 +3278,7 @@ L0fdf:; /* $0FDF */
 if(!n)goto L0fd9;
 goto L0fe1;
 L0fe1:; /* $0FE1 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0fe2:; /* $0FE2 */
 a=0x01;NZ(a);
 goto L0fe4;
@@ -3188,7 +3295,7 @@ L0fea:; /* $0FEA */
 if(!n)goto L0fe6;
 goto L0fec;
 L0fec:; /* $0FEC */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L0fed:; /* $0FED */
 a=0x40;NZ(a);
 goto L0fef;
@@ -3214,7 +3321,9 @@ L0ffa:; /* $0FFA */
 x=a;NZ(x);
 goto L0ffb;
 L0ffb:; /* $0FFB */
-m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0xfd;actor_code(0x1007);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x0ffe)return;
+m[0x100 + sp--]=0x0f;m[0x100 + sp--]=0xfd;
+if(native_depth==16){native_id=52;goto actor_native_overflow;}
+native_calls[native_depth++]=52;goto L1007;
 goto L0ffe;
 L0ffe:; /* $0FFE */
 address=0x004e;m[address]++;NZ(m[address]);
@@ -3229,7 +3338,7 @@ L1004:; /* $1004 */
 if(!c)goto L0ff9;
 goto L1006;
 L1006:; /* $1006 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1007:; /* $1007 */
 a=m[(unsigned short)(0x4ce2 + x)];NZ(a);
 goto L100a;
@@ -3273,15 +3382,19 @@ L101f:; /* $101F */
 address=(unsigned short)(W(0x0a)+y);m[address]=a;source_written(address);
 goto L1021;
 L1021:; /* $1021 */
-m[0x100 + sp--]=0x10;m[0x100 + sp--]=0x23;actor_code(0x3a7c);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1024)return;
+m[0x100 + sp--]=0x10;m[0x100 + sp--]=0x23;
+if(native_depth==16){native_id=53;goto actor_native_overflow;}
+native_calls[native_depth++]=53;goto L3a7c;
 goto L1024;
 L1024:; /* $1024 */
-m[0x100 + sp--]=0x10;m[0x100 + sp--]=0x26;actor_code(0x0b43);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1027)return;
+m[0x100 + sp--]=0x10;m[0x100 + sp--]=0x26;
+if(native_depth==16){native_id=54;goto actor_native_overflow;}
+native_calls[native_depth++]=54;goto L0b43;
 goto L1027;
 L1027:; /* $1027 */
 goto L1013;
 L102a:; /* $102A */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L102b:; /* $102B */
 x=0x13;NZ(x);
 goto L102d;
@@ -3304,7 +3417,7 @@ L1038:; /* $1038 */
 address=0x0082;m[address]=a;
 goto L103a;
 L103a:; /* $103A */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L103b:; /* $103B */
 x=0x13;NZ(x);
 goto L103d;
@@ -3327,9 +3440,9 @@ L1048:; /* $1048 */
 address=0x0082;m[address]=a;
 goto L104a;
 L104a:; /* $104A */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L104b:; /* $104B */
-if(!d){source_movers();actor_return=source_stack_return();return;}
+if(!d){source_movers();actor_return=source_stack_return();goto actor_native_unwind;}
 x=0x08;NZ(x);
 goto L104d;
 L104d:; /* $104D */
@@ -3402,12 +3515,16 @@ L1081:; /* $1081 */
 if(z)goto L1089;
 goto L1083;
 L1083:; /* $1083 */
-m[0x100 + sp--]=0x10;m[0x100 + sp--]=0x85;actor_code(0x404e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1086)return;
+m[0x100 + sp--]=0x10;m[0x100 + sp--]=0x85;
+if(native_depth==16){native_id=55;goto actor_native_overflow;}
+native_calls[native_depth++]=55;goto L404e;
 goto L1086;
 L1086:; /* $1086 */
 goto L10af;
 L1089:; /* $1089 */
-m[0x100 + sp--]=0x10;m[0x100 + sp--]=0x8b;actor_code(0x4063);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x108c)return;
+m[0x100 + sp--]=0x10;m[0x100 + sp--]=0x8b;
+if(native_depth==16){native_id=56;goto actor_native_overflow;}
+native_calls[native_depth++]=56;goto L4063;
 goto L108c;
 L108c:; /* $108C */
 goto L10af;
@@ -3448,7 +3565,9 @@ L10aa:; /* $10AA */
 if(z)goto L1089;
 goto L10ac;
 L10ac:; /* $10AC */
-m[0x100 + sp--]=0x10;m[0x100 + sp--]=0xae;actor_code(0x404e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x10af)return;
+m[0x100 + sp--]=0x10;m[0x100 + sp--]=0xae;
+if(native_depth==16){native_id=57;goto actor_native_overflow;}
+native_calls[native_depth++]=57;goto L404e;
 goto L10af;
 L10af:; /* $10AF */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -3463,7 +3582,7 @@ L10b2:; /* $10B2 */
 if(!n)goto L104d;
 goto L10b4;
 L10b4:; /* $10B4 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L10b5:; /* $10B5 */
 m[0x100 + sp--]=a;
 goto L10b6;
@@ -3483,7 +3602,9 @@ L10ba:; /* $10BA */
 y=0x82;NZ(y);
 goto L10bc;
 L10bc:; /* $10BC */
-m[0x100 + sp--]=0x10;m[0x100 + sp--]=0xbe;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x10bf)return;
+m[0x100 + sp--]=0x10;m[0x100 + sp--]=0xbe;
+if(native_depth==16){native_id=58;goto actor_native_overflow;}
+native_calls[native_depth++]=58;goto L2509;
 goto L10bf;
 L10bf:; /* $10BF */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -3501,7 +3622,7 @@ L10c3:; /* $10C3 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L10c4;
 L10c4:; /* $10C4 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L10c5:; /* $10C5 */
 x=0x13;NZ(x);
 goto L10c7;
@@ -3518,7 +3639,7 @@ L10cd:; /* $10CD */
 if(!n)goto L10c7;
 goto L10cf;
 L10cf:; /* $10CF */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L10d0:; /* $10D0 */
 a=m[0x0088];NZ(a);
 goto L10d2;
@@ -3535,7 +3656,7 @@ L10d8:; /* $10D8 */
 v=0;
 goto L10d9;
 L10d9:; /* $10D9 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L10da:; /* $10DA */
 a=0xff;NZ(a);
 goto L10dc;
@@ -3543,7 +3664,7 @@ L10dc:; /* $10DC */
 z=(a&m[0x10df])==0;n=(m[0x10df]&128)!=0;v=(m[0x10df]&64)!=0;
 goto L10df;
 L10df:; /* $10DF */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L10e0:; /* $10E0 */
 a=m[0x0003];NZ(a);
 goto L10e2;
@@ -3581,7 +3702,7 @@ L10f3:; /* $10F3 */
 address=(unsigned short)(0x0300 + x);m[address]=a;
 goto L10f6;
 L10f6:; /* $10F6 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1131:; /* $1131 */
 m[0x100 + sp--]=a;
 goto L1132;
@@ -3619,7 +3740,7 @@ L1143:; /* $1143 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L1144;
 L1144:; /* $1144 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1145:; /* $1145 */
 m[0x100 + sp--]=a;
 goto L1146;
@@ -3657,9 +3778,9 @@ L1157:; /* $1157 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L1158;
 L1158:; /* $1158 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1159:; /* $1159 */
-if(m[0x1159]!=0xad){source_fault=0x1159;return;}
+if(m[0x1159]!=0xad){source_fault=0x1159;goto actor_native_unwind;}
 a=m[0x0104];NZ(a);
 goto L115c;
 L115c:; /* $115C */
@@ -3669,7 +3790,7 @@ L115e:; /* $115E */
 a=0x01;NZ(a);
 goto L1160;
 L1160:; /* $1160 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1161:; /* $1161 */
 address=0x0016;m[address]++;NZ(m[address]);
 goto L1163;
@@ -3677,7 +3798,7 @@ L1163:; /* $1163 */
 a=m[(unsigned short)(W(0x16)+y)];NZ(a);
 goto L1165;
 L1165:; /* $1165 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1386:; /* $1386 */
 x=0xff;NZ(x);
 goto L1388;
@@ -3706,7 +3827,7 @@ L139a:; /* $139A */
 address=0xdd0d;m[address]=a;
 goto L139d;
 L139d:; /* $139D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L139e:; /* $139E */
 a=m[0x010c];NZ(a);
 goto L13a1;
@@ -3726,7 +3847,7 @@ L13ab:; /* $13AB */
 if(z)goto L13ae;
 goto L13ad;
 L13ad:; /* $13AD */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L13ae:; /* $13AE */
 x=0xff;NZ(x);
 goto L13b0;
@@ -3803,12 +3924,16 @@ L13ea:; /* $13EA */
 if(!z)goto L13f2;
 goto L13ec;
 L13ec:; /* $13EC */
-m[0x100 + sp--]=0x13;m[0x100 + sp--]=0xee;actor_code(0x142c);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x13ef)return;
+m[0x100 + sp--]=0x13;m[0x100 + sp--]=0xee;
+if(native_depth==16){native_id=59;goto actor_native_overflow;}
+native_calls[native_depth++]=59;goto L142c;
 goto L13ef;
 L13ef:; /* $13EF */
 goto L13f5;
 L13f2:; /* $13F2 */
-m[0x100 + sp--]=0x13;m[0x100 + sp--]=0xf4;actor_code(0x1462);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x13f5)return;
+m[0x100 + sp--]=0x13;m[0x100 + sp--]=0xf4;
+if(native_depth==16){native_id=60;goto actor_native_overflow;}
+native_calls[native_depth++]=60;goto L1462;
 goto L13f5;
 L13f5:; /* $13F5 */
 a=0x00;NZ(a);
@@ -3832,7 +3957,7 @@ L1405:; /* $1405 */
 if(z)goto L1408;
 goto L1407;
 L1407:; /* $1407 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1408:; /* $1408 */
 a=m[0x0109];NZ(a);
 goto L140b;
@@ -3876,7 +4001,7 @@ L1428:; /* $1428 */
 address=0x010c;m[address]=a;
 goto L142b;
 L142b:; /* $142B */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L142c:; /* $142C */
 x=0x07;NZ(x);
 goto L142e;
@@ -3896,7 +4021,7 @@ L1436:; /* $1436 */
 address=0x010a;m[address]=x;
 goto L1439;
 L1439:; /* $1439 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L143a:; /* $143A */
 y=0x07;NZ(y);
 goto L143c;
@@ -3952,7 +4077,7 @@ L145e:; /* $145E */
 address=0x010a;m[address]=a;
 goto L1461;
 L1461:; /* $1461 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1462:; /* $1462 */
 y=0x00;NZ(y);
 goto L1464;
@@ -3990,7 +4115,7 @@ L147a:; /* $147A */
 address=0x010a;m[address]=a;
 goto L147d;
 L147d:; /* $147D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L147e:; /* $147E */
 a=y;NZ(a);
 goto L147f;
@@ -4007,12 +4132,14 @@ L1484:; /* $1484 */
 address=0x010a;m[address]=a;
 goto L1487;
 L1487:; /* $1487 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L15b8:; /* $15B8 */
 address=0x0016;m[address]++;NZ(m[address]);
 goto L15ba;
 L15ba:; /* $15BA */
-m[0x100 + sp--]=0x15;m[0x100 + sp--]=0xbc;actor_code(0x25e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x15bd)return;
+m[0x100 + sp--]=0x15;m[0x100 + sp--]=0xbc;
+if(native_depth==16){native_id=61;goto actor_native_overflow;}
+native_calls[native_depth++]=61;goto L25e2;
 goto L15bd;
 L15bd:; /* $15BD */
 a=m[0x4eec];NZ(a);
@@ -4180,10 +4307,14 @@ L1636:; /* $1636 */
 address=0x0105;m[address]=a;
 goto L1639;
 L1639:; /* $1639 */
-m[0x100 + sp--]=0x16;m[0x100 + sp--]=0x3b;actor_code(0x1a42);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x163c)return;
+m[0x100 + sp--]=0x16;m[0x100 + sp--]=0x3b;
+if(native_depth==16){native_id=62;goto actor_native_overflow;}
+native_calls[native_depth++]=62;goto L1a42;
 goto L163c;
 L163c:; /* $163C */
-m[0x100 + sp--]=0x16;m[0x100 + sp--]=0x3e;actor_code(0x102b);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x163f)return;
+m[0x100 + sp--]=0x16;m[0x100 + sp--]=0x3e;
+if(native_depth==16){native_id=63;goto actor_native_overflow;}
+native_calls[native_depth++]=63;goto L102b;
 goto L163f;
 L163f:; /* $163F */
 address=0x0080;m[address]++;NZ(m[address]);
@@ -4326,7 +4457,7 @@ L169a:; /* $169A */
 address=0xdc03;m[address]=a;
 goto L169d;
 L169d:; /* $169D */
-actor_irq_stop=1;return;
+actor_irq_stop=1;goto actor_native_unwind;
 L1703:; /* $1703 */
 a=m[0x0002];NZ(a);
 goto L1705;
@@ -4478,7 +4609,9 @@ L176f:; /* $176F */
 address=0x0088;m[address]=a;
 goto L1771;
 L1771:; /* $1771 */
-m[0x100 + sp--]=0x17;m[0x100 + sp--]=0x73;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1774)return;
+m[0x100 + sp--]=0x17;m[0x100 + sp--]=0x73;
+if(native_depth==16){native_id=64;goto actor_native_overflow;}
+native_calls[native_depth++]=64;goto L424f;
 goto L1774;
 L1774:; /* $1774 */
 a=m[0x0028];NZ(a);
@@ -4521,7 +4654,9 @@ L1791:; /* $1791 */
 address=0x439f;m[address]=a;
 goto L1794;
 L1794:; /* $1794 */
-m[0x100 + sp--]=0x17;m[0x100 + sp--]=0x96;actor_code(0x1aed);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1797)return;
+m[0x100 + sp--]=0x17;m[0x100 + sp--]=0x96;
+if(native_depth==16){native_id=65;goto actor_native_overflow;}
+native_calls[native_depth++]=65;goto L1aed;
 goto L1797;
 L1797:; /* $1797 */
 a=0x00;NZ(a);
@@ -4533,9 +4668,11 @@ L179b:; /* $179B */
 address=0x008a;m[address]=a;
 goto L179d;
 L179d:; /* $179D */
-actor_irq_stop=1;return;
+actor_irq_stop=1;goto actor_native_unwind;
 L179e:; /* $179E */
-m[0x100 + sp--]=0x17;m[0x100 + sp--]=0xa0;actor_code(0x2d7c);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x17a1)return;
+m[0x100 + sp--]=0x17;m[0x100 + sp--]=0xa0;
+if(native_depth==16){native_id=66;goto actor_native_overflow;}
+native_calls[native_depth++]=66;goto L2d7c;
 goto L17a1;
 L17a1:; /* $17A1 */
 a=m[0x0104];NZ(a);
@@ -4625,10 +4762,14 @@ L17d6:; /* $17D6 */
 address=0x0098;m[address]=a;
 goto L17d8;
 L17d8:; /* $17D8 */
-m[0x100 + sp--]=0x17;m[0x100 + sp--]=0xda;actor_code(0x1c5b);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x17db)return;
+m[0x100 + sp--]=0x17;m[0x100 + sp--]=0xda;
+if(native_depth==16){native_id=67;goto actor_native_overflow;}
+native_calls[native_depth++]=67;goto L1c5b;
 goto L17db;
 L17db:; /* $17DB */
-m[0x100 + sp--]=0x17;m[0x100 + sp--]=0xdd;actor_code(0x2780);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x17de)return;
+m[0x100 + sp--]=0x17;m[0x100 + sp--]=0xdd;
+if(native_depth==16){native_id=68;goto actor_native_overflow;}
+native_calls[native_depth++]=68;goto L2780;
 goto L17de;
 L17de:; /* $17DE */
 x--;NZ(x);
@@ -4637,12 +4778,14 @@ L17df:; /* $17DF */
 if(!n)goto L17be;
 goto L17e1;
 L17e1:; /* $17E1 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L17e2:; /* $17E2 */
-source_string();actor_return=source_stack_return();return;
+source_string();actor_return=source_stack_return();goto actor_native_unwind;
 L1818:; /* $1818 */
 ++actor_life_events;
-m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x1a;actor_code(0x255e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x181b)return;
+m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x1a;
+if(native_depth==16){native_id=69;goto actor_native_overflow;}
+native_calls[native_depth++]=69;goto L255e;
 goto L181b;
 L181b:; /* $181B */
 a=m[0x0104];NZ(a);
@@ -4684,7 +4827,9 @@ L1836:; /* $1836 */
 address=0x008c;m[address]=a;
 goto L1838;
 L1838:; /* $1838 */
-m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x3a;actor_code(0x423f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x183b)return;
+m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x3a;
+if(native_depth==16){native_id=70;goto actor_native_overflow;}
+native_calls[native_depth++]=70;goto L423f;
 goto L183b;
 L183b:; /* $183B */
 a=m[0x42c9];NZ(a);
@@ -4708,7 +4853,9 @@ L1849:; /* $1849 */
 address=0x0003;m[address]=a;
 goto L184b;
 L184b:; /* $184B */
-m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x4d;actor_code(0x0ea7);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x184e)return;
+m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x4d;
+if(native_depth==16){native_id=71;goto actor_native_overflow;}
+native_calls[native_depth++]=71;goto L0ea7;
 goto L184e;
 L184e:; /* $184E */
 a=m[0xd011];NZ(a);
@@ -4756,7 +4903,9 @@ L186e:; /* $186E */
 if(!n)goto L1862;
 goto L1870;
 L1870:; /* $1870 */
-m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x72;actor_code(0x0fed);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1873)return;
+m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x72;
+if(native_depth==16){native_id=72;goto actor_native_overflow;}
+native_calls[native_depth++]=72;goto L0fed;
 goto L1873;
 L1873:; /* $1873 */
 x=0x02;NZ(x);
@@ -4786,7 +4935,9 @@ L1884:; /* $1884 */
 if(!n)goto L1875;
 goto L1886;
 L1886:; /* $1886 */
-m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x88;actor_code(0x0763);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1889)return;
+m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x88;
+if(native_depth==16){native_id=73;goto actor_native_overflow;}
+native_calls[native_depth++]=73;goto L0763;
 goto L1889;
 L1889:; /* $1889 */
 x=m[0x0029];NZ(x);
@@ -4794,10 +4945,14 @@ goto L188b;
 L188b:; /* $188B */
 goto L3217;
 L188e:; /* $188E */
-m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x90;actor_code(0x423f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1891)return;
+m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x90;
+if(native_depth==16){native_id=74;goto actor_native_overflow;}
+native_calls[native_depth++]=74;goto L423f;
 goto L1891;
 L1891:; /* $1891 */
-m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x93;actor_code(0x1a56);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1894)return;
+m[0x100 + sp--]=0x18;m[0x100 + sp--]=0x93;
+if(native_depth==16){native_id=75;goto actor_native_overflow;}
+native_calls[native_depth++]=75;goto L1a56;
 goto L1894;
 L1894:; /* $1894 */
 actor_i=1;
@@ -4878,7 +5033,9 @@ L18d3:; /* $18D3 */
 address=0xd016;m[address]=x;
 goto L18d6;
 L18d6:; /* $18D6 */
-m[0x100 + sp--]=0x18;m[0x100 + sp--]=0xd8;actor_code(0x09a9);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x18d9)return;
+m[0x100 + sp--]=0x18;m[0x100 + sp--]=0xd8;
+if(native_depth==16){native_id=76;goto actor_native_overflow;}
+native_calls[native_depth++]=76;goto L09a9;
 goto L18d9;
 L18d9:; /* $18D9 */
 x=0x00;NZ(x);
@@ -4992,7 +5149,9 @@ L192b:; /* $192B */
 if(!n)goto L191a;
 goto L192d;
 L192d:; /* $192D */
-m[0x100 + sp--]=0x19;m[0x100 + sp--]=0x2f;actor_code(0x32dc);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1930)return;
+m[0x100 + sp--]=0x19;m[0x100 + sp--]=0x2f;
+if(native_depth==16){native_id=77;goto actor_native_overflow;}
+native_calls[native_depth++]=77;goto L32dc;
 goto L1930;
 L1930:; /* $1930 */
 a=0x4e;NZ(a);
@@ -5037,7 +5196,9 @@ L1948:; /* $1948 */
 old=a;a=(unsigned char)(old>>1);c=(old&1)!=0;NZ(a);
 goto L1949;
 L1949:; /* $1949 */
-m[0x100 + sp--]=0x19;m[0x100 + sp--]=0x4b;actor_code(0x1984);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x194c)return;
+m[0x100 + sp--]=0x19;m[0x100 + sp--]=0x4b;
+if(native_depth==16){native_id=78;goto actor_native_overflow;}
+native_calls[native_depth++]=78;goto L1984;
 goto L194c;
 L194c:; /* $194C */
 y++;NZ(y);
@@ -5049,7 +5210,9 @@ L1950:; /* $1950 */
 a&=0x0f;NZ(a);
 goto L1952;
 L1952:; /* $1952 */
-m[0x100 + sp--]=0x19;m[0x100 + sp--]=0x54;actor_code(0x1984);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1955)return;
+m[0x100 + sp--]=0x19;m[0x100 + sp--]=0x54;
+if(native_depth==16){native_id=79;goto actor_native_overflow;}
+native_calls[native_depth++]=79;goto L1984;
 goto L1955;
 L1955:; /* $1955 */
 y++;NZ(y);
@@ -5064,7 +5227,9 @@ L1959:; /* $1959 */
 if(!c)goto L1942;
 goto L195b;
 L195b:; /* $195B */
-m[0x100 + sp--]=0x19;m[0x100 + sp--]=0x5d;actor_code(0x50db);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x195e)return;
+m[0x100 + sp--]=0x19;m[0x100 + sp--]=0x5d;
+if(native_depth==16){native_id=80;goto actor_native_overflow;}
+native_calls[native_depth++]=80;goto L50db;
 goto L195e;
 L195e:; /* $195E */
 
@@ -5091,7 +5256,7 @@ L1966:; /* $1966 */
 address=0x0048;m[address]=a;
 goto L1968;
 L1968:; /* $1968 */
-actor_gameover_pending=1;return;
+actor_gameover_pending=1;goto actor_native_unwind;
 L196c:; /* $196C */
 a=m[0x42c9];NZ(a);
 goto L196f;
@@ -5113,7 +5278,7 @@ L197b:; /* $197B */
 address=0x0048;m[address]=a;
 goto L197d;
 L197d:; /* $197D */
-actor_gameover_pending=2;return;
+actor_gameover_pending=2;goto actor_native_unwind;
 L1981:; /* $1981 */
 goto L0584;
 L1984:; /* $1984 */
@@ -5165,7 +5330,7 @@ L199c:; /* $199C */
 address=(unsigned short)(W(0x06)+y);m[address]=a;source_written(address);
 goto L199e;
 L199e:; /* $199E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L199f:; /* $199F */
 a=0x00;NZ(a);
 goto L19a1;
@@ -5194,7 +5359,7 @@ L19b4:; /* $19B4 */
 old=m[0x43bb];m[0x43bb]=(unsigned char)((old<<1)|c);c=(old&128)!=0;NZ(m[0x43bb]);
 goto L19b7;
 L19b7:; /* $19B7 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L19b8:; /* $19B8 */
 a=m[0x0104];NZ(a);
 goto L19bb;
@@ -5217,7 +5382,9 @@ L19c6:; /* $19C6 */
 address=0x010e;m[address]=a;
 goto L19c9;
 L19c9:; /* $19C9 */
-m[0x100 + sp--]=0x19;m[0x100 + sp--]=0xcb;actor_code(0x139e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x19cc)return;
+m[0x100 + sp--]=0x19;m[0x100 + sp--]=0xcb;
+if(native_depth==16){native_id=81;goto actor_native_overflow;}
+native_calls[native_depth++]=81;goto L139e;
 goto L19cc;
 L19cc:; /* $19CC */
 a=m[0x010c];NZ(a);
@@ -5241,7 +5408,9 @@ L19db:; /* $19DB */
 if(!z)goto L19eb;
 goto L19dd;
 L19dd:; /* $19DD */
-m[0x100 + sp--]=0x19;m[0x100 + sp--]=0xdf;actor_code(0x094b);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x19e0)return;
+m[0x100 + sp--]=0x19;m[0x100 + sp--]=0xdf;
+if(native_depth==16){native_id=82;goto actor_native_overflow;}
+native_calls[native_depth++]=82;goto L094b;
 goto L19e0;
 L19e0:; /* $19E0 */
 a=0x06;NZ(a);
@@ -5258,7 +5427,7 @@ goto L19e8;
 L19e8:; /* $19E8 */
 goto L050f;
 L19eb:; /* $19EB */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L19ec:; /* $19EC */
 a=m[0x0105];NZ(a);
 goto L19ef;
@@ -5299,7 +5468,7 @@ L1a05:; /* $1A05 */
 address=0x004b;m[address]=a;
 goto L1a07;
 L1a07:; /* $1A07 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1a08:; /* $1A08 */
 a=m[0x0105];NZ(a);
 goto L1a0b;
@@ -5352,7 +5521,9 @@ L1a2c:; /* $1A2C */
 if(n)goto L1a42;
 goto L1a2e;
 L1a2e:; /* $1A2E */
-m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x30;actor_code(0x1bb6);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1a31)return;
+m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x30;
+if(native_depth==16){native_id=83;goto actor_native_overflow;}
+native_calls[native_depth++]=83;goto L1bb6;
 goto L1a31;
 L1a31:; /* $1A31 */
 a=m[0x0082];NZ(a);
@@ -5361,7 +5532,9 @@ L1a33:; /* $1A33 */
 if(!n)goto L1a38;
 goto L1a35;
 L1a35:; /* $1A35 */
-m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x37;actor_code(0x103b);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1a38)return;
+m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x37;
+if(native_depth==16){native_id=84;goto actor_native_overflow;}
+native_calls[native_depth++]=84;goto L103b;
 goto L1a38;
 L1a38:; /* $1A38 */
 a=0x00;NZ(a);
@@ -5370,7 +5543,9 @@ L1a3a:; /* $1A3A */
 address=0x0082;m[address]=a;
 goto L1a3c;
 L1a3c:; /* $1A3C */
-m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x3e;actor_code(0x1abb);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1a3f)return;
+m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x3e;
+if(native_depth==16){native_id=85;goto actor_native_overflow;}
+native_calls[native_depth++]=85;goto L1abb;
 goto L1a3f;
 L1a3f:; /* $1A3F */
 goto L31c2;
@@ -5381,7 +5556,9 @@ L1a44:; /* $1A44 */
 address=0x43bd;m[address]=a;
 goto L1a47;
 L1a47:; /* $1A47 */
-m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x49;actor_code(0x1a96);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1a4a)return;
+m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x49;
+if(native_depth==16){native_id=86;goto actor_native_overflow;}
+native_calls[native_depth++]=86;goto L1a96;
 goto L1a4a;
 L1a4a:; /* $1A4A */
 a=0x51;NZ(a);
@@ -5392,7 +5569,7 @@ goto L1a4e;
 L1a4e:; /* $1A4E */
 goto L1ba4;
 L1a51:; /* $1A51 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1a56:; /* $1A56 */
 x=0x00;NZ(x);
 goto L1a58;
@@ -5400,10 +5577,14 @@ L1a58:; /* $1A58 */
 address=0x0100;m[address]=x;
 goto L1a5b;
 L1a5b:; /* $1A5B */
-m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x5d;actor_code(0x1a67);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1a5e)return;
+m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x5d;
+if(native_depth==16){native_id=87;goto actor_native_overflow;}
+native_calls[native_depth++]=87;goto L1a67;
 goto L1a5e;
 L1a5e:; /* $1A5E */
-m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x60;actor_code(0x1a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1a61)return;
+m[0x100 + sp--]=0x1a;m[0x100 + sp--]=0x60;
+if(native_depth==16){native_id=88;goto actor_native_overflow;}
+native_calls[native_depth++]=88;goto L1a8a;
 goto L1a61;
 L1a61:; /* $1A61 */
 x++;NZ(x);
@@ -5415,7 +5596,7 @@ L1a64:; /* $1A64 */
 if(!c)goto L1a5b;
 goto L1a66;
 L1a66:; /* $1A66 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1a67:; /* $1A67 */
 a=m[(unsigned short)(0x4338 + x)];NZ(a);
 goto L1a6a;
@@ -5447,7 +5628,7 @@ L1a7e:; /* $1A7E */
 if(!z)goto L1a81;
 goto L1a80;
 L1a80:; /* $1A80 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1a81:; /* $1A81 */
 a=0x00;NZ(a);
 goto L1a83;
@@ -5461,7 +5642,7 @@ L1a87:; /* $1A87 */
 address=0x0009;m[address]=a;
 goto L1a89;
 L1a89:; /* $1A89 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1a8a:; /* $1A8A */
 y=0x27;NZ(y);
 goto L1a8c;
@@ -5481,7 +5662,7 @@ L1a93:; /* $1A93 */
 if(!n)goto L1a8e;
 goto L1a95;
 L1a95:; /* $1A95 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1a96:; /* $1A96 */
 address=0x43bd;m[address]--;NZ(m[address]);
 goto L1a99;
@@ -5532,7 +5713,7 @@ goto L1ab7;
 L1ab7:; /* $1AB7 */
 goto L17e2;
 L1aba:; /* $1ABA */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1abb:; /* $1ABB */
 a=0x03;NZ(a);
 goto L1abd;
@@ -5620,7 +5801,9 @@ L1b17:; /* $1B17 */
 m[0x100 + sp--]=a;
 goto L1b18;
 L1b18:; /* $1B18 */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0x1a;actor_code(0x320e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1b1b)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0x1a;
+if(native_depth==16){native_id=89;goto actor_native_overflow;}
+native_calls[native_depth++]=89;goto L320e;
 goto L1b1b;
 L1b1b:; /* $1B1B */
 a|=0x10;NZ(a);
@@ -5641,7 +5824,7 @@ L1b25:; /* $1B25 */
 address=(unsigned short)(0x8c01 + y);m[address]=a;source_written(address);
 goto L1b28;
 L1b28:; /* $1B28 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1b29:; /* $1B29 */
 a=0x01;NZ(a);
 goto L1b2b;
@@ -5649,7 +5832,9 @@ L1b2b:; /* $1B2B */
 address=0x010e;m[address]=a;
 goto L1b2e;
 L1b2e:; /* $1B2E */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0x30;actor_code(0x139e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1b31)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0x30;
+if(native_depth==16){native_id=90;goto actor_native_overflow;}
+native_calls[native_depth++]=90;goto L139e;
 goto L1b31;
 L1b31:; /* $1B31 */
 a=m[0x010c];NZ(a);
@@ -5658,7 +5843,7 @@ L1b34:; /* $1B34 */
 if(!z)goto L1b37;
 goto L1b36;
 L1b36:; /* $1B36 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1b37:; /* $1B37 */
 a=0x00;NZ(a);
 goto L1b39;
@@ -5704,7 +5889,7 @@ L1b58:; /* $1B58 */
 address=0x09bb;m[address]=a;
 goto L1b5b;
 L1b5b:; /* $1B5B */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1b5c:; /* $1B5C */
 c=a>=0x3c;NZ((unsigned char)(a-0x3c));
 goto L1b5e;
@@ -5718,7 +5903,7 @@ L1b62:; /* $1B62 */
 if(z)goto L1b68;
 goto L1b64;
 L1b64:; /* $1B64 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1b65:; /* $1B65 */
 goto L1a22;
 L1b68:; /* $1B68 */
@@ -5746,7 +5931,7 @@ L1b78:; /* $1B78 */
 if(!n)goto L1b71;
 goto L1b7a;
 L1b7a:; /* $1B7A */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1b7b:; /* $1B7B */
 x=0x27;NZ(x);
 goto L1b7d;
@@ -5760,12 +5945,14 @@ L1b81:; /* $1B81 */
 if(!n)goto L1b7d;
 goto L1b83;
 L1b83:; /* $1B83 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1b84:; /* $1B84 */
 m[0x100 + sp--]=a;
 goto L1b85;
 L1b85:; /* $1B85 */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0x87;actor_code(0x320e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1b88)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0x87;
+if(native_depth==16){native_id=91;goto actor_native_overflow;}
+native_calls[native_depth++]=91;goto L320e;
 goto L1b88;
 L1b88:; /* $1B88 */
 a|=0x10;NZ(a);
@@ -5810,7 +5997,7 @@ L1ba0:; /* $1BA0 */
 address=(unsigned short)(0x8c01 + y);m[address]=a;source_written(address);
 goto L1ba3;
 L1ba3:; /* $1BA3 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1ba4:; /* $1BA4 */
 a=0x0b;NZ(a);
 goto L1ba6;
@@ -5824,7 +6011,9 @@ L1bab:; /* $1BAB */
 y=0x0f;NZ(y);
 goto L1bad;
 L1bad:; /* $1BAD */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xaf;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bb0)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xaf;
+if(native_depth==16){native_id=92;goto actor_native_overflow;}
+native_calls[native_depth++]=92;goto L17e2;
 goto L1bb0;
 L1bb0:; /* $1BB0 */
 a=0x00;NZ(a);
@@ -5833,7 +6022,7 @@ L1bb2:; /* $1BB2 */
 address=0x0100;m[address]=a;
 goto L1bb5;
 L1bb5:; /* $1BB5 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1bb6:; /* $1BB6 */
 a=0x0c;NZ(a);
 goto L1bb8;
@@ -5849,14 +6038,16 @@ goto L1bbf;
 L1bbf:; /* $1BBF */
 goto L1bad;
 L1bc2:; /* $1BC2 */
-if(actor_preparing){actor_stop_pc=0x1bc2;return;} ++actor_logic_steps;
+if(actor_preparing){actor_stop_pc=0x1bc2;goto actor_native_unwind;} ++actor_logic_steps;
 a=0x03;NZ(a);
 goto L1bc4;
 L1bc4:; /* $1BC4 */
 address=0x0048;m[address]=a;
 goto L1bc6;
 L1bc6:; /* $1BC6 */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xc8;actor_code(0x19b8);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bc9)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xc8;
+if(native_depth==16){native_id=93;goto actor_native_overflow;}
+native_calls[native_depth++]=93;goto L19b8;
 goto L1bc9;
 L1bc9:; /* $1BC9 */
 a=m[0x0104];NZ(a);
@@ -5865,13 +6056,19 @@ L1bcc:; /* $1BCC */
 if(z)goto L1bdf;
 goto L1bce;
 L1bce:; /* $1BCE */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xd0;actor_code(0x1b29);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bd1)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xd0;
+if(native_depth==16){native_id=94;goto actor_native_overflow;}
+native_calls[native_depth++]=94;goto L1b29;
 goto L1bd1;
 L1bd1:; /* $1BD1 */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xd3;actor_code(0x19ec);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bd4)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xd3;
+if(native_depth==16){native_id=95;goto actor_native_overflow;}
+native_calls[native_depth++]=95;goto L19ec;
 goto L1bd4;
 L1bd4:; /* $1BD4 */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xd6;actor_code(0x1a08);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bd7)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xd6;
+if(native_depth==16){native_id=96;goto actor_native_overflow;}
+native_calls[native_depth++]=96;goto L1a08;
 goto L1bd7;
 L1bd7:; /* $1BD7 */
 a=m[0x0105];NZ(a);
@@ -5900,10 +6097,14 @@ L1be9:; /* $1BE9 */
 address=0x00d3;m[address]=a;
 goto L1beb;
 L1beb:; /* $1BEB */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xed;actor_code(0x1a96);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bee)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xed;
+if(native_depth==16){native_id=97;goto actor_native_overflow;}
+native_calls[native_depth++]=97;goto L1a96;
 goto L1bee;
 L1bee:; /* $1BEE */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xf0;actor_code(0x40bc);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bf1)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xf0;
+if(native_depth==16){native_id=98;goto actor_native_overflow;}
+native_calls[native_depth++]=98;goto L40bc;
 goto L1bf1;
 L1bf1:; /* $1BF1 */
 a=m[0x007a];NZ(a);
@@ -5912,13 +6113,19 @@ L1bf3:; /* $1BF3 */
 if(!z)goto L1bfe;
 goto L1bf5;
 L1bf5:; /* $1BF5 */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xf7;actor_code(0x0da4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bf8)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xf7;
+if(native_depth==16){native_id=99;goto actor_native_overflow;}
+native_calls[native_depth++]=99;goto L0da4;
 goto L1bf8;
 L1bf8:; /* $1BF8 */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xfa;actor_code(0x0d0f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bfb)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xfa;
+if(native_depth==16){native_id=100;goto actor_native_overflow;}
+native_calls[native_depth++]=100;goto L0d0f;
 goto L1bfb;
 L1bfb:; /* $1BFB */
-m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xfd;actor_code(0x0db1);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1bfe)return;
+m[0x100 + sp--]=0x1b;m[0x100 + sp--]=0xfd;
+if(native_depth==16){native_id=101;goto actor_native_overflow;}
+native_calls[native_depth++]=101;goto L0db1;
 goto L1bfe;
 L1bfe:; /* $1BFE */
 a=m[0x007b];NZ(a);
@@ -5939,13 +6146,15 @@ L1c08:; /* $1C08 */
 address=0x007b;m[address]--;NZ(m[address]);
 goto L1c0a;
 L1c0a:; /* $1C0A */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x0c;actor_code(0x3a6f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c0d)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x0c;
+if(native_depth==16){native_id=102;goto actor_native_overflow;}
+native_calls[native_depth++]=102;goto L3a6f;
 goto L1c0d;
 L1c0d:; /* $1C0D */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x0f;PERF_BEGIN(BL_PERF_CONTACT);actor_code(0x5212);PERF_END(BL_PERF_CONTACT);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c10)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x0f;PERF_BEGIN(BL_PERF_CONTACT);actor_code(0x5212);PERF_END(BL_PERF_CONTACT);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c10)goto actor_native_unwind;
 goto L1c10;
 L1c10:; /* $1C10 */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x12;PERF_BEGIN(BL_PERF_OBJECTS);actor_code(0x2e39);PERF_END(BL_PERF_OBJECTS);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c13)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x12;PERF_BEGIN(BL_PERF_OBJECTS);actor_code(0x2e39);PERF_END(BL_PERF_OBJECTS);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c13)goto actor_native_unwind;
 goto L1c13;
 L1c13:; /* $1C13 */
 a=m[0xcf7a];NZ(a);
@@ -5966,22 +6175,26 @@ L1c21:; /* $1C21 */
 if(!z)goto L1c26;
 goto L1c23;
 L1c23:; /* $1C23 */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x25;PERF_BEGIN(BL_PERF_COMBAT);actor_code(0x29c3);PERF_END(BL_PERF_COMBAT);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c26)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x25;PERF_BEGIN(BL_PERF_COMBAT);actor_code(0x29c3);PERF_END(BL_PERF_COMBAT);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c26)goto actor_native_unwind;
 goto L1c26;
 L1c26:; /* $1C26 */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x28;actor_code(0x3184);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c29)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x28;
+if(native_depth==16){native_id=103;goto actor_native_overflow;}
+native_calls[native_depth++]=103;goto L3184;
 goto L1c29;
 L1c29:; /* $1C29 */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x2b;PERF_BEGIN(BL_PERF_ACTORS);actor_code(0x179e);PERF_END(BL_PERF_ACTORS);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c2c)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x2b;PERF_BEGIN(BL_PERF_ACTORS);actor_code(0x179e);PERF_END(BL_PERF_ACTORS);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c2c)goto actor_native_unwind;
 goto L1c2c;
 L1c2c:; /* $1C2C */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x2e;PERF_BEGIN(BL_PERF_SPRITES);actor_code(0x2584);PERF_END(BL_PERF_SPRITES);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c2f)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x2e;PERF_BEGIN(BL_PERF_SPRITES);actor_code(0x2584);PERF_END(BL_PERF_SPRITES);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c2f)goto actor_native_unwind;
 goto L1c2f;
 L1c2f:; /* $1C2F */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x31;actor_code(0x2d55);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c32)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x31;
+if(native_depth==16){native_id=104;goto actor_native_overflow;}
+native_calls[native_depth++]=104;goto L2d55;
 goto L1c32;
 L1c32:; /* $1C32 */
-actor_stop_pc=0x1c32;return;
+actor_stop_pc=0x1c32;goto actor_native_unwind;
 L1c39:; /* $1C39 */
 a=m[(unsigned char)(0x9e + x)];NZ(a);
 goto L1c3b;
@@ -6046,7 +6259,7 @@ L1c58:; /* $1C58 */
 address=(unsigned char)(0xe9 + x);m[address]=a;
 goto L1c5a;
 L1c5a:; /* $1C5A */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1c5b:; /* $1C5B */
 a=0x08;NZ(a);
 goto L1c5d;
@@ -6063,7 +6276,7 @@ L1c64:; /* $1C64 */
 address=(unsigned short)(0x0106 + x);m[address]--;NZ(m[address]);
 goto L1c67;
 L1c67:; /* $1C67 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1c68:; /* $1C68 */
 address=(unsigned short)(0x4fdb + x);m[address]=a;
 goto L1c6b;
@@ -6227,7 +6440,9 @@ L1cdd:; /* $1CDD */
 old=m[0x0085];m[0x0085]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x0085]);
 goto L1cdf;
 L1cdf:; /* $1CDF */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0xe1;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1ce2)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0xe1;
+if(native_depth==16){native_id=105;goto actor_native_overflow;}
+native_calls[native_depth++]=105;goto L1e39;
 goto L1ce2;
 L1ce2:; /* $1CE2 */
 goto L1cd8;
@@ -6238,7 +6453,9 @@ L1ce8:; /* $1CE8 */
 if(n)goto L1cf0;
 goto L1cea;
 L1cea:; /* $1CEA */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0xec;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1ced)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0xec;
+if(native_depth==16){native_id=106;goto actor_native_overflow;}
+native_calls[native_depth++]=106;goto L1df2;
 goto L1ced;
 L1ced:; /* $1CED */
 goto L1ce5;
@@ -6252,7 +6469,9 @@ L1cf5:; /* $1CF5 */
 old=m[0x0085];m[0x0085]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x0085]);
 goto L1cf7;
 L1cf7:; /* $1CF7 */
-m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0xf9;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1cfa)return;
+m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0xf9;
+if(native_depth==16){native_id=107;goto actor_native_overflow;}
+native_calls[native_depth++]=107;goto L1ec4;
 goto L1cfa;
 L1cfa:; /* $1CFA */
 goto L1cf0;
@@ -6266,7 +6485,9 @@ L1d02:; /* $1D02 */
 old=m[0x0085];m[0x0085]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[0x0085]);
 goto L1d04;
 L1d04:; /* $1D04 */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0x06;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1d07)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0x06;
+if(native_depth==16){native_id=108;goto actor_native_overflow;}
+native_calls[native_depth++]=108;goto L1e86;
 goto L1d07;
 L1d07:; /* $1D07 */
 goto L1cfd;
@@ -6384,12 +6605,16 @@ L1d5b:; /* $1D5B */
 if(!z)goto L1d63;
 goto L1d5d;
 L1d5d:; /* $1D5D */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0x5f;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1d60)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0x5f;
+if(native_depth==16){native_id=109;goto actor_native_overflow;}
+native_calls[native_depth++]=109;goto L1ec4;
 goto L1d60;
 L1d60:; /* $1D60 */
 goto L1d66;
 L1d63:; /* $1D63 */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0x65;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1d66)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0x65;
+if(native_depth==16){native_id=110;goto actor_native_overflow;}
+native_calls[native_depth++]=110;goto L1e86;
 goto L1d66;
 L1d66:; /* $1D66 */
 a=0x18;NZ(a);
@@ -6404,7 +6629,7 @@ L1d6c:; /* $1D6C */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L1d6e;
 L1d6e:; /* $1D6E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1d6f:; /* $1D6F */
 address=(unsigned char)(0xc8 + x);m[address]=a;
 goto L1d71;
@@ -6484,12 +6709,16 @@ L1da5:; /* $1DA5 */
 if(z)goto L1dad;
 goto L1da7;
 L1da7:; /* $1DA7 */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xa9;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1daa)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xa9;
+if(native_depth==16){native_id=111;goto actor_native_overflow;}
+native_calls[native_depth++]=111;goto L1ec4;
 goto L1daa;
 L1daa:; /* $1DAA */
 goto L1db9;
 L1dad:; /* $1DAD */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xaf;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1db0)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xaf;
+if(native_depth==16){native_id=112;goto actor_native_overflow;}
+native_calls[native_depth++]=112;goto L1e86;
 goto L1db0;
 L1db0:; /* $1DB0 */
 goto L1db9;
@@ -6503,10 +6732,14 @@ L1db7:; /* $1DB7 */
 if(!z)goto L1dfc;
 goto L1db9;
 L1db9:; /* $1DB9 */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xbb;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1dbc)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xbb;
+if(native_depth==16){native_id=113;goto actor_native_overflow;}
+native_calls[native_depth++]=113;goto L1e39;
 goto L1dbc;
 L1dbc:; /* $1DBC */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xbe;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1dbf)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xbe;
+if(native_depth==16){native_id=114;goto actor_native_overflow;}
+native_calls[native_depth++]=114;goto L1e39;
 goto L1dbf;
 L1dbf:; /* $1DBF */
 a=0x0e;NZ(a);
@@ -6550,7 +6783,9 @@ L1dda:; /* $1DDA */
 if(!c)goto L1e0c;
 goto L1ddc;
 L1ddc:; /* $1DDC */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xde;actor_code(0x1fc4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1ddf)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xde;
+if(native_depth==16){native_id=115;goto actor_native_overflow;}
+native_calls[native_depth++]=115;goto L1fc4;
 goto L1ddf;
 L1ddf:; /* $1DDF */
 a=m[(unsigned char)(0xcb + x)];NZ(a);
@@ -6559,13 +6794,19 @@ L1de1:; /* $1DE1 */
 if(!z)goto L1de6;
 goto L1de3;
 L1de3:; /* $1DE3 */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xe5;actor_code(0x1dec);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1de6)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xe5;
+if(native_depth==16){native_id=116;goto actor_native_overflow;}
+native_calls[native_depth++]=116;goto L1dec;
 goto L1de6;
 L1de6:; /* $1DE6 */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xe8;actor_code(0x1dec);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1de9)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xe8;
+if(native_depth==16){native_id=117;goto actor_native_overflow;}
+native_calls[native_depth++]=117;goto L1dec;
 goto L1de9;
 L1de9:; /* $1DE9 */
-m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xeb;actor_code(0x1dec);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1dec)return;
+m[0x100 + sp--]=0x1d;m[0x100 + sp--]=0xeb;
+if(native_depth==16){native_id=118;goto actor_native_overflow;}
+native_calls[native_depth++]=118;goto L1dec;
 goto L1dec;
 L1dec:; /* $1DEC */
 a=m[(unsigned char)(0xb6 + x)];NZ(a);
@@ -6653,7 +6894,9 @@ L1e27:; /* $1E27 */
 if(c)goto L1e83;
 goto L1e29;
 L1e29:; /* $1E29 */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x2b;actor_code(0x1fc4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1e2c)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x2b;
+if(native_depth==16){native_id=119;goto actor_native_overflow;}
+native_calls[native_depth++]=119;goto L1fc4;
 goto L1e2c;
 L1e2c:; /* $1E2C */
 a=m[(unsigned char)(0xcb + x)];NZ(a);
@@ -6662,13 +6905,19 @@ L1e2e:; /* $1E2E */
 if(!z)goto L1e33;
 goto L1e30;
 L1e30:; /* $1E30 */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x32;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1e33)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x32;
+if(native_depth==16){native_id=120;goto actor_native_overflow;}
+native_calls[native_depth++]=120;goto L1e39;
 goto L1e33;
 L1e33:; /* $1E33 */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x35;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1e36)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x35;
+if(native_depth==16){native_id=121;goto actor_native_overflow;}
+native_calls[native_depth++]=121;goto L1e39;
 goto L1e36;
 L1e36:; /* $1E36 */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x38;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1e39)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x38;
+if(native_depth==16){native_id=122;goto actor_native_overflow;}
+native_calls[native_depth++]=122;goto L1e39;
 goto L1e39;
 L1e39:; /* $1E39 */
 a=m[(unsigned char)(0xa1 + x)];NZ(a);
@@ -6724,7 +6973,9 @@ L1e61:; /* $1E61 */
 if(!c)goto L1e83;
 goto L1e63;
 L1e63:; /* $1E63 */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x65;actor_code(0x1fc4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1e66)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x65;
+if(native_depth==16){native_id=123;goto actor_native_overflow;}
+native_calls[native_depth++]=123;goto L1fc4;
 goto L1e66;
 L1e66:; /* $1E66 */
 a=m[(unsigned char)(0xcb + x)];NZ(a);
@@ -6733,10 +6984,14 @@ L1e68:; /* $1E68 */
 if(!z)goto L1e6d;
 goto L1e6a;
 L1e6a:; /* $1E6A */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x6c;actor_code(0x1e70);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1e6d)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x6c;
+if(native_depth==16){native_id=124;goto actor_native_overflow;}
+native_calls[native_depth++]=124;goto L1e70;
 goto L1e6d;
 L1e6d:; /* $1E6D */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x6f;actor_code(0x1e70);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1e70)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0x6f;
+if(native_depth==16){native_id=125;goto actor_native_overflow;}
+native_calls[native_depth++]=125;goto L1e70;
 goto L1e70;
 L1e70:; /* $1E70 */
 a=m[(unsigned char)(0xc2 + x)];NZ(a);
@@ -6808,7 +7063,9 @@ L1ea2:; /* $1EA2 */
 if(c)goto L1e83;
 goto L1ea4;
 L1ea4:; /* $1EA4 */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0xa6;actor_code(0x1fc4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1ea7)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0xa6;
+if(native_depth==16){native_id=126;goto actor_native_overflow;}
+native_calls[native_depth++]=126;goto L1fc4;
 goto L1ea7;
 L1ea7:; /* $1EA7 */
 a=m[(unsigned char)(0xcb + x)];NZ(a);
@@ -6817,10 +7074,14 @@ L1ea9:; /* $1EA9 */
 if(!z)goto L1eae;
 goto L1eab;
 L1eab:; /* $1EAB */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0xad;actor_code(0x1eb1);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1eae)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0xad;
+if(native_depth==16){native_id=127;goto actor_native_overflow;}
+native_calls[native_depth++]=127;goto L1eb1;
 goto L1eae;
 L1eae:; /* $1EAE */
-m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0xb0;actor_code(0x1eb1);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1eb1)return;
+m[0x100 + sp--]=0x1e;m[0x100 + sp--]=0xb0;
+if(native_depth==16){native_id=128;goto actor_native_overflow;}
+native_calls[native_depth++]=128;goto L1eb1;
 goto L1eb1;
 L1eb1:; /* $1EB1 */
 a=m[(unsigned char)(0xc2 + x)];NZ(a);
@@ -7035,7 +7296,9 @@ L1f44:; /* $1F44 */
 address=(unsigned char)(0xa4 + x);m[address]=a;
 goto L1f46;
 L1f46:; /* $1F46 */
-m[0x100 + sp--]=0x1f;m[0x100 + sp--]=0x48;actor_code(0x1fc4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1f49)return;
+m[0x100 + sp--]=0x1f;m[0x100 + sp--]=0x48;
+if(native_depth==16){native_id=129;goto actor_native_overflow;}
+native_calls[native_depth++]=129;goto L1fc4;
 goto L1f49;
 L1f49:; /* $1F49 */
 a=0x06;NZ(a);
@@ -7064,7 +7327,9 @@ L1f5a:; /* $1F5A */
 address=(unsigned char)(0xa4 + x);m[address]=a;
 goto L1f5c;
 L1f5c:; /* $1F5C */
-m[0x100 + sp--]=0x1f;m[0x100 + sp--]=0x5e;actor_code(0x1fc4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1f5f)return;
+m[0x100 + sp--]=0x1f;m[0x100 + sp--]=0x5e;
+if(native_depth==16){native_id=130;goto actor_native_overflow;}
+native_calls[native_depth++]=130;goto L1fc4;
 goto L1f5f;
 L1f5f:; /* $1F5F */
 a=0x07;NZ(a);
@@ -7150,7 +7415,7 @@ L1f9d:; /* $1F9D */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L1f9f;
 L1f9f:; /* $1F9F */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1fa0:; /* $1FA0 */
 address=(unsigned char)(0xbf + x);m[address]=a;
 goto L1fa2;
@@ -7170,7 +7435,7 @@ L1fab:; /* $1FAB */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L1fad;
 L1fad:; /* $1FAD */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1fae:; /* $1FAE */
 address=(unsigned char)(0xbf + x);m[address]=a;
 goto L1fb0;
@@ -7190,9 +7455,11 @@ L1fb9:; /* $1FB9 */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L1fbb;
 L1fbb:; /* $1FBB */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1fbc:; /* $1FBC */
-m[0x100 + sp--]=0x1f;m[0x100 + sp--]=0xbe;actor_code(0x1fae);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1fbf)return;
+m[0x100 + sp--]=0x1f;m[0x100 + sp--]=0xbe;
+if(native_depth==16){native_id=131;goto actor_native_overflow;}
+native_calls[native_depth++]=131;goto L1fae;
 goto L1fbf;
 L1fbf:; /* $1FBF */
 a=0x04;NZ(a);
@@ -7201,7 +7468,7 @@ L1fc1:; /* $1FC1 */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L1fc3;
 L1fc3:; /* $1FC3 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L1fc4:; /* $1FC4 */
 m[0x100 + sp--]=a;
 goto L1fc5;
@@ -7221,7 +7488,9 @@ L1fc9:; /* $1FC9 */
 y=0x80;NZ(y);
 goto L1fcb;
 L1fcb:; /* $1FCB */
-m[0x100 + sp--]=0x1f;m[0x100 + sp--]=0xcd;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1fce)return;
+m[0x100 + sp--]=0x1f;m[0x100 + sp--]=0xcd;
+if(native_depth==16){native_id=132;goto actor_native_overflow;}
+native_calls[native_depth++]=132;goto L2509;
 goto L1fce;
 L1fce:; /* $1FCE */
 a=m[0x1166];NZ(a);
@@ -7281,7 +7550,7 @@ L1ffb:; /* $1FFB */
 address=0x1ffe;m[address]=a;
 goto L1ffe;
 L1ffe:; /* $1FFE */
-if(m[0x1ffe]!=0x18){source_fault=0x1ffe;return;}
+if(m[0x1ffe]!=0x18){source_fault=0x1ffe;goto actor_native_unwind;}
 c=0;
 goto L1fff;
 L1fff:; /* $1FFF */
@@ -7300,7 +7569,7 @@ L2003:; /* $2003 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L2004;
 L2004:; /* $2004 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2008:; /* $2008 */
 address=0x0052;m[address]=y;
 goto L200a;
@@ -7350,10 +7619,14 @@ L2026:; /* $2026 */
 if(!z)goto L2080;
 goto L2028;
 L2028:; /* $2028 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x2a;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x202b)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x2a;
+if(native_depth==16){native_id=133;goto actor_native_overflow;}
+native_calls[native_depth++]=133;goto L1e39;
 goto L202b;
 L202b:; /* $202B */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x2d;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x202e)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x2d;
+if(native_depth==16){native_id=134;goto actor_native_overflow;}
+native_calls[native_depth++]=134;goto L1e39;
 goto L202e;
 L202e:; /* $202E */
 a=0x05;NZ(a);
@@ -7367,16 +7640,24 @@ L2035:; /* $2035 */
 if(!z)goto L203d;
 goto L2037;
 L2037:; /* $2037 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x39;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x203a)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x39;
+if(native_depth==16){native_id=135;goto actor_native_overflow;}
+native_calls[native_depth++]=135;goto L1df2;
 goto L203a;
 L203a:; /* $203A */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x3c;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x203d)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x3c;
+if(native_depth==16){native_id=136;goto actor_native_overflow;}
+native_calls[native_depth++]=136;goto L1df2;
 goto L203d;
 L203d:; /* $203D */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x3f;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2040)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x3f;
+if(native_depth==16){native_id=137;goto actor_native_overflow;}
+native_calls[native_depth++]=137;goto L1df2;
 goto L2040;
 L2040:; /* $2040 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x42;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2043)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x42;
+if(native_depth==16){native_id=138;goto actor_native_overflow;}
+native_calls[native_depth++]=138;goto L1df2;
 goto L2043;
 L2043:; /* $2043 */
 a=0x05;NZ(a);
@@ -7411,7 +7692,9 @@ L2058:; /* $2058 */
 y=0x84;NZ(y);
 goto L205a;
 L205a:; /* $205A */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x5c;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x205d)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x5c;
+if(native_depth==16){native_id=139;goto actor_native_overflow;}
+native_calls[native_depth++]=139;goto L2509;
 goto L205d;
 L205d:; /* $205D */
 x=m[0x0051];NZ(x);
@@ -7426,10 +7709,14 @@ L2063:; /* $2063 */
 if(!c)goto L2070;
 goto L2065;
 L2065:; /* $2065 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x67;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2068)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x67;
+if(native_depth==16){native_id=140;goto actor_native_overflow;}
+native_calls[native_depth++]=140;goto L1df2;
 goto L2068;
 L2068:; /* $2068 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x6a;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x206b)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x6a;
+if(native_depth==16){native_id=141;goto actor_native_overflow;}
+native_calls[native_depth++]=141;goto L1e86;
 goto L206b;
 L206b:; /* $206B */
 a=0x0c;NZ(a);
@@ -7443,7 +7730,9 @@ L2072:; /* $2072 */
 if(!c)goto L207c;
 goto L2074;
 L2074:; /* $2074 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x76;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2077)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x76;
+if(native_depth==16){native_id=142;goto actor_native_overflow;}
+native_calls[native_depth++]=142;goto L1e86;
 goto L2077;
 L2077:; /* $2077 */
 a=0x0c;NZ(a);
@@ -7460,10 +7749,14 @@ L2080:; /* $2080 */
 if(!z)goto L20f3;
 goto L2082;
 L2082:; /* $2082 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x84;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2085)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x84;
+if(native_depth==16){native_id=143;goto actor_native_overflow;}
+native_calls[native_depth++]=143;goto L1e39;
 goto L2085;
 L2085:; /* $2085 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x87;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2088)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0x87;
+if(native_depth==16){native_id=144;goto actor_native_overflow;}
+native_calls[native_depth++]=144;goto L1e86;
 goto L2088;
 L2088:; /* $2088 */
 a=0x0c;NZ(a);
@@ -7498,7 +7791,9 @@ L209d:; /* $209D */
 y=0x84;NZ(y);
 goto L209f;
 L209f:; /* $209F */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xa1;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20a2)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xa1;
+if(native_depth==16){native_id=145;goto actor_native_overflow;}
+native_calls[native_depth++]=145;goto L2509;
 goto L20a2;
 L20a2:; /* $20A2 */
 x=m[0x0051];NZ(x);
@@ -7513,10 +7808,14 @@ L20a8:; /* $20A8 */
 if(!c)goto L20b5;
 goto L20aa;
 L20aa:; /* $20AA */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xac;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20ad)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xac;
+if(native_depth==16){native_id=146;goto actor_native_overflow;}
+native_calls[native_depth++]=146;goto L1df2;
 goto L20ad;
 L20ad:; /* $20AD */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xaf;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20b0)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xaf;
+if(native_depth==16){native_id=147;goto actor_native_overflow;}
+native_calls[native_depth++]=147;goto L1ec4;
 goto L20b0;
 L20b0:; /* $20B0 */
 a=0x0d;NZ(a);
@@ -7530,7 +7829,9 @@ L20b7:; /* $20B7 */
 if(!c)goto L20c1;
 goto L20b9;
 L20b9:; /* $20B9 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xbb;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20bc)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xbb;
+if(native_depth==16){native_id=148;goto actor_native_overflow;}
+native_calls[native_depth++]=148;goto L1ec4;
 goto L20bc;
 L20bc:; /* $20BC */
 a=0x0d;NZ(a);
@@ -7547,10 +7848,14 @@ L20c5:; /* $20C5 */
 if(!z)goto L20f3;
 goto L20c7;
 L20c7:; /* $20C7 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xc9;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20ca)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xc9;
+if(native_depth==16){native_id=149;goto actor_native_overflow;}
+native_calls[native_depth++]=149;goto L1e39;
 goto L20ca;
 L20ca:; /* $20CA */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xcc;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20cd)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xcc;
+if(native_depth==16){native_id=150;goto actor_native_overflow;}
+native_calls[native_depth++]=150;goto L1ec4;
 goto L20cd;
 L20cd:; /* $20CD */
 a=0x0d;NZ(a);
@@ -7582,16 +7887,24 @@ L20e0:; /* $20E0 */
 if(z)goto L20e5;
 goto L20e2;
 L20e2:; /* $20E2 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xe4;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20e5)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xe4;
+if(native_depth==16){native_id=151;goto actor_native_overflow;}
+native_calls[native_depth++]=151;goto L1df2;
 goto L20e5;
 L20e5:; /* $20E5 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xe7;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20e8)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xe7;
+if(native_depth==16){native_id=152;goto actor_native_overflow;}
+native_calls[native_depth++]=152;goto L1df2;
 goto L20e8;
 L20e8:; /* $20E8 */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xea;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20eb)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xea;
+if(native_depth==16){native_id=153;goto actor_native_overflow;}
+native_calls[native_depth++]=153;goto L1e86;
 goto L20eb;
 L20eb:; /* $20EB */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xed;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20ee)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xed;
+if(native_depth==16){native_id=154;goto actor_native_overflow;}
+native_calls[native_depth++]=154;goto L1e86;
 goto L20ee;
 L20ee:; /* $20EE */
 a=0x06;NZ(a);
@@ -7607,10 +7920,14 @@ L20f8:; /* $20F8 */
 if(!c)goto L2105;
 goto L20fa;
 L20fa:; /* $20FA */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xfc;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x20fd)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xfc;
+if(native_depth==16){native_id=155;goto actor_native_overflow;}
+native_calls[native_depth++]=155;goto L1e86;
 goto L20fd;
 L20fd:; /* $20FD */
-m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xff;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2100)return;
+m[0x100 + sp--]=0x20;m[0x100 + sp--]=0xff;
+if(native_depth==16){native_id=156;goto actor_native_overflow;}
+native_calls[native_depth++]=156;goto L1e86;
 goto L2100;
 L2100:; /* $2100 */
 a=0x06;NZ(a);
@@ -7627,10 +7944,14 @@ L2109:; /* $2109 */
 if(!z)goto L20f3;
 goto L210b;
 L210b:; /* $210B */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x0d;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x210e)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x0d;
+if(native_depth==16){native_id=157;goto actor_native_overflow;}
+native_calls[native_depth++]=157;goto L1e86;
 goto L210e;
 L210e:; /* $210E */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x10;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2111)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x10;
+if(native_depth==16){native_id=158;goto actor_native_overflow;}
+native_calls[native_depth++]=158;goto L1e86;
 goto L2111;
 L2111:; /* $2111 */
 c=y>=0x06;NZ((unsigned char)(y-0x06));
@@ -7639,10 +7960,14 @@ L2113:; /* $2113 */
 if(z)goto L2118;
 goto L2115;
 L2115:; /* $2115 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x17;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2118)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x17;
+if(native_depth==16){native_id=159;goto actor_native_overflow;}
+native_calls[native_depth++]=159;goto L1e39;
 goto L2118;
 L2118:; /* $2118 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x1a;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x211b)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x1a;
+if(native_depth==16){native_id=160;goto actor_native_overflow;}
+native_calls[native_depth++]=160;goto L1e39;
 goto L211b;
 L211b:; /* $211B */
 a=0x06;NZ(a);
@@ -7674,16 +7999,24 @@ L212e:; /* $212E */
 if(z)goto L2133;
 goto L2130;
 L2130:; /* $2130 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x32;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2133)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x32;
+if(native_depth==16){native_id=161;goto actor_native_overflow;}
+native_calls[native_depth++]=161;goto L1df2;
 goto L2133;
 L2133:; /* $2133 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x35;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2136)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x35;
+if(native_depth==16){native_id=162;goto actor_native_overflow;}
+native_calls[native_depth++]=162;goto L1df2;
 goto L2136;
 L2136:; /* $2136 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x38;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2139)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x38;
+if(native_depth==16){native_id=163;goto actor_native_overflow;}
+native_calls[native_depth++]=163;goto L1ec4;
 goto L2139;
 L2139:; /* $2139 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x3b;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x213c)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x3b;
+if(native_depth==16){native_id=164;goto actor_native_overflow;}
+native_calls[native_depth++]=164;goto L1ec4;
 goto L213c;
 L213c:; /* $213C */
 a=0x07;NZ(a);
@@ -7697,10 +8030,14 @@ L2143:; /* $2143 */
 if(!c)goto L2150;
 goto L2145;
 L2145:; /* $2145 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x47;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2148)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x47;
+if(native_depth==16){native_id=165;goto actor_native_overflow;}
+native_calls[native_depth++]=165;goto L1ec4;
 goto L2148;
 L2148:; /* $2148 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x4a;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x214b)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x4a;
+if(native_depth==16){native_id=166;goto actor_native_overflow;}
+native_calls[native_depth++]=166;goto L1ec4;
 goto L214b;
 L214b:; /* $214B */
 a=0x07;NZ(a);
@@ -7717,10 +8054,14 @@ L2154:; /* $2154 */
 if(!z)goto L20f3;
 goto L2156;
 L2156:; /* $2156 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x58;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2159)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x58;
+if(native_depth==16){native_id=167;goto actor_native_overflow;}
+native_calls[native_depth++]=167;goto L1ec4;
 goto L2159;
 L2159:; /* $2159 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x5b;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x215c)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x5b;
+if(native_depth==16){native_id=168;goto actor_native_overflow;}
+native_calls[native_depth++]=168;goto L1ec4;
 goto L215c;
 L215c:; /* $215C */
 c=y>=0x06;NZ((unsigned char)(y-0x06));
@@ -7729,10 +8070,14 @@ L215e:; /* $215E */
 if(z)goto L2163;
 goto L2160;
 L2160:; /* $2160 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x62;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2163)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x62;
+if(native_depth==16){native_id=169;goto actor_native_overflow;}
+native_calls[native_depth++]=169;goto L1e39;
 goto L2163;
 L2163:; /* $2163 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x65;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2166)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0x65;
+if(native_depth==16){native_id=170;goto actor_native_overflow;}
+native_calls[native_depth++]=170;goto L1e39;
 goto L2166;
 L2166:; /* $2166 */
 a=0x07;NZ(a);
@@ -7843,10 +8188,14 @@ L21b6:; /* $21B6 */
 if(!z)goto L21c1;
 goto L21b8;
 L21b8:; /* $21B8 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xba;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21bb)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xba;
+if(native_depth==16){native_id=171;goto actor_native_overflow;}
+native_calls[native_depth++]=171;goto L1df2;
 goto L21bb;
 L21bb:; /* $21BB */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xbd;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21be)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xbd;
+if(native_depth==16){native_id=172;goto actor_native_overflow;}
+native_calls[native_depth++]=172;goto L1df2;
 goto L21be;
 L21be:; /* $21BE */
 goto L21e5;
@@ -7857,10 +8206,14 @@ L21c3:; /* $21C3 */
 if(!z)goto L21ce;
 goto L21c5;
 L21c5:; /* $21C5 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xc7;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21c8)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xc7;
+if(native_depth==16){native_id=173;goto actor_native_overflow;}
+native_calls[native_depth++]=173;goto L1e39;
 goto L21c8;
 L21c8:; /* $21C8 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xca;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21cb)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xca;
+if(native_depth==16){native_id=174;goto actor_native_overflow;}
+native_calls[native_depth++]=174;goto L1e39;
 goto L21cb;
 L21cb:; /* $21CB */
 goto L21e5;
@@ -7871,10 +8224,14 @@ L21d0:; /* $21D0 */
 if(!z)goto L21db;
 goto L21d2;
 L21d2:; /* $21D2 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xd4;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21d5)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xd4;
+if(native_depth==16){native_id=175;goto actor_native_overflow;}
+native_calls[native_depth++]=175;goto L1e86;
 goto L21d5;
 L21d5:; /* $21D5 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xd7;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21d8)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xd7;
+if(native_depth==16){native_id=176;goto actor_native_overflow;}
+native_calls[native_depth++]=176;goto L1e86;
 goto L21d8;
 L21d8:; /* $21D8 */
 goto L21e5;
@@ -7885,10 +8242,14 @@ L21dd:; /* $21DD */
 if(!z)goto L21ee;
 goto L21df;
 L21df:; /* $21DF */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xe1;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21e2)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xe1;
+if(native_depth==16){native_id=177;goto actor_native_overflow;}
+native_calls[native_depth++]=177;goto L1ec4;
 goto L21e2;
 L21e2:; /* $21E2 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xe4;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21e5)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xe4;
+if(native_depth==16){native_id=178;goto actor_native_overflow;}
+native_calls[native_depth++]=178;goto L1ec4;
 goto L21e5;
 L21e5:; /* $21E5 */
 old=m[(unsigned char)(0xaa + x)];m[(unsigned char)(0xaa + x)]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[(unsigned char)(0xaa + x)]);
@@ -7900,7 +8261,9 @@ L21e9:; /* $21E9 */
 address=(unsigned char)(0xad + x);m[address]=a;
 goto L21eb;
 L21eb:; /* $21EB */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xed;actor_code(0x1fc4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21ee)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xed;
+if(native_depth==16){native_id=179;goto actor_native_overflow;}
+native_calls[native_depth++]=179;goto L1fc4;
 goto L21ee;
 L21ee:; /* $21EE */
 a=m[0x0060];NZ(a);
@@ -7918,18 +8281,26 @@ L21f6:; /* $21F6 */
 if(z)goto L2201;
 goto L21f8;
 L21f8:; /* $21F8 */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xfa;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21fb)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xfa;
+if(native_depth==16){native_id=180;goto actor_native_overflow;}
+native_calls[native_depth++]=180;goto L1e39;
 goto L21fb;
 L21fb:; /* $21FB */
-m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xfd;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x21fe)return;
+m[0x100 + sp--]=0x21;m[0x100 + sp--]=0xfd;
+if(native_depth==16){native_id=181;goto actor_native_overflow;}
+native_calls[native_depth++]=181;goto L1e39;
 goto L21fe;
 L21fe:; /* $21FE */
 goto L2207;
 L2201:; /* $2201 */
-m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x03;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2204)return;
+m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x03;
+if(native_depth==16){native_id=182;goto actor_native_overflow;}
+native_calls[native_depth++]=182;goto L1df2;
 goto L2204;
 L2204:; /* $2204 */
-m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x06;actor_code(0x1df2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2207)return;
+m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x06;
+if(native_depth==16){native_id=183;goto actor_native_overflow;}
+native_calls[native_depth++]=183;goto L1df2;
 goto L2207;
 L2207:; /* $2207 */
 a=0x0f;NZ(a);
@@ -8053,7 +8424,9 @@ L225d:; /* $225D */
 y=0x81;NZ(y);
 goto L225f;
 L225f:; /* $225F */
-m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x61;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2262)return;
+m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x61;
+if(native_depth==16){native_id=184;goto actor_native_overflow;}
+native_calls[native_depth++]=184;goto L2509;
 goto L2262;
 L2262:; /* $2262 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -8062,7 +8435,7 @@ L2263:; /* $2263 */
 x=a;NZ(x);
 goto L2264;
 L2264:; /* $2264 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2265:; /* $2265 */
 a=0x01;NZ(a);
 goto L2267;
@@ -8096,7 +8469,9 @@ L227a:; /* $227A */
 y=0x85;NZ(y);
 goto L227c;
 L227c:; /* $227C */
-m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x7e;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x227f)return;
+m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x7e;
+if(native_depth==16){native_id=185;goto actor_native_overflow;}
+native_calls[native_depth++]=185;goto L2509;
 goto L227f;
 L227f:; /* $227F */
 x=m[0x0051];NZ(x);
@@ -8140,7 +8515,9 @@ L229a:; /* $229A */
 if(!z)goto L22a6;
 goto L229c;
 L229c:; /* $229C */
-m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x9e;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x229f)return;
+m[0x100 + sp--]=0x22;m[0x100 + sp--]=0x9e;
+if(native_depth==16){native_id=186;goto actor_native_overflow;}
+native_calls[native_depth++]=186;goto L10d0;
 goto L229f;
 L229f:; /* $229F */
 if(v)goto L22b5;
@@ -8152,9 +8529,11 @@ L22a3:; /* $22A3 */
 old=m[(unsigned char)(0xce + x)];m[(unsigned char)(0xce + x)]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[(unsigned char)(0xce + x)]);
 goto L22a5;
 L22a5:; /* $22A5 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L22a6:; /* $22A6 */
-m[0x100 + sp--]=0x22;m[0x100 + sp--]=0xa8;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x22a9)return;
+m[0x100 + sp--]=0x22;m[0x100 + sp--]=0xa8;
+if(native_depth==16){native_id=187;goto actor_native_overflow;}
+native_calls[native_depth++]=187;goto L10d0;
 goto L22a9;
 L22a9:; /* $22A9 */
 if(v)goto L22b8;
@@ -8169,17 +8548,17 @@ L22af:; /* $22AF */
 if(!z)goto L22b8;
 goto L22b1;
 L22b1:; /* $22B1 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L22b2:; /* $22B2 */
 old=m[(unsigned char)(0xce + x)];m[(unsigned char)(0xce + x)]=(unsigned char)(old>>1);c=(old&1)!=0;NZ(m[(unsigned char)(0xce + x)]);
 goto L22b4;
 L22b4:; /* $22B4 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L22b5:; /* $22B5 */
 old=m[(unsigned char)(0xce + x)];m[(unsigned char)(0xce + x)]=(unsigned char)(old<<1);c=(old&128)!=0;NZ(m[(unsigned char)(0xce + x)]);
 goto L22b7;
 L22b7:; /* $22B7 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L22b8:; /* $22B8 */
 a=0x01;NZ(a);
 goto L22ba;
@@ -8187,7 +8566,7 @@ L22ba:; /* $22BA */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L22bc;
 L22bc:; /* $22BC */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L22bd:; /* $22BD */
 c=a>=0x16;NZ((unsigned char)(a-0x16));
 goto L22bf;
@@ -8218,7 +8597,9 @@ L22d0:; /* $22D0 */
 y=0x85;NZ(y);
 goto L22d2;
 L22d2:; /* $22D2 */
-m[0x100 + sp--]=0x22;m[0x100 + sp--]=0xd4;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x22d5)return;
+m[0x100 + sp--]=0x22;m[0x100 + sp--]=0xd4;
+if(native_depth==16){native_id=188;goto actor_native_overflow;}
+native_calls[native_depth++]=188;goto L2509;
 goto L22d5;
 L22d5:; /* $22D5 */
 x=m[0x0051];NZ(x);
@@ -8275,7 +8656,9 @@ L22fe:; /* $22FE */
 if(z)goto L2372;
 goto L2300;
 L2300:; /* $2300 */
-m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x02;actor_code(0x2ddd);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2303)return;
+m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x02;
+if(native_depth==16){native_id=189;goto actor_native_overflow;}
+native_calls[native_depth++]=189;goto L2ddd;
 goto L2303;
 L2303:; /* $2303 */
 a=m[0x0062];NZ(a);
@@ -8397,7 +8780,7 @@ L234f:; /* $234F */
 address=(unsigned char)(0xc8 + x);m[address]=a;
 goto L2351;
 L2351:; /* $2351 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2352:; /* $2352 */
 a=m[(unsigned char)(0xa4 + x)];NZ(a);
 goto L2354;
@@ -8408,7 +8791,9 @@ L2356:; /* $2356 */
 if(!z)goto L236c;
 goto L2358;
 L2358:; /* $2358 */
-m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x5a;actor_code(0x1eae);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x235b)return;
+m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x5a;
+if(native_depth==16){native_id=190;goto actor_native_overflow;}
+native_calls[native_depth++]=190;goto L1eae;
 goto L235b;
 L235b:; /* $235B */
 address=0x0052;m[address]++;NZ(m[address]);
@@ -8425,12 +8810,16 @@ L2364:; /* $2364 */
 if(n)goto L2352;
 goto L2366;
 L2366:; /* $2366 */
-m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x68;actor_code(0x2e1c);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2369)return;
+m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x68;
+if(native_depth==16){native_id=191;goto actor_native_overflow;}
+native_calls[native_depth++]=191;goto L2e1c;
 goto L2369;
 L2369:; /* $2369 */
 goto L228c;
 L236c:; /* $236C */
-m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x6e;actor_code(0x1e6d);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x236f)return;
+m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x6e;
+if(native_depth==16){native_id=192;goto actor_native_overflow;}
+native_calls[native_depth++]=192;goto L1e6d;
 goto L236f;
 L236f:; /* $236F */
 goto L235b;
@@ -8476,7 +8865,9 @@ L238d:; /* $238D */
 if(c)goto L239c;
 goto L238f;
 L238f:; /* $238F */
-m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x91;actor_code(0x1f7e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2392)return;
+m[0x100 + sp--]=0x23;m[0x100 + sp--]=0x91;
+if(native_depth==16){native_id=193;goto actor_native_overflow;}
+native_calls[native_depth++]=193;goto L1f7e;
 goto L2392;
 L2392:; /* $2392 */
 a=m[(unsigned char)(0xbf + x)];NZ(a);
@@ -8488,7 +8879,7 @@ L2396:; /* $2396 */
 if(!z)goto L2399;
 goto L2398;
 L2398:; /* $2398 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2399:; /* $2399 */
 goto L228c;
 L239c:; /* $239C */
@@ -8525,7 +8916,7 @@ L23b0:; /* $23B0 */
 address=(unsigned short)(0x0106 + x);m[address]=a;
 goto L23b3;
 L23b3:; /* $23B3 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L23b4:; /* $23B4 */
 a=0x0d;NZ(a);
 goto L23b6;
@@ -8563,7 +8954,7 @@ L23ca:; /* $23CA */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L23cc;
 L23cc:; /* $23CC */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L23cd:; /* $23CD */
 c=a>=0x15;NZ((unsigned char)(a-0x15));
 goto L23cf;
@@ -8616,7 +9007,7 @@ L23ee:; /* $23EE */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L23f0;
 L23f0:; /* $23F0 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L23f1:; /* $23F1 */
 a=m[(unsigned char)(0xa4 + x)];NZ(a);
 goto L23f3;
@@ -8627,7 +9018,9 @@ L23f5:; /* $23F5 */
 if(!z)goto L23ff;
 goto L23f7;
 L23f7:; /* $23F7 */
-m[0x100 + sp--]=0x23;m[0x100 + sp--]=0xf9;actor_code(0x1eae);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x23fa)return;
+m[0x100 + sp--]=0x23;m[0x100 + sp--]=0xf9;
+if(native_depth==16){native_id=194;goto actor_native_overflow;}
+native_calls[native_depth++]=194;goto L1eae;
 goto L23fa;
 L23fa:; /* $23FA */
 a=0x15;NZ(a);
@@ -8635,7 +9028,9 @@ goto L23fc;
 L23fc:; /* $23FC */
 goto L24f4;
 L23ff:; /* $23FF */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x01;actor_code(0x1e6d);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2402)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x01;
+if(native_depth==16){native_id=195;goto actor_native_overflow;}
+native_calls[native_depth++]=195;goto L1e6d;
 goto L2402;
 L2402:; /* $2402 */
 a=0x15;NZ(a);
@@ -8678,10 +9073,14 @@ L241d:; /* $241D */
 if(!z)goto L242e;
 goto L241f;
 L241f:; /* $241F */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x21;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2422)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x21;
+if(native_depth==16){native_id=196;goto actor_native_overflow;}
+native_calls[native_depth++]=196;goto L1e86;
 goto L2422;
 L2422:; /* $2422 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x24;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2425)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x24;
+if(native_depth==16){native_id=197;goto actor_native_overflow;}
+native_calls[native_depth++]=197;goto L1e86;
 goto L2425;
 L2425:; /* $2425 */
 a=0x01;NZ(a);
@@ -8695,10 +9094,14 @@ goto L242b;
 L242b:; /* $242B */
 goto L24f4;
 L242e:; /* $242E */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x30;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2431)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x30;
+if(native_depth==16){native_id=198;goto actor_native_overflow;}
+native_calls[native_depth++]=198;goto L1ec4;
 goto L2431;
 L2431:; /* $2431 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x33;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2434)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x33;
+if(native_depth==16){native_id=199;goto actor_native_overflow;}
+native_calls[native_depth++]=199;goto L1ec4;
 goto L2434;
 L2434:; /* $2434 */
 a=0x00;NZ(a);
@@ -8747,7 +9150,9 @@ L2453:; /* $2453 */
 if(!z)goto L2458;
 goto L2455;
 L2455:; /* $2455 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x57;actor_code(0x1e39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2458)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x57;
+if(native_depth==16){native_id=200;goto actor_native_overflow;}
+native_calls[native_depth++]=200;goto L1e39;
 goto L2458;
 L2458:; /* $2458 */
 a=m[(unsigned char)(0xa4 + x)];NZ(a);
@@ -8771,34 +9176,54 @@ L2464:; /* $2464 */
 if(!z)goto L247e;
 goto L2466;
 L2466:; /* $2466 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x68;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2469)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x68;
+if(native_depth==16){native_id=201;goto actor_native_overflow;}
+native_calls[native_depth++]=201;goto L1e86;
 goto L2469;
 L2469:; /* $2469 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x6b;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x246c)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x6b;
+if(native_depth==16){native_id=202;goto actor_native_overflow;}
+native_calls[native_depth++]=202;goto L1e86;
 goto L246c;
 L246c:; /* $246C */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x6e;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x246f)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x6e;
+if(native_depth==16){native_id=203;goto actor_native_overflow;}
+native_calls[native_depth++]=203;goto L1e86;
 goto L246f;
 L246f:; /* $246F */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x71;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2472)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x71;
+if(native_depth==16){native_id=204;goto actor_native_overflow;}
+native_calls[native_depth++]=204;goto L1e86;
 goto L2472;
 L2472:; /* $2472 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x74;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2475)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x74;
+if(native_depth==16){native_id=205;goto actor_native_overflow;}
+native_calls[native_depth++]=205;goto L1e86;
 goto L2475;
 L2475:; /* $2475 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x77;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2478)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x77;
+if(native_depth==16){native_id=206;goto actor_native_overflow;}
+native_calls[native_depth++]=206;goto L1e86;
 goto L2478;
 L2478:; /* $2478 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x7a;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x247b)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x7a;
+if(native_depth==16){native_id=207;goto actor_native_overflow;}
+native_calls[native_depth++]=207;goto L1e86;
 goto L247b;
 L247b:; /* $247B */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x7d;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x247e)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x7d;
+if(native_depth==16){native_id=208;goto actor_native_overflow;}
+native_calls[native_depth++]=208;goto L1e86;
 goto L247e;
 L247e:; /* $247E */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x80;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2481)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x80;
+if(native_depth==16){native_id=209;goto actor_native_overflow;}
+native_calls[native_depth++]=209;goto L1e86;
 goto L2481;
 L2481:; /* $2481 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x83;actor_code(0x1e86);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2484)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x83;
+if(native_depth==16){native_id=210;goto actor_native_overflow;}
+native_calls[native_depth++]=210;goto L1e86;
 goto L2484;
 L2484:; /* $2484 */
 a=0x01;NZ(a);
@@ -8824,22 +9249,34 @@ L2493:; /* $2493 */
 if(!z)goto L24a1;
 goto L2495;
 L2495:; /* $2495 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x97;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2498)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x97;
+if(native_depth==16){native_id=211;goto actor_native_overflow;}
+native_calls[native_depth++]=211;goto L1ec4;
 goto L2498;
 L2498:; /* $2498 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x9a;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x249b)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x9a;
+if(native_depth==16){native_id=212;goto actor_native_overflow;}
+native_calls[native_depth++]=212;goto L1ec4;
 goto L249b;
 L249b:; /* $249B */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x9d;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x249e)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0x9d;
+if(native_depth==16){native_id=213;goto actor_native_overflow;}
+native_calls[native_depth++]=213;goto L1ec4;
 goto L249e;
 L249e:; /* $249E */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0xa0;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x24a1)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0xa0;
+if(native_depth==16){native_id=214;goto actor_native_overflow;}
+native_calls[native_depth++]=214;goto L1ec4;
 goto L24a1;
 L24a1:; /* $24A1 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0xa3;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x24a4)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0xa3;
+if(native_depth==16){native_id=215;goto actor_native_overflow;}
+native_calls[native_depth++]=215;goto L1ec4;
 goto L24a4;
 L24a4:; /* $24A4 */
-m[0x100 + sp--]=0x24;m[0x100 + sp--]=0xa6;actor_code(0x1ec4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x24a7)return;
+m[0x100 + sp--]=0x24;m[0x100 + sp--]=0xa6;
+if(native_depth==16){native_id=216;goto actor_native_overflow;}
+native_calls[native_depth++]=216;goto L1ec4;
 goto L24a7;
 L24a7:; /* $24A7 */
 a=0x00;NZ(a);
@@ -8978,14 +9415,14 @@ L2501:; /* $2501 */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L2503;
 L2503:; /* $2503 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2504:; /* $2504 */
 a=0x00;NZ(a);
 goto L2506;
 L2506:; /* $2506 */
 goto L1f92;
 L2509:; /* $2509 */
-source_sound();actor_return=source_stack_return();return;
+source_sound();actor_return=source_stack_return();goto actor_native_unwind;
 a=0x15;NZ(a);
 goto L250b;
 L250b:; /* $250B */
@@ -9016,7 +9453,7 @@ L251d:; /* $251D */
 address=0x2581;m[address]=a;
 goto L2520;
 L2520:; /* $2520 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2521:; /* $2521 */
 a=m[0xef70];NZ(a);
 goto L2524;
@@ -9042,7 +9479,7 @@ L2530:; /* $2530 */
 address=0x2582;m[address]=a;
 goto L2533;
 L2533:; /* $2533 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2534:; /* $2534 */
 a=m[0xf070];NZ(a);
 goto L2537;
@@ -9068,7 +9505,7 @@ L2543:; /* $2543 */
 address=0x2583;m[address]=a;
 goto L2546;
 L2546:; /* $2546 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2547:; /* $2547 */
 a=y;NZ(a);
 goto L2548;
@@ -9100,7 +9537,7 @@ L255b:; /* $255B */
 if(c)goto L2539;
 goto L255d;
 L255d:; /* $255D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L255e:; /* $255E */
 a=0x00;NZ(a);
 goto L2560;
@@ -9126,7 +9563,7 @@ L256f:; /* $256F */
 if(!n)goto L256b;
 goto L2571;
 L2571:; /* $2571 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2584:; /* $2584 */
 x=0x02;NZ(x);
 goto L2586;
@@ -9147,7 +9584,9 @@ L258e:; /* $258E */
 a=m[(unsigned short)(0x276d + x)];NZ(a);
 goto L2591;
 L2591:; /* $2591 */
-m[0x100 + sp--]=0x25;m[0x100 + sp--]=0x93;actor_code(0x2704);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2594)return;
+m[0x100 + sp--]=0x25;m[0x100 + sp--]=0x93;
+if(native_depth==16){native_id=217;goto actor_native_overflow;}
+native_calls[native_depth++]=217;goto L2704;
 goto L2594;
 L2594:; /* $2594 */
 a=m[(unsigned short)(0x4f4e + x)];NZ(a);
@@ -9156,7 +9595,9 @@ L2597:; /* $2597 */
 x=a;NZ(x);
 goto L2598;
 L2598:; /* $2598 */
-m[0x100 + sp--]=0x25;m[0x100 + sp--]=0x9a;actor_code(0x2719);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x259b)return;
+m[0x100 + sp--]=0x25;m[0x100 + sp--]=0x9a;
+if(native_depth==16){native_id=218;goto actor_native_overflow;}
+native_calls[native_depth++]=218;goto L2719;
 goto L259b;
 L259b:; /* $259B */
 m[0x100 + sp--]=a;
@@ -9192,7 +9633,9 @@ L25a9:; /* $25A9 */
 a=m[(unsigned char)(0xd4 + x)];NZ(a);
 goto L25ab;
 L25ab:; /* $25AB */
-m[0x100 + sp--]=0x25;m[0x100 + sp--]=0xad;actor_code(0x26a0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x25ae)return;
+m[0x100 + sp--]=0x25;m[0x100 + sp--]=0xad;
+if(native_depth==16){native_id=219;goto actor_native_overflow;}
+native_calls[native_depth++]=219;goto L26a0;
 goto L25ae;
 L25ae:; /* $25AE */
 x=m[0x0051];NZ(x);
@@ -9210,7 +9653,9 @@ L25b7:; /* $25B7 */
 if(n)goto L25d7;
 goto L25b9;
 L25b9:; /* $25B9 */
-m[0x100 + sp--]=0x25;m[0x100 + sp--]=0xbb;actor_code(0x2704);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x25bc)return;
+m[0x100 + sp--]=0x25;m[0x100 + sp--]=0xbb;
+if(native_depth==16){native_id=220;goto actor_native_overflow;}
+native_calls[native_depth++]=220;goto L2704;
 goto L25bc;
 L25bc:; /* $25BC */
 a=m[(unsigned short)(0x4f4e + x)];NZ(a);
@@ -9222,7 +9667,9 @@ L25c0:; /* $25C0 */
 x++;NZ(x);
 goto L25c1;
 L25c1:; /* $25C1 */
-m[0x100 + sp--]=0x25;m[0x100 + sp--]=0xc3;actor_code(0x2719);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x25c4)return;
+m[0x100 + sp--]=0x25;m[0x100 + sp--]=0xc3;
+if(native_depth==16){native_id=221;goto actor_native_overflow;}
+native_calls[native_depth++]=221;goto L2719;
 goto L25c4;
 L25c4:; /* $25C4 */
 m[0x100 + sp--]=a;
@@ -9258,7 +9705,9 @@ L25d2:; /* $25D2 */
 a=m[(unsigned char)(0xd7 + x)];NZ(a);
 goto L25d4;
 L25d4:; /* $25D4 */
-m[0x100 + sp--]=0x25;m[0x100 + sp--]=0xd6;actor_code(0x26a0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x25d7)return;
+m[0x100 + sp--]=0x25;m[0x100 + sp--]=0xd6;
+if(native_depth==16){native_id=222;goto actor_native_overflow;}
+native_calls[native_depth++]=222;goto L26a0;
 goto L25d7;
 L25d7:; /* $25D7 */
 x=m[0x0051];NZ(x);
@@ -9276,7 +9725,7 @@ L25de:; /* $25DE */
 address=0x277e;m[address]=a;
 goto L25e1;
 L25e1:; /* $25E1 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L25e2:; /* $25E2 */
 a=m[0x277e];NZ(a);
 goto L25e5;
@@ -9284,7 +9733,7 @@ L25e5:; /* $25E5 */
 if(z)goto L25e8;
 goto L25e7;
 L25e7:; /* $25E7 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L25e8:; /* $25E8 */
 address=0x277e;m[address]++;NZ(m[address]);
 goto L25eb;
@@ -9549,9 +9998,9 @@ L269c:; /* $269C */
 address=0x277d;m[address]=a;
 goto L269f;
 L269f:; /* $269F */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L26a0:; /* $26A0 */
-if(!d && m[0xe0 + x]<32){PERF_BEGIN(BL_PERF_SPRITE_COPY);source_sprite_copy();PERF_END(BL_PERF_SPRITE_COPY);actor_return=source_stack_return();return;}
+if(!d && m[0xe0 + x]<32){PERF_BEGIN(BL_PERF_SPRITE_COPY);if(source_sprite_copy()){PERF_END(BL_PERF_SPRITE_COPY);actor_return=source_stack_return();goto actor_native_unwind;}PERF_END(BL_PERF_SPRITE_COPY);}
 if(!z)goto L26d7;
 goto L26a2;
 L26a2:; /* $26A2 */
@@ -9633,7 +10082,7 @@ L26d4:; /* $26D4 */
 if(!n)goto L26ce;
 goto L26d6;
 L26d6:; /* $26D6 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L26d7:; /* $26D7 */
 a=0x3f;NZ(a);
 goto L26d9;
@@ -9707,7 +10156,7 @@ L2701:; /* $2701 */
 if(!n)goto L26e3;
 goto L2703;
 L2703:; /* $2703 */
-source_fault=0x2703;return;
+source_fault=0x2703;goto actor_native_unwind;
 L2704:; /* $2704 */
 old=a;a=(unsigned char)(old<<1);c=(old&128)!=0;NZ(a);
 goto L2705;
@@ -9739,7 +10188,7 @@ L2716:; /* $2716 */
 address=0x000f;m[address]=a;
 goto L2718;
 L2718:; /* $2718 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2719:; /* $2719 */
 a=m[(unsigned short)(0x59bd + x)];NZ(a);
 goto L271c;
@@ -9813,7 +10262,7 @@ L274d:; /* $274D */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L274e;
 L274e:; /* $274E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2780:; /* $2780 */
 a=m[(unsigned short)(0x4fdb + x)];NZ(a);
 goto L2783;
@@ -10546,7 +10995,7 @@ L29bf:; /* $29BF */
 address=(unsigned short)(0x4f51 + x);m[address]=a;
 goto L29c2;
 L29c2:; /* $29C2 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L29c3:; /* $29C3 */
 a=0x00;NZ(a);
 goto L29c5;
@@ -10572,7 +11021,7 @@ L29d1:; /* $29D1 */
 if(!z)goto L29d4;
 goto L29d3;
 L29d3:; /* $29D3 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L29d4:; /* $29D4 */
 address=0x0067;m[address]=a;
 goto L29d6;
@@ -10826,7 +11275,9 @@ L2a84:; /* $2A84 */
 address=0x0061;m[address]=a;
 goto L2a86;
 L2a86:; /* $2A86 */
-m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0x88;actor_code(0x2c54);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2a89)return;
+m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0x88;
+if(native_depth==16){native_id=223;goto actor_native_overflow;}
+native_calls[native_depth++]=223;goto L2c54;
 goto L2a89;
 L2a89:; /* $2A89 */
 if(!c)goto L2a76;
@@ -10850,7 +11301,9 @@ L2a91:; /* $2A91 */
 y=0x87;NZ(y);
 goto L2a93;
 L2a93:; /* $2A93 */
-m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0x95;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2a96)return;
+m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0x95;
+if(native_depth==16){native_id=224;goto actor_native_overflow;}
+native_calls[native_depth++]=224;goto L2509;
 goto L2a96;
 L2a96:; /* $2A96 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -10865,7 +11318,9 @@ L2a99:; /* $2A99 */
 x=a;NZ(x);
 goto L2a9a;
 L2a9a:; /* $2A9A */
-m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0x9c;actor_code(0x2b3e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2a9d)return;
+m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0x9c;
+if(native_depth==16){native_id=225;goto actor_native_overflow;}
+native_calls[native_depth++]=225;goto L2b3e;
 goto L2a9d;
 L2a9d:; /* $2A9D */
 a=m[(unsigned char)(0xbc + x)];NZ(a);
@@ -10886,7 +11341,9 @@ L2aa7:; /* $2AA7 */
 address=0x0061;m[address]=a;
 goto L2aa9;
 L2aa9:; /* $2AA9 */
-m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xab;actor_code(0x2c54);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2aac)return;
+m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xab;
+if(native_depth==16){native_id=226;goto actor_native_overflow;}
+native_calls[native_depth++]=226;goto L2c54;
 goto L2aac;
 L2aac:; /* $2AAC */
 if(!c)goto L2a76;
@@ -10919,10 +11376,14 @@ L2abe:; /* $2ABE */
 if(c)goto L2a76;
 goto L2ac0;
 L2ac0:; /* $2AC0 */
-m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xc2;actor_code(0x2e29);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2ac3)return;
+m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xc2;
+if(native_depth==16){native_id=227;goto actor_native_overflow;}
+native_calls[native_depth++]=227;goto L2e29;
 goto L2ac3;
 L2ac3:; /* $2AC3 */
-m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xc5;actor_code(0x2b3e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2ac6)return;
+m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xc5;
+if(native_depth==16){native_id=228;goto actor_native_overflow;}
+native_calls[native_depth++]=228;goto L2b3e;
 goto L2ac6;
 L2ac6:; /* $2AC6 */
 a=m[(unsigned char)(0xbc + x)];NZ(a);
@@ -10961,7 +11422,9 @@ L2add:; /* $2ADD */
 address=0x0061;m[address]=a;
 goto L2adf;
 L2adf:; /* $2ADF */
-m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xe1;actor_code(0x2c54);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2ae2)return;
+m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xe1;
+if(native_depth==16){native_id=229;goto actor_native_overflow;}
+native_calls[native_depth++]=229;goto L2c54;
 goto L2ae2;
 L2ae2:; /* $2AE2 */
 if(!c)goto L2b3b;
@@ -10970,10 +11433,14 @@ L2ae4:; /* $2AE4 */
 if(n)goto L2b3b;
 goto L2ae6;
 L2ae6:; /* $2AE6 */
-m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xe8;actor_code(0x2e29);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2ae9)return;
+m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xe8;
+if(native_depth==16){native_id=230;goto actor_native_overflow;}
+native_calls[native_depth++]=230;goto L2e29;
 goto L2ae9;
 L2ae9:; /* $2AE9 */
-m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xeb;actor_code(0x2b3e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2aec)return;
+m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xeb;
+if(native_depth==16){native_id=231;goto actor_native_overflow;}
+native_calls[native_depth++]=231;goto L2b3e;
 goto L2aec;
 L2aec:; /* $2AEC */
 a=m[(unsigned char)(0xbc + x)];NZ(a);
@@ -11069,7 +11536,9 @@ L2b2a:; /* $2B2A */
 if(z)goto L2b3b;
 goto L2b2c;
 L2b2c:; /* $2B2C */
-m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0x2e;actor_code(0x2e29);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2b2f)return;
+m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0x2e;
+if(native_depth==16){native_id=232;goto actor_native_overflow;}
+native_calls[native_depth++]=232;goto L2e29;
 goto L2b2f;
 L2b2f:; /* $2B2F */
 a=m[(unsigned char)(0xbc + x)];NZ(a);
@@ -11110,7 +11579,7 @@ L2b4b:; /* $2B4B */
 address=(unsigned char)(0xa4 + x);m[address]=a;
 goto L2b4d;
 L2b4d:; /* $2B4D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2b4e:; /* $2B4E */
 if(actor_invincible)m[0xbc]&=1;
 x=0x02;NZ(x);
@@ -11155,7 +11624,9 @@ L2b69:; /* $2B69 */
 if(z)goto L2b83;
 goto L2b6b;
 L2b6b:; /* $2B6B */
-m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0x6d;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2b6e)return;
+m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0x6d;
+if(native_depth==16){native_id=233;goto actor_native_overflow;}
+native_calls[native_depth++]=233;goto L10d0;
 goto L2b6e;
 L2b6e:; /* $2B6E */
 if(v)goto L2b7f;
@@ -11187,7 +11658,9 @@ L2b81:; /* $2B81 */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L2b83;
 L2b83:; /* $2B83 */
-m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0x85;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2b86)return;
+m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0x85;
+if(native_depth==16){native_id=234;goto actor_native_overflow;}
+native_calls[native_depth++]=234;goto L10d0;
 goto L2b86;
 L2b86:; /* $2B86 */
 if(v)goto L2b96;
@@ -11277,7 +11750,9 @@ L2bbd:; /* $2BBD */
 x=0x02;NZ(x);
 goto L2bbf;
 L2bbf:; /* $2BBF */
-m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0xc1;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2bc2)return;
+m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0xc1;
+if(native_depth==16){native_id=235;goto actor_native_overflow;}
+native_calls[native_depth++]=235;goto L3175;
 goto L2bc2;
 L2bc2:; /* $2BC2 */
 x=m[0x0051];NZ(x);
@@ -11331,7 +11806,9 @@ L2be1:; /* $2BE1 */
 x=0x02;NZ(x);
 goto L2be3;
 L2be3:; /* $2BE3 */
-m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0xe5;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2be6)return;
+m[0x100 + sp--]=0x2b;m[0x100 + sp--]=0xe5;
+if(native_depth==16){native_id=236;goto actor_native_overflow;}
+native_calls[native_depth++]=236;goto L3175;
 goto L2be6;
 L2be6:; /* $2BE6 */
 x=m[0x0051];NZ(x);
@@ -11385,7 +11862,9 @@ L2c05:; /* $2C05 */
 x=0x02;NZ(x);
 goto L2c07;
 L2c07:; /* $2C07 */
-m[0x100 + sp--]=0x2c;m[0x100 + sp--]=0x09;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2c0a)return;
+m[0x100 + sp--]=0x2c;m[0x100 + sp--]=0x09;
+if(native_depth==16){native_id=237;goto actor_native_overflow;}
+native_calls[native_depth++]=237;goto L3175;
 goto L2c0a;
 L2c0a:; /* $2C0A */
 x=m[0x0051];NZ(x);
@@ -11426,7 +11905,7 @@ goto L2c20;
 L2c20:; /* $2C20 */
 goto L2b50;
 L2c23:; /* $2C23 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2c24:; /* $2C24 */
 a=m[(unsigned char)(0xbc + x)];NZ(a);
 goto L2c26;
@@ -11452,7 +11931,9 @@ L2c32:; /* $2C32 */
 x=a;NZ(x);
 goto L2c33;
 L2c33:; /* $2C33 */
-m[0x100 + sp--]=0x2c;m[0x100 + sp--]=0x35;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2c36)return;
+m[0x100 + sp--]=0x2c;m[0x100 + sp--]=0x35;
+if(native_depth==16){native_id=238;goto actor_native_overflow;}
+native_calls[native_depth++]=238;goto L3175;
 goto L2c36;
 L2c36:; /* $2C36 */
 a=0xc2;NZ(a);
@@ -11461,7 +11942,9 @@ L2c38:; /* $2C38 */
 x=0x02;NZ(x);
 goto L2c3a;
 L2c3a:; /* $2C3A */
-m[0x100 + sp--]=0x2c;m[0x100 + sp--]=0x3c;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2c3d)return;
+m[0x100 + sp--]=0x2c;m[0x100 + sp--]=0x3c;
+if(native_depth==16){native_id=239;goto actor_native_overflow;}
+native_calls[native_depth++]=239;goto L3175;
 goto L2c3d;
 L2c3d:; /* $2C3D */
 goto L2c47;
@@ -11472,7 +11955,9 @@ L2c42:; /* $2C42 */
 x=0x02;NZ(x);
 goto L2c44;
 L2c44:; /* $2C44 */
-m[0x100 + sp--]=0x2c;m[0x100 + sp--]=0x46;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2c47)return;
+m[0x100 + sp--]=0x2c;m[0x100 + sp--]=0x46;
+if(native_depth==16){native_id=240;goto actor_native_overflow;}
+native_calls[native_depth++]=240;goto L3175;
 goto L2c47;
 L2c47:; /* $2C47 */
 x=m[0x0051];NZ(x);
@@ -11543,7 +12028,7 @@ L2c6d:; /* $2C6D */
 c=a>=m[0x0061];NZ((unsigned char)(a-m[0x0061]));
 goto L2c6f;
 L2c6f:; /* $2C6F */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2c70:; /* $2C70 */
 a=m[0x0060];NZ(a);
 goto L2c72;
@@ -11557,7 +12042,7 @@ L2c76:; /* $2C76 */
 if(z)goto L2c92;
 goto L2c78;
 L2c78:; /* $2C78 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2c79:; /* $2C79 */
 a&=0x7f;NZ(a);
 goto L2c7b;
@@ -11577,7 +12062,7 @@ L2c82:; /* $2C82 */
 address=0x0060;m[address]=a;
 goto L2c84;
 L2c84:; /* $2C84 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2c85:; /* $2C85 */
 x=m[0x4321];NZ(x);
 goto L2c88;
@@ -11594,7 +12079,7 @@ L2c8f:; /* $2C8F */
 if(n)goto L2cbc;
 goto L2c91;
 L2c91:; /* $2C91 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2c92:; /* $2C92 */
 a=0xa0;NZ(a);
 goto L2c94;
@@ -11731,7 +12216,7 @@ L2cef:; /* $2CEF */
 address=0x0064;m[address]=a;
 goto L2cf1;
 L2cf1:; /* $2CF1 */
-if(!d && m[0x64]<8){source_animation();actor_return=source_stack_return();return;}
+if(!d && m[0x64]<8){source_animation();actor_return=source_stack_return();goto actor_native_unwind;}
 x=0x02;NZ(x);
 goto L2cf3;
 L2cf3:; /* $2CF3 */
@@ -11884,7 +12369,7 @@ L2d52:; /* $2D52 */
 if(!n)goto L2cf3;
 goto L2d54;
 L2d54:; /* $2D54 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2d55:; /* $2D55 */
 x=0x02;NZ(x);
 goto L2d57;
@@ -11931,7 +12416,9 @@ L2d70:; /* $2D70 */
 if(z)goto L2d79;
 goto L2d72;
 L2d72:; /* $2D72 */
-m[0x100 + sp--]=0x2d;m[0x100 + sp--]=0x74;actor_code(0x3001);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2d75)return;
+m[0x100 + sp--]=0x2d;m[0x100 + sp--]=0x74;
+if(native_depth==16){native_id=241;goto actor_native_overflow;}
+native_calls[native_depth++]=241;goto L3001;
 goto L2d75;
 L2d75:; /* $2D75 */
 x--;NZ(x);
@@ -11940,7 +12427,7 @@ L2d76:; /* $2D76 */
 if(!n)goto L2d57;
 goto L2d78;
 L2d78:; /* $2D78 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2d79:; /* $2D79 */
 goto L1818;
 L2d7c:; /* $2D7C */
@@ -12043,9 +12530,11 @@ L2dbd:; /* $2DBD */
 if(!n)goto L2d7e;
 goto L2dbf;
 L2dbf:; /* $2DBF */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2dc0:; /* $2DC0 */
-m[0x100 + sp--]=0x2d;m[0x100 + sp--]=0xc2;actor_code(0x228c);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2dc3)return;
+m[0x100 + sp--]=0x2d;m[0x100 + sp--]=0xc2;
+if(native_depth==16){native_id=242;goto actor_native_overflow;}
+native_calls[native_depth++]=242;goto L228c;
 goto L2dc3;
 L2dc3:; /* $2DC3 */
 a=0x18;NZ(a);
@@ -12054,7 +12543,9 @@ L2dc5:; /* $2DC5 */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L2dc7;
 L2dc7:; /* $2DC7 */
-m[0x100 + sp--]=0x2d;m[0x100 + sp--]=0xc9;actor_code(0x10d0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2dca)return;
+m[0x100 + sp--]=0x2d;m[0x100 + sp--]=0xc9;
+if(native_depth==16){native_id=243;goto actor_native_overflow;}
+native_calls[native_depth++]=243;goto L10d0;
 goto L2dca;
 L2dca:; /* $2DCA */
 if(v)goto L2dd8;
@@ -12069,7 +12560,7 @@ L2dd0:; /* $2DD0 */
 if(!z)goto L2dd8;
 goto L2dd2;
 L2dd2:; /* $2DD2 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2dd3:; /* $2DD3 */
 a=0x03;NZ(a);
 goto L2dd5;
@@ -12077,7 +12568,7 @@ L2dd5:; /* $2DD5 */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L2dd7;
 L2dd7:; /* $2DD7 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2dd8:; /* $2DD8 */
 a=0x01;NZ(a);
 goto L2dda;
@@ -12085,7 +12576,7 @@ L2dda:; /* $2DDA */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L2ddc;
 L2ddc:; /* $2DDC */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2ddd:; /* $2DDD */
 a=m[(unsigned char)(0xa1 + x)];NZ(a);
 goto L2ddf;
@@ -12171,7 +12662,7 @@ L2e0d:; /* $2E0D */
 address=0x0063;m[address]=a;
 goto L2e0f;
 L2e0f:; /* $2E0F */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2e10:; /* $2E10 */
 a=0x00;NZ(a);
 goto L2e12;
@@ -12188,7 +12679,7 @@ L2e18:; /* $2E18 */
 address=(unsigned short)(0x0106 + x);m[address]=a;
 goto L2e1b;
 L2e1b:; /* $2E1B */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2e1c:; /* $2E1C */
 a=m[0x0063];NZ(a);
 goto L2e1e;
@@ -12208,7 +12699,7 @@ L2e26:; /* $2E26 */
 address=(unsigned char)(0xa4 + x);m[address]=a;
 goto L2e28;
 L2e28:; /* $2E28 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2e29:; /* $2E29 */
 m[0x100 + sp--]=a;
 goto L2e2a;
@@ -12228,7 +12719,9 @@ L2e2e:; /* $2E2E */
 y=0x86;NZ(y);
 goto L2e30;
 L2e30:; /* $2E30 */
-m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x32;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2e33)return;
+m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x32;
+if(native_depth==16){native_id=244;goto actor_native_overflow;}
+native_calls[native_depth++]=244;goto L2509;
 goto L2e33;
 L2e33:; /* $2E33 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -12246,9 +12739,9 @@ L2e37:; /* $2E37 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L2e38;
 L2e38:; /* $2E38 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2e39:; /* $2E39 */
-if(source_object_driver()){actor_return=source_stack_return();}return;
+if(source_object_driver()){actor_return=source_stack_return();}goto actor_native_unwind;
 a=0x00;NZ(a);
 goto L2e3b;
 L2e3b:; /* $2E3B */
@@ -12285,7 +12778,9 @@ L2e50:; /* $2E50 */
 if(!z)goto L2e55;
 goto L2e52;
 L2e52:; /* $2E52 */
-m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x54;actor_code(0x2e10);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2e55)return;
+m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x54;
+if(native_depth==16){native_id=245;goto actor_native_overflow;}
+native_calls[native_depth++]=245;goto L2e10;
 goto L2e55;
 L2e55:; /* $2E55 */
 a=m[(unsigned char)(0xb6 + x)];NZ(a);
@@ -12297,10 +12792,14 @@ L2e59:; /* $2E59 */
 address=0x0053;m[address]=a;
 goto L2e5b;
 L2e5b:; /* $2E5B */
-m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x5d;actor_code(0x1c39);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2e5e)return;
+m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x5d;
+if(native_depth==16){native_id=246;goto actor_native_overflow;}
+native_calls[native_depth++]=246;goto L1c39;
 goto L2e5e;
 L2e5e:; /* $2E5E */
-m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x60;actor_code(0x2e6e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2e61)return;
+m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x60;
+if(native_depth==16){native_id=247;goto actor_native_overflow;}
+native_calls[native_depth++]=247;goto L2e6e;
 goto L2e61;
 L2e61:; /* $2E61 */
 x=m[0x0051];NZ(x);
@@ -12309,7 +12808,9 @@ L2e63:; /* $2E63 */
 address=(unsigned char)(0xe9 + x);m[address]++;NZ(m[address]);
 goto L2e65;
 L2e65:; /* $2E65 */
-m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x67;actor_code(0x2e6e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2e68)return;
+m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x67;
+if(native_depth==16){native_id=248;goto actor_native_overflow;}
+native_calls[native_depth++]=248;goto L2e6e;
 goto L2e68;
 L2e68:; /* $2E68 */
 x=m[0x0051];NZ(x);
@@ -12321,16 +12822,18 @@ L2e6b:; /* $2E6B */
 if(!n)goto L2e40;
 goto L2e6d;
 L2e6d:; /* $2E6D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2e6e:; /* $2E6E */
-source_object_row();return;
+source_object_row();goto actor_native_unwind;
 a=m[(unsigned char)(0xe9 + x)];NZ(a);
 goto L2e70;
 L2e70:; /* $2E70 */
 x=a;NZ(x);
 goto L2e71;
 L2e71:; /* $2E71 */
-m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x73;actor_code(0x1a67);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2e74)return;
+m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x73;
+if(native_depth==16){native_id=249;goto actor_native_overflow;}
+native_calls[native_depth++]=249;goto L1a67;
 goto L2e74;
 L2e74:; /* $2E74 */
 x=m[0x0051];NZ(x);
@@ -12351,7 +12854,9 @@ L2e7e:; /* $2E7E */
 a&=0x7f;NZ(a);
 goto L2e80;
 L2e80:; /* $2E80 */
-m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x82;actor_code(0x2e89);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2e83)return;
+m[0x100 + sp--]=0x2e;m[0x100 + sp--]=0x82;
+if(native_depth==16){native_id=250;goto actor_native_overflow;}
+native_calls[native_depth++]=250;goto L2e89;
 goto L2e83;
 L2e83:; /* $2E83 */
 y++;NZ(y);
@@ -12363,9 +12868,9 @@ L2e86:; /* $2E86 */
 if(!n)goto L2e7c;
 goto L2e88;
 L2e88:; /* $2E88 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2e89:; /* $2E89 */
-switch(source_object_classify()){case 0x2ee9:goto L2ee9;case 0x2eea:goto L2eea;case 0x2ef7:goto L2ef7;case 0x2efa:goto L2efa;case 0x2f01:goto L2f01;case 0x2f04:goto L2f04;case 0x2f3c:goto L2f3c;case 0x2f51:goto L2f51;case 0x2f66:goto L2f66;case 0x2f7b:goto L2f7b;case 0x310c:goto L310c;default:source_fault=0x2e89;return;}
+switch(source_object_classify()){case 0x2ee9:goto L2ee9;case 0x2eea:goto L2eea;case 0x2ef7:goto L2ef7;case 0x2efa:goto L2efa;case 0x2f01:goto L2f01;case 0x2f04:goto L2f04;case 0x2f3c:goto L2f3c;case 0x2f51:goto L2f51;case 0x2f66:goto L2f66;case 0x2f7b:goto L2f7b;case 0x310c:goto L310c;default:source_fault=0x2e89;goto actor_native_unwind;}
 c=a>=0x05;NZ((unsigned char)(a-0x05));
 goto L2e8b;
 L2e8b:; /* $2E8B */
@@ -12500,7 +13005,7 @@ L2ee7:; /* $2EE7 */
 if(z)goto L2ef7;
 goto L2ee9;
 L2ee9:; /* $2EE9 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2eea:; /* $2EEA */
 a=m[0x0029];NZ(a);
 goto L2eec;
@@ -12511,7 +13016,7 @@ L2eee:; /* $2EEE */
 if(z)goto L2ef1;
 goto L2ef0;
 L2ef0:; /* $2EF0 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2ef1:; /* $2EF1 */
 goto L2fd6;
 L2ef4:; /* $2EF4 */
@@ -12528,7 +13033,7 @@ L2efe:; /* $2EFE */
 if(c)goto L2f01;
 goto L2f00;
 L2f00:; /* $2F00 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2f01:; /* $2F01 */
 goto L304b;
 L2f04:; /* $2F04 */
@@ -12538,10 +13043,14 @@ L2f05:; /* $2F05 */
 if(!z)goto L2ee9;
 goto L2f07;
 L2f07:; /* $2F07 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x09;actor_code(0x330e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f0a)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x09;
+if(native_depth==16){native_id=251;goto actor_native_overflow;}
+native_calls[native_depth++]=251;goto L330e;
 goto L2f0a;
 L2f0a:; /* $2F0A */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x0c;actor_code(0x331c);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f0d)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x0c;
+if(native_depth==16){native_id=252;goto actor_native_overflow;}
+native_calls[native_depth++]=252;goto L331c;
 goto L2f0d;
 L2f0d:; /* $2F0D */
 if(c)goto L2f39;
@@ -12550,7 +13059,9 @@ L2f0f:; /* $2F0F */
 m[0x100 + sp--]=a;
 goto L2f10;
 L2f10:; /* $2F10 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x12;actor_code(0x3315);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f13)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x12;
+if(native_depth==16){native_id=253;goto actor_native_overflow;}
+native_calls[native_depth++]=253;goto L3315;
 goto L2f13;
 L2f13:; /* $2F13 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -12604,7 +13115,9 @@ L2f29:; /* $2F29 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L2f2a;
 L2f2a:; /* $2F2A */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x2c;actor_code(0x330e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f2d)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x2c;
+if(native_depth==16){native_id=254;goto actor_native_overflow;}
+native_calls[native_depth++]=254;goto L330e;
 goto L2f2d;
 L2f2d:; /* $2F2D */
 a=0x7d;NZ(a);
@@ -12613,18 +13126,24 @@ L2f2f:; /* $2F2F */
 x=0x02;NZ(x);
 goto L2f31;
 L2f31:; /* $2F31 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x33;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f34)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x33;
+if(native_depth==16){native_id=255;goto actor_native_overflow;}
+native_calls[native_depth++]=255;goto L3175;
 goto L2f34;
 L2f34:; /* $2F34 */
 y=0x8e;NZ(y);
 goto L2f36;
 L2f36:; /* $2F36 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x38;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f39)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x38;
+if(native_depth==16){native_id=256;goto actor_native_overflow;}
+native_calls[native_depth++]=256;goto L2509;
 goto L2f39;
 L2f39:; /* $2F39 */
 goto L3315;
 L2f3c:; /* $2F3C */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x3e;actor_code(0x30d4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f3f)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x3e;
+if(native_depth==16){native_id=257;goto actor_native_overflow;}
+native_calls[native_depth++]=257;goto L30d4;
 goto L2f3f;
 L2f3f:; /* $2F3F */
 if(c)goto L2ee9;
@@ -12651,7 +13170,9 @@ L2f4f:; /* $2F4F */
 if(!z)goto L2f8e;
 goto L2f51;
 L2f51:; /* $2F51 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x53;actor_code(0x30d4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f54)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x53;
+if(native_depth==16){native_id=258;goto actor_native_overflow;}
+native_calls[native_depth++]=258;goto L30d4;
 goto L2f54;
 L2f54:; /* $2F54 */
 if(c)goto L2f3f;
@@ -12678,7 +13199,9 @@ L2f64:; /* $2F64 */
 if(!z)goto L2f8e;
 goto L2f66;
 L2f66:; /* $2F66 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x68;actor_code(0x30d4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f69)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x68;
+if(native_depth==16){native_id=259;goto actor_native_overflow;}
+native_calls[native_depth++]=259;goto L30d4;
 goto L2f69;
 L2f69:; /* $2F69 */
 if(c)goto L2f3f;
@@ -12705,7 +13228,9 @@ L2f79:; /* $2F79 */
 if(!z)goto L2f8e;
 goto L2f7b;
 L2f7b:; /* $2F7B */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x7d;actor_code(0x30d4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f7e)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x7d;
+if(native_depth==16){native_id=260;goto actor_native_overflow;}
+native_calls[native_depth++]=260;goto L30d4;
 goto L2f7e;
 L2f7e:; /* $2F7E */
 if(c)goto L2f69;
@@ -12735,7 +13260,9 @@ L2f90:; /* $2F90 */
 if(z)goto L2f9a;
 goto L2f92;
 L2f92:; /* $2F92 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x94;actor_code(0x3001);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2f95)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0x94;
+if(native_depth==16){native_id=261;goto actor_native_overflow;}
+native_calls[native_depth++]=261;goto L3001;
 goto L2f95;
 L2f95:; /* $2F95 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -12803,7 +13330,9 @@ L2fbd:; /* $2FBD */
 address=(unsigned char)(0x8c + x);m[address]=a;
 goto L2fbf;
 L2fbf:; /* $2FBF */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xc1;actor_code(0x3001);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2fc2)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xc1;
+if(native_depth==16){native_id=262;goto actor_native_overflow;}
+native_calls[native_depth++]=262;goto L3001;
 goto L2fc2;
 L2fc2:; /* $2FC2 */
 x--;NZ(x);
@@ -12815,7 +13344,9 @@ L2fc5:; /* $2FC5 */
 actor_i=1;
 goto L2fc6;
 L2fc6:; /* $2FC6 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xc8;actor_code(0x0d42);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2fc9)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xc8;
+if(native_depth==16){native_id=263;goto actor_native_overflow;}
+native_calls[native_depth++]=263;goto L0d42;
 goto L2fc9;
 L2fc9:; /* $2FC9 */
 x=0xff;NZ(x);
@@ -12824,10 +13355,12 @@ L2fcb:; /* $2FCB */
 sp=x;
 goto L2fcc;
 L2fcc:; /* $2FCC */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xce;actor_code(0x09bc);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2fcf)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xce;
+if(native_depth==16){native_id=264;goto actor_native_overflow;}
+native_calls[native_depth++]=264;goto L09bc;
 goto L2fcf;
 L2fcf:; /* $2FCF */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xd1;PERF_BEGIN(BL_PERF_SPRITES);actor_code(0x2584);PERF_END(BL_PERF_SPRITES);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2fd2)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xd1;PERF_BEGIN(BL_PERF_SPRITES);actor_code(0x2584);PERF_END(BL_PERF_SPRITES);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2fd2)goto actor_native_unwind;
 goto L2fd2;
 L2fd2:; /* $2FD2 */
 actor_i=0;
@@ -12841,7 +13374,7 @@ L2fd7:; /* $2FD7 */
 if(z)goto L2fda;
 goto L2fd9;
 L2fd9:; /* $2FD9 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L2fda:; /* $2FDA */
 a=m[0x00a1];NZ(a);
 goto L2fdc;
@@ -12861,13 +13394,17 @@ L2fe5:; /* $2FE5 */
 address=0x0028;m[address]++;NZ(m[address]);
 goto L2fe7;
 L2fe7:; /* $2FE7 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xe9;actor_code(0x1aed);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2fea)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xe9;
+if(native_depth==16){native_id=265;goto actor_native_overflow;}
+native_calls[native_depth++]=265;goto L1aed;
 goto L2fea;
 L2fea:; /* $2FEA */
 y=0x8e;NZ(y);
 goto L2fec;
 L2fec:; /* $2FEC */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xee;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2fef)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xee;
+if(native_depth==16){native_id=266;goto actor_native_overflow;}
+native_calls[native_depth++]=266;goto L2509;
 goto L2fef;
 L2fef:; /* $2FEF */
 a=0x56;NZ(a);
@@ -12879,7 +13416,9 @@ L2ff3:; /* $2FF3 */
 y=0x24;NZ(y);
 goto L2ff5;
 L2ff5:; /* $2FF5 */
-m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xf7;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x2ff8)return;
+m[0x100 + sp--]=0x2f;m[0x100 + sp--]=0xf7;
+if(native_depth==16){native_id=267;goto actor_native_overflow;}
+native_calls[native_depth++]=267;goto L17e2;
 goto L2ff8;
 L2ff8:; /* $2FF8 */
 a=0x56;NZ(a);
@@ -12938,7 +13477,9 @@ L3025:; /* $3025 */
 if(z)goto L302f;
 goto L3027;
 L3027:; /* $3027 */
-m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x29;actor_code(0x0e21);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x302a)return;
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x29;
+if(native_depth==16){native_id=268;goto actor_native_overflow;}
+native_calls[native_depth++]=268;goto L0e21;
 goto L302a;
 L302a:; /* $302A */
 a=0xff;NZ(a);
@@ -12953,7 +13494,9 @@ L3031:; /* $3031 */
 if(z)goto L303b;
 goto L3033;
 L3033:; /* $3033 */
-m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x35;actor_code(0x0e21);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3036)return;
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x35;
+if(native_depth==16){native_id=269;goto actor_native_overflow;}
+native_calls[native_depth++]=269;goto L0e21;
 goto L3036;
 L3036:; /* $3036 */
 a=0xff;NZ(a);
@@ -12968,17 +13511,21 @@ L303d:; /* $303D */
 if(!z)goto L3045;
 goto L303f;
 L303f:; /* $303F */
-m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x41;actor_code(0x1131);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3042)return;
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x41;
+if(native_depth==16){native_id=270;goto actor_native_overflow;}
+native_calls[native_depth++]=270;goto L1131;
 goto L3042;
 L3042:; /* $3042 */
 goto L3048;
 L3045:; /* $3045 */
-m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x47;actor_code(0x1145);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3048)return;
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x47;
+if(native_depth==16){native_id=271;goto actor_native_overflow;}
+native_calls[native_depth++]=271;goto L1145;
 goto L3048;
 L3048:; /* $3048 */
 goto L0d42;
 L304b:; /* $304B */
-if(actor_invincible && !m[0x51]){sp+=2;actor_return=source_stack_return();return;}
+if(actor_invincible && !m[0x51]){sp+=2;actor_return=source_stack_return();goto actor_native_unwind;}
 a=m[0x0029];NZ(a);
 goto L304d;
 L304d:; /* $304D */
@@ -12988,7 +13535,7 @@ L304f:; /* $304F */
 if(!z)goto L3052;
 goto L3051;
 L3051:; /* $3051 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3052:; /* $3052 */
 m[0x100 + sp--]=a;
 goto L3053;
@@ -13008,7 +13555,9 @@ L3057:; /* $3057 */
 y=0x8c;NZ(y);
 goto L3059;
 L3059:; /* $3059 */
-m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x5b;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x305c)return;
+m[0x100 + sp--]=0x30;m[0x100 + sp--]=0x5b;
+if(native_depth==16){native_id=272;goto actor_native_overflow;}
+native_calls[native_depth++]=272;goto L2509;
 goto L305c;
 L305c:; /* $305C */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -13163,7 +13712,7 @@ L30d1:; /* $30D1 */
 address=0x0005;m[address]=a;
 goto L30d3;
 L30d3:; /* $30D3 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L30d4:; /* $30D4 */
 a=m[0x0029];NZ(a);
 goto L30d6;
@@ -13243,12 +13792,12 @@ L3108:; /* $3108 */
 c=1;
 goto L3109;
 L3109:; /* $3109 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L310a:; /* $310A */
 c=0;
 goto L310b;
 L310b:; /* $310B */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L310c:; /* $310C */
 a=m[(unsigned char)(0xbf + x)];NZ(a);
 goto L310e;
@@ -13360,10 +13909,14 @@ L3155:; /* $3155 */
 address=0x0028;m[address]++;NZ(m[address]);
 goto L3157;
 L3157:; /* $3157 */
-m[0x100 + sp--]=0x31;m[0x100 + sp--]=0x59;actor_code(0x1aed);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x315a)return;
+m[0x100 + sp--]=0x31;m[0x100 + sp--]=0x59;
+if(native_depth==16){native_id=273;goto actor_native_overflow;}
+native_calls[native_depth++]=273;goto L1aed;
 goto L315a;
 L315a:; /* $315A */
-m[0x100 + sp--]=0x31;m[0x100 + sp--]=0x5c;actor_code(0x32dc);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x315d)return;
+m[0x100 + sp--]=0x31;m[0x100 + sp--]=0x5c;
+if(native_depth==16){native_id=274;goto actor_native_overflow;}
+native_calls[native_depth++]=274;goto L32dc;
 goto L315d;
 L315d:; /* $315D */
 y=0x30;NZ(y);
@@ -13372,7 +13925,9 @@ L315f:; /* $315F */
 a=m[0x439c];NZ(a);
 goto L3162;
 L3162:; /* $3162 */
-m[0x100 + sp--]=0x31;m[0x100 + sp--]=0x64;actor_code(0x1b17);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3165)return;
+m[0x100 + sp--]=0x31;m[0x100 + sp--]=0x64;
+if(native_depth==16){native_id=275;goto actor_native_overflow;}
+native_calls[native_depth++]=275;goto L1b17;
 goto L3165;
 L3165:; /* $3165 */
 y=0x32;NZ(y);
@@ -13381,7 +13936,9 @@ L3167:; /* $3167 */
 a=m[0x439d];NZ(a);
 goto L316a;
 L316a:; /* $316A */
-m[0x100 + sp--]=0x31;m[0x100 + sp--]=0x6c;actor_code(0x1b17);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x316d)return;
+m[0x100 + sp--]=0x31;m[0x100 + sp--]=0x6c;
+if(native_depth==16){native_id=276;goto actor_native_overflow;}
+native_calls[native_depth++]=276;goto L1b17;
 goto L316d;
 L316d:; /* $316D */
 y=0x34;NZ(y);
@@ -13578,7 +14135,9 @@ L31f6:; /* $31F6 */
 a=m[0x439c];NZ(a);
 goto L31f9;
 L31f9:; /* $31F9 */
-m[0x100 + sp--]=0x31;m[0x100 + sp--]=0xfb;actor_code(0x1b17);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x31fc)return;
+m[0x100 + sp--]=0x31;m[0x100 + sp--]=0xfb;
+if(native_depth==16){native_id=277;goto actor_native_overflow;}
+native_calls[native_depth++]=277;goto L1b17;
 goto L31fc;
 L31fc:; /* $31FC */
 y=0x3e;NZ(y);
@@ -13587,7 +14146,9 @@ L31fe:; /* $31FE */
 a=m[0x439d];NZ(a);
 goto L3201;
 L3201:; /* $3201 */
-m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x03;actor_code(0x1b17);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3204)return;
+m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x03;
+if(native_depth==16){native_id=278;goto actor_native_overflow;}
+native_calls[native_depth++]=278;goto L1b17;
 goto L3204;
 L3204:; /* $3204 */
 y=0x40;NZ(y);
@@ -13613,7 +14174,7 @@ L3212:; /* $3212 */
 a&=0x0f;NZ(a);
 goto L3214;
 L3214:; /* $3214 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3217:; /* $3217 */
 a=0x00;NZ(a);
 goto L3219;
@@ -13664,7 +14225,9 @@ L323b:; /* $323B */
 if(!z)goto L3260;
 goto L323d;
 L323d:; /* $323D */
-m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x3f;actor_code(0x32cc);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3240)return;
+m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x3f;
+if(native_depth==16){native_id=279;goto actor_native_overflow;}
+native_calls[native_depth++]=279;goto L32cc;
 goto L3240;
 L3240:; /* $3240 */
 x=m[0x004f];NZ(x);
@@ -13682,7 +14245,9 @@ L3249:; /* $3249 */
 a=0x2f;NZ(a);
 goto L324b;
 L324b:; /* $324B */
-m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x4d;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x324e)return;
+m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x4d;
+if(native_depth==16){native_id=280;goto actor_native_overflow;}
+native_calls[native_depth++]=280;goto L17e2;
 goto L324e;
 L324e:; /* $324E */
 x=m[0x004f];NZ(x);
@@ -13703,7 +14268,9 @@ L3258:; /* $3258 */
 a=0x30;NZ(a);
 goto L325a;
 L325a:; /* $325A */
-m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x5c;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x325d)return;
+m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x5c;
+if(native_depth==16){native_id=281;goto actor_native_overflow;}
+native_calls[native_depth++]=281;goto L17e2;
 goto L325d;
 L325d:; /* $325D */
 goto L32c4;
@@ -13726,7 +14293,9 @@ L326b:; /* $326B */
 a=0x31;NZ(a);
 goto L326d;
 L326d:; /* $326D */
-m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x6f;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3270)return;
+m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x6f;
+if(native_depth==16){native_id=282;goto actor_native_overflow;}
+native_calls[native_depth++]=282;goto L17e2;
 goto L3270;
 L3270:; /* $3270 */
 x=m[0x004f];NZ(x);
@@ -13747,7 +14316,9 @@ L327a:; /* $327A */
 a=0x32;NZ(a);
 goto L327c;
 L327c:; /* $327C */
-m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x7e;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x327f)return;
+m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x7e;
+if(native_depth==16){native_id=283;goto actor_native_overflow;}
+native_calls[native_depth++]=283;goto L17e2;
 goto L327f;
 L327f:; /* $327F */
 goto L32c4;
@@ -13776,7 +14347,9 @@ L3291:; /* $3291 */
 a=0x00;NZ(a);
 goto L3293;
 L3293:; /* $3293 */
-m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x95;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3296)return;
+m[0x100 + sp--]=0x32;m[0x100 + sp--]=0x95;
+if(native_depth==16){native_id=284;goto actor_native_overflow;}
+native_calls[native_depth++]=284;goto L17e2;
 goto L3296;
 L3296:; /* $3296 */
 y--;NZ(y);
@@ -13830,7 +14403,9 @@ L32b3:; /* $32B3 */
 a=0x33;NZ(a);
 goto L32b5;
 L32b5:; /* $32B5 */
-m[0x100 + sp--]=0x32;m[0x100 + sp--]=0xb7;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x32b8)return;
+m[0x100 + sp--]=0x32;m[0x100 + sp--]=0xb7;
+if(native_depth==16){native_id=285;goto actor_native_overflow;}
+native_calls[native_depth++]=285;goto L17e2;
 goto L32b8;
 L32b8:; /* $32B8 */
 goto L32c4;
@@ -13855,7 +14430,7 @@ goto L32c8;
 L32c8:; /* $32C8 */
 goto L322c;
 L32cb:; /* $32CB */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L32cc:; /* $32CC */
 m[0x100 + sp--]=a;
 goto L32cd;
@@ -13875,7 +14450,9 @@ L32d1:; /* $32D1 */
 y=0x8d;NZ(y);
 goto L32d3;
 L32d3:; /* $32D3 */
-m[0x100 + sp--]=0x32;m[0x100 + sp--]=0xd5;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x32d6)return;
+m[0x100 + sp--]=0x32;m[0x100 + sp--]=0xd5;
+if(native_depth==16){native_id=286;goto actor_native_overflow;}
+native_calls[native_depth++]=286;goto L2509;
 goto L32d6;
 L32d6:; /* $32D6 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -13893,7 +14470,7 @@ L32da:; /* $32DA */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L32db;
 L32db:; /* $32DB */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L32dc:; /* $32DC */
 x=0x02;NZ(x);
 goto L32de;
@@ -13965,7 +14542,7 @@ L330c:; /* $330C */
 q=m[0x100 + (unsigned char)++sp];c=q&1;z=(q>>1)&1;d=(q>>3)&1;v=(q>>6)&1;n=q>>7;actor_i=(q>>2)&1;
 goto L330d;
 L330d:; /* $330D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L330e:; /* $330E */
 address=0x0057;m[address]=a;
 goto L3310;
@@ -13976,7 +14553,7 @@ L3312:; /* $3312 */
 address=0x0059;m[address]=y;
 goto L3314;
 L3314:; /* $3314 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3315:; /* $3315 */
 a=m[0x0057];NZ(a);
 goto L3317;
@@ -13987,7 +14564,7 @@ L3319:; /* $3319 */
 y=m[0x0059];NZ(y);
 goto L331b;
 L331b:; /* $331B */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L331c:; /* $331C */
 x=m[0x0051];NZ(x);
 goto L331e;
@@ -14091,7 +14668,7 @@ L335a:; /* $335A */
 c=1;
 goto L335b;
 L335b:; /* $335B */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L335c:; /* $335C */
 y--;NZ(y);
 goto L335d;
@@ -14126,7 +14703,7 @@ L336c:; /* $336C */
 c=0;
 goto L336d;
 L336d:; /* $336D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L336e:; /* $336E */
 a=m[0x0029];NZ(a);
 goto L3370;
@@ -14191,7 +14768,9 @@ L3391:; /* $3391 */
 x=a;NZ(x);
 goto L3392;
 L3392:; /* $3392 */
-m[0x100 + sp--]=0x33;m[0x100 + sp--]=0x94;actor_code(0x1a67);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3395)return;
+m[0x100 + sp--]=0x33;m[0x100 + sp--]=0x94;
+if(native_depth==16){native_id=287;goto actor_native_overflow;}
+native_calls[native_depth++]=287;goto L1a67;
 goto L3395;
 L3395:; /* $3395 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -14267,7 +14846,7 @@ L33bb:; /* $33BB */
 if(!n)goto L33b7;
 goto L33bd;
 L33bd:; /* $33BD */
-a=m[0x29];c=(a>>7);a=(unsigned char)(a<<1);x=a;NZ(x);a=m[0x4e9d + x];NZ(a);m[0x100 + sp--]=a;a=m[0x4e9c + x];NZ(a);m[0x100 + sp--]=a;sp+=2;room_code(W(0x4e9c + x)+1);actor_return=source_stack_return();return;
+a=m[0x29];c=(a>>7);a=(unsigned char)(a<<1);x=a;NZ(x);a=m[0x4e9d + x];NZ(a);m[0x100 + sp--]=a;a=m[0x4e9c + x];NZ(a);m[0x100 + sp--]=a;sp+=2;room_code(W(0x4e9c + x)+1);actor_return=source_stack_return();goto actor_native_unwind;
 L33ca:; /* $33CA */
 a=0x13;NZ(a);
 goto L33cc;
@@ -14284,7 +14863,9 @@ L33d1:; /* $33D1 */
 x=a;NZ(x);
 goto L33d2;
 L33d2:; /* $33D2 */
-m[0x100 + sp--]=0x33;m[0x100 + sp--]=0xd4;actor_code(0x33da);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x33d5)return;
+m[0x100 + sp--]=0x33;m[0x100 + sp--]=0xd4;
+if(native_depth==16){native_id=288;goto actor_native_overflow;}
+native_calls[native_depth++]=288;goto L33da;
 goto L33d5;
 L33d5:; /* $33D5 */
 address=0x004e;m[address]--;NZ(m[address]);
@@ -14293,7 +14874,7 @@ L33d7:; /* $33D7 */
 if(!n)goto L33ce;
 goto L33d9;
 L33d9:; /* $33D9 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L33da:; /* $33DA */
 a=m[(unsigned short)(0x4ce2 + x)];NZ(a);
 goto L33dd;
@@ -14322,14 +14903,16 @@ L33ec:; /* $33EC */
 address=(unsigned short)(W(0x14)+y);m[address]=a;source_written(address);
 goto L33ee;
 L33ee:; /* $33EE */
-m[0x100 + sp--]=0x33;m[0x100 + sp--]=0xf0;actor_code(0x3a63);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x33f1)return;
+m[0x100 + sp--]=0x33;m[0x100 + sp--]=0xf0;
+if(native_depth==16){native_id=289;goto actor_native_overflow;}
+native_calls[native_depth++]=289;goto L3a63;
 goto L33f1;
 L33f1:; /* $33F1 */
 goto L33e6;
 L33f4:; /* $33F4 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L33f5:; /* $33F5 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L33f6:; /* $33F6 */
 a=0x03;NZ(a);
 goto L33f8;
@@ -14337,7 +14920,7 @@ L33f8:; /* $33F8 */
 address=0x4e97;m[address]=a;
 goto L33fb;
 L33fb:; /* $33FB */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L33fc:; /* $33FC */
 a=0x03;NZ(a);
 goto L33fe;
@@ -14345,7 +14928,7 @@ L33fe:; /* $33FE */
 address=0x4e97;m[address]=a;
 goto L3401;
 L3401:; /* $3401 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3402:; /* $3402 */
 a=0x1f;NZ(a);
 goto L3404;
@@ -14401,7 +14984,7 @@ L3425:; /* $3425 */
 address=0x0079;m[address]=a;
 goto L3427;
 L3427:; /* $3427 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3428:; /* $3428 */
 x=0x00;NZ(x);
 goto L342a;
@@ -14487,7 +15070,7 @@ L345e:; /* $345E */
 address=0x0079;m[address]=a;
 goto L3460;
 L3460:; /* $3460 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3461:; /* $3461 */
 a=0x05;NZ(a);
 goto L3463;
@@ -14522,7 +15105,7 @@ L3475:; /* $3475 */
 address=0x0077;m[address]=a;
 goto L3477;
 L3477:; /* $3477 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3478:; /* $3478 */
 a=0x06;NZ(a);
 goto L347a;
@@ -14557,7 +15140,7 @@ L348c:; /* $348C */
 address=0x0078;m[address]=a;
 goto L348e;
 L348e:; /* $348E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L348f:; /* $348F */
 a=0xfa;NZ(a);
 goto L3491;
@@ -14625,7 +15208,7 @@ L34ba:; /* $34BA */
 address=0x0078;m[address]=a;
 goto L34bc;
 L34bc:; /* $34BC */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L34bd:; /* $34BD */
 a=0x01;NZ(a);
 goto L34bf;
@@ -14633,7 +15216,7 @@ L34bf:; /* $34BF */
 address=0x4e97;m[address]=a;
 goto L34c2;
 L34c2:; /* $34C2 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L34c3:; /* $34C3 */
 x=0x04;NZ(x);
 goto L34c5;
@@ -14872,7 +15455,7 @@ L3589:; /* $3589 */
 address=0x0127;m[address]=a;
 goto L358c;
 L358c:; /* $358C */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L358d:; /* $358D */
 a=0x01;NZ(a);
 goto L358f;
@@ -14880,7 +15463,7 @@ L358f:; /* $358F */
 address=0x4e97;m[address]=a;
 goto L3592;
 L3592:; /* $3592 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3593:; /* $3593 */
 a=0x01;NZ(a);
 goto L3595;
@@ -14894,7 +15477,7 @@ L359b:; /* $359B */
 address=0x4e99;m[address]=a;
 goto L359e;
 L359e:; /* $359E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L359f:; /* $359F */
 a=0xff;NZ(a);
 goto L35a1;
@@ -14932,10 +15515,12 @@ L35be:; /* $35BE */
 if(!z)goto L35c3;
 goto L35c0;
 L35c0:; /* $35C0 */
-m[0x100 + sp--]=0x35;m[0x100 + sp--]=0xc2;actor_code(0x2fef);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x35c3)return;
+m[0x100 + sp--]=0x35;m[0x100 + sp--]=0xc2;
+if(native_depth==16){native_id=290;goto actor_native_overflow;}
+native_calls[native_depth++]=290;goto L2fef;
 goto L35c3;
 L35c3:; /* $35C3 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L35c4:; /* $35C4 */
 a=0xff;NZ(a);
 goto L35c6;
@@ -15012,7 +15597,7 @@ L35f7:; /* $35F7 */
 address=0x0079;m[address]=a;
 goto L35f9;
 L35f9:; /* $35F9 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L35fa:; /* $35FA */
 x=0x00;NZ(x);
 goto L35fc;
@@ -15101,7 +15686,7 @@ L363e:; /* $363E */
 address=0x4337;m[address]=a;
 goto L3641;
 L3641:; /* $3641 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3642:; /* $3642 */
 a=m[0x0030];NZ(a);
 goto L3644;
@@ -15130,7 +15715,9 @@ L3654:; /* $3654 */
 y=0x81;NZ(y);
 goto L3656;
 L3656:; /* $3656 */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0x58;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3659)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0x58;
+if(native_depth==16){native_id=291;goto actor_native_overflow;}
+native_calls[native_depth++]=291;goto L2509;
 goto L3659;
 L3659:; /* $3659 */
 a=0x1d;NZ(a);
@@ -15142,7 +15729,9 @@ L365d:; /* $365D */
 y=0x07;NZ(y);
 goto L365f;
 L365f:; /* $365F */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0x61;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3662)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0x61;
+if(native_depth==16){native_id=292;goto actor_native_overflow;}
+native_calls[native_depth++]=292;goto L17e2;
 goto L3662;
 L3662:; /* $3662 */
 address=0x4e98;m[address]++;NZ(m[address]);
@@ -15160,7 +15749,9 @@ L366b:; /* $366B */
 y=0x07;NZ(y);
 goto L366d;
 L366d:; /* $366D */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0x6f;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3670)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0x6f;
+if(native_depth==16){native_id=293;goto actor_native_overflow;}
+native_calls[native_depth++]=293;goto L17e2;
 goto L3670;
 L3670:; /* $3670 */
 address=0x4e98;m[address]--;NZ(m[address]);
@@ -15172,7 +15763,7 @@ L3675:; /* $3675 */
 address=0x4e97;m[address]=a;
 goto L3678;
 L3678:; /* $3678 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3679:; /* $3679 */
 a=m[0x007b];NZ(a);
 goto L367b;
@@ -15216,7 +15807,9 @@ L3696:; /* $3696 */
 if(!z)goto L369b;
 goto L3698;
 L3698:; /* $3698 */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0x9a;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x369b)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0x9a;
+if(native_depth==16){native_id=294;goto actor_native_overflow;}
+native_calls[native_depth++]=294;goto L424f;
 goto L369b;
 L369b:; /* $369B */
 c=0;
@@ -15233,7 +15826,7 @@ goto L36a2;
 L36a2:; /* $36A2 */
 goto L17e2;
 L36a5:; /* $36A5 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L36a6:; /* $36A6 */
 
 goto L36a7;
@@ -15274,7 +15867,9 @@ L36b7:; /* $36B7 */
 address=0x4e98;m[address]--;NZ(m[address]);
 goto L36ba;
 L36ba:; /* $36BA */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xbc;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x36bd)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xbc;
+if(native_depth==16){native_id=295;goto actor_native_overflow;}
+native_calls[native_depth++]=295;goto L424f;
 goto L36bd;
 L36bd:; /* $36BD */
 a=0x1a;NZ(a);
@@ -15286,7 +15881,9 @@ L36c1:; /* $36C1 */
 y=0x25;NZ(y);
 goto L36c3;
 L36c3:; /* $36C3 */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xc5;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x36c6)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xc5;
+if(native_depth==16){native_id=296;goto actor_native_overflow;}
+native_calls[native_depth++]=296;goto L17e2;
 goto L36c6;
 L36c6:; /* $36C6 */
 a=0x07;NZ(a);
@@ -15298,7 +15895,9 @@ L36ca:; /* $36CA */
 y=0x25;NZ(y);
 goto L36cc;
 L36cc:; /* $36CC */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xce;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x36cf)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xce;
+if(native_depth==16){native_id=297;goto actor_native_overflow;}
+native_calls[native_depth++]=297;goto L17e2;
 goto L36cf;
 L36cf:; /* $36CF */
 a=m[0x007b];NZ(a);
@@ -15322,7 +15921,9 @@ L36dd:; /* $36DD */
 y=0x81;NZ(y);
 goto L36df;
 L36df:; /* $36DF */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xe1;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x36e2)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xe1;
+if(native_depth==16){native_id=298;goto actor_native_overflow;}
+native_calls[native_depth++]=298;goto L2509;
 goto L36e2;
 L36e2:; /* $36E2 */
 a=0x1d;NZ(a);
@@ -15334,7 +15935,9 @@ L36e6:; /* $36E6 */
 y=0x21;NZ(y);
 goto L36e8;
 L36e8:; /* $36E8 */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xea;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x36eb)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xea;
+if(native_depth==16){native_id=299;goto actor_native_overflow;}
+native_calls[native_depth++]=299;goto L17e2;
 goto L36eb;
 L36eb:; /* $36EB */
 address=0x4e97;m[address]++;NZ(m[address]);
@@ -15352,7 +15955,9 @@ L36f4:; /* $36F4 */
 y=0x21;NZ(y);
 goto L36f6;
 L36f6:; /* $36F6 */
-m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xf8;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x36f9)return;
+m[0x100 + sp--]=0x36;m[0x100 + sp--]=0xf8;
+if(native_depth==16){native_id=300;goto actor_native_overflow;}
+native_calls[native_depth++]=300;goto L17e2;
 goto L36f9;
 L36f9:; /* $36F9 */
 address=0x4e97;m[address]--;NZ(m[address]);
@@ -15364,7 +15969,7 @@ L36fe:; /* $36FE */
 address=0x4e99;m[address]=a;
 goto L3701;
 L3701:; /* $3701 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3702:; /* $3702 */
 a=m[0x007b];NZ(a);
 goto L3704;
@@ -15396,7 +16001,9 @@ L3717:; /* $3717 */
 if(!z)goto L371c;
 goto L3719;
 L3719:; /* $3719 */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x1b;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x371c)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x1b;
+if(native_depth==16){native_id=301;goto actor_native_overflow;}
+native_calls[native_depth++]=301;goto L424f;
 goto L371c;
 L371c:; /* $371C */
 c=0;
@@ -15411,7 +16018,9 @@ L3721:; /* $3721 */
 y=0x1d;NZ(y);
 goto L3723;
 L3723:; /* $3723 */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x25;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3726)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x25;
+if(native_depth==16){native_id=302;goto actor_native_overflow;}
+native_calls[native_depth++]=302;goto L17e2;
 goto L3726;
 L3726:; /* $3726 */
 address=0x4e99;m[address]--;NZ(m[address]);
@@ -15420,7 +16029,7 @@ L3729:; /* $3729 */
 if(n)goto L372c;
 goto L372b;
 L372b:; /* $372B */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L372c:; /* $372C */
 a=0x20;NZ(a);
 goto L372e;
@@ -15446,7 +16055,9 @@ L373d:; /* $373D */
 y=0x09;NZ(y);
 goto L373f;
 L373f:; /* $373F */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x41;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3742)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x41;
+if(native_depth==16){native_id=303;goto actor_native_overflow;}
+native_calls[native_depth++]=303;goto L17e2;
 goto L3742;
 L3742:; /* $3742 */
 a=0x60;NZ(a);
@@ -15472,7 +16083,9 @@ L3752:; /* $3752 */
 y=0x09;NZ(y);
 goto L3754;
 L3754:; /* $3754 */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x56;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3757)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x56;
+if(native_depth==16){native_id=304;goto actor_native_overflow;}
+native_calls[native_depth++]=304;goto L17e2;
 goto L3757;
 L3757:; /* $3757 */
 a=0x06;NZ(a);
@@ -15513,7 +16126,9 @@ L3773:; /* $3773 */
 y=0x0b;NZ(y);
 goto L3775;
 L3775:; /* $3775 */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x77;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3778)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x77;
+if(native_depth==16){native_id=305;goto actor_native_overflow;}
+native_calls[native_depth++]=305;goto L17e2;
 goto L3778;
 L3778:; /* $3778 */
 goto L378d;
@@ -15539,7 +16154,9 @@ L3788:; /* $3788 */
 y=0x0b;NZ(y);
 goto L378a;
 L378a:; /* $378A */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x8c;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x378d)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x8c;
+if(native_depth==16){native_id=306;goto actor_native_overflow;}
+native_calls[native_depth++]=306;goto L17e2;
 goto L378d;
 L378d:; /* $378D */
 a=m[0x4d70];NZ(a);
@@ -15557,7 +16174,9 @@ L3797:; /* $3797 */
 address=0x4e97;m[address]--;NZ(m[address]);
 goto L379a;
 L379a:; /* $379A */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x9c;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x379d)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0x9c;
+if(native_depth==16){native_id=307;goto actor_native_overflow;}
+native_calls[native_depth++]=307;goto L424f;
 goto L379d;
 L379d:; /* $379D */
 a=0x16;NZ(a);
@@ -15569,7 +16188,9 @@ L37a1:; /* $37A1 */
 y=0x0b;NZ(y);
 goto L37a3;
 L37a3:; /* $37A3 */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xa5;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x37a6)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xa5;
+if(native_depth==16){native_id=308;goto actor_native_overflow;}
+native_calls[native_depth++]=308;goto L17e2;
 goto L37a6;
 L37a6:; /* $37A6 */
 a=0x16;NZ(a);
@@ -15581,13 +16202,17 @@ L37aa:; /* $37AA */
 y=0x0b;NZ(y);
 goto L37ac;
 L37ac:; /* $37AC */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xae;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x37af)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xae;
+if(native_depth==16){native_id=309;goto actor_native_overflow;}
+native_calls[native_depth++]=309;goto L17e2;
 goto L37af;
 L37af:; /* $37AF */
 a=0x06;NZ(a);
 goto L37b1;
 L37b1:; /* $37B1 */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xb3;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x37b4)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xb3;
+if(native_depth==16){native_id=310;goto actor_native_overflow;}
+native_calls[native_depth++]=310;goto L4090;
 goto L37b4;
 L37b4:; /* $37B4 */
 a=m[0x4d74];NZ(a);
@@ -15617,7 +16242,9 @@ L37c7:; /* $37C7 */
 y=0x1c;NZ(y);
 goto L37c9;
 L37c9:; /* $37C9 */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xcb;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x37cc)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xcb;
+if(native_depth==16){native_id=311;goto actor_native_overflow;}
+native_calls[native_depth++]=311;goto L17e2;
 goto L37cc;
 L37cc:; /* $37CC */
 goto L37e1;
@@ -15643,7 +16270,9 @@ L37dc:; /* $37DC */
 y=0x1c;NZ(y);
 goto L37de;
 L37de:; /* $37DE */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xe0;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x37e1)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xe0;
+if(native_depth==16){native_id=312;goto actor_native_overflow;}
+native_calls[native_depth++]=312;goto L17e2;
 goto L37e1;
 L37e1:; /* $37E1 */
 a=m[0x4d74];NZ(a);
@@ -15673,7 +16302,9 @@ L37f4:; /* $37F4 */
 address=0x4321;m[address]=a;
 goto L37f7;
 L37f7:; /* $37F7 */
-m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xf9;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x37fa)return;
+m[0x100 + sp--]=0x37;m[0x100 + sp--]=0xf9;
+if(native_depth==16){native_id=313;goto actor_native_overflow;}
+native_calls[native_depth++]=313;goto L424f;
 goto L37fa;
 L37fa:; /* $37FA */
 a=0x16;NZ(a);
@@ -15685,7 +16316,9 @@ L37fe:; /* $37FE */
 y=0x19;NZ(y);
 goto L3800;
 L3800:; /* $3800 */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x02;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3803)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x02;
+if(native_depth==16){native_id=314;goto actor_native_overflow;}
+native_calls[native_depth++]=314;goto L17e2;
 goto L3803;
 L3803:; /* $3803 */
 a=0x16;NZ(a);
@@ -15697,13 +16330,17 @@ L3807:; /* $3807 */
 y=0x19;NZ(y);
 goto L3809;
 L3809:; /* $3809 */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x0b;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x380c)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x0b;
+if(native_depth==16){native_id=315;goto actor_native_overflow;}
+native_calls[native_depth++]=315;goto L17e2;
 goto L380c;
 L380c:; /* $380C */
 a=0x06;NZ(a);
 goto L380e;
 L380e:; /* $380E */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x10;actor_code(0x409a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3811)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x10;
+if(native_depth==16){native_id=316;goto actor_native_overflow;}
+native_calls[native_depth++]=316;goto L409a;
 goto L3811;
 L3811:; /* $3811 */
 address=0x0077;m[address]++;NZ(m[address]);
@@ -15727,7 +16364,9 @@ L381d:; /* $381D */
 if(z)goto L3838;
 goto L381f;
 L381f:; /* $381F */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x21;actor_code(0x40a4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3822)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x21;
+if(native_depth==16){native_id=317;goto actor_native_overflow;}
+native_calls[native_depth++]=317;goto L40a4;
 goto L3822;
 L3822:; /* $3822 */
 goto L3840;
@@ -15744,7 +16383,9 @@ L382b:; /* $382B */
 a=0x06;NZ(a);
 goto L382d;
 L382d:; /* $382D */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x2f;actor_code(0x40a4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3830)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x2f;
+if(native_depth==16){native_id=318;goto actor_native_overflow;}
+native_calls[native_depth++]=318;goto L40a4;
 goto L3830;
 L3830:; /* $3830 */
 address=0x0071;m[address]++;NZ(m[address]);
@@ -15798,7 +16439,9 @@ L3851:; /* $3851 */
 if(z)goto L386c;
 goto L3853;
 L3853:; /* $3853 */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x55;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3856)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x55;
+if(native_depth==16){native_id=319;goto actor_native_overflow;}
+native_calls[native_depth++]=319;goto L4090;
 goto L3856;
 L3856:; /* $3856 */
 goto L3874;
@@ -15815,7 +16458,9 @@ L385f:; /* $385F */
 a=0x06;NZ(a);
 goto L3861;
 L3861:; /* $3861 */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x63;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3864)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x63;
+if(native_depth==16){native_id=320;goto actor_native_overflow;}
+native_calls[native_depth++]=320;goto L4090;
 goto L3864;
 L3864:; /* $3864 */
 address=0x0072;m[address]++;NZ(m[address]);
@@ -15869,7 +16514,9 @@ L3885:; /* $3885 */
 if(z)goto L38a0;
 goto L3887;
 L3887:; /* $3887 */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x89;actor_code(0x409a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x388a)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x89;
+if(native_depth==16){native_id=321;goto actor_native_overflow;}
+native_calls[native_depth++]=321;goto L409a;
 goto L388a;
 L388a:; /* $388A */
 goto L38a8;
@@ -15886,7 +16533,9 @@ L3893:; /* $3893 */
 a=0x06;NZ(a);
 goto L3895;
 L3895:; /* $3895 */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x97;actor_code(0x409a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3898)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0x97;
+if(native_depth==16){native_id=322;goto actor_native_overflow;}
+native_calls[native_depth++]=322;goto L409a;
 goto L3898;
 L3898:; /* $3898 */
 address=0x0073;m[address]++;NZ(m[address]);
@@ -15936,7 +16585,9 @@ L38ba:; /* $38BA */
 y=0x19;NZ(y);
 goto L38bc;
 L38bc:; /* $38BC */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xbe;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x38bf)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xbe;
+if(native_depth==16){native_id=323;goto actor_native_overflow;}
+native_calls[native_depth++]=323;goto L3a8a;
 goto L38bf;
 L38bf:; /* $38BF */
 a=0x0a;NZ(a);
@@ -15945,13 +16596,17 @@ L38c1:; /* $38C1 */
 y=0x1a;NZ(y);
 goto L38c3;
 L38c3:; /* $38C3 */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xc5;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x38c6)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xc5;
+if(native_depth==16){native_id=324;goto actor_native_overflow;}
+native_calls[native_depth++]=324;goto L3a8a;
 goto L38c6;
 L38c6:; /* $38C6 */
 a=0x06;NZ(a);
 goto L38c8;
 L38c8:; /* $38C8 */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xca;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x38cb)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xca;
+if(native_depth==16){native_id=325;goto actor_native_overflow;}
+native_calls[native_depth++]=325;goto L4090;
 goto L38cb;
 L38cb:; /* $38CB */
 a=m[0x4d91];NZ(a);
@@ -15975,7 +16630,9 @@ L38da:; /* $38DA */
 y=0x00;NZ(y);
 goto L38dc;
 L38dc:; /* $38DC */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xde;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x38df)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xde;
+if(native_depth==16){native_id=326;goto actor_native_overflow;}
+native_calls[native_depth++]=326;goto L3a8a;
 goto L38df;
 L38df:; /* $38DF */
 a=0x15;NZ(a);
@@ -15987,7 +16644,9 @@ L38e3:; /* $38E3 */
 y=0x00;NZ(y);
 goto L38e5;
 L38e5:; /* $38E5 */
-m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xe7;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x38e8)return;
+m[0x100 + sp--]=0x38;m[0x100 + sp--]=0xe7;
+if(native_depth==16){native_id=327;goto actor_native_overflow;}
+native_calls[native_depth++]=327;goto L17e2;
 goto L38e8;
 L38e8:; /* $38E8 */
 a=m[0x0030];NZ(a);
@@ -16026,7 +16685,9 @@ L3902:; /* $3902 */
 y=0x22;NZ(y);
 goto L3904;
 L3904:; /* $3904 */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x06;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3907)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x06;
+if(native_depth==16){native_id=328;goto actor_native_overflow;}
+native_calls[native_depth++]=328;goto L17e2;
 goto L3907;
 L3907:; /* $3907 */
 a=0x03;NZ(a);
@@ -16035,7 +16696,9 @@ L3909:; /* $3909 */
 y=0x1e;NZ(y);
 goto L390b;
 L390b:; /* $390B */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x0d;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x390e)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x0d;
+if(native_depth==16){native_id=329;goto actor_native_overflow;}
+native_calls[native_depth++]=329;goto L3a8a;
 goto L390e;
 L390e:; /* $390E */
 a=0x06;NZ(a);
@@ -16044,7 +16707,9 @@ L3910:; /* $3910 */
 y=0x20;NZ(y);
 goto L3912;
 L3912:; /* $3912 */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x14;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3915)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x14;
+if(native_depth==16){native_id=330;goto actor_native_overflow;}
+native_calls[native_depth++]=330;goto L3a8a;
 goto L3915;
 L3915:; /* $3915 */
 address=0x0077;m[address]++;NZ(m[address]);
@@ -16068,7 +16733,9 @@ L3921:; /* $3921 */
 if(z)goto L393c;
 goto L3923;
 L3923:; /* $3923 */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x25;actor_code(0x4086);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3926)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x25;
+if(native_depth==16){native_id=331;goto actor_native_overflow;}
+native_calls[native_depth++]=331;goto L4086;
 goto L3926;
 L3926:; /* $3926 */
 goto L3944;
@@ -16085,7 +16752,9 @@ L392f:; /* $392F */
 a=0x06;NZ(a);
 goto L3931;
 L3931:; /* $3931 */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x33;actor_code(0x4086);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3934)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x33;
+if(native_depth==16){native_id=332;goto actor_native_overflow;}
+native_calls[native_depth++]=332;goto L4086;
 goto L3934;
 L3934:; /* $3934 */
 address=0x0071;m[address]++;NZ(m[address]);
@@ -16139,7 +16808,9 @@ L3955:; /* $3955 */
 if(z)goto L3970;
 goto L3957;
 L3957:; /* $3957 */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x59;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x395a)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x59;
+if(native_depth==16){native_id=333;goto actor_native_overflow;}
+native_calls[native_depth++]=333;goto L4090;
 goto L395a;
 L395a:; /* $395A */
 goto L3978;
@@ -16156,7 +16827,9 @@ L3963:; /* $3963 */
 a=0x06;NZ(a);
 goto L3965;
 L3965:; /* $3965 */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x67;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3968)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x67;
+if(native_depth==16){native_id=334;goto actor_native_overflow;}
+native_calls[native_depth++]=334;goto L4090;
 goto L3968;
 L3968:; /* $3968 */
 address=0x0072;m[address]++;NZ(m[address]);
@@ -16204,7 +16877,9 @@ L3984:; /* $3984 */
 if(z)goto L399f;
 goto L3986;
 L3986:; /* $3986 */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x88;actor_code(0x40b4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3989)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x88;
+if(native_depth==16){native_id=335;goto actor_native_overflow;}
+native_calls[native_depth++]=335;goto L40b4;
 goto L3989;
 L3989:; /* $3989 */
 goto L39a7;
@@ -16221,7 +16896,9 @@ L3992:; /* $3992 */
 a=0x06;NZ(a);
 goto L3994;
 L3994:; /* $3994 */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x96;actor_code(0x40b4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3997)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0x96;
+if(native_depth==16){native_id=336;goto actor_native_overflow;}
+native_calls[native_depth++]=336;goto L40b4;
 goto L3997;
 L3997:; /* $3997 */
 address=0x0073;m[address]++;NZ(m[address]);
@@ -16271,15 +16948,21 @@ L39b8:; /* $39B8 */
 y=0x01;NZ(y);
 goto L39ba;
 L39ba:; /* $39BA */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0xbc;actor_code(0x3aa0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x39bd)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0xbc;
+if(native_depth==16){native_id=337;goto actor_native_overflow;}
+native_calls[native_depth++]=337;goto L3aa0;
 goto L39bd;
 L39bd:; /* $39BD */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0xbf;actor_code(0x3228);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x39c0)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0xbf;
+if(native_depth==16){native_id=338;goto actor_native_overflow;}
+native_calls[native_depth++]=338;goto L3228;
 goto L39c0;
 L39c0:; /* $39C0 */
 goto L2c70;
 L39c3:; /* $39C3 */
-m[0x100 + sp--]=0x39;m[0x100 + sp--]=0xc5;actor_code(0x3228);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x39c6)return;
+m[0x100 + sp--]=0x39;m[0x100 + sp--]=0xc5;
+if(native_depth==16){native_id=339;goto actor_native_overflow;}
+native_calls[native_depth++]=339;goto L3228;
 goto L39c6;
 L39c6:; /* $39C6 */
 a=m[0x4dc3];NZ(a);
@@ -16376,7 +17059,9 @@ L3a15:; /* $3A15 */
 if(z)goto L3a30;
 goto L3a17;
 L3a17:; /* $3A17 */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x19;actor_code(0x40a4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3a1a)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x19;
+if(native_depth==16){native_id=340;goto actor_native_overflow;}
+native_calls[native_depth++]=340;goto L40a4;
 goto L3a1a;
 L3a1a:; /* $3A1A */
 goto L3a38;
@@ -16393,7 +17078,9 @@ L3a23:; /* $3A23 */
 a=0x06;NZ(a);
 goto L3a25;
 L3a25:; /* $3A25 */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x27;actor_code(0x40a4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3a28)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x27;
+if(native_depth==16){native_id=341;goto actor_native_overflow;}
+native_calls[native_depth++]=341;goto L40a4;
 goto L3a28;
 L3a28:; /* $3A28 */
 address=0x0071;m[address]++;NZ(m[address]);
@@ -16493,9 +17180,9 @@ L3a6c:; /* $3A6C */
 address=0x0015;m[address]++;NZ(m[address]);
 goto L3a6e;
 L3a6e:; /* $3A6E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3a6f:; /* $3A6F */
-a=m[0x29];c=(a>>7);a=(unsigned char)(a<<1);x=a;NZ(x);a=m[0x4ec5 + x];NZ(a);m[0x100 + sp--]=a;a=m[0x4ec4 + x];NZ(a);m[0x100 + sp--]=a;sp+=2;room_code(W(0x4ec4 + x)+1);actor_return=source_stack_return();return;
+a=m[0x29];c=(a>>7);a=(unsigned char)(a<<1);x=a;NZ(x);a=m[0x4ec5 + x];NZ(a);m[0x100 + sp--]=a;a=m[0x4ec4 + x];NZ(a);m[0x100 + sp--]=a;sp+=2;room_code(W(0x4ec4 + x)+1);actor_return=source_stack_return();goto actor_native_unwind;
 L3a7c:; /* $3A7C */
 a=m[0x000a];NZ(a);
 goto L3a7e;
@@ -16518,9 +17205,11 @@ L3a87:; /* $3A87 */
 address=0x000b;m[address]=a;
 goto L3a89;
 L3a89:; /* $3A89 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3a8a:; /* $3A8A */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x8c;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3a8d)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x8c;
+if(native_depth==16){native_id=342;goto actor_native_overflow;}
+native_calls[native_depth++]=342;goto L424f;
 goto L3a8d;
 L3a8d:; /* $3A8D */
 address=0x006c;m[address]=a;
@@ -16532,13 +17221,17 @@ L3a91:; /* $3A91 */
 a=0x13;NZ(a);
 goto L3a93;
 L3a93:; /* $3A93 */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x95;actor_code(0x3aca);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3a96)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x95;
+if(native_depth==16){native_id=343;goto actor_native_overflow;}
+native_calls[native_depth++]=343;goto L3aca;
 goto L3a96;
 L3a96:; /* $3A96 */
 a=0x13;NZ(a);
 goto L3a98;
 L3a98:; /* $3A98 */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x9a;actor_code(0x3aca);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3a9b)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0x9a;
+if(native_depth==16){native_id=344;goto actor_native_overflow;}
+native_calls[native_depth++]=344;goto L3aca;
 goto L3a9b;
 L3a9b:; /* $3A9B */
 a=0x14;NZ(a);
@@ -16546,7 +17239,9 @@ goto L3a9d;
 L3a9d:; /* $3A9D */
 goto L3aca;
 L3aa0:; /* $3AA0 */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xa2;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3aa3)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xa2;
+if(native_depth==16){native_id=345;goto actor_native_overflow;}
+native_calls[native_depth++]=345;goto L3a8a;
 goto L3aa3;
 L3aa3:; /* $3AA3 */
 address=0x006c;m[address]--;NZ(m[address]);
@@ -16557,7 +17252,9 @@ goto L3aa7;
 L3aa7:; /* $3AA7 */
 goto L3aca;
 L3aaa:; /* $3AAA */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xac;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3aad)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xac;
+if(native_depth==16){native_id=346;goto actor_native_overflow;}
+native_calls[native_depth++]=346;goto L3a8a;
 goto L3aad;
 L3aad:; /* $3AAD */
 address=0x006c;m[address]--;NZ(m[address]);
@@ -16568,7 +17265,9 @@ goto L3ab1;
 L3ab1:; /* $3AB1 */
 goto L3aca;
 L3ab4:; /* $3AB4 */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xb6;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ab7)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xb6;
+if(native_depth==16){native_id=347;goto actor_native_overflow;}
+native_calls[native_depth++]=347;goto L424f;
 goto L3ab7;
 L3ab7:; /* $3AB7 */
 address=0x006c;m[address]=a;
@@ -16580,13 +17279,17 @@ L3abb:; /* $3ABB */
 a=0x63;NZ(a);
 goto L3abd;
 L3abd:; /* $3ABD */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xbf;actor_code(0x3aca);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ac0)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xbf;
+if(native_depth==16){native_id=348;goto actor_native_overflow;}
+native_calls[native_depth++]=348;goto L3aca;
 goto L3ac0;
 L3ac0:; /* $3AC0 */
 a=0x63;NZ(a);
 goto L3ac2;
 L3ac2:; /* $3AC2 */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xc4;actor_code(0x3aca);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ac5)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xc4;
+if(native_depth==16){native_id=349;goto actor_native_overflow;}
+native_calls[native_depth++]=349;goto L3aca;
 goto L3ac5;
 L3ac5:; /* $3AC5 */
 a=0x64;NZ(a);
@@ -16600,13 +17303,15 @@ L3acc:; /* $3ACC */
 y=m[0x006d];NZ(y);
 goto L3ace;
 L3ace:; /* $3ACE */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xd0;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ad1)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xd0;
+if(native_depth==16){native_id=350;goto actor_native_overflow;}
+native_calls[native_depth++]=350;goto L17e2;
 goto L3ad1;
 L3ad1:; /* $3AD1 */
 address=0x006c;m[address]++;NZ(m[address]);
 goto L3ad3;
 L3ad3:; /* $3AD3 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3ad4:; /* $3AD4 */
 a=m[0x0031];NZ(a);
 goto L3ad6;
@@ -16632,7 +17337,9 @@ L3ae5:; /* $3AE5 */
 y=0x0e;NZ(y);
 goto L3ae7;
 L3ae7:; /* $3AE7 */
-m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xe9;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3aea)return;
+m[0x100 + sp--]=0x3a;m[0x100 + sp--]=0xe9;
+if(native_depth==16){native_id=351;goto actor_native_overflow;}
+native_calls[native_depth++]=351;goto L3a8a;
 goto L3aea;
 L3aea:; /* $3AEA */
 a=m[0x4df8];NZ(a);
@@ -16677,7 +17384,9 @@ L3b0a:; /* $3B0A */
 y=0x19;NZ(y);
 goto L3b0c;
 L3b0c:; /* $3B0C */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x0e;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3b0f)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x0e;
+if(native_depth==16){native_id=352;goto actor_native_overflow;}
+native_calls[native_depth++]=352;goto L3a8a;
 goto L3b0f;
 L3b0f:; /* $3B0F */
 a=m[0x0032];NZ(a);
@@ -16707,7 +17416,9 @@ L3b23:; /* $3B23 */
 y=0x26;NZ(y);
 goto L3b25;
 L3b25:; /* $3B25 */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x27;actor_code(0x3aaa);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3b28)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x27;
+if(native_depth==16){native_id=353;goto actor_native_overflow;}
+native_calls[native_depth++]=353;goto L3aaa;
 goto L3b28;
 L3b28:; /* $3B28 */
 a=m[0x4e00];NZ(a);
@@ -16731,7 +17442,9 @@ L3b37:; /* $3B37 */
 y=0x01;NZ(y);
 goto L3b39;
 L3b39:; /* $3B39 */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x3b;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3b3c)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x3b;
+if(native_depth==16){native_id=354;goto actor_native_overflow;}
+native_calls[native_depth++]=354;goto L3a8a;
 goto L3b3c;
 L3b3c:; /* $3B3C */
 a=m[0x0031];NZ(a);
@@ -16758,7 +17471,9 @@ L3b4c:; /* $3B4C */
 y=0x26;NZ(y);
 goto L3b4e;
 L3b4e:; /* $3B4E */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x50;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3b51)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x50;
+if(native_depth==16){native_id=355;goto actor_native_overflow;}
+native_calls[native_depth++]=355;goto L3a8a;
 goto L3b51;
 L3b51:; /* $3B51 */
 address=0x0077;m[address]++;NZ(m[address]);
@@ -16782,7 +17497,9 @@ L3b5d:; /* $3B5D */
 if(z)goto L3b78;
 goto L3b5f;
 L3b5f:; /* $3B5F */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x61;actor_code(0x4086);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3b62)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x61;
+if(native_depth==16){native_id=356;goto actor_native_overflow;}
+native_calls[native_depth++]=356;goto L4086;
 goto L3b62;
 L3b62:; /* $3B62 */
 goto L3b80;
@@ -16799,7 +17516,9 @@ L3b6b:; /* $3B6B */
 a=0x06;NZ(a);
 goto L3b6d;
 L3b6d:; /* $3B6D */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x6f;actor_code(0x4086);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3b70)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x6f;
+if(native_depth==16){native_id=357;goto actor_native_overflow;}
+native_calls[native_depth++]=357;goto L4086;
 goto L3b70;
 L3b70:; /* $3B70 */
 address=0x0071;m[address]++;NZ(m[address]);
@@ -16847,7 +17566,9 @@ L3b8c:; /* $3B8C */
 if(z)goto L3ba7;
 goto L3b8e;
 L3b8e:; /* $3B8E */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x90;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3b91)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x90;
+if(native_depth==16){native_id=358;goto actor_native_overflow;}
+native_calls[native_depth++]=358;goto L4090;
 goto L3b91;
 L3b91:; /* $3B91 */
 goto L3baf;
@@ -16864,7 +17585,9 @@ L3b9a:; /* $3B9A */
 a=0x06;NZ(a);
 goto L3b9c;
 L3b9c:; /* $3B9C */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x9e;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3b9f)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0x9e;
+if(native_depth==16){native_id=359;goto actor_native_overflow;}
+native_calls[native_depth++]=359;goto L4090;
 goto L3b9f;
 L3b9f:; /* $3B9F */
 address=0x0072;m[address]++;NZ(m[address]);
@@ -16941,7 +17664,9 @@ L3bd7:; /* $3BD7 */
 y=0x17;NZ(y);
 goto L3bd9;
 L3bd9:; /* $3BD9 */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0xdb;actor_code(0x3a8a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3bdc)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0xdb;
+if(native_depth==16){native_id=360;goto actor_native_overflow;}
+native_calls[native_depth++]=360;goto L3a8a;
 goto L3bdc;
 L3bdc:; /* $3BDC */
 a=0x00;NZ(a);
@@ -16983,7 +17708,9 @@ L3bf7:; /* $3BF7 */
 address=0x4321;m[address]=a;
 goto L3bfa;
 L3bfa:; /* $3BFA */
-m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0xfc;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3bfd)return;
+m[0x100 + sp--]=0x3b;m[0x100 + sp--]=0xfc;
+if(native_depth==16){native_id=361;goto actor_native_overflow;}
+native_calls[native_depth++]=361;goto L424f;
 goto L3bfd;
 L3bfd:; /* $3BFD */
 a=0x18;NZ(a);
@@ -16995,7 +17722,9 @@ L3c01:; /* $3C01 */
 y=0x23;NZ(y);
 goto L3c03;
 L3c03:; /* $3C03 */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x05;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3c06)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x05;
+if(native_depth==16){native_id=362;goto actor_native_overflow;}
+native_calls[native_depth++]=362;goto L17e2;
 goto L3c06;
 L3c06:; /* $3C06 */
 a=m[0x4e11];NZ(a);
@@ -17052,7 +17781,9 @@ L3c2a:; /* $3C2A */
 address=0x006e;m[address]=a;
 goto L3c2c;
 L3c2c:; /* $3C2C */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x2e;actor_code(0x404e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3c2f)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x2e;
+if(native_depth==16){native_id=363;goto actor_native_overflow;}
+native_calls[native_depth++]=363;goto L404e;
 goto L3c2f;
 L3c2f:; /* $3C2F */
 address=0x0077;m[address]++;NZ(m[address]);
@@ -17076,7 +17807,9 @@ L3c3b:; /* $3C3B */
 if(z)goto L3c56;
 goto L3c3d;
 L3c3d:; /* $3C3D */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x3f;actor_code(0x40a4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3c40)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x3f;
+if(native_depth==16){native_id=364;goto actor_native_overflow;}
+native_calls[native_depth++]=364;goto L40a4;
 goto L3c40;
 L3c40:; /* $3C40 */
 goto L3c5e;
@@ -17093,7 +17826,9 @@ L3c49:; /* $3C49 */
 a=0x06;NZ(a);
 goto L3c4b;
 L3c4b:; /* $3C4B */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x4d;actor_code(0x40a4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3c4e)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x4d;
+if(native_depth==16){native_id=365;goto actor_native_overflow;}
+native_calls[native_depth++]=365;goto L40a4;
 goto L3c4e;
 L3c4e:; /* $3C4E */
 address=0x0071;m[address]++;NZ(m[address]);
@@ -17141,7 +17876,9 @@ L3c6a:; /* $3C6A */
 if(z)goto L3c85;
 goto L3c6c;
 L3c6c:; /* $3C6C */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x6e;actor_code(0x40ac);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3c6f)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x6e;
+if(native_depth==16){native_id=366;goto actor_native_overflow;}
+native_calls[native_depth++]=366;goto L40ac;
 goto L3c6f;
 L3c6f:; /* $3C6F */
 goto L3c8d;
@@ -17158,7 +17895,9 @@ L3c78:; /* $3C78 */
 a=0x06;NZ(a);
 goto L3c7a;
 L3c7a:; /* $3C7A */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x7c;actor_code(0x40ac);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3c7d)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0x7c;
+if(native_depth==16){native_id=367;goto actor_native_overflow;}
+native_calls[native_depth++]=367;goto L40ac;
 goto L3c7d;
 L3c7d:; /* $3C7D */
 address=0x0072;m[address]++;NZ(m[address]);
@@ -17211,7 +17950,9 @@ L3ca2:; /* $3CA2 */
 y=0x26;NZ(y);
 goto L3ca4;
 L3ca4:; /* $3CA4 */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0xa6;actor_code(0x3ab4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ca7)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0xa6;
+if(native_depth==16){native_id=368;goto actor_native_overflow;}
+native_calls[native_depth++]=368;goto L3ab4;
 goto L3ca7;
 L3ca7:; /* $3CA7 */
 
@@ -17309,7 +18050,9 @@ L3cd3:; /* $3CD3 */
 address=0x4321;m[address]=a;
 goto L3cd6;
 L3cd6:; /* $3CD6 */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0xd8;actor_code(0x3228);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3cd9)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0xd8;
+if(native_depth==16){native_id=369;goto actor_native_overflow;}
+native_calls[native_depth++]=369;goto L3228;
 goto L3cd9;
 L3cd9:; /* $3CD9 */
 goto L2c70;
@@ -17331,7 +18074,9 @@ L3ce9:; /* $3CE9 */
 address=0x4e97;m[address]=a;
 goto L3cec;
 L3cec:; /* $3CEC */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0xee;actor_code(0x423f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3cef)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0xee;
+if(native_depth==16){native_id=370;goto actor_native_overflow;}
+native_calls[native_depth++]=370;goto L423f;
 goto L3cef;
 L3cef:; /* $3CEF */
 a=m[0xd015];NZ(a);
@@ -17352,7 +18097,9 @@ L3cfb:; /* $3CFB */
 y=0x00;NZ(y);
 goto L3cfd;
 L3cfd:; /* $3CFD */
-m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0xff;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d00)return;
+m[0x100 + sp--]=0x3c;m[0x100 + sp--]=0xff;
+if(native_depth==16){native_id=371;goto actor_native_overflow;}
+native_calls[native_depth++]=371;goto L17e2;
 goto L3d00;
 L3d00:; /* $3D00 */
 a=0xb8;NZ(a);
@@ -17361,7 +18108,9 @@ L3d02:; /* $3D02 */
 x=0x02;NZ(x);
 goto L3d04;
 L3d04:; /* $3D04 */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x06;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d07)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x06;
+if(native_depth==16){native_id=372;goto actor_native_overflow;}
+native_calls[native_depth++]=372;goto L3175;
 goto L3d07;
 L3d07:; /* $3D07 */
 a=0x0b;NZ(a);
@@ -17370,7 +18119,9 @@ L3d09:; /* $3D09 */
 x=0x01;NZ(x);
 goto L3d0b;
 L3d0b:; /* $3D0B */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x0d;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d0e)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x0d;
+if(native_depth==16){native_id=373;goto actor_native_overflow;}
+native_calls[native_depth++]=373;goto L3175;
 goto L3d0e;
 L3d0e:; /* $3D0E */
 x=0x01;NZ(x);
@@ -17390,7 +18141,9 @@ goto L3d1a;
 L3d1a:; /* $3D1A */
 goto L3d4e;
 L3d1d:; /* $3D1D */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x1f;actor_code(0x4133);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d20)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x1f;
+if(native_depth==16){native_id=374;goto actor_native_overflow;}
+native_calls[native_depth++]=374;goto L4133;
 goto L3d20;
 L3d20:; /* $3D20 */
 a=source_vic_read();NZ(a);
@@ -17426,7 +18179,9 @@ L3d33:; /* $3D33 */
 if(z)goto L3d38;
 goto L3d35;
 L3d35:; /* $3D35 */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x37;actor_code(0x407d);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d38)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x37;
+if(native_depth==16){native_id=375;goto actor_native_overflow;}
+native_calls[native_depth++]=375;goto L407d;
 goto L3d38;
 L3d38:; /* $3D38 */
 address=0x4e98;m[address]--;NZ(m[address]);
@@ -17477,7 +18232,9 @@ L3d59:; /* $3D59 */
 y=0x10;NZ(y);
 goto L3d5b;
 L3d5b:; /* $3D5B */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x5d;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d5e)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x5d;
+if(native_depth==16){native_id=376;goto actor_native_overflow;}
+native_calls[native_depth++]=376;goto L17e2;
 goto L3d5e;
 L3d5e:; /* $3D5E */
 a=m[0x4e9a];NZ(a);
@@ -17492,13 +18249,17 @@ L3d66:; /* $3D66 */
 a=0x06;NZ(a);
 goto L3d68;
 L3d68:; /* $3D68 */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x6a;actor_code(0x3d81);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d6b)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x6a;
+if(native_depth==16){native_id=377;goto actor_native_overflow;}
+native_calls[native_depth++]=377;goto L3d81;
 goto L3d6b;
 L3d6b:; /* $3D6B */
 a=0x06;NZ(a);
 goto L3d6d;
 L3d6d:; /* $3D6D */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x6f;actor_code(0x3d8e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d70)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x6f;
+if(native_depth==16){native_id=378;goto actor_native_overflow;}
+native_calls[native_depth++]=378;goto L3d8e;
 goto L3d70;
 L3d70:; /* $3D70 */
 goto L3d80;
@@ -17509,16 +18270,20 @@ L3d76:; /* $3D76 */
 a=0x00;NZ(a);
 goto L3d78;
 L3d78:; /* $3D78 */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x7a;actor_code(0x3d81);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d7b)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x7a;
+if(native_depth==16){native_id=379;goto actor_native_overflow;}
+native_calls[native_depth++]=379;goto L3d81;
 goto L3d7b;
 L3d7b:; /* $3D7B */
 a=0x00;NZ(a);
 goto L3d7d;
 L3d7d:; /* $3D7D */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x7f;actor_code(0x3d8e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3d80)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0x7f;
+if(native_depth==16){native_id=380;goto actor_native_overflow;}
+native_calls[native_depth++]=380;goto L3d8e;
 goto L3d80;
 L3d80:; /* $3D80 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3d81:; /* $3D81 */
 c=0;
 goto L3d82;
@@ -17566,7 +18331,9 @@ L3da1:; /* $3DA1 */
 y=0x25;NZ(y);
 goto L3da3;
 L3da3:; /* $3DA3 */
-m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0xa5;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3da6)return;
+m[0x100 + sp--]=0x3d;m[0x100 + sp--]=0xa5;
+if(native_depth==16){native_id=381;goto actor_native_overflow;}
+native_calls[native_depth++]=381;goto L17e2;
 goto L3da6;
 L3da6:; /* $3DA6 */
 a=0x5f;NZ(a);
@@ -17700,7 +18467,9 @@ L3e0b:; /* $3E0B */
 y=0x8b;NZ(y);
 goto L3e0d;
 L3e0d:; /* $3E0D */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x0f;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3e10)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x0f;
+if(native_depth==16){native_id=382;goto actor_native_overflow;}
+native_calls[native_depth++]=382;goto L2509;
 goto L3e10;
 L3e10:; /* $3E10 */
 a=m[0x4e9a];NZ(a);
@@ -17727,7 +18496,9 @@ L3e20:; /* $3E20 */
 y=0x0c;NZ(y);
 goto L3e22;
 L3e22:; /* $3E22 */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x24;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3e25)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x24;
+if(native_depth==16){native_id=383;goto actor_native_overflow;}
+native_calls[native_depth++]=383;goto L17e2;
 goto L3e25;
 L3e25:; /* $3E25 */
 a=0x49;NZ(a);
@@ -17745,7 +18516,9 @@ L3e2d:; /* $3E2D */
 y=0x19;NZ(y);
 goto L3e2f;
 L3e2f:; /* $3E2F */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x31;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3e32)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x31;
+if(native_depth==16){native_id=384;goto actor_native_overflow;}
+native_calls[native_depth++]=384;goto L17e2;
 goto L3e32;
 L3e32:; /* $3E32 */
 a=0x4b;NZ(a);
@@ -17763,7 +18536,9 @@ L3e3a:; /* $3E3A */
 y=0x0e;NZ(y);
 goto L3e3c;
 L3e3c:; /* $3E3C */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x3e;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3e3f)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x3e;
+if(native_depth==16){native_id=385;goto actor_native_overflow;}
+native_calls[native_depth++]=385;goto L17e2;
 goto L3e3f;
 L3e3f:; /* $3E3F */
 a=0x4d;NZ(a);
@@ -17804,7 +18579,9 @@ L3e5b:; /* $3E5B */
 y=0x26;NZ(y);
 goto L3e5d;
 L3e5d:; /* $3E5D */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x5f;actor_code(0x3ab4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3e60)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x5f;
+if(native_depth==16){native_id=386;goto actor_native_overflow;}
+native_calls[native_depth++]=386;goto L3ab4;
 goto L3e60;
 L3e60:; /* $3E60 */
 a=m[0x4e98];NZ(a);
@@ -17834,7 +18611,9 @@ L3e74:; /* $3E74 */
 y=0x26;NZ(y);
 goto L3e76;
 L3e76:; /* $3E76 */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x78;actor_code(0x3ab4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3e79)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0x78;
+if(native_depth==16){native_id=387;goto actor_native_overflow;}
+native_calls[native_depth++]=387;goto L3ab4;
 goto L3e79;
 L3e79:; /* $3E79 */
 goto L3228;
@@ -17915,7 +18694,9 @@ L3eb1:; /* $3EB1 */
 x=a;NZ(x);
 goto L3eb2;
 L3eb2:; /* $3EB2 */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0xb4;actor_code(0x3175);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3eb5)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0xb4;
+if(native_depth==16){native_id=388;goto actor_native_overflow;}
+native_calls[native_depth++]=388;goto L3175;
 goto L3eb5;
 L3eb5:; /* $3EB5 */
 a=0xf4;NZ(a);
@@ -17932,7 +18713,9 @@ L3ebe:; /* $3EBE */
 if(!z)goto L3ec3;
 goto L3ec0;
 L3ec0:; /* $3EC0 */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0xc2;actor_code(0x104b);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ec3)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0xc2;
+if(native_depth==16){native_id=389;goto actor_native_overflow;}
+native_calls[native_depth++]=389;goto L104b;
 goto L3ec3;
 L3ec3:; /* $3EC3 */
 a=m[0xd015];NZ(a);
@@ -17944,7 +18727,7 @@ L3ec8:; /* $3EC8 */
 address=0xd015;m[address]=a;
 goto L3ecb;
 L3ecb:; /* $3ECB */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3ecc:; /* $3ECC */
 a=m[0x4e97];NZ(a);
 goto L3ecf;
@@ -17970,7 +18753,9 @@ L3ede:; /* $3EDE */
 y=0x26;NZ(y);
 goto L3ee0;
 L3ee0:; /* $3EE0 */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0xe2;actor_code(0x3ab4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ee3)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0xe2;
+if(native_depth==16){native_id=390;goto actor_native_overflow;}
+native_calls[native_depth++]=390;goto L3ab4;
 goto L3ee3;
 L3ee3:; /* $3EE3 */
 goto L3228;
@@ -17996,7 +18781,9 @@ L3ef4:; /* $3EF4 */
 y=0x11;NZ(y);
 goto L3ef6;
 L3ef6:; /* $3EF6 */
-m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0xf8;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ef9)return;
+m[0x100 + sp--]=0x3e;m[0x100 + sp--]=0xf8;
+if(native_depth==16){native_id=391;goto actor_native_overflow;}
+native_calls[native_depth++]=391;goto L17e2;
 goto L3ef9;
 L3ef9:; /* $3EF9 */
 a=0x58;NZ(a);
@@ -18008,13 +18795,17 @@ L3efd:; /* $3EFD */
 y=0x11;NZ(y);
 goto L3eff;
 L3eff:; /* $3EFF */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x01;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f02)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x01;
+if(native_depth==16){native_id=392;goto actor_native_overflow;}
+native_calls[native_depth++]=392;goto L17e2;
 goto L3f02;
 L3f02:; /* $3F02 */
 address=0x4e97;m[address]--;NZ(m[address]);
 goto L3f05;
 L3f05:; /* $3F05 */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x07;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f08)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x07;
+if(native_depth==16){native_id=393;goto actor_native_overflow;}
+native_calls[native_depth++]=393;goto L424f;
 goto L3f08;
 L3f08:; /* $3F08 */
 a=m[0x4e98];NZ(a);
@@ -18044,7 +18835,9 @@ L3f1c:; /* $3F1C */
 y=0x17;NZ(y);
 goto L3f1e;
 L3f1e:; /* $3F1E */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x20;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f21)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x20;
+if(native_depth==16){native_id=394;goto actor_native_overflow;}
+native_calls[native_depth++]=394;goto L17e2;
 goto L3f21;
 L3f21:; /* $3F21 */
 a=0x58;NZ(a);
@@ -18056,13 +18849,17 @@ L3f25:; /* $3F25 */
 y=0x17;NZ(y);
 goto L3f27;
 L3f27:; /* $3F27 */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x29;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f2a)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x29;
+if(native_depth==16){native_id=395;goto actor_native_overflow;}
+native_calls[native_depth++]=395;goto L17e2;
 goto L3f2a;
 L3f2a:; /* $3F2A */
 address=0x4e98;m[address]--;NZ(m[address]);
 goto L3f2d;
 L3f2d:; /* $3F2D */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x2f;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f30)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x2f;
+if(native_depth==16){native_id=396;goto actor_native_overflow;}
+native_calls[native_depth++]=396;goto L424f;
 goto L3f30;
 L3f30:; /* $3F30 */
 a=m[0x4e99];NZ(a);
@@ -18086,7 +18883,9 @@ L3f3d:; /* $3F3D */
 y=0x25;NZ(y);
 goto L3f3f;
 L3f3f:; /* $3F3F */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x41;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f42)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x41;
+if(native_depth==16){native_id=397;goto actor_native_overflow;}
+native_calls[native_depth++]=397;goto L17e2;
 goto L3f42;
 L3f42:; /* $3F42 */
 a=0x5a;NZ(a);
@@ -18098,7 +18897,9 @@ L3f46:; /* $3F46 */
 y=0x25;NZ(y);
 goto L3f48;
 L3f48:; /* $3F48 */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x4a;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f4b)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x4a;
+if(native_depth==16){native_id=398;goto actor_native_overflow;}
+native_calls[native_depth++]=398;goto L17e2;
 goto L3f4b;
 L3f4b:; /* $3F4B */
 a=0x5b;NZ(a);
@@ -18110,16 +18911,20 @@ L3f4f:; /* $3F4F */
 y=0x25;NZ(y);
 goto L3f51;
 L3f51:; /* $3F51 */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x53;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f54)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x53;
+if(native_depth==16){native_id=399;goto actor_native_overflow;}
+native_calls[native_depth++]=399;goto L17e2;
 goto L3f54;
 L3f54:; /* $3F54 */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x56;actor_code(0x424f);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f57)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x56;
+if(native_depth==16){native_id=400;goto actor_native_overflow;}
+native_calls[native_depth++]=400;goto L424f;
 goto L3f57;
 L3f57:; /* $3F57 */
 address=0x4e99;m[address]--;NZ(m[address]);
 goto L3f5a;
 L3f5a:; /* $3F5A */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L3f5b:; /* $3F5B */
 a=m[0x4e97];NZ(a);
 goto L3f5e;
@@ -18142,7 +18947,9 @@ L3f69:; /* $3F69 */
 y=0x01;NZ(y);
 goto L3f6b;
 L3f6b:; /* $3F6B */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x6d;actor_code(0x3ab4);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3f6e)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0x6d;
+if(native_depth==16){native_id=401;goto actor_native_overflow;}
+native_calls[native_depth++]=401;goto L3ab4;
 goto L3f6e;
 L3f6e:; /* $3F6E */
 goto L3228;
@@ -18219,7 +19026,9 @@ L3fa4:; /* $3FA4 */
 address=0x006e;m[address]=a;
 goto L3fa6;
 L3fa6:; /* $3FA6 */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xa8;actor_code(0x404e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3fa9)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xa8;
+if(native_depth==16){native_id=402;goto actor_native_overflow;}
+native_calls[native_depth++]=402;goto L404e;
 goto L3fa9;
 L3fa9:; /* $3FA9 */
 a=m[0x4e97];NZ(a);
@@ -18246,7 +19055,9 @@ L3fba:; /* $3FBA */
 y=0x25;NZ(y);
 goto L3fbc;
 L3fbc:; /* $3FBC */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xbe;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3fbf)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xbe;
+if(native_depth==16){native_id=403;goto actor_native_overflow;}
+native_calls[native_depth++]=403;goto L17e2;
 goto L3fbf;
 L3fbf:; /* $3FBF */
 a=m[0x4e98];NZ(a);
@@ -18273,10 +19084,14 @@ L3fd0:; /* $3FD0 */
 y=0x18;NZ(y);
 goto L3fd2;
 L3fd2:; /* $3FD2 */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xd4;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3fd5)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xd4;
+if(native_depth==16){native_id=404;goto actor_native_overflow;}
+native_calls[native_depth++]=404;goto L17e2;
 goto L3fd5;
 L3fd5:; /* $3FD5 */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xd7;actor_code(0x3228);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3fd8)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xd7;
+if(native_depth==16){native_id=405;goto actor_native_overflow;}
+native_calls[native_depth++]=405;goto L3228;
 goto L3fd8;
 L3fd8:; /* $3FD8 */
 a=0x02;NZ(a);
@@ -18315,7 +19130,9 @@ L3fee:; /* $3FEE */
 if(!z)goto L3ff6;
 goto L3ff0;
 L3ff0:; /* $3FF0 */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xf2;actor_code(0x4086);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ff3)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xf2;
+if(native_depth==16){native_id=406;goto actor_native_overflow;}
+native_calls[native_depth++]=406;goto L4086;
 goto L3ff3;
 L3ff3:; /* $3FF3 */
 goto L4049;
@@ -18326,12 +19143,16 @@ L3ff8:; /* $3FF8 */
 if(!z)goto L4000;
 goto L3ffa;
 L3ffa:; /* $3FFA */
-m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xfc;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x3ffd)return;
+m[0x100 + sp--]=0x3f;m[0x100 + sp--]=0xfc;
+if(native_depth==16){native_id=407;goto actor_native_overflow;}
+native_calls[native_depth++]=407;goto L4090;
 goto L3ffd;
 L3ffd:; /* $3FFD */
 goto L4049;
 L4000:; /* $4000 */
-m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x02;actor_code(0x409a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x4003)return;
+m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x02;
+if(native_depth==16){native_id=408;goto actor_native_overflow;}
+native_calls[native_depth++]=408;goto L409a;
 goto L4003;
 L4003:; /* $4003 */
 goto L4049;
@@ -18369,7 +19190,9 @@ L401a:; /* $401A */
 if(!z)goto L4022;
 goto L401c;
 L401c:; /* $401C */
-m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x1e;actor_code(0x4086);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x401f)return;
+m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x1e;
+if(native_depth==16){native_id=409;goto actor_native_overflow;}
+native_calls[native_depth++]=409;goto L4086;
 goto L401f;
 L401f:; /* $401F */
 goto L402f;
@@ -18380,12 +19203,16 @@ L4024:; /* $4024 */
 if(!z)goto L402c;
 goto L4026;
 L4026:; /* $4026 */
-m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x28;actor_code(0x4090);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x4029)return;
+m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x28;
+if(native_depth==16){native_id=410;goto actor_native_overflow;}
+native_calls[native_depth++]=410;goto L4090;
 goto L4029;
 L4029:; /* $4029 */
 goto L402f;
 L402c:; /* $402C */
-m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x2e;actor_code(0x409a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x402f)return;
+m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x2e;
+if(native_depth==16){native_id=411;goto actor_native_overflow;}
+native_calls[native_depth++]=411;goto L409a;
 goto L402f;
 L402f:; /* $402F */
 x=m[0x004c];NZ(x);
@@ -18433,9 +19260,11 @@ L404b:; /* $404B */
 if(!n)goto L3fdc;
 goto L404d;
 L404d:; /* $404D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L404e:; /* $404E */
-m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x50;actor_code(0x4078);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x4051)return;
+m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x50;
+if(native_depth==16){native_id=412;goto actor_native_overflow;}
+native_calls[native_depth++]=412;goto L4078;
 goto L4051;
 L4051:; /* $4051 */
 a=0x1c;NZ(a);
@@ -18447,7 +19276,9 @@ L4055:; /* $4055 */
 y=m[0x0070];NZ(y);
 goto L4057;
 L4057:; /* $4057 */
-m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x59;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x405a)return;
+m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x59;
+if(native_depth==16){native_id=413;goto actor_native_overflow;}
+native_calls[native_depth++]=413;goto L17e2;
 goto L405a;
 L405a:; /* $405A */
 a=0x1b;NZ(a);
@@ -18461,7 +19292,9 @@ goto L4060;
 L4060:; /* $4060 */
 goto L17e2;
 L4063:; /* $4063 */
-m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x65;actor_code(0x4078);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x4066)return;
+m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x65;
+if(native_depth==16){native_id=414;goto actor_native_overflow;}
+native_calls[native_depth++]=414;goto L4078;
 goto L4066;
 L4066:; /* $4066 */
 a=0x55;NZ(a);
@@ -18473,7 +19306,9 @@ L406a:; /* $406A */
 y=m[0x0070];NZ(y);
 goto L406c;
 L406c:; /* $406C */
-m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x6e;actor_code(0x17e2);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x406f)return;
+m[0x100 + sp--]=0x40;m[0x100 + sp--]=0x6e;
+if(native_depth==16){native_id=415;goto actor_native_overflow;}
+native_calls[native_depth++]=415;goto L17e2;
 goto L406f;
 L406f:; /* $406F */
 a=0x54;NZ(a);
@@ -18492,7 +19327,7 @@ goto L407a;
 L407a:; /* $407A */
 goto L2509;
 L407d:; /* $407D */
-if(actor_invincible && !x){sp+=2;actor_return=source_stack_return();return;}
+if(actor_invincible && !x){sp+=2;actor_return=source_stack_return();goto actor_native_unwind;}
 a=0x19;NZ(a);
 goto L407f;
 L407f:; /* $407F */
@@ -18505,7 +19340,7 @@ L4083:; /* $4083 */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L4085;
 L4085:; /* $4085 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L4086:; /* $4086 */
 c=0;
 goto L4087;
@@ -18708,7 +19543,7 @@ L412f:; /* $412F */
 address=0xa73b;m[address]=a;source_written(address);
 goto L4132;
 L4132:; /* $4132 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L4133:; /* $4133 */
 x=0x03;NZ(x);
 goto L4135;
@@ -18761,7 +19596,9 @@ L4157:; /* $4157 */
 if(!z)goto L415f;
 goto L4159;
 L4159:; /* $4159 */
-m[0x100 + sp--]=0x41;m[0x100 + sp--]=0x5b;actor_code(0x4201);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x415c)return;
+m[0x100 + sp--]=0x41;m[0x100 + sp--]=0x5b;
+if(native_depth==16){native_id=416;goto actor_native_overflow;}
+native_calls[native_depth++]=416;goto L4201;
 goto L415c;
 L415c:; /* $415C */
 goto L4175;
@@ -18781,7 +19618,9 @@ L416a:; /* $416A */
 if(!z)goto L4172;
 goto L416c;
 L416c:; /* $416C */
-m[0x100 + sp--]=0x41;m[0x100 + sp--]=0x6e;actor_code(0x4220);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x416f)return;
+m[0x100 + sp--]=0x41;m[0x100 + sp--]=0x6e;
+if(native_depth==16){native_id=417;goto actor_native_overflow;}
+native_calls[native_depth++]=417;goto L4220;
 goto L416f;
 L416f:; /* $416F */
 goto L4175;
@@ -18999,7 +19838,7 @@ L41fe:; /* $41FE */
 if(!n)goto L41a2;
 goto L4200;
 L4200:; /* $4200 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L4201:; /* $4201 */
 a=0x0d;NZ(a);
 goto L4203;
@@ -19095,7 +19934,7 @@ L424c:; /* $424C */
 if(!n)goto L4243;
 goto L424e;
 L424e:; /* $424E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L424f:; /* $424F */
 m[0x100 + sp--]=a;
 goto L4250;
@@ -19115,7 +19954,9 @@ L4254:; /* $4254 */
 y=0x8a;NZ(y);
 goto L4256;
 L4256:; /* $4256 */
-m[0x100 + sp--]=0x42;m[0x100 + sp--]=0x58;actor_code(0x2509);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x4259)return;
+m[0x100 + sp--]=0x42;m[0x100 + sp--]=0x58;
+if(native_depth==16){native_id=418;goto actor_native_overflow;}
+native_calls[native_depth++]=418;goto L2509;
 goto L4259;
 L4259:; /* $4259 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -19133,7 +19974,7 @@ L425d:; /* $425D */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L425e;
 L425e:; /* $425E */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L425f:; /* $425F */
 a=0x58;NZ(a);
 goto L4261;
@@ -19162,7 +20003,7 @@ L426f:; /* $426F */
 if(!n)goto L426b;
 goto L4271;
 L4271:; /* $4271 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L4272:; /* $4272 */
 a=m[0x0049];NZ(a);
 goto L4274;
@@ -19206,13 +20047,19 @@ L4288:; /* $4288 */
 if(!n)goto L4283;
 goto L428a;
 L428a:; /* $428A */
-m[0x100 + sp--]=0x42;m[0x100 + sp--]=0x8c;actor_code(0x10c5);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x428d)return;
+m[0x100 + sp--]=0x42;m[0x100 + sp--]=0x8c;
+if(native_depth==16){native_id=419;goto actor_native_overflow;}
+native_calls[native_depth++]=419;goto L10c5;
 goto L428d;
 L428d:; /* $428D */
-m[0x100 + sp--]=0x42;m[0x100 + sp--]=0x8f;actor_code(0x33ca);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x4290)return;
+m[0x100 + sp--]=0x42;m[0x100 + sp--]=0x8f;
+if(native_depth==16){native_id=420;goto actor_native_overflow;}
+native_calls[native_depth++]=420;goto L33ca;
 goto L4290;
 L4290:; /* $4290 */
-m[0x100 + sp--]=0x42;m[0x100 + sp--]=0x92;actor_code(0x10e0);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x4293)return;
+m[0x100 + sp--]=0x42;m[0x100 + sp--]=0x92;
+if(native_depth==16){native_id=421;goto actor_native_overflow;}
+native_calls[native_depth++]=421;goto L10e0;
 goto L4293;
 L4293:; /* $4293 */
 x=0x00;NZ(x);
@@ -19232,6 +20079,7 @@ L429f:; /* $429F */
 x=0x1c;NZ(x);
 goto L42a1;
 L42a1:; /* $42A1 */
+if(x<=0x1c){source_final_colors();goto L42bc;}
 address=(unsigned short)(0xdaac + x);m[address]=a;source_written(address);
 goto L42a4;
 L42a4:; /* $42A4 */
@@ -19282,7 +20130,7 @@ L478a:; /* $478A */
 address=0x0005;m[address]++;NZ(m[address]);
 goto L478c;
 L478c:; /* $478C */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L478d:; /* $478D */
 address=0x0006;m[address]++;NZ(m[address]);
 goto L478f;
@@ -19293,7 +20141,7 @@ L4791:; /* $4791 */
 address=0x0007;m[address]++;NZ(m[address]);
 goto L4793;
 L4793:; /* $4793 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L4794:; /* $4794 */
 address=0x0008;m[address]++;NZ(m[address]);
 goto L4796;
@@ -19304,7 +20152,7 @@ L4798:; /* $4798 */
 address=0x0009;m[address]++;NZ(m[address]);
 goto L479a;
 L479a:; /* $479A */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L485b:; /* $485B */
 m[0x100 + sp--]=a;
 goto L485c;
@@ -19396,7 +20244,7 @@ L4890:; /* $4890 */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
 goto L4891;
 L4891:; /* $4891 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L50db:; /* $50DB */
 a=m[0xd011];NZ(a);
 goto L50de;
@@ -19410,9 +20258,9 @@ L50e2:; /* $50E2 */
 address=0xd011;m[address]=a;
 goto L50e5;
 L50e5:; /* $50E5 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L5212:; /* $5212 */
-if(!d){source_contact_driver();actor_return=source_stack_return();return;}
+if(!d){source_contact_driver();actor_return=source_stack_return();goto actor_native_unwind;}
 x=0x02;NZ(x);
 goto L5214;
 L5214:; /* $5214 */
@@ -19485,7 +20333,9 @@ L5242:; /* $5242 */
 address=0x52cd;m[address]=a;
 goto L5245;
 L5245:; /* $5245 */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x47;actor_code(0x52ad);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5248)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x47;
+if(native_depth==16){native_id=422;goto actor_native_overflow;}
+native_calls[native_depth++]=422;goto L52ad;
 goto L5248;
 L5248:; /* $5248 */
 a=m[0x001c];NZ(a);
@@ -19509,7 +20359,9 @@ L5253:; /* $5253 */
 address=0x4f38;m[address]=a;
 goto L5256;
 L5256:; /* $5256 */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x58;actor_code(0x55ab);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5259)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x58;
+if(native_depth==16){native_id=423;goto actor_native_overflow;}
+native_calls[native_depth++]=423;goto L55ab;
 goto L5259;
 L5259:; /* $5259 */
 x=m[0x0050];NZ(x);
@@ -19554,10 +20406,14 @@ L526e:; /* $526E */
 address=0x4f3a;m[address]=a;
 goto L5271;
 L5271:; /* $5271 */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x73;actor_code(0x530a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5274)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x73;
+if(native_depth==16){native_id=424;goto actor_native_overflow;}
+native_calls[native_depth++]=424;goto L530a;
 goto L5274;
 L5274:; /* $5274 */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x76;actor_code(0x537e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5277)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x76;
+if(native_depth==16){native_id=425;goto actor_native_overflow;}
+native_calls[native_depth++]=425;goto L537e;
 goto L5277;
 L5277:; /* $5277 */
 x=m[0x0050];NZ(x);
@@ -19572,10 +20428,14 @@ L527d:; /* $527D */
 address=0x4f3a;m[address]=a;
 goto L5280;
 L5280:; /* $5280 */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x82;actor_code(0x530a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5283)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x82;
+if(native_depth==16){native_id=426;goto actor_native_overflow;}
+native_calls[native_depth++]=426;goto L530a;
 goto L5283;
 L5283:; /* $5283 */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x85;actor_code(0x537e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5286)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x85;
+if(native_depth==16){native_id=427;goto actor_native_overflow;}
+native_calls[native_depth++]=427;goto L537e;
 goto L5286;
 L5286:; /* $5286 */
 x=m[0x0050];NZ(x);
@@ -19590,10 +20450,14 @@ L528c:; /* $528C */
 address=0x4f3a;m[address]=a;
 goto L528f;
 L528f:; /* $528F */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x91;actor_code(0x530a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5292)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x91;
+if(native_depth==16){native_id=428;goto actor_native_overflow;}
+native_calls[native_depth++]=428;goto L530a;
 goto L5292;
 L5292:; /* $5292 */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x94;actor_code(0x537e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5295)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0x94;
+if(native_depth==16){native_id=429;goto actor_native_overflow;}
+native_calls[native_depth++]=429;goto L537e;
 goto L5295;
 L5295:; /* $5295 */
 x=m[0x0050];NZ(x);
@@ -19608,10 +20472,14 @@ L529b:; /* $529B */
 address=0x4f3a;m[address]=a;
 goto L529e;
 L529e:; /* $529E */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0xa0;actor_code(0x530a);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x52a1)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0xa0;
+if(native_depth==16){native_id=430;goto actor_native_overflow;}
+native_calls[native_depth++]=430;goto L530a;
 goto L52a1;
 L52a1:; /* $52A1 */
-m[0x100 + sp--]=0x52;m[0x100 + sp--]=0xa3;actor_code(0x537e);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x52a4)return;
+m[0x100 + sp--]=0x52;m[0x100 + sp--]=0xa3;
+if(native_depth==16){native_id=431;goto actor_native_overflow;}
+native_calls[native_depth++]=431;goto L537e;
 goto L52a4;
 L52a4:; /* $52A4 */
 x=m[0x0050];NZ(x);
@@ -19625,9 +20493,9 @@ goto L52a9;
 L52a9:; /* $52A9 */
 goto L5214;
 L52ac:; /* $52AC */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L52ad:; /* $52AD */
-if(m[0x1b]<4 && m[0x1c]<8){PERF_BEGIN(BL_PERF_ALIGN);source_contact_align();PERF_END(BL_PERF_ALIGN);actor_return=source_stack_return();return;}
+if(m[0x1b]<4 && m[0x1c]<8){PERF_BEGIN(BL_PERF_ALIGN);source_contact_align();PERF_END(BL_PERF_ALIGN);actor_return=source_stack_return();goto actor_native_unwind;}
 a=0x00;NZ(a);
 goto L52af;
 L52af:; /* $52AF */
@@ -19736,7 +20604,7 @@ L52f0:; /* $52F0 */
 if(!z)goto L52e1;
 goto L52f2;
 L52f2:; /* $52F2 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L52f3:; /* $52F3 */
 y=0x02;NZ(y);
 goto L52f5;
@@ -19768,9 +20636,9 @@ L5307:; /* $5307 */
 if(!z)goto L52f5;
 goto L5309;
 L5309:; /* $5309 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L530a:; /* $530A */
-if(!d && m[0x50]<3){source_contact_pointers();actor_return=source_stack_return();return;}
+if(!d && m[0x50]<3){source_contact_pointers();actor_return=source_stack_return();goto actor_native_unwind;}
 x=m[0x0050];NZ(x);
 goto L530c;
 L530c:; /* $530C */
@@ -19780,7 +20648,9 @@ L530e:; /* $530E */
 x=a;NZ(x);
 goto L530f;
 L530f:; /* $530F */
-m[0x100 + sp--]=0x53;m[0x100 + sp--]=0x11;actor_code(0x55c5);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5312)return;
+m[0x100 + sp--]=0x53;m[0x100 + sp--]=0x11;
+if(native_depth==16){native_id=432;goto actor_native_overflow;}
+native_calls[native_depth++]=432;goto L55c5;
 goto L5312;
 L5312:; /* $5312 */
 x=m[0x0050];NZ(x);
@@ -19789,7 +20659,9 @@ L5314:; /* $5314 */
 y=m[(unsigned char)(0xe6 + x)];NZ(y);
 goto L5316;
 L5316:; /* $5316 */
-m[0x100 + sp--]=0x53;m[0x100 + sp--]=0x18;actor_code(0x55d7);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5319)return;
+m[0x100 + sp--]=0x53;m[0x100 + sp--]=0x18;
+if(native_depth==16){native_id=433;goto actor_native_overflow;}
+native_calls[native_depth++]=433;goto L55d7;
 goto L5319;
 L5319:; /* $5319 */
 a=m[(unsigned short)(W(0x04)+y)];NZ(a);
@@ -19831,7 +20703,9 @@ L5335:; /* $5335 */
 y++;NZ(y);
 goto L5336;
 L5336:; /* $5336 */
-m[0x100 + sp--]=0x53;m[0x100 + sp--]=0x38;actor_code(0x5649);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5339)return;
+m[0x100 + sp--]=0x53;m[0x100 + sp--]=0x38;
+if(native_depth==16){native_id=434;goto actor_native_overflow;}
+native_calls[native_depth++]=434;goto L5649;
 goto L5339;
 L5339:; /* $5339 */
 a=m[(unsigned short)(W(0x04)+y)];NZ(a);
@@ -19885,7 +20759,9 @@ L535c:; /* $535C */
 if(z)goto L5363;
 goto L535e;
 L535e:; /* $535E */
-m[0x100 + sp--]=0x53;m[0x100 + sp--]=0x60;actor_code(0x56bb);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5361)return;
+m[0x100 + sp--]=0x53;m[0x100 + sp--]=0x60;
+if(native_depth==16){native_id=435;goto actor_native_overflow;}
+native_calls[native_depth++]=435;goto L56bb;
 goto L5361;
 L5361:; /* $5361 */
 a=m[(unsigned short)(W(0x04)+y)];NZ(a);
@@ -19924,9 +20800,9 @@ L537a:; /* $537A */
 address=0x53b6;m[address]=a;
 goto L537d;
 L537d:; /* $537D */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L537e:; /* $537E */
-if(m[0x50]<3){PERF_BEGIN(BL_PERF_ROWS);source_contact_rows();PERF_END(BL_PERF_ROWS);actor_return=source_stack_return();return;}
+if(m[0x50]<3){PERF_BEGIN(BL_PERF_ROWS);source_contact_rows();PERF_END(BL_PERF_ROWS);actor_return=source_stack_return();goto actor_native_unwind;}
 y=m[0x0052];NZ(y);
 goto L5380;
 L5380:; /* $5380 */
@@ -20082,7 +20958,7 @@ L53e1:; /* $53E1 */
 address=0x0052;m[address]=y;
 goto L53e3;
 L53e3:; /* $53E3 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L53e4:; /* $53E4 */
 x=0x02;NZ(x);
 goto L53e6;
@@ -20099,7 +20975,9 @@ L53ed:; /* $53ED */
 if(!n)goto L53e6;
 goto L53ef;
 L53ef:; /* $53EF */
-m[0x100 + sp--]=0x53;m[0x100 + sp--]=0xf1;actor_code(0x5431);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x53f2)return;
+m[0x100 + sp--]=0x53;m[0x100 + sp--]=0xf1;
+if(native_depth==16){native_id=436;goto actor_native_overflow;}
+native_calls[native_depth++]=436;goto L5431;
 goto L53f2;
 L53f2:; /* $53F2 */
 a=m[(unsigned char)(0xb6 + x)];NZ(a);
@@ -20123,7 +21001,9 @@ L5400:; /* $5400 */
 address=0x4f32;m[address]=a;
 goto L5403;
 L5403:; /* $5403 */
-m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x05;actor_code(0x55e6);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5406)return;
+m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x05;
+if(native_depth==16){native_id=437;goto actor_native_overflow;}
+native_calls[native_depth++]=437;goto L55e6;
 goto L5406;
 L5406:; /* $5406 */
 a=m[0x4f33];NZ(a);
@@ -20141,7 +21021,9 @@ L5410:; /* $5410 */
 address=0x4f33;m[address]=a;
 goto L5413;
 L5413:; /* $5413 */
-m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x15;actor_code(0x5658);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5416)return;
+m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x15;
+if(native_depth==16){native_id=438;goto actor_native_overflow;}
+native_calls[native_depth++]=438;goto L5658;
 goto L5416;
 L5416:; /* $5416 */
 a=m[0x4f34];NZ(a);
@@ -20159,12 +21041,16 @@ L5420:; /* $5420 */
 address=0x4f34;m[address]=a;
 goto L5423;
 L5423:; /* $5423 */
-m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x25;actor_code(0x56ca);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5426)return;
+m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x25;
+if(native_depth==16){native_id=439;goto actor_native_overflow;}
+native_calls[native_depth++]=439;goto L56ca;
 goto L5426;
 L5426:; /* $5426 */
 goto L53d4;
 L5429:; /* $5429 */
-m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x2b;actor_code(0x5431);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x542c)return;
+m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x2b;
+if(native_depth==16){native_id=440;goto actor_native_overflow;}
+native_calls[native_depth++]=440;goto L5431;
 goto L542c;
 L542c:; /* $542C */
 a=m[0x100 + (unsigned char)++sp];NZ(a);
@@ -20175,7 +21061,7 @@ goto L542e;
 L542e:; /* $542E */
 goto L52a4;
 L5431:; /* $5431 */
-if(m[0x50]<3){source_contact_classes();actor_return=source_stack_return();return;}
+if(m[0x50]<3){source_contact_classes();actor_return=source_stack_return();goto actor_native_unwind;}
 a=0x00;NZ(a);
 goto L5433;
 L5433:; /* $5433 */
@@ -20200,7 +21086,9 @@ L5440:; /* $5440 */
 address=0x4f32;m[address]--;NZ(m[address]);
 goto L5443;
 L5443:; /* $5443 */
-m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x45;actor_code(0x55e6);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5446)return;
+m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x45;
+if(native_depth==16){native_id=441;goto actor_native_overflow;}
+native_calls[native_depth++]=441;goto L55e6;
 goto L5446;
 L5446:; /* $5446 */
 a=m[0x4f33];NZ(a);
@@ -20212,7 +21100,9 @@ L544b:; /* $544B */
 address=0x4f33;m[address]--;NZ(m[address]);
 goto L544e;
 L544e:; /* $544E */
-m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x50;actor_code(0x5658);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x5451)return;
+m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x50;
+if(native_depth==16){native_id=442;goto actor_native_overflow;}
+native_calls[native_depth++]=442;goto L5658;
 goto L5451;
 L5451:; /* $5451 */
 a=m[0x4f34];NZ(a);
@@ -20224,7 +21114,9 @@ L5456:; /* $5456 */
 address=0x4f34;m[address]--;NZ(m[address]);
 goto L5459;
 L5459:; /* $5459 */
-m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x5b;actor_code(0x56ca);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x545c)return;
+m[0x100 + sp--]=0x54;m[0x100 + sp--]=0x5b;
+if(native_depth==16){native_id=443;goto actor_native_overflow;}
+native_calls[native_depth++]=443;goto L56ca;
 goto L545c;
 L545c:; /* $545C */
 a=m[0x4eee];NZ(a);
@@ -20572,9 +21464,9 @@ L55a8:; /* $55A8 */
 old=m[(unsigned char)(0xb6 + x)];m[(unsigned char)(0xb6 + x)]=(unsigned char)((old<<1)|c);c=(old&128)!=0;NZ(m[(unsigned char)(0xb6 + x)]);
 goto L55aa;
 L55aa:; /* $55AA */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L55ab:; /* $55AB */
-source_contact_clear();actor_return=source_stack_return();return;
+source_contact_clear();actor_return=source_stack_return();goto actor_native_unwind;
 a=0x00;NZ(a);
 goto L55ad;
 L55ad:; /* $55AD */
@@ -20605,7 +21497,7 @@ L55c1:; /* $55C1 */
 address=0x4f34;m[address]=a;
 goto L55c4;
 L55c4:; /* $55C4 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L55c5:; /* $55C5 */
 a=m[(unsigned short)(0x50e7 + x)];NZ(a);
 goto L55c8;
@@ -20628,7 +21520,7 @@ L55d4:; /* $55D4 */
 address=0x0013;m[address]=a;
 goto L55d6;
 L55d6:; /* $55D6 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L55d7:; /* $55D7 */
 a=m[(unsigned short)(W(0x12)+y)];NZ(a);
 goto L55d9;
@@ -20645,12 +21537,12 @@ L55e0:; /* $55E0 */
 if(z)goto L55e3;
 goto L55e2;
 L55e2:; /* $55E2 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L55e3:; /* $55E3 */
 address=0x4f32;m[address]++;NZ(m[address]);
 goto L55e6;
 L55e6:; /* $55E6 */
-source_contact_swap(0x4eed);actor_return=source_stack_return();return;
+source_contact_swap(0x4eed);actor_return=source_stack_return();goto actor_native_unwind;
 a=m[0x4ef0];NZ(a);
 goto L55e9;
 L55e9:; /* $55E9 */
@@ -20738,7 +21630,7 @@ L563a:; /* $563A */
 x=m[0x0050];NZ(x);
 goto L563c;
 L563c:; /* $563C */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L563d:; /* $563D */
 a=m[0x4f32];NZ(a);
 goto L5640;
@@ -20746,7 +21638,7 @@ L5640:; /* $5640 */
 if(!z)goto L5643;
 goto L5642;
 L5642:; /* $5642 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L5643:; /* $5643 */
 address=0x4f32;m[address]--;NZ(m[address]);
 goto L5646;
@@ -20768,12 +21660,12 @@ L5652:; /* $5652 */
 if(z)goto L5655;
 goto L5654;
 L5654:; /* $5654 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L5655:; /* $5655 */
 address=0x4f33;m[address]++;NZ(m[address]);
 goto L5658;
 L5658:; /* $5658 */
-source_contact_swap(0x4f04);actor_return=source_stack_return();return;
+source_contact_swap(0x4f04);actor_return=source_stack_return();goto actor_native_unwind;
 a=m[0x4f07];NZ(a);
 goto L565b;
 L565b:; /* $565B */
@@ -20861,7 +21753,7 @@ L56ac:; /* $56AC */
 x=m[0x0050];NZ(x);
 goto L56ae;
 L56ae:; /* $56AE */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L56af:; /* $56AF */
 a=m[0x4f33];NZ(a);
 goto L56b2;
@@ -20869,7 +21761,7 @@ L56b2:; /* $56B2 */
 if(!z)goto L56b5;
 goto L56b4;
 L56b4:; /* $56B4 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L56b5:; /* $56B5 */
 address=0x4f33;m[address]--;NZ(m[address]);
 goto L56b8;
@@ -20891,12 +21783,12 @@ L56c4:; /* $56C4 */
 if(z)goto L56c7;
 goto L56c6;
 L56c6:; /* $56C6 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L56c7:; /* $56C7 */
 address=0x4f34;m[address]++;NZ(m[address]);
 goto L56ca;
 L56ca:; /* $56CA */
-source_contact_swap(0x4f1b);actor_return=source_stack_return();return;
+source_contact_swap(0x4f1b);actor_return=source_stack_return();goto actor_native_unwind;
 a=m[0x4f1e];NZ(a);
 goto L56cd;
 L56cd:; /* $56CD */
@@ -20984,7 +21876,7 @@ L571e:; /* $571E */
 x=m[0x0050];NZ(x);
 goto L5720;
 L5720:; /* $5720 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L5721:; /* $5721 */
 a=m[0x4f34];NZ(a);
 goto L5724;
@@ -20992,10 +21884,469 @@ L5724:; /* $5724 */
 if(!z)goto L5727;
 goto L5726;
 L5726:; /* $5726 */
-sp+=2;actor_return=source_stack_return();return;
+sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L5727:; /* $5727 */
 address=0x4f34;m[address]--;NZ(m[address]);
 goto L572a;
 L572a:; /* $572A */
 goto L56ca;
+actor_native_overflow:;
+actor_code(native_targets[native_id]);
+if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=native_returns[native_id])goto actor_native_unwind;
+goto actor_native_resume;
+actor_native_unwind:;
+while(native_depth){
+native_id=native_calls[--native_depth];
+if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=native_returns[native_id])continue;
+goto actor_native_resume;
+}
+return;
+actor_native_resume:;
+switch(native_id){
+case 0:goto L0749;
+case 1:goto L074c;
+case 2:goto L074f;
+case 3:goto L075a;
+case 4:goto L076c;
+case 5:goto L076f;
+case 6:goto L077a;
+case 7:goto L0795;
+case 8:goto L079a;
+case 9:goto L0802;
+case 10:goto L0805;
+case 11:goto L080d;
+case 12:goto L0810;
+case 13:goto L0813;
+case 14:goto L0816;
+case 15:goto L09f3;
+case 16:goto L09f6;
+case 17:goto L0a23;
+case 18:goto L0a2a;
+case 19:goto L0aea;
+case 20:goto L0af3;
+case 21:goto L0afc;
+case 22:goto L0aff;
+case 23:goto L0b02;
+case 24:goto L0b12;
+case 25:goto L0b1b;
+case 26:goto L0b21;
+case 27:goto L0b24;
+case 28:goto L0b27;
+case 29:goto L0b33;
+case 30:goto L0b36;
+case 31:goto L0ba2;
+case 32:goto L0bae;
+case 33:goto L0cd8;
+case 34:goto L0ce8;
+case 35:goto L0d1e;
+case 36:goto L0d31;
+case 37:goto L0d66;
+case 38:goto L0d8d;
+case 39:goto L0da1;
+case 40:goto L0dc7;
+case 41:goto L0de2;
+case 42:goto L0dec;
+case 43:goto L0dfb;
+case 44:goto L0e00;
+case 45:goto L0e1e;
+case 46:goto L0ed3;
+case 47:goto L0f2c;
+case 48:goto L0f99;
+case 49:goto L0fa4;
+case 50:goto L0fb9;
+case 51:goto L0fbc;
+case 52:goto L0ffe;
+case 53:goto L1024;
+case 54:goto L1027;
+case 55:goto L1086;
+case 56:goto L108c;
+case 57:goto L10af;
+case 58:goto L10bf;
+case 59:goto L13ef;
+case 60:goto L13f5;
+case 61:goto L15bd;
+case 62:goto L163c;
+case 63:goto L163f;
+case 64:goto L1774;
+case 65:goto L1797;
+case 66:goto L17a1;
+case 67:goto L17db;
+case 68:goto L17de;
+case 69:goto L181b;
+case 70:goto L183b;
+case 71:goto L184e;
+case 72:goto L1873;
+case 73:goto L1889;
+case 74:goto L1891;
+case 75:goto L1894;
+case 76:goto L18d9;
+case 77:goto L1930;
+case 78:goto L194c;
+case 79:goto L1955;
+case 80:goto L195e;
+case 81:goto L19cc;
+case 82:goto L19e0;
+case 83:goto L1a31;
+case 84:goto L1a38;
+case 85:goto L1a3f;
+case 86:goto L1a4a;
+case 87:goto L1a5e;
+case 88:goto L1a61;
+case 89:goto L1b1b;
+case 90:goto L1b31;
+case 91:goto L1b88;
+case 92:goto L1bb0;
+case 93:goto L1bc9;
+case 94:goto L1bd1;
+case 95:goto L1bd4;
+case 96:goto L1bd7;
+case 97:goto L1bee;
+case 98:goto L1bf1;
+case 99:goto L1bf8;
+case 100:goto L1bfb;
+case 101:goto L1bfe;
+case 102:goto L1c0d;
+case 103:goto L1c29;
+case 104:goto L1c32;
+case 105:goto L1ce2;
+case 106:goto L1ced;
+case 107:goto L1cfa;
+case 108:goto L1d07;
+case 109:goto L1d60;
+case 110:goto L1d66;
+case 111:goto L1daa;
+case 112:goto L1db0;
+case 113:goto L1dbc;
+case 114:goto L1dbf;
+case 115:goto L1ddf;
+case 116:goto L1de6;
+case 117:goto L1de9;
+case 118:goto L1dec;
+case 119:goto L1e2c;
+case 120:goto L1e33;
+case 121:goto L1e36;
+case 122:goto L1e39;
+case 123:goto L1e66;
+case 124:goto L1e6d;
+case 125:goto L1e70;
+case 126:goto L1ea7;
+case 127:goto L1eae;
+case 128:goto L1eb1;
+case 129:goto L1f49;
+case 130:goto L1f5f;
+case 131:goto L1fbf;
+case 132:goto L1fce;
+case 133:goto L202b;
+case 134:goto L202e;
+case 135:goto L203a;
+case 136:goto L203d;
+case 137:goto L2040;
+case 138:goto L2043;
+case 139:goto L205d;
+case 140:goto L2068;
+case 141:goto L206b;
+case 142:goto L2077;
+case 143:goto L2085;
+case 144:goto L2088;
+case 145:goto L20a2;
+case 146:goto L20ad;
+case 147:goto L20b0;
+case 148:goto L20bc;
+case 149:goto L20ca;
+case 150:goto L20cd;
+case 151:goto L20e5;
+case 152:goto L20e8;
+case 153:goto L20eb;
+case 154:goto L20ee;
+case 155:goto L20fd;
+case 156:goto L2100;
+case 157:goto L210e;
+case 158:goto L2111;
+case 159:goto L2118;
+case 160:goto L211b;
+case 161:goto L2133;
+case 162:goto L2136;
+case 163:goto L2139;
+case 164:goto L213c;
+case 165:goto L2148;
+case 166:goto L214b;
+case 167:goto L2159;
+case 168:goto L215c;
+case 169:goto L2163;
+case 170:goto L2166;
+case 171:goto L21bb;
+case 172:goto L21be;
+case 173:goto L21c8;
+case 174:goto L21cb;
+case 175:goto L21d5;
+case 176:goto L21d8;
+case 177:goto L21e2;
+case 178:goto L21e5;
+case 179:goto L21ee;
+case 180:goto L21fb;
+case 181:goto L21fe;
+case 182:goto L2204;
+case 183:goto L2207;
+case 184:goto L2262;
+case 185:goto L227f;
+case 186:goto L229f;
+case 187:goto L22a9;
+case 188:goto L22d5;
+case 189:goto L2303;
+case 190:goto L235b;
+case 191:goto L2369;
+case 192:goto L236f;
+case 193:goto L2392;
+case 194:goto L23fa;
+case 195:goto L2402;
+case 196:goto L2422;
+case 197:goto L2425;
+case 198:goto L2431;
+case 199:goto L2434;
+case 200:goto L2458;
+case 201:goto L2469;
+case 202:goto L246c;
+case 203:goto L246f;
+case 204:goto L2472;
+case 205:goto L2475;
+case 206:goto L2478;
+case 207:goto L247b;
+case 208:goto L247e;
+case 209:goto L2481;
+case 210:goto L2484;
+case 211:goto L2498;
+case 212:goto L249b;
+case 213:goto L249e;
+case 214:goto L24a1;
+case 215:goto L24a4;
+case 216:goto L24a7;
+case 217:goto L2594;
+case 218:goto L259b;
+case 219:goto L25ae;
+case 220:goto L25bc;
+case 221:goto L25c4;
+case 222:goto L25d7;
+case 223:goto L2a89;
+case 224:goto L2a96;
+case 225:goto L2a9d;
+case 226:goto L2aac;
+case 227:goto L2ac3;
+case 228:goto L2ac6;
+case 229:goto L2ae2;
+case 230:goto L2ae9;
+case 231:goto L2aec;
+case 232:goto L2b2f;
+case 233:goto L2b6e;
+case 234:goto L2b86;
+case 235:goto L2bc2;
+case 236:goto L2be6;
+case 237:goto L2c0a;
+case 238:goto L2c36;
+case 239:goto L2c3d;
+case 240:goto L2c47;
+case 241:goto L2d75;
+case 242:goto L2dc3;
+case 243:goto L2dca;
+case 244:goto L2e33;
+case 245:goto L2e55;
+case 246:goto L2e5e;
+case 247:goto L2e61;
+case 248:goto L2e68;
+case 249:goto L2e74;
+case 250:goto L2e83;
+case 251:goto L2f0a;
+case 252:goto L2f0d;
+case 253:goto L2f13;
+case 254:goto L2f2d;
+case 255:goto L2f34;
+case 256:goto L2f39;
+case 257:goto L2f3f;
+case 258:goto L2f54;
+case 259:goto L2f69;
+case 260:goto L2f7e;
+case 261:goto L2f95;
+case 262:goto L2fc2;
+case 263:goto L2fc9;
+case 264:goto L2fcf;
+case 265:goto L2fea;
+case 266:goto L2fef;
+case 267:goto L2ff8;
+case 268:goto L302a;
+case 269:goto L3036;
+case 270:goto L3042;
+case 271:goto L3048;
+case 272:goto L305c;
+case 273:goto L315a;
+case 274:goto L315d;
+case 275:goto L3165;
+case 276:goto L316d;
+case 277:goto L31fc;
+case 278:goto L3204;
+case 279:goto L3240;
+case 280:goto L324e;
+case 281:goto L325d;
+case 282:goto L3270;
+case 283:goto L327f;
+case 284:goto L3296;
+case 285:goto L32b8;
+case 286:goto L32d6;
+case 287:goto L3395;
+case 288:goto L33d5;
+case 289:goto L33f1;
+case 290:goto L35c3;
+case 291:goto L3659;
+case 292:goto L3662;
+case 293:goto L3670;
+case 294:goto L369b;
+case 295:goto L36bd;
+case 296:goto L36c6;
+case 297:goto L36cf;
+case 298:goto L36e2;
+case 299:goto L36eb;
+case 300:goto L36f9;
+case 301:goto L371c;
+case 302:goto L3726;
+case 303:goto L3742;
+case 304:goto L3757;
+case 305:goto L3778;
+case 306:goto L378d;
+case 307:goto L379d;
+case 308:goto L37a6;
+case 309:goto L37af;
+case 310:goto L37b4;
+case 311:goto L37cc;
+case 312:goto L37e1;
+case 313:goto L37fa;
+case 314:goto L3803;
+case 315:goto L380c;
+case 316:goto L3811;
+case 317:goto L3822;
+case 318:goto L3830;
+case 319:goto L3856;
+case 320:goto L3864;
+case 321:goto L388a;
+case 322:goto L3898;
+case 323:goto L38bf;
+case 324:goto L38c6;
+case 325:goto L38cb;
+case 326:goto L38df;
+case 327:goto L38e8;
+case 328:goto L3907;
+case 329:goto L390e;
+case 330:goto L3915;
+case 331:goto L3926;
+case 332:goto L3934;
+case 333:goto L395a;
+case 334:goto L3968;
+case 335:goto L3989;
+case 336:goto L3997;
+case 337:goto L39bd;
+case 338:goto L39c0;
+case 339:goto L39c6;
+case 340:goto L3a1a;
+case 341:goto L3a28;
+case 342:goto L3a8d;
+case 343:goto L3a96;
+case 344:goto L3a9b;
+case 345:goto L3aa3;
+case 346:goto L3aad;
+case 347:goto L3ab7;
+case 348:goto L3ac0;
+case 349:goto L3ac5;
+case 350:goto L3ad1;
+case 351:goto L3aea;
+case 352:goto L3b0f;
+case 353:goto L3b28;
+case 354:goto L3b3c;
+case 355:goto L3b51;
+case 356:goto L3b62;
+case 357:goto L3b70;
+case 358:goto L3b91;
+case 359:goto L3b9f;
+case 360:goto L3bdc;
+case 361:goto L3bfd;
+case 362:goto L3c06;
+case 363:goto L3c2f;
+case 364:goto L3c40;
+case 365:goto L3c4e;
+case 366:goto L3c6f;
+case 367:goto L3c7d;
+case 368:goto L3ca7;
+case 369:goto L3cd9;
+case 370:goto L3cef;
+case 371:goto L3d00;
+case 372:goto L3d07;
+case 373:goto L3d0e;
+case 374:goto L3d20;
+case 375:goto L3d38;
+case 376:goto L3d5e;
+case 377:goto L3d6b;
+case 378:goto L3d70;
+case 379:goto L3d7b;
+case 380:goto L3d80;
+case 381:goto L3da6;
+case 382:goto L3e10;
+case 383:goto L3e25;
+case 384:goto L3e32;
+case 385:goto L3e3f;
+case 386:goto L3e60;
+case 387:goto L3e79;
+case 388:goto L3eb5;
+case 389:goto L3ec3;
+case 390:goto L3ee3;
+case 391:goto L3ef9;
+case 392:goto L3f02;
+case 393:goto L3f08;
+case 394:goto L3f21;
+case 395:goto L3f2a;
+case 396:goto L3f30;
+case 397:goto L3f42;
+case 398:goto L3f4b;
+case 399:goto L3f54;
+case 400:goto L3f57;
+case 401:goto L3f6e;
+case 402:goto L3fa9;
+case 403:goto L3fbf;
+case 404:goto L3fd5;
+case 405:goto L3fd8;
+case 406:goto L3ff3;
+case 407:goto L3ffd;
+case 408:goto L4003;
+case 409:goto L401f;
+case 410:goto L4029;
+case 411:goto L402f;
+case 412:goto L4051;
+case 413:goto L405a;
+case 414:goto L4066;
+case 415:goto L406f;
+case 416:goto L415c;
+case 417:goto L416f;
+case 418:goto L4259;
+case 419:goto L428d;
+case 420:goto L4290;
+case 421:goto L4293;
+case 422:goto L5248;
+case 423:goto L5259;
+case 424:goto L5274;
+case 425:goto L5277;
+case 426:goto L5283;
+case 427:goto L5286;
+case 428:goto L5292;
+case 429:goto L5295;
+case 430:goto L52a1;
+case 431:goto L52a4;
+case 432:goto L5312;
+case 433:goto L5319;
+case 434:goto L5339;
+case 435:goto L5361;
+case 436:goto L53f2;
+case 437:goto L5406;
+case 438:goto L5416;
+case 439:goto L5426;
+case 440:goto L542c;
+case 441:goto L5446;
+case 442:goto L5451;
+case 443:goto L545c;
+default:source_fault=0xffff;return;
+}
 }

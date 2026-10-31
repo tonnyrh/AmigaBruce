@@ -1,0 +1,57 @@
+{
+  "id": "FINAL-COLORS-0001",
+  "date": "2026-10-30",
+  "status": "candidate_code_derived_scoped_native_measured",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "source_ranges": [
+    "$4272-$42C4",
+    "$42A1-$42BA"
+  ],
+  "condition": "Nonzero source49/4A timer;232 ordered color stores perR20 main step; existing renderer metadata effects",
+  "effect": "Guarded native color loop; same source RAM, flags and stack endpoint; original generic writer and active metadata machine code retained",
+  "controls": {
+    "source": 7424,
+    "renderer": 192,
+    "native": 53,
+    "linked_images": 4,
+    "room_intervals": 20
+  },
+  "artifacts": [
+    {
+      "path": "docs/FINAL_COLOR_OPTIMIZATION.md",
+      "sha256": "331eef6d4fc4d4a7e480bee0bcff87cde22e8252a435c12bbfa7b6a6e7a33452"
+    },
+    {
+      "path": "reference/validation/final-colors-optimization.json",
+      "sha256": "45b4359c671e8b733b0e99e7efeeb850cd6362b5201b63d160cfc6edb30c8909"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/source-scope.json",
+      "sha256": "0f828dd7ad9dce8cb553b563e10b25f00174d00901d16281a369bbd1cabb8f34"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/native-images.json",
+      "sha256": "6fff7d801719350fe1a0a08abed910b8de8ff1c33a1c8673ed02d3dad8b90279"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/host.json",
+      "sha256": "67eb19b21c1010338a869fb48806e070e0c1188c95b79e36607b1fb72ec10c75"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/tour-v3-comparison.json",
+      "sha256": "83dbf72e09d0b3f097f30745aff420867d957087c719964a4977ea622dda85ca"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/native-footprint.json",
+      "sha256": "71117df4263141fa64b3fe0e4076fb2949670c99233e0752841c789069484806"
+    }
+  ],
+  "limitations": [
+    "Continuous source-room tour, not natural progression; some room intervals increase",
+    "R01 repeated1425fields/11audio misses vs historical1430/9; real-time remains open",
+    "Original edition/raster, input/IRQ and full stack/physical-machine acceptance remain open"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed_exact_renderer_source_derivation",
+  "publication_applied": true,
+  "color_observer_applied": true,
+  "main_sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185",
+  "core_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+  "candidate_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+  "effective_prior_main": {
+    "path": "reference/analysis/publication-2026-10-30/before/amiga/main.c",
+    "sha256": "f59554ba211b9034648d0bb2f7ff053b1d73b2450dd5356742a04dcb7e09b5e0"
+  },
+  "effective_prior_core": {
+    "path": "reference/analysis/audio-lookup-2026-10-30/before/core/c64_rooms.c",
+    "sha256": "9fa114e2c7a9e56ff7dc7105cee70343c68ba112ace8a4433bb46f68e74be2eb"
+  },
+  "source_cases": 7424,
+  "renderer_cases": 192,
+  "observer_domain_cases": 4096,
+  "gameplay_rules_outside_observer_unchanged": true,
+  "extra_service_points": 0,
+  "extra_production_bss": 0,
+  "realtime_accepted": false
+}

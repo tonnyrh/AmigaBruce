@@ -1,0 +1,619 @@
+{
+  "status": "audit_complete_current_native_gaps_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "original_raster_phase_verified": false,
+  "scope": "Original $169D-$1702 input slot, controlled fixed CIA values; native full field comparison restricted to $98/$9B/$99/$9C; no full IRQ stack or raster scheduling claim",
+  "cases": 32768,
+  "instructions": 630784,
+  "configs": {
+    "active0/player0/human0/flags00": {
+      "cases": 1024,
+      "matches": 32,
+      "mismatches": 992
+    },
+    "active0/player0/human0/flags01": {
+      "cases": 1024,
+      "matches": 32,
+      "mismatches": 992
+    },
+    "active0/player0/human0/flags10": {
+      "cases": 1024,
+      "matches": 32,
+      "mismatches": 992
+    },
+    "active0/player0/human0/flags11": {
+      "cases": 1024,
+      "matches": 32,
+      "mismatches": 992
+    },
+    "active0/player0/human1/flags00": {
+      "cases": 1024,
+      "matches": 1,
+      "mismatches": 1023
+    },
+    "active0/player0/human1/flags01": {
+      "cases": 1024,
+      "matches": 1,
+      "mismatches": 1023
+    },
+    "active0/player0/human1/flags10": {
+      "cases": 1024,
+      "matches": 1,
+      "mismatches": 1023
+    },
+    "active0/player0/human1/flags11": {
+      "cases": 1024,
+      "matches": 1,
+      "mismatches": 1023
+    },
+    "active0/player1/human0/flags00": {
+      "cases": 1024,
+      "matches": 32,
+      "mismatches": 992
+    },
+    "active0/player1/human0/flags01": {
+      "cases": 1024,
+      "matches": 32,
+      "mismatches": 992
+    },
+    "active0/player1/human0/flags10": {
+      "cases": 1024,
+      "matches": 32,
+      "mismatches": 992
+    },
+    "active0/player1/human0/flags11": {
+      "cases": 1024,
+      "matches": 32,
+      "mismatches": 992
+    },
+    "active0/player1/human1/flags00": {
+      "cases": 1024,
+      "matches": 1,
+      "mismatches": 1023
+    },
+    "active0/player1/human1/flags01": {
+      "cases": 1024,
+      "matches": 1,
+      "mismatches": 1023
+    },
+    "active0/player1/human1/flags10": {
+      "cases": 1024,
+      "matches": 1,
+      "mismatches": 1023
+    },
+    "active0/player1/human1/flags11": {
+      "cases": 1024,
+      "matches": 1,
+      "mismatches": 1023
+    },
+    "active1/player0/human0/flags00": {
+      "cases": 1024,
+      "matches": 128,
+      "mismatches": 896
+    },
+    "active1/player0/human0/flags01": {
+      "cases": 1024,
+      "matches": 128,
+      "mismatches": 896
+    },
+    "active1/player0/human0/flags10": {
+      "cases": 1024,
+      "matches": 1024,
+      "mismatches": 0
+    },
+    "active1/player0/human0/flags11": {
+      "cases": 1024,
+      "matches": 1024,
+      "mismatches": 0
+    },
+    "active1/player0/human1/flags00": {
+      "cases": 1024,
+      "matches": 16,
+      "mismatches": 1008
+    },
+    "active1/player0/human1/flags01": {
+      "cases": 1024,
+      "matches": 128,
+      "mismatches": 896
+    },
+    "active1/player0/human1/flags10": {
+      "cases": 1024,
+      "matches": 128,
+      "mismatches": 896
+    },
+    "active1/player0/human1/flags11": {
+      "cases": 1024,
+      "matches": 1024,
+      "mismatches": 0
+    },
+    "active1/player1/human0/flags00": {
+      "cases": 1024,
+      "matches": 128,
+      "mismatches": 896
+    },
+    "active1/player1/human0/flags01": {
+      "cases": 1024,
+      "matches": 1024,
+      "mismatches": 0
+    },
+    "active1/player1/human0/flags10": {
+      "cases": 1024,
+      "matches": 128,
+      "mismatches": 896
+    },
+    "active1/player1/human0/flags11": {
+      "cases": 1024,
+      "matches": 1024,
+      "mismatches": 0
+    },
+    "active1/player1/human1/flags00": {
+      "cases": 1024,
+      "matches": 16,
+      "mismatches": 1008
+    },
+    "active1/player1/human1/flags01": {
+      "cases": 1024,
+      "matches": 128,
+      "mismatches": 896
+    },
+    "active1/player1/human1/flags10": {
+      "cases": 1024,
+      "matches": 128,
+      "mismatches": 896
+    },
+    "active1/player1/human1/flags11": {
+      "cases": 1024,
+      "matches": 1024,
+      "mismatches": 0
+    }
+  },
+  "first_mismatches": {
+    "active0/player0/human0/flags00": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        5,
+        0
+      ]
+    },
+    "active0/player0/human0/flags01": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        5,
+        0
+      ]
+    },
+    "active0/player0/human0/flags10": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        5,
+        0
+      ]
+    },
+    "active0/player0/human0/flags11": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        5,
+        0
+      ]
+    },
+    "active0/player0/human1/flags00": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "active0/player0/human1/flags01": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "active0/player0/human1/flags10": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "active0/player0/human1/flags11": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "active0/player1/human0/flags00": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        5,
+        0
+      ]
+    },
+    "active0/player1/human0/flags01": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        5,
+        0
+      ]
+    },
+    "active0/player1/human0/flags10": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        5,
+        0
+      ]
+    },
+    "active0/player1/human0/flags11": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        5,
+        0
+      ]
+    },
+    "active0/player1/human1/flags00": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "active0/player1/human1/flags01": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "active0/player1/human1/flags10": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "active0/player1/human1/flags11": {
+      "port0": 0,
+      "port1": 0,
+      "source": [
+        10,
+        1,
+        5,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "active1/player0/human0/flags00": {
+      "port0": 0,
+      "port1": 1,
+      "source": [
+        8,
+        0,
+        5,
+        0
+      ],
+      "native": [
+        1,
+        0,
+        5,
+        0
+      ]
+    },
+    "active1/player0/human0/flags01": {
+      "port0": 0,
+      "port1": 1,
+      "source": [
+        8,
+        0,
+        5,
+        0
+      ],
+      "native": [
+        1,
+        0,
+        5,
+        0
+      ]
+    },
+    "active1/player0/human1/flags00": {
+      "port0": 0,
+      "port1": 1,
+      "source": [
+        8,
+        0,
+        0,
+        0
+      ],
+      "native": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "active1/player0/human1/flags01": {
+      "port0": 0,
+      "port1": 1,
+      "source": [
+        8,
+        0,
+        0,
+        0
+      ],
+      "native": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "active1/player0/human1/flags10": {
+      "port0": 1,
+      "port1": 0,
+      "source": [
+        0,
+        0,
+        8,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "active1/player1/human0/flags00": {
+      "port0": 1,
+      "port1": 0,
+      "source": [
+        8,
+        0,
+        5,
+        0
+      ],
+      "native": [
+        1,
+        0,
+        5,
+        0
+      ]
+    },
+    "active1/player1/human0/flags10": {
+      "port0": 1,
+      "port1": 0,
+      "source": [
+        8,
+        0,
+        5,
+        0
+      ],
+      "native": [
+        1,
+        0,
+        5,
+        0
+      ]
+    },
+    "active1/player1/human1/flags00": {
+      "port0": 0,
+      "port1": 1,
+      "source": [
+        0,
+        0,
+        8,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "active1/player1/human1/flags01": {
+      "port0": 0,
+      "port1": 1,
+      "source": [
+        0,
+        0,
+        8,
+        0
+      ],
+      "native": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "active1/player1/human1/flags10": {
+      "port0": 1,
+      "port1": 0,
+      "source": [
+        8,
+        0,
+        0,
+        0
+      ],
+      "native": [
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "source_findings": [
+    "$0104=0 branches directly to $1703 and preserves all four input buffers",
+    "$03 selects active controller, $42CA gates the other controller",
+    "$1383/X flag zero selects the $4A85 direction conversion; its device meaning is not inferred"
+  ],
+  "native_findings": [
+    "Current source_actor_field writes active inputs even when $0104=0",
+    "Current native seam bypasses the $1383 controller-flag conversion"
+  ],
+  "unresolved": [
+    "Reachability of non-default selector flags in the exposed Amiga UI",
+    "Full hardware IRQ stack, caller PC, palette/raster prologue and actual physical input phase"
+  ],
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "tests/source_irq_audit_bridge.c",
+      "sha256": "3245102b28863a15b36daf7f74565d20edc54f639a82a38498a1803233e5892a"
+    },
+    {
+      "path": "tools/audit_c64_irq_contract.py",
+      "sha256": "617d102b8c130264974010f56af0b9b720e61ebe344b225d7fc1ef52b3a06d6b"
+    }
+  ],
+  "controlled_full_irq_cases": 16,
+  "controlled_full_irq_sha256": "901b439527654018f4a51ffe70b39716ecb284d32c7803e873f4614faa94d40d"
+}

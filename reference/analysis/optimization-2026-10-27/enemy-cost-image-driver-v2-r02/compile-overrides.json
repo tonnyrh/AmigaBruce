@@ -1,0 +1,32 @@
+{
+  "production_changed": false,
+  "variant": "image-driver-v2",
+  "actual_private_inputs": [
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2/c64_actor_programs.h",
+      "archived": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/c64_actor_programs.h",
+      "sha256": "6b10da847aedf3f47cb09c2ca1fa1a1fdf538ca12f79a096b185d75a54300739"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2/c64_rooms.c",
+      "archived": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/c64_rooms.c",
+      "sha256": "140b1d4d05fd2597414ce68da671275b47228360e45f95d9c556680c948bcf97"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2/image_driver.h",
+      "archived": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/image_driver.h",
+      "sha256": "445dca3cbe2482866e1a097618ad5245a2dfc1eda6725fa50b8165d5d23a18cf"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/image-driver-v2-build.ps1",
+      "archived": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/image-driver-v2-build.ps1",
+      "sha256": "20dacbdfe5b3ce9674884d8e323df9c2651002f7e19c9d2e1a527e433359a8a7"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/main.c",
+      "archived": "reference/analysis/optimization-2026-10-27/enemy-cost-image-driver-v2-r02/compiled-inputs/main.c",
+      "sha256": "18bbff5da0c3ba7120abaf35b797173b171b4ec2f7cf7880308d465a91edc103"
+    }
+  ],
+  "note": "These override the canonical production paths recorded by the generic benchmark harness. No original-playthrough claim."
+}

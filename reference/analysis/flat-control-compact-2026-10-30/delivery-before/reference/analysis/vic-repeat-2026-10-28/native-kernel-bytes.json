@@ -1,0 +1,43 @@
+{
+  "status": "passed_identical_native_vic_kernel_bytes",
+  "kernels": {
+    "bl_vic_repeat": {
+      "bytes": 352,
+      "sha256": "8670f8c4e34321bd7926a46ecfc403b52ddc989ab3f500987c446ce593b3c2ab"
+    },
+    "bl_vic_equal63": {
+      "bytes": 88,
+      "sha256": "ac5e7f32f3d106e14213cc57ba999edbb515bb8169ccdffb96db88156a73533a"
+    }
+  },
+  "builds": [
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-repeat-scoped-final-timing/bruce_test.elf",
+      "sha256": "c71cf635fa230245b82b25954dc335959eb6b613937e043a061d3ffefc9c0d62"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-repeat-scoped-final-profile/bruce_test.elf",
+      "sha256": "23d6444a9c7bb11e1ccced2eb36aa532826346af25b7979ad2aa74118f4900ca"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/24ce92aab8cc-76d646994c62/bruce_test.elf",
+      "sha256": "cb8a5614641993c679ff6cb41c08852b7cc4574c54dcbb61afe476c6650af56c"
+    }
+  ],
+  "natural_playthrough": false,
+  "scope": "Exact linked helper machine code in normal, timing, profile and full fixture images; diagnostic reference code is separate",
+  "source_files": [
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2"
+    },
+    {
+      "path": "tools/audit_vic_native_kernels.py",
+      "sha256": "475ffe77dd6cc4758d1d18eca9a267a7804ccb63267264a3b541057f8a1f4481"
+    }
+  ]
+}

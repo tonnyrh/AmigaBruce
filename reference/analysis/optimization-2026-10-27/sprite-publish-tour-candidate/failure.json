@@ -1,0 +1,8 @@
+{
+  "status": "rejected_diagnostic_allocation_failure_before_gameplay",
+  "source_steps": 0,
+  "frames": 0,
+  "production_changed": false,
+  "normal_exe_sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811",
+  "reason": "Extra native code crossed diagnostic memory headroom; not a valid timing route"
+}

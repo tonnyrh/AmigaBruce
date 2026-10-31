@@ -1,0 +1,24 @@
+{
+  "id": "RENDER-COHERENCE-0001",
+  "date": "2026-10-29",
+  "status": "candidate_code_derived_scoped_native_verified",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "source_ranges": [
+    "$2C92-$2D54"
+  ],
+  "condition": "Cached source glyph rectangles validate against current source phase and screen/color content; masked edges retain neighboring scene pixels",
+  "effect": "One coherent source animation phase per presented frame; hidden initial buffer; HUD clearing stays above the source playfield; no source RAM mutation",
+  "artifacts": [
+    {
+      "path": "docs/RENDER_COHERENCE.md",
+      "sha256": "370ce4e7d0dd078efabf6974eea3e46b23409fe38dd9153d20544931c1653f5c"
+    },
+    {
+      "path": "reference/validation/render-coherence.json",
+      "sha256": "438a00f1c0287a21324550ebdc19ee99fe747d295e4516dc12c983c6faebb8e5"
+    }
+  ]
+}

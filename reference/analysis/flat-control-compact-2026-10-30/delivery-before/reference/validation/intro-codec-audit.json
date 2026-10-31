@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-24",
+  "decoder": "Independent Python3.10 audioop.adpcm2lin + lin2lin",
+  "result": "passed_byte_for_byte",
+  "samples": 26460,
+  "scope": "IMA ADPCM interoperability and signed8 conversion; not listening approval",
+  "files": [
+    {
+      "path": "amiga/intro_audio_data.h",
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b"
+    },
+    {
+      "path": "assets/audio/intro-v1/kiai-paula.wav",
+      "sha256": "a582ac70fad86c58cfc284329f617c16940835f3d2c07aadc9bbc5f4a14bd216"
+    }
+  ]
+}

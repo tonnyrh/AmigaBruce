@@ -1,0 +1,23 @@
+{
+  "status": "isolated_compiler_candidate",
+  "production_changed": false,
+  "before_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+  "changes": [
+    [
+      "static void source_contact_pointers(void){",
+      "SOURCE_INLINE void source_contact_pointers(void){"
+    ],
+    [
+      "static void source_contact_body(void){",
+      "SOURCE_INLINE void source_contact_body(void){"
+    ],
+    [
+      "static unsigned char source_contact_rows_inner(void){",
+      "SOURCE_INLINE unsigned char source_contact_rows_inner(void){"
+    ]
+  ],
+  "limits": [
+    "Only forced inlining; source instructions and function bodies unchanged",
+    "Must reject if code growth or complete measured workload regresses"
+  ]
+}

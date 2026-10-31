@@ -1,0 +1,20 @@
+{
+  "status": "measured_selector_only_total_unchanged",
+  "files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "063d34f0e0cb3ee169d1ca3995ebd041fcb10012bf7a3b5fd411d70752199d2b"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "465cbc51bb6125c413f6a8858036f11f3a1de6c3a51c01b10b5a697dde7d88c0"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "ae89a8257d41a264632451b406088928aefe097f897b41ea6b92651df7a80bce"
+    }
+  ],
+  "timing": "reference/analysis/optimization-2026-10-27/contact-segment-native-pilot2-timing/identity.json",
+  "active_fields": 1428,
+  "source_steps": 360
+}

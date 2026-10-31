@@ -1,0 +1,31 @@
+{
+  "status": "passed_scoped_source_color_store_change",
+  "original_bytes_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "changed_engine_sources": [
+    "core/c64_actor_programs.h",
+    "core/c64_rooms.c",
+    "tools/build_c64_rooms.py"
+  ],
+  "unchanged_source_rules_outside_slice": true,
+  "extra_production_bss": 0,
+  "source_cases": 7424,
+  "renderer_cases": 192,
+  "artifacts": [
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/before/manifest.json",
+      "sha256": "6639a959d5b31420b524a496347a1602a1750541ac00d0b9d1cd1ca53624518e"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/host.json",
+      "sha256": "f0c67ea2149f26cdc7774946da4a2dbf9bc42918c92817c742cf7dc083cf9d22"
+    },
+    {
+      "path": "reference/analysis/final-colors-2026-10-30/source-disassembly.txt",
+      "sha256": "bc36d9b8ebbf8698f7236a7de484ce2f69cb597e27de2622776fdc2382eb4101"
+    }
+  ],
+  "limits": [
+    "Bounded source slice and old/new renderer metadata controls",
+    "Native controls, normal build, all-room timing and final acceptance remain separate"
+  ]
+}

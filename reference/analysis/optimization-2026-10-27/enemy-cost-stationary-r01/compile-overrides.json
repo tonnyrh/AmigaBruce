@@ -1,0 +1,27 @@
+{
+  "production_changed": false,
+  "variant": "stationary",
+  "actual_private_inputs": [
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary/c64_actor_programs.h",
+      "archived": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/compiled-inputs/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary/c64_rooms.c",
+      "archived": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/compiled-inputs/c64_rooms.c",
+      "sha256": "a9de1f880b5def46ae7f06225bef037738ee7ec2d9548358275b97c5fd94c216"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary/main.c",
+      "archived": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/compiled-inputs/main.c",
+      "sha256": "4641939739db2c9ef9aa728d3210dfa506b40441602f3451ff10ae1b7913aaaf"
+    },
+    {
+      "path": "reference/analysis/enemy-cost-2026-10-30/stationary-build.ps1",
+      "archived": "reference/analysis/optimization-2026-10-27/enemy-cost-stationary-r01/compiled-inputs/stationary-build.ps1",
+      "sha256": "76e682ad5b4db9bd69a50df20cefee64cd26b5b0744b64fc53cdd9cd1c724a03"
+    }
+  ],
+  "note": "These override the canonical production paths recorded by the generic benchmark harness. No original-playthrough claim."
+}

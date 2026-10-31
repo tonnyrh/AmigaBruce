@@ -1,0 +1,34 @@
+{
+  "selected_fast_cases": 32,
+  "status": "passed_disjoint_sprite_copy_source_bytes",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "checks": 1872,
+  "instructions": 485136,
+  "brk_controls": 312,
+  "alias_controls": 568,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "scope": "Full64KiB/register/return comparisons; injected widths/heights, byte Y/SP, source/count/destination aliases and wrapping sources",
+  "source_files": [
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/candidate/c64_rooms.c",
+      "sha256": "ed749230a026524395c24bec4f29920c1f4bc1e56f4adddd79f198ad1dd9b89c"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
+    },
+    {
+      "path": "tools/verify_source_sprite_copy.py",
+      "sha256": "12a6b8598c1e2d5ba5edf4ce19f4975de65c6542b42959a8a799914e561fc17a"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    }
+  ]
+}

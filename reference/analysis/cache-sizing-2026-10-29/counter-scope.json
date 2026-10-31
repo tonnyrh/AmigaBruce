@@ -1,0 +1,32 @@
+{
+  "method": "source_audio_start emits an immediate tick; source_audio_service accumulates gap including title and SFX; elapsed+starts-missed equals processed title+SFX ticks. Do not infer game-only time by blindly subtracting120.",
+  "runs": [
+    {
+      "run": "cache-size-before-timing",
+      "total_elapsed": 1430,
+      "start_ticks": 2,
+      "missed": 9,
+      "sfx_processed": 1303,
+      "title_processed": 120,
+      "accounting_identity_verified": true
+    },
+    {
+      "run": "cache-size-512-timing",
+      "total_elapsed": 1424,
+      "start_ticks": 2,
+      "missed": 11,
+      "sfx_processed": 1295,
+      "title_processed": 120,
+      "accounting_identity_verified": true
+    },
+    {
+      "run": "cache-size-512-lookup-timing",
+      "total_elapsed": 1426,
+      "start_ticks": 2,
+      "missed": 1,
+      "sfx_processed": 1307,
+      "title_processed": 120,
+      "accounting_identity_verified": true
+    }
+  ]
+}

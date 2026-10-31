@@ -1,0 +1,277 @@
+{
+  "status": "passed_scoped_capacity_and_saturation_controls",
+  "natural_playthrough": false,
+  "source_steps_per_room": 120,
+  "cases": [
+    {
+      "capacity": 512,
+      "rooms": [
+        {
+          "room": 1,
+          "protected": 141,
+          "uncached": 0,
+          "final_room": 1
+        },
+        {
+          "room": 2,
+          "protected": 117,
+          "uncached": 0,
+          "final_room": 2
+        },
+        {
+          "room": 3,
+          "protected": 146,
+          "uncached": 0,
+          "final_room": 3
+        },
+        {
+          "room": 4,
+          "protected": 92,
+          "uncached": 0,
+          "final_room": 4
+        },
+        {
+          "room": 5,
+          "protected": 68,
+          "uncached": 0,
+          "final_room": 5
+        },
+        {
+          "room": 6,
+          "protected": 64,
+          "uncached": 0,
+          "final_room": 6
+        },
+        {
+          "room": 7,
+          "protected": 72,
+          "uncached": 0,
+          "final_room": 7
+        },
+        {
+          "room": 8,
+          "protected": 54,
+          "uncached": 0,
+          "final_room": 8
+        },
+        {
+          "room": 9,
+          "protected": 60,
+          "uncached": 0,
+          "final_room": 9
+        },
+        {
+          "room": 10,
+          "protected": 64,
+          "uncached": 0,
+          "final_room": 10
+        },
+        {
+          "room": 11,
+          "protected": 89,
+          "uncached": 0,
+          "final_room": 11
+        },
+        {
+          "room": 12,
+          "protected": 58,
+          "uncached": 0,
+          "final_room": 12
+        },
+        {
+          "room": 13,
+          "protected": 100,
+          "uncached": 0,
+          "final_room": 13
+        },
+        {
+          "room": 14,
+          "protected": 36,
+          "uncached": 0,
+          "final_room": 14
+        },
+        {
+          "room": 15,
+          "protected": 120,
+          "uncached": 0,
+          "final_room": 15
+        },
+        {
+          "room": 16,
+          "protected": 69,
+          "uncached": 0,
+          "final_room": 16
+        },
+        {
+          "room": 17,
+          "protected": 86,
+          "uncached": 0,
+          "final_room": 17
+        },
+        {
+          "room": 18,
+          "protected": 55,
+          "uncached": 0,
+          "final_room": 18
+        },
+        {
+          "room": 19,
+          "protected": 162,
+          "uncached": 0,
+          "final_room": 19
+        },
+        {
+          "room": 20,
+          "protected": 80,
+          "uncached": 0,
+          "final_room": 20
+        }
+      ]
+    },
+    {
+      "capacity": 16,
+      "rooms": [
+        {
+          "room": 1,
+          "protected": 16,
+          "uncached": 713,
+          "final_room": 1
+        },
+        {
+          "room": 2,
+          "protected": 16,
+          "uncached": 732,
+          "final_room": 2
+        },
+        {
+          "room": 3,
+          "protected": 16,
+          "uncached": 733,
+          "final_room": 3
+        },
+        {
+          "room": 4,
+          "protected": 16,
+          "uncached": 725,
+          "final_room": 4
+        },
+        {
+          "room": 5,
+          "protected": 16,
+          "uncached": 635,
+          "final_room": 5
+        },
+        {
+          "room": 6,
+          "protected": 16,
+          "uncached": 332,
+          "final_room": 6
+        },
+        {
+          "room": 7,
+          "protected": 16,
+          "uncached": 530,
+          "final_room": 7
+        },
+        {
+          "room": 8,
+          "protected": 16,
+          "uncached": 464,
+          "final_room": 8
+        },
+        {
+          "room": 9,
+          "protected": 16,
+          "uncached": 520,
+          "final_room": 9
+        },
+        {
+          "room": 10,
+          "protected": 16,
+          "uncached": 405,
+          "final_room": 10
+        },
+        {
+          "room": 11,
+          "protected": 16,
+          "uncached": 627,
+          "final_room": 11
+        },
+        {
+          "room": 12,
+          "protected": 16,
+          "uncached": 626,
+          "final_room": 12
+        },
+        {
+          "room": 13,
+          "protected": 16,
+          "uncached": 625,
+          "final_room": 13
+        },
+        {
+          "room": 14,
+          "protected": 16,
+          "uncached": 226,
+          "final_room": 14
+        },
+        {
+          "room": 15,
+          "protected": 16,
+          "uncached": 751,
+          "final_room": 15
+        },
+        {
+          "room": 16,
+          "protected": 16,
+          "uncached": 480,
+          "final_room": 16
+        },
+        {
+          "room": 17,
+          "protected": 16,
+          "uncached": 693,
+          "final_room": 17
+        },
+        {
+          "room": 18,
+          "protected": 16,
+          "uncached": 287,
+          "final_room": 18
+        },
+        {
+          "room": 19,
+          "protected": 16,
+          "uncached": 573,
+          "final_room": 19
+        },
+        {
+          "room": 20,
+          "protected": 16,
+          "uncached": 346,
+          "final_room": 20
+        }
+      ]
+    }
+  ],
+  "synthetic_full_keys": 880,
+  "epoch_wraps_per_capacity": 16,
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "750df5e5c1a4e2ddfbb010c6b00b8d2302a8e97993739d95f7bc20ae00c3540c"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "2b5b9bff847fd443fa90084946f0f0a848d743f2f6ac651a6191bdb59f7f6da6"
+    },
+    {
+      "path": "tests/cache_capacity_bridge.c",
+      "sha256": "09d9f44cdffc438c787f4769dd8c1e923f1466b4eecc89bfb9a38ced854e444a"
+    },
+    {
+      "path": "tests/source_paint_bridge.c",
+      "sha256": "71ab69cc2ec5fc91027619913992bdb1affe678d88ee8ee2e3f19df1758e7443"
+    }
+  ]
+}

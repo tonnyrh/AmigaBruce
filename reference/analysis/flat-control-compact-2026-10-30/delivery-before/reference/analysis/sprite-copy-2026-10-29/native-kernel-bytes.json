@@ -1,0 +1,49 @@
+{
+  "status": "passed_identical_sprite_kernel_and_entry_gate",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "bytes": 250,
+  "sha256": "0fe481c8aad05fec8acc29577de2bc745322d9ee9a5fc899e8e0b8d00965c927",
+  "builds": [
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/vic-cache-wrapped-timing/bruce_test.elf",
+      "sha256": "041e137a9d6b6e75e1d8ef96adf0ae9b5aad2146f82b5e42f14a1fe0c5c1c060"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-copy-final-timing/bruce_test.elf",
+      "sha256": "86ea845101ca1c0f4302bb0d82c54eb87edd14c1b2b0b77310fc5bb443014386"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-copy-final2-profile/bruce_test.elf",
+      "sha256": "88124b0b1d4c8f94d1a1c3b633190e91fd8636a97cc1b8cf09235c5653284d0c"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/native-builds/24ce92aab8cc-76d646994c62/bruce_test.elf",
+      "sha256": "cb8a5614641993c679ff6cb41c08852b7cc4574c54dcbb61afe476c6650af56c"
+    }
+  ],
+  "rejected_entry_counterexample": {
+    "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped-controls/bruce_test.elf",
+    "sha256": "6674b9a79bb207d4d4d5ce82f86db7f9c32ffbc7d1044270245fbfae1e869e11"
+  },
+  "entry_gate_rejects_real_counterexample": true,
+  "scope": "Same linked68000 helper in normal, separate256-control, timing, profile and full53-fixture images",
+  "natural_playthrough": false,
+  "source_files": [
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "tools/verify_amiga_entry.py",
+      "sha256": "857be561143af60741a1db39ab6044799cd5c11413c34a81d76e7d97dce3aea8"
+    },
+    {
+      "path": "tools/audit_sprite_native_kernel.py",
+      "sha256": "dd86b08e427906f4017f6d86db51d8ae937234638521a82c6774e1ab55d4195e"
+    }
+  ]
+}

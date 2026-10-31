@@ -1,0 +1,25 @@
+{
+  "builds": [
+    {
+      "path": "reference/analysis/vic-cache-2026-10-29/before/amiga/out/bruce_amiga.elf",
+      "sha256": "560d2b292f2818a3e0d7df616d0b6e0a6c3cdb90a0dc6366c63bc650fd78486a",
+      "sections": {
+        ".text": 193726,
+        ".rodata": 78932,
+        ".data": 9,
+        ".bss": 171088
+      }
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "15d131802916d9a70664eec558beb47d913771e04c808e7c596a470e24ac47c2",
+      "sections": {
+        ".text": 193712,
+        ".rodata": 78932,
+        ".data": 9,
+        ".bss": 171088
+      }
+    }
+  ],
+  "scope": "ELF loadable section sizes; not a new physical allocation or stack certificate"
+}

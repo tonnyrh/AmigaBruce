@@ -1,0 +1,111 @@
+{
+  "status": "passed_scoped_publication_guard",
+  "source_gameplay_unchanged": true,
+  "accepted_raster_lines": [
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308
+  ],
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "normal_exe_sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811",
+  "normal_elf_sha256": "1d602c141d525a01d281b6e8e7db00a814078205b8ea693be13bbc24f734f7cb",
+  "main_sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185",
+  "renderer_derivation": {
+    "status": "passed_exact_renderer_source_derivation",
+    "publication_applied": true,
+    "color_observer_applied": true,
+    "main_sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185",
+    "core_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+    "candidate_sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+    "effective_prior_main": {
+      "path": "reference/analysis/publication-2026-10-30/before/amiga/main.c",
+      "sha256": "f59554ba211b9034648d0bb2f7ff053b1d73b2450dd5356742a04dcb7e09b5e0"
+    },
+    "effective_prior_core": {
+      "path": "reference/analysis/audio-lookup-2026-10-30/before/core/c64_rooms.c",
+      "sha256": "9fa114e2c7a9e56ff7dc7105cee70343c68ba112ace8a4433bb46f68e74be2eb"
+    },
+    "source_cases": 7424,
+    "renderer_cases": 192,
+    "observer_domain_cases": 4096,
+    "gameplay_rules_outside_observer_unchanged": true,
+    "extra_service_points": 0,
+    "extra_production_bss": 0,
+    "realtime_accepted": false
+  },
+  "native_tour": {
+    "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour/identity.json",
+    "sha256": "eb013cf2df5b78d19ddde5cc46fef9c983e31aadca9d2b18fb5c9dbb097be4af",
+    "rooms": 20,
+    "present_min_line": "300",
+    "present_max_line": "301",
+    "bad_fields": "0",
+    "room12": {
+      "lines": 130734,
+      "animation_bytes": 52224,
+      "slow_largest": 984,
+      "fields": 418,
+      "steps": 120,
+      "drawn": 117,
+      "room": 12,
+      "held": 114,
+      "preparation_lines": 60951,
+      "chip_largest": 77976,
+      "missed": 0
+    }
+  },
+  "render_samples": [
+    {
+      "label": "incident-current-r12",
+      "samples": 12,
+      "sha256": "906b7737c7e2d731e740f4e5a0049a780d1986cc0916dd55534ca414cc61cf83",
+      "mixed_phase_samples": 0,
+      "static_errors": 0,
+      "controlled_death": null,
+      "roundtrip": false
+    },
+    {
+      "label": "observer-native",
+      "samples": 12,
+      "sha256": "e06c4d07b3bb59de40ef357f79dd6a854d717effbe9d66174d216f9a9c15bc73",
+      "mixed_phase_samples": 0,
+      "static_errors": 0,
+      "controlled_death": null,
+      "roundtrip": false
+    },
+    {
+      "label": "observer-native-death",
+      "samples": 12,
+      "sha256": "02260883383fe068f2baa9f0a1e7f60129c57ccdb5428bb611dc4972b6a7948d",
+      "mixed_phase_samples": 0,
+      "static_errors": 0,
+      "controlled_death": {
+        "injected_source_fields": {
+          "$D1": 255,
+          "$BF": 25,
+          "$CE": 1
+        },
+        "loader_epoch_before": 4,
+        "loader_epoch_after": 5
+      },
+      "roundtrip": true
+    }
+  ],
+  "paint_controls": [
+    "repaint_consumed_cell_after_source_mutation",
+    "full880_queue_repeated_mutation_coalescing",
+    "60_full_room_loads_exact_pixels",
+    "96_room12_source_steps_single_phase_overlay",
+    "source_ram_unchanged_by_overlay",
+    "changed_cell_invalidates_overlay_rectangle"
+  ],
+  "source_freeze_sha256": "5686c95016425cf5a8e4657043fffee2831a9b68209f75ba31a318b15cd6abc8"
+}

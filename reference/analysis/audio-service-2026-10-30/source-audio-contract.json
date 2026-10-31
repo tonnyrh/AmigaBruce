@@ -1,0 +1,24 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "rules": [
+    {
+      "address": "$4915",
+      "bytes": "20 A8 15",
+      "effect": "Game raster handler calls $15A8"
+    },
+    {
+      "address": "$15A8-$15B7",
+      "bytes": "d8a9008544a6292003eb2073ef2073f0",
+      "effect": "CLD; clear$44; X=room; drivers$EB03,$EF73,$F073 in that order"
+    },
+    {
+      "address": "$1BC2/$1676",
+      "effect": "Main step sets$48=3; existing field tail decrements$48. Candidate does not alter those writes or field-call count"
+    }
+  ],
+  "limits": [
+    "SID slot is source-derived; natural interrupt PC/phase and mask distribution remain open",
+    "Complete-field poll reuses existing Amiga active/busy/same-field guards; it is not a full source IRQ integration"
+  ]
+}

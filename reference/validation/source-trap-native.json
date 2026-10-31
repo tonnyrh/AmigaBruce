@@ -2,7 +2,7 @@
   "status": "passed_owned_r06_negative_phase_trap_pixels",
   "binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "feb553d0bfd04277622ea23dedeec8ad65b550e111e0216c5dd97b81a7fcfa62"
+    "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
   },
   "source_files": [
     {
@@ -11,18 +11,37 @@
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "b97373e6e4892ab59194149c2cbde80e20b1ceeb9998015529ff972157289a27"
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
     },
     {
       "path": "amiga/main.c",
-      "sha256": "871640d5964d33e31efab1cc4d6f960f8ed383a49affe8af10e729c889747da6"
+      "sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185"
     }
   ],
   "samples": [
     {
-      "phase_before": 227,
+      "phase_before": 230,
+      "phase_source": 231,
+      "phase_after": 232,
+      "source_column": 1,
+      "background_mismatches": 0,
+      "buffers": [
+        {
+          "buffer": 0,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        },
+        {
+          "buffer": 1,
+          "actor_intersects_roi": false,
+          "mismatches": 0
+        }
+      ]
+    },
+    {
+      "phase_before": 228,
       "phase_source": 228,
-      "phase_after": 229,
+      "phase_after": 230,
       "source_column": 1,
       "background_mismatches": 0,
       "buffers": [
@@ -39,28 +58,9 @@
       ]
     },
     {
-      "phase_before": 233,
-      "phase_source": 234,
+      "phase_before": 234,
+      "phase_source": 235,
       "phase_after": 236,
-      "source_column": 1,
-      "background_mismatches": 0,
-      "buffers": [
-        {
-          "buffer": 0,
-          "actor_intersects_roi": false,
-          "mismatches": 0
-        },
-        {
-          "buffer": 1,
-          "actor_intersects_roi": false,
-          "mismatches": 0
-        }
-      ]
-    },
-    {
-      "phase_before": 227,
-      "phase_source": 227,
-      "phase_after": 228,
       "source_column": 1,
       "background_mismatches": 0,
       "buffers": [
@@ -86,51 +86,51 @@
   "artifacts": [
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-background.bpl",
-      "sha256": "5af00ae8c13390a3b4d1271cd8933f3c1649e160c352e6eb1acd0f5babbf17b5"
+      "sha256": "b2ef8555a6ae8ffb624a39bb6d8320a472365ffca8a873a4fdff02690e8d34dd"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-buffer0.bpl",
-      "sha256": "f289bde24f53bed1ad4efdafb93ec31b38f3fe8ae2603069591b945a0e1fef1a"
+      "sha256": "a6d1c584add915276666b4db8b2e1987b2d1f1fd9f24a8a819676b4c25edf4e0"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-buffer1.bpl",
-      "sha256": "553dbaba636b1907025c714a502537680e63e3b057faa809c27ac10cdbe55404"
+      "sha256": "a5642b5fdcb694ddfb55116132c665c2d110c7600c52d16418c6dbee8c02bd6c"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample0-source.bin",
-      "sha256": "184b680e873d404584a635e6df2828d28f2be32cf134bc0be95fdc60f13848d2"
+      "sha256": "ab816f625b5940a013ec3af558f627c883cd6ca1a626afef842155ab41c13f23"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-background.bpl",
-      "sha256": "e1feac533e4c7b6a34f519f9e2366aaead3445866f7495322fe89549e21e1a1e"
+      "sha256": "198b10ab51a664cbe7ea639ba7dbb45dd50f5bb5ae2c3a25db8fc2f5962361cd"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-buffer0.bpl",
-      "sha256": "2e174dac8ee7acd63939e9b9e6a912b2d713dbbd72e4ddb689caeebc4e97e71e"
+      "sha256": "853591c393ad5247c44f8664c98ac95aa1b944fa5d806d70030c2fb7379a3f9c"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-buffer1.bpl",
-      "sha256": "5359d16e241197a05b7ea5cbc84e0f7d49e1ed1cefa89ad2c871930539eb816e"
+      "sha256": "408e714e1492e50f31bd63347fdca463e75692e7b949f0fe904a28d33fb7d623"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample1-source.bin",
-      "sha256": "57e35f54ff7e9fa64dd4a6393477f5e72d61bc24df368498c608b9d067019b2d"
+      "sha256": "dcfaeabca414885b2419992372efa5e45f51d4f05a47eded1adac3ad6576903c"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-background.bpl",
-      "sha256": "7a00007332b5756466b56c79e57872b472cb7f6d59e0b1d94b25e7fd1a1393a8"
+      "sha256": "e82f853bdb8f31ff6d97cdd94e9d1af5515475767d89f425ed5fca065053b650"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-buffer0.bpl",
-      "sha256": "3ea835f82ee177a6c5314cbcd0f667e7e9e8ec7186631b891f45c61342821358"
+      "sha256": "294b816c47de546bb10a63b1e3b0e35bfc61e7a19d31eb9b69ff39ad4a92bb6e"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-buffer1.bpl",
-      "sha256": "30404608b19cf18f2c2eaa15711c1b2829eef3f3ea7483e352fd78b887ed67da"
+      "sha256": "93c8041cbc0b695dfe0a345335752125200e4a1da4704074ad9abece0c9f4dd7"
     },
     {
       "path": "reference/analysis/trap-r06-2026-10-28/native/sample2-source.bin",
-      "sha256": "bf354d686c68d0f2e06dc7eda614cc5dbd3ba3c06f8db775c435f6b0d35934f1"
+      "sha256": "0ec520a62c90e6a7a39cbb68196dc629bcecfe8c3af16664c58c1b88c5dda74f"
     }
   ],
   "natural_playthrough": false,

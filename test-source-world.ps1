@@ -1,6 +1,6 @@
 #Requires -Version 5.1
 [CmdletBinding()]
-param([switch]$SkipHost,[switch]$SkipBuild,[ValidateRange(900,30000)][int]$TestFrames=1200,[string]$EmulatorPath,[string]$EmulatorIni)
+param([switch]$SkipHost,[switch]$CombinedContactTest,[switch]$SkipBuild,[ValidateRange(900,30000)][int]$TestFrames=1200,[string]$EmulatorPath,[string]$EmulatorIni)
 $ErrorActionPreference='Stop'
 $taskRoot=$PSScriptRoot
 if(!$SkipHost){
@@ -12,10 +12,10 @@ if(!$SkipHost){
     if($LASTEXITCODE){throw 'Source fixture generation failed'}
 }
 if(!$SkipBuild){
-    & (Join-Path $taskRoot 'amiga-build.ps1') -Autotest -SourceWorldTest -TestFrames $TestFrames
+    & (Join-Path $taskRoot 'amiga-build.ps1') -Autotest -SourceWorldTest -SeparateContactTest:(!$CombinedContactTest) -TestFrames $TestFrames
 }
 $paths=@('amiga-build.ps1','amiga-run.ps1','test-source-world.ps1','test-c64-actors.ps1','tests/source_actor_fixture.h',
-    'tools/build_source_actor_fixture.py','tools/build_contact_class_kernel.py','tools/build_c64_actors.py','tools/build_c64_rooms.py',
+    'tools/verify_amiga_entry.py','tools/build_source_actor_fixture.py','tools/build_contact_class_kernel.py','tools/build_c64_actors.py','tools/native_actor_continuations.py','tools/build_c64_rooms.py',
     'tools/audit_c64_actor_chain.py','tools/audit_c64_world.py')
 $paths+=@(Get-ChildItem (Join-Path $taskRoot 'core'),(Join-Path $taskRoot 'amiga') -File | Where-Object {$_.Extension -in '.c','.h','.s'} | ForEach-Object {$_.FullName.Substring($taskRoot.Length+1).Replace('\','/')})
 $identity=@($paths | Sort-Object -Unique | ForEach-Object {@{path=$_;sha256=(Get-FileHash (Join-Path $taskRoot $_)).Hash.ToLower()}})
@@ -53,14 +53,17 @@ try{
         if($run[$key] -ne '0'){$failures+="$key=$($run[$key])"}
     }
     if($run['source_actor_fixture_cases'] -ne '53'){$failures+='Missing53 source controls'}
-    if($run['contact_kernel_cases'] -ne '454'){$failures+='Missing454 native contact kernel controls'}
+    $expectedContact=if($CombinedContactTest){'454'}else{'0'}
+    if($run['contact_kernel_cases'] -ne $expectedContact){$failures+='Incorrect contact reference count'}
+    if(!$CombinedContactTest -and $run['contact_reference_separate'] -ne '1'){$failures+='Separate native contact mode missing'}
+    if($run['sprite_copy_cases'] -ne '0'){$failures+='Unexpected separate sprite reference in full fixture image'}
     if($run['vic_repeat_cases'] -ne '0'){$failures+='Unexpected separate VIC repeat reference in full fixture image'}
     if($run['source_world_test'] -ne '1' -or $run['frames'] -ne [string]$TestFrames -or $run['restored_os'] -ne '1'){$failures+='Replay/restore incomplete'}
     if([int]$run['chip_largest_loaded'] -lt 49152){$failures+='Chip RAM margin below49152 bytes'}
     if($run['capture_original_hash'] -ne $run['capture_decoded_hash']){$failures+='Capture decode mismatch'}
     if($run['presentation_hold_fields'] -ne '3' -or [int]$run['max_held_image_streak'] -gt 3){$failures+='New presentation starved beyond its decision limit'}
     $output=[ordered]@{date='2026-10-27';status=$(if($failures.Count){'failed_native_source_contract'}else{'passed_scoped_native_source_contract'});
-        source_files=$identity;build=$build;run=$run;failures=$failures;
+        source_files=$identity;build=$build;run=$run;failures=$failures;contact_reference_separate=(!$CombinedContactTest);
         edition_verified=$false;natural_playthrough=$false;raster_exact=$false;
         realtime_contract_passed=([int]$run['max_gap_excluding_framebuffer_capture'] -le 1);
         limits=@('Controlled one-field-per-loop replay, not normal wall-clock input scheduling','53 injected whole-RAM/register controls, not a natural C64 playthrough','Frame drops remain a failed real-time acceptance item','Initial field gap includes pre-takeover fixtures and is not room-load latency')}

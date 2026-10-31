@@ -1,0 +1,59 @@
+{
+  "status": "passed_isolated_binary_sprite_publish_source_controls",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_cases": 21504,
+  "source_instructions": 1464315,
+  "unchanged_decimal_fallback_cases": 256,
+  "all_ram_and_registers": true,
+  "returned_pc_verified": true,
+  "production_changed": false,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "artifacts": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/candidate/c64_rooms.c",
+      "sha256": "93d48fab4028f510f60012040012723a87070974ef850a288771b6bec3bb40db"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/candidate/c64_actor_programs.h",
+      "sha256": "0c6414bfd074691ab0f4fd5e7d2dd536e555a13c86e6ccdedf1c464acd23a235"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/candidate/publish.h",
+      "sha256": "4e008765211195668adf1bf598ecb1eb4dff93dd01b291589bc57aa0f9e2d51e"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/bridge.c",
+      "sha256": "dcfc87780ce785b490dd0867d8ce67470e5643cefd3fb0f5ee507371a67c4ae9"
+    },
+    {
+      "path": "tools/verify_source_sprite_publish.py",
+      "sha256": "4edf0a0aa6fcf3d0b1d9f331e0c257a659a0201304872d1c5fb5a64d94437c04"
+    },
+    {
+      "path": "tools/build_sprite_publish_candidate.py",
+      "sha256": "f21c57095ed0bb24756a711eef575e457b4be1bafda83d6665af1c93ba65c97b"
+    },
+    {
+      "path": "test-source-sprite-publish.ps1",
+      "sha256": "c27e545ec741fd6287ad774c6ab0dfd751bfbe0d2531b1d082150e13db7b2707"
+    }
+  ],
+  "limits": [
+    "Controlled shadow-VIC inputs, not physical raster behavior",
+    "Decimal fallback compared before/after only, not certified against unknown decimal source states",
+    "No native execution or performance claim"
+  ]
+}

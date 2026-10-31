@@ -1,0 +1,33 @@
+
+C:\vscode\_EXT\AmigaBruceLee\amiga\out\bruce_amiga.elf:     file format elf32-m68k
+
+
+Disassembly of section .text:
+
+00004114 <present_frame.isra.0>:
+    4114:	2f0a           	move.l a2,-(sp)
+    4116:	4eb9 0000 3bae 	jsr 3bae <wait_blitter>
+    411c:	45f9 0000 3af0 	lea 3af0 <wait_frame>,a2
+    4122:	4e92           	jsr (a2)
+    4124:	2039 00df f004 	move.l dff004 <_end+0xd953a8>,d0
+    412a:	e088           	lsr.l #8,d0
+    412c:	0240 01ff      	andi.w #511,d0
+    4130:	0640 fed4      	addi.w #-300,d0
+    4134:	0c40 0008      	cmpi.w #8,d0
+    4138:	62e8           	bhi.s 4122 <present_frame.isra.0+0xe>
+    413a:	4a39 0004 0ab2 	tst.b 40ab2 <game_field_active>
+    4140:	671c           	beq.s 415e <present_frame.isra.0+0x4a>
+    4142:	4a39 0004 0ab0 	tst.b 40ab0 <game_field_loading>
+    4148:	6714           	beq.s 415e <present_frame.isra.0+0x4a>
+    414a:	4240           	clr.w d0
+    414c:	206f 0008      	movea.l 8(sp),a0
+    4150:	3140 0002      	move.w d0,2(a0)
+    4154:	23c8 00df f080 	move.l a0,dff080 <_end+0xd95424>
+    415a:	245f           	movea.l (sp)+,a2
+    415c:	4e75           	rts
+    415e:	303c 4200      	move.w #16896,d0
+    4162:	206f 0008      	movea.l 8(sp),a0
+    4166:	3140 0002      	move.w d0,2(a0)
+    416a:	23c8 00df f080 	move.l a0,dff080 <_end+0xd95424>
+    4170:	245f           	movea.l (sp)+,a2
+    4172:	4e75           	rts

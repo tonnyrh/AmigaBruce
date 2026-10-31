@@ -1,0 +1,777 @@
+{
+  "status": "passed_scoped_native_menu_publication",
+  "elf": {
+    "path": "C:\\vscode\\_EXT\\AmigaBruceLee\\amiga\\out\\bruce_amiga.elf",
+    "sha256": "343dbcaed8b7978bffb8ef691ca9f75073a8303f156742636c2a8e5765e3423a"
+  },
+  "snapshots_paused": true,
+  "natural_playthrough": false,
+  "source_ram_preserved_during_choices": true,
+  "partial_hidden_samples": 37,
+  "changed_partial_hidden_samples": 30,
+  "ram_states": [
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/menu-final/menu-source-0.bin",
+      "sha256": "78f17fb6e35311379026e344ad26cc1c7e5157619eff437e15637ce8868a2d91"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/menu-final/menu-source-1.bin",
+      "sha256": "78f17fb6e35311379026e344ad26cc1c7e5157619eff437e15637ce8868a2d91"
+    },
+    {
+      "path": "reference/analysis/menu-publication-2026-10-29/menu-final/menu-source-2.bin",
+      "sha256": "6e4f11ac6c05ea4a062bd4dc07f21f7601ff24bcaea9c75188cfeaf00de1dec6"
+    }
+  ],
+  "transitions": [
+    {
+      "key": "F3",
+      "config": {
+        "debug": false,
+        "players": 2,
+        "human": false,
+        "infinite": false,
+        "invincible": false,
+        "room": 0
+      },
+      "front_index": 0,
+      "expected_sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e"
+    },
+    {
+      "key": "F3",
+      "config": {
+        "debug": false,
+        "players": 1,
+        "human": false,
+        "infinite": false,
+        "invincible": false,
+        "room": 0
+      },
+      "front_index": 1,
+      "expected_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "key": "F5",
+      "config": {
+        "debug": false,
+        "players": 1,
+        "human": true,
+        "infinite": false,
+        "invincible": false,
+        "room": 0
+      },
+      "front_index": 0,
+      "expected_sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d"
+    },
+    {
+      "key": "F5",
+      "config": {
+        "debug": false,
+        "players": 1,
+        "human": false,
+        "infinite": false,
+        "invincible": false,
+        "room": 0
+      },
+      "front_index": 1,
+      "expected_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "key": "SHIFT_D",
+      "config": {
+        "debug": true,
+        "players": 1,
+        "human": false,
+        "infinite": false,
+        "invincible": false,
+        "room": 0
+      },
+      "front_index": 0,
+      "expected_sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175"
+    },
+    {
+      "key": "F1",
+      "config": {
+        "debug": true,
+        "players": 1,
+        "human": false,
+        "infinite": true,
+        "invincible": false,
+        "room": 0
+      },
+      "front_index": 1,
+      "expected_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385"
+    },
+    {
+      "key": "F2",
+      "config": {
+        "debug": true,
+        "players": 1,
+        "human": false,
+        "infinite": true,
+        "invincible": true,
+        "room": 0
+      },
+      "front_index": 0,
+      "expected_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "key": "F4",
+      "config": {
+        "debug": true,
+        "players": 1,
+        "human": false,
+        "infinite": true,
+        "invincible": true,
+        "room": 1
+      },
+      "front_index": 1,
+      "expected_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186"
+    },
+    {
+      "key": "F3",
+      "config": {
+        "debug": true,
+        "players": 1,
+        "human": false,
+        "infinite": true,
+        "invincible": true,
+        "room": 0
+      },
+      "front_index": 0,
+      "expected_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657"
+    },
+    {
+      "key": "F5",
+      "config": {
+        "debug": false,
+        "players": 1,
+        "human": false,
+        "infinite": true,
+        "invincible": true,
+        "room": 0
+      },
+      "front_index": 1,
+      "expected_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    }
+  ],
+  "starts": [
+    {
+      "menu_front": 1,
+      "game_buffer_sample": 1,
+      "source_fault": 0,
+      "players": 1
+    },
+    {
+      "menu_front": 0,
+      "game_buffer_sample": 1,
+      "source_fault": 0,
+      "players": 1
+    }
+  ],
+  "samples": [
+    {
+      "label": "initial",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change00-early",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "e2b6671e0e1a2c4df662f9c707cf976020e8e78572f3225c8e62e49f6e9076db",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change00-work",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "c1187dd763de18eab3c3487e9ed7d70239f5aa21b31e08df3dd970f2df28451b",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change00-work",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "41d4b3395eb448a47390a1ca6dbe7ab1743f12fc53a776edbcb7e161b77589fe",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change00-work",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "02b1c2234680617802901a77eae606ad02e4ddb4282ccbc60061eac5b2d90bba",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change00-done",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "65c76d4b032151a1634bf5f048d6e277002a2c2dd074efe9375272447d6a3b37",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change00-done",
+      "front_index": 0,
+      "front_sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e",
+      "hidden_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change01-early",
+      "front_index": 0,
+      "front_sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e",
+      "hidden_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change01-work",
+      "front_index": 0,
+      "front_sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e",
+      "hidden_sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change01-work",
+      "front_index": 0,
+      "front_sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e",
+      "hidden_sha256": "312a9e6b9e38f22adde4ec086c84249629c90ddfd1ccd296b3fdb1ca9bd32401",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change01-work",
+      "front_index": 0,
+      "front_sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e",
+      "hidden_sha256": "d2cd007ec13f128253bc520ab7b148aa5d14520337749a61c6b571b828a28b9a",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change01-done",
+      "front_index": 0,
+      "front_sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e",
+      "hidden_sha256": "93a463094b66df219068a0efa6cbabfdce09fb0b622648e62cd19e60b2a10738",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change01-done",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change02-early",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "8f93678f4c0d354dd6cc450829c4000eb16940f599f66e003c7ecd561cf2274e",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change02-work",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "dd27755187e712830fc17eb4a136dcc89a44b0c12c218d46e4dd4af219f8390c",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change02-work",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change02-work",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "0f3328dbe4a2ad8ef60233074941c54e951defe00662165635bec2bc499a3dd5",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change02-done",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "0c69bc2f8051a253df619cb1b17a3a3c897400b185a9cf8a571a138d523f9bc7",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change02-done",
+      "front_index": 0,
+      "front_sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d",
+      "hidden_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change03-early",
+      "front_index": 0,
+      "front_sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d",
+      "hidden_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change03-work",
+      "front_index": 0,
+      "front_sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d",
+      "hidden_sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change03-work",
+      "front_index": 0,
+      "front_sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d",
+      "hidden_sha256": "a68db81989a0f03eecb428aa467fec7af88018449ac119bb9892ba5a1121952e",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change03-work",
+      "front_index": 0,
+      "front_sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d",
+      "hidden_sha256": "cfc204c120bde37e0fc74de6602c3631a14d2881368b523f46d7e9e61cd489da",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change03-done",
+      "front_index": 0,
+      "front_sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d",
+      "hidden_sha256": "013848d071cef84d1067c31aa175bab9f35a2e5eae0ef792d4c74729529fdc6e",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change03-done",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change04-early",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "7c0ba64d0ff8269e8466d7e4ccedefb19d3ac341cf6a1f81cce698104308751d",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change04-work",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "9456fb46be2d24bd2787f27e7363fcb08f727e2ad56fc18243528b8f5df3df69",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change04-work",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "c6f20bbaace44493b3fffc12ba9832c1162257f516772851c94a483c4526c912",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change04-work",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change04-done",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "a22dbd24ebd6fd2d5e7b47c61e70ac13d546c25fa0c853cce265d7ad50d2adc5",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change04-done",
+      "front_index": 0,
+      "front_sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175",
+      "hidden_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change05-early",
+      "front_index": 0,
+      "front_sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175",
+      "hidden_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change05-work",
+      "front_index": 0,
+      "front_sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175",
+      "hidden_sha256": "3f5f40b9198bc5878520c7b248a56388b17e7cda27a8db9b6dce8891e2160571",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change05-work",
+      "front_index": 0,
+      "front_sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175",
+      "hidden_sha256": "bb0464343fff3c5483de6ee63418eabfc294d9031c4c205564351e612e74a059",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change05-work",
+      "front_index": 0,
+      "front_sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175",
+      "hidden_sha256": "0f3328dbe4a2ad8ef60233074941c54e951defe00662165635bec2bc499a3dd5",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change05-done",
+      "front_index": 0,
+      "front_sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175",
+      "hidden_sha256": "93b1a63341421bec22a52b1de8ba9fa7b65677157645b3c79ff80394c09561a2",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change05-done",
+      "front_index": 1,
+      "front_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385",
+      "hidden_sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change06-early",
+      "front_index": 1,
+      "front_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385",
+      "hidden_sha256": "3470e4ceeb2a94642f1672ee1d1e0561d8053704023a344e8709923db0327175",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change06-work",
+      "front_index": 1,
+      "front_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385",
+      "hidden_sha256": "f8a0ab3fa4045e0e2104cb8dfa155e989aff9834983a8d28af54ae6d03bf802c",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change06-work",
+      "front_index": 1,
+      "front_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385",
+      "hidden_sha256": "0f6a977a3ee24becd7cf50f3a8a0f2bce7718febc4889018b66c5c7ae95ce13d",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change06-work",
+      "front_index": 1,
+      "front_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385",
+      "hidden_sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change06-done",
+      "front_index": 1,
+      "front_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385",
+      "hidden_sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change06-done",
+      "front_index": 1,
+      "front_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385",
+      "hidden_sha256": "b1b9acb0fa18f95ed57d0e1b49a3f1196ad89e020bb8bc59d42cd4cd243a7c13",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change06-done",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change07-early",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "cb1f7888fe9fc32efe72aba65306a134eb717e3ed22ed9e69ba29080aa777385",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change07-work",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "21c3710915b39920fbe0c968051ecf7d3b2aa9f9874a3ca0b6ea9bf42c44ecc9",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change07-work",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "40cca68a8d6ca3642963a46b08a09572571d4507b4f7a402640d2d65703ad371",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change07-work",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change07-done",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change07-done",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "68ee551eb2f937bd0dcd46848bba2b121ebf2c64dfd7cffeaf75164407cd1686",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change07-done",
+      "front_index": 1,
+      "front_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186",
+      "hidden_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change08-early",
+      "front_index": 1,
+      "front_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186",
+      "hidden_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change08-work",
+      "front_index": 1,
+      "front_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186",
+      "hidden_sha256": "cd071e6279a11935098361fce30e92177acd04274de8cbb9cd08f698fbe6e987",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change08-work",
+      "front_index": 1,
+      "front_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186",
+      "hidden_sha256": "0f6a977a3ee24becd7cf50f3a8a0f2bce7718febc4889018b66c5c7ae95ce13d",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change08-work",
+      "front_index": 1,
+      "front_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186",
+      "hidden_sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change08-done",
+      "front_index": 1,
+      "front_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186",
+      "hidden_sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change08-done",
+      "front_index": 1,
+      "front_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186",
+      "hidden_sha256": "10cef1537c74e5d8eb52c1d416a2aa4c9e7d9a743642d35e8eee57c4eec18883",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change08-done",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change09-early",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "53ca0f1e18156ed97ad5f3a1476e854508e119522fd6c5011bda0e29c9e5c186",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change09-work",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "e80bfa404dbdcaf79f7a4bd90d3a4cde3ed2e47a61cb6601e243a5036b5324b5",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change09-work",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "f555ee22bc7be2f2479aa34f9b7be1363c5cf5fa9f46031b7230c27fca1fb7bf",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change09-work",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "173f0ef89ee5b35eaaab6a5dfbaec22b12d4232d972bf25ddd9dfa1f91fa88aa",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": true
+    },
+    {
+      "label": "change09-done",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "964fcbefd79561cfa313d101701aff30cc29e6d5a585a1a9afdda5524f9e79c1",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change09-done",
+      "front_index": 0,
+      "front_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "hidden_sha256": "0533ffbeb900af167dbcf3ee1f4cbdc86e973102ddb070b1df332c1ddcb373f3",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "change09-done",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "before-start",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "start-parity",
+      "front_index": 1,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "97f36b949bd9905b2716db9684816377057e1c9cb49eaa2e846c5fe077f34657",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "game-start",
+      "front_index": 1,
+      "front_sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47",
+      "hidden_sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "f10-return",
+      "front_index": 1,
+      "front_sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47",
+      "hidden_sha256": "d42966213759274e6526e4ade7f80f815227a0b9b7bb7adf795ebbf1793b24a8",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "f10-return",
+      "front_index": 1,
+      "front_sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47",
+      "hidden_sha256": "66e8acef3364e02e903e396a8788ce5b8a28e937af71e3bf780b14f8df4aab31",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "f10-return",
+      "front_index": 0,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "before-start",
+      "front_index": 0,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "start-parity",
+      "front_index": 0,
+      "front_sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c",
+      "hidden_sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    },
+    {
+      "label": "game-start",
+      "front_index": 1,
+      "front_sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47",
+      "hidden_sha256": "36a69ef3988d55e986022b96de50561cf469b804719d198b8e2079d17a9dbe47",
+      "complete_front": true,
+      "hidden_not_a_complete_transition_image": false
+    }
+  ],
+  "source_files": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "f59554ba211b9034648d0bb2f7ff053b1d73b2450dd5356742a04dcb7e09b5e0"
+    },
+    {
+      "path": "tools/audit_native_menu_publication.py",
+      "sha256": "3619cae63ebded4d72f9720914eca608a694d0f1201fb2cbc84bc92328ed0425"
+    }
+  ],
+  "method": "Paused actual front/hidden bitmaps; complete before/after UI images reconstructed from frozen previous font and menu text; no gameplay model; explicit menu options and F10 return; two starting buffer parities"
+}

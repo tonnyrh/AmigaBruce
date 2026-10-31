@@ -1,0 +1,39 @@
+{
+  "status": "explicit_private_compilation",
+  "production_changed": false,
+  "overrides": [
+    {
+      "nominal": "amiga/main.c",
+      "actual": {
+        "path": "reference/analysis/optimization-2026-10-27/sprite-publish-candidate/compiled-main.c",
+        "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1"
+      }
+    },
+    {
+      "nominal": "core/c64_rooms.c",
+      "actual": {
+        "path": "reference/analysis/sprite-publish-2026-10-30/candidate/c64_rooms.c",
+        "sha256": "93d48fab4028f510f60012040012723a87070974ef850a288771b6bec3bb40db"
+      }
+    },
+    {
+      "nominal": "core/c64_actor_programs.h",
+      "actual": {
+        "path": "reference/analysis/sprite-publish-2026-10-30/candidate/c64_actor_programs.h",
+        "sha256": "0c6414bfd074691ab0f4fd5e7d2dd536e555a13c86e6ccdedf1c464acd23a235"
+      }
+    },
+    {
+      "nominal": "native publish helper",
+      "actual": {
+        "path": "reference/analysis/sprite-publish-2026-10-30/candidate/publish.h",
+        "sha256": "4e008765211195668adf1bf598ecb1eb4dff93dd01b291589bc57aa0f9e2d51e"
+      }
+    }
+  ],
+  "compiled_build": {
+    "path": "reference/analysis/optimization-2026-10-27/sprite-publish-candidate/compiled-build.ps1",
+    "sha256": "fc470c705aa4d4758dea4e7564b51be52e8eac20bb7a77ea2792bcd3d17a0761"
+  },
+  "unused_diagnostic_capture_omitted": true
+}

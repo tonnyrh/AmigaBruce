@@ -52,6 +52,8 @@ typedef void (*BlC64BlockPainter)(const BlC64Block *request);
 void bl_c64_set_block_painter(BlC64BlockPainter painter);
 long bl_c64_build_animation_cache(unsigned char *cache,long capacity);
 void bl_c64_prepare_paint(void);
+const unsigned long *bl_c64_animation_coverage(void);
+void bl_c64_paint_animation_frame(unsigned char *planes,long scene_top);
 void bl_c64_test_execute(long entry);
 long bl_c64_check_interleaved(const unsigned char *bitmap,long scene_top);
 const unsigned short *bl_c64_paint_changes(unsigned char *planes,long scene_top,unsigned short *count);
@@ -95,6 +97,7 @@ void bl_c64_motion(const BlGame *game);
 void bl_c64_reenter(void); /* $24DB-$24EA, source default entry in current room */
 long bl_c64_transition(long *x,long *y,unsigned char *room);
 unsigned short bl_c64_collected(long room);
+void bl_c64_collected_all(unsigned short *out);
 /* Explicit cheat preparation: complete lower numbered rooms, then reload.
  * Writes source lamp records/counts only; no pickup sound, score or bonus. */
 void bl_c64_debug_complete_before(long room);
@@ -134,7 +137,11 @@ unsigned short bl_c64_profile(long item);
 void bl_c64_profile_add(long item,long lines);
 #if defined(BL_AUTOTEST) && BL_AUTOTEST && defined(__m68k__)
 #if defined(BL_SOURCE_PERF_TEST) && BL_SOURCE_PERF_TEST && !BL_C64_PROFILE
+#if defined(BL_SPRITE_COPY_TEST) && BL_SPRITE_COPY_TEST
+#define BL_C64_VIC_REPEAT_CASES 0
+#else
 #define BL_C64_VIC_REPEAT_CASES 1536
+#endif
 #else
 #define BL_C64_VIC_REPEAT_CASES 0
 #endif
@@ -143,18 +150,28 @@ unsigned short bl_c64_vic_compare_selftest(void);
 #define BL_C64_CONTACT_ROW_CASES 128
 #define BL_C64_CONTACT_CLASS_CASES 70
 #if defined(BL_SOURCE_PERF_TEST) && BL_SOURCE_PERF_TEST && (!defined(BL_C64_PROFILE) || !BL_C64_PROFILE)
+#if defined(BL_SPRITE_COPY_TEST) && BL_SPRITE_COPY_TEST
+#define BL_C64_SPRITE_COPY_CASES 256
+#define BL_C64_CONTACT_POINTER_CASES 0
+#define BL_C64_CONTACT_PREPARE_CLASS_CASES 0
+#define BL_C64_CONTACT_CLEAR_CASES 0
+#define BL_C64_CONTACT_BODY_CASES 0
+#else
+#define BL_C64_SPRITE_COPY_CASES 0
 #define BL_C64_CONTACT_POINTER_CASES 384
 #define BL_C64_CONTACT_PREPARE_CLASS_CASES 96
 #define BL_C64_CONTACT_CLEAR_CASES 16
 #define BL_C64_CONTACT_BODY_CASES 96
+#endif
 #else
+#define BL_C64_SPRITE_COPY_CASES 0
 #define BL_C64_CONTACT_POINTER_CASES 0
 #define BL_C64_CONTACT_PREPARE_CLASS_CASES 0
 #define BL_C64_CONTACT_CLEAR_CASES 0
 #define BL_C64_CONTACT_BODY_CASES 0
 #endif
 #define BL_C64_CONTACT_PREPARE_CASES (BL_C64_CONTACT_POINTER_CASES+BL_C64_CONTACT_PREPARE_CLASS_CASES+BL_C64_CONTACT_CLEAR_CASES+BL_C64_CONTACT_BODY_CASES)
-#define BL_C64_CONTACT_KERNEL_CASES (BL_C64_CONTACT_ALIGN_CASES+BL_C64_CONTACT_ROW_CASES+BL_C64_CONTACT_CLASS_CASES+BL_C64_CONTACT_PREPARE_CASES)
+#define BL_C64_CONTACT_KERNEL_CASES (BL_C64_CONTACT_ALIGN_CASES+BL_C64_CONTACT_ROW_CASES+BL_C64_CONTACT_CLASS_CASES+BL_C64_CONTACT_PREPARE_CASES+BL_C64_SPRITE_COPY_CASES)
 unsigned short bl_c64_contact_kernel_selftest(void);
 #endif
 #endif

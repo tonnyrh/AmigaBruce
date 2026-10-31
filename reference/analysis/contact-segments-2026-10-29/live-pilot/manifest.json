@@ -1,0 +1,19 @@
+{
+  "status": "rejected_total_regression",
+  "files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "28bfbd3f5ea5445c0e4ccd43e3e3396cfc30af3f0d8a7c285953eefdf4879bb6"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "465cbc51bb6125c413f6a8858036f11f3a1de6c3a51c01b10b5a697dde7d88c0"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "ae89a8257d41a264632451b406088928aefe097f897b41ea6b92651df7a80bce"
+    }
+  ],
+  "active_fields": 1431,
+  "source_steps": 360
+}

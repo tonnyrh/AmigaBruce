@@ -2,7 +2,7 @@
   "label": "yamo-hidden",
   "normal_binary": {
     "path": "amiga/out/bruce_amiga.exe",
-    "sha256": "feb553d0bfd04277622ea23dedeec8ad65b550e111e0216c5dd97b81a7fcfa62"
+    "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
   },
   "source_room": 2,
   "source_spare_falls": 4,
@@ -12,17 +12,17 @@
     354960,
     355000
   ],
-  "source_music_fields": 432,
+  "source_music_fields": 617,
   "source_audio_mode": 0,
   "method": "Read current Amiga bitplanes through owned WinUAE IPC; not a C64 capture",
   "artifacts": [
     {
       "path": "reference/analysis/session-walls-2026-10-25/yamo-hidden.bpl",
-      "sha256": "324d0c875d908bad17c0cd9cc98206c1ce5d70fa51817881acf7971a44409487"
+      "sha256": "b8bba8cc983295435bda4f7e95d3b3fbdffa122f9f773c55d7f32b78acc24884"
     },
     {
       "path": "docs/images/session-yamo-hidden.png",
-      "sha256": "7cdb35b5f2ba4aa4571ebe64ab918ed0d72fd3c4dc6fbd398351e59be929380c"
+      "sha256": "f4745b5f9069e782da39b2c5eb3607273e5b5686c6be3e840ea2dd1feb384705"
     }
   ]
 }

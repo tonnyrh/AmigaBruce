@@ -1,0 +1,57 @@
+{
+  "status": "passed_original_object_handler_boundaries",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "checks": 65536,
+  "instructions": 2473160,
+  "targets": {
+    "$2EE9": 57140,
+    "$2F3C": 256,
+    "$2F51": 256,
+    "$2F66": 256,
+    "$2F7B": 256,
+    "$2F01": 5334,
+    "$2F04": 762,
+    "$2EEA": 512,
+    "$2EF7": 254,
+    "$310C": 256,
+    "$2EFA": 254
+  },
+  "driver_checks": 480,
+  "driver_instructions": 194645,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
+    },
+    {
+      "path": "tools/build_c64_actors.py",
+      "sha256": "106e0dc72a5f1a0aa53e4ae1a02fa3645efb62ab19e06c2e8078b7415f642448"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    },
+    {
+      "path": "tests/source_object_bridge.c",
+      "sha256": "f7d199cc1ef89ce746d4256f438f43779f5ebb05384b34d9d79f6ad8c3589580"
+    },
+    {
+      "path": "tools/verify_source_object.py",
+      "sha256": "fcf455ee9544fbc8c2bbd2ef349593f046db9e91b796059bace66e1808211f4c"
+    },
+    {
+      "path": "test-source-object.ps1",
+      "sha256": "bff923c5ab8e6423e9ca2fa95ec080bae8819ba3666d3dfa582f6da28105b09c"
+    }
+  ]
+}

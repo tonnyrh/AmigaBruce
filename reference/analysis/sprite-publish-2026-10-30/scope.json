@@ -1,0 +1,39 @@
+{
+  "status": "isolated_native_sprite_publish_candidate",
+  "production_changed": false,
+  "inputs": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "66bb2b580e6281e761a109d8078b112f5c48d9ae8945476ec862cefbc27f7fff"
+    },
+    {
+      "path": "tests/source_contact_bridge.c",
+      "sha256": "a7d3ad10311494f7aa60ca76ba07e62314859562fb531a24fb7617adb37b6357"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/candidate/c64_rooms.c",
+      "sha256": "93d48fab4028f510f60012040012723a87070974ef850a288771b6bec3bb40db"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/candidate/c64_actor_programs.h",
+      "sha256": "0c6414bfd074691ab0f4fd5e7d2dd536e555a13c86e6ccdedf1c464acd23a235"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/candidate/publish.h",
+      "sha256": "4e008765211195668adf1bf598ecb1eb4dff93dd01b291589bc57aa0f9e2d51e"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/bridge.c",
+      "sha256": "dcfc87780ce785b490dd0867d8ce67470e5643cefd3fb0f5ee507371a67c4ae9"
+    }
+  ],
+  "source_entry": "$25E2",
+  "source_last": "$269F",
+  "guard": "Binary arithmetic and original $277E zero guard; all other entries keep original generated code"
+}

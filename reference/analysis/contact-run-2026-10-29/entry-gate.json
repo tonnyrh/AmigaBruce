@@ -1,0 +1,16 @@
+{
+  "status": "passed_real_cold_entry_counterexample_and_normal_entry",
+  "checks": [
+    {
+      "path": "reference/analysis/optimization-2026-10-27/contact-run-scoped-controls/bruce_test.elf",
+      "sha256": "6674b9a79bb207d4d4d5ce82f86db7f9c32ffbc7d1044270245fbfae1e869e11",
+      "accepted": false
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "25acc260d13786bd250916104724d4aaa4b2bc87dadd752b9aeae47548b76852",
+      "accepted": true
+    }
+  ],
+  "scope": "Current normal ELF and archived rejected cold ELF"
+}

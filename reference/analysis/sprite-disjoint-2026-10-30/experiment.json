@@ -1,0 +1,303 @@
+{
+  "status": "measured_private_disjoint_sprite_experiment",
+  "production_changed": false,
+  "selected_for_production": false,
+  "selection_reason": "Both R01 pairs increase missed audio ticks6->45 despite shorter time. Aggregate20-room improvement does not clear that observed regression.",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_cases": 1872,
+  "native_controls": 710,
+  "native_sprite_cases": 256,
+  "native_kernel_bytes": {
+    "before": 250,
+    "candidate": 472
+  },
+  "pairs": {
+    "r02": [
+      {
+        "variant": "before",
+        "fields": 1414,
+        "missed": 6,
+        "steps": 360
+      },
+      {
+        "variant": "candidate",
+        "fields": 1388,
+        "missed": 45,
+        "steps": 360
+      }
+    ],
+    "r03": [
+      {
+        "variant": "before",
+        "fields": 1414,
+        "missed": 6,
+        "steps": 360
+      },
+      {
+        "variant": "candidate",
+        "fields": 1386,
+        "missed": 45,
+        "steps": 360
+      }
+    ],
+    "tour": [
+      {
+        "variant": "before",
+        "fields": 8937,
+        "lines": 2796433,
+        "missed": 128,
+        "steps": 2400
+      },
+      {
+        "variant": "candidate",
+        "fields": 8829,
+        "lines": 2762847,
+        "missed": 124,
+        "steps": 2400
+      }
+    ]
+  },
+  "loaded_section_delta": {
+    ".text": 222,
+    ".rodata": 0,
+    ".data": 0,
+    ".bss": 0
+  },
+  "realtime_accepted": false,
+  "natural_playthrough": false,
+  "edition_verified": false,
+  "artifacts": [
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "e44dacf87e569551aa88ffc04680b08aab3865f7646699c70a7fee8a3feb4056"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "2560d20e497e1a9e5a04078a72ba38a9072794e6d70b07632794183bcb465a64"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "f1047de7ded0a9087abefcec46e963aa8369019bc700172c60a99529cbea533d"
+    },
+    {
+      "path": "amiga/out/sprite_copy.o",
+      "sha256": "1c4957ee89d74dde4779f1be4654ad89b0372a729354ce530fb690920d2510e2"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "docs/SPRITE_DISJOINT_EXPERIMENT.md",
+      "sha256": "84ebabdbc9d29192fb3149e1e5b6e4b08ba7ab3b3ffb7c5a8b2eeffea6f4eb66"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r02/bruce_test.adf",
+      "sha256": "5dd98cf100569978c979a68b4a81832e0ebb6e565b23a334879bc520cf87aca6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r02/bruce_test.elf",
+      "sha256": "216b74dabe38fd9aa8b389f5de81fa6cb9c9ba7d7f52afd8156fcf15337daa90"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r02/bruce_test.exe",
+      "sha256": "73cf4fecb97c9098c6999fbbf0ff2bdc64b5e2a6f6e4322db2fcacc7230e334f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r02/compile-overrides.json",
+      "sha256": "730cc89fabef35d09a2ae2b69f7ce60d8139a22a638104c6167ad89fcd1abac0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r02/identity.json",
+      "sha256": "81901274fd0849f8d5cbd4675a601d7544f951323fac772a3aa60273d792e304"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r02/native.txt",
+      "sha256": "fabde80cbe4766fa08cde336898745a2d31c8f73b14665e1a54598683df4ddee"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r03/bruce_test.adf",
+      "sha256": "df1a6c227be00fcb6cb840bc27010c64c00c677a11ae96195bfa18a13a59aa6b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r03/bruce_test.elf",
+      "sha256": "216b74dabe38fd9aa8b389f5de81fa6cb9c9ba7d7f52afd8156fcf15337daa90"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r03/bruce_test.exe",
+      "sha256": "84eb503e2e5ea4f940d2d05adedcc9da84a8bc42e990947a929f4396ab6db872"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r03/compile-overrides.json",
+      "sha256": "d4d239f8bcac1035ac8b01e910e15e2490752b5575bac7df1db2fb4bc7600e2b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r03/identity.json",
+      "sha256": "ff27a01374b3b2595549e406bb9addd7f9e8ddeccdaa8aadc944011a3d6cbbfc"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-r03/native.txt",
+      "sha256": "fabde80cbe4766fa08cde336898745a2d31c8f73b14665e1a54598683df4ddee"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-tour/bruce_test.adf",
+      "sha256": "ef8f0b15ed0f49be90616b7924282b5fe696d4281aa598f76922e38be8647bea"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-tour/bruce_test.elf",
+      "sha256": "f4b529b418480ad2521338377d58336cc83faa9a60e6c245f1f87f58083a60af"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-tour/bruce_test.exe",
+      "sha256": "b118b4a243eb8a4f4b15509f11c173298188ec75200f02bc68cf42b392f7bd24"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-tour/identity.json",
+      "sha256": "6a21497f19d215fcdf263d715c209b7a4cb5f2e6957dc59f6821e497b12ecd01"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-before-tour/native.txt",
+      "sha256": "b4c1a5c7ffbf9c84bf72f8032eb6b8a005a64fc3c0a294a692d7f84d3d5ea288"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r02/bruce_test.adf",
+      "sha256": "06960ad078bdaa0dbb0b48abbb87484b77fa0879b0ff40f7dd0c139bc57cecda"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r02/bruce_test.elf",
+      "sha256": "09d5260d87368502280b07f651b0dd715d6f47ae54c51557c36574e0c2424ac4"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r02/bruce_test.exe",
+      "sha256": "05ce5175b67ab3ddc5e080e8483c62b4cce22acb0b0273924b67758bb5a675c5"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r02/compile-overrides.json",
+      "sha256": "77615ead32cd0d514c7ccf5f4a7fb3b2bf91b6e6bca6ee9027d21e98da0d4eb8"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r02/identity.json",
+      "sha256": "0f0d05bc3410d0a8fc9ffc5515812157652ee04e4831eb60a2706322f82d0300"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r02/native.txt",
+      "sha256": "6a327a04ba0d0c9371002bf46f6cd34d6bdbc5a67245f5682297f5af1d40d0a1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r03/bruce_test.adf",
+      "sha256": "66c8db6ef9242d9c8743afce1eef85369e091e9b8e75d165e0ddff370a628f2a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r03/bruce_test.elf",
+      "sha256": "09d5260d87368502280b07f651b0dd715d6f47ae54c51557c36574e0c2424ac4"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r03/bruce_test.exe",
+      "sha256": "3a525492fadfd16172bc82b48b161ebabf102c1544f143a8d61fcdc80703cc63"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r03/compile-overrides.json",
+      "sha256": "09126bc31b0e3598900a8e8302377f3ad3a46b41f5a461dd8b4615ec5dc4530e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r03/identity.json",
+      "sha256": "bfa0e8c1d054ce7467de1b28d6c19486e452362eecfd6b8b4537340641363283"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-r03/native.txt",
+      "sha256": "390b1fa2c5b05a87076a5323f2921570cd5f9b9238d88f18efff6dc479e37977"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-tour/bruce_test.adf",
+      "sha256": "ec937e99f92195fc31e4c92915893760166e971ee7142d34a77df0f7e934a55f"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-tour/bruce_test.elf",
+      "sha256": "b9706dd138af8fe69af84a34f585ab5b8a87cd6b45d2c0f01d81e47d1a3e7ff1"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-tour/bruce_test.exe",
+      "sha256": "649cf7e401fe018a9a9677997c63b62d1ad00e69fefa014f3cf0d0813955cc20"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-tour/identity.json",
+      "sha256": "9c84aa3a3c17fdfcc9d6dbcfd502a0c523bcae8250b698d57ee6b433d60de5ad"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/sprite-disjoint-candidate-tour/native.txt",
+      "sha256": "02d044508ad351ddd51abd9787869ad410a68773834e3aff5c0ffcbf87253e28"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/before/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/before/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/before/sprite_copy.s",
+      "sha256": "13d8de7f778bfb73a1410e7ec2997cc79790969a4a5768c67e4c70bac17c968c"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/bridge.c",
+      "sha256": "dcfc87780ce785b490dd0867d8ce67470e5643cefd3fb0f5ee507371a67c4ae9"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/candidate/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/candidate/c64_rooms.c",
+      "sha256": "ed749230a026524395c24bec4f29920c1f4bc1e56f4adddd79f198ad1dd9b89c"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/candidate/sprite_copy.s",
+      "sha256": "7a07b3c3795864c0b832e45eefe23a60b6e9a52431bc149bbdad51a4fd22b450"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/compiled-candidate/sprite_copy.o",
+      "sha256": "09e7ac8e46fc3aa5428fe9dc1b990c5d7ea45027d7a78443c8b8cd371f667993"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/scope.json",
+      "sha256": "a4d9bd6c4bfa91963d55ae3b897efe41c157c02f3cc7f56ad67f8ad0f8330fd4"
+    },
+    {
+      "path": "reference/analysis/sprite-disjoint-2026-10-30/source-proof.json",
+      "sha256": "383a172a0346ddc87cdc8b01b7f1fae2c17b52baa61f21fd6932c5d4bf7368fb"
+    },
+    {
+      "path": "test-sprite-disjoint.ps1",
+      "sha256": "da59f37a668ad7bb7b984d56a26ff668e05928b26ec3a440b0e4e2116fd7dcda"
+    },
+    {
+      "path": "tools/build_disjoint_sprite_benchmark.py",
+      "sha256": "81e9b728c291aa4756548ce696d7a54a430e55a0f1cdafe76c7ec60042adc0e3"
+    },
+    {
+      "path": "tools/build_disjoint_sprite_tour.py",
+      "sha256": "dcbdc1a7c1eb3b40aa0fd60476f15395fb3d6f67f315cada5309720adbd2caf3"
+    },
+    {
+      "path": "tools/probe_disjoint_sprite_copy.py",
+      "sha256": "1300336d6b3fa718d356b05b46ee8180ff9738a6d9bac4155995c7b8774ea91e"
+    },
+    {
+      "path": "tools/verify_disjoint_sprite_copy.py",
+      "sha256": "bba9332f006e8bf8e60b85edec66c73abc545dd996be79ec1ded334a2f9375d7"
+    },
+    {
+      "path": "tools/verify_disjoint_sprite_experiment.py",
+      "sha256": "fe055198a728f6c396bc8380d60f304b3026723f10bf69acd4f2e0a3f5b09a17"
+    }
+  ]
+}

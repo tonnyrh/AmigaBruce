@@ -1,0 +1,25 @@
+{
+  "production_core_compiled": false,
+  "actual_inputs": [
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/c64_rooms.c",
+      "sha256": "93d48fab4028f510f60012040012723a87070974ef850a288771b6bec3bb40db"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/c64_actor_programs.h",
+      "sha256": "5d1560f8553ae2a2ff8f3b6457112376ef9753461cc09888280502409e5eaa00"
+    },
+    {
+      "path": "reference/analysis/sprite-publish-2026-10-30/direct-call/publish.h",
+      "sha256": "141dd5ef0685b94b5d7db1b78563fa3a3bd9b1811d803a45d31b4a4e54a062a6"
+    }
+  ],
+  "main": {
+    "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-r01/compiled-main.c",
+    "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1"
+  },
+  "builder": {
+    "path": "reference/analysis/optimization-2026-10-27/sprite-publish-direct-r01/compiled-build.ps1",
+    "sha256": "636b2594c479fbbc2089c984f7dfc3e7797677a9816aa06e5fa9887df47a4da1"
+  }
+}

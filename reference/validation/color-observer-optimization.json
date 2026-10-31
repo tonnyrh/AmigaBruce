@@ -1,0 +1,147 @@
+{
+  "status": "passed_scoped_observer_delivery_realtime_open",
+  "source_cases": 7424,
+  "renderer_cases": 192,
+  "observer_domain_cases": 4096,
+  "native_cases": 53,
+  "pairs": [
+    {
+      "before_lines": 2837562,
+      "after_lines": 2819874,
+      "r20_before": 188320,
+      "r20_after": 179889
+    },
+    {
+      "before_lines": 2839196,
+      "after_lines": 2815830,
+      "r20_before": 192076,
+      "r20_after": 179575
+    }
+  ],
+  "extra_production_bss": 0,
+  "normal_binary": {
+    "path": "amiga/out/bruce_amiga.exe",
+    "sha256": "4a397cc5be9663cc92d5b44749d1bd63df6119621f61c2e63e78941b29859811"
+  },
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/color-observer-2026-10-30/host.json",
+      "sha256": "66133273cbf053447620affcdfc744f51e3f790d7926dffc2374d56e57774d3b"
+    },
+    {
+      "path": "reference/analysis/color-observer-2026-10-30/source-scope.json",
+      "sha256": "f33e7147e781e92d9e75a9b6774eac22e85b8b588e959d4274488ed110eb9e96"
+    },
+    {
+      "path": "reference/analysis/color-observer-2026-10-30/native-images.json",
+      "sha256": "b4f4c7364d9da006192427fa9d0967f4e8e9c2c83e09c24b5701305b00bac274"
+    },
+    {
+      "path": "reference/analysis/color-observer-2026-10-30/compiler-core.o",
+      "sha256": "dde3075d13efca5a69762304e886ba666f500ecf3a2f7b8c3a01b655871a9a25"
+    },
+    {
+      "path": "tools/verify_color_observer_optimization.py",
+      "sha256": "db07119f8e699d50f9fbc05280d36cb3593b70268388e68e25286402aecd6b06"
+    },
+    {
+      "path": "tools/audit_color_observer_images.py",
+      "sha256": "3fd495b5b87af4ce36bc719680dbcbb5402a7884bb737623da28b2d7cb784f30"
+    },
+    {
+      "path": "tools/verify_renderer_delta_scope.py",
+      "sha256": "1336dfc3ca5c9977f00fe0aa912ea78a7418b78e30d3f1bc046dedd873de5244"
+    },
+    {
+      "path": "docs/COLOR_OBSERVER_OPTIMIZATION.md",
+      "sha256": "4c5d6d08aa1efed74c576f5dea388c1adc23f98432fdbf6ea67e6b2fe014ee12"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour/identity.json",
+      "sha256": "eb013cf2df5b78d19ddde5cc46fef9c983e31aadca9d2b18fb5c9dbb097be4af"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour/native.txt",
+      "sha256": "15cc0076fcc6e304e80f1bd428f284cfba0c6e07a3ac0ada8f203e22ad12f37a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour/compiled-main.c",
+      "sha256": "a14b5bd56cd33038cde892ed5ba03064592215b2aa9b76f4ba87d3d03e3e314b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour/build.ps1",
+      "sha256": "15eeb760570685677f61aa53fb78c66e58571d9df048d17c3d52754c829e49e2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-tour/identity.json",
+      "sha256": "3512636a12e7aeb0db1ad7a69689c06aef06eb351e478bc42d97e5877c2be09e"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-tour/native.txt",
+      "sha256": "252857c9c86511dbad388d9ec7926e4659357f633a456387d7f6148f961f8c29"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-tour/compiled-main.c",
+      "sha256": "a14b5bd56cd33038cde892ed5ba03064592215b2aa9b76f4ba87d3d03e3e314b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-tour/build.ps1",
+      "sha256": "08253f024190d367a23729f074d85511c09408cef36a466ca20dec91c928d6fb"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour-repeat/identity.json",
+      "sha256": "73dbdc62243ace8e0e9b50b5db599141fdaf8fc60056cdfbccbf0d937e71c9fc"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour-repeat/native.txt",
+      "sha256": "f08e8538ae94ee2a675e4155210859169ba6ec19b07d2c446d6b3bd9ae31eaea"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour-repeat/compiled-main.c",
+      "sha256": "a14b5bd56cd33038cde892ed5ba03064592215b2aa9b76f4ba87d3d03e3e314b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/publication-guard-tour-repeat/build.ps1",
+      "sha256": "b62cda82a23d7391e1e56e4b70155a01ee272248208eb723c421e5d0099f13c7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-tour-repeat/identity.json",
+      "sha256": "0f586b4bfdddfe18eb6f971b2b2e91ab0b89151764ee800a685393a7f2bc6b9c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-tour-repeat/native.txt",
+      "sha256": "5aacfa1feec11d4ea11e3dcc4eeee37d60b850b02c53ce43ea453618249de54d"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-tour-repeat/compiled-main.c",
+      "sha256": "a14b5bd56cd33038cde892ed5ba03064592215b2aa9b76f4ba87d3d03e3e314b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-tour-repeat/build.ps1",
+      "sha256": "90fe55b4c5bde7d668ac9055e47e94588f5c933ac6d4b4be052a1c5e69175912"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "fac20ec0f7e8938c96752589bd30f089906c6223afa641c2dc97bc73f4ec757a"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-r01/identity.json",
+      "sha256": "0c2450027becdf7593149e6617d36817a816ea215605021847ebcedf3a85808c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/color-observer-r01/native.txt",
+      "sha256": "aedeca3c6f532eeafdbcc631213b366c579f421c4667cdf032c6afbc3ae4c43d"
+    },
+    {
+      "path": "reference/analysis/normal-runtime-2026-10-30/room1-observer/report.json",
+      "sha256": "cceb39d856b5675aa6018778bad3262aa4a7376b943441cb702f00f1488c1dfe"
+    },
+    {
+      "path": "reference/analysis/normal-runtime-2026-10-30/room12-observer/report.json",
+      "sha256": "4cca8d83af45a73b542cf2a5183394495ea3431984591859bab56795de3e6269"
+    }
+  ]
+}

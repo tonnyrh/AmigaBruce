@@ -1,0 +1,25 @@
+{
+  "status": "explicit_private_compilation",
+  "production_changed": false,
+  "overrides": [
+    {
+      "nominal": "amiga/main.c",
+      "actual": {
+        "path": "reference/analysis/optimization-2026-10-27/contact-inline-candidate-repeat/compiled-main.c",
+        "sha256": "08d475dfb222c6aff96ebf4170d277e3b24e475b5255c772a2a31940645445e1"
+      }
+    },
+    {
+      "nominal": "core/c64_rooms.c",
+      "actual": {
+        "path": "reference/analysis/contact-fusion-2026-10-30/candidate.c",
+        "sha256": "cdbc73485281fc8a0b28c5744ef9fae159f91aa45720418440de201f0fd1d519"
+      }
+    }
+  ],
+  "compiled_build": {
+    "path": "reference/analysis/optimization-2026-10-27/contact-inline-candidate-repeat/compiled-build.ps1",
+    "sha256": "b58bfe70395fe3ee3c5e83c813d800c5c6dea4fd67550bccb9db6eefd27fbbca"
+  },
+  "unused_diagnostic_capture_omitted": true
+}
