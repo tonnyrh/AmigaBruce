@@ -58,7 +58,7 @@
   "instructions": 7055873,
   "source_files": [
     {
-      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+      "sha256": "61ae99bd399e0f69db79f84a3cb02165ae67ed06681573128b3e8f451255fec0",
       "path": "core/c64_rooms.c"
     },
     {
@@ -66,7 +66,7 @@
       "path": "tests/source_actor_bridge.c"
     },
     {
-      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7",
+      "sha256": "e8d502daf803685c2c77c75a3846732e8f02001fcf6a2b17c14434935f93044f",
       "path": "core/c64_rooms.h"
     },
     {
@@ -86,7 +86,7 @@
       "path": "core/c64_actor_data.h"
     },
     {
-      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e",
+      "sha256": "46a58572e0bca4539b296d09dab188ba66e74965deb26668e77ea2f0b33460ed",
       "path": "core/c64_actor_programs.h"
     },
     {
@@ -114,7 +114,7 @@
       "path": "tools/native_actor_continuations.py"
     },
     {
-      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e",
+      "sha256": "a36fcc6c54b9d1cee06c9f90be7e33b0b159c43a29bf5973ef535de89608d636",
       "path": "tools/build_c64_rooms.py"
     },
     {

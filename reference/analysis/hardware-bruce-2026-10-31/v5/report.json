@@ -1,0 +1,852 @@
+{
+  "status": "passed_scoped_all_actor_sprite_probe",
+  "production_changed": false,
+  "source_rule_changed": false,
+  "hardware_collision_replaces_source": false,
+  "observer_only": true,
+  "extra_chip_allocation": 0,
+  "copper_list_bytes": 252,
+  "dma_tail_range_in_each_existing_copper": [
+    256,
+    996
+  ],
+  "reserved_dma_bytes_two_buffers": 1480,
+  "timings": [
+    {
+      "label": "hardware-actors-v5-bob-r01",
+      "variant": "bob/",
+      "pal_fields": 1411,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "observer": false,
+      "drawn_images": 360
+    },
+    {
+      "label": "hardware-actors-v5-sprite-r02",
+      "variant": "sprite/",
+      "pal_fields": 1395,
+      "missed_audio_ticks": 1,
+      "largest_chip_block": 69016,
+      "observer": false,
+      "drawn_images": 360
+    },
+    {
+      "label": "hardware-actors-v5-moving-bob-r01",
+      "variant": "moving/bob/",
+      "pal_fields": 1502,
+      "missed_audio_ticks": 15,
+      "largest_chip_block": 85408,
+      "observer": false,
+      "drawn_images": 356
+    },
+    {
+      "label": "hardware-actors-v5-moving-sprite-r01",
+      "variant": "moving/sprite/",
+      "pal_fields": 1481,
+      "missed_audio_ticks": 16,
+      "largest_chip_block": 69016,
+      "observer": false,
+      "drawn_images": 357
+    },
+    {
+      "label": "hardware-actors-v5-observe-r01",
+      "variant": "moving/observe/",
+      "pal_fields": 1521,
+      "missed_audio_ticks": 1,
+      "largest_chip_block": 69016,
+      "observer": true,
+      "drawn_images": 356
+    }
+  ],
+  "collision_observation": {
+    "hw_observer": 1,
+    "hw_observer_expected": 10752,
+    "hw_observer_missing": 0,
+    "hw_observer_overlap_samples": 22,
+    "hw_observer_actual": 10752,
+    "hw_observer_extra": 4,
+    "hw_observer_samples": 460
+  },
+  "native_fixture_cases": 53,
+  "native_replay_loops": 1200,
+  "native_controlled_audio_missed_ticks": 82,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "realtime_gate_passed": false,
+  "limitations": [
+    "Small scoped timing gains; audio misses remain and rose by one in both measured pairs",
+    "Four Amiga collision groups combine channels from different actors; not the original eight VIC components",
+    "Observer compares rendered masks with CLXDAT, not source$D01E equivalence or original read phase",
+    "Observer recorded extra group events; their cause remains unresolved; no collision rule replaced",
+    "Same-group Bruce channel2 versus Yamo channel3 has no sprite-group collision bit; zero CLXDAT is not a safe actor-contact exclusion",
+    "Observer timing includes software reference overhead and must not be compared as a performance gain",
+    "All210 image encodings tested; not all poses naturally witnessed; physical A500 and fullPAL remain open"
+  ],
+  "artifacts": [
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "533c39c8475143b38ce63da1f57a6bd5fc8536b928f794faffadd42d5a313c42"
+    },
+    {
+      "path": "amiga-run.ps1",
+      "sha256": "49afe4b105c36df77d2eec52bbbce0734b27fc6caa5293e702396fb73b08425c"
+    },
+    {
+      "path": "amiga/c64_sprite_data.h",
+      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203"
+    },
+    {
+      "path": "amiga/combat_audio.h",
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10"
+    },
+    {
+      "path": "amiga/combat_audio_data.h",
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "abbcd8e35685db4a8b958df70bed09d501f747047a640a97aabbd724372b3fb3"
+    },
+    {
+      "path": "amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "amiga/fighter_art_data.h",
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f"
+    },
+    {
+      "path": "amiga/fighter_dma_data.h",
+      "sha256": "4e534017bb7b769ae5f8d6f96f2064582f965b8b8f3d9aa884767c55cc3367b2"
+    },
+    {
+      "path": "amiga/intro_audio.h",
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027"
+    },
+    {
+      "path": "amiga/intro_audio_data.h",
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "6150ad3145c02756035e492f08247b98f5c8cc3394c68f8d0ef942b8c0b06de3"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "bc37ad112d3bb47825adea9e1262e1ef8cc11503e3f3b47800d5a783d275b452"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561"
+    },
+    {
+      "path": "amiga/room_background_data.h",
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d"
+    },
+    {
+      "path": "amiga/runtime.c",
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1"
+    },
+    {
+      "path": "amiga/sprite_copy.s",
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26"
+    },
+    {
+      "path": "amiga/start.s",
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291"
+    },
+    {
+      "path": "amiga/vic_compare.s",
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2"
+    },
+    {
+      "path": "assets/c64/sprites-v1/manifest.json",
+      "sha256": "6eec4a328b4b3b05cb20ed37c18b1c8aad3b896d5114dff4ed6fa135399bb298"
+    },
+    {
+      "path": "core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "core/c64_hit_data.h",
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "core/c64_sprite_pose_data.h",
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0"
+    },
+    {
+      "path": "core/c64_sprites.c",
+      "sha256": "ee7fb51449d755e20991a9ba8197bfbafe61b28443119cb84e113c89c8bd3cb8"
+    },
+    {
+      "path": "core/c64_sprites.h",
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9"
+    },
+    {
+      "path": "core/combat.c",
+      "sha256": "143b6eb93713e73b71a7cdd5375f980abe14891fed594308fefd9b688d8614d6"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/game.c",
+      "sha256": "98dcd24df04e1b6f778543d395b029dcb1fc2a6627fd83b5df74bf1268af8d05"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
+    },
+    {
+      "path": "core/presentation.c",
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404"
+    },
+    {
+      "path": "core/presentation.h",
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445"
+    },
+    {
+      "path": "core/room_data.h",
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a"
+    },
+    {
+      "path": "core/room_geometry.h",
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059"
+    },
+    {
+      "path": "core/rooms.c",
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05"
+    },
+    {
+      "path": "core/rooms.h",
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "5a09053558b66d8c453ad8c58a058fb44752967bbd900f74a54593c3e6678cc3"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "0abd7c6531b3722d62ddbbc149e8cbd805cddc67551826502c41ff1907337ad1"
+    },
+    {
+      "path": "core/session.h",
+      "sha256": "08ec809cffb30dbb5221e4af164f998e792eaac001d892179ef9fc96da18accf"
+    },
+    {
+      "path": "core/source_audio.c",
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631"
+    },
+    {
+      "path": "core/source_audio.h",
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d"
+    },
+    {
+      "path": "core/source_audio_data.h",
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e"
+    },
+    {
+      "path": "core/source_climb.c",
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b"
+    },
+    {
+      "path": "core/source_climb.h",
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433"
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+    },
+    {
+      "path": "core/source_dma.h",
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "core/source_wall.c",
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b"
+    },
+    {
+      "path": "core/source_wall.h",
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56"
+    },
+    {
+      "path": "docs/HARDWARE_ACTORS_PROBE.md",
+      "sha256": "20eb062b34d40772d05272d4659c6eb6436695b07ba88e01ed125fe674c8d808"
+    },
+    {
+      "path": "launch-hardware-actors.ps1",
+      "sha256": "ca06c8e4290eef6dce1c23a68ca4c0470e4091df9b978dbec378722a8e872008"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/bob-build.ps1",
+      "sha256": "feb5a6dd84fe823343a0674e6126c0554669a531e7435f2ad2120292e2a288a5"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/bob/main.c",
+      "sha256": "421ed4e8c26bbe347196a601f2303fbb2bd65c537bb8bcac22e0292052ef6b5e"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/bruce_hw.h",
+      "sha256": "9fe3aa49c79782879a3bc6118226ee1025355c01ad996905758bb3797438cf15"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/moving/bob-build.ps1",
+      "sha256": "91a48d8da03d83cd4e31dcd1d617a174f624a220f361b9547acaea2b3c6024b6"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/moving/bob/main.c",
+      "sha256": "cb16ca9a633ccd34a4279f2622f41d8eaa6a8e35e8cb5397dc3958fbb9b706b6"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/moving/bruce_hw.h",
+      "sha256": "9fe3aa49c79782879a3bc6118226ee1025355c01ad996905758bb3797438cf15"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/moving/observe-build.ps1",
+      "sha256": "50ffd878b79fe49519b23222fffd864ddea8cd15867a16b91449b400a3547453"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/moving/observe/main.c",
+      "sha256": "41a8e5e4ad70b4f5a31632bdc893e8076eae42c0f3160ff1c360e8f8dc5929e8"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/moving/scope.json",
+      "sha256": "951fb0ff134042554130ddfbe78b18221281906cffe55bfbba05f28475a40cf5"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/moving/sprite-build.ps1",
+      "sha256": "866fe40a4e05fd36d3575245eaa7f48f55e75f2f3d595339af14b3ff9ec0aa03"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/moving/sprite/main.c",
+      "sha256": "0f7c4271c4f094de927304e37ea96f6ba39ce6d561d5b015b8a486d8a1f1cc77"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-builds/3c8b27bf5734-5efaea67bc13/bruce_test.adf",
+      "sha256": "5efaea67bc133da3fc2723bc2ebd8e0eb85e9e1db96786a18a4f54590b87c1d4"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-builds/3c8b27bf5734-5efaea67bc13/bruce_test.elf",
+      "sha256": "d287d66ab8830c5f7c72a68b6cc6383a30f3c7cda00e50350879d7530d7caa57"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-builds/3c8b27bf5734-5efaea67bc13/bruce_test.exe",
+      "sha256": "3c8b27bf57345e5ae195e25096c686b89b3c22c2f3554e9573df8143dbfd0179"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/report.json",
+      "sha256": "c8ac195ca2cece14ed239d63e3b8b036e300902b0e4a502504c5987687f2440f"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample0.bpl",
+      "sha256": "545f26d2e990b9237ff31f3bca238c4d91e9835ace14d71b22d2cb6ae0b07731"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample0.copper",
+      "sha256": "6f55aaf84f67381a47eb2e517486fb4d5e0cfbe84507125a1bce1d17b3ddca34"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample0.png",
+      "sha256": "fa6365c03897e4801e4f1ef4e8c4172a96cb57496c72fd5d0ec03ce4de79d74a"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample1.bpl",
+      "sha256": "331efe51e364c83c4cc476d868a6f530850071329267103fe859afea0af1a09f"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample1.copper",
+      "sha256": "b95f09485f78f70892b8bf87575b9bbcb2816bb9930e5aaefef107b437481beb"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample1.png",
+      "sha256": "7ec8ac1193dd761b9009be65b97be4ea9633d0ec9c3ffbdf0d4c4c5a416f368e"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample2.bpl",
+      "sha256": "331efe51e364c83c4cc476d868a6f530850071329267103fe859afea0af1a09f"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample2.copper",
+      "sha256": "a6f5971788a98bb6ba1eb2997affd068782beaecb8ff42a943ec4499aa0ff4c0"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample2.png",
+      "sha256": "3fb5e555e9bf8bd20ab15ab5e512631a01ab9b6e535aa18103722bb2027a8ef5"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample3.bpl",
+      "sha256": "2e5a577b4c9e797d02ff42d77856ad02bbabe0e868cd84d6a012e4839c2b56af"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample3.copper",
+      "sha256": "6d7123cade9c53b80c075155ce959a813ba52a23c4de0b60438d11105f9c2b25"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample3.png",
+      "sha256": "f2847c7bf6aaf431517fcff4311a9d98686f05682a43392c050d9b6b2e3a899c"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample4.bpl",
+      "sha256": "4d4dec02ac4fe6476974ded0217954beaa24f586327abb4184599bc1be834dcb"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample4.copper",
+      "sha256": "83588aec7290e73072a7a9520d8feb13699af95e1a35d6a1cace4c8f5efcf79b"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample4.png",
+      "sha256": "046c58ee3cf8caa0b24d118461ce292e303562ce55f3ea59a434fb40c5320240"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample5.bpl",
+      "sha256": "4d4dec02ac4fe6476974ded0217954beaa24f586327abb4184599bc1be834dcb"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample5.copper",
+      "sha256": "2df4a1b47788f681e26aa2966af35b3a90a0b17bace6df0ad5cd866547613891"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/sample5.png",
+      "sha256": "d1e529436682908cc24b9b7176a6d9e5a1af915eb92006b27363cb5385e6e93b"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/video-window.jpg",
+      "sha256": "b4bdbced0d97c15fa49d3b44697189f24c2619f2d738ea051b3e63cc70cd5082"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-combat/video-window.json",
+      "sha256": "e27ea05cb944611abd1ee513a01c448c1f5b5ac2501db8fbf2d7acf2b0e62ab6"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/report.json",
+      "sha256": "32e28042976391f8c953e39beff3ade8bbe00465151ac1943a35d7b6a13086d5"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample0.bpl",
+      "sha256": "d3676d711ae0736965d9a1e14be9b71b243559024122525d5e0404691fe0b200"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample0.copper",
+      "sha256": "8de8ed77f9e3f89e22f57817c83e4e0edc124e54e116114a043c16a3b5b5ced5"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample0.png",
+      "sha256": "eb86a7d0a982cbb7a86a8466dc94294a73f66ee113c9453ba4fd704cf8e5b9c8"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample1.bpl",
+      "sha256": "5b171159db1dd783575350b6ea1aa4ed598132af5380bb9802486f8626f12199"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample1.copper",
+      "sha256": "9c73f7070da2d9684eefb5fb6a59529dc52a87c5efc206609b8137081282b0bc"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample1.png",
+      "sha256": "6327b9f41de6b048a7bad39bfcbe742596df8f4f7a58049b29363477a472042f"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample10.bpl",
+      "sha256": "195f823f02217a3a44d116456a89f20454b6e89b2ca45376fea740fda43aed82"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample10.copper",
+      "sha256": "6b0e073e1e65bbc33be86dcbade224ff5eef17ef6f755b03b1cf85db115bc1e2"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample10.png",
+      "sha256": "00cd2fe747e1a7345fb22f81fa280693f2f3588067146d28a552219ec0bb2b46"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample11.bpl",
+      "sha256": "195f823f02217a3a44d116456a89f20454b6e89b2ca45376fea740fda43aed82"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample11.copper",
+      "sha256": "54b79feb92f5fe4aef497a38e64b3a40778d41afecd2a9b5e9708a68af68fbef"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample11.png",
+      "sha256": "c4dbafecc3252db7f4ffbcc9b9d0ddac556b19612c780f12f2f9600ef40e2d6c"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample2.bpl",
+      "sha256": "170be0d6f996f316768929c4759bd373bc5f8c2b0ffc506894820666cdd24ad3"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample2.copper",
+      "sha256": "9c73f7070da2d9684eefb5fb6a59529dc52a87c5efc206609b8137081282b0bc"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample2.png",
+      "sha256": "da1458c76400d9a13f3ef02016c71bbc94984834fcaccbfe68049242d9f43c7a"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample3.bpl",
+      "sha256": "255d9985708f49fa3873bbdc217a4cc8053b0d94051e82e98b73b60dee55c287"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample3.copper",
+      "sha256": "0487382c8388843255684aa4f63644e70cf7bc0e825876d0aec3cf622a412446"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample3.png",
+      "sha256": "5129cc9c0ad208f157ed0967ad1e9043cebd0dd2c52ac989d2dfc875d9e23c8b"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample4.bpl",
+      "sha256": "195f823f02217a3a44d116456a89f20454b6e89b2ca45376fea740fda43aed82"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample4.copper",
+      "sha256": "be354ac0311a60880542d0f7042fe5603f3a3e42f362ab73bf3ba9d50cab4da3"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample4.png",
+      "sha256": "750c61fde246f0e765e80ca693bb5e94ae37d1b24672e536adca4ff1708b3735"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample5.bpl",
+      "sha256": "195f823f02217a3a44d116456a89f20454b6e89b2ca45376fea740fda43aed82"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample5.copper",
+      "sha256": "b68fc5148acbed7004d88d4f8cd688e32dabb886019d3bdb17f0a98739867c19"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample5.png",
+      "sha256": "27d1efff407cc1158fbab25d9cd9a543b407b4eee631c7040d3043e2779d8580"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample6.bpl",
+      "sha256": "195f823f02217a3a44d116456a89f20454b6e89b2ca45376fea740fda43aed82"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample6.copper",
+      "sha256": "b80d56d1f344c1a720e92d14d8cf4ba4a749c8544032c8568f1032f09ac7edf8"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample6.png",
+      "sha256": "c9401fcca73908cc635f410cac609c10fe3b1bf1a2ddc4de1174f425ea67fc6d"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample7.bpl",
+      "sha256": "195f823f02217a3a44d116456a89f20454b6e89b2ca45376fea740fda43aed82"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample7.copper",
+      "sha256": "720e87d2b9d98000b73d3ede217300caafa9f5069fc5a7dd66fef6031f542072"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample7.png",
+      "sha256": "cddbd560df7428d656d1387bf98bacc4839ae06e870e7d641ef599ef0d2c2981"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample8.bpl",
+      "sha256": "195f823f02217a3a44d116456a89f20454b6e89b2ca45376fea740fda43aed82"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample8.copper",
+      "sha256": "de9b052f3e7e424576a5ea22f1c4f8042fdfb4faa3d8bd6fe02a73225ba6f5eb"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample8.png",
+      "sha256": "3426fcfcb362663bd58e40234c3ee3dd0e7dd2383a98a7cad0224604afbb9309"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample9.bpl",
+      "sha256": "195f823f02217a3a44d116456a89f20454b6e89b2ca45376fea740fda43aed82"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample9.copper",
+      "sha256": "d5f03fe1218504397134dd73d509a74e3ce634295e000c83e1c3cc3952409f28"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-display/sample9.png",
+      "sha256": "5fa4e8841276c5fa920ea0484ae708aa3eceb87e8d20d06c0a41cec9808b9585"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/native-final.txt",
+      "sha256": "91942449aaa504b55035fabd274cc9e9e3dd77a4c81053d2ec89f94c3945cb59"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/normal-ui/adf/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/normal-ui/adf/report.json",
+      "sha256": "b042201bf51d4b29f9015a4720ff6abd83bde3aeb34883a32cf44e2588c0044f"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/normal-ui/cli/menu-video.jpg",
+      "sha256": "2502b3a0f7eb6d15af9ffa11aaf2018112a57a022581530555024273ce312461"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/normal-ui/cli/menu-video.json",
+      "sha256": "3f68e68d99c686b346f4f898be45790b6ea7b0fca0539cb964568fffdc823975"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/normal-ui/cli/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/normal-ui/cli/report.json",
+      "sha256": "08c5aa2b94c4dc3dbaf2355fd77154b348a004e40e21043aeccbbb6431912f7b"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/observe-build.ps1",
+      "sha256": "160b8988882aebb0011cd406f135aaefc53ffbff8bfbb4c1b5bd4d89a2e79a1c"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/observe/main.c",
+      "sha256": "1f9172f19d85df30fe074594a22df8e91d0baf5ddc39f7b89a8e3f9095362b9d"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/run-private.ps1",
+      "sha256": "7b411ff170a1097bddc018d8d82f276bbc619715395821b2bf8e64e85a65a38b"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/scope.json",
+      "sha256": "e98d5cadac8b2495858968f824b1825bc0c13533452e81e93a195164d82d7a23"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/source-world-native.json",
+      "sha256": "2aa6a365d06738f65fa3acedddbf78e466ccf2cef3e1a5b9f48c3eb660f1e1b9"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/sprite-build.ps1",
+      "sha256": "0b09911f7006b5aa01cf8a093a7bf28af5d079603ae0bd5bd940546add49274a"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/sprite/main.c",
+      "sha256": "e655ffb135d830b969fadc614c534ebf11efca31dbd4f0babe4f4a8c6bcc9a84"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/sprite/out/bruce_amiga.adf",
+      "sha256": "8565501dc5705e824e89b4fee39dd13a5bb7c4bc5ef0e10d2c446819ccf61075"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/sprite/out/bruce_amiga.elf",
+      "sha256": "0b120ac33f14fc4c5a1029d2476ed4b1c5f907dabc0f4bc3b40642d55e906622"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/sprite/out/bruce_amiga.exe",
+      "sha256": "df673920e916f8fe10232a977b80c2ce5fb49bf9d2d6d164f5ddb51c64808254"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/test-perf-private.ps1",
+      "sha256": "3055fb7a51de7d6dcf654431f427f46604461f0ce48d88dc2d49335514a9c9b8"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v5/test-world-private.ps1",
+      "sha256": "c6c10a2aafc4bae3c83370e978e597c82155dfc58b2b0dd1a04a6299ac49bd94"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-bob-r01/bruce_test.adf",
+      "sha256": "bf2410c1cd42a1612e43f5324d920cece21c684c11708b666c16806d0e7f07f8"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-bob-r01/bruce_test.elf",
+      "sha256": "b9cb0dd952d71a809d065789deaca6afac13df7db0f9ec560d367361ffbde875"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-bob-r01/bruce_test.exe",
+      "sha256": "b0eaaaaccb33d191d514ee6f313de0f91fb6fc20a3438fc095b3415824c78abf"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-bob-r01/identity.json",
+      "sha256": "92cda5f50eccc52dc3289d6655faf6f49cf564db191d3b2788e9aeda10c095b7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-bob-r01/native.txt",
+      "sha256": "1f8a874acb7606b0bd9c8abc17fbc99a9ec96336d6c961981d089047a3af8c1c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-bob-r01/bruce_test.adf",
+      "sha256": "d7a1696fa542c27e5b174a24cb41b7bc93e7fbdf6db22b930a006aa7eff8385b"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-bob-r01/bruce_test.elf",
+      "sha256": "5e1cc6f022060ff81fb1570617041d07890f50a4b68936ecda0ff2c813073563"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-bob-r01/bruce_test.exe",
+      "sha256": "61e4f27a42170cdc6d28b0a08f3b892bce3598c31e9295ef546c2cbee283a9e3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-bob-r01/identity.json",
+      "sha256": "f62b66df4997a5446423e73f9ab65709fa7d84fafbfed3cbb4dc8ff18c9daf54"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-bob-r01/native.txt",
+      "sha256": "8d082d383eb6002c63accd8268e253753f2027b8cd5636d5c4cf144b01247dd2"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-sprite-r01/bruce_test.adf",
+      "sha256": "2d015c3aa3cf0c4a6b02f8e7d89a15074dc615d637f7d122b6ad4e1a4615d4c5"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-sprite-r01/bruce_test.elf",
+      "sha256": "31d9a7aa62f75f0424a53c2d2570f5511a719f338a05017aa283e790a9156dcd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-sprite-r01/bruce_test.exe",
+      "sha256": "fd60596c99e62245ae1ea9fd27a44ba0d137aad6aa71b3a44c421b203c8ae6db"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-sprite-r01/identity.json",
+      "sha256": "c70bb9b534120d1cf70433cd17f0a0025a4c5234b6bab677440686efc5a53f05"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-moving-sprite-r01/native.txt",
+      "sha256": "3cd1daaf50e9709a05c4c32dce186b7b6147361b7f233989d465b01734b471c0"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-observe-r01/bruce_test.adf",
+      "sha256": "ca5a7ffba8d62d24976d3a3fc2be2bc8fd0c9c255d5ff21b6a876c20e5acd3d7"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-observe-r01/bruce_test.elf",
+      "sha256": "2ab2fbfb3e39e1c7bfe89bb9dffbcd5fdad364db273517a80ade0c505dc50685"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-observe-r01/bruce_test.exe",
+      "sha256": "a671d1f2ae9a944e3d56beb436907362957de85ab7f6339c878474d96ed83e68"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-observe-r01/identity.json",
+      "sha256": "e7820c049ce86ac98aa20296bbe5d23d838bf5df1dbb6e8cb787f83384cc52a6"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-observe-r01/native.txt",
+      "sha256": "9452b5694f0d4d99fb221202f6fd02dd5a039c765361bb2011c91747553d668c"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-sprite-r02/bruce_test.adf",
+      "sha256": "2edf373a8e3ddb83e99feda8f63a43fe8e3181001c1c8adc6b9be2f5632c24cd"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-sprite-r02/bruce_test.elf",
+      "sha256": "1a34706b2071f4807ecdd2046a200195d24bd39487ff200736123ba1f751e3ea"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-sprite-r02/bruce_test.exe",
+      "sha256": "688c9c4a58c4bbe9475549525352b318a84e26bca789bb2a4116478f6bc27f50"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-sprite-r02/identity.json",
+      "sha256": "870787542f62fd551b6afd28ca15c8c7d88ee6db962e76544ee3c679a48ee4c3"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/hardware-actors-v5-sprite-r02/native.txt",
+      "sha256": "3f19002321c486c2e528dee687febe05d7d0908bdda3156669fcc86967a548a7"
+    },
+    {
+      "path": "test-c64-actors.ps1",
+      "sha256": "33099c5e5ab6d4130a2869a5326945adf3f0c70f807e316d3337a7ec951afc97"
+    },
+    {
+      "path": "test-source-world.ps1",
+      "sha256": "ba48537b8ee3d6acf622bdc4274bdf128f91484b4143cbbc0d26b6d4b567db44"
+    },
+    {
+      "path": "tests/source_actor_fixture.h",
+      "sha256": "b874503480b1fb0246e18d29be45d75708dab91bbb4045f3df6dfd327bbb1477"
+    },
+    {
+      "path": "tools/audit_c64_actor_chain.py",
+      "sha256": "8354a223b6a45f82d276074551ded6a36885b6e3aed99cc013c08941356439fe"
+    },
+    {
+      "path": "tools/audit_c64_world.py",
+      "sha256": "8a7b0a94f698d3c15ce2ecc19a1142e7fd2dc048aabce586932cb4462e3b3351"
+    },
+    {
+      "path": "tools/audit_hardware_actors_frame.py",
+      "sha256": "856f426c5e3443d19e123d7b97c32335c1d1c6a54fa124c3147c6d335c6fd1ef"
+    },
+    {
+      "path": "tools/build_c64_actors.py",
+      "sha256": "4761e14f38fe762840bb12e6da73de610f3b7b6185cfc8271b11319fd7fa9824"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
+    },
+    {
+      "path": "tools/build_contact_class_kernel.py",
+      "sha256": "4818bc96edf6a4ac741e6a54fd2b50fa2ac8d137db254cac1e5499483f05b153"
+    },
+    {
+      "path": "tools/build_hardware_actors_probe.py",
+      "sha256": "0785efb44ed8fbb45c96d4eed7c769618902f4135a7abb30cccfb63075845711"
+    },
+    {
+      "path": "tools/build_source_actor_fixture.py",
+      "sha256": "9c76cfc7730315accd86562422a69235a97f0eb66a2a0681dcb031ba8df944cf"
+    },
+    {
+      "path": "tools/check_hardware_actors_boot.py",
+      "sha256": "079605a6c0ca3dfc6fdc12d4e02c2c46443c1f2ac3a22be96c6cbde9a73c4321"
+    },
+    {
+      "path": "tools/hardware_actors_probe.h",
+      "sha256": "9fe3aa49c79782879a3bc6118226ee1025355c01ad996905758bb3797438cf15"
+    },
+    {
+      "path": "tools/native_actor_continuations.py",
+      "sha256": "b1721f8fb468d77c70c57eb99fa56955586d5a0413970b3a41613f985cd922b1"
+    },
+    {
+      "path": "tools/verify_amiga_entry.py",
+      "sha256": "857be561143af60741a1db39ab6044799cd5c11413c34a81d76e7d97dce3aea8"
+    },
+    {
+      "path": "tools/verify_hardware_actors_probe.py",
+      "sha256": "73afbc55fe2c406c5586f2daef441a56cd437b2535290ff0a70ec8d9d786b289"
+    }
+  ]
+}

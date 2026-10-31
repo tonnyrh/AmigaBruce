@@ -33,6 +33,7 @@ def main():
     lib=ctypes.CDLL(str(ROOT/'.tmp/source-vic-test/vic.dll'))
     lib.bl_vic_write.argtypes=[ctypes.c_long,ctypes.c_long]
     lib.bl_vic_sample.restype=lib.bl_vic_take.restype=ctypes.c_ubyte
+    assert lib.bl_vic_pair_basis()==0, "unscaled pair pixel alignment"
     rng=random.Random(20261027);calls=0
     def seed(m):lib.bl_vic_seed((ctypes.c_ubyte*65536).from_buffer_copy(m))
     def write(m,at,value):m[at]=value;lib.bl_vic_write(at,value)
@@ -90,7 +91,7 @@ def main():
             write(m,bb,0);check(m)
         write(m,0x2000+first*64+63,255);write(m,0x2000+second*64+63,255);check(m)
     files=['core/c64_rooms.c','core/c64_rooms.h','core/source_perf.h','amiga/vic_compare.s','tests/source_vic_bridge.c','tools/verify_source_vic.py','test-source-vic.ps1']
-    report=dict(status='passed_field_sampled_pixel_and_latch_controls',calls=calls,
+    report=dict(status='passed_field_sampled_pixel_and_latch_controls',calls=calls,pair_basis_cases=48**3,
         natural_playthrough=False,original_raster_verified=False,source_files=[dict(path=p,
         sha256=hashlib.sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])
     (ROOT/'reference/validation/source-vic-host.json').write_text(json.dumps(report,indent=2)+'\n')

@@ -3,7 +3,7 @@ import argparse,hashlib,json,re,struct,time
 from pathlib import Path
 from winuae_ipc import command
 from capture_paula_stream import elf_symbols
-from audit_native_menu_publication import reference
+from title_reference import reference
 ROOT=Path(__file__).resolve().parents[1]
 def main():
  p=argparse.ArgumentParser();p.add_argument('--pid',type=int,required=True);p.add_argument('--log',type=Path,required=True);p.add_argument('--label',choices=['cli','adf'],required=True);p.add_argument('--start-game',action='store_true');p.add_argument('--output-root',type=Path,default=ROOT/'reference/analysis/contact-unroll-2026-10-31/normal-ui');a=p.parse_args()

@@ -1,0 +1,35 @@
+{
+  "status": "passed_current_normal_boot",
+  "method": "Owned paused complete menu against existing font/UI reference; optional source-main progression; no source-state writes",
+  "mode": "adf",
+  "normal_exe_sha256": "a15faf6e96cc1e6a980253095802e58584fa267dd7a62ad7cbeb97bd34bc5c7e",
+  "elf": {
+    "path": "amiga/out/bruce_amiga.elf",
+    "sha256": "496ca2a6d368e29b133206a538242a354f9d5ee59bf4e94384b4c419110db517"
+  },
+  "complete_menu": true,
+  "game_states": [
+    {
+      "steps": 7,
+      "fault": 0,
+      "room": 1
+    },
+    {
+      "steps": 26,
+      "fault": 0,
+      "room": 1
+    },
+    {
+      "steps": 45,
+      "fault": 0,
+      "room": 1
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/op-score-2026-10-31/boot/adf/menu.bpl",
+      "sha256": "1c31ef755fe04c957206e7e484cec859e291842ef58ea3129577f802102e9c22"
+    }
+  ],
+  "natural_playthrough": false
+}

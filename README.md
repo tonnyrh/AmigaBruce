@@ -51,14 +51,17 @@ treffreaksjon som kastet Bruce bakover.
 Ny [døds-/livs- og veggrettelse med hovedmeny](docs/SESSION_WALLS.md):
 faredødens stillstand/lyd, synlige reservefall, separate NPC-kontaktmasker
 og korrigert hopp/fall i rom6. Menyen har F3 for spillere og F5 for Yamo;
-Shift+D åpner uendelige liv, udødelighet og startrom. F10 åpner menyen igjen.
+Shift+D åpner uendelige liv, udødelighet og startrom. P pauser spillet og lyden.
+Trykk P igjen for å fortsette, F10 for menyen eller Esc for AmigaDOS.
+[Tittelbilde, pause og skjermskift ved nytt liv](docs/TITLE_PAUSE_RESPAWN.md).
 
 Ny rettelse: [NPC-rekyl og uventet romstart i rom2](docs/NPC_RECOIL.md).
 Se [prosjektreglene](AGENTS.md) og [gjennomgangen av rombyggingen](docs/ROOM_RECONSTRUCTION.md).
 Alle20 rom bruker nå dekodede C64-romdata, rippede tegn og oversatte
 init-/løprutiner. De håndlagde blokkrommene og den felles fjellbakgrunnen er
 byttet ut. [Figurene bruker nå også rippede C64-sprites](docs/C64_SPRITES.md).
-Egenlaget grafikk er satt til side til en senere enhanced-utgave.
+Lasteskjermen og menyen har en egen fjellillustrasjon med Bruces rippede kamppositur.
+Figurer og rom i selve spillet følger fortsatt C64-utgaven.
 Vanlig spill bruker nå den komplette kildekjeden. Gamle adapterfunksjoner
 beholdes for historiske kontroller og brukes ikke som motor i vanlig spill.
 Klatringen er nå [rettet mot C64-koden](docs/C64_CLIMB.md): aktuell nettmaske,

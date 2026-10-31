@@ -1,0 +1,1586 @@
+[
+  {
+    "capture": "combat168",
+    "visit": 1,
+    "pc": "2c51",
+    "i": 0,
+    "decimal": 0,
+    "pins": [
+      31,
+      23
+    ],
+    "irq_instructions": 302,
+    "irq_ram_sha256": "26008d94aa5309a913ec6745271fb27c2f7742e1c0dd3a3f0e926a920cd4cc3c",
+    "irq_regs": "0c02340000000000fb00",
+    "caller_restored": true,
+    "existing_seam_diffs": [
+      {
+        "at": "000a",
+        "source": 200,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000b",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000c",
+        "source": 249,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000d",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "0153",
+        "source": 251,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0154",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0155",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0156",
+        "source": 251,
+        "native": 136,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0157",
+        "source": 242,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0158",
+        "source": 241,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0159",
+        "source": 252,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015a",
+        "source": 242,
+        "native": 10,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015b",
+        "source": 241,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015c",
+        "source": 246,
+        "native": 52,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015d",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015e",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "01f0",
+        "source": 187,
+        "native": 8,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f1",
+        "source": 235,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f2",
+        "source": 188,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f3",
+        "source": 21,
+        "native": 205,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f4",
+        "source": 23,
+        "native": 31,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f5",
+        "source": 73,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f6",
+        "source": 52,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f7",
+        "source": 2,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f8",
+        "source": 12,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f9",
+        "source": 32,
+        "native": 117,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fa",
+        "source": 81,
+        "native": 188,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fb",
+        "source": 44,
+        "native": 21,
+        "kind": "stack_page"
+      },
+      {
+        "at": "0408",
+        "source": 30,
+        "native": 193,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "0409",
+        "source": 73,
+        "native": 72,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f5",
+        "source": 120,
+        "native": 138,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f6",
+        "source": 151,
+        "native": 154,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f7",
+        "source": 253,
+        "native": 234,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f8",
+        "source": 120,
+        "native": 253,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "d012",
+        "source": 64,
+        "native": 251,
+        "kind": "hardware"
+      },
+      {
+        "at": "d018",
+        "source": 50,
+        "native": 56,
+        "kind": "hardware"
+      },
+      {
+        "at": "d01e",
+        "source": 0,
+        "native": 18,
+        "kind": "hardware"
+      },
+      {
+        "at": "d021",
+        "source": 252,
+        "native": 251,
+        "kind": "hardware"
+      }
+    ],
+    "original_continuation": {
+      "score": 6975,
+      "health": [
+        36,
+        20,
+        123
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "existing_continuation": {
+      "score": 6975,
+      "health": [
+        36,
+        20,
+        123
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "isolated_context_exact": true
+  },
+  {
+    "capture": "combat168",
+    "visit": 13,
+    "pc": "2c51",
+    "i": 0,
+    "decimal": 0,
+    "pins": [
+      31,
+      23
+    ],
+    "irq_instructions": 302,
+    "irq_ram_sha256": "644bc095c3f431c9e5191dfb29e18fa0efc9be042a3c569afc871a23e2102366",
+    "irq_regs": "0c02340000000000fb00",
+    "caller_restored": true,
+    "existing_seam_diffs": [
+      {
+        "at": "000a",
+        "source": 200,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000b",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000c",
+        "source": 249,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000d",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "0153",
+        "source": 251,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0154",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0155",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0156",
+        "source": 251,
+        "native": 136,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0157",
+        "source": 242,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0158",
+        "source": 241,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0159",
+        "source": 252,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015a",
+        "source": 242,
+        "native": 10,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015b",
+        "source": 241,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015c",
+        "source": 246,
+        "native": 52,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015d",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015e",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "01f0",
+        "source": 187,
+        "native": 8,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f1",
+        "source": 235,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f2",
+        "source": 188,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f3",
+        "source": 21,
+        "native": 205,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f4",
+        "source": 23,
+        "native": 31,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f5",
+        "source": 73,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f6",
+        "source": 52,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f7",
+        "source": 2,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f8",
+        "source": 12,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f9",
+        "source": 32,
+        "native": 117,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fa",
+        "source": 81,
+        "native": 188,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fb",
+        "source": 44,
+        "native": 21,
+        "kind": "stack_page"
+      },
+      {
+        "at": "0408",
+        "source": 30,
+        "native": 193,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "0409",
+        "source": 73,
+        "native": 72,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f5",
+        "source": 120,
+        "native": 138,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f6",
+        "source": 151,
+        "native": 154,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f7",
+        "source": 253,
+        "native": 234,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f8",
+        "source": 120,
+        "native": 253,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "d012",
+        "source": 64,
+        "native": 251,
+        "kind": "hardware"
+      },
+      {
+        "at": "d018",
+        "source": 50,
+        "native": 56,
+        "kind": "hardware"
+      },
+      {
+        "at": "d01e",
+        "source": 0,
+        "native": 18,
+        "kind": "hardware"
+      },
+      {
+        "at": "d021",
+        "source": 252,
+        "native": 251,
+        "kind": "hardware"
+      }
+    ],
+    "original_continuation": {
+      "score": 6975,
+      "health": [
+        36,
+        20,
+        123
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "existing_continuation": {
+      "score": 6975,
+      "health": [
+        36,
+        20,
+        123
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "isolated_context_exact": true
+  },
+  {
+    "capture": "combat168",
+    "visit": 25,
+    "pc": "2c51",
+    "i": 0,
+    "decimal": 0,
+    "pins": [
+      31,
+      23
+    ],
+    "irq_instructions": 302,
+    "irq_ram_sha256": "6c9d87b159fa777e858c9fcf372a5d63ac99aa612c17384c8bf4edfe9c6ee2fd",
+    "irq_regs": "0c02340000000000fb00",
+    "caller_restored": true,
+    "existing_seam_diffs": [
+      {
+        "at": "000a",
+        "source": 200,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000b",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000c",
+        "source": 249,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000d",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "0153",
+        "source": 251,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0154",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0155",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0156",
+        "source": 251,
+        "native": 136,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0157",
+        "source": 242,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0158",
+        "source": 241,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0159",
+        "source": 252,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015a",
+        "source": 242,
+        "native": 10,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015b",
+        "source": 241,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015c",
+        "source": 246,
+        "native": 52,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015d",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015e",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "01f0",
+        "source": 187,
+        "native": 8,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f1",
+        "source": 235,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f2",
+        "source": 188,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f3",
+        "source": 21,
+        "native": 205,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f4",
+        "source": 23,
+        "native": 31,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f5",
+        "source": 73,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f6",
+        "source": 52,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f7",
+        "source": 2,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f8",
+        "source": 12,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f9",
+        "source": 32,
+        "native": 117,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fa",
+        "source": 81,
+        "native": 188,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fb",
+        "source": 44,
+        "native": 21,
+        "kind": "stack_page"
+      },
+      {
+        "at": "0408",
+        "source": 30,
+        "native": 193,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "0409",
+        "source": 73,
+        "native": 72,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f5",
+        "source": 120,
+        "native": 138,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f6",
+        "source": 151,
+        "native": 154,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f7",
+        "source": 253,
+        "native": 234,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f8",
+        "source": 120,
+        "native": 253,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "d012",
+        "source": 64,
+        "native": 251,
+        "kind": "hardware"
+      },
+      {
+        "at": "d018",
+        "source": 50,
+        "native": 56,
+        "kind": "hardware"
+      },
+      {
+        "at": "d01e",
+        "source": 0,
+        "native": 18,
+        "kind": "hardware"
+      },
+      {
+        "at": "d021",
+        "source": 252,
+        "native": 251,
+        "kind": "hardware"
+      }
+    ],
+    "original_continuation": {
+      "score": 6975,
+      "health": [
+        36,
+        20,
+        123
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "existing_continuation": {
+      "score": 6975,
+      "health": [
+        36,
+        20,
+        123
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "isolated_context_exact": true
+  },
+  {
+    "capture": "combat207",
+    "visit": 1,
+    "pc": "2c51",
+    "i": 0,
+    "decimal": 0,
+    "pins": [
+      31,
+      27
+    ],
+    "irq_instructions": 302,
+    "irq_ram_sha256": "468ef97ce102739f4d9bc6ca0a08393b7700040f6c4470922dc1c3d05fda9dec",
+    "irq_regs": "0c02340000000000fb00",
+    "caller_restored": true,
+    "existing_seam_diffs": [
+      {
+        "at": "000a",
+        "source": 200,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000b",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000c",
+        "source": 249,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000d",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "0153",
+        "source": 251,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0154",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0155",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0156",
+        "source": 251,
+        "native": 136,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0157",
+        "source": 242,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0158",
+        "source": 241,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0159",
+        "source": 252,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015a",
+        "source": 242,
+        "native": 10,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015b",
+        "source": 241,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015c",
+        "source": 246,
+        "native": 52,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015d",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015e",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "01f0",
+        "source": 187,
+        "native": 8,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f1",
+        "source": 235,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f2",
+        "source": 188,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f3",
+        "source": 21,
+        "native": 205,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f4",
+        "source": 23,
+        "native": 31,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f5",
+        "source": 73,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f6",
+        "source": 52,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f7",
+        "source": 2,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f8",
+        "source": 12,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f9",
+        "source": 32,
+        "native": 37,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fa",
+        "source": 81,
+        "native": 188,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fb",
+        "source": 44,
+        "native": 21,
+        "kind": "stack_page"
+      },
+      {
+        "at": "0408",
+        "source": 30,
+        "native": 193,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "0409",
+        "source": 73,
+        "native": 72,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f5",
+        "source": 120,
+        "native": 138,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f6",
+        "source": 151,
+        "native": 154,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f7",
+        "source": 253,
+        "native": 234,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f8",
+        "source": 120,
+        "native": 253,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "d012",
+        "source": 64,
+        "native": 251,
+        "kind": "hardware"
+      },
+      {
+        "at": "d018",
+        "source": 50,
+        "native": 56,
+        "kind": "hardware"
+      },
+      {
+        "at": "d01e",
+        "source": 0,
+        "native": 31,
+        "kind": "hardware"
+      },
+      {
+        "at": "d021",
+        "source": 252,
+        "native": 251,
+        "kind": "hardware"
+      }
+    ],
+    "original_continuation": {
+      "score": 13525,
+      "health": [
+        36,
+        20,
+        124
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "existing_continuation": {
+      "score": 13525,
+      "health": [
+        36,
+        20,
+        124
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "isolated_context_exact": true
+  },
+  {
+    "capture": "combat207",
+    "visit": 13,
+    "pc": "2c51",
+    "i": 0,
+    "decimal": 0,
+    "pins": [
+      31,
+      27
+    ],
+    "irq_instructions": 302,
+    "irq_ram_sha256": "ba4c9c29445a5be884239b69ab063690e30c75b3d2fba2d40492c047e3f88f1b",
+    "irq_regs": "0c02340000000000fb00",
+    "caller_restored": true,
+    "existing_seam_diffs": [
+      {
+        "at": "000a",
+        "source": 200,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000b",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000c",
+        "source": 249,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000d",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "0153",
+        "source": 251,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0154",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0155",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0156",
+        "source": 251,
+        "native": 136,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0157",
+        "source": 242,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0158",
+        "source": 241,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0159",
+        "source": 252,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015a",
+        "source": 242,
+        "native": 10,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015b",
+        "source": 241,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015c",
+        "source": 246,
+        "native": 52,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015d",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015e",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "01f0",
+        "source": 187,
+        "native": 8,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f1",
+        "source": 235,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f2",
+        "source": 188,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f3",
+        "source": 21,
+        "native": 205,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f4",
+        "source": 23,
+        "native": 31,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f5",
+        "source": 73,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f6",
+        "source": 52,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f7",
+        "source": 2,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f8",
+        "source": 12,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f9",
+        "source": 32,
+        "native": 37,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fa",
+        "source": 81,
+        "native": 188,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fb",
+        "source": 44,
+        "native": 21,
+        "kind": "stack_page"
+      },
+      {
+        "at": "0408",
+        "source": 30,
+        "native": 193,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "0409",
+        "source": 73,
+        "native": 72,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f5",
+        "source": 120,
+        "native": 138,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f6",
+        "source": 151,
+        "native": 154,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f7",
+        "source": 253,
+        "native": 234,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f8",
+        "source": 120,
+        "native": 253,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "d012",
+        "source": 64,
+        "native": 251,
+        "kind": "hardware"
+      },
+      {
+        "at": "d018",
+        "source": 50,
+        "native": 56,
+        "kind": "hardware"
+      },
+      {
+        "at": "d01e",
+        "source": 0,
+        "native": 31,
+        "kind": "hardware"
+      },
+      {
+        "at": "d021",
+        "source": 252,
+        "native": 251,
+        "kind": "hardware"
+      }
+    ],
+    "original_continuation": {
+      "score": 13525,
+      "health": [
+        36,
+        20,
+        124
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "existing_continuation": {
+      "score": 13525,
+      "health": [
+        36,
+        20,
+        124
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "isolated_context_exact": true
+  },
+  {
+    "capture": "combat207",
+    "visit": 25,
+    "pc": "2c51",
+    "i": 0,
+    "decimal": 0,
+    "pins": [
+      31,
+      27
+    ],
+    "irq_instructions": 302,
+    "irq_ram_sha256": "4d4d960cdbe72b78a99e4ebcf229c61e4ab4d6848c70c1e1b623118d65609ed0",
+    "irq_regs": "0c02340000000000fb00",
+    "caller_restored": true,
+    "existing_seam_diffs": [
+      {
+        "at": "000a",
+        "source": 200,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000b",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000c",
+        "source": 249,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "000d",
+        "source": 71,
+        "native": 0,
+        "kind": "palette_pointers"
+      },
+      {
+        "at": "0153",
+        "source": 251,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0154",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0155",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0156",
+        "source": 251,
+        "native": 136,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0157",
+        "source": 242,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0158",
+        "source": 241,
+        "native": 4,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "0159",
+        "source": 252,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015a",
+        "source": 242,
+        "native": 10,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015b",
+        "source": 241,
+        "native": 14,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015c",
+        "source": 246,
+        "native": 52,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015d",
+        "source": 254,
+        "native": 6,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "015e",
+        "source": 241,
+        "native": 0,
+        "kind": "palette_buffer"
+      },
+      {
+        "at": "01f0",
+        "source": 187,
+        "native": 8,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f1",
+        "source": 235,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f2",
+        "source": 188,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f3",
+        "source": 21,
+        "native": 205,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f4",
+        "source": 23,
+        "native": 31,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f5",
+        "source": 73,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f6",
+        "source": 52,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f7",
+        "source": 2,
+        "native": 26,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f8",
+        "source": 12,
+        "native": 27,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01f9",
+        "source": 32,
+        "native": 37,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fa",
+        "source": 81,
+        "native": 188,
+        "kind": "stack_page"
+      },
+      {
+        "at": "01fb",
+        "source": 44,
+        "native": 21,
+        "kind": "stack_page"
+      },
+      {
+        "at": "0408",
+        "source": 30,
+        "native": 193,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "0409",
+        "source": 73,
+        "native": 72,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f5",
+        "source": 120,
+        "native": 138,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f6",
+        "source": 151,
+        "native": 154,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f7",
+        "source": 253,
+        "native": 234,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "47f8",
+        "source": 120,
+        "native": 253,
+        "kind": "raster_schedule"
+      },
+      {
+        "at": "d012",
+        "source": 64,
+        "native": 251,
+        "kind": "hardware"
+      },
+      {
+        "at": "d018",
+        "source": 50,
+        "native": 56,
+        "kind": "hardware"
+      },
+      {
+        "at": "d01e",
+        "source": 0,
+        "native": 31,
+        "kind": "hardware"
+      },
+      {
+        "at": "d021",
+        "source": 252,
+        "native": 251,
+        "kind": "hardware"
+      }
+    ],
+    "original_continuation": {
+      "score": 13525,
+      "health": [
+        36,
+        20,
+        124
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "existing_continuation": {
+      "score": 13525,
+      "health": [
+        36,
+        20,
+        124
+      ],
+      "registers": "00ff340100010100fd00"
+    },
+    "isolated_context_exact": true
+  }
+]

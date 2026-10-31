@@ -10,15 +10,15 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+      "sha256": "61ae99bd399e0f69db79f84a3cb02165ae67ed06681573128b3e8f451255fec0"
     },
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+      "sha256": "46a58572e0bca4539b296d09dab188ba66e74965deb26668e77ea2f0b33460ed"
     },
     {
       "path": "tools/build_c64_rooms.py",
-      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e"
+      "sha256": "a36fcc6c54b9d1cee06c9f90be7e33b0b159c43a29bf5973ef535de89608d636"
     },
     {
       "path": "tools/build_c64_actors.py",

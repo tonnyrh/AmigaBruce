@@ -1,0 +1,35 @@
+{
+  "status": "passed_current_normal_boot",
+  "method": "Owned paused complete menu against existing font/UI reference; optional source-main progression; no source-state writes",
+  "mode": "adf",
+  "normal_exe_sha256": "e76c00f2a83b2871d85e7296e99b0f440f24debb5d9abf15311e3f8cbe17cd30",
+  "elf": {
+    "path": "amiga/out/bruce_amiga.elf",
+    "sha256": "c7aba601dd28b46da571d0009c97e6689bcb27701233b22402b781054020eb69"
+  },
+  "complete_menu": true,
+  "game_states": [
+    {
+      "steps": 9,
+      "fault": 0,
+      "room": 1
+    },
+    {
+      "steps": 28,
+      "fault": 0,
+      "room": 1
+    },
+    {
+      "steps": 47,
+      "fault": 0,
+      "room": 1
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/op2-vic-pairs-2026-10-31/boot/adf/menu.bpl",
+      "sha256": "1c31ef755fe04c957206e7e484cec859e291842ef58ea3129577f802102e9c22"
+    }
+  ],
+  "natural_playthrough": false
+}

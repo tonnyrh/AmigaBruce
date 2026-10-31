@@ -25,6 +25,58 @@ def invoke(m,entry,stop=0xffff):
     raise AssertionError(f'6502 escaped ${entry:04X} at ${cpu.pc:04X}')
 
 
+def resolved_playfield(planes, pen15):
+    from PIL import Image, ImageChops
+    # Host painter stores four separate 320x256 planes. Resolve the Copper
+    # colour when constructing the image that reaches the display.
+    image = Image.new('L', (320, 256))
+    for plane in range(4):
+        bits = bytes(planes[plane * 10240:(plane + 1) * 10240])
+        layer = Image.frombytes('1', image.size, bits).convert('L')
+        image = ImageChops.add(image, layer.point([0] * 255 + [1 << plane]))
+    return image.crop((0, 56, 320, 232)).point(list(range(15)) + [pen15] + [0] * 240)
+
+
+def verify_wizard_flash(native, source):
+    from rip_c64_room_graphics import render
+    native.bl_c64_reset()
+    native.bl_c64_load(18)
+    planes = (ctypes.c_ubyte * 40960)()
+    native.bl_c64_paint_room(planes, 32)
+    native.bl_c64_clear_dirty()
+    m = bytearray(native.bl_c64_read(i) for i in range(65536))
+    m[0x500:0x4300] = source[0x500:0x4300]
+    m[0x4e86] = 0
+    native.bl_c64_test_write(0x4e86, 0)
+    count = ctypes.c_ushort()
+    banks = set()
+    for step in range(82):
+        # Vary the source memory-reader phase so both charset paths occur.
+        m[0x16] = (step * 11) & 255
+        native.bl_c64_test_write(0x16, m[0x16])
+        invoke(m, 0x3cdc)
+        native.bl_c64_test_execute(0x3cdc)
+        assert not native.bl_c64_fault()
+        assert m[0x4e98] == native.bl_c64_read(0x4e98) == max(0, 80-step)
+        for lo, hi in [(0x4e97,0x4e9b),(0xf2,0xf3),(0x8c78,0x8fe8),(0xd878,0xdbe8)]:
+            assert m[lo:hi] == bytes(native.bl_c64_read(i) for i in range(lo,hi)), (step, hex(lo))
+        for _ in range(80):
+            native.bl_c64_paint_part(planes, 32, 17, ctypes.byref(count))
+            if native.bl_c64_paint_done():
+                break
+        else:
+            raise AssertionError(('wizard paint timeout', step))
+        native.bl_c64_clear_dirty()
+        pen = native.bl_c64_flash_color()
+        assert pen == (m[0xd8d3] & 7 if step else 15)
+        expected = render(m, 18).crop((0, 24, 320, 200))
+        assert resolved_playfield(planes, pen).tobytes() == expected.tobytes(), ('wizard pixels', step)
+        if step:
+            banks.add(m[0xf2])
+    assert banks == {0x3c, 0x3e}
+    return 82
+
+
 class Paint(ctypes.Structure):
     _fields_=[('bitmap',ctypes.POINTER(ctypes.c_ubyte)),('planes',ctypes.POINTER(ctypes.c_ubyte))]+[(key,ctypes.c_ulong) for key in ('cell','slot','changed','scene_top')]
 class Block(ctypes.Structure):
@@ -88,6 +140,7 @@ def main():
     for item in identity:assert hashlib.sha256((ROOT/item['path']).read_bytes()).hexdigest()==item['sha256'],f"Source changed before CPU verification: {item['path']}"
     native=ctypes.CDLL(str(ROOT/'.tmp/c64-room-test/rooms.dll'))
     native.bl_c64_read.restype=ctypes.c_ubyte
+    native.bl_c64_flash_color.restype=ctypes.c_ubyte
     native.bl_c64_read.argtypes=[ctypes.c_long]
     native.bl_c64_paint_done.restype=ctypes.c_ubyte
     native.bl_c64_fault.restype=ctypes.c_ushort
@@ -97,6 +150,9 @@ def main():
     native.bl_c64_planar.argtypes=[ctypes.c_long]*3
     native.bl_c64_planar.restype=ctypes.c_ulong
     source=(ROOT/'.reference/c64/work/untrained-memory.bin').read_bytes()
+    if '--wizard-only' in sys.argv:
+        print('PASS',verify_wizard_flash(native,source),'room 19 source states and full playfield images')
+        return
     checks=[];contacts=0;door_checks=0
     # Every room, original lamp flags plus all lamps removed, and moving actors.
     ranges=[(0,0x200),(0x2500,0x2584),(0xd400,0xd419),
@@ -115,7 +171,9 @@ def main():
             # independently. Add executable source bytes only to the CPU side.
             m=[native.bl_c64_read(i) for i in range(65536)]
             m[0x500:0x4300]=source[0x500:0x4300]
-            m[0x29]=room;invoke(m,0x0a2a,stop=0x0a6b)
+            m[0x29]=room
+            invoke(m,0x255e)  # $09F3 silences the SID during a full room load.
+            invoke(m,0x0a2a,stop=0x0a6b)
             m[0x9e]=source[0x4bae+room];m[0xa1]=source[0x4bc2+room];m[0xb6]=1;m[0xce]=4
             m[0x29]=room;m[0x100]=m[0x106]=m[0xbf]=0;m[0x65]=0;m[0x4321]=7
             for i in range(132):m[0x4f57+i]=0
@@ -138,8 +196,7 @@ def main():
                 for yy in range(24,200):
                     for xx in range(320):
                         value=sum(1<<p for p in range(4) if planes[p*10240+(yy+32)*40+xx//8]&(128>>(xx&7)))
-                        if room==19 and value==15:
-                            value=native.bl_c64_read(0xdaac)&7 # Dedicated OCS register, same source color.
+                        if value==15:value=native.bl_c64_flash_color()
                         picture.putpixel((xx,yy),value)
                 assert picture.tobytes()==Image.open(ROOT/f'assets/c64/rooms-v1/room-{room+1:02}.png').tobytes(),f'R{room+1} planar LUT differs from source extraction'
                 contact_memory=list(loaded);contact_memory[0x5000:0x5800]=source[0x5000:0x5800]
@@ -206,7 +263,7 @@ def main():
             for yy in range(24,200):
                 for xx in range(320):
                     value=sum(1<<p for p in range(4) if planes[p*10240+(yy+32)*40+xx//8]&(128>>(xx&7)))
-                    if room==19 and value==15:value=native.bl_c64_read(0xdaac)&7
+                    if value==15:value=native.bl_c64_flash_color()
                     picture.putpixel((xx,yy),value)
             assert picture.tobytes()==expected_picture.tobytes(),f'R{room+1} clear={clear}: partial renderer differs after source loops'
             contact_memory=list(m);contact_memory[0x5000:0x5800]=source[0x5000:0x5800]
@@ -218,6 +275,7 @@ def main():
                     assert actual==expected,(room+1,clear,'dynamic contact',px,py,actual,expected)
                     contacts+=1
             checks.append(dict(room=room+1,all_lamps_cleared=clear,source_loop_calls=64,matched=True))
+    wizard_checks=verify_wizard_flash(native,source)
     animation_checks=verify_animation_cache(native,source)
     for item in identity:assert hashlib.sha256((ROOT/item['path']).read_bytes()).hexdigest()==item['sha256'],f"Source changed during CPU verification: {item['path']}"
     from verify_c64_contacts import verify_objects
@@ -225,7 +283,7 @@ def main():
     report=dict(date=str(date.today()),status='passed_native_c_vs_source_cpu_fixtures',rooms=20,
         object_pass_checks=len(object_checks['cases']),
         source_loop_calls=2560,source_animation_calls=160,animation_cache_checks=animation_checks,contact_checks=contacts,door_gate_checks=door_checks,
-        indexed_room_images_compared=20,dynamic_room_images_compared=40,checks=checks,natural_playthrough=False,hardware_parity=False,
+        indexed_room_images_compared=20,dynamic_room_images_compared=40,wizard_flash_images=wizard_checks,checks=checks,natural_playthrough=False,hardware_parity=False,
         source_sha256=hashlib.sha256(source).hexdigest(),
         source_files=identity)
     (ROOT/'reference/validation/c64-room-runtime.json').write_text(json.dumps(report,indent=2)+'\n')

@@ -1,0 +1,12 @@
+{
+  "method": "Actual Windows Graphics Capture of stock private v5 normal game; no memory injection",
+  "window": {
+    "app": "process:C:\\vscode\\_EXT\\AmigaBruceLee\\.tmp\\hardware-bruce-v5-ui\\winuae64.exe",
+    "id": 22809482,
+    "title": "[hardware-bruce-v5.uae] - WinUAE"
+  },
+  "bruceYellow": true,
+  "yamoGreen": true,
+  "noObviousSpriteSeams": true,
+  "actorsOverlap": true
+}

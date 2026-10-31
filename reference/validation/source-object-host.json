@@ -23,7 +23,7 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+      "sha256": "f330173ba5d104f26dc8222f7ed2f44aade9df4471097fa0aaf442ea193f96c8"
     },
     {
       "path": "core/c64_actor_programs.h",

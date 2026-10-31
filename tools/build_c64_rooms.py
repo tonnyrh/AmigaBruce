@@ -92,6 +92,10 @@ def translate(memory, roots, *, actors=False):
             if actors and pc not in (0x050f,0x0584,0x0f47,0x1968,0x197d,0x169d,0x179d,0x1bc2,0x1c32):statement=statement.replace('return;','actor_return=source_stack_return();return;')
             lines.append(statement);continue
         op,mode,size,o=code[pc]
+        if actors and pc in (0x0ead,0x189a):
+            assert (op,mode,o)==('sta','abs',0xd011) and memory[pc-2:pc]==bytes.fromhex('29 ef')
+            event='BL_DISPLAY_PLAYER' if pc==0x0ead else 'BL_DISPLAY_GAME_OVER'
+            lines.append(f'if(load_service)load_service({event});')
         if actors and pc==0x1bc2:lines.append('if(actor_preparing){actor_stop_pc=0x1bc2;return;} ++actor_logic_steps;')
         if actors and pc==0x09f6:lines.append('if(actor_debug_target==11)goto L0a0e;')
         if actors and pc==0x0b30:lines.append('if(actor_legacy_load){sp+=2;actor_return=source_stack_return();return;}')
@@ -104,6 +108,9 @@ def translate(memory, roots, *, actors=False):
         if actors and pc==0x304b:lines.append('if(actor_invincible && !m[0x51]){sp+=2;actor_return=source_stack_return();return;}')
         if actors and pc==0x407d:lines.append('if(actor_invincible && !x){sp+=2;actor_return=source_stack_return();return;}')
         return_helper='actor_return=source_stack_return();' if actors else ''
+        if actors and pc==0x3dcd:
+            assert memory[pc:0x3df2]==bytes.fromhex('9dd3d89dfbd89d23d99d4bd9e00cb0129d86d89daed89d76d99d9ed99dc6d99deed9ca10db')
+            lines.append('if(x==17 && loaded==18 && index_ready && !m[0x4e97]){source_boss_colors();goto L3df2;}')
         if actors and pc==0x42a1:
             assert (op,mode,size,o)==('sta','abx',3,0xdaac)
             assert memory[0x42a1:0x42bc]==bytes.fromhex('9dacda9dd4da9dfcda9d24db9d4cdb9d74db9d9cdb9dc4dbca10e5')
@@ -115,6 +122,11 @@ def translate(memory, roots, *, actors=False):
         if actors and pc==0x2e39:lines.append('if(source_object_driver()){'+return_helper+'}return;')
         if actors and pc==0x2e6e:lines.append('source_object_row();return;')
         if actors and pc==0x55ab:lines.append('source_contact_clear();'+return_helper+'return;')
+        if actors and pc==0x315d:
+            assert memory[0x315d:0x3175]==bytes.fromhex('a030ad9c4320171ba032ad9d4320171ba034ad9e434c171b')
+            assert memory[0x1b17:0x1b29]==bytes.fromhex('48200e32091099008c68290f091099018c60')
+            assert memory[0x320e:0x3215]==bytes.fromhex('4a4a4a4a290f60')
+            lines.append('source_score_display();goto L1b28;')
         if actors and pc in (0x31d5,0x32ee):
             end=0x31f4 if pc==0x31d5 else 0x330d
             lines.append(f'if(!(m[0x439b]|m[0x439c]|m[0x439d]|m[0x439e])){{source_score_decimal();goto L{end:04x};}}')

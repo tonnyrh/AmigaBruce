@@ -1,0 +1,184 @@
+537E: a4 52  LDY $52
+5380: b9 00 e0  LDA $e000,Y
+5383: 39 e0 ca  AND $cae0,Y
+5386: f0 12  BEQ $539a
+5388: 85 4e  STA $4e
+538A: 4a  LSR A
+538B: 4a  LSR A
+538C: 4a  LSR A
+538D: 4a  LSR A
+538E: aa  TAX
+538F: 9d ed 4e  STA $4eed,X
+5392: a5 4e  LDA $4e
+5394: 29 0f  AND #$0f
+5396: aa  TAX
+5397: 9d ed 4e  STA $4eed,X
+539A: b9 00 e0  LDA $e000,Y
+539D: 39 00 cb  AND $cb00,Y
+53A0: f0 12  BEQ $53b4
+53A2: 85 4e  STA $4e
+53A4: 4a  LSR A
+53A5: 4a  LSR A
+53A6: 4a  LSR A
+53A7: 4a  LSR A
+53A8: aa  TAX
+53A9: 9d 04 4f  STA $4f04,X
+53AC: a5 4e  LDA $4e
+53AE: 29 0f  AND #$0f
+53B0: aa  TAX
+53B1: 9d 04 4f  STA $4f04,X
+53B4: b9 00 e0  LDA $e000,Y
+53B7: 39 20 cb  AND $cb20,Y
+53BA: f0 12  BEQ $53ce
+53BC: 85 4e  STA $4e
+53BE: 4a  LSR A
+53BF: 4a  LSR A
+53C0: 4a  LSR A
+53C1: 4a  LSR A
+53C2: aa  TAX
+53C3: 9d 1b 4f  STA $4f1b,X
+53C6: a5 4e  LDA $4e
+53C8: 29 0f  AND #$0f
+53CA: aa  TAX
+53CB: 9d 1b 4f  STA $4f1b,X
+53CE: c8  INY
+53CF: cc 38 4f  CPY $4f38
+53D2: f0 10  BEQ $53e4
+53D4: cc 39 4f  CPY $4f39
+53D7: f0 50  BEQ $5429
+53D9: cc 3a 4f  CPY $4f3a
+53DC: f0 03  BEQ $53e1
+53DE: 4c 80 53  JMP $5380
+5431: a9 00  LDA #$00
+5433: a2 04  LDX #$04
+5435: 9d 3b 4f  STA $4f3b,X
+5438: ca  DEX
+5439: 10 fa  BPL $5435
+543B: ad 32 4f  LDA $4f32
+543E: f0 06  BEQ $5446
+5440: ce 32 4f  DEC $4f32
+5443: 20 e6 55  JSR $55e6
+5446: ad 33 4f  LDA $4f33
+5449: f0 06  BEQ $5451
+544B: ce 33 4f  DEC $4f33
+544E: 20 58 56  JSR $5658
+5451: ad 34 4f  LDA $4f34
+5454: f0 06  BEQ $545c
+5456: ce 34 4f  DEC $4f34
+5459: 20 ca 56  JSR $56ca
+545C: ad ee 4e  LDA $4eee
+545F: 0d f1 4e  ORA $4ef1
+5462: 0d f2 4e  ORA $4ef2
+5465: 0d f3 4e  ORA $4ef3
+5468: 0d f4 4e  ORA $4ef4
+546B: 0d fe 4e  ORA $4efe
+546E: 0d f6 4e  ORA $4ef6
+5471: 0d fa 4e  ORA $4efa
+5474: 0d 01 4f  ORA $4f01
+5477: 0d 05 4f  ORA $4f05
+547A: 0d 08 4f  ORA $4f08
+547D: 0d 09 4f  ORA $4f09
+5480: 0d 0a 4f  ORA $4f0a
+5483: 0d 0b 4f  ORA $4f0b
+5486: 0d fe 4e  ORA $4efe
+5489: 0d 0d 4f  ORA $4f0d
+548C: 0d 11 4f  ORA $4f11
+548F: 0d 18 4f  ORA $4f18
+5492: 0d 1c 4f  ORA $4f1c
+5495: 0d 1f 4f  ORA $4f1f
+5498: 0d 20 4f  ORA $4f20
+549B: 0d 21 4f  ORA $4f21
+549E: 0d 22 4f  ORA $4f22
+54A1: 0d 2c 4f  ORA $4f2c
+54A4: 0d 24 4f  ORA $4f24
+54A7: 0d 28 4f  ORA $4f28
+54AA: 0d 2f 4f  ORA $4f2f
+54AD: f0 03  BEQ $54b2
+54AF: ee 3c 4f  INC $4f3c
+54B2: ad ef 4e  LDA $4eef
+54B5: 0d f3 4e  ORA $4ef3
+54B8: 0d f5 4e  ORA $4ef5
+54BB: 0d f6 4e  ORA $4ef6
+54BE: 0d f7 4e  ORA $4ef7
+54C1: 0d f8 4e  ORA $4ef8
+54C4: 0d fb 4e  ORA $4efb
+54C7: 0d ff 4e  ORA $4eff
+54CA: 0d 02 4f  ORA $4f02
+54CD: 0d 06 4f  ORA $4f06
+54D0: 0d 0a 4f  ORA $4f0a
+54D3: 0d 0c 4f  ORA $4f0c
+54D6: 0d 0d 4f  ORA $4f0d
+54D9: 0d 0e 4f  ORA $4f0e
+54DC: 0d 0f 4f  ORA $4f0f
+54DF: 0d 12 4f  ORA $4f12
+54E2: 0d 16 4f  ORA $4f16
+54E5: 0d 19 4f  ORA $4f19
+54E8: 0d 1d 4f  ORA $4f1d
+54EB: 0d 21 4f  ORA $4f21
+54EE: 0d 23 4f  ORA $4f23
+54F1: 0d 24 4f  ORA $4f24
+54F4: 0d 25 4f  ORA $4f25
+54F7: 0d 26 4f  ORA $4f26
+54FA: 0d 29 4f  ORA $4f29
+54FD: 0d 2d 4f  ORA $4f2d
+5500: 0d 30 4f  ORA $4f30
+5503: f0 03  BEQ $5508
+5505: ee 3d 4f  INC $4f3d
+5508: ad fd 4e  LDA $4efd
+550B: 0d fe 4e  ORA $4efe
+550E: 0d ff 4e  ORA $4eff
+5511: 0d 00 4f  ORA $4f00
+5514: 0d 01 4f  ORA $4f01
+5517: 0d 02 4f  ORA $4f02
+551A: 0d 03 4f  ORA $4f03
+551D: 0d 14 4f  ORA $4f14
+5520: 0d 15 4f  ORA $4f15
+5523: 0d 16 4f  ORA $4f16
+5526: 0d 17 4f  ORA $4f17
+5529: 0d 18 4f  ORA $4f18
+552C: 0d 19 4f  ORA $4f19
+552F: 0d 1a 4f  ORA $4f1a
+5532: 0d 2b 4f  ORA $4f2b
+5535: 0d 2c 4f  ORA $4f2c
+5538: 0d 2d 4f  ORA $4f2d
+553B: 0d 2e 4f  ORA $4f2e
+553E: 0d 2f 4f  ORA $4f2f
+5541: 0d 30 4f  ORA $4f30
+5544: 0d 31 4f  ORA $4f31
+5547: f0 03  BEQ $554c
+5549: ee 3e 4f  INC $4f3e
+554C: ad f0 4e  LDA $4ef0
+554F: 0d f4 4e  ORA $4ef4
+5552: 0d f8 4e  ORA $4ef8
+5555: 0d f9 4e  ORA $4ef9
+5558: 0d fa 4e  ORA $4efa
+555B: 0d fb 4e  ORA $4efb
+555E: 0d fc 4e  ORA $4efc
+5561: 0d 07 4f  ORA $4f07
+5564: 0d 0b 4f  ORA $4f0b
+5567: 0d 0f 4f  ORA $4f0f
+556A: 0d 10 4f  ORA $4f10
+556D: 0d 11 4f  ORA $4f11
+5570: 0d 12 4f  ORA $4f12
+5573: 0d 13 4f  ORA $4f13
+5576: 0d 1e 4f  ORA $4f1e
+5579: 0d 22 4f  ORA $4f22
+557C: 0d 26 4f  ORA $4f26
+557F: 0d 27 4f  ORA $4f27
+5582: 0d 28 4f  ORA $4f28
+5585: 0d 29 4f  ORA $4f29
+5588: 0d 2a 4f  ORA $4f2a
+558B: f0 03  BEQ $5590
+558D: ee 3f 4f  INC $4f3f
+5590: a6 50  LDX $50
+5592: a9 00  LDA #$00
+5594: 95 b6  STA $b6,X
+5596: 4e 3f 4f  LSR $4f3f
+5599: 36 b6  ROL $b6,X
+559B: 4e 3e 4f  LSR $4f3e
+559E: 36 b6  ROL $b6,X
+55A0: 4e 3d 4f  LSR $4f3d
+55A3: 36 b6  ROL $b6,X
+55A5: 4e 3c 4f  LSR $4f3c
+55A8: 36 b6  ROL $b6,X
+55AA: 60  RTS

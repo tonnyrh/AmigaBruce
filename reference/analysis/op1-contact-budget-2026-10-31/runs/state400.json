@@ -1,0 +1,157 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "entry_sha256": "2689eb5fecd1ff0ef390787bcda017e7773ef7658fcf42fd7260623924c027e8",
+  "capture_sha256": "72406cbffeaaa09e75b92b7fe89e1358edb3fed69d93295fb87e0b7f6c58a523",
+  "replay_sha256": "768a1d0e3711267b9f6ccb1f471a9cce3e7430641a67b0a2ae22b28cb9b1a7f2",
+  "replay_bytes": 1245,
+  "return_pc": "1c10",
+  "source_instructions": 8570,
+  "distinct_instruction_addresses": 523,
+  "patched_operands": [
+    "0x52cc",
+    "0x52cd",
+    "0x5381",
+    "0x5382",
+    "0x539b",
+    "0x539c",
+    "0x53b5",
+    "0x53b6"
+  ],
+  "checkpoints": [
+    {
+      "pc": "5214",
+      "actor": 2,
+      "y": 64,
+      "registers": "0802400000000000fb00",
+      "memory_sha256": "2689eb5fecd1ff0ef390787bcda017e7773ef7658fcf42fd7260623924c027e8"
+    },
+    {
+      "pc": "5380",
+      "actor": 2,
+      "y": 0,
+      "registers": "a002000001000000f900",
+      "memory_sha256": "1341efa35b9cae8292d6c22846b48e701dc1304775c0dd71368274493abc7c5f"
+    },
+    {
+      "pc": "5380",
+      "actor": 2,
+      "y": 8,
+      "registers": "a302080000000000f900",
+      "memory_sha256": "39370da15bda595032a3ce1c8cfb82aaaaf79f7f8d26336cd8a4657f722b3ee3"
+    },
+    {
+      "pc": "5380",
+      "actor": 2,
+      "y": 16,
+      "registers": "a202100000000000f900",
+      "memory_sha256": "769310291778a212ca8eb0fd908cb2db94c1fffcf1b44a593bddb4aea29b6245"
+    },
+    {
+      "pc": "5380",
+      "actor": 2,
+      "y": 24,
+      "registers": "a602180000000000f900",
+      "memory_sha256": "30a964e65426f27dcfce7eb835987dada6b3d3794dcf567baa3d3aef4741bfe5"
+    },
+    {
+      "pc": "5214",
+      "actor": 1,
+      "y": 28,
+      "registers": "52011c0000000000fb00",
+      "memory_sha256": "c60175b36c096e7f6540c10ae25608f4bae361e0351b3dc66591ca572cc75090"
+    },
+    {
+      "pc": "5380",
+      "actor": 1,
+      "y": 0,
+      "registers": "a001000001000000f900",
+      "memory_sha256": "47033d9204db310cdc02bf0e21c43cfc67633a9b2ad8074567cae23d1c2026f1"
+    },
+    {
+      "pc": "5380",
+      "actor": 1,
+      "y": 8,
+      "registers": "a401080000000000f900",
+      "memory_sha256": "dfe37ac6e71bf64eec72ba1a6cb68b0a307a6a533745b3ef63470428cd363fee"
+    },
+    {
+      "pc": "5380",
+      "actor": 1,
+      "y": 16,
+      "registers": "a201100000000000f900",
+      "memory_sha256": "8b54ded375f5e1327f714f8f74c41abbe93a469b95c796bfbec8bd73cd444c35"
+    },
+    {
+      "pc": "5380",
+      "actor": 1,
+      "y": 24,
+      "registers": "a601180000000000f900",
+      "memory_sha256": "13d28f8be793e18ae85bdf7d043d1eb6e4c66502825093c0772cbef8ec4240b9"
+    },
+    {
+      "pc": "5214",
+      "actor": 0,
+      "y": 25,
+      "registers": "5200190001000000fb00",
+      "memory_sha256": "733e5efc70a14eee06ac64b4fa7ff278f7a87a8bef35be447fe80a8a2f5b868f"
+    },
+    {
+      "pc": "5380",
+      "actor": 0,
+      "y": 0,
+      "registers": "a000000001000000f900",
+      "memory_sha256": "38bc4411530c25133ab04fae58833638dd343730d8bbce59ea0a095fa6f1f132"
+    },
+    {
+      "pc": "5380",
+      "actor": 0,
+      "y": 8,
+      "registers": "a300080000000000f900",
+      "memory_sha256": "b2c283ea668840f884f2aa96e639964f20315423464794f588ffe905e9ba9d2b"
+    },
+    {
+      "pc": "5380",
+      "actor": 0,
+      "y": 16,
+      "registers": "a000100000000000f900",
+      "memory_sha256": "529ba554abe459800cc72b280a562338678c9dfba243063758538d635a082053"
+    },
+    {
+      "pc": "5380",
+      "actor": 0,
+      "y": 24,
+      "registers": "a400180000000000f900",
+      "memory_sha256": "11eac13d4044f04ab91facbb37cc7521e47a328d34db09fe52f6406db8196811"
+    },
+    {
+      "pc": "1c10",
+      "actor": 0,
+      "y": 28,
+      "registers": "52ff1c0000010000fd00",
+      "memory_sha256": "640834555a4b63501109b3e38f7571a953f93d880c7ca30da31a9c7d50dcba7b"
+    }
+  ],
+  "actor_positions": [
+    26,
+    39,
+    35,
+    196,
+    193,
+    196
+  ],
+  "poses": [
+    2,
+    70,
+    140
+  ],
+  "body": [
+    0,
+    2,
+    2
+  ],
+  "feet": [
+    1,
+    2,
+    3
+  ]
+}

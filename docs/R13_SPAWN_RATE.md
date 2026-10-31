@@ -1,6 +1,8 @@
 # Rom 13: hyppig fiendeinntreden
 
 Brukerfunn 30. oktober 2026: stort fiendepress ved første avsats i rom 13.
+Presisering fra brukeren 31. oktober: dette gjelder **mest Yamo**. Det er
+fortsatt ikke avklart om det særlig gjelder retur etter nederlag.
 Denne gjennomgangen endrer ingen spillregel, produksjonskode eller EXE/ADF.
 
 Kilde er de faktiske bytene i den frosne Remember/T64-kandidaten, SHA-256
@@ -78,7 +80,7 @@ eller 25 som eksplisitt greninngang; den fastsetter ikke RAM-leserens
 naturlige sannsynlighetsfordeling. AI, kamp, bevegelse og døds-/innkomst-
 animasjoner oppdateres ikke i tjenesteprøven. Ingen ny naturlig C64-rute,
 native maskinvarekontroll av denne avsatsen eller original rasterfase
-hevdes. Hvilken fiende og hvilket konkret forløp brukeren reagerer på
-er fortsatt ikke avklart.
+hevdes. Brukeren har nå stedfestet hovedproblemet til Yamo; det konkrete
+ankomst-/returforløpet er fortsatt ikke avklart.
 
 Data og disassembly: `reference/analysis/spawn-r13-2026-10-30/`.

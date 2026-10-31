@@ -1,0 +1,32 @@
+{
+  "status": "passed_exhaustive_frozen_binary_arithmetic",
+  "cases": 262144,
+  "source_instructions": 262144,
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_entries": [
+    "$0A11:65 03 ADC$03",
+    "$2DE0:E5 A1 SBC$A1"
+  ],
+  "mode": "D=0 only; decimal path unchanged and not certified by this control",
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "edition_verified": false,
+  "artifacts": [
+    {
+      "path": "tools/verify_native_arithmetic_source.py",
+      "sha256": "3280c12fe431e5a658faadfb1d789910822fe17f0c520a20d8572ca0c6ccd576"
+    },
+    {
+      "path": "reference/analysis/native-arithmetic-2026-10-31/math_bridge.c",
+      "sha256": "5ecf9a49b9160cf1fe15454490b2dce60ba0365b2601ad689abb2305d3db5174"
+    },
+    {
+      "path": "reference/analysis/native-arithmetic-2026-10-31/candidate/c64_rooms.c",
+      "sha256": "7a26c11bf415fa3abadd1b76c13c31eeae3d38d0ddbb7377d8565f05bc63ba90"
+    },
+    {
+      "path": ".tmp/native-arithmetic-host/math.dll",
+      "sha256": "439b02815ea0d833db2b1da0315a444b214e92f8119a6ae68aa69d8a6e7543d7"
+    }
+  ]
+}

@@ -11,6 +11,8 @@ if($LASTEXITCODE){throw 'Source contact class kernel generation failed'}
 if($LASTEXITCODE){throw 'Source audio extraction failed'}
 & python (Join-Path $taskRoot 'tools/build_c64_sprites.py')
 if($LASTEXITCODE){throw 'C64 sprite extraction failed'}
+& python (Join-Path $taskRoot 'tools/build_title_art.py')
+if($LASTEXITCODE){throw 'Title art packing failed'}
 & python (Join-Path $taskRoot 'tools/build_c64_hit_masks.py')
 if($LASTEXITCODE){throw 'C64 combat mask extraction failed'}
 & python (Join-Path $taskRoot 'tools/build_c64_rooms.py')
@@ -43,7 +45,7 @@ if($RoomTour){$flags+='-DBL_ROOM_TOUR=1'}
 if($GateTest){$flags+='-DBL_GATE_TEST=1'}
 if($RoomLoadTest){if(!$Autotest){throw 'RoomLoadTest requires Autotest'};$flags+='-DBL_ROOM_LOAD_TEST=1'}
 if($RoomLoadBaseline){if(!$RoomLoadTest){throw 'RoomLoadBaseline requires RoomLoadTest'};$flags+='-DBL_ROOM_REUSE=0'}
-$sources=@('amiga/start.s','amiga/vic_compare.s','amiga/contact_rows.s','amiga/sprite_copy.s','amiga/contact_align.s','amiga/contact_prepare.s','amiga/main.c','amiga/runtime.c','core/game.c','core/source_wall.c','core/source_climb.c','core/presentation.c','core/c64_sprites.c','core/combat.c','core/rooms.c','core/session.c','core/c64_rooms.c','core/source_audio.c','core/source_dma.c')
+$sources=@('amiga/start.s','amiga/vic_compare.s','amiga/contact_rows.s','amiga/sprite_copy.s','amiga/contact_align.s','amiga/contact_prepare.s','amiga/main.c','amiga/runtime.c','core/game.c','core/source_wall.c','core/source_climb.c','core/presentation.c','core/c64_sprites.c','core/combat.c','core/rooms.c','core/session.c','core/c64_rooms.c','core/source_audio.c','core/source_dma.c','amiga/vic_wide.s')
 $objects=@()
 foreach($source in $sources){
     $obj=Join-Path $out ([IO.Path]::GetFileNameWithoutExtension($source)+'.o')

@@ -1,0 +1,167 @@
+{
+  "status": "passed_published_native_sprite_dma_descriptors",
+  "elf": {
+    "path": "reference/analysis/hardware-bruce-2026-10-31/v3/sprite/out/bruce_amiga.elf",
+    "sha256": "f19ba1aaf200619812b3cf58c38ba8574f36a681a13c461ad0a3c16409acc731"
+  },
+  "samples": [
+    {
+      "buffer": 1,
+      "frame_index": 176,
+      "source_pose": 2,
+      "facing": 1,
+      "columns": 1,
+      "position": [
+        28,
+        209
+      ],
+      "pixel_errors": 0,
+      "dma_enabled": true,
+      "copper_list_bytes": 216,
+      "game_room": 12,
+      "custom": "A: CRA 00 CRB 08 ICR 00 IM 0a TA ffff (ffff) TB 0863 (0863)\n   PRA c0 [fc] PRB 00 [ff] DDRA 03 DDRB 00 SDR 00\n   TOD 003135 (003135) ALARM 000000 -- CYC=0000006B9BBF0800\nB: CRA 00 CRB 80 ICR e4 IM 04 TA ffff (ffff) TB ffff (ffff)\n   PRA ff [ff] PRB ff [ff] DDRA c0 DDRB ff SDR 00\n   TOD 3a0fa4 (3a0fa3) ALARM 000000 --\nDEBUG: drive 0 motor off cylinder  0 sel no ro mfmpos 0/101344\nDEBUG: drive 1 motor off cylinder  1 sel no ro mfmpos 0/101344\nside 0 dma 0 off 5 word 0000 pt 00000000 len 4000 bytr 8000 adk 0000 sync 0000\nDMACON: $07e7 INTENA: $0000 ($0000) INTREQ: $23e8 ($23e8) VPOS: 004 ($004) HPOS: 001 ($001)\nINT: $0000 IPL: 0\nCOP1LC: $0006ae40, COP2LC: $000004c0 COPPTR: $0006af18\nDIWSTRT: $2c81 DIWSTOP: $2cc1 DDFSTRT: $0038 DDFSTOP: $00d0\nBPLCON 0: $4200 1: $0000 2: $0000 3: $0c00 4: $0011 LOF=1/1 HDIW=0 VDIW=0\nAverage frame time: 203252.47 ms [frames: 12705 time: -1712441371]\n",
+      "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $0006af18\n  D0 00000000   D1 00000000   D2 00000096   D3 0000000B \n  D4 0000003A   D5 000000A3   D6 00000F00   D7 00000000 \n  A0 00C7A41E   A1 00C4C7CC   A2 00C4D250   A3 00C62A8A \n  A4 00C4CA18   A5 00C7A408   A6 0000000F   A7 00C79F8C \nUSP  00C79F8C ISP  00C80000 \nSR=0000 T=00 S=0 M=0 X=0 N=0 Z=0 V=0 C=0 IM=0 STP=0\nPrefetch 3828 (MOVE) 3828 (MOVE) Chip latch 00003828\n00c0df10 41f5 8800                lea.l ($00,a5,a0.l) == $018f4826,a0\nNext PC: 00c0df14\n"
+    },
+    {
+      "buffer": 1,
+      "frame_index": 176,
+      "source_pose": 2,
+      "facing": 1,
+      "columns": 1,
+      "position": [
+        28,
+        209
+      ],
+      "pixel_errors": 0,
+      "dma_enabled": true,
+      "copper_list_bytes": 216,
+      "game_room": 12,
+      "custom": "A: CRA 00 CRB 08 ICR 00 IM 0a TA ffff (ffff) TB 0863 (0863)\n   PRA c0 [fc] PRB 00 [ff] DDRA 03 DDRB 00 SDR 00\n   TOD 00313f (00313f) ALARM 000000 -- CYC=0000006BB16DE400\nB: CRA 00 CRB 80 ICR e4 IM 04 TA ffff (ffff) TB ffff (ffff)\n   PRA ff [ff] PRB ff [ff] DDRA c0 DDRB ff SDR 00\n   TOD 3a1bde (3a1bd0) ALARM 000000 --\nDEBUG: drive 0 motor off cylinder  0 sel no ro mfmpos 0/101344\nDEBUG: drive 1 motor off cylinder  1 sel no ro mfmpos 0/101344\nside 0 dma 0 off 5 word 0000 pt 00000000 len 4000 bytr 8000 adk 0000 sync 0000\nDMACON: $07e7 INTENA: $0000 ($0000) INTREQ: $23e8 ($23e8) VPOS: 004 ($004) HPOS: 001 ($001)\nINT: $0000 IPL: 0\nCOP1LC: $0006ae40, COP2LC: $000004c0 COPPTR: $0006af18\nDIWSTRT: $2c81 DIWSTOP: $2cc1 DDFSTRT: $0038 DDFSTOP: $00d0\nBPLCON 0: $4200 1: $0000 2: $0000 3: $0c00 4: $0011 LOF=1/1 HDIW=0 VDIW=0\nAverage frame time: 206665.07 ms [frames: 12715 time: -1667014301]\n",
+      "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $0006af18\n  D0 0000DC01   D1 000000FF   D2 00000000   D3 00000000 \n  D4 00000000   D5 00000001   D6 00C4C900   D7 00C7A100 \n  A0 00C40314   A1 00000000   A2 00C66404   A3 00000000 \n  A4 00C38EAE   A5 00C79F52   A6 0000001B   A7 00C79EE6 \nUSP  00C79EE6 ISP  00C80000 \nSR=0014 T=00 S=0 M=0 X=1 N=0 Z=1 V=0 C=0 IM=0 STP=0\nPrefetch 4ced (MVMEL) 4e5d (UNLK) Chip latch 0000A100\n00c27056 4ced 5cfc ff94           movem.l (-$006c,a5) == $00c79ee6,d2-d7/a2-a4/a6\nNext PC: 00c2705c\n"
+    },
+    {
+      "buffer": 0,
+      "frame_index": 176,
+      "source_pose": 2,
+      "facing": 1,
+      "columns": 1,
+      "position": [
+        28,
+        209
+      ],
+      "pixel_errors": 0,
+      "dma_enabled": true,
+      "copper_list_bytes": 216,
+      "game_room": 12,
+      "custom": "A: CRA 00 CRB 08 ICR 00 IM 0a TA ffff (ffff) TB 0863 (0863)\n   PRA c0 [fc] PRB 00 [ff] DDRA 03 DDRB 00 SDR 00\n   TOD 003149 (003149) ALARM 000000 -- CYC=0000006BC71CC000\nB: CRA 00 CRB 80 ICR e4 IM 04 TA ffff (ffff) TB ffff (ffff)\n   PRA ff [ff] PRB ff [ff] DDRA c0 DDRB ff SDR 00\n   TOD 3a2818 (3a26d1) ALARM 000000 --\nDEBUG: drive 0 motor off cylinder  0 sel no ro mfmpos 0/101344\nDEBUG: drive 1 motor off cylinder  1 sel no ro mfmpos 0/101344\nside 0 dma 0 off 5 word 0000 pt 00000000 len 4000 bytr 8000 adk 0000 sync 0000\nDMACON: $07e7 INTENA: $0000 ($0000) INTREQ: $23e8 ($23e8) VPOS: 004 ($004) HPOS: 001 ($001)\nINT: $0000 IPL: 0\nCOP1LC: $00060a40, COP2LC: $000004c0 COPPTR: $00060b18\nDIWSTRT: $2c81 DIWSTOP: $2cc1 DDFSTRT: $0038 DDFSTOP: $00d0\nBPLCON 0: $4200 1: $0000 2: $0000 3: $0c00 4: $0011 LOF=1/1 HDIW=0 VDIW=0\nAverage frame time: 210244.67 ms [frames: 12725 time: -1619393680]\n",
+      "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $00060b18\n  D0 000000F7   D1 00000100   D2 00000000   D3 00000001 \n  D4 0000000B   D5 000025E0   D6 00C4C91C   D7 00C700FB \n  A0 00C66404   A1 0000000A   A2 00C66404   A3 00C1513A \n  A4 00C38EAE   A5 00C79EE0   A6 00000026   A7 00C79E74 \nUSP  00C79E74 ISP  00C80000 \nSR=0011 T=00 S=0 M=0 X=1 N=0 Z=0 V=0 C=1 IM=0 STP=0\nPrefetch 13c0 (MOVE) 00c6 (ILLEGAL) Chip latch 000000C6\n00c1bbb8 ee08                     lsr.b #$07,d0\nNext PC: 00c1bbba\n"
+    },
+    {
+      "buffer": 1,
+      "frame_index": 176,
+      "source_pose": 2,
+      "facing": 1,
+      "columns": 1,
+      "position": [
+        28,
+        209
+      ],
+      "pixel_errors": 0,
+      "dma_enabled": true,
+      "copper_list_bytes": 216,
+      "game_room": 12,
+      "custom": "A: CRA 00 CRB 08 ICR 00 IM 0a TA ffff (ffff) TB 0863 (0863)\n   PRA c0 [fc] PRB 00 [ff] DDRA 03 DDRB 00 SDR 00\n   TOD 003153 (003153) ALARM 000000 -- CYC=0000006BDCCB9C00\nB: CRA 00 CRB 80 ICR e4 IM 04 TA ffff (ffff) TB ffff (ffff)\n   PRA ff [ff] PRB ff [ff] DDRA c0 DDRB ff SDR 00\n   TOD 3a3452 (3a3444) ALARM 000000 --\nDEBUG: drive 0 motor off cylinder  0 sel no ro mfmpos 0/101344\nDEBUG: drive 1 motor off cylinder  1 sel no ro mfmpos 0/101344\nside 0 dma 0 off 5 word 0000 pt 00000000 len 4000 bytr 8000 adk 0000 sync 0000\nDMACON: $07e7 INTENA: $0000 ($0000) INTREQ: $23e8 ($23e8) VPOS: 004 ($004) HPOS: 001 ($001)\nINT: $0000 IPL: 0\nCOP1LC: $0006ae40, COP2LC: $000004c0 COPPTR: $0006af18\nDIWSTRT: $2c81 DIWSTOP: $2cc1 DDFSTRT: $0038 DDFSTOP: $00d0\nBPLCON 0: $4200 1: $0000 2: $0000 3: $0c00 4: $0011 LOF=1/1 HDIW=0 VDIW=0\nAverage frame time: 213887.52 ms [frames: 12735 time: -1570895883]\n",
+      "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $0006af18\n  D0 0000064E   D1 00000C9C   D2 00000327   D3 00000000 \n  D4 00000020   D5 00039058   D6 00000001   D7 0000000C \n  A0 00C5A15C   A1 00000327   A2 00C62AA4   A3 00C62A8A \n  A4 00C63AA8   A5 00C5729C   A6 00C64E31   A7 00C79F58 \nUSP  00C79F58 ISP  00C80000 \nSR=0000 T=00 S=0 M=0 X=0 N=0 Z=0 V=0 C=0 IM=0 STP=0\nPrefetch 6700 (Bcc) 6700 (Bcc) Chip latch 00006700\n00c37faa b0fc 0000                cmpa.w #$0000,a0\nNext PC: 00c37fae\n"
+    },
+    {
+      "buffer": 1,
+      "frame_index": 176,
+      "source_pose": 2,
+      "facing": 1,
+      "columns": 1,
+      "position": [
+        28,
+        209
+      ],
+      "pixel_errors": 0,
+      "dma_enabled": true,
+      "copper_list_bytes": 216,
+      "game_room": 12,
+      "custom": "A: CRA 00 CRB 08 ICR 00 IM 0a TA ffff (ffff) TB 0863 (0863)\n   PRA c0 [fc] PRB 00 [ff] DDRA 03 DDRB 00 SDR 00\n   TOD 00315d (00315d) ALARM 000000 -- CYC=0000006BF27A7800\nB: CRA 00 CRB 80 ICR e4 IM 04 TA ffff (ffff) TB ffff (ffff)\n   PRA ff [ff] PRB ff [ff] DDRA c0 DDRB ff SDR 00\n   TOD 3a408c (3a407e) ALARM 000000 --\nDEBUG: drive 0 motor off cylinder  0 sel no ro mfmpos 0/101344\nDEBUG: drive 1 motor off cylinder  1 sel no ro mfmpos 0/101344\nside 0 dma 0 off 5 word 0000 pt 00000000 len 4000 bytr 8000 adk 0000 sync 0000\nDMACON: $07e7 INTENA: $0000 ($0000) INTREQ: $23e8 ($23e8) VPOS: 004 ($004) HPOS: 001 ($001)\nINT: $0000 IPL: 0\nCOP1LC: $0006ae40, COP2LC: $000004c0 COPPTR: $0006af18\nDIWSTRT: $2c81 DIWSTOP: $2cc1 DDFSTRT: $0038 DDFSTOP: $00d0\nBPLCON 0: $4200 1: $0000 2: $0000 3: $0c00 4: $0011 LOF=1/1 HDIW=0 VDIW=0\nAverage frame time: 217634.24 ms [frames: 12745 time: -1521001260]\n",
+      "cpu": "VPOS: 004 ($004) HPOS: 001 ($001) COP: $0006af18\n  D0 0000DC01   D1 000000FF   D2 00000000   D3 00000000 \n  D4 00000000   D5 00000001   D6 00C4C900   D7 00C7A100 \n  A0 00C40314   A1 00000000   A2 00C381A2   A3 00000000 \n  A4 00C38EAE   A5 00C7A408   A6 00000040   A7 00C79F56 \nUSP  00C79F56 ISP  00C80000 \nSR=0014 T=00 S=0 M=0 X=1 N=0 Z=1 V=0 C=0 IM=0 STP=0\nPrefetch 4e75 (RTS) 4e75 (RTS) Chip latch 0000A408\n00c2705c 4e5d                     unlk.l a5\nNext PC: 00c2705e\n"
+    }
+  ],
+  "pause_stability_checks": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "source_rule_changed": false,
+  "natural_playthrough": false,
+  "original_raster_certified": false,
+  "method": "Owned normal hardware-sprite probe; paused Copper pointers, actual Chip DMA words and active DMA flag; pixel comparison with original ripped PNG; software composited preview, device screenshot separate",
+  "artifacts": [
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample0.bpl",
+      "sha256": "b3f74d90e3f1e393c8b57303d61d316be51bada93b0aab6d487496e417f61e41"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample0.copper",
+      "sha256": "df69938c455b5f71d7bb0fc5a603bd091f2db41665de9b508311ba0180edabc9"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample0.png",
+      "sha256": "8c8767275b513bef20100159d2888cd7f30bd74c16ac4d5d81685a0a3e2daada"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample1.bpl",
+      "sha256": "fc291d42e8843141c9b8fda01f0d7dc3f26e46364139f27b27f2be35a7136cb6"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample1.copper",
+      "sha256": "df69938c455b5f71d7bb0fc5a603bd091f2db41665de9b508311ba0180edabc9"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample1.png",
+      "sha256": "f9338f86b60d5bbd5337b57d7793ad0c10705f0f53a1ad4933965b9503024290"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample2.bpl",
+      "sha256": "fc291d42e8843141c9b8fda01f0d7dc3f26e46364139f27b27f2be35a7136cb6"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample2.copper",
+      "sha256": "47ba5c65f398dd48733a8b81c5c8d1603357e2dfd2f164d8bea3ae28ff5469e3"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample2.png",
+      "sha256": "f9338f86b60d5bbd5337b57d7793ad0c10705f0f53a1ad4933965b9503024290"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample3.bpl",
+      "sha256": "fc291d42e8843141c9b8fda01f0d7dc3f26e46364139f27b27f2be35a7136cb6"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample3.copper",
+      "sha256": "df69938c455b5f71d7bb0fc5a603bd091f2db41665de9b508311ba0180edabc9"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample3.png",
+      "sha256": "f9338f86b60d5bbd5337b57d7793ad0c10705f0f53a1ad4933965b9503024290"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample4.bpl",
+      "sha256": "fc291d42e8843141c9b8fda01f0d7dc3f26e46364139f27b27f2be35a7136cb6"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample4.copper",
+      "sha256": "df69938c455b5f71d7bb0fc5a603bd091f2db41665de9b508311ba0180edabc9"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v3/native-display/sample4.png",
+      "sha256": "f9338f86b60d5bbd5337b57d7793ad0c10705f0f53a1ad4933965b9503024290"
+    }
+  ]
+}

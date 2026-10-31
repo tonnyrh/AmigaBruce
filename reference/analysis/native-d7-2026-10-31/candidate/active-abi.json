@@ -1,0 +1,204 @@
+{
+  "active": [
+    {
+      "name": "bl_c64_actor_registers",
+      "args": 1
+    },
+    {
+      "name": "bl_c64_actor_test_call",
+      "args": 2
+    },
+    {
+      "name": "bl_c64_audio_request",
+      "args": 1
+    },
+    {
+      "name": "bl_c64_collect",
+      "args": 2
+    },
+    {
+      "name": "bl_c64_contact",
+      "args": 4
+    },
+    {
+      "name": "bl_c64_contact_kernel_selftest",
+      "args": 0
+    },
+    {
+      "name": "bl_c64_door",
+      "args": 4
+    },
+    {
+      "name": "bl_c64_enemy_door",
+      "args": 8
+    },
+    {
+      "name": "bl_c64_enemy_entry",
+      "args": 4
+    },
+    {
+      "name": "bl_c64_enemy_hazard",
+      "args": 1
+    },
+    {
+      "name": "bl_c64_enemy_remove",
+      "args": 1
+    },
+    {
+      "name": "bl_c64_field",
+      "args": 0
+    },
+    {
+      "name": "bl_c64_load",
+      "args": 1
+    },
+    {
+      "name": "bl_c64_load_at",
+      "args": 3
+    },
+    {
+      "name": "bl_c64_object",
+      "args": 3
+    },
+    {
+      "name": "bl_c64_object_pose",
+      "args": 1
+    },
+    {
+      "name": "bl_c64_paint_animation_frame",
+      "args": 2
+    },
+    {
+      "name": "bl_c64_paint_changes",
+      "args": 3
+    },
+    {
+      "name": "bl_c64_paint_part",
+      "args": 4
+    },
+    {
+      "name": "bl_c64_paint_room",
+      "args": 2
+    },
+    {
+      "name": "bl_c64_reset",
+      "args": 0
+    },
+    {
+      "name": "bl_c64_restore_progress",
+      "args": 2
+    },
+    {
+      "name": "bl_c64_spawn_services",
+      "args": 2
+    },
+    {
+      "name": "bl_c64_test_execute",
+      "args": 1
+    },
+    {
+      "name": "bl_c64_tick",
+      "args": 2
+    },
+    {
+      "name": "bl_c64_tick_begin",
+      "args": 2
+    },
+    {
+      "name": "bl_c64_tick_room",
+      "args": 0
+    },
+    {
+      "name": "bl_c64_world_jump",
+      "args": 1
+    },
+    {
+      "name": "bl_c64_world_start",
+      "args": 2
+    },
+    {
+      "name": "bl_c64_world_step",
+      "args": 2
+    },
+    {
+      "name": "bl_d7_probe_abi",
+      "args": 8
+    }
+  ],
+  "readonly_aliases": [
+    "bl_c64_actor_life_pending",
+    "bl_c64_actor_ram_hash",
+    "bl_c64_actor_return",
+    "bl_c64_actor_seed",
+    "bl_c64_animation_coverage",
+    "bl_c64_attribute",
+    "bl_c64_audio_faults",
+    "bl_c64_audio_frame",
+    "bl_c64_audio_requests",
+    "bl_c64_audio_reset",
+    "bl_c64_build_animation_cache",
+    "bl_c64_cell_dirty",
+    "bl_c64_cell_y",
+    "bl_c64_changed_rows",
+    "bl_c64_charset_row",
+    "bl_c64_check_interleaved",
+    "bl_c64_clear_death",
+    "bl_c64_clear_dirty",
+    "bl_c64_collected",
+    "bl_c64_collected_all",
+    "bl_c64_colors",
+    "bl_c64_dead",
+    "bl_c64_debug_complete_before",
+    "bl_c64_enemy_entries_clear",
+    "bl_c64_enemy_follow",
+    "bl_c64_fault",
+    "bl_c64_flash_color",
+    "bl_c64_glyph",
+    "bl_c64_has_dirty",
+    "bl_c64_motion",
+    "bl_c64_needs_full_paint",
+    "bl_c64_offsets",
+    "bl_c64_paint_done",
+    "bl_c64_part_priority_rows",
+    "bl_c64_part_priority_words",
+    "bl_c64_part_rows",
+    "bl_c64_part_words",
+    "bl_c64_pixel",
+    "bl_c64_planar",
+    "bl_c64_player_sprite_contact",
+    "bl_c64_prepare_paint",
+    "bl_c64_profile",
+    "bl_c64_profile_add",
+    "bl_c64_profile_reset",
+    "bl_c64_projectile",
+    "bl_c64_read",
+    "bl_c64_recovery_pose",
+    "bl_c64_reenter",
+    "bl_c64_remaining",
+    "bl_c64_reuse_reset",
+    "bl_c64_reuse_stat",
+    "bl_c64_revision",
+    "bl_c64_room",
+    "bl_c64_save_progress",
+    "bl_c64_screen",
+    "bl_c64_screen_color",
+    "bl_c64_set_block_painter",
+    "bl_c64_set_lives",
+    "bl_c64_set_load_service",
+    "bl_c64_set_opponent_mode",
+    "bl_c64_set_painter",
+    "bl_c64_set_service",
+    "bl_c64_spawn_cold_counter",
+    "bl_c64_spawn_counter",
+    "bl_c64_spawn_result",
+    "bl_c64_spawn_sync",
+    "bl_c64_test_write",
+    "bl_c64_tile",
+    "bl_c64_transition",
+    "bl_c64_vic_compare_selftest",
+    "bl_c64_world_actor",
+    "bl_c64_world_input",
+    "bl_c64_world_ready",
+    "bl_c64_world_stat"
+  ]
+}

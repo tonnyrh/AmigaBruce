@@ -286,7 +286,7 @@ static void source_written(unsigned short address){
         if(color!=indexed_color[cell]){
             unsigned char physical=(unsigned char)(((color&7)==0)!=((indexed_color[cell]&7)==0));
             indexed_color[cell]=color;release_cell_cache(cell);animation_cell_changed(cell);
-            if(loaded==19 && flash_cells[cell]){
+            if(flash_cells[cell]){
                 flash_changed=1;display_dirty=1;
                 if(physical)contact_cells[cell]=1;
             }
@@ -303,8 +303,47 @@ static void source_written(unsigned short address){
         glyph_changes[code]|=(unsigned char)(1u<<(address&7));
     }
 }
+/* $3DCD-$3DF0 gives these 144 characters one foreground colour. Activate
+ * the spare Copper pen when the first colour pass begins. Before
+ * defeat, the wizard's live projectiles can use pen 15 themselves. */
+static const unsigned short boss_flash_rows[]={0x0d3,0x0fb,0x123,0x14b,
+    0x086,0x0ae,0x176,0x19e,0x1c6,0x1ee};
+static void start_boss_flash(void){
+    unsigned short row,column,cell;
+    for(row=0;row<10;row++)for(column=0;column<(row<4?18:12);column++){
+        cell=boss_flash_rows[row]+column;
+        flash_cells[cell]=1;release_cell_cache(cell);mark_cell(cell,0,255);
+    }
+}
+
+/* $3DFA/$3E09 can change the charset for a single wizard flash. Keep the
+ * live background and queue cells whose glyph actually changed. Collision
+ * still selects its bank independently, from source RAM at its usual IRQ. */
+static void switch_boss_glyphs(void){
+    unsigned char changed[256];
+    unsigned short code,cell,bank=charset();
+    for(code=0;code<256;code++){
+        unsigned short start=(unsigned short)(code<<3),row;
+        unsigned char different=0;
+        for(row=0;row<8;row++){
+            unsigned short offset=start+row;
+            unsigned char bits=m[bank+offset];
+            if(bits!=indexed_glyph[offset]){indexed_glyph[offset]=bits;different=1;}
+        }
+        changed[code]=different;
+        if(different && ++glyph_epoch[code]==0){
+            unsigned short i;for(i=0;i<1024;i++)character_cache[i].epoch=65535;
+        }
+    }
+    for(cell=120;cell<1000;cell++)if(changed[indexed_screen[cell]])mark_cell(cell,1,255);
+    old_bank=paint_bank=m[0xf2];
+}
 static void flush_glyph_changes(void){
-    unsigned short item;for(item=0;item<glyph_changed_count;item++){
+    unsigned short item;
+    if(loaded==18 && flash_cells[0xd3] && paint_bank!=m[0xf2] && index_ready &&
+       !animation_count && paint_bank==old_bank && (paint_bank==0x3c || paint_bank==0x3e))
+        switch_boss_glyphs();
+    for(item=0;item<glyph_changed_count;item++){
         unsigned char code=glyph_changed_list[item],rows=glyph_changes[code];unsigned short cell;
         if(animation_count && (code&127)>=0x61 && (code&127)<=0x63){
             animation_pending=1;display_dirty=1;
@@ -365,7 +404,7 @@ SOURCE_INLINE void source_color_written(unsigned short address){
                 if((code>=0x61 && code<=0x63) || animation_cell[cell]!=65535)
                     animation_cell_changed_active(cell);
             }
-            if(loaded==19 && flash_cells[cell]){
+            if(flash_cells[cell]){
                 flash_changed=1;display_dirty=1;
                 if(physical)contact_cells[cell]=1;
             }
@@ -385,6 +424,26 @@ static SOURCE_NOINLINE void source_final_colors(void){
         }
     }while(--column<128);
     x=column;z=0;n=1;
+}
+/* The only source writes in $3DCD-$3DF0 are these colour stores. Once
+ * the pixels use the Copper pen, their cached bitplanes remain valid. */
+static SOURCE_NOINLINE void source_boss_colors(void){
+    unsigned char color=a&15;
+    unsigned short column=18;
+    if(!flash_cells[0xd3])start_boss_flash();
+    while(column--){
+        unsigned short row,rows=column<12?10:4;
+        for(row=0;row<rows;row++){
+            unsigned short cell=boss_flash_rows[row]+column;
+            unsigned char previous=indexed_color[cell];
+            m[0xd800+cell]=a;
+            if(previous!=color){
+                indexed_color[cell]=color;flash_changed=display_dirty=1;
+                if((!(previous&7))!=(!(color&7)))contact_cells[cell]=1;
+            }
+        }
+    }
+    x=255;c=z=0;n=1; /* Last CPX #12 and DEX. */
 }
 /* Native decoding of $17E2-$1817 and its $1A67 helper. Preserve source RAM,
  * source stack bytes, registers and terminating CMP flags, without paying a
@@ -1320,6 +1379,30 @@ static void source_contact_driver(void){
         if(n){sp+=2;return;}
     }
 }
+/* $315D-$3172 calls $1B17 twice and tail-jumps there for the last pair.
+ * Keep the PHA and nested JSR bytes on the wrapping 6502 stack page.
+ * $8C30-$8C35 are HUD RAM, below the first indexed playfield cell $8C78. */
+static void source_score_display(void){
+    unsigned char pair,part,frame;
+    for(part=0;part<3;part++){
+        frame=sp;
+        if(part<2){
+            m[0x100+frame--]=0x31;
+            m[0x100+frame--]=part?0x6c:0x64;
+        }
+        y=(unsigned char)(0x30+part*2);
+        pair=m[0x439c+part];
+        m[0x100+frame--]=pair;
+        m[0x100+frame--]=0x1b;
+        m[0x100+frame]=0x1a;
+        m[0x8c00+y]=(unsigned char)(0x10|(pair>>4));
+        a=(unsigned char)(0x10|(pair&15));
+        m[0x8c01+y]=a;
+    }
+    c=(pair>>3)&1; /* Carry after the fourth LSR at $3211. */
+    z=n=0;
+}
+
 #include "c64_actor_programs.h"
 /* IRQ I/O seam. The two source fragments retain all source timer, palette,
  * quota and input-mode work. CIA keyboard scanning is replaced only by the
@@ -1349,9 +1432,20 @@ static unsigned char source_vic_same(unsigned char sprite,unsigned short pointer
     }
     return 0;
 }
+#if defined(__m68k__)
+extern void bl_vic_decode_wide(const unsigned char *, unsigned char *, unsigned long *, unsigned long *);
+#endif
 static void source_vic_cache(unsigned char sprite,unsigned short pointer,unsigned char multi,unsigned char wide){
     unsigned char row,j,b,*raw=vic_bytes[sprite];unsigned short expanded;
     unsigned long high,low,*out_high=vic_high[sprite],*out_low=vic_low[sprite];
+#if defined(__m68k__)
+    if(wide && !multi && pointer<=0xffc1){
+        bl_vic_decode_wide(m+pointer,raw,out_high,out_low);
+        vic_layout[sprite]=2;
+        vic_valid|=(unsigned char)(1<<sprite);
+        return;
+    }
+#endif
     /* One read per source byte; raw cache retains original bits before
      * opacity/width conversion. Pointer wraps at16 bits; pad63 untouched. */
     for(row=0;row<21;row++){
@@ -1370,6 +1464,41 @@ static void source_vic_cache(unsigned char sprite,unsigned short pointer,unsigne
     }
     vic_layout[sprite]=(unsigned char)((multi?1:0)|(wide?2:0));vic_valid|=(unsigned char)(1<<sprite);
 }
+/* Field-sampled VIC opacity. The left mask contains at most 48 pixels,
+ * so beyond a 16-pixel offset the remaining overlap fits in one long.
+ * Rows use the high 48 bits of two longs, most significant pixel first.
+ * Only overlapping, unscaled rows enter here, so count is in 1..21. */
+static unsigned char source_vic_flat_pair(unsigned char left,unsigned char right,
+        unsigned short left_row,unsigned short right_row,unsigned short count,unsigned short offset){
+    const unsigned long *left_high=vic_high[left]+left_row,*left_low=vic_low[left]+left_row;
+    const unsigned long *right_high=vic_high[right]+right_row,*right_low=vic_low[right]+right_row;
+    /* At offset 32 only the final 16 pixels of the left sprite can hit. */
+    if(offset>=32){
+        offset-=32;
+        do{if((*left_low++<<offset)&*right_high++)return 1;}while(--count);
+    }else if(offset>=16){
+        /* Join pixels 16..47 into one word before removing the offset. */
+        offset-=16;
+        do{
+            unsigned long tail=(*left_high++<<16)|(*left_low++>>16);
+            if((tail<<offset)&*right_high++)return 1;
+        }while(--count);
+    }else if(offset){
+        unsigned short carry_shift=32-offset;
+        do{
+            unsigned long high=*left_high++,low=*left_low++,other=*right_high++;
+            if(((high<<offset)&other) || ((low>>carry_shift)&other) || ((low<<offset)&*right_low))return 1;
+            ++right_low;
+        }while(--count);
+    }else{
+        do{
+            if((*left_high++ & *right_high++) || (*left_low & *right_low))return 1;
+            ++left_low;++right_low;
+        }while(--count);
+    }
+    return 0;
+}
+
 /* Opaque source VIC sprite pixels, including component sprites and sai.
  * The collision latch accumulates until $D01E is read. Raster/border timing
  * is still a separate hardware acceptance item; no attack boxes or wall ray
@@ -1423,6 +1552,13 @@ static void source_vic_latch_slow(void){
         if(!(prepared&(1<<i))){source_vic_cache(i,pointer[i],(unsigned char)(multi&(1<<i)),(unsigned char)(wide&(1<<i)));prepared|=(unsigned char)(1<<i);}
         if(!(prepared&(1<<j))){source_vic_cache(j,pointer[j],(unsigned char)(multi&(1<<j)),(unsigned char)(wide&(1<<j)));prepared|=(unsigned char)(1<<j);}
         dx=(short)(sx[j]-sx[i]);
+        if(!(tall&((1<<i)|(1<<j)))){
+            unsigned char left=dx<0?j:i,right=dx<0?i:j;
+            if(source_vic_flat_pair(left,right,top-sy[left],top-sy[right],bottom-top,
+                                    (unsigned short)(sx[right]-sx[left])))
+                bits|=(unsigned char)((1<<i)|(1<<j));
+            continue;
+        }
         for(dy=top;dy<bottom;dy++){
             row=(unsigned char)((dy-sy[i])>>((tall&(1<<i))?1:0));ah=vic_high[i][row];al=vic_low[i][row];
             row=(unsigned char)((dy-sy[j])>>((tall&(1<<j))?1:0));bh=vic_high[j][row];bl=vic_low[j][row];
@@ -1928,7 +2064,7 @@ static void paint_cell(unsigned char *planes,unsigned short cell,unsigned short 
     unsigned short index=cell_cache[cell];unsigned char changed=0;CharacterCache *entry;
     if(index==65535){
         unsigned short cy=cell_y[cell];
-        unsigned char color=(unsigned char)(loaded==19&&flash_cells[cell]?8:m[0xd800 + cell]&7);
+        unsigned char color=(unsigned char)(flash_cells[cell]?8:m[0xd800 + cell]&7);
         unsigned char phase=(unsigned char)(line_band[cy]==line_band[cy+7]?line_band[cy]:4+(cy>>3));
         unsigned long tag=(unsigned long)code|((unsigned long)color<<8)|((unsigned long)phase<<12);
         index=(unsigned short)((code+((unsigned short)color<<5)+((unsigned short)phase<<7))&1023);
@@ -2234,7 +2370,7 @@ const unsigned char *bl_c64_part_priority_rows(void){return part_priority_rows;}
 long bl_c64_check_interleaved(const unsigned char *bitmap,long scene_top){
     unsigned short cell,row,plane,bank=charset();long mismatches=0;
     for(cell=120;cell<1000;cell++){
-        unsigned char code=m[0x8c00 + cell],color=(unsigned char)(loaded==19&&flash_cells[cell]?8:m[0xd800 + cell]&7);
+        unsigned char code=m[0x8c00 + cell],color=(unsigned char)(flash_cells[cell]?8:m[0xd800 + cell]&7);
         unsigned short at=(unsigned short)((scene_top+cell_y[cell])*160+cell-(cell_y[cell]>>3)*40);
         for(row=0;row<8;row++){
             unsigned long packed=PLANAR_WORD(line_band[cell_y[cell]+row],color,m[bank+((unsigned short)code<<3)+row]);
@@ -2278,7 +2414,11 @@ void bl_c64_tick_room(void){
 }
 void bl_c64_tick(long px,long py){bl_c64_tick_begin(px,py);bl_c64_tick_room();}
 unsigned char bl_c64_changed_rows(long cell){return paint_rows[cell];}
-unsigned char bl_c64_flash_color(void){return loaded==19?(m[0xdaac]&7):15;}
+unsigned char bl_c64_flash_color(void){
+    if(loaded==19)return m[0xdaac]&7;
+    if(loaded==18 && flash_cells[0xd3])return m[0xd8d3]&7;
+    return 15;
+}
 const unsigned short *bl_c64_offsets(void){return cell_offsets;}
 const unsigned char *bl_c64_cell_y(void){return cell_y;}
 unsigned char bl_c64_remaining(long room){return room<20?m[0x2a + room]:0;}

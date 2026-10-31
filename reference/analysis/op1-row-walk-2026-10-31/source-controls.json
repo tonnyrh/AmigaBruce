@@ -1,0 +1,9 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "entry": "$537E",
+  "stop": "$53CF after last INY",
+  "cases": 192,
+  "empty_abi_cases": 22,
+  "executed_instructions": 29747,
+  "fixture_sha256": "4abf863d461d6527028479974e27eec5e19dc22e65330381882be7fd26bdb1fe"
+}

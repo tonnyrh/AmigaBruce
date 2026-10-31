@@ -1,7 +1,7 @@
 {
   "id": "ACTOR-CHAIN-0001",
-  "date": "2026-10-30",
-  "status": "scoped_complete_contact_alignment_unroll_acceptance_open",
+  "date": "2026-10-31",
+  "status": "scoped_score_display_realtime_open",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "primary_edition_verified": false,
   "natural_playthrough": false,
@@ -16,11 +16,11 @@
   "artifacts": [
     {
       "path": "reference/validation/compact-actor-delivery.json",
-      "sha256": "f79adac2cd89654c55c74fd5fcf19d2170768971a30d8db9fa13c5c14e19f677"
+      "sha256": "effa2b0491e38e9abc20e6561cd1a4c969ab68309d5cc4d58b47469ce5655caf"
     },
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "566baeca46df42b244ba97f3d268392b5951cadac0f0ccd9a72daa8410adb0da"
+      "sha256": "a74995e8908fb3395e430183b1ad115df928dedbf3366ab49d90a4b120d13d3d"
     }
   ],
   "limitations": [

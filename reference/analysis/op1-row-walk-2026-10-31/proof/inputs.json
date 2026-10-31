@@ -1,0 +1,12 @@
+{
+  "amiga/contact_rows.s": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a",
+  "reference/analysis/op1-row-walk-2026-10-31/build.py": "327aa7f3012613427760b4c4471825d82a1156e2733a2e400a32dcdbebcbc33a",
+  "reference/analysis/op1-row-walk-2026-10-31/rows.s": "214844c2d5fb994b03636cdecdb02241ef3508c6efbd3f97ee3daa5dba7fcad1",
+  "reference/analysis/op1-row-walk-2026-10-31/contact_rows.s": "ebafa4a67d27f0190d6fd815c81d8aab897057c29a528ddb9640699360ec874b",
+  "reference/analysis/op0-light-2026-10-31/light/out/start.o": "902b2c801329fd187bb0db8f1b7590663d4d396542d17e5dbcc0aa3f6721715c",
+  "reference/analysis/op1-row-walk-2026-10-31/proof/proof.o": "dc9569710025e9c09495fd92ccadbb5bec271c35c2666aaf92ae129fde939d26",
+  "reference/analysis/op1-row-walk-2026-10-31/proof/contact_rows.o": "3335962ba3160cb9b69a0f09a56be14a5ce63fe25cbe501d25a323ca44d3209d",
+  "reference/analysis/op0-light-2026-10-31/light/out/runtime.o": "f8f98f1a29e2e0bb1d4394c7dddcab8082d50ee2892b7bbedc95cc5e844a381f",
+  "reference/analysis/op1-row-walk-2026-10-31/proof/bruce_amiga.elf": "e6f418f7a8ecd70d2769ae72727ff110e133f3cf5c23053fa6efea2718cede15",
+  "reference/analysis/op1-row-walk-2026-10-31/proof/bruce_amiga.exe": "05f251c148d63eca30f8788ca4dbf19a6b6b779c5e7c39433ba0f00573f36c25"
+}

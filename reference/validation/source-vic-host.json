@@ -1,16 +1,17 @@
 {
   "status": "passed_field_sampled_pixel_and_latch_controls",
   "calls": 8741,
+  "pair_basis_cases": 110592,
   "natural_playthrough": false,
   "original_raster_verified": false,
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+      "sha256": "61ae99bd399e0f69db79f84a3cb02165ae67ed06681573128b3e8f451255fec0"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7"
+      "sha256": "e8d502daf803685c2c77c75a3846732e8f02001fcf6a2b17c14434935f93044f"
     },
     {
       "path": "core/source_perf.h",
@@ -22,15 +23,15 @@
     },
     {
       "path": "tests/source_vic_bridge.c",
-      "sha256": "d7b8317338406825e2c0d3b42477be88023552b8d8bc2f39fd7f8ff482b53a00"
+      "sha256": "3478e6c55c4b877ef7a793255c0ed5751c16e7f34e785700a4e16f6009a0867f"
     },
     {
       "path": "tools/verify_source_vic.py",
-      "sha256": "dceaa8d82ef2a0b24bea0a4881d1c8bb47dc8b40c142833bd3ce04d3caa5662e"
+      "sha256": "18f7486ab2a2ed351fc3a946d39722d84e85b35b4a7c3e26729ed5369d52de91"
     },
     {
       "path": "test-source-vic.ps1",
-      "sha256": "afbc7de467a58b27f014b9ac57da0a333e05498e6fe3461b103c930376b87ba0"
+      "sha256": "238e4e61ff26f4eeda57a69c4a0ac705aab9a39fad393976feedcdf9e6e7a857"
     }
   ]
 }

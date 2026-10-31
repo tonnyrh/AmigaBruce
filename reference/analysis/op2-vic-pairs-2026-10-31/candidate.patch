@@ -1,0 +1,58 @@
+--- a/core/c64_rooms.c
++++ b/core/c64_rooms.c
+@@ -1440,6 +1440,41 @@
+     }
+     vic_layout[sprite]=(unsigned char)((multi?1:0)|(wide?2:0));vic_valid|=(unsigned char)(1<<sprite);
+ }
++/* Field-sampled VIC opacity. The left mask contains at most 48 pixels,
++ * so beyond a 16-pixel offset the remaining overlap fits in one long.
++ * Rows use the high 48 bits of two longs, most significant pixel first.
++ * Only overlapping, unscaled rows enter here, so count is in 1..21. */
++static unsigned char source_vic_flat_pair(unsigned char left,unsigned char right,
++        unsigned short left_row,unsigned short right_row,unsigned short count,unsigned short offset){
++    const unsigned long *left_high=vic_high[left]+left_row,*left_low=vic_low[left]+left_row;
++    const unsigned long *right_high=vic_high[right]+right_row,*right_low=vic_low[right]+right_row;
++    /* At offset 32 only the final 16 pixels of the left sprite can hit. */
++    if(offset>=32){
++        offset-=32;
++        do{if((*left_low++<<offset)&*right_high++)return 1;}while(--count);
++    }else if(offset>=16){
++        /* Join pixels 16..47 into one word before removing the offset. */
++        offset-=16;
++        do{
++            unsigned long tail=(*left_high++<<16)|(*left_low++>>16);
++            if((tail<<offset)&*right_high++)return 1;
++        }while(--count);
++    }else if(offset){
++        unsigned short carry_shift=32-offset;
++        do{
++            unsigned long high=*left_high++,low=*left_low++,other=*right_high++;
++            if(((high<<offset)&other) || ((low>>carry_shift)&other) || ((low<<offset)&*right_low))return 1;
++            ++right_low;
++        }while(--count);
++    }else{
++        do{
++            if((*left_high++ & *right_high++) || (*left_low & *right_low))return 1;
++            ++left_low;++right_low;
++        }while(--count);
++    }
++    return 0;
++}
++
+ /* Opaque source VIC sprite pixels, including component sprites and sai.
+  * The collision latch accumulates until $D01E is read. Raster/border timing
+  * is still a separate hardware acceptance item; no attack boxes or wall ray
+@@ -1493,6 +1528,13 @@
+         if(!(prepared&(1<<i))){source_vic_cache(i,pointer[i],(unsigned char)(multi&(1<<i)),(unsigned char)(wide&(1<<i)));prepared|=(unsigned char)(1<<i);}
+         if(!(prepared&(1<<j))){source_vic_cache(j,pointer[j],(unsigned char)(multi&(1<<j)),(unsigned char)(wide&(1<<j)));prepared|=(unsigned char)(1<<j);}
+         dx=(short)(sx[j]-sx[i]);
++        if(!(tall&((1<<i)|(1<<j)))){
++            unsigned char left=dx<0?j:i,right=dx<0?i:j;
++            if(source_vic_flat_pair(left,right,top-sy[left],top-sy[right],bottom-top,
++                                    (unsigned short)(sx[right]-sx[left])))
++                bits|=(unsigned char)((1<<i)|(1<<j));
++            continue;
++        }
+         for(dy=top;dy<bottom;dy++){
+             row=(unsigned char)((dy-sy[i])>>((tall&(1<<i))?1:0));ah=vic_high[i][row];al=vic_low[i][row];
+             row=(unsigned char)((dy-sy[j])>>((tall&(1<<j))?1:0));bh=vic_high[j][row];bl=vic_low[j][row];

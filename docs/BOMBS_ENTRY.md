@@ -33,8 +33,54 @@ om identisk naturlig valgfordeling eller full NPC-paritet.
 
 ## Fiender utløser bomber
 
+### Rom 11 når Yamo går over bomben
+
+Kontrollert 31. oktober 2026 mot kandidaten med SHA-256 øverst i dokumentet.
+Rom 11 har sju bomber. Kolonne og objektrad er henholdsvis (19, 6), (24, 6),
+(21, 9), (34, 9), (9, 12), (21, 12) og (34, 12). Romrutinen hopper fra
+`$3CBD` til `$3228` før figurenes kontakt beregnes ved `$1C0D → $5212`.
+En aktiv Yamo i gangtilstand kan tenne en bombe. Objektpasset velger aktør
+1, leser kontaktbiten fra `$B7` og undersøker cellene under kroppsmasken.
+Ved treff på `$60` går det til `$306B`. En allerede tent bombe eller tre
+opptatte tidsregistre gir ingen ny tenning.
+
+Det synlige signalet kommer først ved eksplosjonen. I rom 11 er øverste
+bombetegn `$60` i tegnsettet ved `$A800`. Radene er
+`82 82 69 69 55 55 55 55`. Ingen av pikselparene bruker individuell
+tegnfarge (bitpar 11). Tenning skriver `$FD` over `$F8` for dette ene
+tegnet ved `$30CA`. Nedre tegn `$E0` beholder fargen. Bombens piksler
+forblir dermed identiske mens Yamo går videre. Åtte spillsteg etter tenning
+tegner `$323D–$325A` første eksplosjon. Ved gammel teller 20 setter
+`$328A–$32B5` grafikk og farge tilbake.
+
+`python tools/audit_r11_yamo_walk.py` kjøres etter `./test-c64-actors.ps1 -CompileOnly`.
+Kontrollen bruker styrte startplasseringer, går fra begge sider på alle
+sju bomber og kjører både med AI og med Yamos joystick. I 28 av 28 forsøk
+reserverte aktør 1 tidsregisteret, og eksplosjonstegnene dukket opp 24
+modellerte PAL-felt senere. Hele kilde-RAM stemte med vertsbygget av
+spillmotoren etter hvert felt og hvert hovedsteg. Dette er kontrollert
+kjøring av kandidatens maskinkode med modellert VIC-kontakt og feltgrense.
+
+I det ordinære WinUAE-bygget (EXE SHA-256
+`88dc94012e801d56e80fcaed767a5d158bab451ed10b6902ca97ae9df0d31528`)
+ble rommet åpnet med testmenyen. Bruce stod stille på mellomnivået mens
+Yamo kom fra høyre på øverste avsats og passerte bomben i kolonne 24.
+Ingen figurposisjoner eller tidsregistre ble skrevet av testen. Ved
+spillsteg 417 var telleren 6 og bomben så ut som før. Ved steg 423 og
+426 viste den aktive skjermbufferen begge eksplosjonsformene. Alle 768
+piksler i utsnittet på 24 × 32 piksler stemte med kildebildet ved hvert
+av de tre stegene. Den gule markøren under utsnittet viser bombens plass.
+
+![Yamo passerer bomben på øverste avsats i WinUAE](../reference/analysis/r11-yamo-walk-2026-10-31/winuae-room11.png)
+
+Brukerens konkrete passering der eksplosjonen uteble står åpen i
+[testlisten](ACTIVE_TESTS.md). Et lagringspunkt før kontakt kan vise om
+bomben var ledig, om Yamo fikk kontakt, og hva som faktisk ble tegnet.
+
+### Felles rutiner
+
 `$2E39–$2E6D` behandler Kage, Yamo og Bruce i den rekkefølgen; bare
-dødstilstand25 utelates. Den globale objektkontaktbiten `$B6&2` gjelder de
+dødstilstand25 og inaktive aktører utelates. Objektkontaktbiten `$B6,X & 2` gjelder de
 seks skannede cellene. Bombetegn`$60` går via `$2EF7` til `$306B`, uten
 en test som begrenser utløsning til Bruce.
 

@@ -1,0 +1,50 @@
+{
+  "snapshot_sha256": "56e12d941ff94ad461cd533925bf4bd180f9937d3b0c4fdf4a5825c14da26d9f",
+  "snapshot_room": 19,
+  "snapshot_boss_flag": 0,
+  "snapshot_count": 0,
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "vice_cycles": 4717784,
+  "amiga_runs": {
+    "baseline": {
+      "pal_fields": 1371,
+      "full_room_redraws": 15,
+      "charset_switches": 15,
+      "probe_exe_sha256": "0257d9c2489557cfd82d0e06bb79423a5c81b2f2a1b071fa0eeb570106c9ac5a",
+      "core_executable_sections_sha256": "1323e078f0d8343c69690e42924377e8f6adb1c890ff53442d1504e0343d3c2e",
+      "visible_color_changes_at_probe_pixel": 38,
+      "source_color_changes_at_probe_pixel": 54
+    },
+    "final": {
+      "pal_fields": 537,
+      "full_room_redraws": 0,
+      "charset_switches": 19,
+      "probe_exe_sha256": "4732a7a268635dd8923df5ca93d1fc0bd05a0e9a8ca5731e504094735da4ac8e",
+      "core_executable_sections_sha256": "15978508f3101d3f227f08a98125ba2010d32c79fccdb54aaf02c08bfccf1f89",
+      "visible_color_changes_at_probe_pixel": 33,
+      "source_color_changes_at_probe_pixel": 33
+    }
+  },
+  "shipping_exe_sha256": "409055dd68bf1ebfaa1079fc1e65b0d311ebb76f5c718fc126c23106eaae0c44",
+  "shipping_core_executable_sections_sha256": "15978508f3101d3f227f08a98125ba2010d32c79fccdb54aaf02c08bfccf1f89",
+  "source_clock_note": "VICE history at $3DAF; Amiga PAL clock at publication; 80 update intervals. Source memory reader/IRQ history differs between runs.",
+  "shipping_adf_sha256": "f1db1e6fe0f128951f1cb8d474b4ec86dc6c20eed1fb5f546ee1b614983b1b48",
+  "normal_adf_check": {
+    "booted_to_menu": true,
+    "room": 19,
+    "seeded_trigger": "$4E86=0",
+    "sampled_screen_point": [
+      134,
+      46
+    ],
+    "matching_active_colors": [
+      0,
+      4,
+      6
+    ],
+    "final_counter": 0,
+    "timing_measured_in_this_smoke": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "method": "Actual Windows Graphics Capture of owned stock v5 menu after F10 return; no memory injection",
+  "window": {
+    "app": "process:C:\\vscode\\_EXT\\AmigaBruceLee\\.tmp\\hardware-bruce-v5-ui\\winuae64.exe",
+    "id": 22809482,
+    "title": "[hardware-bruce-v5.uae] - WinUAE"
+  },
+  "completeMenuVisible": true,
+  "spriteGhostsVisible": false
+}

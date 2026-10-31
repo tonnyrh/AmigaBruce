@@ -2905,6 +2905,7 @@ L0eab:; /* $0EAB */
 a&=0xef;NZ(a);
 goto L0ead;
 L0ead:; /* $0EAD */
+if(load_service)load_service(BL_DISPLAY_PLAYER);
 address=0xd011;m[address]=a;
 goto L0eb0;
 L0eb0:; /* $0EB0 */
@@ -4964,6 +4965,7 @@ L1898:; /* $1898 */
 a&=0xef;NZ(a);
 goto L189a;
 L189a:; /* $189A */
+if(load_service)load_service(BL_DISPLAY_GAME_OVER);
 address=0xd011;m[address]=a;
 goto L189d;
 L189d:; /* $189D */
@@ -13919,6 +13921,7 @@ if(native_depth==16){native_id=274;goto actor_native_overflow;}
 native_calls[native_depth++]=274;goto L32dc;
 goto L315d;
 L315d:; /* $315D */
+source_score_display();goto L1b28;
 y=0x30;NZ(y);
 goto L315f;
 L315f:; /* $315F */
@@ -18389,6 +18392,7 @@ L3dcb:; /* $3DCB */
 x=0x11;NZ(x);
 goto L3dcd;
 L3dcd:; /* $3DCD */
+if(x==17 && loaded==18 && index_ready && !m[0x4e97]){source_boss_colors();goto L3df2;}
 address=(unsigned short)(0xd8d3 + x);m[address]=a;source_written(address);
 goto L3dd0;
 L3dd0:; /* $3DD0 */

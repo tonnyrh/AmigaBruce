@@ -142,7 +142,7 @@ def main():
         target='reference/validation/source-world-delivery.json'
         if args.record:
             (ROOT/target).write_text(json.dumps(report,indent=2)+'\n')
-            evidence=dict(id='ACTOR-CHAIN-0001',date='2026-10-30',status=scoped['status'],source_sha256=scoped['source_sha256'],primary_edition_verified=False,natural_playthrough=False,full_original_parity=False,condition='Complete source chain with byte-preserving native continuation plumbing; source RAM/register/return, forced recursive fallback, native primitives and normal image controls',controls=dict(source=3034,integrated=5,native=53,reference=710),artifacts=[artifact(scoped_path),artifact(target)],limitations=scoped['open_gates'])
+            evidence=dict(id='ACTOR-CHAIN-0001',date=scoped['date'],status=scoped['status'],source_sha256=scoped['source_sha256'],primary_edition_verified=False,natural_playthrough=False,full_original_parity=False,condition='Complete source chain with byte-preserving native continuation plumbing; source RAM/register/return, forced recursive fallback, native primitives and normal image controls',controls=dict(source=3034,integrated=5,native=53,reference=710),artifacts=[artifact(scoped_path),artifact(target)],limitations=scoped['open_gates'])
             (ROOT/'docs/parity/evidence/ACTOR-CHAIN-0001.json').write_text(json.dumps(evidence,indent=2)+'\n')
         else:assert read(target)==report
         print('PASS current compact source-world delivery; original-parity and real-time acceptance remain open')

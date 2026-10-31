@@ -18,6 +18,9 @@ void bl_c64_field(void);
 /* Optional cooperative I/O checkpoint. Must not call room/actor routines. */
 void bl_c64_set_service(void (*service)(void));
 void bl_c64_set_load_service(void (*service)(long loading));
+/* Presentation events at the VIC display-disable stores, before the
+ * announcement overwrites screen RAM. These do not stop the source IRQ. */
+enum { BL_DISPLAY_PLAYER = 2, BL_DISPLAY_GAME_OVER };
 /* Presentation-only cache diagnostics; never changes source room state. */
 void bl_c64_reuse_reset(void);
 unsigned short bl_c64_reuse_stat(long index);

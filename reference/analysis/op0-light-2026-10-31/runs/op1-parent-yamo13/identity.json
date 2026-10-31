@@ -1,0 +1,292 @@
+{
+  "warmup": 240,
+  "steps": 240,
+  "natural_playthrough": false,
+  "method": "Normal BL_AUTOTEST=0 engine/render/audio; diagnostic auto-start, invincibility, room selection, optional enemy exclusion, scripted input and bounded stop. No fixtures, capture, RAM/audio hashes in measured interval.",
+  "date": "2026-10-31",
+  "source_files": [
+    {
+      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203",
+      "path": "amiga/c64_sprite_data.h"
+    },
+    {
+      "sha256": "8ce8a2e246378d4e67f2789ec8b38b1e7473b00dc3ce1436cd0a413f837797d0",
+      "path": "amiga/combat_audio_data.h"
+    },
+    {
+      "sha256": "91c380f07f39f4fbde6ba16cd4933421c52dadea7c4fd840851bde1f8fdd9b10",
+      "path": "amiga/combat_audio.h"
+    },
+    {
+      "sha256": "abbcd8e35685db4a8b958df70bed09d501f747047a640a97aabbd724372b3fb3",
+      "path": "amiga/contact_align.s"
+    },
+    {
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245",
+      "path": "amiga/contact_prepare.s"
+    },
+    {
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a",
+      "path": "amiga/contact_rows.s"
+    },
+    {
+      "sha256": "493e14db7125c5d987252415d2cb99ab899573fca3dee5b7c190235fc737085f",
+      "path": "amiga/fighter_art_data.h"
+    },
+    {
+      "sha256": "4e534017bb7b769ae5f8d6f96f2064582f965b8b8f3d9aa884767c55cc3367b2",
+      "path": "amiga/fighter_dma_data.h"
+    },
+    {
+      "sha256": "ca480424cff6996714df22f33fc9bdbc4bbdb4fced8ebc7637c8c212ebf3e59b",
+      "path": "amiga/intro_audio_data.h"
+    },
+    {
+      "sha256": "a6be2a9f2b808ab2a5db5dced45a14dee156e5ad93c01862ca1eb08fa32e3027",
+      "path": "amiga/intro_audio.h"
+    },
+    {
+      "sha256": "6150ad3145c02756035e492f08247b98f5c8cc3394c68f8d0ef942b8c0b06de3",
+      "path": "amiga/main.c"
+    },
+    {
+      "sha256": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561",
+      "path": "amiga/out/bruce_amiga.exe"
+    },
+    {
+      "sha256": "4b4b12e60049285eb8ae46197a09db65bcbaced02ec3657618974320bb99247d",
+      "path": "amiga/room_background_data.h"
+    },
+    {
+      "sha256": "ca37fcee26e7e7782a6851acaabd2a7bb1d8a52036520093eca0b10a14278751",
+      "path": "amiga/runtime.c"
+    },
+    {
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1",
+      "path": "amiga/source_audio.h"
+    },
+    {
+      "sha256": "49e9b92c4d9f1800560a6835b28ca20c155bbb4bd1c586b5d51925e36a305b26",
+      "path": "amiga/sprite_copy.s"
+    },
+    {
+      "sha256": "6cbb86dc6c0f039d6730ffc9bc43845657fc28dc0b96b45e01f17f97255bf291",
+      "path": "amiga/start.s"
+    },
+    {
+      "sha256": "4d596a8a7ee65c43176e4bde9f411bd388df8b2660518026bc1e1cd612fae1e2",
+      "path": "amiga/vic_compare.s"
+    },
+    {
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae",
+      "path": "core/c64_actor_data.h"
+    },
+    {
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e",
+      "path": "core/c64_actor_programs.h"
+    },
+    {
+      "sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064",
+      "path": "core/c64_hit_data.h"
+    },
+    {
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
+    },
+    {
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
+    },
+    {
+      "sha256": "88caf00674f72e95a5619893751c2fae6de381126f1d11d47caeca63373117e0",
+      "path": "core/c64_sprite_pose_data.h"
+    },
+    {
+      "sha256": "ee7fb51449d755e20991a9ba8197bfbafe61b28443119cb84e113c89c8bd3cb8",
+      "path": "core/c64_sprites.c"
+    },
+    {
+      "sha256": "f9f6c536f94fe86b2ab435b908e891af8c1bfe7539e4c4cc7d29b4e69da718b9",
+      "path": "core/c64_sprites.h"
+    },
+    {
+      "sha256": "143b6eb93713e73b71a7cdd5375f980abe14891fed594308fefd9b688d8614d6",
+      "path": "core/combat.c"
+    },
+    {
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd",
+      "path": "core/combat.h"
+    },
+    {
+      "sha256": "98dcd24df04e1b6f778543d395b029dcb1fc2a6627fd83b5df74bf1268af8d05",
+      "path": "core/game.c"
+    },
+    {
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c",
+      "path": "core/game.h"
+    },
+    {
+      "sha256": "605f514ddf623c141fb3718b3d433f28126c94ebb956ca66dfe60a9d36830404",
+      "path": "core/presentation.c"
+    },
+    {
+      "sha256": "d5076d8db1126e2988f89a0fd90b8795a0227ec6b40797bc6e3dc11bd7ecb445",
+      "path": "core/presentation.h"
+    },
+    {
+      "sha256": "8d77c721ca861bd43ce6a25c9c184d39152bbb6d52300816f5a0032ecd7f924a",
+      "path": "core/room_data.h"
+    },
+    {
+      "sha256": "cb92d8d9fb58d267c4168f7134804ea9ad36d7d666e8eb20ef1af67fb8ec8059",
+      "path": "core/room_geometry.h"
+    },
+    {
+      "sha256": "5890bf05f6c6a3fdd9e3a3dcc53ac3e7146838366c2d69aa953e0ead364d1b05",
+      "path": "core/rooms.c"
+    },
+    {
+      "sha256": "dcb7471c9c94173ce2f56f3a1b2fe2944064b8bfa375b8ef476828d86d3465f6",
+      "path": "core/rooms.h"
+    },
+    {
+      "sha256": "5a09053558b66d8c453ad8c58a058fb44752967bbd900f74a54593c3e6678cc3",
+      "path": "core/scene_copy.h"
+    },
+    {
+      "sha256": "0abd7c6531b3722d62ddbbc149e8cbd805cddc67551826502c41ff1907337ad1",
+      "path": "core/session.c"
+    },
+    {
+      "sha256": "08ec809cffb30dbb5221e4af164f998e792eaac001d892179ef9fc96da18accf",
+      "path": "core/session.h"
+    },
+    {
+      "sha256": "e75713e7ef8aee087680de3f39cb757eef9331dcdb353dc2907df0fad21b6e8e",
+      "path": "core/source_audio_data.h"
+    },
+    {
+      "sha256": "896a64f0ca9df8c47e6003c1a396f2156a5b35165a7f8365b3e41653cb98c631",
+      "path": "core/source_audio.c"
+    },
+    {
+      "sha256": "5998c2a3edaacff4151cd39f115a5ec946f30a60eb8eab155df3d286b492339d",
+      "path": "core/source_audio.h"
+    },
+    {
+      "sha256": "b63b8a206a689e3fbfcdb65bc90e7ab6fd5fbc1ac1aca188d54888142602ff5b",
+      "path": "core/source_climb.c"
+    },
+    {
+      "sha256": "575699cdba2d1ffc6d7b12575ac33cb0c7678896c27ad9113339ba264032c433",
+      "path": "core/source_climb.h"
+    },
+    {
+      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf",
+      "path": "core/source_dma.c"
+    },
+    {
+      "sha256": "56848de6b805d9b6159a049b1a1b907e254b8b540816469489700e1f8a597a7e",
+      "path": "core/source_dma.h"
+    },
+    {
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd",
+      "path": "core/source_perf.h"
+    },
+    {
+      "sha256": "e5c04ec33c0f06f866ac8a11561c39df98eac69efec779b43f57aae8abe88e0b",
+      "path": "core/source_wall.c"
+    },
+    {
+      "sha256": "e2e58becc2fc2f7f085b741d2ba6e6bdf42b82764039a8e00227333f7ae37d56",
+      "path": "core/source_wall.h"
+    },
+    {
+      "sha256": "f08723a9941fb1dd7793e7c7d8f05f1ce3b22582c23f9f6b38d64f5059339006",
+      "path": "reference/analysis/op0-light-2026-10-31/light-build.ps1"
+    },
+    {
+      "sha256": "1080c7eef1a3711df0ffa3da417bc21ab73bb53a8772832dfb6e3ad9a6489cb1",
+      "path": "reference/analysis/op0-light-2026-10-31/main.c"
+    },
+    {
+      "sha256": "4e5fcddd57a25944490cb3d5cd6f90389ac5dc18eb5c8dc8f50c7615d86d733d",
+      "path": "reference/analysis/op0-light-2026-10-31/run-private.ps1"
+    },
+    {
+      "sha256": "1e01e855485a38dad9d06c09d8279eea9631aa28bb51bb6f7e82f5c66a209f63",
+      "path": "reference/analysis/op0-light-2026-10-31/runs/op1-parent-yamo13/bruce_amiga.elf"
+    },
+    {
+      "sha256": "dc1d565a321746e2bf57c99f1cf8f1f3879af842fb455858cb376eabba4fd60f",
+      "path": "reference/analysis/op0-light-2026-10-31/runs/op1-parent-yamo13/bruce_amiga.exe"
+    },
+    {
+      "sha256": "2d8ad99e5264b4934c37cb5cdf2d119ce8385906194fc14601b490a73492ff3d",
+      "path": "reference/analysis/op0-light-2026-10-31/runs/op1-parent-yamo13/op0-route.bin"
+    },
+    {
+      "sha256": "7a10e7b29c66d71a624a3a06f146071cdc6d4669fe49fe3c4bc7915877fdc078",
+      "path": "tools/build_light_op0_probe.py"
+    },
+    {
+      "sha256": "3b74a429ab5dbd77f70a1a397a15b3ffe2647042b0ee96dde32d54c2603044b1",
+      "path": "tools/test-light-op0.ps1"
+    }
+  ],
+  "room": 13,
+  "input_route": 0,
+  "variant": "light",
+  "edition_verified": false,
+  "run": {
+    "warmup_steps": "240",
+    "loops": "240",
+    "max_work_lines": "1152",
+    "climb_steps": "0",
+    "audio_ticks": "736",
+    "source_profile": "0",
+    "audio_missed": "0",
+    "air_steps": "0",
+    "finished": "1",
+    "pal_lines": "230341",
+    "audio_fault": "0",
+    "pal_fields": "736",
+    "restored_os": "1",
+    "work_lines": "192997",
+    "visited_rooms": "4096",
+    "input_route": "0",
+    "room": "13",
+    "max_loop_lines": "1247",
+    "max_step_lines": "1252",
+    "dma_fault": "0",
+    "restriction_writesets": "240",
+    "step_bins": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,224,16,0,0,0,0,0",
+    "slow_largest_loaded": "17384",
+    "chip_largest_loaded": "85440",
+    "enemy_mask": "1",
+    "steps": "240",
+    "light_op0": "1",
+    "active_loops": "0,240,0,0",
+    "source_fault": "0",
+    "wait_lines": "35819"
+  },
+  "autotest": false,
+  "realtime_accepted": false,
+  "enemy_mask": 1
+}

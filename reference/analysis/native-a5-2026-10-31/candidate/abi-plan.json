@@ -1,0 +1,434 @@
+{
+  "bl_c64_set_service": {
+    "bridge": false,
+    "args": 1
+  },
+  "bl_c64_set_load_service": {
+    "bridge": false,
+    "args": 1
+  },
+  "bl_perf_begin": {
+    "bridge": false,
+    "args": 1
+  },
+  "bl_perf_end": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_perf_reset": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_perf_value": {
+    "bridge": false,
+    "args": 2
+  },
+  "bl_c64_profile_reset": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_profile": {
+    "bridge": false,
+    "args": 1
+  },
+  "bl_c64_profile_add": {
+    "bridge": false,
+    "args": 2
+  },
+  "bl_c64_set_painter": {
+    "bridge": false,
+    "args": 1
+  },
+  "bl_c64_set_block_painter": {
+    "bridge": false,
+    "args": 1
+  },
+  "bl_c64_reuse_reset": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_reuse_stat": {
+    "bridge": false,
+    "args": 1
+  },
+  "bl_c64_vic_compare_selftest": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_contact_kernel_selftest": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_actor_seed": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_actor_test_call": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_actor_life_pending": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_actor_ram_hash": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_actor_return": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_actor_registers": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_test_execute": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_reset": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_load": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_load_at": {
+    "bridge": true,
+    "args": 3
+  },
+  "bl_c64_world_start": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_world_input": {
+    "bridge": false,
+    "args": 2
+  },
+  "bl_c64_world_ready": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_world_step": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_world_jump": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_world_actor": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_world_stat": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_read": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_test_write": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_fault": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_room": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_revision": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_screen": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_screen_color": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_glyph": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_cell_dirty": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_clear_dirty": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_tile": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_attribute": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_charset_row": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_pixel": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_contact": {
+    "bridge": true,
+    "args": 4
+  },
+  "bl_c64_has_dirty": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_colors": {
+    "bridge": false,
+    "args": 2
+  },
+  "bl_c64_planar": {
+    "bridge": false,
+    "args": 3
+  },
+  "bl_c64_needs_full_paint": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_paint_room": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_paint_changes": {
+    "bridge": true,
+    "args": 3
+  },
+  "bl_c64_build_animation_cache": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_prepare_paint": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_animation_coverage": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_paint_animation_frame": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_paint_part": {
+    "bridge": true,
+    "args": 4
+  },
+  "bl_c64_paint_done": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_part_words": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_part_rows": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_part_priority_words": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_part_priority_rows": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_check_interleaved": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_field": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_tick_begin": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_tick_room": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_tick": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_changed_rows": {
+    "bridge": false,
+    "args": 1
+  },
+  "bl_c64_flash_color": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_offsets": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_cell_y": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_remaining": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_debug_complete_before": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_collected": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_collected_all": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_object_pose": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_recovery_pose": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_collect": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_door": {
+    "bridge": true,
+    "args": 4
+  },
+  "bl_c64_motion": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_reenter": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_transition": {
+    "bridge": false,
+    "args": 3
+  },
+  "bl_c64_object": {
+    "bridge": true,
+    "args": 3
+  },
+  "bl_c64_dead": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_enemy_entry": {
+    "bridge": true,
+    "args": 4
+  },
+  "bl_c64_spawn_cold_counter": {
+    "bridge": false,
+    "args": 1
+  },
+  "bl_c64_spawn_counter": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_set_opponent_mode": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_spawn_sync": {
+    "bridge": true,
+    "args": 6
+  },
+  "bl_c64_spawn_services": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_spawn_result": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_enemy_remove": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_enemy_door": {
+    "bridge": true,
+    "args": 8
+  },
+  "bl_c64_enemy_follow": {
+    "bridge": true,
+    "args": 5
+  },
+  "bl_c64_enemy_entries_clear": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_enemy_hazard": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_clear_death": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_set_lives": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_save_progress": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_restore_progress": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_projectile": {
+    "bridge": true,
+    "args": 2
+  },
+  "bl_c64_player_sprite_contact": {
+    "bridge": true,
+    "args": 3
+  },
+  "bl_c64_audio_reset": {
+    "bridge": true,
+    "args": 0
+  },
+  "bl_c64_audio_request": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_audio_frame": {
+    "bridge": true,
+    "args": 1
+  },
+  "bl_c64_audio_faults": {
+    "bridge": false,
+    "args": 0
+  },
+  "bl_c64_audio_requests": {
+    "bridge": false,
+    "args": 0
+  }
+}

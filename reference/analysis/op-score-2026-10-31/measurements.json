@@ -1,0 +1,99 @@
+{
+  "builds": {
+    "reference": "e14e949975aff4f780d9a71b9ebad0c02ae29d56bfe2ebfb613acfc8e002dfae",
+    "candidate": "1163ecae9acf47cb49336c81ba34338182dcc0f5d9061649b31c03b92cd2aeab",
+    "profile": "063592a1645717e42f4dc60d3bbf9506cd6ba95969310a87dd2fb7c905da7555",
+    "proof": "6d56cad6e0bf41f5454d3b799b9652cefa0fbebcfe44ba66d9de839b7201be6f"
+  },
+  "runs": {
+    "move-a": {
+      "pal_fields": 992,
+      "work_lines": 279572,
+      "max_step_lines": 3756,
+      "paula_empty": 13,
+      "paula_double": 1,
+      "audio_missed": 12,
+      "report_sha256": "1513e0f6724f3518e78869962dec0d1b9adbeaba349e994dee21bbf78728726a"
+    },
+    "still-a": {
+      "pal_fields": 965,
+      "work_lines": 259805,
+      "max_step_lines": 1565,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "audio_missed": 0,
+      "report_sha256": "b321f622fbe2c377a9ca21eb6d4885f1a9220173089b93cf56750ab11676666d"
+    },
+    "move-c": {
+      "pal_fields": 993,
+      "work_lines": 279592,
+      "max_step_lines": 3756,
+      "paula_empty": 13,
+      "paula_double": 1,
+      "audio_missed": 12,
+      "report_sha256": "1999f6ca35199cc9ebc62afd7421905351dbdfed5ded77b15e9581ace3e9df66"
+    },
+    "still-c": {
+      "pal_fields": 963,
+      "work_lines": 260175,
+      "max_step_lines": 1565,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "audio_missed": 0,
+      "report_sha256": "9d7037a092d997503f7abc675577b42c99668ed3f0a0cad24dda73323ec657fc"
+    },
+    "move-b": {
+      "pal_fields": 984,
+      "work_lines": 274418,
+      "max_step_lines": 3131,
+      "paula_empty": 10,
+      "paula_double": 2,
+      "audio_missed": 8,
+      "report_sha256": "b82788d883fe71eb2090ab50e8d0680589e5eacef7ad1090949b691871b77601"
+    },
+    "still-b": {
+      "pal_fields": 966,
+      "work_lines": 258149,
+      "max_step_lines": 1566,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "audio_missed": 0,
+      "report_sha256": "abe0cb29723733cfc155386dee957b85619eeb0dd5d3ad422a1553bf68be5726"
+    },
+    "move-d": {
+      "pal_fields": 984,
+      "work_lines": 274606,
+      "max_step_lines": 3130,
+      "paula_empty": 10,
+      "paula_double": 2,
+      "audio_missed": 8,
+      "report_sha256": "c966f3c0d4e11194cfdc83dc432c07a5b846b4890689f55dac75f12ce4bdc358"
+    },
+    "still-d": {
+      "pal_fields": 960,
+      "work_lines": 256769,
+      "max_step_lines": 1565,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "audio_missed": 0,
+      "report_sha256": "8d59c9d6ca00aafe203d466519054f4cc16fd5e4dd4e46f7c6499101abcf38fb"
+    },
+    "timing-points": {
+      "pal_fields": 992,
+      "work_lines": 280351,
+      "max_step_lines": 4379,
+      "paula_empty": 18,
+      "paula_double": 2,
+      "audio_missed": 16,
+      "sections": [
+        169,
+        692,
+        1267,
+        2107
+      ],
+      "report_sha256": "321937544d90e1382c169632385860be355864d3b2d57edf69b525c80060eeb8"
+    }
+  },
+  "host_sha256": "d7ef3b39e43620f95e7c9d3d4c69263567f122860eab9e19822b50ea07550b56",
+  "proof_sha256": "01251abbff7ee711b66504a49053feadef5082d7a905e4b3484c5433eb7da510"
+}

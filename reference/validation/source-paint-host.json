@@ -12,11 +12,11 @@
   "source_files": [
     {
       "path": "amiga/main.c",
-      "sha256": "4e23ed811856545f437887033a085216099130848f6ad8d951d0741086e56185"
+      "sha256": "6150ad3145c02756035e492f08247b98f5c8cc3394c68f8d0ef942b8c0b06de3"
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+      "sha256": "f330173ba5d104f26dc8222f7ed2f44aade9df4471097fa0aaf442ea193f96c8"
     },
     {
       "path": "core/c64_rooms.h",

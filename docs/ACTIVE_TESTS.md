@@ -45,7 +45,9 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
 | AI/SPAWN | Stå nede mens Kage kommer oppe til høyre i rom1. Prøv venting, retrett, retur, lagret helse og alternativ inngang i rom6–8. Hele AI-/aktørkjeden er nå aktiv. |
 | NPC-RECOIL-R02 | Spark Yamo mot høyre vegg på mellomnivå, også dødelig. Kontroller retning, restitusjon og at Bruce/rommet blir stående. |
 | BOMBS/R08-BLAST | La begge fiender gå over alle fem bomber, også ved ankomst og under reaksjon. Prøv Bruce uten udødelighet: kildeeffekt, positur8, teller16 og senere livtrekk. |
-| T14/DEATH/2P | Mist liv etter kamp, fare og innsamling. Kontroller reservefall00, Game Over, annonseventing og turbytte. Samle ulike lanterner med to spillere; rom, poeng og fall skal følge riktig tur. |
+| R11-YAMO-BOMBE | Åpen brukerrapport. Følg bomben etter at Yamo har gått forbi. Tenningen er usynlig, og eksplosjonen starter åtte spillsteg senere. Hvis også eksplosjonen uteblir, ta en USS rett før passeringen. [Kildekontroll og skjermopptak](BOMBS_ENTRY.md#rom-11-når-yamo-går-over-bomben). |
+| R19-BLINK | Start rom 19 i det nye bygget og utløs monsterets nederlag. Kontroller blink, lyd og åpning. Mål fra nederlaget til åpningen. Kontrollert A500-reprise er fortsatt langsommere enn PAL-C64. [Kilder og tidsmålinger](R19_WIZARD_FLASH.md). |
+| T14/DEATH/2P | Mist liv etter kamp, fare og innsamling. Se etter rent skifte fra dødsposituren til spillernummeret eller Game Over, også ved turbytte. Kontroller reservefall00. Samle ulike lanterner med to spillere og kontroller rom, poeng og fall for hver tur. [Skjermskift ved død](TITLE_PAUSE_RESPAWN.md). |
 | SCORE/BONUS | Kontroller poeng for lanterner/kamp og bonusliv. HUD viser kilde-RAMs binære24-bits poeng; ingen egen Amiga-poengregel. |
 | CHEAT-PROGRESS | Start i rom10 via Shift+D: rom1–9 fullført, målrom bevart. Prøv to spillere og F1/F2. Romhopp gir ingen poeng/bonus. |
 | GEO-R02/ROOM-LOAD | Midtforbindelsen i rom2, retur1↔2 og5↔6, samme rom ved død. Kontroller geometri, palett, lanterner og nett. |
@@ -99,8 +101,9 @@ fortsatt under målet; ingen full sanntids- eller originalparitet hevdes.
   tre-feltsmålet står åpent. Skill flere kontaktstopp fra lengre pauser i tid.
   Ingen gulvregel er endret av denne undersøkelsen.
 
-- R13-SPAWN: Stedfest Kage/Yamo og ankomst kontra retur etter nederlag ved
-  første avsats. [Rom13-kontrollen](R13_SPAWN_RATE.md) finner samme
+- R13-SPAWN: Brukeren presiserer 31. oktober at det gjelder mest Yamo ved
+  første avsats. Ankomst kontra retur etter nederlag er fortsatt uavklart.
+  [Rom13-kontrollen](R13_SPAWN_RATE.md) finner samme
   grunnverdier 4/32 i C64 og porten; Kage kan utsettes når Yamo er aktiv.
   3697 RAM-/registersammenligninger og 60 feltkontroller består.
   Naturlig kampforløp, RAM-leserfordeling og faktisk trykk på brukerens

@@ -1,0 +1,38 @@
+{
+  "status": "passed_original_body_class_bytes",
+  "cases": 1536,
+  "source_instructions": 339748,
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "entries": {
+    "body": "$53E4 to$53D4 after body branch; no foot/part check executed",
+    "classes": "$5431 through actual RTS"
+  },
+  "whole_ram": true,
+  "registers": true,
+  "all256_stack_positions_each_actor": true,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "edition_verified": false,
+  "artifacts": [
+    {
+      "path": "tools/verify_contact_empty_source.py",
+      "sha256": "52d175979bf78c7d97be7da7d98e945429ef2ebc2e0d3f10be153061f4d2bda9"
+    },
+    {
+      "path": "reference/analysis/contact-empty-2026-10-31/empty_bridge.c",
+      "sha256": "81fda8971745bbe33a5688aa7fc2d1e70824fd86956ff9f0b5bf3d9387ae9929"
+    },
+    {
+      "path": ".tmp/contact-empty-host/contact.dll",
+      "sha256": "7e8d2ffdcf23a9bab601a24c9d94c88fbd2ca390ed0c35636bf93490f89f5c47"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "amiga/contact_prepare.s",
+      "sha256": "4cbec9755cc30f4621e2300bdfe2c994132e32bb123cd15a9a88774d58679245"
+    }
+  ]
+}

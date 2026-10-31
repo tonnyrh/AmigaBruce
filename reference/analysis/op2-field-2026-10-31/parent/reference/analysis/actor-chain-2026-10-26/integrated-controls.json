@@ -1,0 +1,130 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "checks": [
+    {
+      "players": 1,
+      "human_yamo": 0,
+      "terminal_life": false,
+      "fields": 720,
+      "stop": "$1C32",
+      "source_steps": 200,
+      "life_events": 2,
+      "ram_sha256": "dae45fcdcd4380e0f07a933034371794c13d21ae1e99497316f8455ab7899512"
+    },
+    {
+      "players": 2,
+      "human_yamo": 0,
+      "terminal_life": false,
+      "fields": 720,
+      "stop": "$0F47",
+      "source_steps": 173,
+      "life_events": 2,
+      "ram_sha256": "9d2de6ccc65e3978551cfa84f12041c951ea9cb50c6e7445e86c12a7f19f2762"
+    },
+    {
+      "players": 1,
+      "human_yamo": 1,
+      "terminal_life": false,
+      "fields": 720,
+      "stop": "$1C32",
+      "source_steps": 200,
+      "life_events": 2,
+      "ram_sha256": "edfb876e30cebc531f5a02d701520892f065d92f98dd65efc83e4eb0ebdc806b"
+    },
+    {
+      "players": 2,
+      "human_yamo": 1,
+      "terminal_life": false,
+      "fields": 720,
+      "stop": "$0F47",
+      "source_steps": 173,
+      "life_events": 2,
+      "ram_sha256": "4b3c195bc0224058c74df98a1b76985fc646e94414b8529f981f85e3c3cb27ca"
+    },
+    {
+      "players": 1,
+      "human_yamo": 0,
+      "terminal_life": true,
+      "fields": 739,
+      "stop": "$0584",
+      "source_steps": 141,
+      "life_events": 1,
+      "ram_sha256": "0325973b346c45907fa489b134242ccd5232a55294f098216fc99919b1aef242"
+    }
+  ],
+  "instructions": 7055873,
+  "source_files": [
+    {
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1",
+      "path": "core/c64_rooms.c"
+    },
+    {
+      "sha256": "9548f50571ede97c0ba8df23d9612aa3a09ac328ed87b69f161a51bc49c26356",
+      "path": "tests/source_actor_bridge.c"
+    },
+    {
+      "sha256": "64b0bea5d5468f660f56ca279855b27076d041b34f0a4989c86366b6903e4de7",
+      "path": "core/c64_rooms.h"
+    },
+    {
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd",
+      "path": "core/source_perf.h"
+    },
+    {
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c",
+      "path": "core/game.h"
+    },
+    {
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd",
+      "path": "core/combat.h"
+    },
+    {
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae",
+      "path": "core/c64_actor_data.h"
+    },
+    {
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e",
+      "path": "core/c64_actor_programs.h"
+    },
+    {
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00",
+      "path": "core/c64_room_data.h"
+    },
+    {
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3",
+      "path": "core/c64_room_programs.h"
+    },
+    {
+      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
+      "path": "core/c64_sfx.h"
+    },
+    {
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
+      "path": "core/c64_sound_data.h"
+    },
+    {
+      "sha256": "4761e14f38fe762840bb12e6da73de610f3b7b6185cfc8271b11319fd7fa9824",
+      "path": "tools/build_c64_actors.py"
+    },
+    {
+      "sha256": "b1721f8fb468d77c70c57eb99fa56955586d5a0413970b3a41613f985cd922b1",
+      "path": "tools/native_actor_continuations.py"
+    },
+    {
+      "sha256": "31cca08b80c73515b449e9362283a9194bb8210e342ef792a9f4ecd2f180834e",
+      "path": "tools/build_c64_rooms.py"
+    },
+    {
+      "sha256": "33099c5e5ab6d4130a2869a5326945adf3f0c70f807e316d3337a7ec951afc97",
+      "path": "test-c64-actors.ps1"
+    }
+  ],
+  "seams": [
+    "Decoded CIA input",
+    "Field-sampled VIC opaque pixels and read-cleared latch",
+    "Main/announcement/Game Over field waits; CPU delay loops and raster IRQ stack phase are not certified"
+  ]
+}

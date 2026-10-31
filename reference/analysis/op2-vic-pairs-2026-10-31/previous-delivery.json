@@ -1,0 +1,504 @@
+{
+  "date": "2026-10-31",
+  "status": "scoped_complete_op2_wide_vic_decoder_realtime_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_controls": 3034,
+  "integrated_scenarios": 5,
+  "source_instructions": 7055873,
+  "native_controls": 53,
+  "native_replay_loops": 1200,
+  "largest_chip_block": 52632,
+  "realtime_gate_passed": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "full_original_parity": false,
+  "converted_jsrs": 444,
+  "pairs": [
+    {
+      "before_fields": 9044,
+      "after_fields": 8965,
+      "before_missed": 131,
+      "after_missed": 126,
+      "slow_gain": 13248
+    },
+    {
+      "before_fields": 9046,
+      "after_fields": 8956,
+      "before_missed": 127,
+      "after_missed": 121,
+      "slow_gain": 13248
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "88dc94012e801d56e80fcaed767a5d158bab451ed10b6902ca97ae9df0d31528"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "07f64dc3fb10ce6d5670985ebf435a46c2a5a251868086d3bdf0cbb6ba903061"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "15772fdf17e08e59a5c484f67074f274f5a90131ad24e1f5e4168586c3c84f04"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "88dc94012e801d56e80fcaed767a5d158bab451ed10b6902ca97ae9df0d31528"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "amiga/vic_wide.s",
+      "sha256": "09a3d26b3a33aa472dd8b6007f243460e30091e014a957575e22b12392b835fb"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "2e46682c5c7ad463ea25960563064fecc6959d12bde5e52358a09359bde1d89f"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "f330173ba5d104f26dc8222f7ed2f44aade9df4471097fa0aaf442ea193f96c8"
+    },
+    {
+      "path": "docs/OP2_FIELD_AUDIO.md",
+      "sha256": "4ed8ebe96ccee45d79b85c17c945cfd35f89009507f6f58c1208bf1e85348cf2"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "975190bdd3b4ad92cb9bdb59928dececc05ba1f416bac06092f96adf44271a48"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "b106ede0fe50ab7838baed81fdb8f34d248712e3ad5d05f35f7c6b44d95e031f"
+    },
+    {
+      "path": "reference/analysis/op0-light-2026-10-31/runs/op1-parent-stairs/identity.json",
+      "sha256": "2125e07956100f6b74f215512fef5d39b49684227668a5daf2bcf68c47b38203"
+    },
+    {
+      "path": "reference/analysis/op0-light-2026-10-31/runs/op1-parent-yamo13/identity.json",
+      "sha256": "7ac2e6a80c2657db1f635d7db9f04418a6c3c4777d5554e4d511d53b0d47f6a2"
+    },
+    {
+      "path": "reference/analysis/op0-light-2026-10-31/runs/op2-reference-bare/identity.json",
+      "sha256": "fe3d8663466e0bde95bf3db527728e34ab14e20e83f37bd13e7ac4fc84e5cd1f"
+    },
+    {
+      "path": "reference/analysis/op0-light-2026-10-31/runs/op2-reference-both-1/identity.json",
+      "sha256": "52cf99a70d38ccb83d8f5e333df2d76d88ced1bba155fde9d0dd7842d8501646"
+    },
+    {
+      "path": "reference/analysis/op0-light-2026-10-31/runs/op2-reference-both-2/identity.json",
+      "sha256": "afe0ca4bdb98b89b7178729f2fd26d2ae0ef386159e2400a9e25523a5454ddb0"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/diagnosis.json",
+      "sha256": "19a7bceb86b3a8ae325ba830ed3875334277877a8c53d8515a5d9c19f0a99c89"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/normal-ui/adf/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/normal-ui/adf/report.json",
+      "sha256": "5ae6764890df12971e66c0ff3aa2f25a055a836a0da559b1628c83431e998397"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/normal-ui/cli/menu.bpl",
+      "sha256": "4100ef5dd7322650586771c52c40116a4d77cd16a212b6c5f3586d43b3edd79c"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/normal-ui/cli/report.json",
+      "sha256": "4feebce89c46e9b02eac11f207b2754f4509e5ab939b56268157330ba525540f"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/parent/manifest.json",
+      "sha256": "9132232b3f627758c65239536a5e52a5cb822d4ee6cd5925cab2255f7bcbf431"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/fixture/result.json",
+      "sha256": "1883fd5cb018384e3c3bdfca2e9238a48fb32f16bf4f385e3b6b40eccae0bff2"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/proof/wide-proof.bin",
+      "sha256": "446bfbd9ec163187d37929dc2e44cc86f8403d574c2d841c9a5e4f3b5a0c20e3"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/both-1/identity.json",
+      "sha256": "04540e26b731b10b0a8baf6dc0774a993d6f6560901164be35d2e827f6a879e9"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/both-1/op0-light.txt",
+      "sha256": "dbf77385f8cd49251c067db444ea11758927969a39613b538aeb2581a93f5439"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/both-2/identity.json",
+      "sha256": "b1adaec1d3aa793be48a6f9b423e8f7f6f09c7f622cb61f0bf4cabc681a2f2ba"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/both-2/op0-light.txt",
+      "sha256": "62a9eaf08e11d585e8d12e72fc1dcb006b28c4090e57f0bf59f9edd5b50a4af4"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/both-bare/identity.json",
+      "sha256": "f222ac430e6b06a77c5a8b64e083130812f513431b4c905d875c72dc2fd3f86b"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/both-bare/op0-light.txt",
+      "sha256": "415097a5e8069ab90382a7cbd8ff42e836e472eb8336303abe20002ac0f11dae"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/stairs/identity.json",
+      "sha256": "3eccbe16eb27344b768ba5bbe050079687bf6a4848834f68534716e137ae18b2"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/stairs/op0-light.txt",
+      "sha256": "59142806711be04de48a5db22736f0c620ba1c89186d03dd12348d67efc4161c"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/yamo-13/identity.json",
+      "sha256": "aa87f10c46db7b40296f9152177b735071fbd4d7bd5e334a9d9311cff271e3c5"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/runs/yamo-13/op0-light.txt",
+      "sha256": "c1080bef33c5ca3e944ccbc9a7b12cd3ddfecaa3826618b56ffbf233e5029681"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/pilot/timed/op2-fields.bin",
+      "sha256": "d0dae868db1f012aa10b5417856b79fd9e655f624eb370c8848077cf7e42c6d5"
+    },
+    {
+      "path": "reference/analysis/op2-field-2026-10-31/standalone-adf.uae",
+      "sha256": "35c15678408eac296b182bc824fbb9e039075b76f860f04e235e7f211eb7f7cc"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/op2-wide-r12/report.json",
+      "sha256": "8c54627074750b4dc635cfabe21e03c620e5a898ecc00f4efca3c252d8eeaf9e"
+    },
+    {
+      "path": "reference/analysis/render-coherence-2026-10-29/op2-wide-r12-death/report.json",
+      "sha256": "f7aa73873272aa0733439f3155a83a42eb7f87d6207a81930984688167291c97"
+    },
+    {
+      "path": "reference/validation/source-vic-host.json",
+      "sha256": "85bb266d646f87ef3e5d9bdbebb5630ae796e4d4ac60c961bb1cfcb95db6414a"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "857b916c4075fd78fd06864e7d7269a0acf5b38f780d69e6f6f26c5553d33281"
+    },
+    {
+      "path": "reference/validation/vic-cache-host.json",
+      "sha256": "fc40e42ee870ecb3f819a360beb5854111d9a5a6ca06381b5a5f82aa13cd6a2f"
+    },
+    {
+      "path": "tools/test-op2-normal.ps1",
+      "sha256": "8faf6117199850f1d4c40a30a3273a68524d4f9ada838debea451979109f23a7"
+    },
+    {
+      "path": "tools/verify_op2_wide_delivery.py",
+      "sha256": "8fda20a57c05bfdd42f67307f6720b7207e58532b5254a696de8710a147b89bc"
+    }
+  ],
+  "open_gates": [
+    "Verified untouched 1984 edition",
+    "Full PAL real-time cadence and natural IRQ/input phase",
+    "Whole native stack high-water",
+    "Complete natural playthrough and physical A500"
+  ],
+  "audio_boundary": {
+    "pairs": {
+      "r01": [
+        {
+          "fields": 1414,
+          "missed": 6,
+          "source_steps": 360
+        },
+        {
+          "fields": 1423,
+          "missed": 0,
+          "source_steps": 360
+        }
+      ],
+      "tour": [
+        {
+          "fields": 8892,
+          "missed": 135,
+          "source_steps": 2400
+        },
+        {
+          "fields": 8972,
+          "missed": 9,
+          "source_steps": 2400
+        }
+      ]
+    },
+    "method": "Existing audio service polled after complete field calls; same game-field count; SID guards/order/data unchanged"
+  },
+  "loader_blank": {
+    "source_disable": "$09BC-$09C1",
+    "source_enable": "$0B33 -> $50DB-$50E5",
+    "normal_section_deltas": {
+      ".text": 98,
+      ".rodata": 0,
+      ".data": 0,
+      ".bss": 0
+    },
+    "gameplay_core_unchanged": true,
+    "prior_host_engine_controls_reused_as_historical": true,
+    "fresh_native_controls": 53,
+    "fresh_native_loops": 1200
+  },
+  "contact_unroll": {
+    "selected": {
+      "variant": "candidate-compact",
+      "label": "contact-unroll-compact-r01",
+      "pal_fields": 1410,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "kernel_bytes": 642,
+      "stationary": [
+        [
+          1159,
+          4155,
+          3056,
+          0,
+          3
+        ],
+        [
+          1379,
+          8282,
+          5854,
+          0,
+          15
+        ],
+        [
+          1174,
+          7925,
+          4481,
+          0,
+          19
+        ],
+        [
+          1393,
+          12049,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4687,
+          3057,
+          0,
+          3
+        ],
+        [
+          1378,
+          9124,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9080,
+          4483,
+          0,
+          19
+        ],
+        [
+          1490,
+          13516,
+          7283,
+          0,
+          31
+        ]
+      ],
+      "untouched_kernel_timing_deltas": [
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 1,
+          "image": -3
+        },
+        {
+          "field": -1,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 1,
+          "image": 0
+        }
+      ]
+    },
+    "baseline": {
+      "variant": "baseline",
+      "label": "contact-unroll-baseline-r01",
+      "pal_fields": 1423,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "kernel_bytes": 346,
+      "stationary": [
+        [
+          1159,
+          4308,
+          3055,
+          0,
+          3
+        ],
+        [
+          1379,
+          8583,
+          5853,
+          0,
+          15
+        ],
+        [
+          1173,
+          8230,
+          4484,
+          0,
+          19
+        ],
+        [
+          1394,
+          12505,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4839,
+          3056,
+          0,
+          3
+        ],
+        [
+          1378,
+          9424,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9387,
+          4483,
+          0,
+          19
+        ],
+        [
+          1489,
+          13971,
+          7283,
+          0,
+          31
+        ]
+      ]
+    },
+    "normal_section_deltas": {
+      ".text": 296,
+      ".rodata": 0,
+      ".data": 0,
+      ".bss": 0
+    },
+    "source_rule_changed": false,
+    "game_main_unchanged": true,
+    "fresh_native_controls": 53,
+    "fresh_native_loops": 1200,
+    "prior_original_byte_controls_reused_through_unchanged_core": true
+  },
+  "op2_wide": {
+    "timing_pairs": [
+      {
+        "route": "both-1",
+        "fields": [
+          1031,
+          1002
+        ],
+        "missed": [
+          19,
+          3
+        ]
+      },
+      {
+        "route": "both-2",
+        "fields": [
+          1031,
+          1002
+        ],
+        "missed": [
+          19,
+          3
+        ]
+      },
+      {
+        "route": "both-bare",
+        "fields": [
+          1022,
+          996
+        ],
+        "missed": [
+          19,
+          1
+        ]
+      },
+      {
+        "route": "stairs",
+        "fields": [
+          818,
+          814
+        ],
+        "missed": [
+          0,
+          0
+        ]
+      },
+      {
+        "route": "yamo-13",
+        "fields": [
+          736,
+          736
+        ],
+        "missed": [
+          0,
+          0
+        ]
+      }
+    ],
+    "decoder_cases": 512,
+    "decoder_code_and_table_bytes": 586,
+    "rebuilds": 185,
+    "rebuild_lines": [
+      8957,
+      1730
+    ],
+    "fresh_fixtures": 53,
+    "replay_loops": 1200,
+    "controlled_missed": 35,
+    "normal_exe_bytes": 317136,
+    "normal_exe_delta": 724
+  }
+}

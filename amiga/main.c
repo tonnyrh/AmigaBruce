@@ -111,6 +111,7 @@ static volatile struct Custom *hw=(volatile struct Custom *)0xdff000;
  * controlled replay uses one explicit field per loop and reports overruns. */
 static ULONG game_field_last;
 static UBYTE game_field_active,game_field_busy,game_field_loading;
+static UBYTE interlude,interlude_painted;
 static void blank_game_display(void);
 static void source_game_service(void){
     ULONG now,gap;source_audio_service();
@@ -120,7 +121,13 @@ static void source_game_service(void){
     game_field_busy=1;while(gap--){bl_c64_field();source_audio_service();}game_field_busy=0;
 }
 static void source_game_load(long loading){
-    if(loading)blank_game_display();
+    if(loading==BL_DISPLAY_PLAYER || loading==BL_DISPLAY_GAME_OVER){
+        if(game_field_active){
+            blank_game_display();interlude=(UBYTE)loading;interlude_painted=0;
+        }
+        return;
+    }
+    if(loading){interlude=0;blank_game_display();}
     game_field_loading=(UBYTE)(loading!=0);game_field_last=field_clock();source_audio_load(loading);
 }
 #if BL_AUTOTEST
@@ -267,15 +274,42 @@ static void text(UBYTE *b,int x,int y,const char *s,UBYTE c) {
     }x+=6;s++;}
 }
 
-/* Temporary title until the user's loading illustration is attached. */
-static void draw_loading(UBYTE *b){
-    const char *title="BRUCE";int n,row,col;
-    for(n=0;n<5;n++)for(row=0;row<7;row++)for(col=0;col<5;col++)
-        if(glyphs[title[n]-'A'][row]&(16>>col))
-            rect(b,73+n*36+col*6,88+row*6,6,6,13);
-    text(b,139,166,"LOADING",5);
-}
+#include "title_art.h"
 
+/* The title and fighters share the existing literal/run/back-reference
+ * format. Only the immutable bytes live in the executable. */
+static ULONG unpack_art(UBYTE *dest,const UBYTE *source,UBYTE fighter){
+    UBYTE *start=dest,count,value;
+    while((count=*source++)!=128){
+        if(!fighter)source_audio_service();
+        if(!count){
+            UWORD distance=(UWORD)(((UWORD)source[0]<<8)|source[1]);count=source[2];source+=3;
+            while(count--){value=*(dest-distance);*dest++=value;
+                if(BL_AUTOTEST && fighter)fighter_cache_hash=fighter_fnv(fighter_cache_hash,value);}
+        }else if(count&128){count&=127;while(count--){value=*source++;*dest++=value;
+            if(BL_AUTOTEST && fighter)fighter_cache_hash=fighter_fnv(fighter_cache_hash,value);}}
+        else{value=*source++;while(count--){*dest++=value;
+            if(BL_AUTOTEST && fighter)fighter_cache_hash=fighter_fnv(fighter_cache_hash,value);}}
+    }
+    return (ULONG)(dest-start);
+}
+static void brush_text(UBYTE *b,int x,int y,const char *s,UBYTE color){
+    for(;*s;++s,x+=9)if(*s>='A' && *s<='Z'){
+        const UBYTE *g=brush_letters[*s-'A'];int row,col;
+        for(row=0;row<9;row++)for(col=0;col<7;col++)
+            if(g[row]&(128>>col))pixel(b,x+col,y+row,color);
+    }
+}
+static void title_rule(UBYTE *b,int y){
+    rect(b,12,y,143,1,5);rect(b,165,y,143,1,5);
+    rect(b,158,y-1,4,3,9);
+}
+static void draw_loading(UBYTE *b){
+    brush_text(b,107,35,"MARTIAL ARTS",7);
+    unpack_art(b+64*ROW_BYTES,title_packed,0);
+    title_rule(b,181);
+    brush_text(b,129,196,"LOADING",12);
+}
 
 static void draw_room(const BlGame *game,const BlProgress *progress){
     ULONG i;char title[]="ROOM 01";wait_blitter();
@@ -294,6 +328,7 @@ static void draw_room(const BlGame *game,const BlProgress *progress){
     text(background,16,19,"KAGE",2);text(background,128,19,"YAMO",5);text(background,240,19,"BRUCE",7);
     text(background,8,238,"JOYSTICK MOVE  FIRE ATTACK",1);
     text(background,8,248,"F10 MENU  ESC AMIGADOS",12);
+    text(background,240,248,"P PAUSE",12);
     if(progress){painted_lanterns[progress->room]=progress->collected[progress->room];painted_openings[progress->room]=0;}
     if(BL_AUTOTEST)room_draw_cost[3]=elapsed_work(started);
 }
@@ -445,21 +480,8 @@ static void prepare_target(void) {
         background[p*40+(203+r)*ROW_BYTES+13+c]=saved[p][r][c];
 }
 
-/* Expand packed indexed art once, keeping all phases in CPU-only memory. */
 static void prepare_fighters(void){
-    const UBYTE *source=fighter_dma_packed;UBYTE *dest=fighter_dma;
-    UBYTE count,value;
-    while((count=*source++)!=128){
-        if(!count){
-            UWORD distance=(UWORD)(((UWORD)source[0]<<8)|source[1]);count=source[2];source+=3;
-            while(count--){value=*(dest-distance);*dest++=value;
-                if(BL_AUTOTEST)fighter_cache_hash=fighter_fnv(fighter_cache_hash,value);}
-        }else if(count&128){count&=127;while(count--){value=*source++;*dest++=value;
-            if(BL_AUTOTEST)fighter_cache_hash=fighter_fnv(fighter_cache_hash,value);}}
-        else{value=*source++;while(count--){*dest++=value;
-            if(BL_AUTOTEST)fighter_cache_hash=fighter_fnv(fighter_cache_hash,value);}}
-    }
-    fighter_cache_bytes=(ULONG)(dest-fighter_dma);
+    fighter_cache_bytes=unpack_art(fighter_dma,fighter_dma_packed,1);
 }
 static void wait_blitter(void){(void)hw->dmaconr;while(hw->dmaconr&DMAF_BLTDONE){source_audio_service();}source_audio_service();}
 static void paint_source_tile(const BlC64Paint *request){
@@ -622,6 +644,10 @@ static void restore_player(UBYTE *b,int x,int y) {
 }
 
 static void emit(UWORD **p,UWORD reg,UWORD value){*(*p)++=reg;*(*p)++=value;}
+/* After the nine display registers and eight bitplane pointer words. */
+static void set_list_palette(UWORD *list,const UWORD *colors){
+    int i;for(i=0;i<16;i++)list[35+2*i]=colors[i];
+}
 static void make_copper(UWORD *list,UBYTE *bitmap) {
     UWORD *p=list;int n;ULONG addr;
     emit(&p,0x100,0x4200);emit(&p,0x102,0);emit(&p,0x104,0);emit(&p,0x108,120);emit(&p,0x10a,120);
@@ -672,7 +698,7 @@ static UBYTE read_input(void){return read_port(1);}
 
 /* Poll the keyboard while OS interrupts are disabled. Acknowledge every
  * serial byte, including releases, so the keyboard keeps transmitting. */
-static UBYTE keyboard_shift;
+static UBYTE keyboard_shift,keyboard_p_down;
 static UBYTE read_key(void) {
     volatile UBYTE *icr=(volatile UBYTE*)0xbfed01;
     volatile UBYTE *sdr=(volatile UBYTE*)0xbfec01;
@@ -690,35 +716,80 @@ static UBYTE read_key(void) {
     if(raw==0x61)keyboard_shift|=2;
     if(raw==0xe0)keyboard_shift&=(UBYTE)~1;
     if(raw==0xe1)keyboard_shift&=(UBYTE)~2;
+    if(raw==0x99)keyboard_p_down=0;
+    if(raw==0x19){
+        if(keyboard_p_down)return 255;
+        keyboard_p_down=1;
+    }
     return raw;
+}
+
+/* Only the footer badge changes. The saved pixels also work on an interlude
+ * card. No game or SID field may elapse while waiting for the next press. */
+static UBYTE pause_game(UBYTE *front){
+    UBYTE saved[7][4][6],key;
+    int row,plane,byte;
+    source_audio_mute();wait_frame();
+    for(row=0;row<7;row++)for(plane=0;plane<4;plane++){
+        UBYTE *line=front+(248+row)*ROW_BYTES+plane*40+30;
+        for(byte=0;byte<6;byte++){saved[row][plane][byte]=line[byte];line[byte]=0;}
+    }
+    text(front,240,248,"PAUSED",7);
+    do{wait_frame();key=read_key();}while(key!=0x19 && key!=0x59 && key!=0x45);
+    for(row=0;row<7;row++)for(plane=0;plane<4;plane++){
+        UBYTE *line=front+(248+row)*ROW_BYTES+plane*40+30;
+        for(byte=0;byte<6;byte++)line[byte]=saved[row][plane][byte];
+    }
+    game_field_last=field_clock();
+    if(key==0x19)source_audio_resume();
+    return key;
+}
+
+static void show_interlude(int *front,const BlSession *session){
+    if(!interlude_painted){
+        UBYTE hidden=(UBYTE)(*front^1);
+        UBYTE *b=buffers[hidden];
+        ULONG i;char player[]="PLAYER 1";
+        wait_blitter();
+        for(i=0;i<BITMAP_BYTES;i++){b[i]=0;if(!(i&1023))source_game_service();}
+        player[7]=(char)('1'+session->current);
+        if(interlude==BL_DISPLAY_GAME_OVER)text(b,133,124,"GAME OVER",7);
+        else text(b,136,124,player,7);
+        present_frame(copper[hidden]);*front=hidden;interlude_painted=1;
+    }else wait_frame();
 }
 
 static void menu_paint(const BlOptions *o,UBYTE debug,UBYTE game_over,int *front){
     UBYTE hidden=(UBYTE)(*front^1),*bitmap=buffers[hidden];
-    ULONG i;char players[]="F3 PLAYERS 1",room[]="F3 F4 START ROOM 01";
+    ULONG i;char players[]="1",room[]="01";
     wait_blitter();
     for(i=0;i<BITMAP_BYTES;i++){bitmap[i]=0;if(!(i&1023))source_audio_service();}
-    text(bitmap,142,38,"BRUCE",7);
-    if(game_over)text(bitmap,130,59,"GAME OVER",2);
+    unpack_art(bitmap+4*ROW_BYTES,title_packed,0);
+    brush_text(bitmap,20,114,debug?"TEST OPTIONS":game_over?"GAME OVER":"GAME SETUP",12);
     if(debug){
-        text(bitmap,94,78,"TEST OPTIONS",13);
-        text(bitmap,58,100,o->infinite_lives?"F1 INFINITE FALLS ON":"F1 INFINITE FALLS OFF",1);
-        text(bitmap,58,116,o->invincible?"F2 INVINCIBLE ON":"F2 INVINCIBLE OFF",1);
-        room[17]=(char)('0'+(o->start_room+1)/10);room[18]=(char)('0'+(o->start_room+1)%10);
-        text(bitmap,58,132,room,1);
-        text(bitmap,58,152,"F5 BACK  FIRE START TEST",5);
-        text(bitmap,34,194,"IN GAME F1 F2 CHANGE ROOM",12);
-        text(bitmap,34,210,"TEST FLAGS CHANGE C64 RULES",12);
+        text(bitmap,24,133,"F1  INFINITE FALLS",13);
+        text(bitmap,218,133,o->infinite_lives?"ON":"OFF",11);
+        text(bitmap,24,148,"F2  INVINCIBLE",13);
+        text(bitmap,218,148,o->invincible?"ON":"OFF",11);
+        room[0]=(char)('0'+(o->start_room+1)/10);room[1]=(char)('0'+(o->start_room+1)%10);
+        text(bitmap,24,163,"F3 F4  START ROOM",13);text(bitmap,218,163,room,11);
     }else{
-        players[11]=(char)('0'+o->players);
-        text(bitmap,64,96,players,1);
-        text(bitmap,64,116,o->human_yamo?"F5 YAMO JOYSTICK 1":"F5 YAMO COMPUTER",1);
-        text(bitmap,64,146,"FIRE OR RETURN START",5);
-        text(bitmap,64,172,"SHIFT D TEST OPTIONS",12);
-        text(bitmap,34,200,"2 PLAYERS TAKE TURNS AS BRUCE",12);
-        text(bitmap,34,216,"1P JOYSTICK 2  2P JOYSTICK 1",12);
+        players[0]=(char)('0'+o->players);
+        text(bitmap,24,137,"F3  PLAYERS",13);text(bitmap,218,137,players,11);
+        text(bitmap,24,154,"F5  YAMO",13);
+        text(bitmap,218,154,o->human_yamo?"JOYSTICK 1":"COMPUTER",11);
     }
-    text(bitmap,100,238,"ESC AMIGADOS",12);
+    title_rule(bitmap,179);
+    text(bitmap,91,190,"FIRE OR RETURN TO START",13);
+    if(debug){
+        text(bitmap,24,210,"F5 BACK",7);
+        text(bitmap,24,224,"IN GAME F1 F2 CHANGE ROOM",7);
+    }else{
+        text(bitmap,24,210,"SHIFT D TEST OPTIONS",7);
+        text(bitmap,24,224,"TAKE TURNS   1P JOY 2   2P JOY 1",7);
+    }
+    text(bitmap,24,241,"ESC AMIGADOS",6);text(bitmap,248,241,"P PAUSE",6);
+    set_list_palette(copper[hidden],title_palette);
     /* Publish only a complete menu, then wait until Copper has latched it
      * before the former front may be reused by another menu or game. */
     present_frame(copper[hidden]);wait_frame();*front=hidden;
@@ -867,7 +938,7 @@ int main(void) {
     if(BL_AUTOTEST){ULONG i;for(i=0;i<BL_INTRO_PCM_BYTES;i++)
         intro_pcm_hash=(intro_pcm_hash^buffers[1][i])*16777619UL;}
     draw_loading(buffers[0]);
-    for(n=0;n<2;n++)make_copper(copper[n],buffers[n]);
+    for(n=0;n<2;n++){make_copper(copper[n],buffers[n]);set_list_palette(copper[n],title_palette);}
     old_view=GfxBase->ActiView;
     Forbid();LoadView(0);WaitTOF();WaitTOF();OwnBlitter();WaitBlit();Disable();
     old_dma=hw->dmaconr;old_int=hw->intenar;old_adk=hw->adkconr;
@@ -942,7 +1013,7 @@ int main(void) {
     /* Source $06DA/$154C plays the title theme until the start input;
      * gameplay $15A8 switches to the three independent SFX drivers. */
 choose_game:
-    game_field_active=0;
+    game_field_active=0;interlude=0;
     if(BL_AUTOTEST){
     rect(buffers[0],0,160,320,18,0);text(buffers[0],106,166,"FIRE TO START",5);
     present_frame(copper[0]);
@@ -981,9 +1052,9 @@ choose_game:
     bl_source_audio_reset(&source_audio);bl_c64_audio_reset();
     /* Menu return preserves the actual front. Build the game in the other
      * buffer; both complete copies finish before their destination is reused. */
-    back^=1;copy_room_bitmap(buffers[back],background);
+    back^=1;set_list_palette(copper[back],palette);copy_room_bitmap(buffers[back],background);
     present_frame(copper[back]);wait_frame();
-    copy_room_bitmap(buffers[back^1],background);intro_restored=1;
+    set_list_palette(copper[back^1],palette);copy_room_bitmap(buffers[back^1],background);intro_restored=1;
     source_audio_start(0);
     game_field_last=field_clock();game_field_active=(UBYTE)(!BL_AUTOTEST || BL_SOURCE_PERF_TEST);
     last_image_field=game_field_last;
@@ -1001,6 +1072,9 @@ choose_game:
             bl_c64_audio_request(0x80+frame/20-1);
         if(!BL_AUTOTEST){
             UBYTE key=read_key();
+            if(key==0x19){
+                key=pause_game(buffers[back]);last_image_field=field_clock();
+            }
             if(key==0x45)break;
             if(key==0x59 || session.over){menu_game_over=session.over;source_audio_mute();goto choose_game;}
             if(options.debug && key==0x50)room_request=(UBYTE)((progress.room+19)%20);
@@ -1205,6 +1279,11 @@ choose_game:
         /* Source state/collision changes happen in the logic field. Publish
          * changed character pixels one PAL field later, sharing work across
          * the three-field seam while keeping logic/input cadence unchanged. */
+        if(interlude){
+            show_interlude(&back,&session);
+            PERF_END(BL_PERF_LOOP);
+            ++frame;field_phase=(UBYTE)(field_phase==2?0:field_phase+1);continue;
+        }
         if(room_paint_pending && field_phase!=0){
             ULONG paint_start=BL_C64_PROFILE?line_clock():0;
             PERF_BEGIN(BL_PERF_BACKGROUND);

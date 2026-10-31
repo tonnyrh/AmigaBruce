@@ -1,0 +1,13 @@
+{
+  "method": "Actual Windows Graphics Capture of owned unmodified v4 WinUAE game; ordinary joystick fire input; no memory injection",
+  "window": {
+    "app": "process:C:\\vscode\\_EXT\\AmigaBruceLee\\.tmp\\hardware-bruce-v4-ui\\winuae64.exe",
+    "id": 3279612,
+    "title": "[hardware-bruce-v4.uae] - WinUAE"
+  },
+  "screenshotId": "screenshot-0",
+  "format": "jpeg",
+  "bruceVisible": true,
+  "noObviousSpriteSeams": true,
+  "room": 1
+}

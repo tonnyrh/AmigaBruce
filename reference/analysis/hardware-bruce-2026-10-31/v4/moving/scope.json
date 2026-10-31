@@ -1,0 +1,71 @@
+{
+  "status": "private_bruce_hardware_sprite_probe",
+  "checkpoint": "ccf9572be54db49a33638d52e73c74c9f5eec740",
+  "production_changed": false,
+  "inputs": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "6150ad3145c02756035e492f08247b98f5c8cc3394c68f8d0ef942b8c0b06de3"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "abbcd8e35685db4a8b958df70bed09d501f747047a640a97aabbd724372b3fb3"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "bc37ad112d3bb47825adea9e1262e1ef8cc11503e3f3b47800d5a783d275b452"
+    },
+    {
+      "path": "amiga-build.ps1",
+      "sha256": "533c39c8475143b38ce63da1f57a6bd5fc8536b928f794faffadd42d5a313c42"
+    },
+    {
+      "path": "assets/c64/sprites-v1/manifest.json",
+      "sha256": "6eec4a328b4b3b05cb20ed37c18b1c8aad3b896d5114dff4ed6fa135399bb298"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v4/moving/bob/main.c",
+      "sha256": "cac15ff35a9e78fe88b265637ca35f5347c1cc1a1aafe65b03aa690c52b9377f"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v4/moving/sprite/main.c",
+      "sha256": "96cb7f3576d7ca4acc2f0869d1805da7b536759d4cebc310377eb824cb76985b"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v4/moving/bob-build.ps1",
+      "sha256": "b6a47c8cb87e944cf25f63c9727c7b5b10bba7342490a28a61a2fcef85ee1b23"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v4/moving/sprite-build.ps1",
+      "sha256": "32eced4209e1cdccb4a12769118be914c2305c39a38c8bf7a9945f842d934c2b"
+    },
+    {
+      "path": "reference/analysis/hardware-bruce-2026-10-31/v4/moving/bruce_hw.h",
+      "sha256": "da9315d13582bd12b360ed03ba5b010365cb4403aeb2efcd70c3e4ce45bb1448"
+    }
+  ],
+  "harrier": {
+    "path": "C:/vscode/_EXT/harrierattackreloaded/amiga/main.c",
+    "sha256": "b3a0e448128b44a0ff08aa46d0d8e5e75f16c055bca96566611478a9e1499d52",
+    "routines": [
+      "setHardwareSpritePosition",
+      "copSetSprites",
+      "updateHardwareProjectileChain"
+    ]
+  },
+  "scope": "Only Bruce presentation changes; current ripped two-colour pixels, three16px channels, two DMA buffers556bytes. No extra service seam or game/core changes. Channel reuse documented from Harrier; not needed for this first actor. V2: preserve the two original draw audio polling opportunities; allocate small sprite buffer after large display allocations; display-enabled flag separate from PAL IRQ scheduler; full-fixture capture retained. V3 replaces the556-byte separate allocation with560 reserved bytes in existing Copper tails, safely beyond the terminated list; no extra Chip allocation. Moving test replaces only diagnostic joystick input; 240-step cycle:40 right/up/fire,40 left/up/fire,40 right,40 left,40 up,40 down. No actor/room placement injection; existing invincibility diagnostic remains. Not natural playthrough. V4 changes only BPLCON2 initialization in hardware mode from0 to$24. PF2P=4 places the single playfield behind all sprite pairs; same BOB/source front priority. No movement/collision/timing rule changes."
+}

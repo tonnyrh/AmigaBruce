@@ -25,6 +25,15 @@ def enabled():
 
 def verify():
  if not globals().get('_contact_parent_replay',False):
+  if (ROOT/'reference/analysis/op-score-2026-10-31/build.json').is_file():
+   from verify_score_display_delivery import verify_current as verify_score
+   return verify_score()
+  if (ROOT/'reference/analysis/op2-vic-pairs-2026-10-31/measurements.json').is_file():
+   from verify_vic_pair_delivery import verify_current as verify_pairs
+   return verify_pairs()
+  if (ROOT/'amiga/vic_wide.s').exists():
+   from verify_op2_wide_delivery import verify_current as verify_wide
+   return verify_wide()
   from verify_contact_unroll_delivery import enabled as contact_enabled,verify_current as verify_contact
   if contact_enabled():return verify_contact()
  if not globals().get('_display_parent_replay',False):

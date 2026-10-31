@@ -1,0 +1,71 @@
+{
+  "status": "passed_identical_loaded_bob_sections",
+  "rows": [
+    {
+      "moving": false,
+      "current": {
+        "path": "reference/analysis/hardware-bruce-2026-10-31/v4/bob/out/bruce_test.elf",
+        "sha256": "f7ab68897120dffe48de3d1dd6f78eba4d45c857ae84fd1fd9c1102b382148be"
+      },
+      "baseline": {
+        "path": "reference/analysis/optimization-2026-10-27/hardware-bruce-v3-bob-r01/bruce_test.elf",
+        "sha256": "fd184e2db1bc8b2107d9cfcfa39ef55e836eea8f7577dd31c0da1110939313ce"
+      },
+      "sections": {
+        ".text": {
+          "bytes": 192318,
+          "same_loaded_bytes": true,
+          "same_nobits_size": false
+        },
+        ".rodata": {
+          "bytes": 83916,
+          "same_loaded_bytes": true,
+          "same_nobits_size": false
+        },
+        ".data": {
+          "bytes": 21,
+          "same_loaded_bytes": true,
+          "same_nobits_size": false
+        },
+        ".bss": {
+          "bytes": 171664,
+          "same_loaded_bytes": false,
+          "same_nobits_size": true
+        }
+      }
+    },
+    {
+      "moving": true,
+      "current": {
+        "path": "reference/analysis/hardware-bruce-2026-10-31/v4/moving/bob/out/bruce_test.elf",
+        "sha256": "b18ad8a880541e140e9ec57c72987256227849c59405dd54ced5651af98be0c9"
+      },
+      "baseline": {
+        "path": "reference/analysis/optimization-2026-10-27/hardware-bruce-v3-moving-bob-r01/bruce_test.elf",
+        "sha256": "ce85d247956a2da99e273c643c450fd8098e02160cfe05d86b47c11df90ead7b"
+      },
+      "sections": {
+        ".text": {
+          "bytes": 192430,
+          "same_loaded_bytes": true,
+          "same_nobits_size": false
+        },
+        ".rodata": {
+          "bytes": 83916,
+          "same_loaded_bytes": true,
+          "same_nobits_size": false
+        },
+        ".data": {
+          "bytes": 21,
+          "same_loaded_bytes": true,
+          "same_nobits_size": false
+        },
+        ".bss": {
+          "bytes": 171664,
+          "same_loaded_bytes": false,
+          "same_nobits_size": true
+        }
+      }
+    }
+  ]
+}

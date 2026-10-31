@@ -1,0 +1,191 @@
+{
+  "status": "rejected_no_repeated_whole_route_gain",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "e76c00f2a83b2871d85e7296e99b0f440f24debb5d9abf15311e3f8cbe17cd30"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "c7aba601dd28b46da571d0009c97e6689bcb27701233b22402b781054020eb69"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "f03377c4ddbb182690b9cde3d182e91e37037f1a8d7bae1df4f4e7821376f97f"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "e76c00f2a83b2871d85e7296e99b0f440f24debb5d9abf15311e3f8cbe17cd30"
+    }
+  ],
+  "comparisons": [
+    {
+      "room": 1,
+      "mask": 3,
+      "input": 0,
+      "before": {
+        "fields": 964,
+        "work_lines": 259153,
+        "audio_missed": 0,
+        "air_steps": 0
+      },
+      "after": {
+        "fields": 965,
+        "work_lines": 255987,
+        "audio_missed": 0,
+        "air_steps": 0
+      }
+    },
+    {
+      "room": 1,
+      "mask": 3,
+      "input": 0,
+      "before": {
+        "fields": 964,
+        "work_lines": 258754,
+        "audio_missed": 0,
+        "air_steps": 0
+      },
+      "after": {
+        "fields": 964,
+        "work_lines": 257241,
+        "audio_missed": 0,
+        "air_steps": 0
+      }
+    },
+    {
+      "room": 1,
+      "mask": 3,
+      "input": 2,
+      "before": {
+        "fields": 985,
+        "work_lines": 278131,
+        "audio_missed": 12,
+        "air_steps": 96
+      },
+      "after": {
+        "fields": 994,
+        "work_lines": 279040,
+        "audio_missed": 12,
+        "air_steps": 96
+      }
+    },
+    {
+      "room": 13,
+      "mask": 1,
+      "input": 0,
+      "before": {
+        "fields": 724,
+        "work_lines": 190696,
+        "audio_missed": 0,
+        "air_steps": 0
+      },
+      "after": {
+        "fields": 724,
+        "work_lines": 190194,
+        "audio_missed": 0,
+        "air_steps": 0
+      }
+    },
+    {
+      "room": 12,
+      "mask": 3,
+      "input": 1,
+      "before": {
+        "fields": 818,
+        "work_lines": 199663,
+        "audio_missed": 0,
+        "air_steps": 0
+      },
+      "after": {
+        "fields": 812,
+        "work_lines": 198303,
+        "audio_missed": 0,
+        "air_steps": 0
+      }
+    }
+  ],
+  "observed_hit_fill_bypass": [
+    221,
+    19,
+    0
+  ],
+  "native_controls": 218,
+  "host_paths": {
+    "fill": 161,
+    "hit": 47,
+    "bypass": 9,
+    "inactive": 1
+  },
+  "source_instructions": 1824753,
+  "raw": {
+    "after1.txt": "89ad653612947e6ef387c2a1904567b162eceaf0e1e4ac394a9c50440ae34510",
+    "after2.txt": "2de626dcf49705a92a3412307e070fc77458083bc237ac47abf63dad6c391fc0",
+    "before1.txt": "b43c428dd7f52938e52fbf53d9ff7bd5b6399e0eb778e1759ac0873396f5e465",
+    "before2.txt": "1b8b56f731915334bb3fe9fc81c17717611f253d9067ddb6ad13076ec7291837",
+    "hits.txt": "d5f607c9ca3f0071446ae81cb0304ee422e798a0cb0a192e610a78ffeb86eea1",
+    "moving-after.txt": "2fd20d55b4f788eaa420b0fb04772ff70d529f95267023ce723e558ada842a97",
+    "moving-before.txt": "e6631a230af0eef1ccfc424d5a089db31cd7aff7e841db1ef67f9b65d1df0400",
+    "oracle.json": "8bd674c104b6a541b8a37e19b105db83b8d7dd640b5c3ff1ea3a197ab19ce1b5",
+    "proof.bin": "698166de6b5f66893978c475535da06252cd92504b37273f95d012406df91b41",
+    "stairs-after.txt": "dbe3873bf84d8a2975675555f0965383d024d3ced015587ab5825170fcdf85e3",
+    "stairs-before.txt": "345721e07af65c11143e551bc3968f1aa84b9675db9159bf9c8a743ae259a3bd",
+    "yamo-after.txt": "ec706e5030091c823034798df038253de17777a613df1edc0356ab8100d30510",
+    "yamo-before.txt": "a1b6265093a9ce18d2701d35c489379273c71b23928cc1204c4db6ddb783edb6"
+  },
+  "pilot_inputs": {
+    "build_controls.ps1": "12bac5f8b7cfcc658dcf139c2b402742833e5547f32c3c8f253935b4a6c5fd84",
+    "build_pilot.py": "beab7815f572f663ff68fbea468ef047976bd64554634d5ef84981e061de9538",
+    "build_proof.py": "387235457a7a545792915395f9e09a3ab04b20605f3fc66c7fec92e77e00fd6a",
+    "oracle.py": "d96cfd0db4ab1179d3da68ee5bb69bda8b23ec6140e0cef193b00948a8564ad7",
+    "prefix.h": "5521e5d8dc59c4fc019baf3769cd450d8eb328eb445032db28bc2fa869c52d91",
+    "proof_main.c": "822a02bfd9820b4766db6f3c34158914adf1f64d9b1a8c14e0bb7a312de8ce03",
+    "run.ps1": "b27abbdf7209ae68575a021dc87773eaa3988f1f17369ef4868929eb41aa7f2d",
+    "verify.py": "49134a8d54d3887b028c92daf25dabc8b0c691f53e492a833af3d82bc72f1eff",
+    "witness.h": "07b64462bf43aa2b9084662cf6b1501f08a2e3a2a02f9ba8e03442329d5b7c58"
+  },
+  "production_changed": false,
+  "natural_playthrough": false,
+  "original_edition_verified": false,
+  "builds": {
+    "executables": {
+      "before1": "66a6cf07c308161c0b3a8fc54099ff7a597b00948c5dd367508d61224044bd23",
+      "after1": "13a3b8c904c4cac9181a1138cb73a049e32b1953a28bd61b6f165732e7a1e73e",
+      "before2": "66a6cf07c308161c0b3a8fc54099ff7a597b00948c5dd367508d61224044bd23",
+      "after2": "13a3b8c904c4cac9181a1138cb73a049e32b1953a28bd61b6f165732e7a1e73e",
+      "moving-before": "66a6cf07c308161c0b3a8fc54099ff7a597b00948c5dd367508d61224044bd23",
+      "moving-after": "13a3b8c904c4cac9181a1138cb73a049e32b1953a28bd61b6f165732e7a1e73e",
+      "yamo-before": "66a6cf07c308161c0b3a8fc54099ff7a597b00948c5dd367508d61224044bd23",
+      "yamo-after": "13a3b8c904c4cac9181a1138cb73a049e32b1953a28bd61b6f165732e7a1e73e",
+      "stairs-before": "66a6cf07c308161c0b3a8fc54099ff7a597b00948c5dd367508d61224044bd23",
+      "stairs-after": "13a3b8c904c4cac9181a1138cb73a049e32b1953a28bd61b6f165732e7a1e73e",
+      "hits": "3e2609b775e3aaf4b68b6bb7ed0c142de7dc93fb69beae99530bc89d4762c476"
+    },
+    "proof_executable": "fbb424be4134905e1115194634903917554279098f08637520e2432949c68b55",
+    "case_file": "eb77d1552c111f78a3f4db075fdbe7ff7ed00a4b9b770742ad7200d580f4f648",
+    "unrelocated_copy": "720b5c541b5d5d0f5d21dd7ac25b4bc1d9eda970d7b738dd653cb759e40a9d9e",
+    "kernels": {
+      "source_contact_driver": {
+        "size": 500,
+        "code_sha256": "284359bb8fd44c7437b37358d7350808fceb5835e8f0e14edfd7ec08a1d25b96",
+        "relocation_sha256": "e843fd89a062f85cdb45ea172d7e1b1475ae1eefbae2c2de33263c55c338b415"
+      },
+      "source_contact_rows_inner": {
+        "size": 1246,
+        "code_sha256": "69cb2a2eb235668b82a92d499a341ee80c8c614f4e686f3d9913f91c558f43fd",
+        "relocation_sha256": "081b5adacebe9d308c0deabf88d6a4a74a33baccb59409f2180961fb9be5c423"
+      },
+      "first_part": {
+        "size": 394,
+        "code_sha256": "d2e66502451c2623f822f8365891816190996c70c1e17ca88bf76e4a2aaa3291",
+        "relocation_sha256": "ff1359190e90676edcc1ff7172f4de3449e47d540dadff4678da6b8db253bdce"
+      },
+      "kage_first_part": {
+        "size": 1394,
+        "code_sha256": "bb0f4f3aa3b1e34ff024db61ce3e60b0d3c1f983b41c8c3ab385d5ecba7cc739",
+        "relocation_sha256": "56c29158167e0a59e08740fe1ab17ed3607f81ace8cbdb8b6b6be5b074df92ad"
+      }
+    }
+  }
+}

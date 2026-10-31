@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "status": "measured_contact_alignment_unroll_realtime_open",
+  "status": "measured_score_display_realtime_open",
   "converted_jsrs": 444,
   "pairs": [
     {
@@ -23,19 +23,19 @@
   "normal_build": [
     {
       "path": "amiga/out/bruce_amiga.exe",
-      "sha256": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561"
+      "sha256": "a15faf6e96cc1e6a980253095802e58584fa267dd7a62ad7cbeb97bd34bc5c7e"
     },
     {
       "path": "amiga/out/bruce_amiga.elf",
-      "sha256": "bc37ad112d3bb47825adea9e1262e1ef8cc11503e3f3b47800d5a783d275b452"
+      "sha256": "496ca2a6d368e29b133206a538242a354f9d5ee59bf4e94384b4c419110db517"
     },
     {
       "path": "amiga/out/bruce_amiga.adf",
-      "sha256": "6855aaff41786c486520d9fbc4e4dcb3038afb9d19acab4bce6dbf304c4ba613"
+      "sha256": "3ac836b0798b9cca8362a6b180e748ea94c7cfc54e3d0801d92295ced2dffa0f"
     },
     {
       "path": ".tmp/amiga-boot/c/start",
-      "sha256": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561"
+      "sha256": "a15faf6e96cc1e6a980253095802e58584fa267dd7a62ad7cbeb97bd34bc5c7e"
     }
   ],
   "realtime_accepted": false,
@@ -48,15 +48,15 @@
   "artifacts": [
     {
       "path": "reference/validation/compact-actor-delivery.json",
-      "sha256": "f79adac2cd89654c55c74fd5fcf19d2170768971a30d8db9fa13c5c14e19f677"
+      "sha256": "effa2b0491e38e9abc20e6561cd1a4c969ab68309d5cc4d58b47469ce5655caf"
     },
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "566baeca46df42b244ba97f3d268392b5951cadac0f0ccd9a72daa8410adb0da"
+      "sha256": "a74995e8908fb3395e430183b1ad115df928dedbf3366ab49d90a4b120d13d3d"
     },
     {
       "path": "tools/verify_source_optimization.py",
-      "sha256": "dff7388316c3cefdb8009c6f10a795fc933a356e3a4003958389b21b3755788c"
+      "sha256": "cdce6695be9aa95ed7088e778c7464c603e2a2ad897ece52c3b9470a0252efae"
     },
     {
       "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-optimization.json",
@@ -93,8 +93,8 @@
     "method": "Existing audio service polled after complete field calls; same game-field count; SID guards/order/data unchanged"
   },
   "immediate_parent_history": {
-    "path": "reference/analysis/contact-unroll-2026-10-31/parent/reference/validation/source-optimization.json",
-    "sha256": "70477f1d9d9d93008d13aa3e3bebc2d276b5468c13c6f4498b1aaa6db4a73b7a"
+    "path": "reference/analysis/op-score-2026-10-31/previous-delivery.json",
+    "sha256": "21c7bb06b0b9881e44879bc2b94e848ad15b12a9552e57837cdae65997cbc99c"
   },
   "loader_blank": {
     "source_disable": "$09BC-$09C1",
@@ -288,5 +288,132 @@
     "fresh_native_controls": 53,
     "fresh_native_loops": 1200,
     "prior_original_byte_controls_reused_through_unchanged_core": true
-  }
+  },
+  "op2_wide": {
+    "timing_pairs": [
+      {
+        "route": "both-1",
+        "fields": [
+          1031,
+          1002
+        ],
+        "missed": [
+          19,
+          3
+        ]
+      },
+      {
+        "route": "both-2",
+        "fields": [
+          1031,
+          1002
+        ],
+        "missed": [
+          19,
+          3
+        ]
+      },
+      {
+        "route": "both-bare",
+        "fields": [
+          1022,
+          996
+        ],
+        "missed": [
+          19,
+          1
+        ]
+      },
+      {
+        "route": "stairs",
+        "fields": [
+          818,
+          814
+        ],
+        "missed": [
+          0,
+          0
+        ]
+      },
+      {
+        "route": "yamo-13",
+        "fields": [
+          736,
+          736
+        ],
+        "missed": [
+          0,
+          0
+        ]
+      }
+    ],
+    "decoder_cases": 512,
+    "decoder_code_and_table_bytes": 586,
+    "rebuilds": 185,
+    "rebuild_lines": [
+      8957,
+      1730
+    ],
+    "fresh_fixtures": 53,
+    "replay_loops": 1200,
+    "controlled_missed": 35,
+    "normal_exe_bytes": 317136,
+    "normal_exe_delta": 724
+  },
+  "op2_pairs": [
+    {
+      "room": 1,
+      "before_fields": 1004,
+      "after_fields": 963,
+      "before_missed": 3,
+      "after_missed": 0
+    },
+    {
+      "room": 1,
+      "before_fields": 1004,
+      "after_fields": 963,
+      "before_missed": 3,
+      "after_missed": 0
+    },
+    {
+      "room": 12,
+      "before_fields": 816,
+      "after_fields": 810,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 13,
+      "before_fields": 736,
+      "after_fields": 724,
+      "before_missed": 0,
+      "after_missed": 0
+    }
+  ],
+  "score_display": [
+    [
+      992,
+      984,
+      13,
+      10
+    ],
+    [
+      993,
+      984,
+      13,
+      10
+    ],
+    [
+      965,
+      966,
+      0,
+      0
+    ],
+    [
+      963,
+      960,
+      0,
+      0
+    ]
+  ]
 }

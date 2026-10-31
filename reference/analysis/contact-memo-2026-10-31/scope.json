@@ -1,0 +1,119 @@
+{
+  "production_changed": false,
+  "inputs": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "6150ad3145c02756035e492f08247b98f5c8cc3394c68f8d0ef942b8c0b06de3"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "amiga/contact_align.s",
+      "sha256": "abbcd8e35685db4a8b958df70bed09d501f747047a640a97aabbd724372b3fb3"
+    },
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561"
+    }
+  ],
+  "generated": [
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/baseline-build.ps1",
+      "sha256": "788cc9a72467265e854f6d7c0b6762123a5321b49ca183caf4a4f038a212236f"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/candidate-build.ps1",
+      "sha256": "3762d3100dc73ee589c1dd865db2810e5ce9b0a774c1046473b886de47824b8f"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed-build.ps1",
+      "sha256": "98c4bfd6156b84a16f8a930135ff093599d35a8702fb49352246d4dd5836c000"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed2-build.ps1",
+      "sha256": "7bad4e07fd3eafa602c99961e69e73532769ab4063b38a654a37f8ed209400b9"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/baseline/main.c",
+      "sha256": "26cc8c3dfc8b503695ee5feeca38041202d7697c8f7649e112b913981277855a"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/baseline/c64_rooms.c",
+      "sha256": "15399cdadb49148538b9f2efb5ac03991f293675dba9e8f60c306bbf322c65d9"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/baseline/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/baseline/contact_align_memo.s",
+      "sha256": "2e5b0ac2225547e4eb4ce5727de3a0c56700cfdacb71f3bf289db8233c3ce0ae"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/candidate/main.c",
+      "sha256": "26cc8c3dfc8b503695ee5feeca38041202d7697c8f7649e112b913981277855a"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/candidate/c64_rooms.c",
+      "sha256": "d9996519cfbb1f70026124caf7489e0ef8a59603e6f976beabc9ce99dc923a47"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/candidate/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/candidate/contact_align_memo.s",
+      "sha256": "2e5b0ac2225547e4eb4ce5727de3a0c56700cfdacb71f3bf289db8233c3ce0ae"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed/main.c",
+      "sha256": "26cc8c3dfc8b503695ee5feeca38041202d7697c8f7649e112b913981277855a"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed/c64_rooms.c",
+      "sha256": "5d174cce1b30283c7400ad4ded2ab4954f2fef3337678322c796be239aac204c"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed/contact_align_memo.s",
+      "sha256": "2e5b0ac2225547e4eb4ce5727de3a0c56700cfdacb71f3bf289db8233c3ce0ae"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed2/main.c",
+      "sha256": "26cc8c3dfc8b503695ee5feeca38041202d7697c8f7649e112b913981277855a"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed2/c64_rooms.c",
+      "sha256": "2730a51c83dddd434e563114c00672498ef2545a8c4a8a27ada7ebb3e667b1b5"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed2/c64_actor_programs.h",
+      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+    },
+    {
+      "path": "reference/analysis/contact-memo-2026-10-31/hashed2/contact_align_memo.s",
+      "sha256": "2e5b0ac2225547e4eb4ce5727de3a0c56700cfdacb71f3bf289db8233c3ce0ae"
+    }
+  ],
+  "cache_bytes": {
+    "baseline": 0,
+    "candidate": 720,
+    "hashed": 3840,
+    "hashed2": 3840
+  },
+  "chip_bytes": 0,
+  "scope": "Exact96-byte validation, same pointer/phase/offset, nonalias even source only; replay exact written output range. All other paths use original native align. No new service or changed C64 rule."
+}

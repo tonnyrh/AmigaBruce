@@ -1,0 +1,153 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "normal_sha256": "e76c00f2a83b2871d85e7296e99b0f440f24debb5d9abf15311e3f8cbe17cd30",
+  "production_inputs": {
+    "core/c64_rooms.c": "cc42bc0a838e9835b8ee86e87dfddcfbd2ef408503c9765777a66b2d7f71aee1",
+    "core/c64_actor_programs.h": "205b67709c584f4322db69b6ec5316ae21c488a618238b8e384a1725db96a4e1",
+    "amiga/main.c": "1b8c70d6ff54e6f1eb622097c3f6a7159f0fb77226bde65490f6c097a4ce159b",
+    "tools/build_light_op0_probe.py": "7a10e7b29c66d71a624a3a06f146071cdc6d4669fe49fe3c4bc7915877fdc078",
+    "amiga-build.ps1": "b93d49050a737545cb8f0d5fdc41e89e98313873bdaab8eefa3d8c02efe4aeff"
+  },
+  "prior_run_fields": [
+    963,
+    963
+  ],
+  "fields": {
+    "matched-control": 972,
+    "timed2": 981,
+    "repeat-timed": 985,
+    "matched-sparse": 975,
+    "keys240": 963
+  },
+  "contact": [
+    {
+      "run": "timed2",
+      "fields": 981,
+      "calls": 240,
+      "checkpoints": 3559,
+      "gross_exclusive_lines_per_call": 276.74,
+      "estimated_exclusive_lines_per_call": 264.63,
+      "service_window_lines_per_call": 118.95,
+      "actor_work_before_correction": [
+        92.32,
+        88.85,
+        94.1
+      ]
+    },
+    {
+      "run": "repeat-timed",
+      "fields": 985,
+      "calls": 240,
+      "checkpoints": 3559,
+      "gross_exclusive_lines_per_call": 276.6,
+      "estimated_exclusive_lines_per_call": 264.73,
+      "service_window_lines_per_call": 119.74,
+      "actor_work_before_correction": [
+        92.25,
+        88.89,
+        94.0
+      ]
+    },
+    {
+      "run": "matched-sparse",
+      "fields": 975,
+      "calls": 30,
+      "checkpoints": 446,
+      "gross_exclusive_lines_per_call": 276.43,
+      "estimated_exclusive_lines_per_call": 264.41,
+      "service_window_lines_per_call": 116.37,
+      "actor_work_before_correction": [
+        92.33,
+        89.13,
+        93.57
+      ]
+    }
+  ],
+  "isolated_replays": [
+    {
+      "warmup": 240,
+      "services": 15,
+      "source_instructions": 8408,
+      "native_lines_per_call": 259.11,
+      "recorded_lines_per_call": 125.66,
+      "difference_percent": 51.5,
+      "tape_bytes": 1226
+    },
+    {
+      "warmup": 400,
+      "services": 15,
+      "source_instructions": 8570,
+      "native_lines_per_call": 258.52,
+      "recorded_lines_per_call": 129.12,
+      "difference_percent": 50.05,
+      "tape_bytes": 1245
+    }
+  ],
+  "actor_key_upper_bounds": [
+    {
+      "actor": 0,
+      "active": 240,
+      "distinct": 1,
+      "consecutive_repeats": 239,
+      "different_outputs_same_key": 0
+    },
+    {
+      "actor": 1,
+      "active": 240,
+      "distinct": 136,
+      "consecutive_repeats": 103,
+      "different_outputs_same_key": 0
+    },
+    {
+      "actor": 2,
+      "active": 240,
+      "distinct": 4,
+      "consecutive_repeats": 221,
+      "different_outputs_same_key": 0
+    }
+  ],
+  "raw_sha256": {
+    "actor-keys.bin": "93af5021e9eea8c5e0db6353e2aeb7dc2819b478e22e912fd9babc76cb91270c",
+    "keys240.txt": "a09ac0d655c5cf1fba0b699f80b0b3d4fa682d0ac863b8bff398294f10ef5532",
+    "matched-control.txt": "f8c28a6dfd8c097d31504ec5cff73b771943d31e44615294e41af7ee2e58ad38",
+    "matched-sparse.txt": "aa205e25ae5e4f8ee02b4a0e4aa32a3d532d62807eb2990c90256477178ae302",
+    "repeat-timed.txt": "0fa9aa24dbf09792beb9994c520208e850da6d6bd24423a90ac779418631d91b",
+    "replay240.txt": "5599d346d350652f1f3a0a276ecf9369f0ca0bdbdab1e9365a3d754980550544",
+    "replay400.txt": "5f815c50f6f6a2f7d8d0478ca89fa8e64036fd3088ed2bc600fbcde0959380df",
+    "state240.json": "4ac70c20d98848b4704932505adb27ad24303f7c435c36ceac46fca8b3de7e2f",
+    "state240.txt": "be55386bc110f74bea30b231f2f8d81e3be9063d7a39b7007fbc702a7edeeaa7",
+    "state400.json": "b6c412fc73cb856f56cb2361482465505fd163140d0b3ce2ba896c499ec4677d",
+    "state400.txt": "934ed3912d62ee06dcabb33da712ed260479be7063d8830edd82515bb132e1f1",
+    "timed2.txt": "4475af2049e995b0051d47831bd5753b76a74ae5340ac52b3b32997ebbf0f6b6"
+  },
+  "natural_playthrough": false,
+  "production_change": false,
+  "probe_binaries": {
+    "matched-control": "ad4d4e9d9e439b3ca8903700cec3c9e1ddc264673beed016632ee6a4fbfb6466",
+    "timed2": "ad4d4e9d9e439b3ca8903700cec3c9e1ddc264673beed016632ee6a4fbfb6466",
+    "repeat-timed": "ad4d4e9d9e439b3ca8903700cec3c9e1ddc264673beed016632ee6a4fbfb6466",
+    "matched-sparse": "ad4d4e9d9e439b3ca8903700cec3c9e1ddc264673beed016632ee6a4fbfb6466",
+    "state240": "1623c1f558132b91d8df26ba3ce6f0054e592db0632c455322bfc48d0a192cce",
+    "state400": "ad4d4e9d9e439b3ca8903700cec3c9e1ddc264673beed016632ee6a4fbfb6466",
+    "replay240": "615a93084a77fa81febca75a32f9232ffae30cb4cac45b6b9ed483a976f7ad57",
+    "replay400": "615a93084a77fa81febca75a32f9232ffae30cb4cac45b6b9ed483a976f7ad57",
+    "keys240": "b7da03979086aeab26ced91cac86e223ba32b71ace8aff5cc8611b53cb53475e"
+  },
+  "native_reference_helpers": {
+    "source_contact_driver": {
+      "size": 840,
+      "code_sha256": "30bb0ec188eba2669b02426b41da100354f186241a1c04364b49bda48442e668",
+      "relocation_sha256": "9f7931a19e0a1fd6222fb94769d2e6e2c9bd504224328c9536fec14d4c89edb7"
+    },
+    "source_contact_rows_inner": {
+      "size": 1246,
+      "code_sha256": "69cb2a2eb235668b82a92d499a341ee80c8c614f4e686f3d9913f91c558f43fd",
+      "relocation_sha256": "081b5adacebe9d308c0deabf88d6a4a74a33baccb59409f2180961fb9be5c423"
+    },
+    "source_contact_pointers": {
+      "size": 98,
+      "code_sha256": "5a5aae57eb711ea054d40efa23b376c4ace824a7d9c01fe1a1c358eeacdf29c2",
+      "relocation_sha256": "119c96d838f4c09c86239eb166486ad0c46f1e699beeebc032cc540c15b06015"
+    }
+  }
+}

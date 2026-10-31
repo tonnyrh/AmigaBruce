@@ -30,10 +30,23 @@ def main():
             report.update(status='loader_display_corrected_realtime_open',loader_blank=scoped['loader_blank'],immediate_parent_history=item('reference/analysis/screen-corruption-2026-10-30/parent/reference/validation/source-optimization.json'))
         if 'contact_unroll' in scoped:
             report.update(date='2026-10-31',status='measured_contact_alignment_unroll_realtime_open',contact_unroll=scoped['contact_unroll'],immediate_parent_history=item('reference/analysis/contact-unroll-2026-10-31/parent/reference/validation/source-optimization.json'))
+        if 'op2_wide' in scoped:
+            report.update(date=scoped['date'],status='measured_wide_vic_decode_realtime_open',op2_wide=scoped['op2_wide'],immediate_parent_history=item('reference/analysis/op2-field-2026-10-31/parent/reference/validation/source-optimization.json'))
+        if 'op2_pairs' in scoped:
+            report.update(status='measured_vic_pair_overlap_realtime_open',op2_pairs=scoped['op2_pairs'],immediate_parent_history=item('reference/analysis/op2-vic-pairs-2026-10-31/previous-delivery.json'))
+        if 'score_display' in scoped:
+            report.update(status='measured_score_display_realtime_open',score_display=scoped['score_display'],immediate_parent_history=item('reference/analysis/op-score-2026-10-31/previous-delivery.json'))
         target='reference/validation/source-optimization.json'
         if a.record:(ROOT/target).write_text(json.dumps(report,indent=2)+'\n')
         else:assert read(target)==report
-        print('PASS compact backend: repeated target controls and memory gain; real-time acceptance remains open')
+        if 'score_display' in scoped:
+            print('PASS score display, repeated PAL timing and Paula controls; real-time acceptance remains open')
+        elif 'op2_pairs' in scoped:
+            print('PASS VIC pair overlap, repeated PAL timing and audio controls; real-time acceptance remains open')
+        elif 'op2_wide' in scoped:
+            print('PASS OP2 VIC decode, repeated PAL timing and audio controls; real-time acceptance remains open')
+        else:
+            print('PASS compact backend: repeated target controls and memory gain; real-time acceptance remains open')
         return
     verify()
     from verify_presentation_experiments import verify as verify_presentation

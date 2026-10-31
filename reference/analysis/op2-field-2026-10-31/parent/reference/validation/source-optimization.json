@@ -1,0 +1,292 @@
+{
+  "date": "2026-10-31",
+  "status": "measured_contact_alignment_unroll_realtime_open",
+  "converted_jsrs": 444,
+  "pairs": [
+    {
+      "before_fields": 9044,
+      "after_fields": 8965,
+      "before_missed": 131,
+      "after_missed": 126,
+      "slow_gain": 13248
+    },
+    {
+      "before_fields": 9046,
+      "after_fields": 8956,
+      "before_missed": 127,
+      "after_missed": 121,
+      "slow_gain": 13248
+    }
+  ],
+  "native_controls": 53,
+  "reference_controls": 710,
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "bc37ad112d3bb47825adea9e1262e1ef8cc11503e3f3b47800d5a783d275b452"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "6855aaff41786c486520d9fbc4e4dcb3038afb9d19acab4bce6dbf304c4ba613"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561"
+    }
+  ],
+  "realtime_accepted": false,
+  "natural_playthrough": false,
+  "full_stack_verified": false,
+  "prior_stage_history": {
+    "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-optimization.json",
+    "sha256": "bc9ec5c92d2f2ed8f87d859277e4a0b6c5f905457f40a4c0294ac5590768337e"
+  },
+  "artifacts": [
+    {
+      "path": "reference/validation/compact-actor-delivery.json",
+      "sha256": "f79adac2cd89654c55c74fd5fcf19d2170768971a30d8db9fa13c5c14e19f677"
+    },
+    {
+      "path": "reference/validation/source-world-delivery.json",
+      "sha256": "566baeca46df42b244ba97f3d268392b5951cadac0f0ccd9a72daa8410adb0da"
+    },
+    {
+      "path": "tools/verify_source_optimization.py",
+      "sha256": "dff7388316c3cefdb8009c6f10a795fc933a356e3a4003958389b21b3755788c"
+    },
+    {
+      "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-optimization.json",
+      "sha256": "bc9ec5c92d2f2ed8f87d859277e4a0b6c5f905457f40a4c0294ac5590768337e"
+    }
+  ],
+  "audio_boundary": {
+    "pairs": {
+      "r01": [
+        {
+          "fields": 1414,
+          "missed": 6,
+          "source_steps": 360
+        },
+        {
+          "fields": 1423,
+          "missed": 0,
+          "source_steps": 360
+        }
+      ],
+      "tour": [
+        {
+          "fields": 8892,
+          "missed": 135,
+          "source_steps": 2400
+        },
+        {
+          "fields": 8972,
+          "missed": 9,
+          "source_steps": 2400
+        }
+      ]
+    },
+    "method": "Existing audio service polled after complete field calls; same game-field count; SID guards/order/data unchanged"
+  },
+  "immediate_parent_history": {
+    "path": "reference/analysis/contact-unroll-2026-10-31/parent/reference/validation/source-optimization.json",
+    "sha256": "70477f1d9d9d93008d13aa3e3bebc2d276b5468c13c6f4498b1aaa6db4a73b7a"
+  },
+  "loader_blank": {
+    "source_disable": "$09BC-$09C1",
+    "source_enable": "$0B33 -> $50DB-$50E5",
+    "normal_section_deltas": {
+      ".text": 98,
+      ".rodata": 0,
+      ".data": 0,
+      ".bss": 0
+    },
+    "gameplay_core_unchanged": true,
+    "prior_host_engine_controls_reused_as_historical": true,
+    "fresh_native_controls": 53,
+    "fresh_native_loops": 1200
+  },
+  "contact_unroll": {
+    "selected": {
+      "variant": "candidate-compact",
+      "label": "contact-unroll-compact-r01",
+      "pal_fields": 1410,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "kernel_bytes": 642,
+      "stationary": [
+        [
+          1159,
+          4155,
+          3056,
+          0,
+          3
+        ],
+        [
+          1379,
+          8282,
+          5854,
+          0,
+          15
+        ],
+        [
+          1174,
+          7925,
+          4481,
+          0,
+          19
+        ],
+        [
+          1393,
+          12049,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4687,
+          3057,
+          0,
+          3
+        ],
+        [
+          1378,
+          9124,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9080,
+          4483,
+          0,
+          19
+        ],
+        [
+          1490,
+          13516,
+          7283,
+          0,
+          31
+        ]
+      ],
+      "untouched_kernel_timing_deltas": [
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 1,
+          "image": -3
+        },
+        {
+          "field": -1,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 1,
+          "image": 0
+        }
+      ]
+    },
+    "baseline": {
+      "variant": "baseline",
+      "label": "contact-unroll-baseline-r01",
+      "pal_fields": 1423,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "kernel_bytes": 346,
+      "stationary": [
+        [
+          1159,
+          4308,
+          3055,
+          0,
+          3
+        ],
+        [
+          1379,
+          8583,
+          5853,
+          0,
+          15
+        ],
+        [
+          1173,
+          8230,
+          4484,
+          0,
+          19
+        ],
+        [
+          1394,
+          12505,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4839,
+          3056,
+          0,
+          3
+        ],
+        [
+          1378,
+          9424,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9387,
+          4483,
+          0,
+          19
+        ],
+        [
+          1489,
+          13971,
+          7283,
+          0,
+          31
+        ]
+      ]
+    },
+    "normal_section_deltas": {
+      ".text": 296,
+      ".rodata": 0,
+      ".data": 0,
+      ".bss": 0
+    },
+    "source_rule_changed": false,
+    "game_main_unchanged": true,
+    "fresh_native_controls": 53,
+    "fresh_native_loops": 1200,
+    "prior_original_byte_controls_reused_through_unchanged_core": true
+  }
+}

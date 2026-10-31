@@ -1,0 +1,557 @@
+{
+  "status": "moving_audio_loss_traced_checkpoint_trial_not_promoted",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "trials": {
+    "move-control1": {
+      "fields": 985,
+      "ticks": 973,
+      "missed": 12
+    },
+    "move-control2": {
+      "fields": 985,
+      "ticks": 973,
+      "missed": 12
+    },
+    "sites-move": {
+      "fields": 1102,
+      "ticks": 1089,
+      "missed": 13
+    },
+    "timed-move1": {
+      "fields": 1297,
+      "ticks": 1282,
+      "missed": 15
+    },
+    "timed-move2": {
+      "fields": 1284,
+      "ticks": 1271,
+      "missed": 13
+    },
+    "timed-still": {
+      "fields": 1236,
+      "ticks": 1236,
+      "missed": 0
+    },
+    "move-focus": {
+      "fields": 988,
+      "ticks": 974,
+      "missed": 14
+    },
+    "move-trial1": {
+      "fields": 989,
+      "ticks": 989,
+      "missed": 0
+    },
+    "move-trial2": {
+      "fields": 989,
+      "ticks": 989,
+      "missed": 0
+    },
+    "still-trial": {
+      "fields": 964,
+      "ticks": 964,
+      "missed": 0
+    }
+  },
+  "traces": {
+    "sites-move": {
+      "pal_fields": 1102,
+      "missed": 13,
+      "polls": 27919,
+      "timed": false,
+      "events": [
+        {
+          "step": 168,
+          "field": 755,
+          "gap": 8,
+          "missed": 7,
+          "previous_poll": "game_entry/contact_row",
+          "previous_gap": 0,
+          "previous_phase": 2,
+          "last_tick": "game_entry/contact_row",
+          "last_tick_phase": 2,
+          "late_poll": "game_entry/source_sprite",
+          "previous_poll_work": {
+            "world_step": null,
+            "contact": null,
+            "objects": null,
+            "combat": null,
+            "actors": null,
+            "sprites": null
+          },
+          "last_tick_work": {
+            "sound": null,
+            "game_field": null,
+            "irq_prefix": null,
+            "irq_input_tail": null,
+            "vic": null,
+            "world_step": null,
+            "contact": null,
+            "objects": null,
+            "combat": null,
+            "actors": null,
+            "sprites": null
+          }
+        },
+        {
+          "step": 207,
+          "field": 951,
+          "gap": 7,
+          "missed": 6,
+          "previous_poll": "post_field/contact_row",
+          "previous_gap": 0,
+          "previous_phase": 2,
+          "last_tick": "game_entry/contact_row",
+          "last_tick_phase": 2,
+          "late_poll": "game_entry/source_sprite",
+          "previous_poll_work": {
+            "world_step": null,
+            "contact": null,
+            "objects": null,
+            "combat": null,
+            "actors": null,
+            "sprites": null
+          },
+          "last_tick_work": {
+            "sound": null,
+            "game_field": null,
+            "irq_prefix": null,
+            "irq_input_tail": null,
+            "vic": null,
+            "world_step": null,
+            "contact": null,
+            "objects": null,
+            "combat": null,
+            "actors": null,
+            "sprites": null
+          }
+        }
+      ]
+    },
+    "timed-move1": {
+      "pal_fields": 1297,
+      "missed": 15,
+      "polls": 18932,
+      "timed": true,
+      "events": [
+        {
+          "step": 71,
+          "field": 381,
+          "gap": 2,
+          "missed": 1,
+          "previous_poll": "blitter/outer",
+          "previous_gap": 0,
+          "previous_phase": 6,
+          "last_tick": "post_step/outer",
+          "last_tick_phase": 3,
+          "late_poll": "blitter/outer",
+          "previous_poll_work": {
+            "other": 12,
+            "fighters": 3,
+            "health": 9,
+            "score": 319
+          },
+          "previous_poll_lines": 343,
+          "last_tick_work": {
+            "other": 128,
+            "sound": 17,
+            "prepare_paint": 3,
+            "patch_background": 20,
+            "restore": 12,
+            "animate": 3,
+            "projectiles": 4,
+            "fighters": 62,
+            "health": 9,
+            "score": 319
+          },
+          "last_tick_lines": 577
+        },
+        {
+          "step": 168,
+          "field": 894,
+          "gap": 7,
+          "missed": 6,
+          "previous_poll": "game_entry/contact_row",
+          "previous_gap": 0,
+          "previous_phase": 2,
+          "last_tick": "game_entry/contact_driver",
+          "last_tick_phase": 2,
+          "late_poll": "game_entry/source_sprite",
+          "previous_poll_work": {
+            "world_step": 42,
+            "contact": 14,
+            "objects": 91,
+            "combat": 2024,
+            "actors": 86,
+            "sprites": 4
+          },
+          "previous_poll_lines": 2261,
+          "last_tick_work": {
+            "sound": 17,
+            "game_field": 11,
+            "irq_prefix": 8,
+            "irq_input_tail": 6,
+            "vic": 14,
+            "world_step": 42,
+            "contact": 122,
+            "objects": 91,
+            "combat": 2024,
+            "actors": 86,
+            "sprites": 4
+          },
+          "last_tick_lines": 2425
+        },
+        {
+          "step": 169,
+          "field": 906,
+          "gap": 2,
+          "missed": 1,
+          "previous_poll": "blitter/outer",
+          "previous_gap": 0,
+          "previous_phase": 6,
+          "last_tick": "post_step/outer",
+          "last_tick_phase": 3,
+          "late_poll": "blitter/outer",
+          "previous_poll_work": {
+            "other": 11,
+            "fighters": 4,
+            "health": 9,
+            "score": 313
+          },
+          "previous_poll_lines": 337,
+          "last_tick_work": {
+            "other": 121,
+            "sound": 19,
+            "prepare_paint": 3,
+            "restore": 13,
+            "animate": 3,
+            "projectiles": 4,
+            "fighters": 59,
+            "health": 9,
+            "score": 313
+          },
+          "last_tick_lines": 544
+        },
+        {
+          "step": 207,
+          "field": 1120,
+          "gap": 7,
+          "missed": 6,
+          "previous_poll": "game_entry/contact_row",
+          "previous_gap": 0,
+          "previous_phase": 2,
+          "last_tick": "game_entry/contact_row",
+          "last_tick_phase": 2,
+          "late_poll": "game_entry/source_sprite",
+          "previous_poll_work": {
+            "world_step": 41,
+            "contact": 14,
+            "objects": 91,
+            "combat": 2038,
+            "actors": 86,
+            "sprites": 4
+          },
+          "previous_poll_lines": 2274,
+          "last_tick_work": {
+            "sound": 17,
+            "game_field": 11,
+            "irq_prefix": 8,
+            "irq_input_tail": 6,
+            "vic": 14,
+            "world_step": 41,
+            "contact": 137,
+            "objects": 91,
+            "combat": 2038,
+            "actors": 86,
+            "sprites": 4
+          },
+          "last_tick_lines": 2453
+        },
+        {
+          "step": 207,
+          "field": 1125,
+          "gap": 2,
+          "missed": 1,
+          "previous_poll": "blitter/outer",
+          "previous_gap": 0,
+          "previous_phase": 6,
+          "last_tick": "post_step/outer",
+          "last_tick_phase": 3,
+          "late_poll": "blitter/outer",
+          "previous_poll_work": {
+            "other": 12,
+            "fighters": 4,
+            "health": 9,
+            "score": 303
+          },
+          "previous_poll_lines": 328,
+          "last_tick_work": {
+            "other": 122,
+            "sound": 24,
+            "prepare_paint": 3,
+            "patch_background": 19,
+            "restore": 83,
+            "animate": 3,
+            "projectiles": 5,
+            "fighters": 58,
+            "health": 9,
+            "score": 303
+          },
+          "last_tick_lines": 629
+        }
+      ]
+    },
+    "timed-move2": {
+      "pal_fields": 1284,
+      "missed": 13,
+      "polls": 18193,
+      "timed": true,
+      "events": [
+        {
+          "step": 71,
+          "field": 381,
+          "gap": 2,
+          "missed": 1,
+          "previous_poll": "blitter/outer",
+          "previous_gap": 0,
+          "previous_phase": 6,
+          "last_tick": "post_step/outer",
+          "last_tick_phase": 3,
+          "late_poll": "blitter/outer",
+          "previous_poll_work": {
+            "other": 13,
+            "fighters": 3,
+            "health": 9,
+            "score": 318
+          },
+          "previous_poll_lines": 343,
+          "last_tick_work": {
+            "other": 129,
+            "sound": 18,
+            "prepare_paint": 3,
+            "patch_background": 19,
+            "restore": 13,
+            "animate": 3,
+            "projectiles": 4,
+            "fighters": 61,
+            "health": 9,
+            "score": 318
+          },
+          "last_tick_lines": 577
+        },
+        {
+          "step": 168,
+          "field": 896,
+          "gap": 7,
+          "missed": 6,
+          "previous_poll": "game_entry/contact_row",
+          "previous_gap": 0,
+          "previous_phase": 2,
+          "last_tick": "game_entry/contact_row",
+          "last_tick_phase": 2,
+          "late_poll": "game_entry/source_sprite",
+          "previous_poll_work": {
+            "world_step": 42,
+            "contact": 14,
+            "objects": 90,
+            "combat": 2024,
+            "actors": 86,
+            "sprites": 4
+          },
+          "previous_poll_lines": 2260,
+          "last_tick_work": {
+            "sound": 17,
+            "game_field": 11,
+            "irq_prefix": 8,
+            "irq_input_tail": 6,
+            "vic": 14,
+            "world_step": 42,
+            "contact": 76,
+            "objects": 90,
+            "combat": 2024,
+            "actors": 86,
+            "sprites": 4
+          },
+          "last_tick_lines": 2378
+        },
+        {
+          "step": 207,
+          "field": 1113,
+          "gap": 7,
+          "missed": 6,
+          "previous_poll": "game_entry/contact_row",
+          "previous_gap": 0,
+          "previous_phase": 2,
+          "last_tick": "game_entry/contact_row",
+          "last_tick_phase": 2,
+          "late_poll": "game_entry/source_sprite",
+          "previous_poll_work": {
+            "world_step": 42,
+            "contact": 14,
+            "objects": 90,
+            "combat": 2038,
+            "actors": 85,
+            "sprites": 5
+          },
+          "previous_poll_lines": 2274,
+          "last_tick_work": {
+            "sound": 17,
+            "game_field": 12,
+            "irq_prefix": 8,
+            "irq_input_tail": 5,
+            "vic": 14,
+            "world_step": 42,
+            "contact": 57,
+            "objects": 90,
+            "combat": 2038,
+            "actors": 85,
+            "sprites": 5
+          },
+          "last_tick_lines": 2373
+        }
+      ]
+    },
+    "timed-still": {
+      "pal_fields": 1236,
+      "missed": 0,
+      "polls": 19865,
+      "timed": true,
+      "events": []
+    }
+  },
+  "focused_combat": [
+    {
+      "step": 168,
+      "combat_lines": 2262,
+      "awards": 53,
+      "award_lines": 2076,
+      "decimal_lines": 480,
+      "back_edges": 26,
+      "peak_award_lines": 40,
+      "last_actor": 0,
+      "score": 6975
+    },
+    {
+      "step": 207,
+      "combat_lines": 2274,
+      "awards": 53,
+      "award_lines": 2073,
+      "decimal_lines": 484,
+      "back_edges": 26,
+      "peak_award_lines": 40,
+      "last_actor": 0,
+      "score": 13525
+    }
+  ],
+  "focused_losses": [
+    {
+      "step": 168,
+      "gap": 8,
+      "phase": 2
+    },
+    {
+      "step": 207,
+      "gap": 8,
+      "phase": 2
+    }
+  ],
+  "source_calls": [
+    {
+      "capture": "combat168",
+      "instructions": 40381,
+      "cycles": 151018,
+      "health_before": 2,
+      "health_after": 123,
+      "score_before": 425,
+      "score_after": 6975
+    },
+    {
+      "capture": "combat207",
+      "instructions": 40426,
+      "cycles": 151164,
+      "health_before": 3,
+      "health_after": 124,
+      "score_before": 6975,
+      "score_after": 13525
+    }
+  ],
+  "irq_context": {
+    "cases": 6,
+    "runtime_different_bytes": 38,
+    "contexts_exact_on_68000": 6
+  },
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "e76c00f2a83b2871d85e7296e99b0f440f24debb5d9abf15311e3f8cbe17cd30"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "c7aba601dd28b46da571d0009c97e6689bcb27701233b22402b781054020eb69"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "f03377c4ddbb182690b9cde3d182e91e37037f1a8d7bae1df4f4e7821376f97f"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "e76c00f2a83b2871d85e7296e99b0f440f24debb5d9abf15311e3f8cbe17cd30"
+    }
+  ],
+  "production_changed": false,
+  "natural_playthrough": false,
+  "original_raster_phase_verified": false,
+  "original_edition_verified": false,
+  "raw": {
+    "combat168.json": "cd9c9dfa7b39ac67171f6526be7eba1facf020395f57d1aeb247fb0c64b5effd",
+    "combat207.json": "4c040c240d8f4ab6e4f819e4de57dddc779b8ad2edafb97beaf01a1d09737344",
+    "irq-proof.bin": "67b10a168e1fb44beb80841418d0c324002a351827e2889e933e89d29ed969c2",
+    "irq.json": "da405e60f158b8314dc885bc310cb55a2fe7d86ccb5e87ef288c59145385fd85",
+    "move-control1/op0-light.txt": "91f69bd1562b19f845bc2ac68fd7664aa8d907761f2f8b31322e9961f388ce87",
+    "move-control2/op0-light.txt": "0a943156d078e8832815aebe71060e77004d9e1a25670173426b9d0c4640d92c",
+    "move-focus/focus.bin": "82b65b7ab10d2b5452fd9ce84bb704d72704ea26ef0b3d01b10ea97a21b84b4d",
+    "move-focus/op0-light.txt": "90716a22dbe0339904b7fed52466dc7a96da7e53aedbb79b5714ebb189aa40fd",
+    "move-trial1/op0-light.txt": "4845368617f05dd35e58be24675427b5a6f045b7248234c7acdb63b57615807d",
+    "move-trial2/op0-light.txt": "4be5f6eda6d5b7075d76aeb21160b0778f244bd877a8345229f61444114bff15",
+    "sites-move/op0-light.txt": "a4d6f7acbdf20d41aba948cb7694d332847d28df7aea8f563484afd050ada0cb",
+    "sites-move/op4-audio.bin": "cbae26a0c7c1538434d483a31ed02502ba0cb8d73b41d18f6ee92e96652122d5",
+    "still-trial/op0-light.txt": "cdd5dec4bebf4951a312ce781f19bafff5c226fffa25314b206a16976ab35539",
+    "timed-move1/op0-light.txt": "627a06bdf686108333d50ae30541109859ccef6fdc250f525fcd6b635ef962bd",
+    "timed-move1/op4-audio.bin": "51434923836f549742762240dc7936d5195a9ea4de793845d7c3c4507c9d5e4f",
+    "timed-move2/op0-light.txt": "9a8959008a478541be703308b8508becde95319f8e9843369f1357d3a74ac380",
+    "timed-move2/op4-audio.bin": "b9f3c2f9e80222bbc02e7ab7299a57c3353a5457908d97591ac76f4570a3c068",
+    "timed-still/op0-light.txt": "8c7037e4e691b5ff615243a304da93c85811f2b621f900176fb8e05b32141601",
+    "timed-still/op4-audio.bin": "edfb3feccacf8bd98b92d7269573bd3e2be9e6ce251606c62b1caecb40908bf4"
+  },
+  "inputs": {
+    "audit_combat.py": "88fe67c6c23b9ce9fc914283b02d56177358d6a2ed4be9ef46bafd9e41e6f0ea",
+    "build_irq.ps1": "c88cf43a21ed5004be348c3b8203c50f8e70bbbd71f741e173ae7785c9c89b74",
+    "capture.py": "6728d73d88424f810c7eea370c9f2b1af9e459f16eddf88f766316ccb3d51df2",
+    "decode.py": "9393504c642af56a87e459ed62f64ffcd43392574537e5c184889eff20963bfe",
+    "focus.py": "4000c5938b31885aabd7806cc823271a47e6b4e3ae44ffbb3397118171b6b7a3",
+    "focused.h": "52d909b0b0e7c1a2f2e4f0918d0e232f6706e69a8cf91ecb111300a0864b267c",
+    "irq.py": "85f27fe8ea681c677a3114e69fbdb3334d7fe16db4a4f75b5afdc117840f8cee",
+    "observer.h": "266a00428b0a5607a8930989662fa47e07dc6b26ec75d0ffed124b4a3adecfeb",
+    "probe.py": "0b6aca545625581bde909a6a468d35b3d7b025b7804598c918b8b0c25839b40e",
+    "proof.py": "4149e50a7f25cda198b5c1f28d6c3b952b11192d4254f3b98c37c03a8065edf6",
+    "run.ps1": "1817b55a5c3dfddce0e075cb358712df79b5b25a0e26f0b4be5b3d28dc927b8b",
+    "scope.h": "d7252d8b29993fa7f23b1ac36f48bbeea8750c43da3482204f2e24484c14042a",
+    "trial.py": "20c3e23d420abd2b665d68ef80828420314b1ca3fb1ff34d51645702de7d32c9",
+    "verify.py": "c2b167f790c581e21845a2a3b7770f7f424a4c1a1742d635d49de0e0d44a714b"
+  },
+  "tested_binaries": {
+    "move-control1": "66a6cf07c308161c0b3a8fc54099ff7a597b00948c5dd367508d61224044bd23",
+    "move-control2": "66a6cf07c308161c0b3a8fc54099ff7a597b00948c5dd367508d61224044bd23",
+    "sites-move": "7ab8f2c08650f074eb157e5aae6f801b3ac4c71e48b5b3c9add0ee57a4265f0e",
+    "timed-move1": "02c3aa9e30b7c20c3cd3a6af5f93874fb7d6f32d19c34ad1f714012eb2545015",
+    "timed-move2": "02c3aa9e30b7c20c3cd3a6af5f93874fb7d6f32d19c34ad1f714012eb2545015",
+    "timed-still": "02c3aa9e30b7c20c3cd3a6af5f93874fb7d6f32d19c34ad1f714012eb2545015",
+    "move-focus": "d55a7c0fca53966da0f46df1c9fc4479d54d0eb970d9c258938fe38a1bedb6b1",
+    "move-trial1": "e3f1d291cf4e3e6fcd1c87ffc7f17e212d8c1b4a1a34e254cdd83e030743755f",
+    "move-trial2": "e3f1d291cf4e3e6fcd1c87ffc7f17e212d8c1b4a1a34e254cdd83e030743755f",
+    "still-trial": "e3f1d291cf4e3e6fcd1c87ffc7f17e212d8c1b4a1a34e254cdd83e030743755f",
+    "combat168": "367bb562e56c7d2144d6bc636272266bea5199b609a73813d5efc6e27b2cf783",
+    "combat207": "367bb562e56c7d2144d6bc636272266bea5199b609a73813d5efc6e27b2cf783",
+    "irq-native": "cfa4495d1fb6964de1b1669e9b81e993a19f7fa840da5efa1d00aa098b05adce"
+  }
+}

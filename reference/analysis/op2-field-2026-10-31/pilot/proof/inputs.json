@@ -1,0 +1,12 @@
+{
+  "reference/analysis/op2-field-2026-10-31/pilot/pilot.py": "3684ad54ff0ab062935de4ceb3f1415c3cc6116d3965ce3e2a306d722ae248a0",
+  "reference/analysis/op2-field-2026-10-31/pilot/vic_wide.s": "09a3d26b3a33aa472dd8b6007f243460e30091e014a957575e22b12392b835fb",
+  "reference/analysis/op2-field-2026-10-31/pilot/c64_rooms.c": "f330173ba5d104f26dc8222f7ed2f44aade9df4471097fa0aaf442ea193f96c8",
+  "reference/analysis/op0-light-2026-10-31/light/out/start.o": "902b2c801329fd187bb0db8f1b7590663d4d396542d17e5dbcc0aa3f6721715c",
+  "reference/analysis/op2-field-2026-10-31/pilot/proof/proof.o": "623d5d8aa98572f52d8bd63636d79f2fd541e3a3f3b2067ef39de0d5eda622b7",
+  "reference/analysis/op2-field-2026-10-31/pilot/proof/vic_wide.o": "1c9f94d294c1fe99824ed18698afe3084eb1f76795b2a76fe35c6a2eca23d59a",
+  "reference/analysis/op0-light-2026-10-31/light/out/runtime.o": "f8f98f1a29e2e0bb1d4394c7dddcab8082d50ee2892b7bbedc95cc5e844a381f",
+  "reference/analysis/op2-field-2026-10-31/pilot/proof/bruce_amiga.elf": "a0caa91c8bb5f5ff342823e79186b454a339184ff7556641f4536976fa722868",
+  "reference/analysis/op2-field-2026-10-31/pilot/proof/bruce_amiga.exe": "8dc44f118321b9210e617be6454eec8276bcb6caddf83664fbf039cfbd5f0b32",
+  "reference/analysis/op2-field-2026-10-31/pilot/proof.c": "4eff5b55ab7064bdc026113571d021489fb4a15d7bd2bae0425102b3563223fd"
+}

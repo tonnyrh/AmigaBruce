@@ -1,0 +1,251 @@
+{
+  "status": "pilot_rejected_whole_game_gain_not_repeated",
+  "source": {
+    "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+    "entry": "$537E",
+    "stop": "$53CF after last INY",
+    "cases": 192,
+    "empty_abi_cases": 22,
+    "executed_instructions": 29747,
+    "fixture_sha256": "4abf863d461d6527028479974e27eec5e19dc22e65330381882be7fd26bdb1fe"
+  },
+  "whole_ram_cases": 192,
+  "pairs": [
+    {
+      "parent": "op1-parent-1",
+      "candidate": "both-1",
+      "fields": [
+        1033,
+        1022
+      ],
+      "audio_missed": [
+        19,
+        19
+      ],
+      "work_lines": [
+        279047,
+        276279
+      ],
+      "wait_lines": [
+        42711,
+        42352
+      ]
+    },
+    {
+      "parent": "op1-parent-2",
+      "candidate": "both-2",
+      "fields": [
+        1031,
+        1038
+      ],
+      "audio_missed": [
+        19,
+        19
+      ],
+      "work_lines": [
+        279247,
+        278823
+      ],
+      "wait_lines": [
+        41878,
+        44821
+      ]
+    },
+    {
+      "parent": "op1-parent-stairs",
+      "candidate": "stairs-1",
+      "fields": [
+        818,
+        824
+      ],
+      "audio_missed": [
+        0,
+        0
+      ],
+      "work_lines": [
+        199276,
+        201096
+      ],
+      "wait_lines": [
+        54406,
+        54413
+      ]
+    },
+    {
+      "parent": "op1-parent-yamo13",
+      "candidate": "yamo-13",
+      "fields": [
+        736,
+        736
+      ],
+      "audio_missed": [
+        0,
+        0
+      ],
+      "work_lines": [
+        192997,
+        191409
+      ],
+      "wait_lines": [
+        35819,
+        37350
+      ]
+    }
+  ],
+  "isolated_rows": [
+    {
+      "rows": 1,
+      "mask": "empty",
+      "parent": [
+        369,
+        369
+      ],
+      "candidate": [
+        330,
+        331
+      ],
+      "percent_less": 10.43
+    },
+    {
+      "rows": 4,
+      "mask": "empty",
+      "parent": [
+        626,
+        626
+      ],
+      "candidate": [
+        501,
+        503
+      ],
+      "percent_less": 19.81
+    },
+    {
+      "rows": 8,
+      "mask": "empty",
+      "parent": [
+        968,
+        967
+      ],
+      "candidate": [
+        728,
+        730
+      ],
+      "percent_less": 24.65
+    },
+    {
+      "rows": 1,
+      "mask": "sparse",
+      "parent": [
+        408,
+        409
+      ],
+      "candidate": [
+        369,
+        370
+      ],
+      "percent_less": 9.55
+    },
+    {
+      "rows": 4,
+      "mask": "sparse",
+      "parent": [
+        780,
+        781
+      ],
+      "candidate": [
+        655,
+        656
+      ],
+      "percent_less": 16.02
+    },
+    {
+      "rows": 8,
+      "mask": "sparse",
+      "parent": [
+        1272,
+        1272
+      ],
+      "candidate": [
+        1037,
+        1039
+      ],
+      "percent_less": 18.4
+    },
+    {
+      "rows": 1,
+      "mask": "dense",
+      "parent": [
+        484,
+        485
+      ],
+      "candidate": [
+        446,
+        447
+      ],
+      "percent_less": 7.84
+    },
+    {
+      "rows": 4,
+      "mask": "dense",
+      "parent": [
+        1090,
+        1088
+      ],
+      "candidate": [
+        965,
+        965
+      ],
+      "percent_less": 11.39
+    },
+    {
+      "rows": 8,
+      "mask": "dense",
+      "parent": [
+        1897,
+        1897
+      ],
+      "candidate": [
+        1657,
+        1656
+      ],
+      "percent_less": 12.68
+    }
+  ],
+  "fixture_cases": 53,
+  "fixture_loops": 1200,
+  "fixture_audio_missed": 81,
+  "largest_chip": 52632,
+  "natural_playthrough": false,
+  "realtime_accepted": false,
+  "artifacts": {
+    "reference/analysis/op1-row-walk-2026-10-31/rows.s": "214844c2d5fb994b03636cdecdb02241ef3508c6efbd3f97ee3daa5dba7fcad1",
+    "reference/analysis/op1-row-walk-2026-10-31/contact_rows.s": "ebafa4a67d27f0190d6fd815c81d8aab897057c29a528ddb9640699360ec874b",
+    "reference/analysis/op1-row-walk-2026-10-31/build.py": "327aa7f3012613427760b4c4471825d82a1156e2733a2e400a32dcdbebcbc33a",
+    "reference/analysis/op1-row-walk-2026-10-31/vectors.py": "4df906c1c74b09b3f2808e0b994ae14ff5740f1003639d2b0039baf9a1a92d6f",
+    "reference/analysis/op1-row-walk-2026-10-31/source-controls.json": "f013b039dfa870853e4b59565627bf7075a62ba3dc1a0dd85db84d77855af32e",
+    "reference/analysis/op1-row-walk-2026-10-31/proof.c": "6569ec6de429ffcc97d8bbefb49e625e40d36c30cddfdac144ed4f1fa59933d5",
+    "reference/analysis/op1-row-walk-2026-10-31/micro.c": "223b96c365b0d8f0619a9b6fed8ea8d72012ffb95bea59889bf6a4865cf06613",
+    "reference/analysis/op1-row-walk-2026-10-31/micro-build.py": "924238f50f2f7f11d351fb61d6d7b043df0228e3c8c078cf1d29c46dda5b7ece",
+    "reference/analysis/op1-row-walk-2026-10-31/proof/proof-result.bin": "617ad7a5a5852ad8d01d3e024a52dfeab59ba15edc197fd65bfbcc144f75f33d",
+    "reference/analysis/op1-row-walk-2026-10-31/micro/micro.bin": "ffb91a5840306063a4cf7cc2b175facb1585c8fbf232c3314d415a0742e2ef52",
+    "reference/analysis/op1-row-walk-2026-10-31/fixture/result.json": "8de1df3e5750baa3de967183a8451689150ff153acdbe3f7dce3e30df1477599",
+    "reference/analysis/op1-row-walk-2026-10-31/light/inputs.json": "879e5f7eb21a2390948915d92989ffd40027b639e1bc01e273807b2b8d22c9f4",
+    "reference/analysis/op1-row-walk-2026-10-31/proof/inputs.json": "11a290f0c9d42ba5c368316110eed1b50654602e128dac105f4d2c9abe90f18b",
+    "reference/analysis/op1-row-walk-2026-10-31/run-private.ps1": "f55cc711e41dbc14a92956b65ee2e107100f2d09f1c63b3ff2b0ed2b4b3da7ac",
+    "reference/analysis/op1-row-walk-2026-10-31/test-fixture.ps1": "96ff3b38bd1712d1364d1c22e3a46cb341b8f4165b7bbfb2a80679c7c1b5ecad",
+    "reference/analysis/op1-row-walk-2026-10-31/fixture-build.ps1": "3774924f0f1cd9e85c0b71af88483a4a06128001c22ba4c304ee41a683121e1c",
+    "reference/analysis/op1-row-walk-2026-10-31/run-fixture.ps1": "a4781b2df651e4190f6ad02b5ec548a5ec171d3b5a211639a17eed2fb244e0a4",
+    "reference/analysis/op0-light-2026-10-31/runs/op1-parent-1/identity.json": "fbf622e5787156265a9fa3f8e1ed52fd596a19b5d4afd57f6e67ab948ff1992a",
+    "reference/analysis/op1-row-walk-2026-10-31/runs/both-1/identity.json": "3b4bb9e4a441f97259faf340a73efe5e3693ce3ba6fa9b3ff152abd3f92af9a3",
+    "reference/analysis/op0-light-2026-10-31/runs/op1-parent-2/identity.json": "b7bdcb47fae0e2e9312bdc1be8ee1886192e9601ce3caf21088a6c0195fd6587",
+    "reference/analysis/op1-row-walk-2026-10-31/runs/both-2/identity.json": "2583fc001ac875b13c71789a2d2be5afe4aeabf23a831eb676a1105553ab269e",
+    "reference/analysis/op0-light-2026-10-31/runs/op1-parent-stairs/identity.json": "2125e07956100f6b74f215512fef5d39b49684227668a5daf2bcf68c47b38203",
+    "reference/analysis/op1-row-walk-2026-10-31/runs/stairs-1/identity.json": "e128662744c837bf17621fcb8f95ce65f2e364bc7ca06c2bba5046446bd51548",
+    "reference/analysis/op0-light-2026-10-31/runs/op1-parent-yamo13/identity.json": "7ac2e6a80c2657db1f635d7db9f04418a6c3c4777d5554e4d511d53b0d47f6a2",
+    "reference/analysis/op1-row-walk-2026-10-31/runs/yamo-13/identity.json": "bd4668691b512daacf93b424d3350d648ed071e05241afcdd78816cc370a154a",
+    "tools/test-op1-row-walk.ps1": "d3f75b411e782b6f775b616d8ccf01792d72b5187683b0b23c80edf9f0e6a027",
+    "tools/verify_op1_row_walk.py": "5a63eb5a765442b3fba96b11131c0c2aa56f529786814a153d4f2fde95db26a9",
+    "amiga/contact_rows.s": "da65aed4d2a094e2c88179226413d08d7fea02598d4e5bb335e6903307acf63a",
+    "amiga/out/bruce_amiga.exe": "4229148ac5b324d8d5296594fd1364439a90550577796b913c1d9e6b559fa561"
+  }
+}

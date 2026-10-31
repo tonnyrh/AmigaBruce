@@ -1,0 +1,25 @@
+{
+  "exe_sha256": "7cebe76a11b788927af5677fd13ae3c5c5f2aab295571881c7ac7ffda9c9b4c3",
+  "menu_controls": true,
+  "paused_64k_unchanged": true,
+  "resume": true,
+  "one_player_respawn": true,
+  "two_player_turn": true,
+  "game_over": true,
+  "pause_to_menu": true,
+  "pause_to_os": true,
+  "natural_playthrough": false,
+  "complete_transition_images": [
+    "PLAYER 1",
+    "PLAYER 2",
+    "GAME OVER"
+  ],
+  "adf_sha256": "cdefe291264d5a2b0092450839575d871a39bbdf1a49569257994fa52d96fb19",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "loading_and_menu_exact": true,
+  "host_actor_controls": 3034,
+  "native_source_controls": 53,
+  "native_replay_loops": 1200,
+  "native_largest_free_chip_block": 52632,
+  "real_hardware_tested": false
+}

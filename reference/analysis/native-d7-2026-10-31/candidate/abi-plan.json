@@ -1,0 +1,1728 @@
+{
+  "bl_c64_set_service": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "void",
+      "(",
+      "*",
+      "service",
+      ")",
+      "(",
+      "void",
+      ")"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_set_load_service": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "void",
+      "(",
+      "*",
+      "service",
+      ")",
+      "(",
+      "long",
+      "loading",
+      ")"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_perf_begin": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "slot"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if",
+      "profile_clock"
+    ],
+    "bridge": false
+  },
+  "bl_perf_end": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "slot"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if",
+      "profile_clock"
+    ],
+    "bridge": false
+  },
+  "bl_perf_reset": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "bl_perf_begin",
+      "bl_perf_end",
+      "for",
+      "profile_clock",
+      "sizeof"
+    ],
+    "bridge": false
+  },
+  "bl_perf_value": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "slot",
+      ",",
+      "long",
+      "field"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if",
+      "return"
+    ],
+    "bridge": false
+  },
+  "bl_c64_profile_reset": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for"
+    ],
+    "bridge": false
+  },
+  "bl_c64_profile": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "item"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_profile_add": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "item",
+      ",",
+      "long",
+      "lines"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_set_painter": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "BlC64Painter",
+      "painter"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_set_block_painter": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "BlC64BlockPainter",
+      "painter"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_reuse_reset": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for"
+    ],
+    "bridge": false
+  },
+  "bl_c64_reuse_stat": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "i"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_vic_compare_selftest": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "bl_vic_equal63",
+      "for",
+      "if",
+      "source_vic_repeat_selftest"
+    ],
+    "bridge": false
+  },
+  "bl_c64_contact_kernel_selftest": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": true,
+    "calls": [
+      "bl_c64_actor_registers",
+      "bl_contact_classes4",
+      "bl_contact_rows8",
+      "for",
+      "if",
+      "sizeof",
+      "source_contact_align",
+      "source_contact_align_c",
+      "source_contact_scan_c",
+      "source_contact_summary_c",
+      "source_prepare_selftest",
+      "source_sprite_copy_selftest",
+      "switch"
+    ],
+    "bridge": true
+  },
+  "bl_c64_actor_seed": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_actor_test_call": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "entry",
+      ",",
+      "long",
+      "actor"
+    ],
+    "direct_a": true,
+    "calls": [
+      "actor_code",
+      "flush_glyph_changes",
+      "source_actor_loading_end"
+    ],
+    "bridge": true
+  },
+  "bl_c64_actor_life_pending": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_actor_ram_hash": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for"
+    ],
+    "bridge": false
+  },
+  "bl_c64_actor_return": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_actor_registers": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "unsigned",
+      "char",
+      "*",
+      "out"
+    ],
+    "direct_a": true,
+    "calls": [],
+    "bridge": true
+  },
+  "bl_c64_test_execute": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "entry"
+    ],
+    "direct_a": false,
+    "calls": [
+      "execute",
+      "flush_glyph_changes"
+    ],
+    "bridge": true
+  },
+  "bl_c64_reset": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": true,
+    "calls": [
+      "execute",
+      "for",
+      "seed_actor_memory"
+    ],
+    "bridge": true
+  },
+  "bl_c64_load": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "room"
+    ],
+    "direct_a": false,
+    "calls": [
+      "bl_c64_load_at",
+      "bl_c64_reset",
+      "if"
+    ],
+    "bridge": true
+  },
+  "bl_c64_load_at": {
+    "static": false,
+    "args": 3,
+    "arg_tokens": [
+      "long",
+      "room_arg",
+      ",",
+      "long",
+      "px",
+      ",",
+      "long",
+      "py"
+    ],
+    "direct_a": false,
+    "calls": [
+      "W",
+      "bl_c64_audio_reset",
+      "bl_c64_reset",
+      "d7_load_service",
+      "execute",
+      "for",
+      "if",
+      "index_screen",
+      "prepare_palette"
+    ],
+    "bridge": true
+  },
+  "bl_c64_world_start": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "players",
+      ",",
+      "long",
+      "human_yamo"
+    ],
+    "direct_a": true,
+    "calls": [
+      "actor_code",
+      "bl_c64_reset",
+      "flush_glyph_changes",
+      "for",
+      "if",
+      "source_actor_loading_end"
+    ],
+    "bridge": true
+  },
+  "bl_c64_world_input": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "input",
+      ",",
+      "long",
+      "yamo_input"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_world_ready": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "return"
+    ],
+    "bridge": false
+  },
+  "bl_c64_world_step": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "infinite_lives",
+      ",",
+      "long",
+      "invincible"
+    ],
+    "direct_a": true,
+    "calls": [
+      "NZ",
+      "PERF_BEGIN",
+      "PERF_END",
+      "actor_code",
+      "bl_c64_world_ready",
+      "flush_glyph_changes",
+      "if",
+      "source_actor_loading_end",
+      "while"
+    ],
+    "bridge": true
+  },
+  "bl_c64_world_jump": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "room"
+    ],
+    "direct_a": true,
+    "calls": [
+      "actor_code",
+      "bl_c64_debug_complete_before",
+      "flush_glyph_changes",
+      "for",
+      "if",
+      "source_actor_loading_end"
+    ],
+    "bridge": true
+  },
+  "bl_c64_world_actor": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "actor",
+      ",",
+      "BlC64Actor",
+      "*",
+      "out"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_world_stat": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "index"
+    ],
+    "direct_a": false,
+    "calls": [
+      "return",
+      "switch"
+    ],
+    "bridge": false
+  },
+  "bl_c64_read": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "address"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_test_write": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "address",
+      ",",
+      "long",
+      "value"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if",
+      "reset_contact_masks"
+    ],
+    "bridge": false
+  },
+  "bl_c64_fault": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_room": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_revision": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_screen": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "cell"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_screen_color": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "cell"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_glyph": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "code",
+      ",",
+      "long",
+      "row"
+    ],
+    "direct_a": false,
+    "calls": [
+      "charset"
+    ],
+    "bridge": false
+  },
+  "bl_c64_cell_dirty": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "cell"
+    ],
+    "direct_a": false,
+    "calls": [
+      "return"
+    ],
+    "bridge": false
+  },
+  "bl_c64_clear_dirty": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for",
+      "if",
+      "invalidate_contacts"
+    ],
+    "bridge": false
+  },
+  "bl_c64_tile": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "column",
+      ",",
+      "long",
+      "row"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_attribute": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "column",
+      ",",
+      "long",
+      "row"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_charset_row": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "tile",
+      ",",
+      "long",
+      "row"
+    ],
+    "direct_a": false,
+    "calls": [
+      "charset"
+    ],
+    "bridge": false
+  },
+  "bl_c64_pixel": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "px",
+      ",",
+      "long",
+      "py"
+    ],
+    "direct_a": false,
+    "calls": [
+      "charset",
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_contact": {
+    "static": false,
+    "args": 4,
+    "arg_tokens": [
+      "long",
+      "px_arg",
+      ",",
+      "long",
+      "py_arg",
+      ",",
+      "long",
+      "pose_arg",
+      ",",
+      "long",
+      "body_arg"
+    ],
+    "direct_a": false,
+    "calls": [
+      "PROFILE_END",
+      "PROFILE_START",
+      "constant_mask_slot",
+      "d7_io_service",
+      "for",
+      "if",
+      "invalidate_contacts",
+      "prepare_contact_view"
+    ],
+    "bridge": true
+  },
+  "bl_c64_has_dirty": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_colors": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "py",
+      ",",
+      "unsigned",
+      "char",
+      "*",
+      "out"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for"
+    ],
+    "bridge": false
+  },
+  "bl_c64_planar": {
+    "static": false,
+    "args": 3,
+    "arg_tokens": [
+      "long",
+      "bits",
+      ",",
+      "long",
+      "color",
+      ",",
+      "long",
+      "py"
+    ],
+    "direct_a": false,
+    "calls": [
+      "PLANAR_WORD"
+    ],
+    "bridge": false
+  },
+  "bl_c64_needs_full_paint": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_paint_room": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "unsigned",
+      "char",
+      "*",
+      "planes",
+      ",",
+      "long",
+      "scene_top"
+    ],
+    "direct_a": false,
+    "calls": [
+      "ensure_paint_bank",
+      "for",
+      "paint_cell"
+    ],
+    "bridge": true
+  },
+  "bl_c64_paint_changes": {
+    "static": false,
+    "args": 3,
+    "arg_tokens": [
+      "unsigned",
+      "char",
+      "*",
+      "planes",
+      ",",
+      "long",
+      "scene_top",
+      ",",
+      "unsigned",
+      "short",
+      "*",
+      "count"
+    ],
+    "direct_a": false,
+    "calls": [
+      "charset",
+      "ensure_paint_bank",
+      "for",
+      "glyph_first",
+      "if",
+      "mark_cell",
+      "paint_cell",
+      "release_cell_cache"
+    ],
+    "bridge": true
+  },
+  "bl_c64_build_animation_cache": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "unsigned",
+      "char",
+      "*",
+      "cache",
+      ",",
+      "long",
+      "capacity"
+    ],
+    "direct_a": false,
+    "calls": [
+      "PLANAR_WORD",
+      "W",
+      "animated_code",
+      "animation_bits",
+      "animation_reusable",
+      "charset",
+      "for",
+      "if",
+      "return",
+      "while"
+    ],
+    "bridge": false
+  },
+  "bl_c64_prepare_paint": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "charset",
+      "for",
+      "glyph_first",
+      "if",
+      "mark_cell",
+      "rebuild_animation_fallback"
+    ],
+    "bridge": false
+  },
+  "bl_c64_animation_coverage": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for",
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_paint_animation_frame": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "unsigned",
+      "char",
+      "*",
+      "planes",
+      ",",
+      "long",
+      "scene_top"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for",
+      "if",
+      "paint_animation_rect"
+    ],
+    "bridge": true
+  },
+  "bl_c64_paint_part": {
+    "static": false,
+    "args": 4,
+    "arg_tokens": [
+      "unsigned",
+      "char",
+      "*",
+      "planes",
+      ",",
+      "long",
+      "scene_top",
+      ",",
+      "long",
+      "limit",
+      ",",
+      "unsigned",
+      "short",
+      "*",
+      "count"
+    ],
+    "direct_a": false,
+    "calls": [
+      "charset",
+      "copy_character",
+      "d7_tile_painter",
+      "ensure_paint_bank",
+      "for",
+      "if",
+      "mark_cell",
+      "paint_animation_blocks",
+      "paint_cell",
+      "release_cell_cache",
+      "while"
+    ],
+    "bridge": true
+  },
+  "bl_c64_paint_done": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_part_words": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_part_rows": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_part_priority_words": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_part_priority_rows": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_check_interleaved": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "const",
+      "unsigned",
+      "char",
+      "*",
+      "bitmap",
+      ",",
+      "long",
+      "scene_top"
+    ],
+    "direct_a": false,
+    "calls": [
+      "PLANAR_WORD",
+      "charset",
+      "for",
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_field": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "charset",
+      "if",
+      "source_actor_field"
+    ],
+    "bridge": true
+  },
+  "bl_c64_tick_begin": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "px",
+      ",",
+      "long",
+      "py"
+    ],
+    "direct_a": false,
+    "calls": [
+      "PROFILE_END",
+      "PROFILE_START",
+      "charset",
+      "d7_io_service",
+      "execute",
+      "if"
+    ],
+    "bridge": true
+  },
+  "bl_c64_tick_room": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "PROFILE_END",
+      "PROFILE_START",
+      "W",
+      "execute",
+      "flush_glyph_changes",
+      "if"
+    ],
+    "bridge": true
+  },
+  "bl_c64_tick": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "px",
+      ",",
+      "long",
+      "py"
+    ],
+    "direct_a": false,
+    "calls": [
+      "bl_c64_tick_begin",
+      "bl_c64_tick_room"
+    ],
+    "bridge": true
+  },
+  "bl_c64_changed_rows": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "cell"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_flash_color": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_offsets": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_cell_y": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_remaining": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "room"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_debug_complete_before": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "room"
+    ],
+    "direct_a": false,
+    "calls": [
+      "W",
+      "for",
+      "if",
+      "while"
+    ],
+    "bridge": false
+  },
+  "bl_c64_collected": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "room"
+    ],
+    "direct_a": false,
+    "calls": [
+      "W",
+      "if",
+      "while"
+    ],
+    "bridge": false
+  },
+  "bl_c64_collected_all": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "unsigned",
+      "short",
+      "*",
+      "out"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for",
+      "source_collected_mask"
+    ],
+    "bridge": false
+  },
+  "bl_c64_object_pose": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "const",
+      "BlGame",
+      "*",
+      "g"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if",
+      "object_base_pose",
+      "return"
+    ],
+    "bridge": true
+  },
+  "bl_c64_recovery_pose": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "pose"
+    ],
+    "direct_a": false,
+    "calls": [
+      "return"
+    ],
+    "bridge": false
+  },
+  "bl_c64_collect": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "col",
+      ",",
+      "long",
+      "row"
+    ],
+    "direct_a": false,
+    "calls": [
+      "W",
+      "bl_c64_audio_request",
+      "if",
+      "source_written",
+      "while"
+    ],
+    "bridge": true
+  },
+  "bl_c64_door": {
+    "static": false,
+    "args": 4,
+    "arg_tokens": [
+      "long",
+      "tile",
+      ",",
+      "long",
+      "px",
+      ",",
+      "long",
+      "py",
+      ",",
+      "long",
+      "falling"
+    ],
+    "direct_a": false,
+    "calls": [
+      "execute",
+      "if",
+      "source_transition"
+    ],
+    "bridge": true
+  },
+  "bl_c64_motion": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "const",
+      "BlGame",
+      "*",
+      "g"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_reenter": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "source_transition"
+    ],
+    "bridge": false
+  },
+  "bl_c64_transition": {
+    "static": false,
+    "args": 3,
+    "arg_tokens": [
+      "long",
+      "*",
+      "px",
+      ",",
+      "long",
+      "*",
+      "py",
+      ",",
+      "unsigned",
+      "char",
+      "*",
+      "room"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_object": {
+    "static": false,
+    "args": 3,
+    "arg_tokens": [
+      "long",
+      "tile",
+      ",",
+      "long",
+      "col",
+      ",",
+      "long",
+      "row"
+    ],
+    "direct_a": false,
+    "calls": [
+      "execute",
+      "for",
+      "if"
+    ],
+    "bridge": true
+  },
+  "bl_c64_dead": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_enemy_entry": {
+    "static": false,
+    "args": 4,
+    "arg_tokens": [
+      "long",
+      "actor",
+      ",",
+      "long",
+      "*",
+      "px",
+      ",",
+      "long",
+      "*",
+      "py",
+      ",",
+      "long",
+      "*",
+      "health"
+    ],
+    "direct_a": true,
+    "calls": [
+      "if",
+      "room_code"
+    ],
+    "bridge": true
+  },
+  "bl_c64_spawn_cold_counter": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "actor"
+    ],
+    "direct_a": false,
+    "calls": [
+      "return"
+    ],
+    "bridge": false
+  },
+  "bl_c64_spawn_counter": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "actor"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_set_opponent_mode": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "human_yamo"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_spawn_sync": {
+    "static": false,
+    "args": 6,
+    "arg_tokens": [
+      "long",
+      "actor",
+      ",",
+      "long",
+      "active",
+      ",",
+      "long",
+      "px",
+      ",",
+      "long",
+      "py",
+      ",",
+      "long",
+      "health",
+      ",",
+      "long",
+      "counter"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_spawn_services": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "px",
+      ",",
+      "long",
+      "py"
+    ],
+    "direct_a": true,
+    "calls": [
+      "NZ",
+      "if",
+      "room_code"
+    ],
+    "bridge": true
+  },
+  "bl_c64_spawn_result": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "actor",
+      ",",
+      "BlC64Spawn",
+      "*",
+      "r"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_enemy_remove": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "actor"
+    ],
+    "direct_a": true,
+    "calls": [
+      "bl_c64_spawn_counter",
+      "if",
+      "room_code"
+    ],
+    "bridge": true
+  },
+  "bl_c64_enemy_door": {
+    "static": false,
+    "args": 8,
+    "arg_tokens": [
+      "long",
+      "actor",
+      ",",
+      "long",
+      "px",
+      ",",
+      "long",
+      "py",
+      ",",
+      "long",
+      "falling",
+      ",",
+      "long",
+      "up",
+      ",",
+      "long",
+      "down",
+      ",",
+      "long",
+      "left",
+      ",",
+      "long",
+      "right"
+    ],
+    "direct_a": true,
+    "calls": [
+      "if",
+      "room_code"
+    ],
+    "bridge": true
+  },
+  "bl_c64_enemy_follow": {
+    "static": false,
+    "args": 5,
+    "arg_tokens": [
+      "long",
+      "actor",
+      ",",
+      "long",
+      "active",
+      ",",
+      "long",
+      "px",
+      ",",
+      "long",
+      "py",
+      ",",
+      "long",
+      "health"
+    ],
+    "direct_a": false,
+    "calls": [
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_enemy_entries_clear": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_enemy_hazard": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "actor"
+    ],
+    "direct_a": true,
+    "calls": [
+      "if",
+      "room_code"
+    ],
+    "bridge": true
+  },
+  "bl_c64_clear_death": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_set_lives": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "lives"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_save_progress": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "unsigned",
+      "char",
+      "*",
+      "state"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for"
+    ],
+    "bridge": false
+  },
+  "bl_c64_restore_progress": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "const",
+      "unsigned",
+      "char",
+      "*",
+      "state",
+      ",",
+      "const",
+      "unsigned",
+      "short",
+      "*",
+      "collected"
+    ],
+    "direct_a": false,
+    "calls": [
+      "W",
+      "bl_c64_reset",
+      "for",
+      "if",
+      "while"
+    ],
+    "bridge": true
+  },
+  "bl_c64_projectile": {
+    "static": false,
+    "args": 2,
+    "arg_tokens": [
+      "long",
+      "index",
+      ",",
+      "BlC64Projectile",
+      "*",
+      "sprite"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for",
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_c64_player_sprite_contact": {
+    "static": false,
+    "args": 3,
+    "arg_tokens": [
+      "long",
+      "px",
+      ",",
+      "long",
+      "py",
+      ",",
+      "long",
+      "pose"
+    ],
+    "direct_a": false,
+    "calls": [
+      "bl_c64_projectile",
+      "for",
+      "if"
+    ],
+    "bridge": false
+  },
+  "bl_d7_probe_abi": {
+    "static": false,
+    "args": 8,
+    "arg_tokens": [
+      "long",
+      "p0",
+      ",",
+      "long",
+      "p1",
+      ",",
+      "long",
+      "p2",
+      ",",
+      "long",
+      "p3",
+      ",",
+      "long",
+      "p4",
+      ",",
+      "long",
+      "p5",
+      ",",
+      "long",
+      "p6",
+      ",",
+      "long",
+      "p7"
+    ],
+    "direct_a": true,
+    "calls": [],
+    "bridge": true
+  },
+  "bl_c64_audio_reset": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [
+      "for"
+    ],
+    "bridge": false
+  },
+  "bl_c64_audio_request": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "long",
+      "effect"
+    ],
+    "direct_a": true,
+    "calls": [
+      "if",
+      "source_sound"
+    ],
+    "bridge": true
+  },
+  "bl_c64_audio_frame": {
+    "static": false,
+    "args": 1,
+    "arg_tokens": [
+      "unsigned",
+      "char",
+      "*",
+      "registers"
+    ],
+    "direct_a": false,
+    "calls": [
+      "audio_driver",
+      "for"
+    ],
+    "bridge": false
+  },
+  "bl_c64_audio_faults": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  },
+  "bl_c64_audio_requests": {
+    "static": false,
+    "args": 0,
+    "arg_tokens": [
+      "void"
+    ],
+    "direct_a": false,
+    "calls": [],
+    "bridge": false
+  }
+}
