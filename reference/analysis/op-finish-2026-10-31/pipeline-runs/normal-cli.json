@@ -1,0 +1,76 @@
+{
+  "mode": "cli",
+  "normal_exe_sha256": "1b6e00855e6f8a7482265b2f5af69f4101529335b81eb428513e5923350d743d",
+  "complete_menu": true,
+  "menu_sha256": "1c31ef755fe04c957206e7e484cec859e291842ef58ea3129577f802102e9c22",
+  "layout": [
+    {
+      "section": ".text",
+      "base": 12635016,
+      "bytes": 187688
+    },
+    {
+      "section": ".rodata",
+      "base": 12822720,
+      "bytes": 85536
+    },
+    {
+      "section": ".data",
+      "base": 12908272,
+      "bytes": 9
+    },
+    {
+      "section": ".bss",
+      "base": 12908296,
+      "bytes": 171104
+    }
+  ],
+  "dma": {
+    "background": 233560,
+    "sfx_pcm": 349544,
+    "tile_dma": 127064,
+    "fighter_dma": 274520
+  },
+  "before": {
+    "field": 1646,
+    "steps": 159,
+    "ticks": 485,
+    "misses": 48,
+    "room": 1,
+    "actors": [
+      1,
+      0,
+      65
+    ],
+    "fault": 0
+  },
+  "after": {
+    "field": 7647,
+    "steps": 2120,
+    "ticks": 6487,
+    "misses": 48,
+    "room": 1,
+    "actors": [
+      1,
+      129,
+      65
+    ],
+    "fault": 0
+  },
+  "fields": 6001,
+  "steps": 1961,
+  "misses": 0,
+  "pause_preserved": true,
+  "trellis_entry": [
+    152,
+    196
+  ],
+  "trellis_exit": [
+    152,
+    89
+  ],
+  "joystick_crossings": [
+    2,
+    1
+  ]
+}

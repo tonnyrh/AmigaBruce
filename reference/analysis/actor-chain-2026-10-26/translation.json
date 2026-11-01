@@ -861,8 +861,8 @@
     "version": 1,
     "converted_jsrs": 444,
     "native_capacity": 16,
-    "original_program_sha256": "13d872e3e2821fe8139557ab2cb26d6ac2f703705e4ed49fbe1d759631857bd8",
-    "generated_program_sha256": "6a7c755d9e6c402a072efd34a2750c39d0399f7e072d1a7f3142a8f050a4edee",
+    "original_program_sha256": "0e6325ce884f6fcffd60949648097a573463e5faa0867a8db1a13884d73e42b6",
+    "generated_program_sha256": "8dc1f42aa4877d7963dc5f8705a2e5776149ed0e5707552eee08b1a98bb86de2",
     "source_stack_stores_retained": true,
     "source_return_guards_retained": true,
     "overflow": "Original recursive call and original return/error guards"
@@ -894,7 +894,7 @@
   "generated": [
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "46a58572e0bca4539b296d09dab188ba66e74965deb26668e77ea2f0b33460ed"
+      "sha256": "7875f0f710691ae837116d7cb82cf0f73a92b4a1650e7a78fae8dfcdc9434c2d"
     },
     {
       "path": "core/c64_actor_data.h",

@@ -1,0 +1,10 @@
+{
+  "frozen_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "history_cases": 384,
+  "field_cases": 1664,
+  "bytes_per_case": 65536,
+  "room_tokens": 2056,
+  "room_cells": 8812,
+  "rooms": 20,
+  "unchanged_fallbacks": 32
+}

@@ -36,10 +36,18 @@ def main():
             report.update(status='measured_vic_pair_overlap_realtime_open',op2_pairs=scoped['op2_pairs'],immediate_parent_history=item('reference/analysis/op2-vic-pairs-2026-10-31/previous-delivery.json'))
         if 'score_display' in scoped:
             report.update(status='measured_score_display_realtime_open',score_display=scoped['score_display'],immediate_parent_history=item('reference/analysis/op-score-2026-10-31/previous-delivery.json'))
+        if 'score_decimal' in scoped:
+            report.update(status='measured_score_decimal_realtime_open',score_decimal=scoped['score_decimal'],immediate_parent_history=item('reference/analysis/op-score-decimal-2026-10-31/previous-delivery.json'))
+        if 'op_measured' in scoped:
+            report.update(status='measured_op_room_actor_delivery',op_measured=scoped['op_measured'],immediate_parent_history=item('reference/analysis/op-finish-2026-10-31/previous-delivery.json'))
         target='reference/validation/source-optimization.json'
         if a.record:(ROOT/target).write_text(json.dumps(report,indent=2)+'\n')
         else:assert read(target)==report
-        if 'score_display' in scoped:
+        if 'op_measured' in scoped:
+            print('PASS measured OP source and WinUAE delivery. See the recorded real-time result.')
+        elif 'score_decimal' in scoped:
+            print('PASS decimal conversion, native BCD boundaries and PAL routes; real-time acceptance remains open')
+        elif 'score_display' in scoped:
             print('PASS score display, repeated PAL timing and Paula controls; real-time acceptance remains open')
         elif 'op2_pairs' in scoped:
             print('PASS VIC pair overlap, repeated PAL timing and audio controls; real-time acceptance remains open')

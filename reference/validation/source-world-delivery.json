@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "status": "scoped_score_display_realtime_open",
+  "status": "scoped_op_room_actor_delivery_realtime_open",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "source_controls": 3034,
   "integrated_scenarios": 5,
@@ -33,92 +33,107 @@
   "normal_build": [
     {
       "path": "amiga/out/bruce_amiga.exe",
-      "sha256": "a15faf6e96cc1e6a980253095802e58584fa267dd7a62ad7cbeb97bd34bc5c7e"
+      "sha256": "1b6e00855e6f8a7482265b2f5af69f4101529335b81eb428513e5923350d743d"
     },
     {
       "path": "amiga/out/bruce_amiga.elf",
-      "sha256": "496ca2a6d368e29b133206a538242a354f9d5ee59bf4e94384b4c419110db517"
+      "sha256": "377958e63d7f19573945a0c08ad82fc85925d6e4650bb89bf92c15223bae50da"
     },
     {
       "path": "amiga/out/bruce_amiga.adf",
-      "sha256": "3ac836b0798b9cca8362a6b180e748ea94c7cfc54e3d0801d92295ced2dffa0f"
+      "sha256": "9c4b315370e5e1bf7cd58d7db9961ed43f5e7459e343b0eaa14c2813e0729425"
     },
     {
       "path": ".tmp/amiga-boot/c/start",
-      "sha256": "a15faf6e96cc1e6a980253095802e58584fa267dd7a62ad7cbeb97bd34bc5c7e"
+      "sha256": "1b6e00855e6f8a7482265b2f5af69f4101529335b81eb428513e5923350d743d"
     }
   ],
   "artifacts": [
     {
+      "path": "reference/analysis/op-finish-2026-10-31/pipeline-result.json",
+      "sha256": "15719354ce3900756863f23fec85cc52bb73a0d1b325144b5b8ce6562247a4cb"
+    },
+    {
+      "path": "reference/analysis/op-finish-2026-10-31/previous-delivery.json",
+      "sha256": "7109f7c6400217c31932a9fc37a908024bccb78ad857afa03f90e65835dfbb56"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/pipeline-source20-20261031/identity.json",
+      "sha256": "57a8d41f6210821b07c669d3439813ac9b2d6f5a917fbefb15f9e5a9c8559c11"
+    },
+    {
       "path": "reference/analysis/actor-chain-2026-10-26/report.json",
-      "sha256": "9ee06f7ab6023a9c3ea333d1b54ca986258857f6e723cae13c917ff8eff5915a"
+      "sha256": "fb29a1345f5c1d2845dc2bb4ae1051fa23795d7d32ef5bdd3d442d11301929ee"
     },
     {
       "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
-      "sha256": "52ac8e59cf18ce5d6e6fe4a95dc3ffe50058e72731a158d3fc5704ed944518ad"
+      "sha256": "eba27d221a8740592c83f322d7bbad8f1f5f8420a5e6a55ccaa02bc6623c5e3f"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "e86cea61038ad9c9428d30104ba21d67913fdfa559028f2a0ba49f52f45277a0"
     },
     {
       "path": "reference/validation/source-world-native.json",
-      "sha256": "f36f9e862f61c7236b091ee8c2277681e98693f41d0c6d85233fc7b8460a770b"
+      "sha256": "149e8b7a6ba32d10c1e7fe524babfe8bebbebf8005094cd81c531ec143f65046"
     },
     {
       "path": "reference/validation/source-score-host.json",
-      "sha256": "e48f3681f367ed35c8b614641902cf0e2cf1cc55f50dd06bc868e2ab2fdf9113"
+      "sha256": "5013e14546fc2799c8b176d76395ed2fa8c04d734a41048a0aabfebd2a9ed9c9"
     },
     {
       "path": "reference/validation/source-vic-host.json",
-      "sha256": "e14207b92acb28cc8b5b7abdfa4d8a04536f96068df7ab40bd0ed059409aea50"
+      "sha256": "74f6f95a6e76914163d0d09faee88d0f6c254f225e48db7fb04b3a4883bf1bf8"
     },
     {
-      "path": "reference/analysis/op2-vic-pairs-2026-10-31/measurements.json",
-      "sha256": "6150ea75e799a5373d153a5f11549847da6726af169341e5d990f4577ceed778"
+      "path": "reference/validation/source-audio-host.json",
+      "sha256": "70e8cf18fe3c759066da0e292ba0dec15e71c184f5ee8c3e787fda2784d1b424"
     },
     {
-      "path": "reference/analysis/op-score-2026-10-31/build.json",
-      "sha256": "2bdd29e07164ab3ed89d6e1013006e214a43a9f491841fe43a8d615f1c7865e8"
+      "path": "reference/validation/source-dma-host.json",
+      "sha256": "05087d93ea935714f404439c29b1e3ea96d0056304976536bd453c459e1fe2ee"
     },
     {
-      "path": "reference/analysis/op-score-2026-10-31/measurements.json",
-      "sha256": "0f8f944e024842982d1a1114b347c50091482e45e493dcca87d0fbbe4235700a"
+      "path": "reference/validation/source-contact-host.json",
+      "sha256": "ea9640e144c31341de32e075b44e725094dd17ea5ec52c9baa93c837b5c0e9fd"
     },
     {
-      "path": "reference/analysis/op-score-2026-10-31/previous-delivery.json",
-      "sha256": "21c7bb06b0b9881e44879bc2b94e848ad15b12a9552e57837cdae65997cbc99c"
+      "path": "reference/validation/source-sprite-copy-host.json",
+      "sha256": "3316e7aaad1f82ab957f0c9fd86eb1fb43378f2921c687dfa83ef6961de2d573"
     },
     {
-      "path": "reference/analysis/op-score-2026-10-31/runs/source.json",
-      "sha256": "d7ef3b39e43620f95e7c9d3d4c69263567f122860eab9e19822b50ea07550b56"
+      "path": "reference/validation/source-object-host.json",
+      "sha256": "342e97cca8eba9bbd4d62a95d1f24eb2ff8424cc70547ee706624082a158b7eb"
     },
     {
-      "path": "reference/analysis/op-score-2026-10-31/runs/proof.bin",
-      "sha256": "01251abbff7ee711b66504a49053feadef5082d7a905e4b3484c5433eb7da510"
+      "path": "reference/validation/source-visibility-host.json",
+      "sha256": "0ecd6e1f787e28724655aa8100a2ab85b769e88ac3b862e00cb028bd8eb86740"
     },
     {
-      "path": "reference/analysis/op-score-2026-10-31/measure.py",
-      "sha256": "b28721e126acae96c1d4efd198baafd2c1598ee7bee4c3b6bc465369618f123b"
+      "path": "reference/validation/source-paint-host.json",
+      "sha256": "3e35b49bc79523f4c69c2818b6eb58ee42495e41f033d1960165d4c069b5a719"
     },
     {
-      "path": "tools/verify_score_display_delivery.py",
-      "sha256": "a3315259af671041bc9a372b25a7c193f76b4f86c4f0579f0628b13ae56ae76d"
+      "path": "reference/validation/vic-cache-host.json",
+      "sha256": "59562102f49822f77e82726a464b5a9a708e7b53fed20536560eb3434c14f88a"
     },
     {
-      "path": "reference/analysis/op-score-2026-10-31/boot/cli/report.json",
-      "sha256": "6b05f3f0182ff13cbcccf41191c501757bb866be7435cf2c6d665458b53e3187"
+      "path": "reference/validation/view-mask-host.json",
+      "sha256": "b3efe51af6b5a0994194c1481dbe5d78a4f13df03bfa4540686fefacd468937a"
     },
     {
-      "path": "reference/analysis/op-score-2026-10-31/boot/adf/report.json",
-      "sha256": "6b2103b819d2f8ed9bdda471b715be73876b1094eae7f4b0f2169be12255f8e3"
+      "path": "tools/verify_op_finish.py",
+      "sha256": "87add9faa3bd6c19d1cc12b282d1e06f8e0999d0400c7c99bbd377a491c15eab"
     },
     {
       "path": "reference/validation/compact-actor-delivery.json",
-      "sha256": "effa2b0491e38e9abc20e6561cd1a4c969ab68309d5cc4d58b47469ce5655caf"
+      "sha256": "bfea7631fd2b1ad10698bd5388013a3b54541375d49b45feca374427fd6160d8"
     }
   ],
   "open_gates": [
-    "Verified untouched 1984 edition",
-    "Full PAL real-time cadence and natural IRQ/input phase",
-    "Whole native stack high-water",
-    "Complete natural playthrough and physical A500"
+    "Three PAL fields per ordinary step with both enemies and continuous Paula publication",
+    "Natural C64 IRQ/input phase and complete natural playthrough",
+    "Verified untouched 1984 edition"
   ],
   "audio_boundary": {
     "pairs": {
@@ -468,5 +483,68 @@
       0,
       0
     ]
-  ]
+  ],
+  "score_decimal": [
+    [
+      984,
+      980,
+      10,
+      7
+    ],
+    [
+      984,
+      982,
+      10,
+      7
+    ],
+    [
+      966,
+      961,
+      0,
+      0
+    ],
+    [
+      966,
+      960,
+      0,
+      0
+    ]
+  ],
+  "op_measured": {
+    "final-still": [
+      240,
+      766,
+      0
+    ],
+    "final-move": [
+      240,
+      821,
+      6
+    ],
+    "final-move2": [
+      240,
+      823,
+      6
+    ],
+    "final-stairs": [
+      240,
+      779,
+      0
+    ],
+    "final-yamo": [
+      240,
+      720,
+      0
+    ],
+    "long-release-a": [
+      1833,
+      6000,
+      19
+    ],
+    "long-release-b": [
+      1834,
+      6000,
+      9
+    ]
+  }
 }

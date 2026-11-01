@@ -1721,6 +1721,7 @@ L0ad5:; /* $0AD5 */
 y=0x00;NZ(y);
 goto L0ad7;
 L0ad7:; /* $0AD7 */
+if(source_room_token())goto L0ad7;
 a=m[(unsigned short)(W(0x06)+y)];NZ(a);
 goto L0ad9;
 L0ad9:; /* $0AD9 */
@@ -4143,6 +4144,7 @@ if(native_depth==16){native_id=61;goto actor_native_overflow;}
 native_calls[native_depth++]=61;goto L25e2;
 goto L15bd;
 L15bd:; /* $15BD */
+if(m[0x7f]!=255 || m[0x82]!=127){source_field_timers();goto L169d;}
 a=m[0x4eec];NZ(a);
 goto L15c0;
 L15c0:; /* $15C0 */
@@ -6298,6 +6300,7 @@ L1c77:; /* $1C77 */
 if(z)goto L1c8f;
 goto L1c79;
 L1c79:; /* $1C79 */
+if(!d && x<3){source_shift_history();goto L1c8f;}
 a=0x27;NZ(a);
 goto L1c7b;
 L1c7b:; /* $1C7B */
@@ -9586,6 +9589,7 @@ L258e:; /* $258E */
 a=m[(unsigned short)(0x276d + x)];NZ(a);
 goto L2591;
 L2591:; /* $2591 */
+if(source_image_component(0))goto L25ae;
 m[0x100 + sp--]=0x25;m[0x100 + sp--]=0x93;
 if(native_depth==16){native_id=217;goto actor_native_overflow;}
 native_calls[native_depth++]=217;goto L2704;
@@ -9655,6 +9659,7 @@ L25b7:; /* $25B7 */
 if(n)goto L25d7;
 goto L25b9;
 L25b9:; /* $25B9 */
+if(source_image_component(1))goto L25d7;
 m[0x100 + sp--]=0x25;m[0x100 + sp--]=0xbb;
 if(native_depth==16){native_id=220;goto actor_native_overflow;}
 native_calls[native_depth++]=220;goto L2704;

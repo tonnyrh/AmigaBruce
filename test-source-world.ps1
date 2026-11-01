@@ -59,6 +59,8 @@ try{
     if($run['sprite_copy_cases'] -ne '0'){$failures+='Unexpected separate sprite reference in full fixture image'}
     if($run['vic_repeat_cases'] -ne '0'){$failures+='Unexpected separate VIC repeat reference in full fixture image'}
     if($run['source_world_test'] -ne '1' -or $run['frames'] -ne [string]$TestFrames -or $run['restored_os'] -ne '1'){$failures+='Replay/restore incomplete'}
+    if($run['bad_presents'] -ne '0' -or $run['bad_queue_windows'] -ne '0'){$failures+='Unsafe Copper publication window'}
+    if([int]$run['queued_presents'] -le 0){$failures+='Queue path was not exercised'}
     if([int]$run['chip_largest_loaded'] -lt 49152){$failures+='Chip RAM margin below49152 bytes'}
     if($run['capture_original_hash'] -ne $run['capture_decoded_hash']){$failures+='Capture decode mismatch'}
     if($run['presentation_hold_fields'] -ne '3' -or [int]$run['max_held_image_streak'] -gt 3){$failures+='New presentation starved beyond its decision limit'}

@@ -48,6 +48,7 @@ try{
  }
  Copy-Item -LiteralPath $report -Destination (Join-Path $folder 'native.txt')
  if($run['source_tour_completed'] -ne '20' -or $run['source_tour_error'] -ne '0'){throw 'Source tour did not complete20 rooms'}
+ if($run['bad_presents'] -ne '0' -or $run['bad_queue_windows'] -ne '0'){throw 'Unsafe Copper publication window'}
  if([int]$run['frames'] -ge 6000 -or $run['restored_os'] -ne '1'){throw 'Tour exceeded limit or failed OS restore'}
  foreach($key in @('c64_room_fault','source_audio_faults','source_dma_faults','runtime_arithmetic_errors','vic_compare_errors','contact_kernel_errors')){if($run[$key] -ne '0'){throw "$key=$($run[$key])"}}
  if($run['contact_kernel_cases'] -ne '710' -or $run['sprite_copy_cases'] -ne '256'){throw 'Missing native reference controls'}

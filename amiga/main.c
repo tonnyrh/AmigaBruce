@@ -113,6 +113,7 @@ static ULONG game_field_last;
 static UBYTE game_field_active,game_field_busy,game_field_loading;
 static UBYTE interlude,interlude_painted;
 static void blank_game_display(void);
+static void wait_display_owner(void);
 static void source_game_service(void){
     ULONG now,gap;source_audio_service();
     if(!game_field_active || game_field_busy)return;
@@ -177,6 +178,7 @@ static UWORD *copper[2];
 /* Source $09BC-$09C1 clears DEN before rebuilding a room. Keep both
  * lists blank until present_frame publishes a complete replacement. */
 static void blank_game_display(void){
+    wait_display_owner();
     copper[0][1]=copper[1][1]=0;
     hw->bplcon0=0;
 }
@@ -311,10 +313,16 @@ static void draw_loading(UBYTE *b){
     brush_text(b,129,196,"LOADING",12);
 }
 
+/* D-only zero minterm. OCS height zero encodes 1024 rows of 20 words
+ * in the 40 KiB interleaved Chip bitmap, as in copy_room_bitmap. */
+static void clear_bitmap(UBYTE *bitmap){
+    wait_blitter();hw->bltcon0=0x0100;hw->bltcon1=0;hw->bltdmod=0;
+    hw->bltdpt=(APTR)bitmap;hw->bltsize=20;wait_blitter();
+}
 static void draw_room(const BlGame *game,const BlProgress *progress){
-    ULONG i;char title[]="ROOM 01";wait_blitter();
+    char title[]="ROOM 01";
     ULONG started=BL_AUTOTEST?line_clock():0;
-    for(i=0;i<BITMAP_BYTES;i++)background[i]=0;
+    clear_bitmap(background);
     bl_c64_paint_room(background,SCENE_TOP);wait_blitter();
     if(BL_AUTOTEST){room_draw_cost[0]=elapsed_work(started);started=line_clock();}
     if(BL_AUTOTEST){source_render_mismatches+=(ULONG)bl_c64_check_interleaved(background,SCENE_TOP);++source_render_checks;}
@@ -669,6 +677,29 @@ static UWORD present_frame(UWORD *list){
     hw->cop1lc=(ULONG)list;
     return line;
 }
+/* Install the next COP1LC during active display, without
+ * COPJMP. Copper restarts it at field zero. Game computation may run in
+ * the tail of the current field. Neither bitmap is reused until the
+ * next field has passed display start. Late offers use the blank path. */
+static ULONG queued_field,display_owner_waits,queued_presents;
+static UBYTE queued_image;
+static void wait_display_owner(void){
+    if(!queued_image)return;
+    if(field_clock()==queued_field || raster()<44){
+        ++display_owner_waits;
+        while(field_clock()==queued_field || raster()<44)source_audio_service();
+    }
+    queued_image=0;
+}
+static UWORD queue_game_frame(UWORD *list){
+    ULONG stamp;UWORD line;
+    wait_display_owner();wait_blitter();stamp=field_clock();line=raster();
+    if(line<44 || line>285)return present_frame(list);
+    list[1]=0x4200;hw->cop1lc=(ULONG)list;
+    queued_field=stamp;queued_image=1;++queued_presents;
+    return line;
+}
+
 static ULONG field_clock(void){
     ULONG hi=*(volatile UBYTE*)0xbfea01;
     ULONG mid=*(volatile UBYTE*)0xbfe901;
@@ -727,6 +758,7 @@ static UBYTE read_key(void) {
 /* Only the footer badge changes. The saved pixels also work on an interlude
  * card. No game or SID field may elapse while waiting for the next press. */
 static UBYTE pause_game(UBYTE *front){
+    wait_display_owner();
     UBYTE saved[7][4][6],key;
     int row,plane,byte;
     source_audio_mute();wait_frame();
@@ -746,6 +778,7 @@ static UBYTE pause_game(UBYTE *front){
 }
 
 static void show_interlude(int *front,const BlSession *session){
+    wait_display_owner();
     if(!interlude_painted){
         UBYTE hidden=(UBYTE)(*front^1);
         UBYTE *b=buffers[hidden];
@@ -760,10 +793,10 @@ static void show_interlude(int *front,const BlSession *session){
 }
 
 static void menu_paint(const BlOptions *o,UBYTE debug,UBYTE game_over,int *front){
+    wait_display_owner();
     UBYTE hidden=(UBYTE)(*front^1),*bitmap=buffers[hidden];
-    ULONG i;char players[]="1",room[]="01";
-    wait_blitter();
-    for(i=0;i<BITMAP_BYTES;i++){bitmap[i]=0;if(!(i&1023))source_audio_service();}
+    char players[]="1",room[]="01";
+    clear_bitmap(bitmap);
     unpack_art(bitmap+4*ROW_BYTES,title_packed,0);
     brush_text(bitmap,20,114,debug?"TEST OPTIONS":game_over?"GAME OVER":"GAME SETUP",12);
     if(debug){
@@ -857,6 +890,7 @@ int main(void) {
     ULONG chip_largest_before=0,chip_free_loaded=0,chip_largest_loaded=0;
     ULONG cpu_stamp_chip_bytes=0,held_images=0,drawn_images=0,held_streak=0,max_held_streak=0;
     UWORD present_min=511,present_max=0,bad_presents=0;
+    UWORD queue_min=511,queue_max=0,bad_queue_windows=0;
     int n,back=0,frame=0,result=0;
     UBYTE field_phase=0;ULONG arithmetic_errors=0;
     const char *report_path="DH1:autotest-1.txt";
@@ -1316,7 +1350,7 @@ choose_game:
         else{++drawn_images;held_streak=0;
         presented_step=world.step;
         PERF_BEGIN(BL_PERF_RESTORE);
-        back^=1;
+        wait_display_owner();back^=1;
         if((!BL_AUTOTEST || BL_COMBAT_TEST) && drawn_room_revision[back]!=progress.revision){
             room_load_this_frame=1;
             copy_room_bitmap(buffers[back],background);
@@ -1418,11 +1452,17 @@ choose_game:
         }
         copper[back][65]=palette[bl_c64_flash_color()];
         PERF_END(BL_PERF_LOOP);PERF_BEGIN(BL_PERF_WAIT);
-        {UWORD line=present_frame(copper[back]);
+        {UWORD line=room_load_this_frame?present_frame(copper[back]):queue_game_frame(copper[back]);
         if(BL_AUTOTEST){
-            if(line<present_min)present_min=line;
-            if(line>present_max)present_max=line;
-            if(line<300||line>308)++bad_presents;
+            if(queued_image){
+                if(line<queue_min)queue_min=line;
+                if(line>queue_max)queue_max=line;
+                if(line<44||line>285)++bad_queue_windows;
+            }else{
+                if(line<present_min)present_min=line;
+                if(line>present_max)present_max=line;
+                if(line<300||line>308)++bad_presents;
+            }
         }}
         PERF_END(BL_PERF_WAIT);
         if(BL_AUTOTEST){
@@ -1489,6 +1529,11 @@ restore_os:
         append(&p,"\npresent_min_line=");number(&p,present_min);
         append(&p,"\npresent_max_line=");number(&p,present_max);
         append(&p,"\nbad_presents=");number(&p,bad_presents);
+        append(&p,"\nqueued_presents=");number(&p,queued_presents);
+        append(&p,"\nqueue_min_line=");number(&p,queue_min);
+        append(&p,"\nqueue_max_line=");number(&p,queue_max);
+        append(&p,"\nbad_queue_windows=");number(&p,bad_queue_windows);
+        append(&p,"\ndisplay_owner_waits=");number(&p,display_owner_waits);
         append(&p,"\nexplicit_chip_bytes=");number(&p,BITMAP_BYTES*(BL_COMBAT_TEST?4:3)+TILE_DMA_BYTES+COPPER_BYTES*2+32+(BL_COMBAT_TEST?FIGHTER_DMA_BYTES:0)+BL_SFX_CHIP_BYTES+cpu_stamp_chip_bytes);
         append(&p,"\ncpu_stamp_chip_bytes=");number(&p,cpu_stamp_chip_bytes);
         append(&p,"\nfighter_cache_bytes=");number(&p,fighter_cache_bytes);

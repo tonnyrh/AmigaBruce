@@ -1,0 +1,13 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "cases": 5809,
+  "distinct_scores": 5041,
+  "source_instructions": 3648052,
+  "php_plp_entries": [
+    "31d5",
+    "32ee"
+  ],
+  "divisor": 10000,
+  "maximum_quotient": 1677,
+  "fixture_sha256": "a9ca987b3a03380b09abf04236815b90332301f179b1bcb1bb1e5fcd9bf8f620"
+}

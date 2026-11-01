@@ -1,7 +1,7 @@
 {
   "id": "ACTOR-CHAIN-0001",
   "date": "2026-10-31",
-  "status": "scoped_score_display_realtime_open",
+  "status": "scoped_op_room_actor_delivery_realtime_open",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "primary_edition_verified": false,
   "natural_playthrough": false,
@@ -16,17 +16,16 @@
   "artifacts": [
     {
       "path": "reference/validation/compact-actor-delivery.json",
-      "sha256": "effa2b0491e38e9abc20e6561cd1a4c969ab68309d5cc4d58b47469ce5655caf"
+      "sha256": "bfea7631fd2b1ad10698bd5388013a3b54541375d49b45feca374427fd6160d8"
     },
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "a74995e8908fb3395e430183b1ad115df928dedbf3366ab49d90a4b120d13d3d"
+      "sha256": "7e8478409cfbb58b959897b3b2421f4a9f07f7c7b445d3e8ec368919d8c0dbe1"
     }
   ],
   "limitations": [
-    "Verified untouched 1984 edition",
-    "Full PAL real-time cadence and natural IRQ/input phase",
-    "Whole native stack high-water",
-    "Complete natural playthrough and physical A500"
+    "Three PAL fields per ordinary step with both enemies and continuous Paula publication",
+    "Natural C64 IRQ/input phase and complete natural playthrough",
+    "Verified untouched 1984 edition"
   ]
 }

@@ -5,7 +5,7 @@
   "production_enabled": true,
   "source_files": [
     {
-      "sha256": "61ae99bd399e0f69db79f84a3cb02165ae67ed06681573128b3e8f451255fec0",
+      "sha256": "e3f93a9f6d4512d69c5ee31642f2f0f6270e197812fb15a62e5805c910c79839",
       "path": "core/c64_rooms.c"
     },
     {
@@ -33,7 +33,7 @@
       "path": "core/c64_actor_data.h"
     },
     {
-      "sha256": "46a58572e0bca4539b296d09dab188ba66e74965deb26668e77ea2f0b33460ed",
+      "sha256": "7875f0f710691ae837116d7cb82cf0f73a92b4a1650e7a78fae8dfcdc9434c2d",
       "path": "core/c64_actor_programs.h"
     },
     {
@@ -61,7 +61,7 @@
       "path": "tools/native_actor_continuations.py"
     },
     {
-      "sha256": "a36fcc6c54b9d1cee06c9f90be7e33b0b159c43a29bf5973ef535de89608d636",
+      "sha256": "d7a2ccd075496c5fd46fffee0e0c991c444c0ffc514579aa5100aff312f0f4bb",
       "path": "tools/build_c64_rooms.py"
     },
     {

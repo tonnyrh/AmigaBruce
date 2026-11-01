@@ -1244,14 +1244,42 @@ static void source_contact_rows(void){
 #if defined(__m68k__) && defined(__GNUC__)
 __attribute__((optimize("O2")))
 #endif
+static unsigned short score_four_digits(unsigned short value){
+    static const unsigned char bcd[100]={
+        0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,
+        0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17,0x18,0x19,
+        0x20,0x21,0x22,0x23,0x24,0x25,0x26,0x27,0x28,0x29,
+        0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39,
+        0x40,0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,
+        0x50,0x51,0x52,0x53,0x54,0x55,0x56,0x57,0x58,0x59,
+        0x60,0x61,0x62,0x63,0x64,0x65,0x66,0x67,0x68,0x69,
+        0x70,0x71,0x72,0x73,0x74,0x75,0x76,0x77,0x78,0x79,
+        0x80,0x81,0x82,0x83,0x84,0x85,0x86,0x87,0x88,0x89,
+        0x90,0x91,0x92,0x93,0x94,0x95,0x96,0x97,0x98,0x99
+    };
+    unsigned short hundreds=value/100u;
+    return (unsigned short)(((unsigned short)bcd[hundreds]<<8)|bcd[value-hundreds*100u]);
+}
+
 static void source_score_decimal(void){
-    unsigned long value=((unsigned long)m[0x4398]<<16)|((unsigned long)m[0x4399]<<8)|m[0x439a],quotient;
-    unsigned char digit,pair,part;
+    unsigned long value=((unsigned long)m[0x4398]<<16)|((unsigned short)m[0x4399]<<8)|m[0x439a];
+    unsigned short high=0,low=(unsigned short)value;
     m[0x100+sp]=(unsigned char)(0x30|c|(z<<1)|(actor_i<<2)|(d<<3)|(v<<6)|(n<<7));
-    for(part=4;part--;){
-        quotient=value/100;pair=(unsigned char)(value-quotient*100);digit=pair/10;
-        m[0x439b+part]=(unsigned char)((digit<<4)|(pair-digit*10));value=quotient;
+    if(value>=10000){
+        /* $FFFFFF / 10000 fits in the 68000's 16-bit quotient (max 1677). */
+#if defined(__m68k__) && defined(__GNUC__)
+        __asm__("divu.w %1,%0" : "+d"(value) : "d"((unsigned short)10000) : "cc");
+        high=(unsigned short)value;
+        low=(unsigned short)(value>>16);
+#else
+        high=(unsigned short)(value/10000);
+        low=(unsigned short)(value%10000);
+#endif
+        high=score_four_digits(high);
     }
+    low=score_four_digits(low);
+    m[0x439b]=(unsigned char)(high>>8);m[0x439c]=(unsigned char)high;
+    m[0x439d]=(unsigned char)(low>>8);m[0x439e]=(unsigned char)low;
     m[0x4398]=m[0x4399]=m[0x439a]=0;a=m[0x439b];x=y=255;
 }
 /* $2E89-$2EE9: ordered object dispatch. Fold intermediate CMP flags;
@@ -1401,6 +1429,130 @@ static void source_score_display(void){
     }
     c=(pair>>3)&1; /* Carry after the fourth LSR at $3211. */
     z=n=0;
+}
+
+/* Decode one literal or repeated token at $0AD7, including $0B5F
+ * and the row skip at $485B. Non-loader, overlapping and unusual
+ * pointers continue in the instruction translation. */
+static unsigned char source_room_token(void){
+    unsigned short stream=W(6),upper=W(4),lower=W(8),paint=W(0x10),paint_lower=W(0x12);
+    unsigned short count;
+    unsigned char token,code=0,literal,remaining=m[0xf3];
+    if(index_ready || !actor_loading_pending || d || y || remaining>39 ||
+       stream<0x6800 || stream>=0x8200 || upper<0x8c78 || upper>=0x9000 ||
+       lower!=upper+40 || paint!=upper+0x4c00 || paint_lower!=paint+40)return 0;
+    token=m[stream++];count=token&127;
+    if(!count)return 0; /* $80 terminates; $00 is the 256-copy case. */
+    literal=token&128;
+    do{
+        code=m[stream];if(literal)++stream;
+        if(code&128){m[paint]=0xf8;m[paint+40]=0xf8;}
+        m[upper]=code&127;m[upper+40]=code|128;
+        /* A 442-cell stream touches the first collision mask. */
+        if(upper+40>=0x9000)reset_contact_masks();
+        ++upper;++paint;
+        if(!remaining){
+            unsigned char before=(unsigned char)(paint+40);
+            unsigned short sum=(unsigned short)before+40;
+            c=sum>255;v=((~(before^40)&(before^sum)&128)!=0);
+            remaining=39;upper+=40;paint+=40;
+        }else --remaining;
+    }while(--count);
+    if(!literal)++stream;
+    m[4]=(unsigned char)upper;m[5]=(unsigned char)(upper>>8);
+    m[8]=(unsigned char)(upper+40);m[9]=(unsigned char)((upper+40)>>8);
+    m[0x10]=(unsigned char)paint;m[0x11]=(unsigned char)(paint>>8);
+    m[0x12]=(unsigned char)(paint+40);m[0x13]=(unsigned char)((paint+40)>>8);
+    m[6]=(unsigned char)stream;m[7]=(unsigned char)(stream>>8);m[0xf3]=remaining;
+    a=code|128;x=0;
+    m[0x100+sp]=0x0b;m[0x100+(unsigned char)(sp-1)]=literal?1:0x2c;
+    m[0x100+(unsigned char)(sp-2)]=a;
+    actor_return=literal?0x0b02:0x0b27;
+    if(literal){n=0;z=1;}else{unsigned char last=m[6]?m[6]:m[7];NZ(last);}
+    return 1;
+}
+
+/* $1C79..$1C8D, binary addition and one of the three source actors.
+ * Four history slots per step, actors interleaved at a three-byte stride. */
+static void source_shift_history(void){
+    unsigned char *base=m+0x4f57+x;
+    unsigned short end=120;
+    do{
+        end-=12;
+        base[end+21]=base[end+9];
+        base[end+18]=base[end+6];
+        base[end+15]=base[end+3];
+        base[end+12]=base[end];
+    }while(end);
+    a=base[0];y=(unsigned char)(x-3);m[0x4e]=255;
+    c=0;v=0;z=0;n=1;
+}
+
+/* $15BD..$169C. The caller retains the two JSRs on timer overflow.
+ * No callbacks, source observers or VIC register reads in this interval. */
+static void source_field_timers(void){
+    unsigned char bank=m[0xf2];
+    if(!m[0x4eec])m[0x4f45]=m[0x4f46]=m[0x4f47]=2;
+    --m[0x4eec];
+    m[0x7c]=bank==0x38?0xa0:bank==0x3a?0xa8:bank==0x3c?0xb0:0xb8;
+    c=(bank==0x38 || bank==0x3a || bank>=0x3c);
+    m[0x8c2a]=m[0x1383]?0:0x2c;
+    m[0x8c4d]=((m[0x42ca] || m[0x42c9]) && !m[0x1384])?0x2c:0;
+    if(m[0x104] && !(m[0x105]&128) && !++m[0x87] && !(m[0x88]&128))++m[0x88];
+    if(!++m[0x7f]){
+        if(!(m[0x82]&128))++m[0x82];
+        if(!++m[0x80])++m[0x81];
+    }
+    y=m[0x82];
+    if(y&128){
+        unsigned short i;
+        m[0x82]=0xfe;m[0x83]=m[0x80];m[0x84]=0xf7;
+        for(i=0;i<20;i++)m[0x153+i]=(m[0x47b4+i]^m[0x83])&0xf7;
+        x=255;
+    }else{
+        x=0;m[0x83]=0;m[0x84]=0xfe;
+    }
+    if(m[0x48])--m[0x48];
+    if(m[0x49])--m[0x49];
+    else if(m[0x4a]){--m[0x4a];m[0x49]=255;}
+    m[0x2005]=m[0xdc02];m[0x2006]=m[0xdc03];
+    m[0xdc02]=m[0xdc03]=0;
+    a=0;n=0;z=1;
+}
+
+/* One active component. $2586 still services every actor, including
+ * inactive actors. Read the active actor again after that callback. */
+static unsigned char source_image_component(unsigned char secondary){
+    unsigned char actor=x,pose,index,height,color,width,stack=sp;
+    unsigned short dest,first;
+    if(d || actor>=3 || actor!=m[0x51])return 0;
+    index=(unsigned char)(a*2+(m[0x277d]?10:0));dest=W(0x274f+index);
+    pose=(unsigned char)(m[0x4f4e + actor]+secondary);
+    height=m[0x5b61+pose];first=m[0x59bd+pose]|((unsigned short)m[0x5a8f+pose]<<8);
+    if(height>=32 || dest<0x8000 || dest>0xff00 || first>0xff00)return 0;
+    /* $2704 and $2719 use no deeper calls. The two calls have the
+     * same stack depth as the copy call below and leave its bytes. */
+    m[0x0e]=(unsigned char)dest;m[0x0f]=(unsigned char)(dest>>8);
+    m[0x26ab]=m[0x26e4]=m[0x26ee]=(unsigned char)first;
+    m[0x26ac]=m[0x26e5]=m[0x26ef]=(unsigned char)(first>>8);
+    color=actor==2?0xf0:m[0x5c33+pose];width=m[0x5cbf+pose];
+    m[0x100+(unsigned char)(stack-2)]=color;m[0x100+(unsigned char)(stack-3)]=width;
+    m[0xe0+actor]=height;m[(secondary?0xd7:0xd4)+actor]=width;
+    m[(secondary?0xdd:0xda)+actor]=color;
+    source_contact_frame(secondary?0x25d6:0x25ad);
+    c=v=0;
+    PERF_BEGIN(BL_PERF_SPRITE_COPY);
+#if defined(__m68k__)
+    SourceSpriteCopy q;
+    q.dest=dest;q.first=q.left=q.right=first;q.xx=height;q.yy=(unsigned char)(height*3);
+    q.wide=(width!=0);q.carry=0;bl_sprite_copy(m,&q);
+    x=q.xx;y=q.yy;c=q.carry;a=0;z=0;n=1;sp+=2;
+#else
+    z=(width==0);y=(unsigned char)(height*3);source_sprite_copy_c();
+#endif
+    PERF_END(BL_PERF_SPRITE_COPY);
+    actor_return=source_stack_return();
+    return 1;
 }
 
 #include "c64_actor_programs.h"
@@ -1579,6 +1731,47 @@ static void source_vic_latch(void){
 #endif
     source_vic_latch_slow();
 }
+/* Binary $25E2-$269F. The source guard and every RAM/stack store remain.
+ * No I/O service observes the interiors. Decimal entries keep original code. */
+SOURCE_INLINE void source_publish_component(unsigned char id,unsigned char color){
+    unsigned char high=(unsigned char)(a>>7),old=m[0xa1+x];
+    unsigned short total=(unsigned short)old+29;
+    a=(unsigned char)(a<<1);m[0x100+sp--]=a;
+    y=id;a=m[0xd010];
+    if(high)a|=m[0x2773+y];else a&=m[0x2778+y];
+    m[0xd010]=a;y=(unsigned char)(id<<1);
+    a=m[0x100+(unsigned char)++sp];m[0xd000+y]=a;
+    a=(unsigned char)total;m[0xd001+y]=a;
+    c=(unsigned char)(total>255);v=(unsigned char)((~(old^29)&(old^a)&128)!=0);
+    y=id;a=color;m[0xd027+y]=a;NZ(a);
+}
+#if defined(__m68k__) && defined(__GNUC__)
+__attribute__((optimize("O2")))
+#endif
+static SOURCE_NOINLINE void source_sprite_publish(void){
+    unsigned char pose;
+    a=m[0x277e];NZ(a);if(a){sp+=2;return;}
+    ++m[0x277e];x=2;
+    for(;;){
+        m[0x51]=x;a=(unsigned char)(m[0x95+x]&1);
+        if(a){
+            a=m[0x9e + x];m[0xb9+x]=a;
+            if(m[0xd4+x] && m[0xa4+x]!=1)a=(unsigned char)(a-8);
+            source_publish_component(m[0x276d+x],m[0xda+x]);
+            if(x==2)c=1;
+            else{
+                pose=m[0x4f4b+x];a=m[0x9e + x];
+                if(pose==5 || pose==0x3f || pose==0x43 || pose==0x19)a=(unsigned char)(a-8);
+                source_publish_component(m[0x2770+x],m[0xdd+x]);
+            }
+        }
+        x=(unsigned char)(m[0x51]-1);if(x&128)break;
+    }
+    x=4;y=m[0x277d]?9:4;
+    do{a=m[0x2763+y];m[0x8ff8+x]=a;--y;--x;}while(!(x&128));
+    a=(unsigned char)(m[0x277d]^1);m[0x277d]=a;NZ(a);sp+=2;
+}
+
 static void source_actor_field(void){
     unsigned char saved[10]={a,x,y,c,z,n,v,d,sp,actor_i};
     unsigned short saved_return=actor_return,saved_stop=actor_stop_pc;
@@ -1588,11 +1781,24 @@ static void source_actor_field(void){
     if(actor_delay_pending || actor_gameover_pending){if(m[0x48])--m[0x48];return;}
     PERF_BEGIN(BL_PERF_FIELD);
     m[0x44]=0;d=0;
+    if(m[2]==0x32 && !m[0x42ca] && (m[0x7f]!=255 || m[0x82]!=127)){
+        ++m[0x16];
+        source_contact_frame(0x15bc);
+        source_sprite_publish();
+        source_field_timers();
+        m[0x98]=source_direction(actor_input);m[0x9b]=(unsigned char)!(actor_input&BL_FIRE);
+        m[0xdc00]=m[0xdc01]=255;
+        m[0xdc02]=m[0x2005];m[0xdc03]=m[0x2006];
+        if(!m[0x104] || (!(m[0x105]&128) && ((m[0x98]|m[0x99])!=15 || !(m[0x9b]&m[0x9c]))))m[0x82]=0;
+        actor_irq_stop=0;
+    }
+else{
     actor_irq_stop=0;actor_code(0x15b8);
     m[0x98]=source_direction(actor_input);m[0x9b]=(unsigned char)!(actor_input&BL_FIRE);
     if(m[0x42ca]){m[0x99]=source_direction(actor_yamo_input);m[0x9c]=(unsigned char)!(actor_yamo_input&BL_FIRE);}
     m[0xdc00]=m[0xdc01]=255;
     actor_irq_stop=0;actor_code(0x1703);actor_irq_stop=0;
+    }
     PERF_BEGIN(BL_PERF_VIC);source_vic_latch();PERF_END(BL_PERF_VIC);
     a=saved[0];x=saved[1];y=saved[2];c=saved[3];z=saved[4];n=saved[5];v=saved[6];d=saved[7];sp=saved[8];actor_i=saved[9];
     actor_return=saved_return;actor_stop_pc=saved_stop;
@@ -2137,6 +2343,56 @@ static unsigned char animation_bits(unsigned char code,unsigned char row,unsigne
     return animation_pattern[((code&127)-0x61)*8+((phase+(row>>1)+(code&128?4:0))&7)];
 }
 static unsigned char animated_code(unsigned char code){return (code&127)>=0x61 && (code&127)<=0x63;}
+static void copy_animation_line(unsigned char *to,const unsigned char *from,unsigned short width){
+#if defined(__m68k__)
+    if(!(((unsigned long)to|(unsigned long)from)&1)){
+        unsigned short count=width-1;
+        __asm__ volatile("1: move.l (%1)+,(%0)+\n\tdbra %2,1b"
+                         : "+a"(to),"+a"(from),"+d"(count) :: "memory","cc");
+        return;
+    }
+#endif
+    for(unsigned short i=0;i<width*4;i++)to[i]=from[i];
+}
+
+/* In $2CF1..$2D54 the only variable row of a given glyph is
+ * (phase + (dy >> 1)) modulo eight. Cells, attributes and horizontal
+ * padding are fixed within this character row. Reuse the four planes
+ * only when the raster palette band also matches. */
+static void build_animation_rectangle(const AnimationRect *rect,unsigned short left,unsigned short right){
+    unsigned short row,phase,dy,col,width=right-left;
+    for(row=rect->top;row<rect->bottom;row++){
+        const unsigned char *ready[4][8];
+        unsigned char valid[4]={0,0,0,0};
+        unsigned char *phase_start=animation_cache+rect->offset+(row-rect->top)*32*width;
+        for(phase=0;phase<8;phase++){
+            unsigned char *dest=phase_start;
+            for(dy=0;dy<8;dy++,dest+=width*4){
+                unsigned char band=line_band[row*8+dy],pattern=(phase+(dy>>1))&7;
+                unsigned char bit=(unsigned char)(1U<<pattern);
+                if(valid[band]&bit){
+                    copy_animation_line(dest,ready[band][pattern],width);
+                    continue;
+                }
+                valid[band]|=bit;
+                ready[band][pattern]=dest;
+                for(col=left;col<right;col++){
+                    unsigned long packed=0;
+                    if(col>=rect->left && col<rect->right){
+                        unsigned short cell=row*40+col;
+                        unsigned char code=animation_code[cell];
+                        unsigned char at=((code&127)-0x61)*8+(code&128?24:0);
+                        packed=PLANAR_WORD(band,animation_color[cell],animation_variants[pattern][at]);
+                    }
+                    unsigned char *pixel=dest+(col-left);
+                    pixel[0]=(unsigned char)(packed>>24);pixel[width]=(unsigned char)(packed>>16);
+                    pixel[width*2]=(unsigned char)(packed>>8);pixel[width*3]=(unsigned char)packed;
+                }
+            }
+            if(phase<7)phase_start+=rect->size;
+        }
+    }
+}
 static unsigned char animation_reusable(unsigned char *cache,long capacity){
     unsigned short i,palette=W((unsigned short)(0x480b + 2*loaded));
     if(!BL_ROOM_REUSE || !cache || cache!=animation_cache || !animation_saved_count ||
@@ -2217,25 +2473,7 @@ long bl_c64_build_animation_cache(unsigned char *cache,long capacity){
             cell=row*40+col;animation_cell[cell]=item;animation_code[cell]=m[0x8c00 + cell];animation_color[cell]=m[0xd800 + cell]&7;
         }
         if(BL_ROOM_REUSE){
-            unsigned char *dest=animation_cache+rect->offset;
-            for(phase=0;phase<8;phase++)for(row=rect->top;row<rect->bottom;row++)for(dy=0;dy<8;dy++){
-                unsigned char *p0=dest,*p1=dest+width,*p2=dest+width*2,*p3=dest+width*3;
-                unsigned char band=line_band[row*8+dy];cell=row*40+left;
-                /* The exact eight source variants are already computed.
-                 * Advance pointers instead of multiplying an offset for
-                 * each output byte on the68000. */
-                for(col=left;col<right;col++,cell++){
-                    unsigned long packed=0;
-                    if(col>=rect->left && col<rect->right){
-                        unsigned char code=animation_code[cell];
-                        unsigned char at=(unsigned char)(((code&127)-0x61)*8+(code&128?24:0)+dy);
-                        packed=PLANAR_WORD(band,animation_color[cell],animation_variants[phase][at]);
-                    }
-                    *p0++=(unsigned char)(packed>>24);*p1++=(unsigned char)(packed>>16);
-                    *p2++=(unsigned char)(packed>>8);*p3++=(unsigned char)packed;
-                }
-                dest+=width*4;
-            }
+            build_animation_rectangle(rect,left,right);
         }else for(phase=0;phase<8;phase++)for(row=rect->top;row<rect->bottom;row++)for(dy=0;dy<8;dy++)for(col=left;col<right;col++){
             unsigned long packed=0,at;cell=row*40+col;
             if(col>=rect->left && col<rect->right)packed=PLANAR_WORD(line_band[row*8+dy],animation_color[cell],animation_bits(animation_code[cell],dy,phase));

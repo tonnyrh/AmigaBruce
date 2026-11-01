@@ -119,6 +119,12 @@ def translate(memory, roots, *, actors=False):
         if pc==0x104b:lines.append('if(!d){source_movers();'+return_helper+'return;}')
         if pc==0x2509:lines.append('source_sound();'+return_helper+'return;')
         if actors and pc==0x26a0:lines.append('if(!d && m[0xe0+x]<32){PERF_BEGIN(BL_PERF_SPRITE_COPY);if(source_sprite_copy()){PERF_END(BL_PERF_SPRITE_COPY);'+return_helper+'return;}PERF_END(BL_PERF_SPRITE_COPY);}')
+        if actors and pc==0x0ad7:lines.append('if(source_room_token())goto L0ad7;')
+        if actors and pc==0x15bd:lines.append('if(m[0x7f]!=255 || m[0x82]!=127){source_field_timers();goto L169d;}')
+        if actors and pc==0x1c79:lines.append('if(!d && x<3){source_shift_history();goto L1c8f;}')
+        if actors and pc in (0x2591,0x25b9):
+            secondary=int(pc==0x25b9)
+            lines.append('if(source_image_component(%d))goto L%04x;'%(secondary,0x25d7 if secondary else 0x25ae))
         if actors and pc==0x2e39:lines.append('if(source_object_driver()){'+return_helper+'}return;')
         if actors and pc==0x2e6e:lines.append('source_object_row();return;')
         if actors and pc==0x55ab:lines.append('source_contact_clear();'+return_helper+'return;')

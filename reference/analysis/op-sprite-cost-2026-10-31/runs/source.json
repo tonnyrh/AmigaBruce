@@ -1,0 +1,293 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "cases": [
+    {
+      "capture": "combat168",
+      "capture_sha256": "d119dc38efb25c22a1b95d2c82332bd3763eca2d16bfc7699ed28761cb00c548",
+      "mask": 0,
+      "bank": 0,
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "parts": [
+        {
+          "actor": 0,
+          "slot": 0,
+          "destination": "8180",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 1,
+          "destination": "81c0",
+          "wide": false
+        }
+      ],
+      "source_instructions": 726,
+      "final_ram_sha256": "5df5eb3699277122e679eb0239da410c1828286ac11e1c1dafa0ac4cbd57e07c"
+    },
+    {
+      "capture": "combat168",
+      "capture_sha256": "d119dc38efb25c22a1b95d2c82332bd3763eca2d16bfc7699ed28761cb00c548",
+      "mask": 1,
+      "bank": 0,
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "parts": [
+        {
+          "actor": 1,
+          "slot": 2,
+          "destination": "8200",
+          "wide": false
+        },
+        {
+          "actor": 1,
+          "slot": 3,
+          "destination": "8240",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 0,
+          "destination": "8180",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 1,
+          "destination": "81c0",
+          "wide": false
+        }
+      ],
+      "source_instructions": 1437,
+      "final_ram_sha256": "ce0a750fbdcc7ebbc0ce881eac6e4677b355143aefdb2baf198d819a968ab8b6"
+    },
+    {
+      "capture": "combat168",
+      "capture_sha256": "d119dc38efb25c22a1b95d2c82332bd3763eca2d16bfc7699ed28761cb00c548",
+      "mask": 2,
+      "bank": 0,
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "parts": [
+        {
+          "actor": 2,
+          "slot": 4,
+          "destination": "8280",
+          "wide": true
+        },
+        {
+          "actor": 0,
+          "slot": 0,
+          "destination": "8180",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 1,
+          "destination": "81c0",
+          "wide": false
+        }
+      ],
+      "source_instructions": 1127,
+      "final_ram_sha256": "0a36102bcd82cd290fbace3d6c8be8559afef2cb3b8d8cdfeae7832175fcc5b5"
+    },
+    {
+      "capture": "combat168",
+      "capture_sha256": "d119dc38efb25c22a1b95d2c82332bd3763eca2d16bfc7699ed28761cb00c548",
+      "mask": 3,
+      "bank": 0,
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "parts": [
+        {
+          "actor": 2,
+          "slot": 4,
+          "destination": "8280",
+          "wide": true
+        },
+        {
+          "actor": 1,
+          "slot": 2,
+          "destination": "8200",
+          "wide": false
+        },
+        {
+          "actor": 1,
+          "slot": 3,
+          "destination": "8240",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 0,
+          "destination": "8180",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 1,
+          "destination": "81c0",
+          "wide": false
+        }
+      ],
+      "source_instructions": 1838,
+      "final_ram_sha256": "bfbda143b719f7cc469e5976aa8f3c9d58607840ee042e90bac3136799521fc9"
+    },
+    {
+      "capture": "combat207",
+      "capture_sha256": "23d1e531aa806e177228ec2e9c4ccea0a0141857c34b7d7122813b0da9335cbc",
+      "mask": 0,
+      "bank": 1,
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "parts": [
+        {
+          "actor": 0,
+          "slot": 0,
+          "destination": "82c0",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 1,
+          "destination": "8300",
+          "wide": false
+        }
+      ],
+      "source_instructions": 730,
+      "final_ram_sha256": "296187dbabfa105705654cc45f34b416c4f808224d89e84416ea7254c5e9b55f"
+    },
+    {
+      "capture": "combat207",
+      "capture_sha256": "23d1e531aa806e177228ec2e9c4ccea0a0141857c34b7d7122813b0da9335cbc",
+      "mask": 1,
+      "bank": 1,
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "parts": [
+        {
+          "actor": 1,
+          "slot": 2,
+          "destination": "8340",
+          "wide": false
+        },
+        {
+          "actor": 1,
+          "slot": 3,
+          "destination": "8380",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 0,
+          "destination": "82c0",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 1,
+          "destination": "8300",
+          "wide": false
+        }
+      ],
+      "source_instructions": 1445,
+      "final_ram_sha256": "907a61874399a1b6ad2aacd5c317c63da2c222bde15a5c01824a2930026e659d"
+    },
+    {
+      "capture": "combat207",
+      "capture_sha256": "23d1e531aa806e177228ec2e9c4ccea0a0141857c34b7d7122813b0da9335cbc",
+      "mask": 2,
+      "bank": 1,
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "parts": [
+        {
+          "actor": 2,
+          "slot": 4,
+          "destination": "83c0",
+          "wide": true
+        },
+        {
+          "actor": 0,
+          "slot": 0,
+          "destination": "82c0",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 1,
+          "destination": "8300",
+          "wide": false
+        }
+      ],
+      "source_instructions": 1133,
+      "final_ram_sha256": "baf6f33a5ee3a675d6d6dae64e4e573c08f0c462aa0d79c70bf371ed23bfa86f"
+    },
+    {
+      "capture": "combat207",
+      "capture_sha256": "23d1e531aa806e177228ec2e9c4ccea0a0141857c34b7d7122813b0da9335cbc",
+      "mask": 3,
+      "bank": 1,
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "parts": [
+        {
+          "actor": 2,
+          "slot": 4,
+          "destination": "83c0",
+          "wide": true
+        },
+        {
+          "actor": 1,
+          "slot": 2,
+          "destination": "8340",
+          "wide": false
+        },
+        {
+          "actor": 1,
+          "slot": 3,
+          "destination": "8380",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 0,
+          "destination": "82c0",
+          "wide": false
+        },
+        {
+          "actor": 0,
+          "slot": 1,
+          "destination": "8300",
+          "wide": false
+        }
+      ],
+      "source_instructions": 1848,
+      "final_ram_sha256": "085522ec4bfbb1ab0caf8c14fa2935f4dd7c75375027dc38a07b30d44663600b"
+    }
+  ]
+}

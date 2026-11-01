@@ -1,0 +1,145 @@
+{
+  "method": "Owned normal WinUAE; invincible debug start in room12; actual C64 glyph phase candidates; no source-state injection; injected terminal actor state follows the C64 world-control death fixture",
+  "snapshots_paused": true,
+  "controlled_death": {
+    "injected_source_fields": {
+      "$D1": 255,
+      "$BF": 25,
+      "$CE": 1
+    },
+    "loader_epoch_before": 4,
+    "loader_epoch_after": 5
+  },
+  "room_roundtrip": true,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "elf": {
+    "path": "C:\\vscode\\_EXT\\AmigaBruceLee\\amiga\\out\\bruce_amiga.elf",
+    "sha256": "377958e63d7f19573945a0c08ad82fc85925d6e4650bb89bf92c15223bae50da"
+  },
+  "samples": [
+    {
+      "source_phase": 2,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 4,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 6,
+      "best_phase": 1,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 0,
+      "best_phase": 3,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 1,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 4,
+      "best_phase": 3,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 5,
+      "best_phase": 1,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 7,
+      "best_phase": 3,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 1,
+      "best_phase": 0,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 3,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 7,
+      "best_phase": 2,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    },
+    {
+      "source_phase": 2,
+      "best_phase": 1,
+      "mismatched_animation_pixels": 0,
+      "checked_pixels": 9344,
+      "static_pixel_mismatches": 0,
+      "flicker_illegal_pixels": 0,
+      "flickers": {}
+    }
+  ],
+  "mixed_phase_samples": 0,
+  "max_pixel_mismatch": 0,
+  "max_static_pixel_mismatch": 0,
+  "max_flicker_illegal_pixels": 0,
+  "flicker_motion": {},
+  "flicker_stuck_codes": [],
+  "flicker_contract": {
+    "source": "$40BC-$4132",
+    "rows": [
+      2,
+      3
+    ],
+    "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+    "method": "Every visible flicker glyph row pair must match a complete source AND/ORA/STA output or original initialization; no pixel tolerance"
+  }
+}

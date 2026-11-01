@@ -1,0 +1,123 @@
+{
+  "builds": {
+    "reference": "1163ecae9acf47cb49336c81ba34338182dcc0f5d9061649b31c03b92cd2aeab",
+    "candidate": "70d146787d7f24891b604d892b60273871a75dd9c2ca599a3d00172299d8fc12",
+    "reference-profile": "69325117dc1d452e92afd38a1f2d99d04785b328d7dc8aec33ca0bd6a2f0a511",
+    "candidate-profile": "3ee34386e3865722d98756957f4e02c5b02438f8c805e060686146ecc92af7eb",
+    "proof": "ebc7e3729be89dcdf4ff1eec4175e702aa5867c2cf769c4e690109ffae2f9822",
+    "combat-proof": "a7a8214a99cf99957fd529a29968ac1b8aa60ee2e6ae0a4aed65d4a6b87774a6"
+  },
+  "runs": {
+    "move-a": {
+      "pal_fields": 984,
+      "work_lines": 274606,
+      "max_step_lines": 3130,
+      "paula_publications": 976,
+      "paula_empty": 10,
+      "paula_double": 2,
+      "audio_missed": 8,
+      "report_sha256": "b3ddc7fb628e5d315b764454fde176568d01519e5ddc5e75e10fad7b4514948f"
+    },
+    "move-d": {
+      "pal_fields": 984,
+      "work_lines": 274606,
+      "max_step_lines": 3130,
+      "paula_publications": 976,
+      "paula_empty": 10,
+      "paula_double": 2,
+      "audio_missed": 8,
+      "report_sha256": "c966f3c0d4e11194cfdc83dc432c07a5b846b4890689f55dac75f12ce4bdc358"
+    },
+    "still-a": {
+      "pal_fields": 966,
+      "work_lines": 258174,
+      "max_step_lines": 1565,
+      "paula_publications": 966,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "audio_missed": 0,
+      "report_sha256": "59fc920c2a2a7056197684fc9f475754da499f84c314c1caf9771ced0f7b2083"
+    },
+    "still-d": {
+      "pal_fields": 966,
+      "work_lines": 258162,
+      "max_step_lines": 1566,
+      "paula_publications": 966,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "audio_missed": 0,
+      "report_sha256": "ac23072edef58f406c0cb72d33b56f76280f7a58ba66e0f78b292ec1a9c80034"
+    },
+    "move-b": {
+      "pal_fields": 980,
+      "work_lines": 273432,
+      "max_step_lines": 2817,
+      "paula_publications": 974,
+      "paula_empty": 7,
+      "paula_double": 1,
+      "audio_missed": 6,
+      "report_sha256": "8e51fd930f7336ac3abdf5df4cc28cb79895a7a184a7c34ecbb26bf642fb9c63"
+    },
+    "move-c": {
+      "pal_fields": 982,
+      "work_lines": 273456,
+      "max_step_lines": 2817,
+      "paula_publications": 976,
+      "paula_empty": 7,
+      "paula_double": 1,
+      "audio_missed": 6,
+      "report_sha256": "ec29252050da7e2c467f6768a7ee2ce5a325d9447c24df0bbf4c6695648b18ad"
+    },
+    "still-b": {
+      "pal_fields": 961,
+      "work_lines": 255123,
+      "max_step_lines": 1565,
+      "paula_publications": 961,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "audio_missed": 0,
+      "report_sha256": "57425ff6fa2f136313aff33d1e7f09d8110a9f86d386167845ab90e0effcb55b"
+    },
+    "still-c": {
+      "pal_fields": 960,
+      "work_lines": 255087,
+      "max_step_lines": 1565,
+      "paula_publications": 960,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "audio_missed": 0,
+      "report_sha256": "cb800fa528861c8175b0d45c42697580b751228f60b58ebeab2e7a324a25c960"
+    },
+    "profile-a": {
+      "pal_fields": 985,
+      "work_lines": 274674,
+      "max_step_lines": 3128,
+      "paula_publications": 977,
+      "paula_empty": 8,
+      "paula_double": 0,
+      "audio_missed": 8,
+      "report_sha256": "9277ed0c287d7f5e640671d11b3b4e26cb3282f87db0fc2d196fa329ccb84e32",
+      "decimal_lines": [
+        476,
+        479
+      ]
+    },
+    "profile-b": {
+      "pal_fields": 982,
+      "work_lines": 273751,
+      "max_step_lines": 2814,
+      "paula_publications": 976,
+      "paula_empty": 7,
+      "paula_double": 1,
+      "audio_missed": 6,
+      "report_sha256": "edf253dbf9056a7405fcaf9e940505daccf89e428f8fcb7bd2c06175f464ebb2",
+      "decimal_lines": [
+        159,
+        190
+      ]
+    }
+  },
+  "host_sha256": "98ac4e9e053061548d464ef13dfead893230ee66105cecc7f0e0937764532008",
+  "proof_sha256": "01251abbff7ee711b66504a49053feadef5082d7a905e4b3484c5433eb7da510",
+  "decimal_proof_sha256": "de77781cada4641fcbdd4b9a90362b52c40fab78deb85ef94401c7e88db52f83"
+}

@@ -1,0 +1,6 @@
+{
+  "cases": 1024,
+  "common": 960,
+  "human_fallback": 64,
+  "ram_bytes": 65536
+}

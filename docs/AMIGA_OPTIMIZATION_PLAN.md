@@ -11,7 +11,13 @@ Først måles kostnadene pålitelig. Deretter erstattes de dyreste delene av
 den instruksjonstro oversettelsen med små, kildeavstemte C-/68000-rutiner.
 Spillfart, fysikk og fienderegler skal ikke justeres for å skjule treg kode.
 
-## Gjeldende status og beslutninger
+## Sluttkontroll i WinUAE
+
+Den samlede leveransen og de målte akseptansegrensene er beskrevet i
+[OP-kontrollen for PAL A500](OP_A500_ACCEPTANCE.md). Den erstatter
+arbeidsrekkefølgen nedenfor. WinUAE er valgt sluttplattform i denne runden.
+
+## Status før den samlede kontrollen
 
 Etter OP2-dekoderen fikk normalbygget ny meny og korrigert dødssekvens.
 OP2-målingen nedenfor bruker nettopp denne versjonen som utgangspunkt.
@@ -35,7 +41,7 @@ ikke leverte hastighetsforbedringer. Prosent fra ulike tidspar skal ikke
 summeres. Kontrollert reprise, stillestående mikrotest, romtur og naturlig
 spilling er forskjellige bevis og skal rapporteres hver for seg.
 
-## Neste arbeid innen OP0–OP6
+## Tidligere arbeid innen OP0–OP6
 
 **Poengvisningen er målt.** Sifferparene fra `$315D` skrives nå med en
 avgrenset 68000-rutine. Bevegelsesruten gikk fra 992 og 993 til 984
@@ -43,12 +49,22 @@ PAL-felt, med omtrent 40 ms kortere tid for det lengste spillsteget.
 Begge falltreffene beholder sine 53 poengtildelinger.
 [Poengmålingen](OP_SCORE_DISPLAY.md).
 
-**Neste forsøk.** Mål om omregningen av 24-bitspoeng til pakkede
-desimalsifre ved `$32DC` kan gjøres billigere på 68000. Bruk de samme
-to falltreffene, kontroller PHP/PLP-byten i stackminnet og prøv også
-scores som trenger alle åtte sifrene. Mål lengste spillsteg og faktisk
-Paula-publisering i både bevegelsesruten og stillestående kontroll før
-en eventuell leveranse.
+**Desimalkonverteringen er målt.** I to kjøringer gikk det lengste
+spillsteget fra 3130 til 2817 rasterlinjer. Bevegelsesruten gikk fra
+984 felt til henholdsvis 980 og 982 felt. [Måling og C64-kontroll](OP_SCORE_DECIMAL.md).
+
+**Spriteoppdateringen er målt.** På vanlige steg uten poengtildeling i
+rom 1 gikk `$2584` fra 49,9 rasterlinjer per steg med Bruce alene til
+158,7 med begge fiender. Det forklarer anslagsvis 22 % av det målte
+merarbeidet. De to gjentakelsene uten detaljmåling tok 720 felt alene
+og 961 med begge. [Måling og C64-kontroll](OP_SPRITE_COST.md).
+
+**Aktørmålingen er gjennomført.** Kallet `$1C29 → $179E` er målt på
+de fire rom 1-rutene. Intervallene skiller `$2D7C` fra `$1C5B` og
+`$2780` for Bruce, Yamo og Kage. En egen prøve bruker to
+tidsavlesinger rundt hele aktørkallet. Tallene, de valgte rutinene og
+de åpne akseptansegrensene står i
+[OP-kontrollen](OP_A500_ACCEPTANCE.md).
 
 ### 1. OP0: lett diagnose gjennomført
 

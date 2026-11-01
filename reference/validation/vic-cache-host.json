@@ -8,7 +8,7 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "f330173ba5d104f26dc8222f7ed2f44aade9df4471097fa0aaf442ea193f96c8"
+      "sha256": "e3f93a9f6d4512d69c5ee31642f2f0f6270e197812fb15a62e5805c910c79839"
     },
     {
       "path": "tests/vic_cache_bridge.c",

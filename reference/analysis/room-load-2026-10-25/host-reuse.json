@@ -259,11 +259,11 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "8a63248355b77fc9a41ca12315509a7f893522e31bf6eca28d957688047733d5"
+      "sha256": "00151b46aa07471f91e30857f65189abd6d43b1c4ef7e36452ef7c6c8332ff8e"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "6fcbf402b25472c7701f71484eeb047cf4dd0e83ad7af5d0c95e42b0ee6383cf"
+      "sha256": "e8d502daf803685c2c77c75a3846732e8f02001fcf6a2b17c14434935f93044f"
     },
     {
       "path": "test-room-reuse.ps1",

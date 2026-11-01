@@ -46,7 +46,10 @@ def main():
   reload=dict(injected_source_fields={'$D1':255,'$BF':25,'$CE':1},loader_epoch_before=old,loader_epoch_after=new)
   time.sleep(8)
  def front():
-  copper=int(re.search(r'COP1LC: \$([0-9a-fA-F]+)',cmd('DBG c'))[1],16)
+  registers=cmd('DBG c')
+  executing=int(re.search(r'COPPTR: \$([0-9a-fA-F]+)',registers)[1],16)
+  choices=struct.unpack('>II',read(hunks[3]+syms['copper']-bss,8))
+  copper=next(base for base in choices if base<=executing<base+1024)
   words=struct.unpack('>34H',read(copper,68));return words[19]*65536+words[21]
  out=ROOT/'reference/analysis/render-coherence-2026-10-29'/a.label;out.mkdir(parents=True,exist_ok=True)
  rows=[];flicker_rules=flicker_contract(11)

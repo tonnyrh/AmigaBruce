@@ -1,0 +1,69 @@
+{
+  "mode": "adf",
+  "normal_exe_sha256": "958838a6eaf9bb83345c7d5b09c3a298c6454c1a61beb4c192b7947ce2196a02",
+  "complete_menu": true,
+  "menu_sha256": "1c31ef755fe04c957206e7e484cec859e291842ef58ea3129577f802102e9c22",
+  "layout": [
+    {
+      "section": ".text",
+      "base": 12617488,
+      "bytes": 185736
+    },
+    {
+      "section": ".rodata",
+      "base": 12803240,
+      "bytes": 85536
+    },
+    {
+      "section": ".data",
+      "base": 12888792,
+      "bytes": 9
+    },
+    {
+      "section": ".bss",
+      "base": 12888816,
+      "bytes": 171092
+    }
+  ],
+  "dma": {
+    "background": 232472,
+    "sfx_pcm": 348456,
+    "tile_dma": 125976,
+    "fighter_dma": 273432
+  },
+  "before": {
+    "field": 2581,
+    "steps": 127,
+    "ticks": 387,
+    "misses": 57,
+    "room": 1,
+    "actors": [
+      1,
+      0,
+      65
+    ],
+    "fault": 0
+  },
+  "after": {
+    "field": 8588,
+    "steps": 1855,
+    "ticks": 6393,
+    "misses": 57,
+    "room": 1,
+    "actors": [
+      1,
+      129,
+      65
+    ],
+    "fault": 0
+  },
+  "fields": 6007,
+  "steps": 1728,
+  "misses": 0,
+  "turn_after_death": {
+    "player": 2,
+    "room": 1,
+    "falls": 4,
+    "fault": 0
+  }
+}

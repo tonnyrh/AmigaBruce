@@ -25,6 +25,9 @@ def enabled():
 
 def verify():
  if not globals().get('_contact_parent_replay',False):
+  if (ROOT/'reference/analysis/op-finish-2026-10-31/result.json').is_file():
+   from verify_op_finish import verify_current as verify_finish
+   return verify_finish()
   if (ROOT/'reference/analysis/op-score-2026-10-31/build.json').is_file():
    from verify_score_display_delivery import verify_current as verify_score
    return verify_score()

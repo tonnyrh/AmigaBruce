@@ -1,0 +1,535 @@
+{
+  "normal_sha256": "19e5ccb535e7e1c4de6ecec347790dae679a4a32762220fc72e925502f03f81e",
+  "machine": {
+    "cpu_model": "68000",
+    "cpu_speed": "real",
+    "cycle_exact": "true",
+    "cpu_cycle_exact": "true",
+    "cpu_memory_cycle_exact": "true",
+    "blitter_cycle_exact": "true",
+    "ntsc": "false",
+    "chipset": "ocs",
+    "chipmem_size": "1",
+    "bogomem_size": "2",
+    "fastmem_size": "0"
+  },
+  "builds": {
+    "reference": "70d146787d7f24891b604d892b60273871a75dd9c2ca599a3d00172299d8fc12",
+    "profile": "5606abefe1b2255c3a1236d2740788dd2458d9c77130af3af663638b29ed4faa",
+    "outer": "1a8e4829d0ea1c5acbb3126e5a8bf84933660ce52b96a18ff722cf1b06fc9f61"
+  },
+  "source_report_sha256": "1e3e6f11957eb74952a383aa830fd6b8abdbf9413318f6290360d7771dbba636",
+  "runs": {
+    "ref-solo-a": {
+      "pal_fields": 720,
+      "work_lines": 136869,
+      "pal_lines": 225322,
+      "wait_lines": 85702,
+      "loops": 480,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "05c4bb376a7832978cc8ef2d07d9e179cf6e77b0868dfb03204f35120dcf2927"
+    },
+    "ref-solo-b": {
+      "pal_fields": 720,
+      "work_lines": 136886,
+      "pal_lines": 225324,
+      "wait_lines": 85714,
+      "loops": 480,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "b315a2d87b62bd1417a174abcb5741f9c886d1cf92cb2f7a2dbd90a8f0e211e0"
+    },
+    "ref-yamo-a": {
+      "pal_fields": 730,
+      "work_lines": 192490,
+      "pal_lines": 228472,
+      "wait_lines": 34444,
+      "loops": 240,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "c254f8a059ac0e38f863b8da8970b8bd634b7922dc9c31e4e00a5b2f54d500ed"
+    },
+    "ref-kage-a": {
+      "pal_fields": 720,
+      "work_lines": 173211,
+      "pal_lines": 225658,
+      "wait_lines": 50830,
+      "loops": 253,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "53492af8bf1c3778198a116f2ebabaa639c5c8d0bd7a4734c44a5ee8494198b5"
+    },
+    "ref-both-a": {
+      "pal_fields": 961,
+      "work_lines": 256049,
+      "pal_lines": 301091,
+      "wait_lines": 43476,
+      "loops": 240,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "65e828e94aed0f5690bb5a5970025520e32bd3995ccbde74376e4b1793d7ffc4"
+    },
+    "ref-both-b": {
+      "pal_fields": 961,
+      "work_lines": 255121,
+      "pal_lines": 300771,
+      "wait_lines": 44105,
+      "loops": 240,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "e7522522ac77931282824fe4db39313a9807be1352e3bf9e1726dbaf00b8130d"
+    },
+    "detail-solo-a": {
+      "pal_fields": 720,
+      "work_lines": 141232,
+      "pal_lines": 225330,
+      "wait_lines": 81377,
+      "loops": 480,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "02ff49fc772a4e659df81245be29973b72df0d1ebc19d00d4db724256171784f",
+      "phases_per_step": [
+        11.433333333333334,
+        5.9,
+        6.35,
+        7.266666666666667,
+        22.083333333333332
+      ],
+      "actor_phase_lines_per_step": [
+        [
+          8.2,
+          2.1,
+          6.35,
+          7.266666666666667,
+          22.083333333333332
+        ],
+        [
+          0.9333333333333333,
+          1.8166666666666667,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          2.3,
+          1.9833333333333334,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "raw_sample_per_step": 93.33333333333333,
+      "empty_sample_per_step": 40.3,
+      "other_steps_per_step": 52.85,
+      "active": [
+        240,
+        0,
+        0
+      ],
+      "still": [
+        239,
+        0,
+        0
+      ],
+      "same_pose": [
+        239,
+        0,
+        0
+      ],
+      "due": [
+        0,
+        0,
+        0
+      ],
+      "paid": [
+        0,
+        0,
+        0
+      ]
+    },
+    "detail-solo-b": {
+      "pal_fields": 720,
+      "work_lines": 141197,
+      "pal_lines": 225322,
+      "wait_lines": 81357,
+      "loops": 480,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "ec52e03a9d8291559146c100f132fbd1cf9f2eef21c21f60f04fc3b3774477df",
+      "phases_per_step": [
+        11.166666666666666,
+        6.083333333333333,
+        6.45,
+        7.283333333333333,
+        22.033333333333335
+      ],
+      "actor_phase_lines_per_step": [
+        [
+          8.066666666666666,
+          2.1,
+          6.45,
+          7.283333333333333,
+          22.033333333333335
+        ],
+        [
+          0.9,
+          1.9833333333333334,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          2.2,
+          2.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "raw_sample_per_step": 93.23333333333333,
+      "empty_sample_per_step": 40.21666666666667,
+      "other_steps_per_step": 52.916666666666664,
+      "active": [
+        240,
+        0,
+        0
+      ],
+      "still": [
+        239,
+        0,
+        0
+      ],
+      "same_pose": [
+        239,
+        0,
+        0
+      ],
+      "due": [
+        0,
+        0,
+        0
+      ],
+      "paid": [
+        0,
+        0,
+        0
+      ]
+    },
+    "detail-yamo-a": {
+      "pal_fields": 745,
+      "work_lines": 198725,
+      "pal_lines": 233147,
+      "wait_lines": 32863,
+      "loops": 240,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "2f5a4687eae2ca23696ed70faa4179aff1d5c885eb7fee5b903a2696352ec4f6",
+      "phases_per_step": [
+        17.116666666666667,
+        33.06666666666667,
+        13.166666666666666,
+        14.233333333333333,
+        46.63333333333333
+      ],
+      "actor_phase_lines_per_step": [
+        [
+          8.0,
+          13.533333333333333,
+          6.55,
+          7.3,
+          22.6
+        ],
+        [
+          7.15,
+          2.966666666666667,
+          6.616666666666666,
+          6.933333333333334,
+          24.033333333333335
+        ],
+        [
+          1.9666666666666666,
+          16.566666666666666,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "raw_sample_per_step": 190.5,
+      "empty_sample_per_step": 66.28333333333333,
+      "other_steps_per_step": 117.1,
+      "active": [
+        240,
+        240,
+        0
+      ],
+      "still": [
+        239,
+        115,
+        0
+      ],
+      "same_pose": [
+        239,
+        157,
+        0
+      ],
+      "due": [
+        16,
+        1,
+        21
+      ],
+      "paid": [
+        16,
+        1,
+        21
+      ]
+    },
+    "detail-kage-a": {
+      "pal_fields": 722,
+      "work_lines": 179914,
+      "pal_lines": 226268,
+      "wait_lines": 44801,
+      "loops": 241,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "fb2a7a0e38a28649117cdf174fc5f26785e2e6994095cdcb400837887acbbc83",
+      "phases_per_step": [
+        14.816666666666666,
+        43.983333333333334,
+        9.466666666666667,
+        10.616666666666667,
+        35.416666666666664
+      ],
+      "actor_phase_lines_per_step": [
+        [
+          8.666666666666666,
+          2.1166666666666667,
+          6.416666666666667,
+          7.133333333333334,
+          22.7
+        ],
+        [
+          0.8,
+          2.066666666666667,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          5.35,
+          39.8,
+          3.05,
+          3.4833333333333334,
+          12.716666666666667
+        ]
+      ],
+      "raw_sample_per_step": 167.38333333333333,
+      "empty_sample_per_step": 53.083333333333336,
+      "other_steps_per_step": 112.72222222222223,
+      "active": [
+        240,
+        0,
+        240
+      ],
+      "still": [
+        239,
+        0,
+        239
+      ],
+      "same_pose": [
+        239,
+        0,
+        222
+      ],
+      "due": [
+        0,
+        0,
+        53
+      ],
+      "paid": [
+        0,
+        0,
+        53
+      ]
+    },
+    "detail-both-a": {
+      "pal_fields": 978,
+      "work_lines": 263747,
+      "pal_lines": 306379,
+      "wait_lines": 41099,
+      "loops": 240,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "86698ff6174fe25a0caac04d5fe23997419308fe2cd06a40a66062477cdd2308",
+      "phases_per_step": [
+        20.916666666666668,
+        57.833333333333336,
+        16.55,
+        17.666666666666668,
+        59.28333333333333
+      ],
+      "actor_phase_lines_per_step": [
+        [
+          8.433333333333334,
+          8.333333333333334,
+          6.433333333333334,
+          7.15,
+          22.566666666666666
+        ],
+        [
+          7.05,
+          8.833333333333334,
+          6.7,
+          7.083333333333333,
+          24.116666666666667
+        ],
+        [
+          5.433333333333334,
+          40.666666666666664,
+          3.4166666666666665,
+          3.433333333333333,
+          12.6
+        ]
+      ],
+      "raw_sample_per_step": 251.51666666666668,
+      "empty_sample_per_step": 79.26666666666667,
+      "other_steps_per_step": 162.93333333333334,
+      "active": [
+        240,
+        240,
+        240
+      ],
+      "still": [
+        239,
+        115,
+        239
+      ],
+      "same_pose": [
+        239,
+        157,
+        222
+      ],
+      "due": [
+        8,
+        10,
+        50
+      ],
+      "paid": [
+        8,
+        10,
+        50
+      ]
+    },
+    "detail-both-b": {
+      "pal_fields": 978,
+      "work_lines": 263069,
+      "pal_lines": 306379,
+      "wait_lines": 41768,
+      "loops": 240,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "183e9cb6541929a8b3e61ddfa2457d674de4d1af01f520da49b2e61331494e65",
+      "phases_per_step": [
+        20.683333333333334,
+        57.28333333333333,
+        16.6,
+        17.716666666666665,
+        59.28333333333333
+      ],
+      "actor_phase_lines_per_step": [
+        [
+          8.433333333333334,
+          7.65,
+          6.516666666666667,
+          7.183333333333334,
+          22.483333333333334
+        ],
+        [
+          6.85,
+          9.566666666666666,
+          6.666666666666667,
+          7.166666666666667,
+          24.25
+        ],
+        [
+          5.4,
+          40.06666666666667,
+          3.4166666666666665,
+          3.3666666666666667,
+          12.55
+        ]
+      ],
+      "raw_sample_per_step": 250.88333333333333,
+      "empty_sample_per_step": 79.31666666666666,
+      "other_steps_per_step": 163.0388888888889,
+      "active": [
+        240,
+        240,
+        240
+      ],
+      "still": [
+        239,
+        115,
+        239
+      ],
+      "same_pose": [
+        239,
+        157,
+        222
+      ],
+      "due": [
+        7,
+        11,
+        49
+      ],
+      "paid": [
+        7,
+        11,
+        49
+      ]
+    },
+    "outer-solo": {
+      "pal_fields": 720,
+      "work_lines": 137545,
+      "pal_lines": 225326,
+      "wait_lines": 85086,
+      "loops": 480,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "ae464ef9f1fe414b5699f11e5f53ba48ae9807fd4bd33b7a6de12d40c2675c61",
+      "due": 0,
+      "paid": 0,
+      "driver_lines_per_step": 49.854166666666664
+    },
+    "outer-both": {
+      "pal_fields": 966,
+      "work_lines": 257450,
+      "pal_lines": 302343,
+      "wait_lines": 43327,
+      "loops": 240,
+      "paula_empty": 0,
+      "paula_double": 0,
+      "report_sha256": "8fe6416c8c27fcef46c8ebcd8e3301546ab523a6c92da5ed2d795b8136f752e7",
+      "due": 241,
+      "paid": 241,
+      "driver_lines_per_step": 158.7375
+    }
+  },
+  "phase_names": [
+    "setup",
+    "service",
+    "destination",
+    "pose",
+    "copy"
+  ],
+  "extra_work_lines_per_step": 494.6145833333333,
+  "extra_driver_lines_per_step": 108.88333333333335,
+  "estimated_work_share": 0.22013773350462276,
+  "detailed_extra_lines_per_step": [
+    9.5,
+    51.56666666666666,
+    10.175,
+    10.416666666666668,
+    37.225
+  ]
+}
