@@ -12,20 +12,27 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'assets/audio/enhanced-v1'
 YAMO_HITS = ROOT/'assets/audio/enhanced-yamo-hit-v2'
 BRUCE_FINISH = ROOT/'assets/audio/enhanced-bruce-finish-v1'
+APPROVED = ROOT/'assets/audio/enhanced-combat-v2'
 LEVELS = (-120,-82,-55,-36,-23,-13,-6,0,0,6,13,23,36,55,82,120)
 # Name, playback rate, maximum duration in ms, Paula volume.
 CUES = (
     ('bruce_punch',8000,90,46), ('bruce_kick',8000,118,50),
     ('yamo_punch',7200,108,54), ('yamo_kick',7200,135,56),
     ('kage_punch',8000,88,43), ('kage_kick',8000,110,45),
-    ('kage_blade',8000,124,49), ('yamo_hit',8000,110,54),
-    ('bruce_finish',4000,250,58),
+    ('kage_blade',8000,450,49), ('yamo_hit',8000,110,54),
+    ('bruce_shout',8000,1000,58),
 )
 
 
 def sample_path(name, variant):
-    if name=='bruce_finish':return BRUCE_FINISH/'bruce_finish.wav'
+    if name=='bruce_shout':return APPROVED/'bruce_shout.wav'
+    if name=='kage_blade' or (name=='kage_kick' and variant==1):
+        return APPROVED/f'{name}_{variant}.wav'
     return (YAMO_HITS if name=='yamo_hit' else OUT)/f'{name}_{variant}.wav'
+
+
+def sample_pitch(name, variant):
+    return 1.0 if name in ('bruce_shout','kage_blade') else (0.98,1.02)[variant]
 
 
 def select_yamo(folder):
@@ -144,6 +151,7 @@ def select(folder):
 
 def build(preview=None):
     packed=bytearray()
+    long_pcm=bytearray()
     offsets={}
     rows=[]
     reel=[]
@@ -153,14 +161,21 @@ def build(preview=None):
                 assert (w.getframerate(),w.getnchannels(),w.getsampwidth())==(rate,1,2)
                 count=w.getnframes()
                 samples=struct.unpack(f'<{count}h',w.readframes(count))
-            assert 0<count<=1024 and count%2==0
+            assert 0<count<=8000 and count%2==0
             codes=[min(range(16),key=lambda i:abs(x-256*LEVELS[i])) for x in samples]
-            pitch=1.0 if name=='bruce_finish' else (0.98 if not variant else 1.02)
+            pitch=sample_pitch(name,variant)
             period=round(3546895/(rate*pitch))
-            encoded=bytes((a<<4)|b for a,b in zip(codes[::2],codes[1::2]))
-            if encoded not in offsets:
-                offsets[encoded]=len(packed);packed.extend(encoded)
-            rows.append((offsets[encoded],count//2,period,volume))
+            # Long clips play directly from a Chip hunk. This avoids larger
+            # per-voice work pages, streaming work and expansion-RAM growth.
+            # Quantization matches the approved listening-page preview.
+            direct=count>1024
+            encoded=(bytes(LEVELS[c]&255 for c in codes) if direct else
+                     bytes((a<<4)|b for a,b in zip(codes[::2],codes[1::2])))
+            key=(direct,encoded)
+            bank=long_pcm if direct else packed
+            if key not in offsets:
+                offsets[key]=len(bank);bank.extend(encoded)
+            rows.append((offsets[key],count//2,period,volume))
             assert LEVELS[codes[0]]==LEVELS[codes[-1]]==0 and len(set(codes))>=7
             if preview:
                 # Render at the actual Paula period and programmed volume.
@@ -178,14 +193,19 @@ def build(preview=None):
     lines += [','.join(f'0x{v:04x}' for v in words[i:i+12])+',' for i in range(0,len(words),12)]
     lines+=['};','static const UBYTE foley_bank[]={']
     lines += [','.join(map(str,packed[i:i+24]))+',' for i in range(0,len(packed),24)]
-    lines+=['};','']
+    lines+=['};', '#ifdef __m68k__',
+            '#define FOLEY_CHIP __attribute__((section(".MEMF_CHIP"),aligned(2)))',
+            '#else', '#define FOLEY_CHIP', '#endif',
+            'static const UBYTE foley_long_pcm[] FOLEY_CHIP={']
+    lines += [','.join(map(str,long_pcm[i:i+24]))+',' for i in range(0,len(long_pcm),24)]
+    lines+=['};','#undef FOLEY_CHIP','']
     header=ROOT/'amiga/enhanced_audio_data.h'
     content='\n'.join(lines)
     if not header.exists() or header.read_text()!=content:header.write_text(content,encoding='ascii')
     if preview:
         if preview.exists():raise SystemExit(f'Preview already exists: {preview}')
         write_wav(preview,16000,reel)
-    print(f'Enhanced combat: {len(rows)} playback entries, {len(offsets)} unique samples, {len(packed)} packed bytes, maximum {2*max(r[1] for r in rows)} bytes per source voice')
+    print(f'Enhanced combat: {len(rows)} playback entries, {len(offsets)} unique samples, {len(packed)} packed bytes, {len(long_pcm)} direct Chip bytes; source voice pages remain 1024 bytes')
 
 
 if __name__=='__main__':

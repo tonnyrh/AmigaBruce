@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bruce · Sound test</title>
+<style>
+  :root {color-scheme:dark;font:16px/1.5 system-ui,sans-serif;background:#111b23;color:#edf2ee}
+  * {box-sizing:border-box} body {max-width:1060px;margin:auto;padding:40px 24px 100px}
+  header {border-bottom:1px solid #35434e;padding-bottom:24px} h1 {font-size:clamp(2rem,6vw,3.3rem);margin:0;letter-spacing:-.04em}
+  .eyebrow {color:#eac56b;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+  p {max-width:710px;color:#b1c2ce} h2 {font-size:1.3rem;margin:32px 0 14px} .controls {display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:24px}
+  button,select {font:inherit;border:1px solid #536875;border-radius:7px;background:#213440;color:inherit;padding:10px 15px;cursor:pointer}
+  button:hover,select:hover {background:#304b59} button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible {outline:3px solid #efd07b;outline-offset:3px}
+  .primary {background:#eac56b;color:#18222a;border-color:#eac56b;font-weight:700} .primary:hover {background:#f5d994}
+  label {display:flex;align-items:center;gap:10px} input {accent-color:#eac56b} .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+  article {background:#1a2934;border:1px solid #354650;border-radius:10px;padding:18px;transition:border-color .15s}
+  article.playing {border-color:#eac56b;box-shadow:0 0 0 1px #eac56b} article h3 {font-size:1rem;margin:0 0 4px} .meta {font-size:.85rem;color:#a9bdc9;margin-bottom:18px}
+  .badge {display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#eac56b;margin-bottom:8px}
+  [hidden] {display:none!important}
+  .actions {display:flex;align-items:center;justify-content:space-between;gap:12px} a {color:#eac56b;font-size:.9rem}
+  details {margin-top:16px;border-top:1px solid #354650;padding-top:12px}
+  summary {cursor:pointer;color:#eac56b;font-size:.9rem} .generator {font-size:.8rem;color:#a9bdc9;margin:10px 0 8px}
+  textarea {display:block;width:100%;min-height:150px;resize:vertical;margin-bottom:10px;padding:10px;border:1px solid #536875;border-radius:6px;background:#111b23;color:#edf2ee;font:13px/1.5 system-ui,sans-serif}
+  textarea:focus-visible,summary:focus-visible {outline:3px solid #efd07b;outline-offset:3px}
+  #status {position:sticky;top:12px;background:#243b48;border:1px solid #536875;border-radius:8px;padding:12px 16px;z-index:1;margin-top:24px;min-height:49px}
+  footer {margin-top:32px;border-top:1px solid #35434e;padding-top:16px;color:#a9bdc9;font-size:.85rem}
+</style>
+<header>
+  <div class="eyebrow">Bruce / Enhanced audio</div>
+  <h1>Sound test</h1>
+  <p>Try the imported shout for Bruce and the new air swishes for Kage. The selected takes are included in RC2. Switch to Current game to hear the complete installed sound bank. Open Generation prompt on a generated sound to view and copy its prompt.</p>
+  <div class="controls">
+    <button id="all" class="primary">Play all</button><button id="stop">Stop</button>
+    <label>Collection <select id="collection"><option value="drafts">Selected takes</option><option value="current">Current game</option><option value="all">All sounds</option></select></label>
+    <label>Version <select id="version"><option value="original">Before compression</option><option value="game">Amiga sample preview</option></select></label>
+    <label>Volume <input id="volume" type="range" min="0" max="100" value="65" aria-label="Playback volume"><output id="level">65%</output></label>
+  </div>
+</header>
+<div id="status" role="status" aria-live="polite">Loading sounds…</div>
+<main id="sounds"></main>
+<footer>These four selected takes are included in Enhanced RC2. In the game, Bruce has a one-in-three shout chance on punches while no shout is playing; here the Play button always plays the selected sound. The Amiga preview uses the game's quantization and PAL playback pitch. “Before compression” uses the selected WAV at the same pitch and volume. This is an isolated preview, without other game voices, Amiga analogue filtering or speaker coloration. No files are uploaded. This page works offline.</footer>
+<script>
+'use strict';
+const sounds = /* SOUND_DATA */ [];
+const byId = id => document.getElementById(id);
+const player = new Audio();
+let serial = 0, gap = null;
+let visible = [];
+player.volume = 0.65;
+function stop(message = 'Stopped') {
+  serial++;
+  clearTimeout(gap);
+  player.onended = null;
+  player.pause();
+  player.currentTime = 0;
+  document.querySelectorAll('.playing').forEach(el => el.classList.remove('playing'));
+  byId('status').textContent = message;
+}
+function label(sound) {
+  return `${sound.group} · ${sound.title}${sound.variant ? ` · Variant ${sound.variant}` : ''}`;
+}
+async function play(index, sequence = false, token = serial) {
+  const sound = sounds[index];
+  if (token !== serial) return;
+  document.querySelectorAll('.playing').forEach(el => el.classList.remove('playing'));
+  byId(sound.id).classList.add('playing');
+  const position = visible.indexOf(index);
+  byId('status').textContent = `Playing${position < 0 ? '' : ` ${position + 1}/${visible.length}`} · ${label(sound)}`;
+  player.src = sound[byId('version').value];
+  player.onended = () => {
+    if (token !== serial) return;
+    byId(sound.id).classList.remove('playing');
+    const next = visible.indexOf(index) + 1;
+    if (sequence && next < visible.length) {
+      gap = setTimeout(() => play(visible[next], true, token), 700);
+    } else {
+      byId('status').textContent = sequence ? 'Finished · All sounds played' : `Finished · ${label(sound)}`;
+    }
+  };
+  try { await player.play(); }
+  catch (error) {
+    if (token === serial) stop(`Playback unavailable: ${error.message}. Try clicking Play again.`);
+  }
+}
+for (const group of ['Bruce', 'Yamo', 'Kage']) {
+  const section = document.createElement('section'); section.dataset.group = group;
+  const heading = document.createElement('h2'); heading.textContent = group; section.append(heading);
+  const grid = document.createElement('div'); grid.className = 'grid'; section.append(grid);
+  sounds.forEach((sound, index) => {
+    if (sound.group !== group) return;
+    const card = document.createElement('article'); card.id = sound.id;
+    const badge = document.createElement('div'); badge.className = 'badge';
+    badge.textContent = sound.audition ? 'Selected · RC2' : 'Current game'; card.append(badge);
+    const title = document.createElement('h3'); title.textContent = sound.title; card.append(title);
+    const meta = document.createElement('div'); meta.className = 'meta';
+    meta.textContent = `${sound.variant ? `Variant ${sound.variant} · ` : ''}${sound.duration} ms`; card.append(meta);
+    const actions = document.createElement('div'); actions.className = 'actions';
+    const button = document.createElement('button'); button.textContent = '▶ Play';
+    button.setAttribute('aria-label', `Play ${label(sound)}`);
+    button.onclick = () => { stop(); play(index); }; actions.append(button);
+    const link = document.createElement('a'); link.textContent = 'Download WAV'; link.dataset.index = index;
+    actions.append(link); card.append(actions);
+    const details = document.createElement('details');
+    const summary = document.createElement('summary'); summary.textContent = sound.prompt ? 'Generation prompt' : 'Audio source'; details.append(summary);
+    const generator = document.createElement('div'); generator.className = 'generator';
+    generator.textContent = `${sound.prompt ? 'Generator' : 'Source'}: ${sound.generator || 'Not recorded'}`; details.append(generator);
+    const prompt = document.createElement('textarea'); prompt.readOnly = true;
+    prompt.value = sound.prompt || sound.note || 'No generation prompt was recorded for this sound.';
+    prompt.setAttribute('aria-label', `${sound.prompt ? 'Generation prompt' : 'Audio source'} for ${label(sound)}`); details.append(prompt);
+    if (sound.prompt) {
+      const copy = document.createElement('button'); copy.textContent = 'Copy prompt';
+      copy.setAttribute('aria-label', `Copy generation prompt for ${label(sound)}`);
+      copy.onclick = async () => {
+        try {
+          await navigator.clipboard.writeText(sound.prompt);
+          byId('status').textContent = `Prompt copied · ${label(sound)}`;
+        } catch {
+          prompt.focus(); prompt.select();
+          byId('status').textContent = 'Automatic copying is unavailable. The prompt is selected — press Ctrl+C (Command+C on Mac).';
+        }
+      };
+      details.append(copy);
+    }
+    card.append(details); grid.append(card);
+  });
+  byId('sounds').append(section);
+}
+function updateCollection() {
+  const collection = byId('collection').value;
+  visible = sounds.map((sound, index) => index).filter(index => collection === 'all' || sounds[index].audition === (collection === 'drafts'));
+  sounds.forEach((sound, index) => { byId(sound.id).hidden = !visible.includes(index); });
+  document.querySelectorAll('section[data-group]').forEach(section => {
+    section.hidden = !visible.some(index => sounds[index].group === section.dataset.group);
+  });
+  byId('all').disabled = !visible.length;
+  byId('status').textContent = `Ready · ${visible.length} sounds · Click Play to listen`;
+}
+function updateDownloads() {
+  document.querySelectorAll('a[data-index]').forEach(link => {
+    const sound = sounds[Number(link.dataset.index)];
+    link.href = sound[byId('version').value];
+    link.download = `${sound.id}-${byId('version').value}.wav`;
+  });
+}
+byId('all').onclick = () => { stop(); if (visible.length) play(visible[0], true); };
+byId('stop').onclick = () => stop();
+byId('collection').onchange = () => { stop(); updateCollection(); };
+byId('version').onchange = () => { stop('Version changed · Click Play to listen'); updateDownloads(); };
+byId('volume').oninput = event => {
+  player.volume = event.target.value / 100;
+  byId('level').value = `${event.target.value}%`;
+};
+document.addEventListener('keydown', event => { if (event.key === 'Escape') stop(); });
+updateDownloads();
+if (!sounds.some(sound => sound.audition)) byId('collection').value = 'current';
+updateCollection();
+</script>
+</html>

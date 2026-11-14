@@ -202,3 +202,14 @@ Diskettbygget startet i WinUAE pÃƒÂ¥ PAL A500 med 512+512 KiB. Begge menyval
 - **Rom og grafikk.** I Enhanced ble 8 012 forgrunnspiksler i rom 1 og 10 892 i rom 2 kontrollert mot tegn og farger i levende C64-RAM. Alle 20 rom ble besÃƒÂ¸kt via debug-romvalg. Dette dekker innlasting og tegning. Naturlig gjennomspilling av overgangene er en egen test. [CLI-prÃƒÂ¸ve og rombesÃƒÂ¸k](../reference/analysis/enhanced-2026-11-01/cli-tour.json)
 - **Spilltilstand.** En kontrollert vertsprÃƒÂ¸ve kjÃƒÂ¸rte begge bakgrunnstegnerne med identiske joystickdata, 2 400 felt og rom 1, 2, 6, 12, 19 og 20. Hele kilde-RAM pÃƒÂ¥ 65 536 byte var identisk etter hvert av 800 spillsteg. PrÃƒÂ¸ven tester om visningsbanen pÃƒÂ¥virker motoren. Den mÃƒÂ¥ler ikke hastigheten pÃƒÂ¥ en 68000. [Gjenta prÃƒÂ¸ven](../reference/analysis/enhanced-2026-11-01/replay.ps1)
 - **Kamp pÃƒÂ¥ Amiga.** DiskettprÃƒÂ¸ven registrerte 43 steg over 127 PAL-felt i et kort vindu, med begge fiendene aktive ved begge avlesinger. Telleren for tapte lydtikk ÃƒÂ¸kte ikke. Den lengre kampmÃƒÂ¥lingen fra fÃƒÂ¸r Enhanced er fortsatt referansen for videre ytelsesarbeid. [Tidligere mÃƒÂ¥ling](OP_A500_ACCEPTANCE.md)
+
+
+## RC2 combat sound selection, 14 November 2026
+
+The user-approved listening takes are now in Enhanced: the supplied `Bruce shout.mp3`, Kage's quick and broad weapon swishes, and Kage Kick Variant 2. Their selected WAVs and exact prompts/conversion records are in `assets/audio/enhanced-combat-v2/`. The original audition takes and older production banks are preserved.
+
+The former lethal-punch-only cry described above is superseded. Each Bruce punch playback has a one-in-three chance to use the imported shout while no shout is already playing; other punches use the ordinary punch variants. A presentation-only 16-bit generator selects the sound without reading or modifying the C64 RNG or game state. The browser Play button always plays its chosen clip.
+
+The two swishes and full one-second shout are quantized identically to the approved Amiga preview and placed in a dedicated 13,600-byte Chip-memory hunk. Paula plays them directly. The other samples retain the packed bank and existing 1024-byte source-voice pages. Long clips cannot be cut short by footsteps and Bruce's voice cannot overlap itself. No source gameplay routine or Classic sound mapping changes.
+
+Use `test-enhanced-audio.ps1` for the routing, full-period probability and source-state checks; `tools/check_rc2_audio.py` checks the owned WinUAE normal disk. The current native checks resolve the BSS hunk from ELF rather than assuming four hunks. Historical diagnostics tied to older four-hunk probe builds should be used with those matching builds.

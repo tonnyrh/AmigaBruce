@@ -5,7 +5,7 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
 
 ## Maskinkontroll før endelig godkjenning
 
-- **Release candidate / Bruce finisher (14 November).** Listen to the new Enhanced finishing cry during natural combat on physical Amiga. It should occur once when Bruce kills Kage or Yamo with a punch, and finish without being cut off by footsteps. Nonlethal punches, kicks and Classic must not play it. Controlled host/source/WinUAE checks are recorded in the [finisher report](../reference/analysis/bruce-finisher-2026-11-14/report.json).
+- **RC2 Enhanced combat audio (14 November).** Listen on physical Amiga to the imported Bruce shout (one-in-three chance on punches while no shout is playing), both Kage weapon swishes and Kage Kick Variant 2. Check that long clips finish cleanly and that Classic keeps its source audio. Host probability/source-state checks and the normal-ADF WinUAE playback checks pass; physical listening acceptance remains open. [RC2 evidence](../reference/analysis/release-rc2-2026-11-14/report.json). The RC1 lethal-punch-only cry has been replaced.
 
 - **Enhanced death and Yamo impacts (12 November).** On physical Amiga, verify that bomb death holds Bruce's stiff pose in both facing directions and that Yamo's two new impact samples are audible and comfortable in combat. The four controlled WinUAE death cases and host audio checks pass. [Death evidence](../reference/analysis/enhanced-death-2026-11-12/report.json) · [Audio evidence](../reference/analysis/yamo-impact-2026-11-12/report.json).
 

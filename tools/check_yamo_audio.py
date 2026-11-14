@@ -13,7 +13,7 @@ import time
 import wave
 
 from build_enhanced_audio import CUES, LEVELS, sample_path
-from capture_paula_stream import elf_symbols
+from capture_paula_stream import elf_symbols, elf_hunk_index
 from title_reference import reference
 from winuae_ipc import command, tap_fire
 
@@ -46,9 +46,10 @@ def check(folder, pid):
     wait(lambda:front()==reference(),240)
     task=val(val(4)+276);cli=val(task+172)*4;node=val(cli+60)*4;hunks=[]
     while node:
-        hunks.append(node+4);node=val(node)*4;assert len(hunks)<=4
+        hunks.append(node+4);node=val(node)*4;assert len(hunks)<=8
     bss,symbols=elf_symbols(folder/'release.elf')
-    def addr(name):return hunks[3]+symbols[name]-bss
+    bss_hunk=elf_hunk_index(folder/'release.elf')
+    def addr(name):return hunks[bss_hunk]+symbols[name]-bss
     assert not val(addr('foley_active'),1)
     key('F4');wait(lambda:front()==reference(enhanced=True))
     tap_fire(cmd);wait(lambda:val(addr('game_field_active'),1))

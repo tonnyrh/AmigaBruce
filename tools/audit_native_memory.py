@@ -28,10 +28,11 @@ def main():
   process_stack=dict(size=long(task+offsets[4]),high_end_bptr=long(task+offsets[5]),previous_frame=hex(long(task+offsets[6])))
   cli=long(task+offsets[7])*4;process_stack['cli_default_stack_words']=long(cli+offsets[8]);node=long(cli+60)*4;hunks=[]
   while node:hunks.append(node+4);node=long(node)*4;assert len(hunks)<=8
-  assert len(hunks)==4
+  assert 4<=len(hunks)<=8
  finally:pause()
  elf=ROOT/'amiga/out/bruce_amiga.elf';raw,ss=sections(elf);bss,symbols=elf_symbols(elf)
- sections_by_name=dict(ss);order=['.text','.rodata','.data','.bss']
+ sections_by_name=dict(ss);order=[name for name,q in ss if q[2]&2 and q[5]]
+ assert len(hunks)==len(order)
  def memory(at):return 'slow' if 0xc00000<=at<0xc80000 else 'chip' if 0<=at<0x80000 else 'other'
  mapped=[]
  for i,name in enumerate(order):

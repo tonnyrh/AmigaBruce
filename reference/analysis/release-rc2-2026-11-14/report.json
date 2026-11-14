@@ -1,0 +1,26 @@
+{
+  "version": "v0.1.0-rc.2",
+  "date": "2026-11-14",
+  "program_sha256": "728f11f323c845da8b2616f48cd147d0a4f0e9bb0f733ec0b63cd6cfc8900775",
+  "tested_adf_sha256": "27a301d2c0752b0c46d42d3ac5fb3beb4e38884a5e65b48e6e1bb83b1aca7563",
+  "normal_elf_sha256": "2748a0a876a40d9acfdaab17a8d20acf8ef93bfec9c711bb94ba7e7d15417c13",
+  "checks": {
+    "enhanced_combat_cases": 16,
+    "independent_random_states": 65535,
+    "shout_selected_states": 21845,
+    "source_audio_cases": 7540,
+    "source_dma_fields": 1518,
+    "source_dma_images": 4554,
+    "normal_adf_smoke": "smoke.json",
+    "native_audio_and_memory": "audio.json"
+  },
+  "source_gameplay_code_changed": false,
+  "classic_mapping_changed": false,
+  "limits": [
+    "Physical Amiga listening acceptance pending",
+    "Controlled direct playback requests are identified separately from ordinary Fire input",
+    "No new full-game, all-room timing or certified original-edition parity claim",
+    "Room 12 ceiling spear visibility remains an open Enhanced graphics report",
+    "The normal build still reports existing unused-symbol warnings"
+  ]
+}

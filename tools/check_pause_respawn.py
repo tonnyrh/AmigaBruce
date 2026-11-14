@@ -11,7 +11,7 @@ import struct
 import time
 from pathlib import Path
 from build_title_art import ROOT, COLORS
-from capture_paula_stream import elf_symbols
+from capture_paula_stream import elf_symbols, elf_hunk_index
 from title_reference import notice_reference, reference
 from winuae_ipc import command
 from PIL import Image
@@ -80,11 +80,11 @@ def check(pid, log, out, boot):
     task=num(num(4,4)+276,4);cli=num(task+172,4)*4;node=num(cli+60,4)*4;hunks=[]
     while node:
         hunks.append(node+4);node=num(node,4)*4
-        assert len(hunks)<=4
-    assert len(hunks)==4
+        assert len(hunks)<=8
+    assert len(hunks)>elf_hunk_index(ROOT/'amiga/out/bruce_amiga.elf')
     bss,symbols=elf_symbols(ROOT/'amiga/out/bruce_amiga.elf')
     def addr(name):
-        return hunks[3]+symbols[name]-bss
+        return hunks[elf_hunk_index(ROOT/'amiga/out/bruce_amiga.elf')]+symbols[name]-bss
     m=addr('m')
     def stat(name,n=1):
         return num(addr(name),n)

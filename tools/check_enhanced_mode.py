@@ -12,7 +12,7 @@ from PIL import Image
 from build_enhanced_art import PALETTE, display_pixels, EDIT_DIR
 from enhanced_architecture import COURTYARD, GALLERY, VAULT, TOWER_INDEX, TOWER_TILES, foreground, masonry
 from enhanced_architecture import PAGODA_INDEX, PAGODA_TILES, VAULT_LAMP_INDEX, VAULT_LAMPS
-from capture_paula_stream import elf_symbols
+from capture_paula_stream import elf_symbols, elf_hunk_index
 from title_reference import picker_reference, reference
 from winuae_ipc import command, tap_fire
 
@@ -349,8 +349,9 @@ def check(folder, pid, tour=False, strikes=False, foley=False, poses=False, butt
         hunks.append(node+4);node=value(node)*4
         assert len(hunks)<=8
     bss,symbols=elf_symbols(ROOT/'amiga/out/bruce_amiga.elf')
+    bss_hunk=elf_hunk_index(ROOT/'amiga/out/bruce_amiga.elf')
     def addr(name):
-        return hunks[3]+symbols[name]-bss
+        return hunks[bss_hunk]+symbols[name]-bss
     ram=addr('m');records=[]
     def sample():
         return dict(field=value(addr('game_field_last')),steps=value(addr('actor_logic_steps'),2),

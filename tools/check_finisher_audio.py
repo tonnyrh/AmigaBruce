@@ -19,6 +19,8 @@ from winuae_ipc import command, tap_fire
 
 
 def check(folder, pid):
+    if not any(c[0]=='bruce_finish' for c in CUES):
+        raise SystemExit('The lethal-punch finisher check is for RC1. Run tools/check_rc2_audio.py for the current sound bank.')
     pipe=re.findall(r"IPC: Named Pipe '([^']+)' open",(folder/'winuaebootlog.txt').read_text(errors='replace'))[-1]
     def cmd(s):return command(pipe,s,timeout=10,expected_pid=pid)
     def val(at,n=4):

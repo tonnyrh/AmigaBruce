@@ -15,6 +15,18 @@ from winuae_ipc import command
 ROOT=Path(__file__).resolve().parents[1]
 
 
+def elf_hunk_index(path, section_name='.bss'):
+    """Locate an allocated ELF section, including optional Chip audio hunks."""
+    b=Path(path).read_bytes();assert b[:6]==b'\x7fELF\x01\x02'
+    off=struct.unpack_from('>I',b,32)[0]
+    size,count,names=struct.unpack_from('>HHH',b,46)
+    sections=[struct.unpack_from('>10I',b,off+i*size) for i in range(count)]
+    strings=sections[names];text=b[strings[4]:strings[4]+strings[5]]
+    allocated=[s for s in sections if s[2]&2 and s[5]]
+    return next(i for i,s in enumerate(allocated)
+                if text[s[0]:text.index(0,s[0])].decode()==section_name)
+
+
 def elf_symbols(path):
     b=path.read_bytes();assert b[:6]==b'\x7fELF\x01\x02'
     off=struct.unpack_from('>I',b,32)[0]
@@ -57,9 +69,10 @@ def capture(folder,pid):
     while node:
         assert len(hunks)<8
         hunks.append(node+4);node=long(node)*4
-    assert len(hunks)==4,hunks
+    bss_hunk=elf_hunk_index(ROOT/'amiga/out/bruce_amiga.elf')
+    assert len(hunks)>bss_hunk,hunks
     bss,symbols=elf_symbols(ROOT/'amiga/out/bruce_amiga.elf')
-    def address(name):return hunks[3]+symbols[name]-bss
+    def address(name):return hunks[bss_hunk]+symbols[name]-bss
     def counter(name):return long(address(name))
     def clock():
         a=time.perf_counter();value=counter('source_music_fields');b=time.perf_counter()

@@ -15,7 +15,7 @@ from pathlib import Path
 from PIL import Image
 from build_c64_sprites import SOURCE, SHA, source_frame
 from build_enhanced_art import display_pixels, EDIT_DIR, RGB
-from capture_paula_stream import elf_symbols
+from capture_paula_stream import elf_symbols, elf_hunk_index
 from title_reference import reference
 from winuae_ipc import command, tap_fire
 
@@ -53,9 +53,10 @@ def check(folder, pid):
     wait(lambda:front()==reference(),240)
     task=val(val(4)+276);cli=val(task+172)*4;node=val(cli+60)*4;hunks=[]
     while node:
-        hunks.append(node+4);node=val(node)*4;assert len(hunks)<=4
+        hunks.append(node+4);node=val(node)*4;assert len(hunks)<=8
     bss,symbols=elf_symbols(folder/'release.elf')
-    def addr(name):return hunks[3]+symbols[name]-bss
+    bss_hunk=elf_hunk_index(folder/'release.elf')
+    def addr(name):return hunks[bss_hunk]+symbols[name]-bss
     ram=addr('m')
     def put(at,value):cmd(f'DBG W {ram+at:x} {value:02x}')
     cmd('EVT KEY_SHIFT_LEFT 1');key('D');cmd('EVT KEY_SHIFT_LEFT 0')

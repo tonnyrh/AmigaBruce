@@ -1,0 +1,73 @@
+{
+  "method": "RC2 audio checks in an owned normal-ADF WinUAE instance.\n\nOrdinary held Fire exercises random punch selection. Paused-game direct\nrequests separately verify each approved clip, its PCM bytes and DMA end.\nThese controlled playback requests are not natural combat/progression tests.\n",
+  "hunks": [
+    "0xc08718",
+    "0xc39208",
+    "0x14c20",
+    "0xc551b0",
+    "0xc551c8"
+  ],
+  "memory": [
+    {
+      "attributes": 5,
+      "lower": "0xc004e8",
+      "upper": "0xc7e800",
+      "free": 3432,
+      "largest": 2240
+    },
+    {
+      "attributes": 3,
+      "lower": "0x420",
+      "upper": "0x80000",
+      "free": 68976,
+      "largest": 68904
+    }
+  ],
+  "bss_in_expansion_ram": true,
+  "long_pcm_in_chip_ram": true,
+  "ordinary_fire": {
+    "input": "Held primary Fire, menu invincibility enabled",
+    "mask": 65537,
+    "source_fault": 0
+  },
+  "clips": [
+    {
+      "name": "kage_blade",
+      "variant": 1,
+      "pcm_bytes": 2000,
+      "period": 443,
+      "pcm_sha256": "e83500fece9d8b549a31a3ca6603addc113bb49f0cf9d8933b5c3084dc92a3a8",
+      "expected_seconds": 0.24979594828716384,
+      "observed_end_seconds": 0.23399999999674037
+    },
+    {
+      "name": "kage_blade",
+      "variant": 2,
+      "pcm_bytes": 3600,
+      "period": 443,
+      "pcm_sha256": "848ca846e97ed2f51c7ffe85fa8bfaf77a9f28381c2794737c5447dd613ec488",
+      "expected_seconds": 0.44963270691689494,
+      "observed_end_seconds": 0.5929999999934807
+    },
+    {
+      "name": "kage_kick",
+      "variant": 2,
+      "pcm_bytes": 880,
+      "period": 435,
+      "pcm_sha256": "d3cb6056139ccab7d7c0e6ff1cbe7af39315faf364a4378d4a9552732772e876",
+      "expected_seconds": 0.10792538262339314,
+      "observed_end_seconds": 0.20300000003771856
+    },
+    {
+      "name": "bruce_shout",
+      "variant": 1,
+      "pcm_bytes": 8000,
+      "period": 443,
+      "pcm_sha256": "5c30b97403becf6dce2f8fd0138d067c8d4f0cce3632393298c92d229ced6c6b",
+      "expected_seconds": 0.9991837931486554,
+      "observed_end_seconds": 1.0160000000032596
+    }
+  ],
+  "classic_observer_detached": true,
+  "physical_listening_accepted": false
+}

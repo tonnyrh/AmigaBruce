@@ -79,6 +79,10 @@ Launch [GraphicsEditor.cmd](GraphicsEditor.cmd) to edit Enhanced fighters and sc
 
 [Graphics editor guide](docs/GRAPHICS_EDITOR.md) · [Enhanced graphics and audio](docs/ENHANCED.md) · [Artwork pipeline](docs/AMIGA_ART_PIPELINE.md).
 
+## Sound test
+
+Launch [AudioTest.cmd](AudioTest.cmd) to hear Enhanced combat samples in your browser. Switch between Selected takes and Current game to hear the four sounds selected for RC2 or the complete installed sound bank. Bruce has a one-in-three chance of shouting on a punch while no shout is playing; the test page always plays the selected sound. The offline page has individual playback, Play all, volume control, WAV downloads and a before/after compression comparison. Each sound also shows its recorded generator and original generation prompt, with a Copy prompt button. It rebuilds the listening page without changing the game's sound bank. You can also run `python tools/build_audio_test_page.py --open`.
+
 ## Reconstruction and evidence
 
 Game rules are derived from the frozen C64 binary, its tables and documented disassembly. Uncertain behavior stays open until the relevant branches are traced. A browser reconstruction or a newly invented collision model is not treated as evidence of C64 behavior.

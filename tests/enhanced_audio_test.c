@@ -41,11 +41,12 @@ static UWORD tick(UWORD *restart){
     for(c=0;c<3;c++){source_voices[c].period=450;source_voices[c].volume=40;}
     *restart=0;return foley_tick(restart);
 }
+static UBYTE observed_finisher;
+static void observe_finisher(long victim){assert(victim==1 || victim==2);++observed_finisher;}
 static void finisher_case(UBYTE attacker,UBYTE victim,UBYTE hp,UBYTE state,UBYTE latch,UBYTE expected){
     static UBYTE seed[65536],baseline[65536];
     UBYTE before_regs[13]={0},after_regs[13]={0};
-    UWORD i,restart;
-    BlCombat world={0};
+    UWORD i;
     bl_c64_reset();bl_c64_actor_seed();bl_c64_actor_test_call(0x0f72,0);
     bl_c64_load(0);bl_c64_actor_test_call(0x0b30,0);
     for(i=0;i<5;i++)m[0x4f40+i]=(UBYTE)(i/2);
@@ -63,30 +64,11 @@ static void finisher_case(UBYTE attacker,UBYTE victim,UBYTE hp,UBYTE state,UBYTE
     bl_c64_actor_test_call(0x29c3,0);assert(!source_fault);
     memcpy(baseline,m,65536);bl_c64_actor_registers(before_regs);
     memcpy(m,seed,65536);foley_begin();
+    assert(!finisher_observer);observed_finisher=0;bl_c64_set_finisher_observer(observe_finisher);
     bl_c64_actor_test_call(0x29c3,0);assert(!source_fault);
     bl_c64_actor_registers(after_regs);
     assert(!memcmp(m,baseline,65536) && !memcmp(before_regs,after_regs,13));
-    assert(foley_finisher_pending==expected);
-    foley_actions(&world,1);
-    if(expected){
-        UWORD channel=3,id=2*FX_BRUCE_FINISH;
-        for(i=0;i<3;i++)if(foley_voice[i].pending==FOLEY_FIRST_CUE+FX_BRUCE_FINISH)channel=i;
-        assert(channel<3 && !foley_finisher_pending && (m[0xd1+victim]&128));
-        tick(&restart);line+=1000;tick(&restart);
-        assert(hw->aud[channel].ac_len==500 && hw->aud[channel].ac_per==foley_samples[id].period);
-        for(i=0;i<500;i++)assert(chip_words[2+channel*512+i]==foley_expand[foley_bank[foley_samples[id].offset+i]]);
-        assert(foley_played_mask&(1UL<<id));
-        foley_actions(&world,1);
-        for(i=0;i<3;i++)assert(foley_voice[i].pending!=FOLEY_FIRST_CUE+FX_BRUCE_FINISH);
-        request(channel,0x8e,0,0); /* A footstep must not cut the cry short. */
-        tick(&restart);assert(!restart && foley_voice[channel].mode==FOLEY_PCM);
-        assert(foley_voice[channel].pending==FOLEY_RESTORE);
-        hw->intreqr=(UWORD)(0x80u<<channel);tick(&restart);
-        assert(foley_voice[channel].armed==1 && !restart);
-        tick(&restart);assert(foley_voice[channel].armed==2 && !restart);
-        hw->intreqr=0;tick(&restart);line+=1000;tick(&restart);
-        assert(restart==(1u<<channel) && foley_voice[channel].mode==FOLEY_SID);
-    }
+    assert(observed_finisher==expected); /* Source event remains independent of audio selection. */
     foley_end();assert(!finisher_observer);
 }
 int main(void){
@@ -98,26 +80,31 @@ int main(void){
     for(cue=0;cue<8;cue++)for(v=0;v<2;v++){
         UWORD id=2*cue+v;ch=(cue+v)%3;
         UWORD *page=chip_words+2+ch*512;
+        foley_random=2; /* Next LFSR value 1: ordinary Bruce punch. */
         request(ch,effects[cue],actors[cue],sites[cue]);
         assert(foley_voice[ch].pending==FOLEY_FIRST_CUE+cue);
         mask=tick(&restart);
         assert(mask==(1u<<ch) && !restart && !hw->aud[ch].ac_vol);
         line+=1000;mask=tick(&restart);
-        assert(mask==(1u<<ch) && !restart && hw->aud[ch].ac_ptr==page);
+        assert(mask==(1u<<ch) && !restart && hw->aud[ch].ac_ptr==(cue==FX_KAGE_BLADE ? (volatile UWORD*)(foley_long_pcm+foley_samples[id].offset) : page));
         assert(hw->aud[ch].ac_len==foley_samples[id].words && hw->aud[ch].ac_per==foley_samples[id].period);
         assert(hw->aud[ch].ac_vol==foley_samples[id].volume && !source_voices[ch].volume);
-        for(i=0;i<hw->aud[ch].ac_len;i++)assert(page[i]==foley_expand[foley_bank[foley_samples[id].offset+i]]);
+        if(cue!=FX_KAGE_BLADE)for(i=0;i<hw->aud[ch].ac_len;i++)assert(page[i]==foley_expand[foley_bank[foley_samples[id].offset+i]]);
+        else assert(foley_samples[id].offset+2*foley_samples[id].words<=sizeof(foley_long_pcm));
         hw->intreqr=(UWORD)(0x80u<<ch);tick(&restart);
         assert(hw->aud[ch].ac_ptr==chip_words && hw->aud[ch].ac_len==2);
+        tick(&restart); /* completion IRQ, release long swish protection */
         hw->intreqr=0;request(ch,0x8e,0,0);
         mask=tick(&restart);
         assert(!mask && restart==(1u<<ch) && source_dma.offset[ch]==65535);
         assert(hw->aud[ch].ac_ptr==page && hw->aud[ch].ac_len==512);
     }
     assert(foley_played_mask==65535 && chip_words[2+3*512]==0x5aa5);
+    foley_random=2;
     request(0,0x85,0,0x227c);request(1,0x84,1,0x205a);request(2,0x85,2,0x22d2);
     assert(tick(&restart)==7);line+=1000;assert(tick(&restart)==7);
     assert(hw->aud[0].ac_per==foley_samples[0].period && hw->aud[2].ac_per==foley_samples[12].period);
+    hw->intreqr=0x200;tick(&restart);tick(&restart);hw->intreqr=0;
     /* $2509 may clobber X while choosing a busy voice by priority. */
     m[0xeb00]=m[0xef70]=m[0xf070]=1;
     m[0x2581]=m[0x2582]=255;m[0x2583]=0;
@@ -149,16 +136,33 @@ int main(void){
     finisher_case(1,2,2,17,60,0); /* Yamo kills Kage: no Bruce cry. */
     finisher_case(1,0,2,17,15,0); /* Bruce is the victim. */
     {
-        BlCombat world={0};
-        foley_begin();
-        m[0xeb00]=m[0xef70]=m[0xf070]=1;
-        for(i=0;i<3;i++)foley_voice[i].pending=FOLEY_FIRST_CUE+FX_YAMO_KICK;
-        foley_finisher(1);foley_actions(&world,1);
-        assert(foley_voice[2].pending==FOLEY_FIRST_CUE+FX_BRUCE_FINISH);
-        foley_voice[2].pending=0;foley_finisher(2);foley_actions(&world,0);
-        assert(!foley_finisher_pending && !foley_voice[2].pending); /* No stale room event. */
+        unsigned long trials,cries=0;
+        static UBYTE original[65536];
+        foley_begin();foley_random=1;memcpy(original,m,65536);
+        for(trials=0;trials<65535;trials++)cries+=foley_shout_chance();
+        assert(cries==21845 && foley_random==1 && !memcmp(original,m,65536));
+        for(v=0;v<2;v++){
+            UWORD id=2*FX_BRUCE_SHOUT+v;
+            foley_random=6; /* Next value 3: shout. */
+            foley_start_sample(0,FX_BRUCE_PUNCH,source_audio_images());
+            assert(foley_voice[0].next==FOLEY_FIRST_CUE+FX_BRUCE_SHOUT);
+            assert(hw->aud[0].ac_ptr==(volatile UWORD*)(foley_long_pcm+foley_samples[id].offset));
+            assert(hw->aud[0].ac_len==4000 && hw->aud[0].ac_per==443);
+            assert(foley_samples[id].offset+8000<=sizeof(foley_long_pcm));
+            foley_random=6;foley_start_sample(1,FX_BRUCE_PUNCH,source_audio_images()+1024);
+            assert(foley_voice[1].next==FOLEY_FIRST_CUE+FX_BRUCE_PUNCH); /* No overlapping cry. */
+            request(0,0x8e,0,0);tick(&restart);
+            assert(!restart && foley_voice[0].pending==FOLEY_RESTORE);
+            hw->intreqr=0x80;tick(&restart);
+            assert(foley_voice[0].armed==1 && hw->aud[0].ac_ptr==chip_words);
+            tick(&restart);assert(foley_voice[0].armed==2);
+            hw->intreqr=0;tick(&restart);
+            assert(restart==1 && foley_voice[0].mode==FOLEY_SID);
+            assert(foley_played_mask&(1UL<<id));
+        }
+        assert(chip_words[2+3*512]==0x5aa5);
         foley_end();
     }
-    puts("PASS 17 unique samples, queue routing, 16 source combat cases, exact RAM/register preservation, finisher one-shot and busy/room guards");
+    puts("PASS 17 unique samples, queue routing, 16 source combat cases, exact RAM/register preservation, 65535 independent chance draws, full-length Chip clips, no overlap, DMA handoff and page bounds");
     return 0;
 }

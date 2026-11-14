@@ -113,7 +113,7 @@
     },
     {
       "path": "core/c64_sfx.h",
-      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c"
+      "sha256": "29d9e01f497a2dce96f9ce24900a10b71871639f27e5c4673fdb9cf1659093ca"
     },
     {
       "path": "core/c64_sound_data.h",
@@ -121,11 +121,11 @@
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "76e3a9ae5b654e3afa442170905c3c2f1cb94fa7864f65e3315b25af73574cb2"
+      "sha256": "a638082bbaa718726c0988c14801311eb329882ca0e52a8e569e4b6dd09bf4f1"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "1ebd05a45220c517fa911c689b7ce68a7f8a653202e6ba0d91a0e49645aa5181"
+      "sha256": "8504c0230870dbdc90afe95bfba75aa6a1eca2b54f181716e2f75d50cc4b05a3"
     },
     {
       "path": "test-source-audio.ps1",

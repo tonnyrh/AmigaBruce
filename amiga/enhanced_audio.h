@@ -9,24 +9,29 @@ typedef struct {
     ULONG stopped;
 } FoleyVoice;
 static FoleyVoice foley_voice[3];
-static UBYTE foley_active,foley_variant[FX_COUNT],foley_finisher_pending;
+static UBYTE foley_active,foley_variant[FX_COUNT];
+static UWORD foley_random;
 static UBYTE foley_last_action[3],foley_last_counter[3],foley_announced;
 static ULONG foley_played_mask;
 
-static void foley_finisher(long victim){
-    if(victim==1 || victim==2)foley_finisher_pending=1;
+static UBYTE foley_shout_chance(void){
+    /* Full-period 16-bit LFSR: 21845 of 65535 nonzero states select a cry.
+     * Presentation-only randomness, independent of C64 RAM and RNG. */
+    foley_random=(UWORD)((foley_random>>1)^((foley_random&1)?0xb400:0));
+    return foley_random%3==0;
 }
 
-static UBYTE foley_finisher_playing(const FoleyVoice *voice){
-    return voice->next==FOLEY_FIRST_CUE+FX_BRUCE_FINISH &&
+static UBYTE foley_long_playing(const FoleyVoice *voice){
+    return (voice->next==FOLEY_FIRST_CUE+FX_BRUCE_SHOUT ||
+            voice->next==FOLEY_FIRST_CUE+FX_KAGE_BLADE) &&
         (voice->mode==FOLEY_STOPPED || (voice->mode==FOLEY_PCM && voice->armed<2));
 }
 
 static void foley_request(long channel,long effect,long actor,long site){
     UBYTE request=FOLEY_RESTORE;
-    /* Let the 250 ms cry finish; resume the live source wave afterwards.
+    /* Let long cries/swishes finish; resume the live source wave afterwards.
      * Source queues keep running and no old swing is replayed late. */
-    if(foley_finisher_playing(&foley_voice[channel])){
+    if(foley_long_playing(&foley_voice[channel])){
         foley_voice[channel].pending=FOLEY_RESTORE;return;
     }
     if(actor<3){
@@ -73,19 +78,7 @@ static void foley_actions(const BlCombat *world,UBYTE same_room){
         }
         foley_last_action[actor]=action;foley_last_counter[actor]=timer;
     }
-    if(foley_finisher_pending && same_room){
-        int c;
-        /* Prefer a free source voice. If all three are busy, the requested
-         * finishing cry replaces voice 2; no C64 queue or game state changes. */
-        for(c=2;c>=0;c--){
-            FoleyVoice *v=&foley_voice[c];
-            if(!v->pending && (v->mode==FOLEY_SID || (v->mode==FOLEY_PCM && v->armed==2)) &&
-               !bl_c64_read(queue[c]))break;
-        }
-        if(c<0)c=2;
-        foley_voice[c].pending=FOLEY_FIRST_CUE+FX_BRUCE_FINISH;
-    }
-    foley_finisher_pending=0;foley_announced=0;
+    foley_announced=0;
 }
 
 static void foley_begin(void){
@@ -95,11 +88,11 @@ static void foley_begin(void){
         foley_last_action[c]=foley_last_counter[c]=0;
     }
     foley_announced=0;
-    foley_finisher_pending=0;
+    foley_random=(UWORD)line_clock();if(!foley_random)foley_random=1;
     for(c=0;c<FX_COUNT;c++)foley_variant[c]=0;
     foley_played_mask=0;foley_active=1;
     bl_c64_set_sound_observer(foley_request);
-    bl_c64_set_finisher_observer(foley_finisher);
+    bl_c64_set_finisher_observer(0); /* Cries now belong to ordinary punches. */
 }
 
 static void foley_stop_voice(UWORD c){
@@ -116,7 +109,7 @@ static void foley_end(void){
     UWORD c;
     if(!foley_active)return;
     bl_c64_set_sound_observer(0);
-    bl_c64_set_finisher_observer(0);foley_finisher_pending=0;
+    bl_c64_set_finisher_observer(0);
     for(c=0;c<3;c++)if(foley_voice[c].mode!=FOLEY_SID){
         FoleyVoice *v=&foley_voice[c];
         if(v->mode!=FOLEY_STOPPED)foley_stop_voice(c);
@@ -128,12 +121,24 @@ static void foley_end(void){
 
 static void foley_start_sample(UWORD c,UWORD cue,UBYTE *page){
     FoleyVoice *v=&foley_voice[c];
-    UWORD id=(UWORD)(cue*2+foley_variant[cue]),n=foley_samples[id].words;
-    const UBYTE *input=foley_bank+foley_samples[id].offset;
-    UWORD *out=(UWORD*)page;
+    UWORD id,n,i;
+    const UBYTE *play=page;
+    if(cue==FX_BRUCE_PUNCH && foley_shout_chance()){
+        /* Do not layer Bruce's one-second voice over itself. */
+        for(i=0;i<3;i++)if(foley_voice[i].next==FOLEY_FIRST_CUE+FX_BRUCE_SHOUT &&
+                           foley_long_playing(&foley_voice[i]))break;
+        if(i==3)cue=FX_BRUCE_SHOUT;
+    }
+    v->next=(UBYTE)(FOLEY_FIRST_CUE+cue);
+    id=(UWORD)(cue*2+foley_variant[cue]);n=foley_samples[id].words;
     foley_variant[cue]^=1;
-    while(n--)*out++=foley_expand[*input++];
-    hw->aud[c].ac_ptr=(volatile UWORD*)page;
+    if(n>BL_SOURCE_DMA_VOICE_BYTES/2)play=foley_long_pcm+foley_samples[id].offset;
+    else{
+        const UBYTE *input=foley_bank+foley_samples[id].offset;
+        UWORD *out=(UWORD*)page;
+        while(n--)*out++=foley_expand[*input++];
+    }
+    hw->aud[c].ac_ptr=(volatile UWORD*)play;
     hw->aud[c].ac_len=foley_samples[id].words;
     hw->aud[c].ac_per=v->period=foley_samples[id].period;
     hw->aud[c].ac_vol=foley_samples[id].volume;
@@ -148,7 +153,7 @@ static UWORD foley_tick(UWORD *restart){
     for(c=0;c<3;c++){
         FoleyVoice *v=&foley_voice[c];
         UBYTE *page=source_audio_images()+c*BL_SOURCE_DMA_VOICE_BYTES;
-        if(v->pending && !foley_finisher_playing(v)){
+        if(v->pending && !foley_long_playing(v)){
             if(v->pending!=FOLEY_RESTORE || v->mode!=FOLEY_SID){
                 v->next=v->pending;
                 if(v->mode!=FOLEY_STOPPED)foley_stop_voice(c);
