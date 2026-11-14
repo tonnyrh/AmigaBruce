@@ -40,6 +40,14 @@ def main():
             report.update(status='measured_score_decimal_realtime_open',score_decimal=scoped['score_decimal'],immediate_parent_history=item('reference/analysis/op-score-decimal-2026-10-31/previous-delivery.json'))
         if 'op_measured' in scoped:
             report.update(status='measured_op_room_actor_delivery',op_measured=scoped['op_measured'],immediate_parent_history=item('reference/analysis/op-finish-2026-10-31/previous-delivery.json'))
+        if 'kage_fall' in scoped:
+            report.update(date=scoped['date'],status=scoped['status'],immediate_parent_history=item('reference/analysis/kage-paula-2026-11-01/previous-delivery.json'))
+        if 'field_work' in scoped:
+            report.update(status=scoped['status'],immediate_parent_history=item('reference/analysis/kage-paula-2026-11-01/delivery.json'))
+        if 'actor_draw' in scoped:
+            report['immediate_parent_history']=item('reference/analysis/field-work-2026-11-01/delivery.json')
+        if 'four_work' in scoped:
+            report['immediate_parent_history']=item('reference/analysis/actor-draw-2026-11-01/delivery.json')
         target='reference/validation/source-optimization.json'
         if a.record:(ROOT/target).write_text(json.dumps(report,indent=2)+'\n')
         else:assert read(target)==report

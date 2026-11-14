@@ -50,7 +50,7 @@ void bl_c64_audio_reset(void){
 void bl_c64_audio_request(long effect){
     unsigned char saved[9]={a,x,y,c,z,n,v,d,sp};
     if(effect<128||effect>142){++audio_faults;return;}
-    y=(unsigned char)effect;source_sound();
+    y=(unsigned char)effect;source_queue_sound(0);
     a=saved[0];x=saved[1];y=saved[2];c=saved[3];z=saved[4];n=saved[5];v=saved[6];d=saved[7];sp=saved[8];
 }
 void bl_c64_audio_frame(unsigned char *registers){

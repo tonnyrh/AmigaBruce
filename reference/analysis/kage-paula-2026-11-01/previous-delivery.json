@@ -1,0 +1,546 @@
+{
+  "date": "2026-10-31",
+  "status": "scoped_op_room_actor_delivery_realtime_open",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_controls": 3034,
+  "integrated_scenarios": 5,
+  "source_instructions": 7055873,
+  "native_controls": 53,
+  "native_replay_loops": 1200,
+  "largest_chip_block": 52632,
+  "realtime_gate_passed": false,
+  "edition_verified": false,
+  "natural_playthrough": false,
+  "raster_exact": false,
+  "full_original_parity": false,
+  "converted_jsrs": 444,
+  "pairs": [
+    {
+      "before_fields": 9044,
+      "after_fields": 8965,
+      "before_missed": 131,
+      "after_missed": 126,
+      "slow_gain": 13248
+    },
+    {
+      "before_fields": 9046,
+      "after_fields": 8956,
+      "before_missed": 127,
+      "after_missed": 121,
+      "slow_gain": 13248
+    }
+  ],
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "1b6e00855e6f8a7482265b2f5af69f4101529335b81eb428513e5923350d743d"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "377958e63d7f19573945a0c08ad82fc85925d6e4650bb89bf92c15223bae50da"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "9c4b315370e5e1bf7cd58d7db9961ed43f5e7459e343b0eaa14c2813e0729425"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "1b6e00855e6f8a7482265b2f5af69f4101529335b81eb428513e5923350d743d"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/op-finish-2026-10-31/pipeline-result.json",
+      "sha256": "15719354ce3900756863f23fec85cc52bb73a0d1b325144b5b8ce6562247a4cb"
+    },
+    {
+      "path": "reference/analysis/op-finish-2026-10-31/previous-delivery.json",
+      "sha256": "7109f7c6400217c31932a9fc37a908024bccb78ad857afa03f90e65835dfbb56"
+    },
+    {
+      "path": "reference/analysis/optimization-2026-10-27/pipeline-source20-20261031/identity.json",
+      "sha256": "57a8d41f6210821b07c669d3439813ac9b2d6f5a917fbefb15f9e5a9c8559c11"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "fb29a1345f5c1d2845dc2bb4ae1051fa23795d7d32ef5bdd3d442d11301929ee"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "eba27d221a8740592c83f322d7bbad8f1f5f8420a5e6a55ccaa02bc6623c5e3f"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "e86cea61038ad9c9428d30104ba21d67913fdfa559028f2a0ba49f52f45277a0"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "149e8b7a6ba32d10c1e7fe524babfe8bebbebf8005094cd81c531ec143f65046"
+    },
+    {
+      "path": "reference/validation/source-score-host.json",
+      "sha256": "5013e14546fc2799c8b176d76395ed2fa8c04d734a41048a0aabfebd2a9ed9c9"
+    },
+    {
+      "path": "reference/validation/source-vic-host.json",
+      "sha256": "74f6f95a6e76914163d0d09faee88d0f6c254f225e48db7fb04b3a4883bf1bf8"
+    },
+    {
+      "path": "reference/validation/source-audio-host.json",
+      "sha256": "70e8cf18fe3c759066da0e292ba0dec15e71c184f5ee8c3e787fda2784d1b424"
+    },
+    {
+      "path": "reference/validation/source-dma-host.json",
+      "sha256": "05087d93ea935714f404439c29b1e3ea96d0056304976536bd453c459e1fe2ee"
+    },
+    {
+      "path": "reference/validation/source-contact-host.json",
+      "sha256": "ea9640e144c31341de32e075b44e725094dd17ea5ec52c9baa93c837b5c0e9fd"
+    },
+    {
+      "path": "reference/validation/source-sprite-copy-host.json",
+      "sha256": "3316e7aaad1f82ab957f0c9fd86eb1fb43378f2921c687dfa83ef6961de2d573"
+    },
+    {
+      "path": "reference/validation/source-object-host.json",
+      "sha256": "342e97cca8eba9bbd4d62a95d1f24eb2ff8424cc70547ee706624082a158b7eb"
+    },
+    {
+      "path": "reference/validation/source-visibility-host.json",
+      "sha256": "0ecd6e1f787e28724655aa8100a2ab85b769e88ac3b862e00cb028bd8eb86740"
+    },
+    {
+      "path": "reference/validation/source-paint-host.json",
+      "sha256": "3e35b49bc79523f4c69c2818b6eb58ee42495e41f033d1960165d4c069b5a719"
+    },
+    {
+      "path": "reference/validation/vic-cache-host.json",
+      "sha256": "59562102f49822f77e82726a464b5a9a708e7b53fed20536560eb3434c14f88a"
+    },
+    {
+      "path": "reference/validation/view-mask-host.json",
+      "sha256": "b3efe51af6b5a0994194c1481dbe5d78a4f13df03bfa4540686fefacd468937a"
+    },
+    {
+      "path": "tools/verify_op_finish.py",
+      "sha256": "87add9faa3bd6c19d1cc12b282d1e06f8e0999d0400c7c99bbd377a491c15eab"
+    }
+  ],
+  "open_gates": [
+    "Three PAL fields per ordinary step with both enemies and continuous Paula publication",
+    "Natural C64 IRQ/input phase and complete natural playthrough",
+    "Verified untouched 1984 edition"
+  ],
+  "audio_boundary": {
+    "pairs": {
+      "r01": [
+        {
+          "fields": 1414,
+          "missed": 6,
+          "source_steps": 360
+        },
+        {
+          "fields": 1423,
+          "missed": 0,
+          "source_steps": 360
+        }
+      ],
+      "tour": [
+        {
+          "fields": 8892,
+          "missed": 135,
+          "source_steps": 2400
+        },
+        {
+          "fields": 8972,
+          "missed": 9,
+          "source_steps": 2400
+        }
+      ]
+    },
+    "method": "Existing audio service polled after complete field calls; same game-field count; SID guards/order/data unchanged"
+  },
+  "loader_blank": {
+    "source_disable": "$09BC-$09C1",
+    "source_enable": "$0B33 -> $50DB-$50E5",
+    "normal_section_deltas": {
+      ".text": 98,
+      ".rodata": 0,
+      ".data": 0,
+      ".bss": 0
+    },
+    "gameplay_core_unchanged": true,
+    "prior_host_engine_controls_reused_as_historical": true,
+    "fresh_native_controls": 53,
+    "fresh_native_loops": 1200
+  },
+  "contact_unroll": {
+    "selected": {
+      "variant": "candidate-compact",
+      "label": "contact-unroll-compact-r01",
+      "pal_fields": 1410,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "kernel_bytes": 642,
+      "stationary": [
+        [
+          1159,
+          4155,
+          3056,
+          0,
+          3
+        ],
+        [
+          1379,
+          8282,
+          5854,
+          0,
+          15
+        ],
+        [
+          1174,
+          7925,
+          4481,
+          0,
+          19
+        ],
+        [
+          1393,
+          12049,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4687,
+          3057,
+          0,
+          3
+        ],
+        [
+          1378,
+          9124,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9080,
+          4483,
+          0,
+          19
+        ],
+        [
+          1490,
+          13516,
+          7283,
+          0,
+          31
+        ]
+      ],
+      "untouched_kernel_timing_deltas": [
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 1,
+          "image": -3
+        },
+        {
+          "field": -1,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 1
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 0,
+          "image": 0
+        },
+        {
+          "field": 1,
+          "image": 0
+        }
+      ]
+    },
+    "baseline": {
+      "variant": "baseline",
+      "label": "contact-unroll-baseline-r01",
+      "pal_fields": 1423,
+      "missed_audio_ticks": 0,
+      "largest_chip_block": 85408,
+      "kernel_bytes": 346,
+      "stationary": [
+        [
+          1159,
+          4308,
+          3055,
+          0,
+          3
+        ],
+        [
+          1379,
+          8583,
+          5853,
+          0,
+          15
+        ],
+        [
+          1173,
+          8230,
+          4484,
+          0,
+          19
+        ],
+        [
+          1394,
+          12505,
+          7283,
+          0,
+          31
+        ],
+        [
+          1159,
+          4839,
+          3056,
+          0,
+          3
+        ],
+        [
+          1378,
+          9424,
+          5855,
+          0,
+          15
+        ],
+        [
+          1270,
+          9387,
+          4483,
+          0,
+          19
+        ],
+        [
+          1489,
+          13971,
+          7283,
+          0,
+          31
+        ]
+      ]
+    },
+    "normal_section_deltas": {
+      ".text": 296,
+      ".rodata": 0,
+      ".data": 0,
+      ".bss": 0
+    },
+    "source_rule_changed": false,
+    "game_main_unchanged": true,
+    "fresh_native_controls": 53,
+    "fresh_native_loops": 1200,
+    "prior_original_byte_controls_reused_through_unchanged_core": true
+  },
+  "op2_wide": {
+    "timing_pairs": [
+      {
+        "route": "both-1",
+        "fields": [
+          1031,
+          1002
+        ],
+        "missed": [
+          19,
+          3
+        ]
+      },
+      {
+        "route": "both-2",
+        "fields": [
+          1031,
+          1002
+        ],
+        "missed": [
+          19,
+          3
+        ]
+      },
+      {
+        "route": "both-bare",
+        "fields": [
+          1022,
+          996
+        ],
+        "missed": [
+          19,
+          1
+        ]
+      },
+      {
+        "route": "stairs",
+        "fields": [
+          818,
+          814
+        ],
+        "missed": [
+          0,
+          0
+        ]
+      },
+      {
+        "route": "yamo-13",
+        "fields": [
+          736,
+          736
+        ],
+        "missed": [
+          0,
+          0
+        ]
+      }
+    ],
+    "decoder_cases": 512,
+    "decoder_code_and_table_bytes": 586,
+    "rebuilds": 185,
+    "rebuild_lines": [
+      8957,
+      1730
+    ],
+    "fresh_fixtures": 53,
+    "replay_loops": 1200,
+    "controlled_missed": 35,
+    "normal_exe_bytes": 317136,
+    "normal_exe_delta": 724
+  },
+  "op2_pairs": [
+    {
+      "room": 1,
+      "before_fields": 1004,
+      "after_fields": 963,
+      "before_missed": 3,
+      "after_missed": 0
+    },
+    {
+      "room": 1,
+      "before_fields": 1004,
+      "after_fields": 963,
+      "before_missed": 3,
+      "after_missed": 0
+    },
+    {
+      "room": 12,
+      "before_fields": 816,
+      "after_fields": 810,
+      "before_missed": 0,
+      "after_missed": 0
+    },
+    {
+      "room": 13,
+      "before_fields": 736,
+      "after_fields": 724,
+      "before_missed": 0,
+      "after_missed": 0
+    }
+  ],
+  "score_display": [
+    [
+      992,
+      984,
+      13,
+      10
+    ],
+    [
+      993,
+      984,
+      13,
+      10
+    ],
+    [
+      965,
+      966,
+      0,
+      0
+    ],
+    [
+      963,
+      960,
+      0,
+      0
+    ]
+  ],
+  "score_decimal": [
+    [
+      984,
+      980,
+      10,
+      7
+    ],
+    [
+      984,
+      982,
+      10,
+      7
+    ],
+    [
+      966,
+      961,
+      0,
+      0
+    ],
+    [
+      966,
+      960,
+      0,
+      0
+    ]
+  ],
+  "op_measured": {
+    "final-still": [
+      240,
+      766,
+      0
+    ],
+    "final-move": [
+      240,
+      821,
+      6
+    ],
+    "final-move2": [
+      240,
+      823,
+      6
+    ],
+    "final-stairs": [
+      240,
+      779,
+      0
+    ],
+    "final-yamo": [
+      240,
+      720,
+      0
+    ],
+    "long-release-a": [
+      1833,
+      6000,
+      19
+    ],
+    "long-release-b": [
+      1834,
+      6000,
+      9
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-01",
+  "purpose": "Previous full-resolution color studies for Enhanced NPCs. The current native pixel masters and their prompts are recorded in coarse-enemy-generation.json.",
+  "candidate_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_routines": [
+    "$2780–$29C2: select and latch pose/component pair",
+    "$2584/$25E2: copy and place VIC components",
+    "$07EF–$07FA: hires, X expansion enabled"
+  ],
+  "source_tables": [
+    "$59BD/$5A8F",
+    "$5B61",
+    "$5C33",
+    "$5CBF"
+  ],
+  "edition_verified": false,
+  "conversion": "tools/enhanced_enemies.py and tools/build_enhanced_art.py",
+  "studies": [
+    {
+      "actor": "yamo",
+      "file": "yamo-pose-study.png",
+      "sha256": "66df12ab0757fb238865226784f50dca0859677e79e3f42ed0ec3b9c3aa8a557",
+      "prompt": "Original pixel art for an Enhanced 16-color Amiga 500 game. Produce a clean transparent sprite sheet precisely 4 equal columns by 2 equal rows with ONE full-body side-profile fighter facing RIGHT in each invisible cell. Clean blank transparent gutter between each cell, feet level within cells, same body proportions, camera and scale in every cell. No captions, letters, grid lines, artifacts, ground, shadows or scene. Readable simple hand-pixelled clusters, low native detail like a 21-pixel-tall sprite. Row 1 from left: upright guard; wide running stride; rear view reaching up on a ladder, no ladder; standing attack wind-up. Row 2 from left: extended forward strike; flying side kick; knocked down lying horizontal head toward right; upright body recoiling. Drawn vertical silhouettes except for the genuinely prone pose. Character Yamo is a stocky, heavy green-skinned sumo. Charcoal hair tied in a topknot, broad solid moss-green face, rounded green chest and belly, pale ivory mawashi belt with slate shadow, sturdy bare green legs, expressive brow. Strong green masses, sparse pale lime edge lights, no swords or other objects."
+    },
+    {
+      "actor": "kage",
+      "file": "kage-pose-study.png",
+      "sha256": "7dcfcf179030732744abfe5ff741c52f0f4d742afd6d48d51e9f5d7f615e9a5a",
+      "prompt": "Original pixel art for an Enhanced 16-color Amiga 500 game. Produce a clean transparent sprite sheet precisely 4 equal columns by 2 equal rows with ONE full-body side-profile fighter facing RIGHT in each invisible cell. Clean blank transparent gutter between each cell, feet level within cells, same body proportions, camera and scale in every cell. No captions, letters, grid lines, artifacts, ground, shadows or scene. Readable simple hand-pixelled clusters, low native detail like a 21-pixel-tall sprite. Row 1 from left: upright guard; wide running stride; rear view reaching up on a ladder, no ladder; standing attack wind-up. Row 2 from left: extended forward strike; flying side kick; knocked down lying horizontal head toward right; upright body recoiling. Drawn vertical silhouettes except for the genuinely prone pose. Character Kage is a lean Japanese masked ninja dressed in charcoal and midnight navy with slate blue light on tunic, dark red sash, a narrow warm skin opening showing his eyes and black boots. A straight red-brown bamboo kendo staff is held close in guard and extends horizontally in the striking pose; single rigid stick, no blade. Crisp soft-blue cloth planes readable at very low resolution."
+    }
+  ]
+}

@@ -22,20 +22,25 @@ static void source_fighter(BlFighter *f,unsigned char actor){
     f->timer=src.counter;f->stun=src.wait;f->allowance=src.quota;f->sai=(unsigned char)(state==22);f->entering=0;
     f->reaction=(unsigned char)(state==25?BL_REACTION_DEAD:state==19||state==27?BL_REACTION_DOWN:state==18?BL_REACTION_HURT:BL_REACTION_NONE);
 }
-static void source_session_view(BlSession *s,BlProgress *p,BlCombat *w){
+static void source_session_view(BlSession *s,BlProgress *p,BlCombat *w,unsigned char refresh_lamps){
     unsigned char room=bl_c64_room();unsigned short old_revision=(unsigned short)bl_c64_world_stat(9);
+    unsigned char player=(unsigned char)bl_c64_world_stat(5);
     PERF_BEGIN(BL_PERF_VIEW);
+    /* $331C/$3361 can take a lamp only in the active room. Loading a room
+     * (also after death), swapping players and debug jumps can replace records. */
+    if(refresh_lamps || s->saved[0].revision!=old_revision || p->room!=room || s->current!=player)
+        bl_c64_collected_all(p->collected);
+    else p->collected[room]=bl_c64_collected(room);
     /* saved[].revision is a renderer epoch only, never source progress. */
     if(s->saved[0].revision!=old_revision){++p->revision;s->saved[0].revision=old_revision;}
     if(p->room!=room)++p->transitions;
     p->room=room;p->score=bl_c64_world_stat(7);
-    bl_c64_collected_all(p->collected);
     source_fighter(&w->player,0);source_fighter(&w->enemy[BL_YAMO],1);source_fighter(&w->enemy[BL_NINJA],2);
     w->step=(unsigned short)bl_c64_world_stat(0);w->spawns=(unsigned short)bl_c64_world_stat(1);
     w->player_respawns=w->player_deaths=(unsigned short)bl_c64_world_stat(2);
     w->lives=(signed char)bl_c64_world_stat(6);w->game_over=(unsigned char)(bl_c64_world_stat(3)!=0);
     w->infinite_lives=s->options.infinite_lives;w->invincible=s->options.invincible;w->human_yamo=s->options.human_yamo;
-    s->current=(unsigned char)bl_c64_world_stat(5);s->lives[s->current]=w->lives;s->over=(unsigned char)bl_c64_world_stat(4);
+    s->current=player;s->lives[player]=w->lives;s->over=(unsigned char)bl_c64_world_stat(4);
     PERF_END(BL_PERF_VIEW);
 }
 void bl_session_source_start(BlSession *s,const BlOptions *o,BlProgress *p,BlCombat *w){
@@ -56,14 +61,14 @@ void bl_session_source_start(BlSession *s,const BlOptions *o,BlProgress *p,BlCom
             }
         }
     }
-    source_session_view(s,p,w);
+    source_session_view(s,p,w,1);
 }
 void bl_session_source_step(BlSession *s,BlProgress *p,BlCombat *w,unsigned char input,unsigned char yamo_input){
     bl_c64_world_input(input,yamo_input);bl_c64_world_step(s->options.infinite_lives,s->options.invincible);
-    source_session_view(s,p,w);
+    source_session_view(s,p,w,0);
 }
 void bl_session_source_jump(BlSession *s,BlProgress *p,BlCombat *w,unsigned char room){
-    bl_c64_world_jump(room);source_session_view(s,p,w);
+    bl_c64_world_jump(room);source_session_view(s,p,w,1);
 }
 static void apply(BlSession *s,BlCombat *w){
     w->infinite_lives=s->options.infinite_lives;w->invincible=s->options.invincible;

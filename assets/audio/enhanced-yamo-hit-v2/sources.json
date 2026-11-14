@@ -1,0 +1,34 @@
+[
+  {
+    "name": "yamo_hit_0",
+    "generator": "local AudioGen medium",
+    "prompt": "A single heavy punch landing on a thick padded leather boxing bag. Deep dry low thump with a crisp short slap at the start, very short decay, close dry studio foley impact. Only an object impact, no voice, no grunts, no shouting, no music, no reverberation.",
+    "source_file": "raw/impact_0.wav",
+    "source_sha256": "656d1b7812e1c5bac627693dd16f0b6b513904ceb5fa3218d2215ed6f118a61e",
+    "source_rate": 16000,
+    "highpass_hz": 95,
+    "start_resampled": 757,
+    "rate": 8000,
+    "samples": 880,
+    "fade_in_samples": 16,
+    "fade_out_samples": 160,
+    "peak": 28672,
+    "selected_sha256": "39a611608f92790bc9341cc26aa51951361f9054dd7c4e05baad5e7baec0d90f"
+  },
+  {
+    "name": "yamo_hit_1",
+    "generator": "local AudioGen medium",
+    "prompt": "A single heavy punch landing on a thick padded leather boxing bag. Deep dry low thump with a crisp short slap at the start, very short decay, close dry studio foley impact. Only an object impact, no voice, no grunts, no shouting, no music, no reverberation.",
+    "source_file": "raw/impact_1.wav",
+    "source_sha256": "9a02683654c26e39965638d746fd8cd5b7e3ede1055002d1c0dcbd7ce5696efc",
+    "source_rate": 16000,
+    "highpass_hz": 95,
+    "start_resampled": 6306,
+    "rate": 8000,
+    "samples": 880,
+    "fade_in_samples": 16,
+    "fade_out_samples": 160,
+    "peak": 28672,
+    "selected_sha256": "45b43ea211efd846a30e14071732c38af5e8a8fd19bdcdf762f83ef55b4ffbf8"
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "generator": "Built-in image_gen, 2026-11-01",
+  "fighters": {
+    "file": "fighters-source.png",
+    "prompt": "Create a single original transparent-background pixel-art sprite study sheet for a PAL Amiga 500 OCS martial arts platformer. Exactly NINE full-body game sprites in a regular 3-column by 3-row grid with equal square cells and generous transparent gutters, each figure separated, full body wholly inside its cell. No headings, letters, numbers, borders, background, shadows on the ground or guide lines. Camera is the side-on game view. Real low-resolution 1990-era arcade pixel craft: design silhouettes that read at around 24 pixels tall, enlarge with integer nearest-neighbour steps; crisp chunky square pixels, broad color clusters, no soft lighting and no fine anatomy. Constrain the shared colors to near-black plum, deep navy, steel blue, sage/leaf green, dark olive, amber/gold, muted terra-cotta, cream and off-white. First row: Bruce, lean shirtless East Asian martial artist with short black hair, gold trousers, dark slippers. Left: side-facing poised guard; middle and right: rear view climbing, first left hand reaches high with right knee high, then right hand and left knee high; alternate clearly, keep trunk centered. Second row: Yamo, stocky broad green-skinned sumo with dark topknot and pale belt. Left: guard; middle: grounded knee compression before a kick; right: heavy side-on knockdown sliding back, legs and little bare feet readable. Third row: Kage, masked narrow navy-clad fighter with a single long tan bamboo shinai, both hands on grip. Left: upright ready; middle: coiled thrust preparation; right: committed low forward thrust. Black is opaque on fighters; negative space really transparent. No references to any other game or art sheet; create original designs. Keep scale and costume consistent across each row. Give every figure exactly two arms and two legs and Kage exactly one bamboo weapon per cell.",
+    "revision": "Correct only the single sprite in the top middle cell (row 1, column 2) of the attached transparent 3x3 pixel-art character sheet. Replace that one climber with an EXACT HORIZONTAL MIRROR of the climber in the top RIGHT cell. Top middle must have the extended arm and fist at the visually LEFT side of his head and his bent raised knee on the visually RIGHT. Top right must retain its fist on the visually RIGHT and knee LEFT. For the corrected middle figure the raised fist is unmistakably left of the head, near 10 o'clock, and the lower foot hangs on the left. This pair should animate as alternating handholds seen from behind. Keep the alignments and existing canvass and keep the other eight sprites and the background alpha intact. Same old-school chunky pixel style and colors. Absolutely transparent background. No words.",
+    "purpose": "Nine new poses. Other silhouettes use the earlier AI fighter atlas in ../v2/ and the source-aligned Bruce attacks listed below.",
+    "native_inks": "Yamo inks use tools/enhanced_fighters.py on the existing Enhanced silhouette; Kage retains the generated artwork. Bruce now uses original candidate sprite-writer silhouettes for every atlas pose, with native-resolution warm skin and gold-trouser inks. tools/enhanced_bruce_strikes.py retains the exact six directional attack masks. Bruce has no HUD white ($FFE) pixels.",
+    "bruce_proportions": {
+      "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+      "mask_source": "assets/c64/sprites-v1/bruce-*.png",
+      "routines": [
+        "$2584-$274E",
+        "$2780-$29C2"
+      ],
+      "mapping": "BRUCE_SOURCE_POSES in tools/enhanced_fighters.py; punch/kick pairs in tools/enhanced_bruce_strikes.py",
+      "scope": "Source-sized visual poses, shared by all rooms; the Enhanced atlas still groups several source animation states. Gameplay and contact masks are unchanged. Candidate not certified pristine 1984 edition."
+    }
+  },
+  "bruce_attacks": {
+    "source": "tools/enhanced_bruce_strikes.py",
+    "method": "Native OCS colour strokes inside the source sprite writer's opaque pixels. Punch, chamber and extended kick use the six directional Bruce pose PNGs from assets/c64/sprites-v1. Left punch has its own input.",
+    "candidate_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+  },
+  "scenery": {
+    "file": "tiles-source.png",
+    "prompt": "Prepare a wide 2-column 1-row pixel art material atlas for an actual 1990 Amiga 500 platform game. Image contains exactly TWO equal-sized square paintings side by side, butt-joined without any border, captions, interface or sprites. Left square: distant atmospheric Chinese mountain temple countryside, a dark teal pine and layered mist-clad foothills below, warm terracotta and subtle blue mountains receding into calm pale dawn sky. Scenic flat side view with the darkest trees in the bottom third and clean sky at top; mountains reach different heights at left and right. Right square: a seamlessly repeating flat wall of small hand-cut blue slate/muted indigo stone bricks in old East Asian temple masonry, subtle moss, irregular offset courses, subdued contrast, evenly lit. No ground, stairs, walkable ledges, lanterns, weapons, actors or objects; both halves are distant NON interactive scenery. Charming refined hand-pixelled Ambermoon-era retro tile game graphics. Strict small 12-bit color look, painted with hard square pixels and sparing ordered dithering. Must read when reduced to low resolution. All surfaces fully opaque, no midline frame or gaps.",
+    "purpose": "Left panel supplies the mountain skyline. Right panel is the original masonry study."
+  },
+  "architecture": {
+    "source": "tools/enhanced_architecture.py",
+    "method": "Original native-resolution indexed artwork. Running-bond courtyard masonry uses warm OCS colours 8, 9 and 15. Slate uses 6, 11 and 12. Structures use bank-specific 8x16 source anchors and a separately authored opacity mask.",
+    "bank_reference": "assets/c64/rooms-v1/charsets.bin, extracted from candidate 092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8"
+  },
+  "conversion": "tools/build_enhanced_art.py",
+  "target": "Four indexed OCS bitplanes with a separate fighter opacity mask."
+}

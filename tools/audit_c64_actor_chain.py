@@ -85,6 +85,7 @@ def main():
     for x in identity:assert hashlib.sha256((ROOT/x['path']).read_bytes()).hexdigest()==x['sha256'],x['path']
     OUT.mkdir(parents=True,exist_ok=True)
     report=dict(source_sha256=SHA,edition_verified=False,natural_playthrough=False,production_enabled=True,
+        bomb_contact_margin=False,scope='Source actor chain; the normal Amiga UI separately enables the user-approved bomb margin.',
         source_files=identity,section=section,checks=len(rows),rows=rows)
     (OUT/('report.json' if section=='all' else section+'-controls.json')).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print('PASS complete source actor-chain controls:',len(rows),'all RAM/registers/boundaries')

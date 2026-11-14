@@ -13,6 +13,11 @@ static unsigned char a,x,y,c,z,n,v,d,sp,loaded=255,transition_pending;
 static unsigned char target_x,target_y,target_room;
 static unsigned short revision,source_fault;
 static unsigned short audio_requests_mask;
+/* Explicit Amiga policy, enabled by the normal game UI. Source-only audits
+ * leave it off. User-approved 9 Nov 2026: bomb contact gets 1 px up/left/right. */
+static unsigned char bomb_contact_margin;
+static unsigned char bomb_room_present;
+void bl_c64_set_bomb_contact_margin(long enabled){bomb_contact_margin=(unsigned char)(enabled!=0);}
 static void (*io_service)(void);
 void bl_c64_set_service(void (*service)(void)){io_service=service;}
 static void (*load_service)(long);
@@ -95,7 +100,7 @@ static unsigned char paint_queued[1000];
 static unsigned char paint_rows[1000],flash_cells[1000],flash_changed;
 static unsigned short cell_offsets[1000];
 static unsigned char cell_y[1000];
-static unsigned long cell_word_mask[1000],part_words[25];
+static unsigned long column_word_mask[20],part_words[25];
 static unsigned char part_rows[25];
 static unsigned long part_priority_words[25];
 static unsigned char part_priority_rows[25];
@@ -111,6 +116,8 @@ static unsigned short cache_references[1024];
 static BlC64Painter tile_painter;
 static BlC64Paint paint_request;
 void bl_c64_set_painter(BlC64Painter painter){tile_painter=painter;}
+static unsigned char trap_row_reuse;
+void bl_c64_set_trap_row_reuse(long enabled){trap_row_reuse=(unsigned char)(enabled!=0);}
 typedef struct {unsigned short left,right,top,bottom;unsigned long offset,size,words;unsigned char group;} AnimationRect;
 static AnimationRect animation_rects[128];
 static unsigned short animation_count,animation_cell[1000];
@@ -238,8 +245,10 @@ static void mark_cell(unsigned short cell,unsigned char pixels,unsigned char row
 }
 static void index_screen(void){
     unsigned short cell;for(cell=0;cell<256;cell++){glyph_head[cell]=65535;glyph_index_dirty[cell]=0;}
+    bomb_room_present=0;
     for(cell=120;cell<1000;cell++){
         unsigned char code=m[0x8c00 + cell];unsigned short next=glyph_head[code];
+        if((code&127)==0x60)bomb_room_present=1;
         indexed_screen[cell]=code;indexed_color[cell]=m[0xd800 + cell]&15;
         glyph_next[cell]=next;glyph_previous[cell]=65535;
         if(next!=65535)glyph_previous[next]=cell;
@@ -269,6 +278,7 @@ static void source_written(unsigned short address){
         unsigned short cell=address-0x8c00,prev,next;unsigned char code=m[address],old=indexed_screen[cell];
         unsigned char tracking=(unsigned char)(m[0xf2]==0x38?1:m[0xf2]==0x3a?2:0);
         if(old==code)return;
+        if((code&127)==0x60)bomb_room_present=1;
         if(glyph_tracking[old]&tracking){
             (void)glyph_first(old);prev=glyph_previous[cell];next=glyph_next[cell];
             if(prev==65535)glyph_head[old]=next;else glyph_next[prev]=next;
@@ -280,7 +290,19 @@ static void source_written(unsigned short address){
             glyph_head[code]=cell;
         }else glyph_index_dirty[code]=1;
         if(animation_count && (((code&127)>=0x61&&(code&127)<=0x63)||((old&127)>=0x61&&(old&127)<=0x63)))animation_fallback_dirty=1;
-        indexed_screen[cell]=code;release_cell_cache(cell);animation_cell_changed(cell);mark_cell(cell,1,255);
+        unsigned char rows=255;
+        /* $104B moves the room 14 traps between $64/$65 or $66/$67.
+         * Compare live scanline pairs, including their lower character
+         * halves. Contact invalidation still sees every screen-code write. */
+        if(trap_row_reuse && loaded==13 && m[0xf2]==0x3a &&
+           (old^code)==1 && (code&0x7c)==0x64){
+            const unsigned char *left=m+0xa800+((unsigned short)(code&0xfe)<<3);
+            unsigned char i;
+            rows=0;
+            for(i=0;i<8;i+=2)
+                if(left[i]!=left[8+i] || left[i+1]!=left[9+i])rows|=(unsigned char)(3u<<i);
+        }
+        indexed_screen[cell]=code;release_cell_cache(cell);animation_cell_changed(cell);mark_cell(cell,1,rows);
     }else if(address>=0xd878&&address<0xdbe8){
         unsigned short cell=address-0xd800;unsigned char color=m[address]&15;
         if(color!=indexed_color[cell]){
@@ -469,9 +491,17 @@ SOURCE_INLINE void source_string(void){
 }
 /* Decoded $2509-$255D, including source priority comparisons and stack return.
  * These are shadow SID queues; they never address Amiga hardware. */
-SOURCE_INLINE void source_sound(void){
+static BlSoundObserver sound_observer;
+static BlFinisherObserver finisher_observer;
+static unsigned char source_bruce_punches;
+void bl_c64_set_finisher_observer(BlFinisherObserver observer){
+    finisher_observer=observer;source_bruce_punches=0;
+}
+void bl_c64_set_sound_observer(BlSoundObserver observer){sound_observer=observer;}
+SOURCE_INLINE void source_queue_sound(unsigned char has_caller){
     PROFILE_START(sound_start);
     unsigned short queue,priority;
+    unsigned char actor=x; /* Priority selection may overwrite the caller's X. */
     if(y>=128 && y<=142)audio_requests_mask|=(unsigned short)(1U<<(y-128));
     m[0xd418]=0x15;
     a=m[0xeb00];NZ(a);
@@ -494,8 +524,16 @@ SOURCE_INLINE void source_sound(void){
             }
         }
     }
-    m[queue]=y;x=y&15;a=m[0x2572 + x];m[priority]=a;NZ(a);sp+=2;PROFILE_END(sound_start,10);
+    m[queue]=y;x=y&15;a=m[0x2572 + x];m[priority]=a;NZ(a);sp+=2;
+    if(sound_observer){
+        unsigned short site=0;
+        if(has_caller)site=(unsigned short)((m[0x100+(unsigned char)(sp-1)]|(m[0x100+sp]<<8))-2);
+        if(site==0x3059)actor=m[0x51]; /* $3061 reloads the trap victim. */
+        sound_observer(priority-0x2581,y,actor,site);
+    }
+    PROFILE_END(sound_start,10);
 }
+SOURCE_INLINE void source_sound(void){source_queue_sound(1);}
 #include "c64_sfx.h"
 /* Decoded $104B-$10B4 + $404E-$407C. Original moving-cell positions,
  * wrapping tests, string IDs, call-return bytes and final flags are retained. */
@@ -1343,6 +1381,60 @@ static unsigned char source_object_row(void){
         if(n){sp+=2;actor_return=source_stack_return();return 1;}
     }
 }
+/* Read the live source charge's class-2 pixels, not Enhanced artwork.
+ * A C64 multicolor pixel occupies two display pixels. */
+static unsigned char bomb_contact_pixels(unsigned short cell,unsigned char row){
+    unsigned short part=(unsigned short)(cell+(row>=8?40:0));
+    unsigned char bits=m[(unsigned short)(charset()+((unsigned short)m[0x8c00+part]<<3)+(row&7))];
+    bits=(unsigned char)(bits&~(bits<<1)&0xaa);
+    return (unsigned char)(bits|(bits>>1));
+}
+static unsigned char bomb_margin_hit(unsigned char actor,unsigned char column,unsigned char row){
+    int left=(int)m[0x9e + actor]*2-24,top=(int)m[0xa1+actor]-21;
+    int offset=(int)column*8-1-left,shift=14-offset;
+    int first=(int)row*16-9-top,last=first+16,yy,charge_y;
+    unsigned char pose=m[0x4f4e + actor],bits;
+    unsigned short mask=(unsigned short)(m[0x1167+pose]|((unsigned short)m[0x1239+pose]<<8));
+    unsigned short cell=(unsigned short)(((unsigned short)row*2-1)*40+column),expanded;
+    unsigned long actor_bits,charge_bits;
+    if(offset<=-10 || offset>=24 || last<0 || first>=21)return 0;
+    if(first<0)first=0;
+    if(last>20)last=20;
+    for(yy=first;yy<=last;yy++){
+        charge_y=top+yy-((int)row*16-8);
+        bits=charge_y>=0?bomb_contact_pixels(cell,(unsigned char)charge_y):0;
+        if(charge_y<15)bits|=bomb_contact_pixels(cell,(unsigned char)(charge_y+1));
+        if(!bits)continue;
+        expanded=(unsigned short)bits<<1;
+        expanded|=(unsigned short)((expanded<<1)|(expanded>>1));
+        actor_bits=((unsigned long)m[(unsigned short)(mask+yy)]<<16)|
+                   ((unsigned long)m[(unsigned short)(mask+32+yy)]<<8)|m[(unsigned short)(mask+64+yy)];
+        charge_bits=shift>=0?(unsigned long)expanded<<shift:(unsigned long)expanded>>(-shift);
+        if(actor_bits&charge_bits)return 1;
+    }
+    return 0;
+}
+static void bomb_contact_assist(unsigned char actor){
+    int left,top,col,row,first_col,last_col,first_row,last_row;
+    unsigned short cell;unsigned char slot;
+    if(index_ready && !bomb_room_present)return;
+    if(!(m[0x95+actor]&1) || m[0xbf+actor]==25)return;
+    if(m[0x4fde] && m[0x4fdf] && m[0x4fe0])return;
+    left=(int)m[0x9e + actor]*2-24;top=(int)m[0xa1+actor]-21;
+    first_col=left>0?(left-1)>>3:0;last_col=(left+24)>>3;if(last_col>39)last_col=39;
+    first_row=top>40?(top-8)>>4:2;last_row=(top+29)>>4;if(last_row>12)last_row=12;
+    for(row=first_row;row<=last_row;row++)for(col=first_col;col<=last_col;col++){
+        cell=(unsigned short)((row*2-1)*40+col);
+        if((m[0x8c00+cell]&127)!=0x60 || (m[0xd800+cell]&7)==5)continue;
+        if(!bomb_margin_hit(actor,(unsigned char)col,(unsigned char)row))continue;
+        /* Same allocation, coordinates and armed attribute as $306B-$30D3.
+         * No new damage rule, timer cadence, queue or fourth bomb slot. */
+        for(slot=0;slot<3;slot++)if(!m[0x4fde + slot])break;
+        if(slot==3)return;
+        m[0x4fde + slot]=1;m[0x4fe1+slot]=(unsigned char)(col-1);m[0x4fe4+slot]=(unsigned char)(row-1);
+        m[0xd800+cell]=0xfd;source_written((unsigned short)(0xd800+cell));
+    }
+}
 #if defined(__m68k__) && defined(__GNUC__)
 __attribute__((optimize("O2")))
 #endif
@@ -1360,6 +1452,7 @@ static unsigned char source_object_driver(void){
                 source_contact_frame(0x2e60);if(!source_object_row() || !source_object_returned(0x2e61))return 0;
                 x=m[0x51];NZ(x);++m[(unsigned char)(0xe9+x)];NZ(m[(unsigned char)(0xe9+x)]);
                 source_contact_frame(0x2e67);if(!source_object_row() || !source_object_returned(0x2e68))return 0;
+                if(bomb_contact_margin)bomb_contact_assist(m[0x51]);
             }
         }
         x=(unsigned char)(m[0x51]-1);NZ(x);if(n){sp+=2;return 1;}
@@ -1554,6 +1647,41 @@ static unsigned char source_image_component(unsigned char secondary){
     actor_return=source_stack_return();
     return 1;
 }
+
+/* $2BF9..$2C51. A negative enemy damage result repeats the actor's awards while subtracting five from the same unsigned health byte.
+ * Both score comparisons are bytewise ($313A..$3144). Stop at any
+ * extra-life side effect, leaving the last ordinary pair to the source
+ * path to reproduce its stack, decimal workspace, HUD and flags. */
+static unsigned char source_award_life(unsigned long points){
+    return (unsigned char)((unsigned char)(points>>16)>=m[0x4392] &&
+        (unsigned char)(points>>8)>=m[0x4393] && (unsigned char)points>=m[0x4394]);
+}
+static void source_enemy_fall_awards(void){
+    unsigned long score,next;
+    unsigned short credit;
+    unsigned char hp,start;
+    if((x!=1 && x!=2) || d || m[0x51]!=x || (m[0xbc+x]&0x90)!=0x90 || sp<12)return;
+    start=m[0xd1+x];if(!((start-5)&128))return;
+    hp=start;credit=x==1?500:250;
+    score=((unsigned long)m[0x41]<<16)|((unsigned short)m[0x42]<<8)|m[0x43];
+    while((hp-5)&128){
+        next=(score+50)&0xffffffUL;
+        if(source_award_life(next))break;
+        /* $2C30 and $2C36 award 1 in the middle score byte, then 194
+         * in the low byte. Either award can trigger $3146. */
+        if(x==1 && source_award_life(next+256))break;
+        next=(score+credit)&0xffffffUL;
+        if(source_award_life(next))break;
+        hp=(unsigned char)(hp-5);score=next;
+    }
+    if((unsigned char)(start-hp)<=5)return;
+    score=(score-credit)&0xffffffUL;
+    m[0x41]=(unsigned char)(score>>16);m[0x42]=(unsigned char)(score>>8);
+    m[0x43]=(unsigned char)score;m[0xd1+x]=(unsigned char)(hp+5);
+}
+
+static void (*source_audio_poll)(void);
+void bl_c64_set_audio_poll(void (*poll)(void)){source_audio_poll=poll;}
 
 #include "c64_actor_programs.h"
 /* IRQ I/O seam. The two source fragments retain all source timer, palette,
@@ -1772,6 +1900,70 @@ static SOURCE_NOINLINE void source_sprite_publish(void){
     a=(unsigned char)(m[0x277d]^1);m[0x277d]=a;NZ(a);sp+=2;
 }
 
+static unsigned char source_input_pin(unsigned short address,
+        unsigned char port0,unsigned char port1){
+    return address==0xdc00?port0:address==0xdc01?port1:m[address];
+}
+static void source_input_convert(void){
+    m[0x100+sp--]=a;
+    a&=3;y=a;
+    a=m[0x100+(unsigned char)++sp];
+    c=(unsigned char)((a>>1)&1);
+    a=(unsigned char)((a>>2)|m[0x4a85+y]);NZ(a);
+}
+static void source_input_pins(unsigned char port0,unsigned char port1){
+    unsigned char flags;
+    a=m[0x104];NZ(a);if(z)return;
+    a=port1;x=m[3];NZ(x);if(!z)a=port0;
+    a&=15;NZ(a);y=m[0x1383+x];NZ(y);
+    if(z)source_input_convert();
+    m[0x98]=a;
+    a=(unsigned char)(m[3]^1);x=a;NZ(x);
+    a=source_input_pin((unsigned short)(0xdc00+x),port0,port1);
+    c=(unsigned char)((a>>3)&1);a=(unsigned char)((a>>4)&1);NZ(a);
+    m[0x9b]=a;
+    a=m[0x42ca];NZ(a);if(z)return;
+    a=(unsigned char)(m[3]^1);x=a;NZ(x);
+    m[0x100+sp--]=(unsigned char)(0x30|c|(z<<1)|(actor_i<<2)|(d<<3)|(v<<6)|(n<<7));
+    a=port1;NZ(a);
+    flags=m[0x100+(unsigned char)++sp];
+    c=flags&1;z=(flags>>1)&1;actor_i=(flags>>2)&1;d=(flags>>3)&1;v=(flags>>6)&1;n=flags>>7;
+    if(!z)a=port0;
+    a&=15;NZ(a);y=m[0x1383+x];NZ(y);
+    if(z)source_input_convert();
+    m[0x99]=a;
+    x=m[3];NZ(x);
+    a=source_input_pin((unsigned short)(0xdc00+x),port0,port1);
+    c=(unsigned char)((a>>3)&1);a=(unsigned char)((a>>4)&1);NZ(a);
+    m[0x9c]=a;
+}
+
+static unsigned long (*source_read_controls)(long,long);
+void bl_c64_set_control_reader(unsigned long (*reader)(long,long)){
+    source_read_controls=reader;
+}
+/* $169D tests the active flag before reading the CIA. The reader supplies
+ * the active player's Amiga stick in the low byte and the other stick in
+ * the high byte. Reconstruct physical port order for the indexed reads. */
+static void source_sample_controls(void){
+    unsigned char bruce=actor_input,other=actor_yamo_input,first,second;
+    if(!m[0x104]){a=0;NZ(a);return;}
+    if(source_read_controls){
+        unsigned long pads=source_read_controls(m[3],m[0x42ca]);
+        bruce=(unsigned char)pads;other=(unsigned char)(pads>>8);
+    }
+    /* With one standard stick, $16B1 bypasses PHA and $16D2 exits.
+     * Materialize the buffers and the registers/flags at $1703 directly. */
+    if(m[3]<2 && !m[0x42ca] && m[0x1383+m[3]]){
+        y=m[0x1383+m[3]];x=(unsigned char)(m[3]^1);
+        m[0x98]=source_direction(bruce);m[0x9b]=(unsigned char)!(bruce&BL_FIRE);
+        c=(m[0x98]>>3)&1;a=0;n=0;z=1;return;
+    }
+    first=(unsigned char)(source_direction(bruce)|((bruce&BL_FIRE)?0:16));
+    second=(unsigned char)(source_direction(other)|((other&BL_FIRE)?0:16));
+    if(m[3])source_input_pins(first,second);else source_input_pins(second,first);
+}
+
 static void source_actor_field(void){
     unsigned char saved[10]={a,x,y,c,z,n,v,d,sp,actor_i};
     unsigned short saved_return=actor_return,saved_stop=actor_stop_pc;
@@ -1786,7 +1978,7 @@ static void source_actor_field(void){
         source_contact_frame(0x15bc);
         source_sprite_publish();
         source_field_timers();
-        m[0x98]=source_direction(actor_input);m[0x9b]=(unsigned char)!(actor_input&BL_FIRE);
+        source_sample_controls();
         m[0xdc00]=m[0xdc01]=255;
         m[0xdc02]=m[0x2005];m[0xdc03]=m[0x2006];
         if(!m[0x104] || (!(m[0x105]&128) && ((m[0x98]|m[0x99])!=15 || !(m[0x9b]&m[0x9c]))))m[0x82]=0;
@@ -1794,8 +1986,7 @@ static void source_actor_field(void){
     }
 else{
     actor_irq_stop=0;actor_code(0x15b8);
-    m[0x98]=source_direction(actor_input);m[0x9b]=(unsigned char)!(actor_input&BL_FIRE);
-    if(m[0x42ca]){m[0x99]=source_direction(actor_yamo_input);m[0x9c]=(unsigned char)!(actor_yamo_input&BL_FIRE);}
+    source_sample_controls();
     m[0xdc00]=m[0xdc01]=255;
     actor_irq_stop=0;actor_code(0x1703);actor_irq_stop=0;
     }
@@ -1843,10 +2034,11 @@ void bl_c64_reset(void){
     transition_pending=0;contact_bank=0;index_ready=0;paint_count=paint_cursor=0;animation_pending=0;animation_fallback_count=0;animation_fallback_dirty=0;
     glyph_changed_count=0;for(i=0;i<256;i++)glyph_changes[i]=0;
     {unsigned short k;for(k=0;k<1000;k++){contact_cells[k]=0;paint_queued[k]=0;dirty_cells[k]=0;}}
-    {unsigned short row,col;for(row=0;row<25;row++)for(col=0;col<40;col++){
+    {unsigned short row,col;
+    for(col=0;col<20;col++)column_word_mask[col]=1UL<<col;
+    for(row=0;row<25;row++)for(col=0;col<40;col++){
         unsigned short cell=(unsigned short)(row*40+col);
         cell_offsets[cell]=(unsigned short)(row*320+col);cell_y[cell]=(unsigned char)(row*8);
-        cell_word_mask[cell]=1UL<<(col>>1);
     }}
     m[2]=50; /* PAL $1703/$3428 guard: selected PAL target, not a raster wait. */
     m[0x104]=1;m[0x105]=0;m[0x16]=0;m[0x17]=0;m[3]=0;m[0x40]=0;
@@ -1995,6 +2187,7 @@ unsigned short bl_c64_revision(void){return revision;}
 unsigned char bl_c64_screen(long cell){return m[0x8c00 + cell];}
 unsigned char bl_c64_screen_color(long cell){return m[0xd800 + cell]&7;}
 unsigned char bl_c64_glyph(long code,long row){return m[charset()+((unsigned short)code<<3)+row];}
+const unsigned char *bl_c64_display_glyph(long code){return m+charset()+((unsigned short)code<<3);}
 unsigned char bl_c64_cell_dirty(long cell){return (unsigned char)(dirty_cells[cell]||dirty_glyphs[m[0x8c00 + cell]]||old_bank!=m[0xf2]);}
 void bl_c64_clear_dirty(void){
     unsigned short i,keep=0,cell;invalidate_contacts();
@@ -2292,7 +2485,7 @@ static void paint_cell(unsigned char *planes,unsigned short cell,unsigned short 
     }
     if(tile_painter){
         paint_request.bitmap=planes;paint_request.scene_top=scene_top;paint_request.cell=cell;
-        paint_request.slot=index;paint_request.planes=entry->planes[0];paint_request.changed=changed;
+        paint_request.slot=index;paint_request.planes=entry->planes[0];paint_request.changed=changed;paint_request.rows=rows;
         tile_painter(&paint_request);return;
     }
     {unsigned char *target=planes+scene_top*40+base;const unsigned char *src=entry->planes[0];
@@ -2581,22 +2774,24 @@ const unsigned short *bl_c64_paint_part(unsigned char *planes,long scene_top,lon
         }
         if(work++>=limit)break;
         ++paint_cursor;paint_queued[cell]=2;rows=paint_rows[cell];stamp=cell_stamp[cell];
+        if(!rows)continue;
 #if defined(__m68k__)
         if(stamp && *(unsigned short*)(stamp-2)==glyph_epoch[indexed_screen[cell]]){
             if(tile_painter){
                 paint_request.bitmap=planes;paint_request.scene_top=scene_top;paint_request.cell=cell;
-                paint_request.slot=cell_cache[cell];paint_request.planes=stamp;paint_request.changed=0;
+                paint_request.slot=cell_cache[cell];paint_request.planes=stamp;paint_request.changed=0;paint_request.rows=rows;
                 tile_painter(&paint_request);
             }else copy_character(stamp,field+cell_offsets[cell]);
         }
         else
 #endif
         {++profile[4];paint_cell(planes,cell,(unsigned short)scene_top,rows);}
-        row=cell_y[cell]>>3;part_rows[row]|=rows;part_words[row]|=cell_word_mask[cell];
+        row=cell_y[cell]>>3;part_rows[row]|=rows;/* The 320-byte stride leaves the column in the low six bits. */
+        part_words[row]|=column_word_mask[(cell_offsets[cell]&63)>>1];
         /* Direct cell/glyph changes (moving traps, doors, lamps) must reach
          * the display before the much larger cached scrolling rectangles.
          * This changes presentation scheduling only, never source state. */
-        part_priority_rows[row]|=rows;part_priority_words[row]|=cell_word_mask[cell];
+        part_priority_rows[row]|=rows;part_priority_words[row]|=column_word_mask[(cell_offsets[cell]&63)>>1];
     }
     *count=(unsigned short)(paint_cursor-start);return paint_list+start;
 }

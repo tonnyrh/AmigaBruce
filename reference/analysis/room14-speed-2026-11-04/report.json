@@ -1,0 +1,1087 @@
+{
+  "room": 14,
+  "platform": "WinUAE, cycle-exact PAL A500, 68000 + OCS, Kickstart 1.3, 512 KiB Chip + 512 KiB expansion",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "physical_a500_measured": false,
+  "method": [
+    "Normal release ADF, room selector and invincibility. Stationary stick followed by held joystick Up. No source writes.",
+    "Two 18-second host intervals per mode. No IPC in the timed intervals. Paused counter reads at endpoints. Rates are normalized to actual emulated PAL fields (50 per second). Early queues count only offers in the early Copper window.",
+    "Separate held-Up screen test. Sample the active Copper list while paused. Validate both the live spark and all empty cells in columns 20 through 33 of the right-to-left track on character row 13 (source scanline 110). The four bitplanes must match the candidate glyph and the selected background. Count modular cell advances at the observed PAL field numbers. No claim of 50 unique images per second."
+  ],
+  "runs": {
+    "before_classic": {
+      "look": "Classic",
+      "normal_adf_sha256": "3e780a4013090659903488ad0daea12c4441c62c75610a3c575f45c80f8ce68f",
+      "normal_elf_sha256": "65e3926937b5df4d30465df18dc738277ee1f1ecce7716c89a2a6ea7e26da1e9",
+      "windows": [
+        {
+          "name": "idle",
+          "fields": 901,
+          "steps": 281,
+          "fields_per_step": 3.206405693950178,
+          "steps_per_50_fields": 15.593784683684795,
+          "early_queues": 525,
+          "audio_missed": 0,
+          "begin": {
+            "game_field_last": 4758,
+            "source_clock_elapsed": 3557,
+            "source_clock_missed": 226,
+            "queued_presents": 60,
+            "actor_logic_steps": 36,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 29
+          },
+          "end": {
+            "game_field_last": 5659,
+            "source_clock_elapsed": 4457,
+            "source_clock_missed": 226,
+            "queued_presents": 585,
+            "actor_logic_steps": 317,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 29
+          }
+        },
+        {
+          "name": "held_up",
+          "fields": 904,
+          "steps": 281,
+          "fields_per_step": 3.2170818505338077,
+          "steps_per_50_fields": 15.54203539823009,
+          "early_queues": 484,
+          "audio_missed": 0,
+          "begin": {
+            "game_field_last": 5666,
+            "source_clock_elapsed": 4464,
+            "source_clock_missed": 226,
+            "queued_presents": 591,
+            "actor_logic_steps": 319,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 28
+          },
+          "end": {
+            "game_field_last": 6570,
+            "source_clock_elapsed": 5368,
+            "source_clock_missed": 226,
+            "queued_presents": 1075,
+            "actor_logic_steps": 600,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 28
+          }
+        }
+      ],
+      "visible_track": {
+        "fields": 483,
+        "moves": 74,
+        "cells_per_50_fields": 7.6604554865424435,
+        "valid_samples": 58,
+        "samples": [
+          [
+            22264,
+            31
+          ],
+          [
+            22273,
+            30
+          ],
+          [
+            22282,
+            29
+          ],
+          [
+            22290,
+            27
+          ],
+          [
+            22299,
+            26
+          ],
+          [
+            22308,
+            25
+          ],
+          [
+            22317,
+            23
+          ],
+          [
+            22326,
+            22
+          ],
+          [
+            22334,
+            21
+          ],
+          [
+            22343,
+            33
+          ],
+          [
+            22352,
+            32
+          ],
+          [
+            22360,
+            31
+          ],
+          [
+            22367,
+            29
+          ],
+          [
+            22376,
+            28
+          ],
+          [
+            22384,
+            27
+          ],
+          [
+            22393,
+            25
+          ],
+          [
+            22401,
+            24
+          ],
+          [
+            22410,
+            23
+          ],
+          [
+            22418,
+            21
+          ],
+          [
+            22425,
+            20
+          ],
+          [
+            22434,
+            33
+          ],
+          [
+            22442,
+            32
+          ],
+          [
+            22451,
+            30
+          ],
+          [
+            22460,
+            29
+          ],
+          [
+            22469,
+            28
+          ],
+          [
+            22478,
+            26
+          ],
+          [
+            22486,
+            25
+          ],
+          [
+            22495,
+            24
+          ],
+          [
+            22504,
+            22
+          ],
+          [
+            22512,
+            21
+          ],
+          [
+            22521,
+            20
+          ],
+          [
+            22529,
+            32
+          ],
+          [
+            22538,
+            31
+          ],
+          [
+            22546,
+            30
+          ],
+          [
+            22554,
+            28
+          ],
+          [
+            22563,
+            27
+          ],
+          [
+            22571,
+            26
+          ],
+          [
+            22580,
+            25
+          ],
+          [
+            22589,
+            23
+          ],
+          [
+            22596,
+            22
+          ],
+          [
+            22604,
+            21
+          ],
+          [
+            22613,
+            33
+          ],
+          [
+            22621,
+            32
+          ],
+          [
+            22630,
+            31
+          ],
+          [
+            22637,
+            30
+          ],
+          [
+            22646,
+            28
+          ],
+          [
+            22654,
+            27
+          ],
+          [
+            22663,
+            26
+          ],
+          [
+            22671,
+            24
+          ],
+          [
+            22680,
+            23
+          ],
+          [
+            22688,
+            22
+          ],
+          [
+            22697,
+            21
+          ],
+          [
+            22705,
+            33
+          ],
+          [
+            22714,
+            32
+          ],
+          [
+            22722,
+            31
+          ],
+          [
+            22731,
+            30
+          ],
+          [
+            22739,
+            28
+          ],
+          [
+            22747,
+            27
+          ]
+        ]
+      }
+    },
+    "before_enhanced": {
+      "look": "Enhanced",
+      "normal_adf_sha256": "3e780a4013090659903488ad0daea12c4441c62c75610a3c575f45c80f8ce68f",
+      "normal_elf_sha256": "65e3926937b5df4d30465df18dc738277ee1f1ecce7716c89a2a6ea7e26da1e9",
+      "windows": [
+        {
+          "name": "idle",
+          "fields": 907,
+          "steps": 223,
+          "fields_per_step": 4.067264573991031,
+          "steps_per_50_fields": 12.293274531422272,
+          "early_queues": 451,
+          "audio_missed": 0,
+          "begin": {
+            "game_field_last": 4893,
+            "source_clock_elapsed": 3580,
+            "source_clock_missed": 237,
+            "queued_presents": 54,
+            "actor_logic_steps": 30,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 32
+          },
+          "end": {
+            "game_field_last": 5800,
+            "source_clock_elapsed": 4484,
+            "source_clock_missed": 237,
+            "queued_presents": 505,
+            "actor_logic_steps": 253,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 33
+          }
+        },
+        {
+          "name": "held_up",
+          "fields": 903,
+          "steps": 213,
+          "fields_per_step": 4.23943661971831,
+          "steps_per_50_fields": 11.794019933554818,
+          "early_queues": 382,
+          "audio_missed": 0,
+          "begin": {
+            "game_field_last": 5808,
+            "source_clock_elapsed": 4492,
+            "source_clock_missed": 237,
+            "queued_presents": 508,
+            "actor_logic_steps": 255,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 32
+          },
+          "end": {
+            "game_field_last": 6711,
+            "source_clock_elapsed": 5395,
+            "source_clock_missed": 237,
+            "queued_presents": 890,
+            "actor_logic_steps": 468,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 23
+          }
+        }
+      ],
+      "visible_track": {
+        "fields": 486,
+        "moves": 57,
+        "cells_per_50_fields": 5.864197530864198,
+        "valid_samples": 58,
+        "samples": [
+          [
+            22259,
+            30
+          ],
+          [
+            22269,
+            29
+          ],
+          [
+            22277,
+            28
+          ],
+          [
+            22285,
+            27
+          ],
+          [
+            22293,
+            26
+          ],
+          [
+            22302,
+            25
+          ],
+          [
+            22312,
+            24
+          ],
+          [
+            22322,
+            23
+          ],
+          [
+            22331,
+            22
+          ],
+          [
+            22340,
+            21
+          ],
+          [
+            22348,
+            20
+          ],
+          [
+            22357,
+            33
+          ],
+          [
+            22366,
+            32
+          ],
+          [
+            22374,
+            31
+          ],
+          [
+            22383,
+            30
+          ],
+          [
+            22391,
+            29
+          ],
+          [
+            22399,
+            28
+          ],
+          [
+            22407,
+            27
+          ],
+          [
+            22415,
+            26
+          ],
+          [
+            22424,
+            25
+          ],
+          [
+            22432,
+            24
+          ],
+          [
+            22441,
+            23
+          ],
+          [
+            22449,
+            22
+          ],
+          [
+            22458,
+            21
+          ],
+          [
+            22466,
+            20
+          ],
+          [
+            22474,
+            33
+          ],
+          [
+            22482,
+            32
+          ],
+          [
+            22490,
+            31
+          ],
+          [
+            22499,
+            30
+          ],
+          [
+            22507,
+            29
+          ],
+          [
+            22516,
+            28
+          ],
+          [
+            22525,
+            27
+          ],
+          [
+            22533,
+            26
+          ],
+          [
+            22542,
+            25
+          ],
+          [
+            22550,
+            24
+          ],
+          [
+            22558,
+            23
+          ],
+          [
+            22567,
+            22
+          ],
+          [
+            22576,
+            21
+          ],
+          [
+            22584,
+            20
+          ],
+          [
+            22593,
+            33
+          ],
+          [
+            22600,
+            32
+          ],
+          [
+            22608,
+            31
+          ],
+          [
+            22617,
+            30
+          ],
+          [
+            22626,
+            29
+          ],
+          [
+            22634,
+            28
+          ],
+          [
+            22643,
+            27
+          ],
+          [
+            22651,
+            26
+          ],
+          [
+            22660,
+            25
+          ],
+          [
+            22668,
+            24
+          ],
+          [
+            22676,
+            23
+          ],
+          [
+            22687,
+            22
+          ],
+          [
+            22695,
+            21
+          ],
+          [
+            22704,
+            20
+          ],
+          [
+            22712,
+            33
+          ],
+          [
+            22721,
+            32
+          ],
+          [
+            22729,
+            31
+          ],
+          [
+            22737,
+            30
+          ],
+          [
+            22745,
+            29
+          ]
+        ]
+      }
+    },
+    "after_enhanced": {
+      "look": "Enhanced",
+      "normal_adf_sha256": "3dd41eefde9388fbe257174c5c8cdac94e6a0dbba30da5f575748107bdd0de7d",
+      "normal_elf_sha256": "9203e2b778884523a601317acd0e3ab8fdc2f29239c8fbf278637d3f6d178eaa",
+      "windows": [
+        {
+          "name": "idle",
+          "fields": 833,
+          "steps": 254,
+          "fields_per_step": 3.279527559055118,
+          "steps_per_50_fields": 15.24609843937575,
+          "early_queues": 364,
+          "audio_missed": 0,
+          "begin": {
+            "game_field_last": 1901,
+            "source_clock_elapsed": 582,
+            "source_clock_missed": 236,
+            "queued_presents": 34,
+            "actor_logic_steps": 34,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 30
+          },
+          "end": {
+            "game_field_last": 2734,
+            "source_clock_elapsed": 1415,
+            "source_clock_missed": 236,
+            "queued_presents": 398,
+            "actor_logic_steps": 288,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 29
+          }
+        },
+        {
+          "name": "held_up",
+          "fields": 893,
+          "steps": 289,
+          "fields_per_step": 3.0899653979238755,
+          "steps_per_50_fields": 16.18141097424412,
+          "early_queues": 573,
+          "audio_missed": 0,
+          "begin": {
+            "game_field_last": 2743,
+            "source_clock_elapsed": 1424,
+            "source_clock_missed": 236,
+            "queued_presents": 401,
+            "actor_logic_steps": 291,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 28
+          },
+          "end": {
+            "game_field_last": 3636,
+            "source_clock_elapsed": 2318,
+            "source_clock_missed": 236,
+            "queued_presents": 974,
+            "actor_logic_steps": 580,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 23
+          }
+        }
+      ],
+      "visible_track": {
+        "fields": 487,
+        "moves": 77,
+        "cells_per_50_fields": 7.905544147843942,
+        "valid_samples": 55,
+        "samples": [
+          [
+            7350,
+            27
+          ],
+          [
+            7360,
+            26
+          ],
+          [
+            7370,
+            24
+          ],
+          [
+            7380,
+            22
+          ],
+          [
+            7390,
+            21
+          ],
+          [
+            7400,
+            33
+          ],
+          [
+            7410,
+            32
+          ],
+          [
+            7420,
+            30
+          ],
+          [
+            7430,
+            28
+          ],
+          [
+            7439,
+            27
+          ],
+          [
+            7448,
+            26
+          ],
+          [
+            7457,
+            24
+          ],
+          [
+            7465,
+            23
+          ],
+          [
+            7474,
+            21
+          ],
+          [
+            7482,
+            20
+          ],
+          [
+            7491,
+            33
+          ],
+          [
+            7501,
+            31
+          ],
+          [
+            7510,
+            30
+          ],
+          [
+            7519,
+            28
+          ],
+          [
+            7529,
+            26
+          ],
+          [
+            7538,
+            25
+          ],
+          [
+            7546,
+            24
+          ],
+          [
+            7555,
+            23
+          ],
+          [
+            7565,
+            21
+          ],
+          [
+            7574,
+            20
+          ],
+          [
+            7584,
+            32
+          ],
+          [
+            7593,
+            31
+          ],
+          [
+            7603,
+            29
+          ],
+          [
+            7613,
+            28
+          ],
+          [
+            7620,
+            27
+          ],
+          [
+            7630,
+            25
+          ],
+          [
+            7638,
+            24
+          ],
+          [
+            7647,
+            22
+          ],
+          [
+            7655,
+            21
+          ],
+          [
+            7662,
+            20
+          ],
+          [
+            7672,
+            32
+          ],
+          [
+            7682,
+            31
+          ],
+          [
+            7691,
+            29
+          ],
+          [
+            7699,
+            28
+          ],
+          [
+            7708,
+            27
+          ],
+          [
+            7717,
+            25
+          ],
+          [
+            7725,
+            24
+          ],
+          [
+            7733,
+            22
+          ],
+          [
+            7742,
+            21
+          ],
+          [
+            7751,
+            20
+          ],
+          [
+            7760,
+            32
+          ],
+          [
+            7769,
+            31
+          ],
+          [
+            7778,
+            29
+          ],
+          [
+            7786,
+            28
+          ],
+          [
+            7795,
+            27
+          ],
+          [
+            7803,
+            25
+          ],
+          [
+            7812,
+            24
+          ],
+          [
+            7820,
+            23
+          ],
+          [
+            7829,
+            21
+          ],
+          [
+            7837,
+            20
+          ]
+        ]
+      }
+    },
+    "after_classic": {
+      "look": "Classic",
+      "normal_adf_sha256": "3dd41eefde9388fbe257174c5c8cdac94e6a0dbba30da5f575748107bdd0de7d",
+      "normal_elf_sha256": "9203e2b778884523a601317acd0e3ab8fdc2f29239c8fbf278637d3f6d178eaa",
+      "windows": [
+        {
+          "name": "idle",
+          "fields": 899,
+          "steps": 299,
+          "fields_per_step": 3.0066889632107023,
+          "steps_per_50_fields": 16.629588431590655,
+          "early_queues": 748,
+          "audio_missed": 0,
+          "begin": {
+            "game_field_last": 10540,
+            "source_clock_elapsed": 9062,
+            "source_clock_missed": 257,
+            "queued_presents": 4054,
+            "actor_logic_steps": 43,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 26
+          },
+          "end": {
+            "game_field_last": 11439,
+            "source_clock_elapsed": 9961,
+            "source_clock_missed": 257,
+            "queued_presents": 4802,
+            "actor_logic_steps": 342,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 30
+          }
+        },
+        {
+          "name": "held_up",
+          "fields": 902,
+          "steps": 300,
+          "fields_per_step": 3.006666666666667,
+          "steps_per_50_fields": 16.62971175166297,
+          "early_queues": 731,
+          "audio_missed": 0,
+          "begin": {
+            "game_field_last": 11449,
+            "source_clock_elapsed": 9971,
+            "source_clock_missed": 257,
+            "queued_presents": 4811,
+            "actor_logic_steps": 346,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 29
+          },
+          "end": {
+            "game_field_last": 12351,
+            "source_clock_elapsed": 10873,
+            "source_clock_missed": 257,
+            "queued_presents": 5542,
+            "actor_logic_steps": 646,
+            "actor_loading_epoch": 2,
+            "source_fault": 0,
+            "room": 14,
+            "actors": [
+              1,
+              0,
+              0
+            ],
+            "trap_x": 32
+          }
+        }
+      ]
+    }
+  },
+  "source_paint_test": [
+    "repaint_consumed_cell_after_source_mutation",
+    "full880_queue_repeated_mutation_coalescing",
+    "60_full_room_loads_exact_pixels",
+    "96_room12_source_steps_single_phase_overlay",
+    "source_ram_unchanged_by_overlay",
+    "changed_cell_invalidates_overlay_rectangle",
+    "96_room14_trap_moves_exact_pixels_and_contact_invalidation"
+  ]
+}

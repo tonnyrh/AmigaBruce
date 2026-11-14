@@ -1,0 +1,30 @@
+[
+  {
+    "variant": 0,
+    "period": 452,
+    "played_ms": 112.14315619718091,
+    "packed_bytes": 440,
+    "pcm_bytes": 880,
+    "peak": 28672,
+    "codes": 13,
+    "endpoints": [
+      0,
+      0
+    ],
+    "sha256": "39a611608f92790bc9341cc26aa51951361f9054dd7c4e05baad5e7baec0d90f"
+  },
+  {
+    "variant": 1,
+    "period": 435,
+    "played_ms": 107.92538262339313,
+    "packed_bytes": 440,
+    "pcm_bytes": 880,
+    "peak": 28672,
+    "codes": 15,
+    "endpoints": [
+      0,
+      0
+    ],
+    "sha256": "45b43ea211efd846a30e14071732c38af5e8a8fd19bdcdf762f83ef55b4ffbf8"
+  }
+]

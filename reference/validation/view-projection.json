@@ -98,7 +98,7 @@
     },
     {
       "path": "reference/validation/view-mask-host.json",
-      "sha256": "b3efe51af6b5a0994194c1481dbe5d78a4f13df03bfa4540686fefacd468937a"
+      "sha256": "4ee56a444f4bb8b0b7680e64c1e5a1657d78d219d792443ddf8f7a8c14585f01"
     },
     {
       "path": "tools/verify_view_projection.py",

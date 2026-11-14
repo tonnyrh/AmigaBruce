@@ -1,0 +1,146 @@
+{
+  "offline": {
+    "tinted_pixels_yamo_kage_bruce": [
+      2908,
+      0,
+      1631
+    ],
+    "occupied_masks_compared": 80,
+    "c64_strike_masks": 6,
+    "background_bytes_identical": 12288,
+    "expected_dma_sha256": "4cc67135b394d06af0400f22579f564d8da9d4f8b30b8fd2330867881633e785"
+  },
+  "upper_body_contrast": {
+    "scope": "Both climbing poses, rows 1..10, staged x center 160 feet 189 on the WinUAE room 2 backplate, sRGB luminance ratio of at least 2:1",
+    "pixels": 103,
+    "before": 43,
+    "after": 66
+  },
+  "amiga_dma_bytes": 61056,
+  "source_sprite_mask_sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064",
+  "release_exe": "5071479a2e3b16f6a9dd42727ba86e86072c68c184d92f36a250747577a585c0",
+  "release_adf": "6be8b8bebdf433cb8ec9f969ffa9407e1755170395fb49c6dda13ab53c8d18e1",
+  "tested_adf": "d1d8de414b849a9328b6948d9f071ed541b096092df597808bc682d568471625",
+  "machine": "WinUAE PAL 68000 OCS, Kickstart 1.3, 512 KiB Chip + 512 KiB slow. Same executable verified inside both OFS disks.",
+  "room2": "Debug room jump; source actor positions and Bruce's climbing pose staged for the screenshot; enemies active and engine running.",
+  "mode_tests": [
+    {
+      "look": "classic",
+      "state": {
+        "field": 1228,
+        "steps": 5,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 11,
+        "room": 1
+      },
+      "fixed_pixels": 11740,
+      "background_sha256": "e08dcd912d111028644c42ed4ddc7e46cda7ef46e0eda5c101bf52bc0c4244bd"
+    },
+    {
+      "bruce_strike_poses": [
+        4,
+        6,
+        22,
+        26,
+        24,
+        28
+      ]
+    },
+    {
+      "joystick_visible_punch": 6,
+      "joystick_visible_kick": 28
+    },
+    {
+      "both_start": {
+        "field": 2378,
+        "steps": 242,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      },
+      "both_end": {
+        "field": 2470,
+        "steps": 273,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      }
+    },
+    {
+      "staged_visual_room": {
+        "field": 3332,
+        "steps": 536,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 2
+      },
+      "positions": [
+        89,
+        78,
+        102,
+        157,
+        195,
+        195
+      ],
+      "poses": [
+        10,
+        46,
+        0
+      ]
+    },
+    {
+      "look": "enhanced",
+      "state": {
+        "field": 1663,
+        "steps": 4,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      },
+      "fixed_pixels": 35584,
+      "background_sha256": "69231c16a08da360e2cff365cb9d0069ade585471cd2e88b2f8e17d8c45a29b5"
+    },
+    {
+      "look": "restored",
+      "state": {
+        "field": 3556,
+        "steps": 2,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 99,
+        "room": 1
+      },
+      "fixed_pixels": 11764,
+      "background_sha256": "072da38fc624b060c36f8907c97602080eda06a61071d4c6bf6ea9bc7db77f99"
+    }
+  ]
+}

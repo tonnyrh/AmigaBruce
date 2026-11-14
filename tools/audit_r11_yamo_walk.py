@@ -88,9 +88,13 @@ def walk(lib, raw, col, row, direction, human):
         m[0x44] = 0
         cpu.p &= ~8
         run(0x15B8, 0x169D)
-        m[0x98], m[0x9B] = 15, 1
+        # Run the source joystick slot as the game does. In two-stick mode
+        # it also pushes status on the stack before reading the second port.
+        other = 31
         if human:
-            m[0x99], m[0x9C] = 15 ^ (8 if direction > 0 else 4), 1
+            other ^= 8 if direction > 0 else 4
+        m[0xDC00], m[0xDC01] = (31, other) if m[3] else (other, 31)
+        run(0x169D, 0x1703)
         m[0xDC00] = m[0xDC01] = 255
         run(0x1703, 0x179D)
         m[0xD01E] |= vic(m)

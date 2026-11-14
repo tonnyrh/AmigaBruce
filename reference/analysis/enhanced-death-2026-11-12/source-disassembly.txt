@@ -1,0 +1,35 @@
+Source: .reference/c64/work/untrained-memory.bin
+SHA256: 092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8
+Unverified Remember/T64 candidate; original bytes unchanged.
+
+216B: c9 19     CMP #$19
+216D: d0 11     BNE $2180
+216F: e0 00     CPX #$00
+2171: d0 04     BNE $2177
+2173: c0 01     CPY #$01
+2175: f0 03     BEQ $217a
+2177: 4c f4 24  JMP $24f4
+217A: 4c 18 18  JMP $1818
+
+27B8: c9 19     CMP #$19
+27BA: d0 05     BNE $27c1
+27BC: a0 08     LDY #$08
+27BE: 4c a1 29  JMP $29a1
+
+3057: a0 8c     LDY #$8c
+3059: 20 09 25  JSR $2509
+305C: 68        PLA
+305D: a8        TAY
+305E: 68        PLA
+305F: aa        TAX
+3060: 68        PLA
+3061: a6 51     LDX $51
+3063: f0 03     BEQ $3068
+3065: 4c 01 30  JMP $3001
+3068: 4c 7d 40  JMP $407d
+
+407D: a9 19     LDA #$19
+407F: 95 bf     STA $bf,X
+4081: a9 10     LDA #$10
+4083: 95 ce     STA $ce,X
+4085: 60        RTS

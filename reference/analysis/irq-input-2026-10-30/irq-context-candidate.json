@@ -42,11 +42,11 @@
   "artifacts": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "2d3692711dfd57cd2e108e697df2c01a958e47657e3d85069ee1930dec00efc1"
+      "sha256": "f623072cf02d7f461549138bb75d73804813f1fab747766e34ff395ca770ce95"
     },
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "a85c42da6af9e042fa903e9c1d6927144e50cce2ba3480edbe3ae13f78b53f2e"
+      "sha256": "34f6ce55d363e7d286f1861afb40535e1abaf23c7fc05745a48a08c2b9cacb1c"
     },
     {
       "path": "core/c64_sfx.h",

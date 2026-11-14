@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-14",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "behavior": "Enhanced-only cry for Bruce as attacker, accepted punch at $2AC3 and lethal health subtraction branch at $2BCB. No source RAM/register changes.",
+  "host_combat_cases": 16,
+  "frozen_source_comparisons": 517,
+  "sample_packed_bytes": 500,
+  "sample_decoded_bytes": 1000,
+  "sample_period": 887,
+  "bank_unique_samples": 17,
+  "bank_packed_bytes": 7370,
+  "additional_chip_allocation": 0,
+  "native_checks": "native.json",
+  "native_environment": "WinUAE 6.0.3, PAL A500 OCS, 68000 cycle exact, KS1.3, 512 KiB Chip + 512 KiB slow",
+  "scope": "Controlled starting positions and health, ordinary Fire for each kill; isolated exact Paula-page check; Classic observer detached. Not a natural playthrough or listening approval.",
+  "open": [
+    "Natural combat listening approval",
+    "Physical Amiga verification of this build"
+  ],
+  "files": {
+    "amiga/out/bruce_amiga.exe": "e9744ec6b8aa6ebb5087ef8e43199e8918ccf7d92f566a380ffbb2ebc46805a5",
+    "core/c64_rooms.c": "a638082bbaa718726c0988c14801311eb329882ca0e52a8e569e4b6dd09bf4f1",
+    "core/c64_actor_programs.h": "91a5ad979ee6bfecd6c70f23b7001fe957c5abddb548ad17e262751d7ea3e8f8",
+    "amiga/enhanced_audio.h": "ea8e5ad9f191383414d62d755d4ace69bb713a0de4ffbc6e8c15cab68d45ec48",
+    "amiga/enhanced_audio_data.h": "b879183fafc6800b90ee74b3780258f4fdaf404d24691c7bc5eba8b73a763ea4",
+    "tests/enhanced_audio_test.c": "f1380a93ccdcb110a2160e7c455f63bce9e73f1476cb3bb27e31e937bb573b9a"
+  }
+}

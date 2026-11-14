@@ -1,0 +1,97 @@
+Frozen candidate SHA256: 092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8
+Edition not verified as pristine 1984 retail.
+
+29C3: a9 00     LDA #$00
+29C5: a2 02     LDX #$02
+29C7: 95 b3     STA $b3,X
+29C9: 95 bc     STA $bc,X
+29CB: ca        DEX
+29CC: 10 f9     BPL $29c7
+29CE: ad 1e d0  LDA $d01e
+29D1: d0 01     BNE $29d4
+29D3: 60        RTS
+29D4: 85 67     STA $67
+29D6: 29 03     AND #$03
+
+2A52: b9 40 4f  LDA $4f40,Y
+2A55: 30 1f     BMI $2a76
+2A57: a8        TAY
+2A58: b9 bf 00  LDA $00bf,Y
+2A5B: c9 1b     CMP #$1b
+2A5D: f0 17     BEQ $2a76
+2A5F: c9 16     CMP #$16
+2A61: f0 18     BEQ $2a7b
+2A63: c9 11     CMP #$11
+2A65: f0 3e     BEQ $2aa5
+2A67: c9 0d     CMP #$0d
+2A69: f0 69     BEQ $2ad4
+2A6B: c9 0c     CMP #$0c
+2A6D: f0 65     BEQ $2ad4
+2A6F: c9 0e     CMP #$0e
+2A71: d0 03     BNE $2a76
+2A73: 4c fa 2a  JMP $2afa
+
+2AA5: a9 06     LDA #$06
+2AA7: 85 61     STA $61
+2AA9: 20 54 2c  JSR $2c54
+2AAC: 90 c8     BCC $2a76
+2AAE: 30 c6     BMI $2a76
+2AB0: b9 a1 00  LDA $00a1,Y
+2AB3: 38        SEC
+2AB4: f5 a1     SBC $a1,X
+2AB6: 10 04     BPL $2abc
+2AB8: 49 ff     EOR #$ff
+2ABA: 69 01     ADC #$01
+2ABC: c9 16     CMP #$16
+2ABE: b0 b6     BCS $2a76
+2AC0: 20 29 2e  JSR $2e29
+2AC3: 20 3e 2b  JSR $2b3e
+2AC6: b5 bc     LDA $bc,X
+2AC8: 09 04     ORA #$04
+2ACA: c0 00     CPY #$00
+2ACC: d0 02     BNE $2ad0
+2ACE: 09 80     ORA #$80
+2AD0: 95 bc     STA $bc,X
+2AD2: d0 a2     BNE $2a76
+
+2BB1: b5 bc     LDA $bc,X
+2BB3: 29 04     AND #$04
+2BB5: f0 1e     BEQ $2bd5
+2BB7: b5 bc     LDA $bc,X
+2BB9: 10 09     BPL $2bc4
+2BBB: a9 64     LDA #$64
+2BBD: a2 02     LDX #$02
+2BBF: 20 75 31  JSR $3175
+2BC2: a6 51     LDX $51
+2BC4: b5 d1     LDA $d1,X
+2BC6: 38        SEC
+2BC7: e9 03     SBC #$03
+2BC9: 95 d1     STA $d1,X
+2BCB: 30 57     BMI $2c24
+2BCD: a9 0f     LDA #$0f
+2BCF: 95 bf     STA $bf,X
+2BD1: a9 04     LDA #$04
+2BD3: 95 ce     STA $ce,X
+
+2C24: b5 bc     LDA $bc,X
+2C26: 29 80     AND #$80
+2C28: f0 1d     BEQ $2c47
+2C2A: 86 51     STX $51
+2C2C: e0 01     CPX #$01
+2C2E: d0 10     BNE $2c40
+2C30: a9 01     LDA #$01
+2C32: aa        TAX
+2C33: 20 75 31  JSR $3175
+2C36: a9 c2     LDA #$c2
+2C38: a2 02     LDX #$02
+2C3A: 20 75 31  JSR $3175
+2C3D: 4c 47 2c  JMP $2c47
+2C40: a9 c8     LDA #$c8
+2C42: a2 02     LDX #$02
+2C44: 20 75 31  JSR $3175
+2C47: a6 51     LDX $51
+2C49: a9 13     LDA #$13
+2C4B: 95 bf     STA $bf,X
+2C4D: a9 0c     LDA #$0c
+2C4F: 95 ce     STA $ce,X
+2C51: 4c f9 2b  JMP $2bf9

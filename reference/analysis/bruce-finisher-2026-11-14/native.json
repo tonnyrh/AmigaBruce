@@ -1,0 +1,21 @@
+{
+  "method": "Verify Bruce's finishing cry in an owned normal-ADF WinUAE instance.\n\nPositions and enemy health are controlled starting conditions. Ordinary Fire\nthen drives source punch/contact/damage; no hit, kill or cry event is injected.\nA final isolated sample-page check is explicitly a controlled playback request.\n",
+  "checks": [
+    {
+      "victim": 1,
+      "input": "Fire only",
+      "starting_health": 2,
+      "observed_mask": 65587,
+      "observed_health": 2
+    },
+    {
+      "victim": 2,
+      "input": "Fire only",
+      "starting_health": 2,
+      "observed_mask": 196659,
+      "observed_health": 135
+    }
+  ],
+  "pcm_bytes_matched": 1000,
+  "classic_observer_detached": true
+}

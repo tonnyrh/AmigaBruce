@@ -11,7 +11,7 @@
   },
   "dependency": {
     "path": "tools/build_c64_sprites.py",
-    "sha256": "a8e60cf9f9c8fc1a6acc0ffc6d129e1b15232900e0a0223f5b41372cbe6895d7"
+    "sha256": "bf27ce361c0d3e99038107151a3253192f5b3d092c20d80694b0fbb9912ca1f4"
   },
   "output": {
     "path": "core/c64_hit_data.h",

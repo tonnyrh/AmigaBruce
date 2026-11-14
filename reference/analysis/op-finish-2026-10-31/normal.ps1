@@ -1,5 +1,6 @@
-param([ValidateSet('cli','adf','render','cross','queued')][string]$Mode,[Parameter(Mandatory)][string]$Label,[ValidateRange(2,120)][int]$Samples=12)
+param([ValidateSet('cli','adf','render','cross','queued')][string]$Mode,[Parameter(Mandatory)][string]$Label,[ValidateRange(2,120)][int]$Samples=12,[string]$BuildDir)
 $ErrorActionPreference='Stop'
+if($BuildDir -and $Mode -notin ('cli','adf','cross')){throw 'BuildDir is supported by the normal CLI and disk probes'}
 $root=(Resolve-Path "$PSScriptRoot/../../..").Path
 $dir=Join-Path "$root/.tmp/op-finish" $Label
 if(Test-Path -LiteralPath $dir){throw 'Choose a fresh run label'}
@@ -8,10 +9,13 @@ foreach($name in 'winuae64.exe','winuae.ini'){
     Copy-Item -LiteralPath "$root/.tmp/session-ui/$name" -Destination $dir
 }
 $config=@(Get-Content -LiteralPath "$root/.tmp/bruce-a500.uae")
+if(!$BuildDir){$BuildDir=Join-Path $root 'amiga/out'}
+$BuildDir=(Resolve-Path -LiteralPath $BuildDir).Path
+$config=$config -replace '^filesystem2=rw,dh1:.+$',("filesystem2=rw,dh1:dh1:$BuildDir,-128")
 if($Mode -eq 'queued'){$config=$config -replace '^filesystem2=rw,dh1:.+$',("filesystem2=rw,dh1:dh1:$root/.tmp/op-finish/queue-ui,-128")}
 if($Mode -eq 'adf'){
     $config=@($config | Where-Object {$_ -notmatch '^(filesystem2|floppy0|floppy0wp)='})
-    $config+="floppy0=$root/amiga/out/bruce_amiga.adf"
+    $config+="floppy0=$BuildDir/bruce_amiga.adf"
     $config+='floppy0wp=true'
 }
 $config | Set-Content -LiteralPath "$dir/game.uae" -Encoding ascii
@@ -28,6 +32,6 @@ try {
         $stairsResult=$LASTEXITCODE
         & python $audit @common --label "$Label-death" --death --roundtrip --samples 12 --frozen --require-coherent
         if($stairsResult){throw 'Room 12 frame comparison failed'}
-    }else{& python "$PSScriptRoot/normal.py" $dir $emu.Id $Mode}
+    }else{& python "$PSScriptRoot/normal.py" $dir $emu.Id $Mode $BuildDir}
     if($LASTEXITCODE){throw "Normal $Mode test failed"}
 }finally{if(!$emu.HasExited){Stop-Process -Id $emu.Id}}

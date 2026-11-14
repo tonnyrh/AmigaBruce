@@ -1,0 +1,25 @@
+{
+  "poses": 40,
+  "facings_checked": 80,
+  "bruce_facings": 28,
+  "white_pixels_removed": 250,
+  "only_bruce_index_1_to_10": true,
+  "anchors_masks_palette_scenery_opponents_unchanged": true,
+  "build": "Normal PAL A500 release; compile, AmigaDOS entry check, Hunk conversion and ADF packaging succeeded. Pixel correction checked offline; no new WinUAE run for this colour-only change.",
+  "preview": "Controlled compositing of actual indexed poses on the captured room-2 backplate at identical coordinates; not a new WinUAE capture.",
+  "artifacts": {
+    "amiga\\enhanced_art.h": {
+      "bytes": 60397,
+      "sha256": "f1d8ea305f91eb94c0094444bbb47bd02a3d211ebada51569282f85ea6c64eed"
+    },
+    "amiga\\out\\bruce_amiga.exe": {
+      "bytes": 367860,
+      "sha256": "c6bcda70302162f336073eaaa14240a16b857c298c3357361e5cd4ce5d5f61d1"
+    },
+    "amiga\\out\\bruce-warm-skin.adf": {
+      "bytes": 901120,
+      "sha256": "b2e8e2ed45101d7fded533e9fb987be35ac7bac0f710bd49204b945d042ef96a"
+    }
+  },
+  "adf_executable_byte_equal": true
+}

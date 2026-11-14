@@ -14,6 +14,50 @@ Remember/T64-kandidaten er fortsatt ikke bekreftet som urørt 1984-utgave.
 Originalfilen er uendret. [Disassembly](../reference/analysis/moving-net-2026-10-25/source-disassembly.txt)
 er laget fra disse faktiske bytene.
 
+## Nedovervendte spyd langs nettet i Enhanced
+
+Rom 5 bruker åtte faste spyd rundt det bevegelige nettet. Rompekeren i
+`$4B38/$4B4D` velger den pakkede kartstrømmen `$6E1B–$6F81` i
+Remember/T64-kandidaten ovenfor. Kartverdi `$C0` forekommer i kolonne
+16, 17, 22 og 23 på rad 0, i kolonne 17 og 22 på rad 4, og i kolonne 16
+og 23 på rad 5. Kolonner og rader er nullbaserte 8×16-celler.
+
+Romlasteren ved `$0AE3–$0AEE` og `$0B0B–$0B16` skriver tegnparet
+`$40/$C0`. Øvre tegn ved `$A200` har bytene `3F 3F 2A 2A 08 08 08 08`.
+Nedre tegn ved `$A600` har åtte `08`. Bitpar 2 gir hvitt fra paletten
+ved `$47D1`. Bitpar 3 gir festet farge fra cellens farge-RAM. Den gamle
+Enhanced-paletten for søyler malte også disse tegnene i mørke murfarger.
+Standardtegningen bruker nå C64-fargene på de synlige pikslene og lar
+Enhanced-muren synes gjennom bitpar 0. En egen fargeendring i
+grafikkeditoren gjelder bare den halvdelen av tegnet som ble malt.
+
+På PAL A500 i WinUAE samsvarte alle 384 synlige spydpiksler i rom 5 med
+C64-kilden, både i bakgrunnsbufferen og på den viste skjermen. Samme
+sammenligning i bakgrunnsbufferen dekket alle 28 spyd i rom 5, 6, 7, 9 og
+10, inkludert de ulike festefargene.
+[Rom 5 i WinUAE](../reference/analysis/room05-spears-2026-11-02/room-05-enhanced.png)
+
+## Lanternene som slukker i rom 5
+
+I den samme C64-binæren styrer `$3760–$378C` venstre lanterne og
+`$37B4–$37E0` høyre. Mens tilhørende post (`$4D70` eller `$4D74`) er
+aktiv, øker romrutinen dens teller. Ved `$20` tennes lanternen. Ved `$40`
+slukker den og telleren nullstilles. Romstart ved `$3402` setter høyre
+teller til `$1F`, så de to lanternene skifter tilstand til ulike tider.
+
+Tegnrutinen ved `$17E2` dekoder strengene ved `$4626–$462D`. På rad 4
+bruker den `$13/$93` og `$66/$E6` i kolonne 11 (tent og slukket), og
+`$14/$94` og `$67/$E7` i kolonne 28. To rader i den slukkede høyre
+veken får fremdeles fire mulige bitmønstre via `$4122–$412F`.
+Ved innsamling gir postene hver sin tomme brakett, `$1E/$9E` og
+`$1F/$9F`. Romrutinen hopper da over tenning og slukking.
+
+Enhanced manglet begge de slukkede tegnparene og viste derfor C64-grafikk
+en del av hver syklus. Nå bruker de samme form og oppheng som de tente
+lanternene, med mørkere glass og veke. Grafikken velges direkte fra de
+levende tegnene, også når høyre veke skifter.
+[Begge tilstander fra WinUAE](../reference/analysis/room05-lanterns-2026-11-02/lantern-cycle.png)
+
 ## Regler fra maskinkoden
 
 | Adresse | Betingelse | Effekt |

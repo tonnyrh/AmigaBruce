@@ -1,0 +1,28 @@
+{
+  "method": "Read-only Exec MemList and CLI segment inspection in normal ADF, PAL A500 OCS/KS1.3/512+512 KiB",
+  "hunks": [
+    "0xc08710",
+    "0xc391e0",
+    "0xc55760",
+    "0xc55778"
+  ],
+  "all_program_hunks_in_expansion_ram": true,
+  "memory": [
+    {
+      "address": "0xc004c2",
+      "attributes": 5,
+      "lower": "0xc004e8",
+      "upper": "0xc7e800",
+      "free": 1968,
+      "largest": 1112
+    },
+    {
+      "address": "0x400",
+      "attributes": 3,
+      "lower": "0x420",
+      "upper": "0x80000",
+      "free": 82592,
+      "largest": 82520
+    }
+  ]
+}

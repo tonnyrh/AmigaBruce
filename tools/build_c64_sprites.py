@@ -157,7 +157,7 @@ def main():
                                    dma_offset=unique[data],dma_bytes=len(data),file=path.name))
     atlas.save(OUT/'actors.png');preview.save(OUT/'preview.png')
     (OUT/'ocs-palette.txt').write_text('\n'.join(f'#{p:03X}' for p in PALETTE)+'\n')
-    packed=pack(raw);assert unpack(packed)==raw
+    packed=pack(raw,compact=True);assert unpack(packed)==raw
     (OUT/'actors.dma').write_bytes(raw)
     (OUT/'actors.packed').write_bytes(packed)
     fnv=2166136261

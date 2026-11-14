@@ -2,7 +2,42 @@
 
 Dato: 2026-10-18. Arbeidsgrunnlag fra planleggingsdialogen.
 
-## Gjeldende prioritet — brukerbeslutning 24. oktober
+## 1. november 2026 – Classic og Enhanced
+
+Bruce II er satt på vent. Den første spillbare Enhanced-utgaven av **Bruce**
+har både nye figurer og nye bakgrunnsfliser. Classic er standard ved
+kaldstart. Trykk **F4** i hovedmenyen for å velge utseende og **Fire** eller
+**Return** for å starte. **F10** åpner menyen igjen. Begge valg bruker de
+samme 20 rommene med den samme motoren. [Bygg, skjermbilder og testomfang](ENHANCED.md)
+
+| Figur | Første animasjon å prøve | Det spilleren skal kunne lese |
+| --- | --- | --- |
+| Bruce | Klatring med vekslende håndgrep og motsatt kne, tydelig sats og landing | Hvilken hånd som tar neste grep, og når føttene igjen har støtte. |
+| Yamo | Tyngre steg, sammenkrøpet sats og sidevendt positur under nedslag og skli | Når sparket starter og hvilken vei han er slått. Grønn hud og bred silhuett. |
+| Kage | Tohåndsgrep på kendostaven, opptrekk, utstrakt støt og retur til vakt | Hvor stavspissen er i den aktive treffasen. |
+
+**Skillet i koden.** Menyvalget er `F4  LOOK  CLASSIC / ENHANCED`
+i vanlig oppsett. Debugmenyen har allerede en egen F4-funksjon for romvalg.
+La valgt utseende styre figurdata og bildevalg ved tegning. Rom, inndata,
+AI, fysikk, kollisjonsmasker, skade, treffvinduer og poeng fortsetter gjennom
+samme C64-baserte spillkode. En ny mellompositur kan vise en annen arm eller
+en bøyd fot. Den skal aldri skrive tilbake til aktørens kildetilstand.
+
+**Tegning.** Enhanced velger mellompositur ved hjelp av motorens positur,
+retning og posisjon. Ved modusbytte gjenbruker spillet den samme Chip-bufferen.
+Figurene i Enhanced bruker 58 272 byte og flisene 12 288 byte før
+klippebufferen. Classic bruker 73 680 byte før klippebufferen.
+
+**Godkjenning på PAL A500, 512 + 512 KiB.** Spill av samme joysticksekvens
+i begge moduser og sammenlign posisjon, positur brukt til kontakt, helse,
+lanterner og rombytte for hvert spillsteg. Sammenlign Classic-bildet med
+referansen piksel for piksel. I Enhanced må figurene være lesbare i
+spillstørrelse, særlig Bruces hender og Kages stav mot mørk bakgrunn.
+Mål største ledige Chip-blokk, lydoppdateringer og lengste spillsteg med
+begge fiender aktive i rom 1 og 2, også etter retur til menyen og bytte
+tilbake til Classic. [Referansemåling](OP_A500_ACCEPTANCE.md)
+
+## Grunnlaget for Classic – brukerbeslutning 24. oktober
 
 C64-kildedata og disassembly av original maskinkode styrer alle detaljer.
 Usikkerhet avklares i koden og tabellene; vi erstatter ikke ukjente regler med

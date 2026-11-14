@@ -1,0 +1,28 @@
+{
+  "capture_id": "ACTOR-DRAW-0001",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "code_sites": {
+    "0x1c23": "20c329",
+    "0x1c29": "209e17",
+    "0x25ae": "a651e002",
+    "0x2586": "8651"
+  },
+  "status": "candidate_code_and_scoped_pal_measurements",
+  "edition_verified": false,
+  "full_original_parity": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/actor-draw-2026-11-01/delivery.json",
+      "sha256": "b5ac9de30b8debf5ba09d4dafc6b2aa758cb1611a39c08d4a8662e7142137670"
+    },
+    {
+      "path": "reference/analysis/actor-draw-2026-11-01/runs/audio-seams.json",
+      "sha256": "4eb64e51f9de311159251cc4e9c1a57393213bcf06a0b757878740aae725f540"
+    },
+    {
+      "path": "reference/analysis/actor-draw-2026-11-01/runs/traced-miss.txt",
+      "sha256": "744df60ca203a7daf32141c5a862f6db32af0c1250406e5c97b2bb9ec617ed48"
+    }
+  ]
+}

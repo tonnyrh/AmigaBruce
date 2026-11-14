@@ -1,0 +1,13 @@
+{
+  "peak": 28672,
+  "pcm_bytes": 1000,
+  "packed_bytes": 500,
+  "period": 887,
+  "played_ms": 250.0778850233796,
+  "endpoints": [
+    0,
+    0
+  ],
+  "levels_used": 14,
+  "preview": "C:\\vscode\\_EXT\\AmigaBruceLee\\assets\\audio\\enhanced-bruce-finish-v1\\preview.wav"
+}

@@ -1,0 +1,24 @@
+{
+  "version": "v0.1.0-rc.1",
+  "date": "2026-11-14",
+  "program_sha256": "e9744ec6b8aa6ebb5087ef8e43199e8918ccf7d92f566a380ffbb2ebc46805a5",
+  "tested_adf_sha256": "872aff80d477804d0dc26ea499bd5965cfab691967cbca4c13d6c9931d59d2dd",
+  "clean_full_build_matches_tested_program": true,
+  "checks": {
+    "editor_tests": 17,
+    "enhanced_combat_cases": 16,
+    "source_combat_comparisons": 517,
+    "normal_adf_smoke": "smoke.json",
+    "memory": "memory.json",
+    "finisher": "../bruce-finisher-2026-11-14/native.json"
+  },
+  "startup_fix": "Keep fighter preparation, Enhanced preparation, menu painting, menu input and debug map drawing out of line and optimize these cold functions for size. Source gameplay routines retain their compiler settings.",
+  "allocation_failure_diagnosis": "Before the cold-code reduction, the large BSS hunk spilled into Chip RAM; a diagnostic 2 MiB boot showed the BSS at $14C20. On 512+512 the later graphics allocations failed. The release keeps all program hunks in expansion RAM.",
+  "limits": [
+    "Natural full-game progression not rerun for RC1",
+    "Physical Amiga and listening acceptance pending",
+    "No steady-PAL or certified original-edition parity claim",
+    "Broader automatic room tour stopped after a natural room change: room-5 lantern assertion sampled room 8. That tour is not counted as a pass.",
+    "Compiler reports existing unused symbols in normal build."
+  ]
+}

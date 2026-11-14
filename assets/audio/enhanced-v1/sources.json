@@ -1,0 +1,162 @@
+[
+  {
+    "name": "bruce_punch_0",
+    "prompt": "One sharp bare-knuckle boxing jab into a leather focus pad, tight bright slap, dry close microphone, isolated single impact, no voice or music",
+    "generator": "local AudioGen medium",
+    "take_sha256": "1e0af83f396ecaa3b4ab63c70928f23c651d0351cd9d2dd9c787ddc1affc03ea",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 120,
+    "start_resampled": 357
+  },
+  {
+    "name": "bruce_punch_1",
+    "prompt": "One sharp bare-knuckle boxing jab into a leather focus pad, tight bright slap, dry close microphone, isolated single impact, no voice or music",
+    "generator": "local AudioGen medium",
+    "take_sha256": "789abb01553cce96e09395992cdda2ebb4a31b9f47b9b8f9a537ec8fb8770596",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 120,
+    "start_resampled": 308
+  },
+  {
+    "name": "bruce_kick_0",
+    "prompt": "A fast martial arts flying kick, snapping cotton trouser whip through air ending in a dry padded thwack, bright fast single action, isolated",
+    "generator": "local AudioGen medium",
+    "take_sha256": "ae19fb08e33b4b01ae87f9f8589daff3af55adf6577328ab37c7d9b509334c79",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 140,
+    "start_resampled": 1376
+  },
+  {
+    "name": "bruce_kick_1",
+    "prompt": "A fast martial arts flying kick, snapping cotton trouser whip through air ending in a dry padded thwack, bright fast single action, isolated",
+    "generator": "local AudioGen medium",
+    "take_sha256": "90cc59ef0312b646376b9f923de4039751c437343547287ade93547c4e70a8f5",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 140,
+    "start_resampled": 1313
+  },
+  {
+    "name": "yamo_punch_0",
+    "prompt": "One very heavy body punch into a dense sandbag, deep rounded bass thump with a short leather smack, dry close foley",
+    "generator": "local AudioGen medium",
+    "take_sha256": "7605e45940d7fa65d81952a2171e68b5655e941da2e426ab1feee669ae5d0a6d",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 75,
+    "start_resampled": 913
+  },
+  {
+    "name": "yamo_punch_1",
+    "prompt": "One very heavy body punch into a dense sandbag, deep rounded bass thump with a short leather smack, dry close foley",
+    "generator": "local AudioGen medium",
+    "take_sha256": "ef0be3f13aa01086ecd204f5ccbfa430b6a2dc74f2201318b6389205f8e5510e",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 75,
+    "start_resampled": 539
+  },
+  {
+    "name": "yamo_kick_0",
+    "prompt": "A heavy sumo dropkick, abrupt leather boot whoomph into a padded mat, broad low thud with a little scrape, isolated and dry",
+    "generator": "local AudioGen medium",
+    "take_sha256": "c02b94805494d9c58d04b04abff8626ccc5ee5a8d15560978ee0d7ae5596f9ec",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 75,
+    "start_resampled": 226
+  },
+  {
+    "name": "yamo_kick_1",
+    "prompt": "A heavy sumo dropkick, abrupt leather boot whoomph into a padded mat, broad low thud with a little scrape, isolated and dry",
+    "generator": "local AudioGen medium",
+    "take_sha256": "08c1e930e94c90d1b1b29343f721fe2ae450d99425cf5f470dd8ef119ec9ba4d",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 75,
+    "start_resampled": 252
+  },
+  {
+    "name": "kage_punch_0",
+    "prompt": "Short close wooden kendo grip knock against leather armor, sharp dry hard clack, muted glove impact, single sound",
+    "generator": "local AudioGen medium",
+    "take_sha256": "2f7f3999ba8ee6500a758c78b46871afc8d774d4e7c9ab84d5a8ef6bbb85f60a",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 150,
+    "start_resampled": 548
+  },
+  {
+    "name": "kage_punch_1",
+    "prompt": "Short close wooden kendo grip knock against leather armor, sharp dry hard clack, muted glove impact, single sound",
+    "generator": "local AudioGen medium",
+    "take_sha256": "a5f5c8e3b774bae998b9b771dfba02233d12037aee993b3db99abaedb7a61b55",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 150,
+    "start_resampled": 534
+  },
+  {
+    "name": "kage_kick_0",
+    "prompt": "Single ninja kick, swift light cloth swish and a short sharp sole snap, crisp quiet dry foley",
+    "generator": "local AudioGen medium",
+    "take_sha256": "0aa484870555b33e7dffd8e043b9c40dcca5a769b16a7d8d45fb64ce3afba5cb",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 240,
+    "start_resampled": 2054
+  },
+  {
+    "name": "kage_kick_1",
+    "prompt": "Single ninja kick, swift light cloth swish and a short sharp sole snap, crisp quiet dry foley",
+    "generator": "local AudioGen medium",
+    "take_sha256": "14e4004cfe3033385ce7c5d34d71c74d22c8faedcd973caaccf16ae44955cc9e",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 240,
+    "start_resampled": 2494
+  },
+  {
+    "name": "kage_blade_0",
+    "prompt": "A single fast Japanese sword slash, bright cutting steel swish with a brief metallic zing and a crisp wooden shinai clack, no long ringing, no music",
+    "generator": "local AudioGen medium",
+    "take_sha256": "56d1da6cd67720428a9e2f29113b4a56a1f3a3109e2ceb7606a2ba0089c0de72",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 180,
+    "start_resampled": 1811
+  },
+  {
+    "name": "kage_blade_1",
+    "prompt": "A single fast Japanese sword slash, bright cutting steel swish with a brief metallic zing and a crisp wooden shinai clack, no long ringing, no music",
+    "generator": "local AudioGen medium",
+    "take_sha256": "81fa741e784f0db1160345296eec668a19d03b40cc69438d2853353f7b4fd1ec",
+    "source_rate": 16000,
+    "playback_speed_percent": 100,
+    "highpass_hz": 180,
+    "start_resampled": 1652
+  },
+  {
+    "name": "yamo_cry_0",
+    "prompt": "A single very short deep low-pitched male sumo exertion grunt, UH!, heavy chesty bass baritone rough human voice, abrupt onset and cutoff, close dry mic, no words, no reverb, no music",
+    "generator": "local AudioGen medium",
+    "take_sha256": "c42c616290c1ea50a7afaa8417f3ac6d06730fdcfcab157043a1a880ed80418a",
+    "source_rate": 16000,
+    "playback_speed_percent": 70,
+    "highpass_hz": 45,
+    "start_resampled": 394
+  },
+  {
+    "name": "yamo_cry_1",
+    "prompt": "A single very short deep low-pitched male sumo exertion grunt, UH!, heavy chesty bass baritone rough human voice, abrupt onset and cutoff, close dry mic, no words, no reverb, no music",
+    "generator": "local AudioGen medium",
+    "take_sha256": "81f02d4d32e820f5c8bc235e8c9f4b536de62e754d518fda19b234883c1c4dd5",
+    "source_rate": 16000,
+    "playback_speed_percent": 75,
+    "highpass_hz": 45,
+    "start_resampled": 2462
+  }
+]

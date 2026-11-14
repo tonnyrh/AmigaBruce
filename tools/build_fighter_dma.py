@@ -13,25 +13,28 @@ ART=ROOT/'assets/graphics/v2'
 COLORS=[0,6,11,12,12,3,1,3,6,6,12,8,7,7,5,9]
 
 
-def pack(data):
+def pack(data, *, compact=False):
     result=bytearray();at=0;positions={};literal=bytearray()
+    key_size,depth=(4,256) if compact else (3,16)
     def remember(start,end):
         for pos in range(start,end):
-            key=bytes(data[pos:pos+3]);items=positions.setdefault(key,[]);items.append(pos)
-            if len(items)>16:del items[0]
+            key=bytes(data[pos:pos+key_size]);items=positions.setdefault(key,[]);items.append(pos)
+            if len(items)>depth:del items[0]
     def flush():
         if literal:result.append(128+len(literal));result.extend(literal);literal.clear()
     while at<len(data):
         run=1
         while run<127 and at+run<len(data) and data[at+run]==data[at]:run+=1
         length=0;distance=0
-        if run<3:
-            for prior in reversed(positions.get(bytes(data[at:at+3]),[])):
+        if run<3 or compact:
+            for prior in reversed(positions.get(bytes(data[at:at+key_size]),[])):
                 if at-prior>65535:continue
                 count=0
                 while count<255 and at+count<len(data) and data[prior+count]==data[at+count]:count+=1
                 if count>length:length=count;distance=at-prior
-        if run>=3:
+        # A back-reference costs two more bytes than a run. It pays for
+        # itself when it also captures the pattern beyond the repeated ink.
+        if run>=3 and length<=run+2:
             flush();result.extend((run,data[at]));remember(at,at+run);at+=run
         elif length>=5:
             flush();result.extend((0,distance>>8,distance&255,length));remember(at,at+length);at+=length

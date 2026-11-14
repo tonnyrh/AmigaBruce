@@ -1,0 +1,453 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_routines": [
+    "$2584",
+    "$25E2",
+    "$2780-$29C2"
+  ],
+  "bruce_source_silhouettes": [
+    {
+      "slot": 0,
+      "pose": "$00",
+      "face": 0,
+      "bounds": [
+        16,
+        0,
+        16,
+        21
+      ]
+    },
+    {
+      "slot": 0,
+      "pose": "$02",
+      "face": 1,
+      "bounds": [
+        16,
+        0,
+        16,
+        21
+      ]
+    },
+    {
+      "slot": 1,
+      "pose": "$10",
+      "face": 0,
+      "bounds": [
+        16,
+        2,
+        16,
+        19
+      ]
+    },
+    {
+      "slot": 1,
+      "pose": "$12",
+      "face": 1,
+      "bounds": [
+        16,
+        2,
+        16,
+        19
+      ]
+    },
+    {
+      "slot": 2,
+      "pose": "$0E",
+      "face": 0,
+      "bounds": [
+        16,
+        2,
+        16,
+        19
+      ]
+    },
+    {
+      "slot": 2,
+      "pose": "$14",
+      "face": 1,
+      "bounds": [
+        16,
+        2,
+        16,
+        19
+      ]
+    },
+    {
+      "slot": 3,
+      "pose": "$10",
+      "face": 0,
+      "bounds": [
+        16,
+        2,
+        16,
+        19
+      ]
+    },
+    {
+      "slot": 3,
+      "pose": "$12",
+      "face": 1,
+      "bounds": [
+        16,
+        2,
+        16,
+        19
+      ]
+    },
+    {
+      "slot": 4,
+      "pose": "$0E",
+      "face": 0,
+      "bounds": [
+        16,
+        2,
+        16,
+        19
+      ]
+    },
+    {
+      "slot": 4,
+      "pose": "$14",
+      "face": 1,
+      "bounds": [
+        16,
+        2,
+        16,
+        19
+      ]
+    },
+    {
+      "slot": 5,
+      "pose": "$0A",
+      "face": 1,
+      "bounds": [
+        16,
+        0,
+        16,
+        21
+      ]
+    },
+    {
+      "slot": 6,
+      "pose": "$0C",
+      "face": 1,
+      "bounds": [
+        16,
+        0,
+        16,
+        21
+      ]
+    },
+    {
+      "slot": 7,
+      "pose": "$30",
+      "face": 0,
+      "bounds": [
+        16,
+        0,
+        16,
+        21
+      ]
+    },
+    {
+      "slot": 7,
+      "pose": "$34",
+      "face": 1,
+      "bounds": [
+        16,
+        0,
+        16,
+        21
+      ]
+    },
+    {
+      "slot": 8,
+      "pose": "$04",
+      "face": 0,
+      "bounds": [
+        16,
+        1,
+        24,
+        19
+      ]
+    },
+    {
+      "slot": 8,
+      "pose": "$06",
+      "face": 1,
+      "bounds": [
+        16,
+        1,
+        24,
+        19
+      ]
+    },
+    {
+      "slot": 9,
+      "pose": "$22",
+      "face": 0,
+      "bounds": [
+        16,
+        0,
+        14,
+        21
+      ]
+    },
+    {
+      "slot": 9,
+      "pose": "$26",
+      "face": 1,
+      "bounds": [
+        16,
+        0,
+        14,
+        21
+      ]
+    },
+    {
+      "slot": 10,
+      "pose": "$18",
+      "face": 0,
+      "bounds": [
+        16,
+        0,
+        30,
+        17
+      ]
+    },
+    {
+      "slot": 10,
+      "pose": "$1C",
+      "face": 1,
+      "bounds": [
+        16,
+        0,
+        30,
+        17
+      ]
+    },
+    {
+      "slot": 11,
+      "pose": "$3E",
+      "face": 0,
+      "bounds": [
+        16,
+        7,
+        28,
+        13
+      ]
+    },
+    {
+      "slot": 11,
+      "pose": "$3A",
+      "face": 1,
+      "bounds": [
+        16,
+        7,
+        28,
+        13
+      ]
+    },
+    {
+      "slot": 12,
+      "pose": "$2C",
+      "face": 0,
+      "bounds": [
+        16,
+        0,
+        16,
+        21
+      ]
+    },
+    {
+      "slot": 12,
+      "pose": "$2E",
+      "face": 1,
+      "bounds": [
+        16,
+        0,
+        16,
+        21
+      ]
+    },
+    {
+      "slot": 13,
+      "pose": "$16",
+      "face": 0,
+      "bounds": [
+        16,
+        0,
+        16,
+        19
+      ]
+    },
+    {
+      "slot": 13,
+      "pose": "$1A",
+      "face": 1,
+      "bounds": [
+        16,
+        0,
+        16,
+        19
+      ]
+    }
+  ],
+  "cached_facings": 74,
+  "cache_bytes": 60048,
+  "scenery_bytes": 12288,
+  "cache_sha256": "02b3a980f78dd34011119598c77c4f86ef72a75113e901be3bce3aaec674af25",
+  "opponents_atlas_unchanged": true,
+  "chip_total": 72336,
+  "native": [
+    {
+      "look": "classic",
+      "state": {
+        "field": 1237,
+        "steps": 4,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 11,
+        "room": 1
+      },
+      "fixed_pixels": 11740,
+      "background_sha256": "e08dcd912d111028644c42ed4ddc7e46cda7ef46e0eda5c101bf52bc0c4244bd"
+    },
+    {
+      "bruce_strike_poses": [
+        4,
+        6,
+        22,
+        26,
+        24,
+        28
+      ]
+    },
+    {
+      "joystick_visible_punch": 6,
+      "joystick_visible_kick": 28
+    },
+    {
+      "both_start": {
+        "field": 2413,
+        "steps": 242,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 78,
+        "room": 1
+      },
+      "both_end": {
+        "field": 2517,
+        "steps": 277,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 78,
+        "room": 1
+      }
+    },
+    {
+      "room6_joystick_punch": 4,
+      "room6_joystick_kick": 28
+    },
+    {
+      "look": "enhanced",
+      "state": {
+        "field": 1696,
+        "steps": 3,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 78,
+        "room": 1
+      },
+      "fixed_pixels": 35584,
+      "background_sha256": "5ef5f2da5b4747fd10a1efc092ed1a9b46cb89b3ffa3bd74f7649ad85dbf5785"
+    },
+    {
+      "look": "restored",
+      "state": {
+        "field": 3362,
+        "steps": 5,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 101,
+        "room": 1
+      },
+      "fixed_pixels": 11752,
+      "background_sha256": "446d5f492a1c2cb92c58ca20e001ceea2cf8a811339be91a55d25ecca7530d92"
+    }
+  ],
+  "native_config": "PAL 68000 cycle exact, OCS, Kickstart 1.3, 512 KiB Chip + 512 KiB slow; owned hidden WinUAE, booted standalone ADF, debug invincibility and F2 room travel, ordinary joystick punch/kick in rooms 1 and 6.",
+  "native_cache_byte_equal": true,
+  "atlas_scope": "26 cached Bruce facing variants include four redundant run-slot aliases; wall-facing climb poses have one displayed direction. All cached Bruce silhouettes match their mapped original sprite-writer outputs. Several of the 35 original source poses still share Enhanced atlas slots. NPC silhouettes unchanged.",
+  "before_heights": {
+    "guard": 17,
+    "run": [
+      15,
+      16,
+      14,
+      16
+    ],
+    "climb": [
+      20,
+      20
+    ]
+  },
+  "after_heights": {
+    "guard": 21,
+    "run": [
+      19,
+      19
+    ],
+    "climb": [
+      21,
+      21
+    ]
+  },
+  "artifacts": {
+    "amiga\\out\\bruce_amiga.exe": {
+      "bytes": 368096,
+      "sha256": "a80aa24e6b252a3fce3367c58852068dce68d6e4cccec53b6b4240a80e44dbdd"
+    },
+    "amiga\\out\\bruce-proportions.adf": {
+      "bytes": 901120,
+      "sha256": "7388db5cd9dcc02ad9df829d4a94cd491e8543f515b69abdc2a93502b18214ec"
+    },
+    "amiga\\enhanced.h": {
+      "bytes": 4889,
+      "sha256": "7bb0ff85d32f7887afa00b617ef05cfa3fc8bf05c71e665017b36a41b8a624b8"
+    },
+    "amiga\\enhanced_art.h": {
+      "bytes": 60385,
+      "sha256": "6b9ec8855f6f742045e702a1bbefd50ac2bd91ec18250b9dc6e4c394511a0805"
+    },
+    "tools\\enhanced_fighters.py": {
+      "bytes": 6024,
+      "sha256": "8ce5cdb3214dd98b24238c6ddb2311238b54e5248e6c934737364063f4925aa2"
+    },
+    "tools\\build_enhanced_art.py": {
+      "bytes": 7567,
+      "sha256": "fdeb516ba3c4080b477a7a39589483c35c64caa038f0ff0daa22d4d11a55c42b"
+    }
+  },
+  "disk_and_start_match_executable": true
+}

@@ -1,0 +1,163 @@
+Frozen C64 candidate SHA256 092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8
+Edition not certified as the untouched 1984 release.
+
+2E39 a9 00     LDA #$00
+2E3B 8d 00 01  STA $0100
+2E3E a2 02     LDX #$02
+2E40 86 51     STX $51
+2E42 b5 95     LDA $95,X
+2E44 29 01     AND #$01
+2E46 f0 20     BEQ $2e68
+2E48 b5 bf     LDA $bf,X
+2E4A c9 19     CMP #$19
+2E4C f0 1a     BEQ $2e68
+2E4E c9 17     CMP #$17
+2E50 d0 03     BNE $2e55
+2E52 20 10 2e  JSR $2e10
+2E55 b5 b6     LDA $b6,X
+2E57 29 02     AND #$02
+2E59 85 53     STA $53
+2E5B 20 39 1c  JSR $1c39
+2E5E 20 6e 2e  JSR $2e6e
+2E61 a6 51     LDX $51
+2E63 f6 e9     INC $e9,X
+2E65 20 6e 2e  JSR $2e6e
+2E68 a6 51     LDX $51
+2E6A ca        DEX
+2E6B 10 d3     BPL $2e40
+2E6D 60        RTS
+2E6E b5 e9     LDA $e9,X
+2E70 aa        TAX
+2E71 20 67 1a  JSR $1a67
+2E74 a6 51     LDX $51
+2E76 b4 e6     LDY $e6,X
+2E78 a9 02     LDA #$02
+2E7A 85 4c     STA $4c
+2E7C b1 04     LDA ($04),Y
+2E7E 29 7f     AND #$7f
+2E80 20 89 2e  JSR $2e89
+2E83 c8        INY
+2E84 c6 4c     DEC $4c
+2E86 10 f4     BPL $2e7c
+2E88 60        RTS
+
+306B a5 05     LDA $05
+306D 18        CLC
+306E 69 4c     ADC #$4c
+3070 85 05     STA $05
+3072 b1 04     LDA ($04),Y
+3074 29 07     AND #$07
+3076 c9 05     CMP #$05
+3078 f0 52     BEQ $30cc
+307A ad de 4f  LDA $4fde
+307D d0 16     BNE $3095
+307F a9 01     LDA #$01
+3081 8d de 4f  STA $4fde
+3084 b5 e9     LDA $e9,X
+3086 8d e4 4f  STA $4fe4
+3089 8c e1 4f  STY $4fe1
+308C ce e1 4f  DEC $4fe1
+308F ce e4 4f  DEC $4fe4
+3092 4c c8 30  JMP $30c8
+3095 ad df 4f  LDA $4fdf
+3098 d0 16     BNE $30b0
+309A a9 01     LDA #$01
+309C 8d df 4f  STA $4fdf
+309F b5 e9     LDA $e9,X
+30A1 8d e5 4f  STA $4fe5
+30A4 8c e2 4f  STY $4fe2
+30A7 ce e2 4f  DEC $4fe2
+30AA ce e5 4f  DEC $4fe5
+30AD 4c c8 30  JMP $30c8
+30B0 ad e0 4f  LDA $4fe0
+30B3 d0 17     BNE $30cc
+30B5 a9 01     LDA #$01
+30B7 8d e0 4f  STA $4fe0
+30BA b5 e9     LDA $e9,X
+30BC 8d e6 4f  STA $4fe6
+30BF 8c e3 4f  STY $4fe3
+30C2 ce e3 4f  DEC $4fe3
+30C5 ce e6 4f  DEC $4fe6
+30C8 a9 fd     LDA #$fd
+30CA 91 04     STA ($04),Y
+30CC a5 05     LDA $05
+30CE 38        SEC
+30CF e9 4c     SBC #$4c
+30D1 85 05     STA $05
+30D3 60        RTS
+
+3228 a2 02     LDX #$02
+322A 86 4f     STX $4f
+322C a6 4f     LDX $4f
+322E bd de 4f  LDA $4fde,X
+3231 d0 03     BNE $3236
+3233 4c c4 32  JMP $32c4
+3236 fe de 4f  INC $4fde,X
+3239 c9 08     CMP #$08
+323B d0 23     BNE $3260
+323D 20 cc 32  JSR $32cc
+3240 a6 4f     LDX $4f
+3242 bc e1 4f  LDY $4fe1,X
+3245 bd e4 4f  LDA $4fe4,X
+3248 aa        TAX
+3249 a9 2f     LDA #$2f
+324B 20 e2 17  JSR $17e2
+324E a6 4f     LDX $4f
+3250 bc e1 4f  LDY $4fe1,X
+3253 bd e4 4f  LDA $4fe4,X
+3256 aa        TAX
+3257 e8        INX
+3258 a9 30     LDA #$30
+325A 20 e2 17  JSR $17e2
+325D 4c c4 32  JMP $32c4
+3260 c9 0c     CMP #$0c
+3262 d0 1e     BNE $3282
+3264 bc e1 4f  LDY $4fe1,X
+3267 bd e4 4f  LDA $4fe4,X
+326A aa        TAX
+326B a9 31     LDA #$31
+326D 20 e2 17  JSR $17e2
+3270 a6 4f     LDX $4f
+3272 bc e1 4f  LDY $4fe1,X
+3275 bd e4 4f  LDA $4fe4,X
+3278 aa        TAX
+3279 e8        INX
+327A a9 32     LDA #$32
+327C 20 e2 17  JSR $17e2
+327F 4c c4 32  JMP $32c4
+3282 c9 10     CMP #$10
+3284 f0 ba     BEQ $3240
+3286 c9 14     CMP #$14
+3288 d0 31     BNE $32bb
+328A bc e1 4f  LDY $4fe1,X
+328D bd e4 4f  LDA $4fe4,X
+3290 aa        TAX
+3291 a9 00     LDA #$00
+3293 20 e2 17  JSR $17e2
+3296 88        DEY
+3297 88        DEY
+3298 a5 04     LDA $04
+329A 18        CLC
+329B 69 50     ADC #$50
+329D 85 04     STA $04
+329F a5 05     LDA $05
+32A1 69 4c     ADC #$4c
+32A3 85 05     STA $05
+32A5 a9 f8     LDA #$f8
+32A7 91 04     STA ($04),Y
+32A9 a6 4f     LDX $4f
+32AB bc e1 4f  LDY $4fe1,X
+32AE bd e4 4f  LDA $4fe4,X
+32B1 aa        TAX
+32B2 e8        INX
+32B3 a9 33     LDA #$33
+32B5 20 e2 17  JSR $17e2
+32B8 4c c4 32  JMP $32c4
+32BB c9 18     CMP #$18
+32BD d0 05     BNE $32c4
+32BF a9 00     LDA #$00
+32C1 9d de 4f  STA $4fde,X
+32C4 c6 4f     DEC $4f
+32C6 30 03     BMI $32cb
+32C8 4c 2c 32  JMP $322c
+32CB 60        RTS

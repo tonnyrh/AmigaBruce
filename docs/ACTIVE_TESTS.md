@@ -5,6 +5,22 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
 
 ## Maskinkontroll før endelig godkjenning
 
+- **Release candidate / Bruce finisher (14 November).** Listen to the new Enhanced finishing cry during natural combat on physical Amiga. It should occur once when Bruce kills Kage or Yamo with a punch, and finish without being cut off by footsteps. Nonlethal punches, kicks and Classic must not play it. Controlled host/source/WinUAE checks are recorded in the [finisher report](../reference/analysis/bruce-finisher-2026-11-14/report.json).
+
+- **Enhanced death and Yamo impacts (12 November).** On physical Amiga, verify that bomb death holds Bruce's stiff pose in both facing directions and that Yamo's two new impact samples are audible and comfortable in combat. The four controlled WinUAE death cases and host audio checks pass. [Death evidence](../reference/analysis/enhanced-death-2026-11-12/report.json) · [Audio evidence](../reference/analysis/yamo-impact-2026-11-12/report.json).
+
+- **Felt og styring.** Avlesingen ved `$169D` er kontrollert både før og
+  etter en retningsendring. Det som gjenstår er nøyaktig tidspunkt for
+  synlig respons i naturlig spill, særlig når et langt treff avbryter
+  bevegelsen. [Målegrunnlag](FIELD_WORK.md).
+
+- I rom 1 er falltreffene på Kage og Yamo kontrollert mot C64-koden.
+  I siste leveranse har to lange kampruter én Paula-publisering i alle
+  12 000 felt. Den bevegelige ruten bruker 14,96–15,04 s for 240 steg,
+  mot målet på 14,40 s. Kontroller også trappetempoet i rom 12.
+  Følg opp kampfarten mot målet på tre felt per steg ved naturlig spilling.
+  [Målinger for de to rutene](OP_A500_ACCEPTANCE.md).
+
 - A500-TIME: feltkadens og input-/lydhendelsestiming gjennom alle rom og kamp.
   Native samlekjøring samler tidsavvik; den er ikke et sanntidspass.
   Første [optimaliseringsmåling](AMIGA_OPTIMIZATION_REPORT.md) fant langvarig
@@ -28,7 +44,7 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
 - VIC-PHASE: kontroller naturlige samtidige treff og spritekontakt ved kanter.
   Den nye låsen bruker faktiske kildepiksler, men er feltbasert.
 - ROOM-ALL/LINKS: fullfør hele spillet naturlig, inkludert dynamiske åpninger,
-  feller og ny runde. F1/F2 og startrom bekrefter kun inspeksjon.
+  feller og ny runde. Brettvalg og startrom bekrefter kun inspeksjon.
 - M0: bekreft valgt urørt1984-utgave. Remember/T64-kandidaten er hash-låst,
   men er fortsatt ikke sertifisert som denne utgaven.
 
@@ -45,11 +61,11 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
 | AI/SPAWN | Stå nede mens Kage kommer oppe til høyre i rom1. Prøv venting, retrett, retur, lagret helse og alternativ inngang i rom6–8. Hele AI-/aktørkjeden er nå aktiv. |
 | NPC-RECOIL-R02 | Spark Yamo mot høyre vegg på mellomnivå, også dødelig. Kontroller retning, restitusjon og at Bruce/rommet blir stående. |
 | BOMBS/R08-BLAST | La begge fiender gå over alle fem bomber, også ved ankomst og under reaksjon. Prøv Bruce uten udødelighet: kildeeffekt, positur8, teller16 og senere livtrekk. |
-| R11-YAMO-BOMBE | Åpen brukerrapport. Følg bomben etter at Yamo har gått forbi. Tenningen er usynlig, og eksplosjonen starter åtte spillsteg senere. Hvis også eksplosjonen uteblir, ta en USS rett før passeringen. [Kildekontroll og skjermopptak](BOMBS_ENTRY.md#rom-11-når-yamo-går-over-bomben). |
+| R11-YAMO-BOMBE | Retest on physical Amiga: user-approved bomb-only contact margin, one pixel up/left/right, now enabled in normal Classic/Enhanced. All 54 formerly paired-height walks arm with the policy enabled; 8,424 pixel controls cover Bruce, Yamo and Kage. Try both directions, running and landing, especially room 11's middle platform. Three simultaneous source timers remain the limit. Also check the flatter, embedded Enhanced charges. [Policy and evidence](BOMBS_ENTRY.md#explicit-amiga-bomb-margin-user-decision-9-november-2026). |
 | R19-BLINK | Start rom 19 i det nye bygget og utløs monsterets nederlag. Kontroller blink, lyd og åpning. Mål fra nederlaget til åpningen. Kontrollert A500-reprise er fortsatt langsommere enn PAL-C64. [Kilder og tidsmålinger](R19_WIZARD_FLASH.md). |
 | T14/DEATH/2P | Mist liv etter kamp, fare og innsamling. Se etter rent skifte fra dødsposituren til spillernummeret eller Game Over, også ved turbytte. Kontroller reservefall00. Samle ulike lanterner med to spillere og kontroller rom, poeng og fall for hver tur. [Skjermskift ved død](TITLE_PAUSE_RESPAWN.md). |
 | SCORE/BONUS | Kontroller poeng for lanterner/kamp og bonusliv. HUD viser kilde-RAMs binære24-bits poeng; ingen egen Amiga-poengregel. |
-| CHEAT-PROGRESS | Start i rom10 via Shift+D: rom1–9 fullført, målrom bevart. Prøv to spillere og F1/F2. Romhopp gir ingen poeng/bonus. |
+| CHEAT-PROGRESS | Velg rom 10 med Shift+D og F9/F10. Først ved Fire skal rom 1–9 markeres fullført. Prøv også andre spillers skyteknapp etter turbytte. I rom 13 skal Kage og Yamo komme inn etter bekreftelse. |
 | GEO-R02/ROOM-LOAD | Midtforbindelsen i rom2, retur1↔2 og5↔6, samme rom ved død. Kontroller geometri, palett, lanterner og nett. |
 | R06-TRAP-REPAINT | Ny EXE/ADF: observer øvre venstre felle over en hel syklus. Kildens lange pause beholdes, men gammel hvit rest skal ikke bli stående etter at tegnet er fjernet. Se USS-analysen og de nye køkontrollene. |
 | R10-ELECTRIC | Følg nederste elektriske felle mens nettene ruller. Meld synlig forsinkelse separat fra kildefellens tilstand. |

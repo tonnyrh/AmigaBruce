@@ -102,9 +102,21 @@ def translate(memory, roots, *, actors=False):
         if actors and pc==0x09bc:lines.append('source_actor_loading_begin();')
         if actors and pc==0x1818:lines.append('++actor_life_events;')
         if actors and pc in (0x5214,0x2586):lines.append('if(actor_world_enabled && io_service)io_service();')
+        # Poll only Paula before combat and actor dispatch, and after the
+        # first sprite component. The following original instruction still runs.
+        if actors and pc in (0x1c23,0x1c29,0x25ae):lines.append('if(source_audio_poll)source_audio_poll();')
         if actors and pc in (0x0cd5,0x0df8):lines.append('++actor_spawn_events;')
         if actors and pc==0x1826:lines.append('if(actor_infinite){NZ(m[0x28]);goto L1828;}')
         if actors and pc==0x2b4e:lines.append('if(actor_invincible)m[0xbc]&=1;')
+        # Presentation hooks observe the confirmed punch and its actual damage
+        # branch. Do not infer a kill from a generic knockdown or a sound queue.
+        if actors and pc==0x29c3:lines.append('source_bruce_punches=0;')
+        if actors and pc==0x2ac3:
+            assert memory[pc:pc+3]==bytes.fromhex('20 3e 2b')
+            lines.append('if(finisher_observer && !y && x>0 && x<3)source_bruce_punches|=(unsigned char)(1u<<x);')
+        if actors and pc==0x2bcb:
+            assert memory[0x2bc4:pc]==bytes.fromhex('b5 d1 38 e9 03 95 d1')
+            lines.append('if(finisher_observer && n && a>=253 && x>0 && x<3 && (source_bruce_punches&(1u<<x)))finisher_observer(x);')
         if actors and pc==0x304b:lines.append('if(actor_invincible && !m[0x51]){sp+=2;actor_return=source_stack_return();return;}')
         if actors and pc==0x407d:lines.append('if(actor_invincible && !x){sp+=2;actor_return=source_stack_return();return;}')
         return_helper='actor_return=source_stack_return();' if actors else ''
@@ -128,6 +140,10 @@ def translate(memory, roots, *, actors=False):
         if actors and pc==0x2e39:lines.append('if(source_object_driver()){'+return_helper+'}return;')
         if actors and pc==0x2e6e:lines.append('source_object_row();return;')
         if actors and pc==0x55ab:lines.append('source_contact_clear();'+return_helper+'return;')
+        if actors and pc==0x2bf9:
+            body=memory[0x2bf9:0x2c54]+memory[0x312c:0x3184]
+            assert hashlib.sha256(bytes(body)).hexdigest()=='8f8a6c2c533c363cc7b068548f88efae72c6dcbd94ce860c44a207dc1b2b904e'
+            lines.append('source_enemy_fall_awards();')
         if actors and pc==0x315d:
             assert memory[0x315d:0x3175]==bytes.fromhex('a030ad9c4320171ba032ad9d4320171ba034ad9e434c171b')
             assert memory[0x1b17:0x1b29]==bytes.fromhex('48200e32091099008c68290f091099018c60')

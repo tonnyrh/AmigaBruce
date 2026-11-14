@@ -97,15 +97,15 @@ def main():
    if native==source:matches+=1
    elif key not in first:first[key]=dict(port0=port0,port1=port1,source=source,native=native)
   counts[key]=dict(cases=1024,matches=matches,mismatches=1024-matches)
-  if active and flag0 and flag1:assert matches==1024,(key,first.get(key))
- report=dict(status='audit_complete_current_native_gaps_open',source_sha256=SHA,edition_verified=False,
+  assert matches==1024,(key,first.get(key))
+ report=dict(status='all_input_buffer_cases_match_full_irq_phase_open',source_sha256=SHA,edition_verified=False,
   natural_playthrough=False,original_raster_phase_verified=False,scope='Original $169D-$1702 input slot, controlled fixed CIA values; native full field comparison restricted to $98/$9B/$99/$9C; no full IRQ stack or raster scheduling claim',
   cases=cases,instructions=steps,configs=counts,first_mismatches=first,
   source_findings=['$0104=0 branches directly to $1703 and preserves all four input buffers',
    '$03 selects active controller, $42CA gates the other controller',
    '$1383/X flag zero selects the $4A85 direction conversion; its device meaning is not inferred'],
-  native_findings=['Current source_actor_field writes active inputs even when $0104=0',
-   'Current native seam bypasses the $1383 controller-flag conversion'],
+  native_findings=['The game field retains the input buffers when $0104 is zero',
+   'Both active player selections and $1383 controller conversions match in all 32768 cases'],
   unresolved=['Reachability of non-default selector flags in the exposed Amiga UI',
    'Full hardware IRQ stack, caller PC, palette/raster prologue and actual physical input phase'],
   source_files=[dict(path=p,sha256=hashlib.sha256((ROOT/p).read_bytes()).hexdigest()) for p in ['core/c64_rooms.c','tests/source_irq_audit_bridge.c','tools/audit_c64_irq_contract.py']])

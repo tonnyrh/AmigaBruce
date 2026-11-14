@@ -1,5 +1,9 @@
 # Bruce: prosjektregler
 
+Alle prosjektverktøy skal ha engelsk brukerrettet tekst. Dette gjelder også
+ressursnavn i grensesnittet, dialoger, status, feilmeldinger, CLI-hjelp og
+rapporttekst som verktøyene genererer.
+
 ## Hovedprioritet (brukerbeslutning 24. oktober 2026)
 
 Spilloppførselen skal bygges fra C64-kildedata og disassembly av den faktiske

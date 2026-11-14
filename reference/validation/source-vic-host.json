@@ -7,11 +7,11 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "e3f93a9f6d4512d69c5ee31642f2f0f6270e197812fb15a62e5805c910c79839"
+      "sha256": "76e3a9ae5b654e3afa442170905c3c2f1cb94fa7864f65e3315b25af73574cb2"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "e8d502daf803685c2c77c75a3846732e8f02001fcf6a2b17c14434935f93044f"
+      "sha256": "1ebd05a45220c517fa911c689b7ce68a7f8a653202e6ba0d91a0e49645aa5181"
     },
     {
       "path": "core/source_perf.h",

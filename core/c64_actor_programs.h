@@ -6179,6 +6179,7 @@ L1c21:; /* $1C21 */
 if(!z)goto L1c26;
 goto L1c23;
 L1c23:; /* $1C23 */
+if(source_audio_poll)source_audio_poll();
 m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x25;PERF_BEGIN(BL_PERF_COMBAT);actor_code(0x29c3);PERF_END(BL_PERF_COMBAT);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c26)goto actor_native_unwind;
 goto L1c26;
 L1c26:; /* $1C26 */
@@ -6187,6 +6188,7 @@ if(native_depth==16){native_id=103;goto actor_native_overflow;}
 native_calls[native_depth++]=103;goto L3184;
 goto L1c29;
 L1c29:; /* $1C29 */
+if(source_audio_poll)source_audio_poll();
 m[0x100 + sp--]=0x1c;m[0x100 + sp--]=0x2b;PERF_BEGIN(BL_PERF_ACTORS);actor_code(0x179e);PERF_END(BL_PERF_ACTORS);if(transition_pending || actor_delay_pending || actor_gameover_pending || actor_reset_pending || actor_irq_stop || source_fault || actor_return!=0x1c2c)goto actor_native_unwind;
 goto L1c2c;
 L1c2c:; /* $1C2C */
@@ -9644,6 +9646,7 @@ if(native_depth==16){native_id=219;goto actor_native_overflow;}
 native_calls[native_depth++]=219;goto L26a0;
 goto L25ae;
 L25ae:; /* $25AE */
+if(source_audio_poll)source_audio_poll();
 x=m[0x0051];NZ(x);
 goto L25b0;
 L25b0:; /* $25B0 */
@@ -11004,6 +11007,7 @@ goto L29c2;
 L29c2:; /* $29C2 */
 sp+=2;actor_return=source_stack_return();goto actor_native_unwind;
 L29c3:; /* $29C3 */
+source_bruce_punches=0;
 a=0x00;NZ(a);
 goto L29c5;
 L29c5:; /* $29C5 */
@@ -11388,6 +11392,7 @@ if(native_depth==16){native_id=227;goto actor_native_overflow;}
 native_calls[native_depth++]=227;goto L2e29;
 goto L2ac3;
 L2ac3:; /* $2AC3 */
+if(finisher_observer && !y && x>0 && x<3)source_bruce_punches|=(unsigned char)(1u<<x);
 m[0x100 + sp--]=0x2a;m[0x100 + sp--]=0xc5;
 if(native_depth==16){native_id=228;goto actor_native_overflow;}
 native_calls[native_depth++]=228;goto L2b3e;
@@ -11777,6 +11782,7 @@ L2bc9:; /* $2BC9 */
 address=(unsigned char)(0xd1 + x);m[address]=a;
 goto L2bcb;
 L2bcb:; /* $2BCB */
+if(finisher_observer && n && a>=253 && x>0 && x<3 && (source_bruce_punches&(1u<<x)))finisher_observer(x);
 if(n)goto L2c24;
 goto L2bcd;
 L2bcd:; /* $2BCD */
@@ -11848,6 +11854,7 @@ L2bf7:; /* $2BF7 */
 address=(unsigned char)(0xce + x);m[address]=a;
 goto L2bf9;
 L2bf9:; /* $2BF9 */
+source_enemy_fall_awards();
 a=m[(unsigned char)(0xbc + x)];NZ(a);
 goto L2bfb;
 L2bfb:; /* $2BFB */

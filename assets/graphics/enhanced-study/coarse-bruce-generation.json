@@ -1,0 +1,43 @@
+{
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-01",
+  "actor": "bruce",
+  "candidate_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "source_routines": [
+    "$2780–$29C2 selects and latches the poses",
+    "$2584/$25E2 copy and position the visible components",
+    "$282F–$283E selects the punch; $288B–$28B0 select the kick phases"
+  ],
+  "prompt": "EDIT the supplied layout as a pixel artist for the Amiga 500 game Bruce. This is a 12× nearest-neighbor enlargement of a 128×96 logical pixel sheet, exactly FOUR columns and THREE rows of 32×32 cells. Repaint INSIDE the twelve existing C64 fighter silhouettes. Preserve pose, apparent facing, canvas, cell centres, feet and EXACT original contours, including outstretched fists and the boot tip in the flying kick. The athlete is Bruce, a lean shirtless martial artist with short mop of jet-black hair, forearm and fist, bright golden yellow kung-fu trousers, thin dark waistband and very dark slippers. Make him unmistakable at actual 16×21 pixels in guard. Paint hard square BLOCKS, each logical pixel is a single flat ink. Just FOUR paint inks: #111111 for hair, brow, waistband and slippers; #DD9966 warm amber skin across face chest and bare arms; #AA4433 for ONE contiguous warm shadow patch on far side of face/arm or folded limb; #EECC55 golden yellow for the trousers. Give the yellow trousers a solid unbroken mass, make both legs and the black shoe distinguishable. NO white or cream highlights, no glints, no glows, gradients, outlines inside outlines, dithering, stippling, fine anatomy, visible individual fingers, lettering, raster grid or shadows on the ground. Strong flat 1980s arcade pixel art, not a scaled high-res illustration. Color ONLY inside existing shapes. The reference pale yellow indicates exposed skin and original black legs should now wear gold trousers ending in black shoes. Keep the hair black. Anatomy follows the template even if looking to the left. Top row: guard, run A, run B, wind-up. Middle: punch extended right, airborne jump, kick chamber, flying side kick right. Bottom: two mirrored rear-facing climbs with alternate raised hand and knee (back of the head, no face), reaction, lying / propped up on one elbow. All twelve figures same person and costume, design usable in game at 1×. Deliver transparent around figures and between legs, remove the lavender guide matte. Keep all 12 cells clearly separated and precisely registered.",
+  "template": "Four columns by three rows of C64 pose rasters, centered in 32x32 logical cells. Magnify the 128x96 guide 12 times with nearest-neighbor sampling.",
+  "guide_sha256": "3fd4277188d71b18d0d90efa23954adcbe4756a948f8170b5e8936ebcddb649a",
+  "generated": "bruce-coarse-source.png",
+  "generated_sha256": "c0fcc17a052855b3da7b3027c4e29ecbef988787892a8acda4c9ba6e8f72c671",
+  "native_master": "bruce-coarse-native.png",
+  "native_sha256": "4b835d1799d048fddbb816e63671998b98fae76b40d9e76e5527849344eaf1c3",
+  "inks": [
+    "#111",
+    "#A43",
+    "#EC5",
+    "#D96"
+  ],
+  "study_facing": 1,
+  "source_pose_hex": [
+    "02",
+    "12",
+    "14",
+    "34",
+    "06",
+    "26",
+    "1A",
+    "1C",
+    "0A",
+    "0C",
+    "2E",
+    "3A"
+  ],
+  "conversion": "python tools/build_fighter_ink_masters.py --actor bruce",
+  "game_projection": "tools/coarse_bruce.py",
+  "comparison": "../../../reference/analysis/enhanced-2026-11-01/bruce-coarse-comparison.png"
+}

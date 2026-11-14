@@ -1,7 +1,7 @@
 {
   "id": "ACTOR-CHAIN-0001",
-  "date": "2026-10-31",
-  "status": "scoped_op_room_actor_delivery_realtime_open",
+  "date": "2026-11-01",
+  "status": "measured_lamp_background_and_contact_updates",
   "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
   "primary_edition_verified": false,
   "natural_playthrough": false,
@@ -16,16 +16,16 @@
   "artifacts": [
     {
       "path": "reference/validation/compact-actor-delivery.json",
-      "sha256": "bfea7631fd2b1ad10698bd5388013a3b54541375d49b45feca374427fd6160d8"
+      "sha256": "e1377ad884f0d9d952488a6987b4cec8ade8d4a408762494097c026d63c247cc"
     },
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "7e8478409cfbb58b959897b3b2421f4a9f07f7c7b445d3e8ec368919d8c0dbe1"
+      "sha256": "2df2766f329e66154db5249607d339fcb5b0d842360125abc725b3ee5218a2ea"
     }
   ],
   "limitations": [
-    "Three PAL fields per ordinary step with both enemies and continuous Paula publication",
-    "Natural C64 IRQ/input phase and complete natural playthrough",
-    "Verified untouched 1984 edition"
+    "Three fields per ordinary step throughout combat",
+    "Natural IRQ, input and whole-game timing",
+    "Untouched 1984 edition and full playthrough"
   ]
 }

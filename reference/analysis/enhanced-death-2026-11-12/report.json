@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-12",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "evidence": "Frozen candidate bytes and controlled placement in the normal PAL A500 WinUAE build; not a natural playthrough or physical-machine test.",
+  "source_rules": {
+    "27B8-27BE": "State 25 selects pose 08 independently of facing.",
+    "407D-4085": "Hazard death sets state 25 and counter 16.",
+    "216B-217C": "State 25 holds position until life-loss dispatch."
+  },
+  "change": "Removed Enhanced slot-12 hit-reaction override; source pose 08 selects existing stiff slot 14.",
+  "build": {
+    "test.adf": "931b1b8dd927999339d51ca6060e534ce11667ea5ee592e9ba51487b4b994bfa",
+    "release.elf": "38bfac42be0d1d72535afd0c7594d00b49b40f88a9bca5b4877333ac81b0a2bd"
+  },
+  "checks": [
+    {
+      "look": "classic-face-0",
+      "opaque_pixels": 152,
+      "visible_pose": 8,
+      "stationary": true,
+      "lives_before": 4,
+      "lives_after": 3
+    },
+    {
+      "look": "classic-face-1",
+      "opaque_pixels": 152,
+      "visible_pose": 8,
+      "stationary": true,
+      "lives_before": 3,
+      "lives_after": 2
+    },
+    {
+      "look": "enhanced-face-0",
+      "opaque_pixels": 152,
+      "visible_pose": 8,
+      "stationary": true,
+      "lives_before": 4,
+      "lives_after": 3
+    },
+    {
+      "look": "enhanced-face-1",
+      "opaque_pixels": 152,
+      "visible_pose": 8,
+      "stationary": true,
+      "lives_before": 3,
+      "lives_after": 2
+    }
+  ],
+  "detail": "native-checks.json",
+  "repeat": "python tools/check_death_pose.py FOLDER OWNED_WINUAE_PID",
+  "open": [
+    "Physical Amiga visual retest."
+  ]
+}

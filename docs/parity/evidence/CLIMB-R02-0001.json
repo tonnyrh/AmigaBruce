@@ -1,0 +1,212 @@
+{
+  "capture_id": "CLIMB-R02-0001",
+  "date": "2026-11-01",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008"
+  ],
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "status": "reproduced_in_controlled_pal_vice_and_restored_amiga_save",
+  "snapshot": {
+    "file": "01.11.2026.uss",
+    "sha256": "26544c868210cc46ab650669ee2fbed13762736069d4305dfe1c768e4c1ab683",
+    "room": 2,
+    "bruce": {
+      "actor": 0,
+      "active": 1,
+      "input": 14,
+      "fire": 1,
+      "x": 87,
+      "y": 140,
+      "facing": 0,
+      "body_contact": 1,
+      "net_hold": 0,
+      "net_delay": 0,
+      "fall_push": 2,
+      "contact": 5,
+      "state": 0,
+      "previous": 5,
+      "animation": 6,
+      "counter": 0,
+      "health": 36,
+      "wait": 0,
+      "pose": 10,
+      "mask": 10
+    }
+  },
+  "source_rules": [
+    {
+      "address": "$5212-$52AC, $1167/$1239",
+      "condition": "Active actor",
+      "effect": "Use alignment from $9E/$A1 and select contact pixels by current mask $4F4E."
+    },
+    {
+      "address": "$1DCA-$1E10, $1FA0-$1FAD",
+      "condition": "Pure up, B6=$01 at this position",
+      "effect": "Starts vertical jump state 5, counter 15. Y has not changed."
+    },
+    {
+      "address": "$2010-$2014, $2080, $20F3, $2504-$2506, $1F92-$1F9F",
+      "condition": "In state 5, B6 & 4",
+      "effect": "Clear state and counter before any upward displacement."
+    },
+    {
+      "address": "$2780-$29C2",
+      "condition": "Pose selection and conversion to mask",
+      "effect": "Observed masks for Bruce alternate 8 and 10. At this alignment mask 8 touches the net and mask 10 sees support only."
+    }
+  ],
+  "vice": {
+    "executable_sha256": "b48f9117916e960ca6a59ca32bc63765f9b30f2b6bb3ef056514c8bcce0a7030",
+    "baseline_sha256": "1929e76a4929a86da6d2a674fb5e17557a4b86c3e6e3040cf3d62924ef68eb23",
+    "setup": "Enter room 2 on joystick from the registered C64 baseline. Align Bruce position and pose/history with the USS. The game generated the room, contact masks and IRQ input.",
+    "held_up": {
+      "steps": 56,
+      "repeat": 28,
+      "row_order": [
+        "input",
+        "source_x",
+        "source_y",
+        "contact",
+        "state",
+        "counter",
+        "pose",
+        "mask"
+      ],
+      "rows": [
+        [
+          14,
+          87,
+          140,
+          1,
+          5,
+          15,
+          8,
+          8
+        ],
+        [
+          14,
+          87,
+          140,
+          5,
+          0,
+          0,
+          10,
+          10
+        ]
+      ]
+    },
+    "escape": "One right step changes $9E from 87 to 89 (4 screen pixels). Pure up then reaches $A1=99."
+  },
+  "winuae": {
+    "executable_sha256": "f3e55700fd811cd543fdfebf6c3221cfaa3d385828f110c6d3eb534c64503123",
+    "setup": "Private copy of the saved game, PAL A500 OCS, 512+512 KiB, joystick port 2. Only input events and debugger reads. Polls are observations, not logic ticks.",
+    "row_order": [
+      "consecutive_samples",
+      "decoded_direction",
+      "source_x",
+      "source_y"
+    ],
+    "held_up": [
+      [
+        48,
+        14,
+        87,
+        140
+      ]
+    ],
+    "short_right_then_up": [
+      [
+        1,
+        14,
+        89,
+        140
+      ],
+      [
+        3,
+        14,
+        89,
+        137
+      ],
+      [
+        6,
+        14,
+        89,
+        134
+      ],
+      [
+        1,
+        14,
+        89,
+        130
+      ],
+      [
+        1,
+        14,
+        89,
+        128
+      ],
+      [
+        2,
+        14,
+        89,
+        124
+      ],
+      [
+        3,
+        14,
+        89,
+        121
+      ],
+      [
+        3,
+        14,
+        89,
+        118
+      ],
+      [
+        3,
+        14,
+        89,
+        115
+      ],
+      [
+        3,
+        14,
+        89,
+        112
+      ],
+      [
+        3,
+        14,
+        89,
+        109
+      ],
+      [
+        3,
+        14,
+        89,
+        106
+      ],
+      [
+        1,
+        14,
+        89,
+        103
+      ]
+    ]
+  },
+  "limits": [
+    "The VICE match starts from a controlled pose. The route into room 2 used ordinary joystick input.",
+    "Scope is this alignment and pose. Other entry poses and X positions can give different contacts."
+  ],
+  "reproduce": "Run replay.py PORT against a dedicated PAL x64sc binary monitor with local baseline and USS available. The probe restores the baseline on that instance.",
+  "artifacts": [
+    {
+      "path": "reference/analysis/climb-r02-2026-11-01/replay.py",
+      "sha256": "5d3093db3d98ac1c4cae3d02dcd494e0b0fa1d1a529642b0294b93c385788c96"
+    }
+  ]
+}

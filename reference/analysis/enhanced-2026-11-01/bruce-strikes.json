@@ -1,0 +1,110 @@
+{
+  "machine": "WinUAE PAL 68000 cycle-exact OCS / Kickstart 1.3 / 512 KiB Chip + 512 KiB slow / ADF boot",
+  "candidate_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "before_pixels_short": {
+    "punch": 5,
+    "extended_kick": 8
+  },
+  "source_canvas": [
+    48,
+    21
+  ],
+  "cache": "All 6048 canvas pixels across six natural attack pairs compared with the actual source sprite writer; occupied pixels also checked against Enhanced OCS colours.",
+  "classic_sprite_dma_sha256": "58a1ba6f98a21dc5fa5dcce557b6f04e4b5e69920e1e4a5476a0e9fedae15e32",
+  "source_hit_data_sha256": "39f0e5284779bc59a5d9c438d1a3a783a20fc4c092f9aa2372585200bc8d7064",
+  "exe_sha256": "c3eb7bdc997bd82a6cbd08290e851d59c70ee9fdb1ce44026f0d75c7aa986988",
+  "adf_sha256": "dae9b9d9317448edad303de3b9dbf8ab807341b8c7845e76e3ae3ea3b1c714eb",
+  "measurements": [
+    {
+      "look": "classic",
+      "state": {
+        "field": 1213,
+        "steps": 4,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 11,
+        "room": 1
+      },
+      "fixed_pixels": 11752,
+      "background_sha256": "0f6509f3a886696ebafe59f56d3624aef19c2cbc2dce8d462a0fd0dfa3db1191"
+    },
+    {
+      "bruce_strike_poses": [
+        4,
+        6,
+        22,
+        26,
+        24,
+        28
+      ]
+    },
+    {
+      "joystick_visible_punch": 6,
+      "joystick_visible_kick": 28
+    },
+    {
+      "both_start": {
+        "field": 2356,
+        "steps": 242,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      },
+      "both_end": {
+        "field": 2445,
+        "steps": 271,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      }
+    },
+    {
+      "look": "enhanced",
+      "state": {
+        "field": 1645,
+        "steps": 6,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      },
+      "fixed_pixels": 35584,
+      "background_sha256": "5ef5f2da5b4747fd10a1efc092ed1a9b46cb89b3ffa3bd74f7649ad85dbf5785"
+    },
+    {
+      "look": "restored",
+      "state": {
+        "field": 2683,
+        "steps": 4,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 99,
+        "room": 1
+      },
+      "fixed_pixels": 11752,
+      "background_sha256": "446d5f492a1c2cb92c58ca20e001ceea2cf8a811339be91a55d25ecca7530d92"
+    }
+  ]
+}

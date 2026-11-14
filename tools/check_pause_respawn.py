@@ -105,7 +105,7 @@ def check(pid, log, out, boot):
     tap('F3');menu(players=2)
     tap('F5');menu(players=2,human=True);tap('F5');menu(players=2)
     key('SHIFT_LEFT',True);tap('D');key('SHIFT_LEFT',False);menu(debug=True)
-    tap('F4');menu(debug=True,room=1);tap('F3');menu(debug=True)
+    tap('F10');menu(debug=True,room=1,room_select=True);tap('F3');menu(debug=True)
     tap('F5');menu(players=2)
     def death(last_life,kind,players):
         old_epoch=stat('actor_loading_epoch',2)

@@ -1,0 +1,79 @@
+[
+  {
+    "look": "classic",
+    "state": {
+      "field": 2011,
+      "steps": 4,
+      "flags": [
+        1,
+        0,
+        0
+      ],
+      "fault": 0,
+      "missed": 11,
+      "room": 1
+    },
+    "fixed_pixels": 8000,
+    "background_sha256": "e08dcd912d111028644c42ed4ddc7e46cda7ef46e0eda5c101bf52bc0c4244bd"
+  },
+  {
+    "both_start": {
+      "field": 3049,
+      "steps": 244,
+      "flags": [
+        1,
+        129,
+        65
+      ],
+      "fault": 0,
+      "missed": 33,
+      "room": 1
+    },
+    "both_end": {
+      "field": 3176,
+      "steps": 287,
+      "flags": [
+        1,
+        129,
+        65
+      ],
+      "fault": 0,
+      "missed": 33,
+      "room": 1
+    }
+  },
+  {
+    "look": "enhanced",
+    "state": {
+      "field": 2330,
+      "steps": 4,
+      "flags": [
+        1,
+        0,
+        0
+      ],
+      "fault": 0,
+      "missed": 33,
+      "room": 1
+    },
+    "fixed_pixels": 8012,
+    "background_sha256": "f10123fcf5bfba22d26f423c2ffebf5f0803ca86d6e4e03ce99406c011c517be"
+  },
+  {
+    "look": "restored",
+    "state": {
+      "field": 3448,
+      "steps": 5,
+      "flags": [
+        1,
+        0,
+        0
+      ],
+      "fault": 0,
+      "missed": 55,
+      "room": 1
+    },
+    "fixed_pixels": 8012,
+    "background_sha256": "446d5f492a1c2cb92c58ca20e001ceea2cf8a811339be91a55d25ecca7530d92"
+  }
+]

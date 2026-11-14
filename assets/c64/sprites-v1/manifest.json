@@ -8532,18 +8532,18 @@
     22
   ],
   "cache_bytes": 73680,
-  "packed_bytes": 12852,
+  "packed_bytes": 10390,
   "clip_scratch_bytes": 1344,
   "native_fnv": 2572544731,
   "raw_sha256": "58a1ba6f98a21dc5fa5dcce557b6f04e4b5e69920e1e4a5476a0e9fedae15e32",
   "generator": {
     "path": "tools/build_c64_sprites.py",
-    "sha256": "a8e60cf9f9c8fc1a6acc0ffc6d129e1b15232900e0a0223f5b41372cbe6895d7"
+    "sha256": "bf27ce361c0d3e99038107151a3253192f5b3d092c20d80694b0fbb9912ca1f4"
   },
   "dependencies": [
     {
       "path": "tools/build_fighter_dma.py",
-      "sha256": "8282019910f73e054f395b88cdf350fd8398afa778c0dc1f5146a254786d4d44"
+      "sha256": "a85a06d8d7b6608ecd00e9bde6db43194f01e68ae29125247ba030ee2a72cf19"
     }
   ],
   "outputs": [
@@ -8553,7 +8553,7 @@
     },
     {
       "path": "assets/c64/sprites-v1/actors.packed",
-      "sha256": "edfc557d98d4b870b88804ce330a427fb44e89bc0317ee335fa42f579aee8106"
+      "sha256": "7ec26aea67e411ab5f1ad28c75ea63ebbc001e5f73dc03b01ab308b8e3e9c4dd"
     },
     {
       "path": "assets/c64/sprites-v1/actors.png",
@@ -9417,7 +9417,7 @@
     },
     {
       "path": "amiga/c64_sprite_data.h",
-      "sha256": "f9f1e6c44b6ef102c4d9bce6b14ecd794c481ef245dca567ca601487c35e2203"
+      "sha256": "29667e31059b8c5c37e4435ff1ec7b131b9b9f185b289098a62fa189eeccd094"
     },
     {
       "path": "core/c64_sprite_pose_data.h",

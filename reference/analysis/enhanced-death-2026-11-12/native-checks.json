@@ -1,0 +1,657 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "method": "Controlled starting placement; actual bomb arming and explosion; no injected death state, contact mask or bomb timer. Published actor pixels checked during source state 25.",
+  "checks": [
+    {
+      "look": "classic-face-0",
+      "armed": true,
+      "blast": true,
+      "visible_pose": 8,
+      "opaque_pixels": 152,
+      "stationary": true,
+      "lives_before": 4,
+      "lives_after": 3,
+      "events": [
+        {
+          "step": 3,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 3,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 3,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 4,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 8,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            5,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 13,
+          "state": 25,
+          "pose": 8,
+          "counter": 15,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            10,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 17,
+          "state": 25,
+          "pose": 8,
+          "counter": 11,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            14,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 21,
+          "state": 25,
+          "pose": 8,
+          "counter": 6,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            18,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 25,
+          "state": 25,
+          "pose": 8,
+          "counter": 2,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            22,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 27,
+          "state": 25,
+          "pose": 8,
+          "counter": 1,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            24,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "look": "classic-face-1",
+      "armed": true,
+      "blast": true,
+      "visible_pose": 8,
+      "opaque_pixels": 152,
+      "stationary": true,
+      "lives_before": 3,
+      "lives_after": 2,
+      "events": [
+        {
+          "step": 28,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 28,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 28,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 32,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            4,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 36,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            8,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 41,
+          "state": 25,
+          "pose": 8,
+          "counter": 12,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            13,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 45,
+          "state": 25,
+          "pose": 8,
+          "counter": 7,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            17,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 49,
+          "state": 25,
+          "pose": 8,
+          "counter": 3,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            21,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 52,
+          "state": 25,
+          "pose": 8,
+          "counter": 1,
+          "x": 96,
+          "y": 140,
+          "lives": 2,
+          "timers": [
+            24,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "look": "enhanced-face-0",
+      "armed": true,
+      "blast": true,
+      "visible_pose": 8,
+      "opaque_pixels": 152,
+      "stationary": true,
+      "lives_before": 4,
+      "lives_after": 3,
+      "events": [
+        {
+          "step": 3,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 3,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 3,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 3,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 3,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 3,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 6,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 10,
+          "state": 0,
+          "pose": 0,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            7,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 14,
+          "state": 25,
+          "pose": 8,
+          "counter": 13,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            11,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 18,
+          "state": 25,
+          "pose": 8,
+          "counter": 9,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            15,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 23,
+          "state": 25,
+          "pose": 8,
+          "counter": 4,
+          "x": 96,
+          "y": 140,
+          "lives": 4,
+          "timers": [
+            20,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 27,
+          "state": 25,
+          "pose": 8,
+          "counter": 1,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            24,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "look": "enhanced-face-1",
+      "armed": true,
+      "blast": true,
+      "visible_pose": 8,
+      "opaque_pixels": 152,
+      "stationary": true,
+      "lives_before": 3,
+      "lives_after": 2,
+      "events": [
+        {
+          "step": 28,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 28,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 28,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 28,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 28,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 29,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 33,
+          "state": 0,
+          "pose": 2,
+          "counter": 0,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            5,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 37,
+          "state": 25,
+          "pose": 8,
+          "counter": 15,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            9,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 41,
+          "state": 25,
+          "pose": 8,
+          "counter": 12,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            13,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 44,
+          "state": 25,
+          "pose": 8,
+          "counter": 8,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            16,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 48,
+          "state": 25,
+          "pose": 8,
+          "counter": 4,
+          "x": 96,
+          "y": 140,
+          "lives": 3,
+          "timers": [
+            20,
+            0,
+            0
+          ]
+        },
+        {
+          "step": 52,
+          "state": 25,
+          "pose": 8,
+          "counter": 1,
+          "x": 96,
+          "y": 140,
+          "lives": 2,
+          "timers": [
+            24,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

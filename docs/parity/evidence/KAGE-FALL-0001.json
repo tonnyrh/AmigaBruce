@@ -1,0 +1,36 @@
+{
+  "capture_id": "KAGE-FALL-0001",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "status": "candidate_code_and_vice_scoped",
+  "date": "2026-11-01",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008"
+  ],
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "addresses": [
+    "$2BF9-$2C51",
+    "$312C-$3183",
+    "$169D-$1703",
+    "$48C1"
+  ],
+  "limits": [
+    "Matched VICE runs set selected combat data but retain native raster interrupts.",
+    "The separate joystick-only run is a short route from a reference snapshot.",
+    "Exact movement/input phase and 1984 edition identity remain open."
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/kage-paula-2026-11-01/runs/combat-68000.bin",
+      "sha256": "ff16d3f4be56745866d30f5295f2d9c013a90acd3bb44fbd3c8f3425c700d5da"
+    },
+    {
+      "path": "reference/analysis/kage-paula-2026-11-01/runs/combat-cpu.json",
+      "sha256": "895c30225ce528460515af9369cd972fe72e4ebe0d4e924116baf102bb029612"
+    },
+    {
+      "path": "reference/analysis/kage-paula-2026-11-01/runs/input-and-combat.json",
+      "sha256": "c7350abe1466b103cd466fc6c6c88848061facf552453406ea394c1e81e46229"
+    }
+  ]
+}

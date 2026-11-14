@@ -1,0 +1,19 @@
+{
+  "method": "Check both Enhanced Yamo impacts in an owned normal-ADF WinUAE instance.\n\nActors are paused and the real Paula service is given controlled cue requests.\nThis checks asset delivery, not a naturally played combat encounter.\n",
+  "checks": [
+    {
+      "variant": 0,
+      "pcm_bytes": 880,
+      "period": 452,
+      "pcm_sha256": "912e55e19de8bf285c32b552e5749a72f7785e30ae2479cab1b12d300e61cd0f",
+      "matched": true
+    },
+    {
+      "variant": 1,
+      "pcm_bytes": 880,
+      "period": 435,
+      "pcm_sha256": "a1610a07298fff44de7749d0985d4f03817d6594c0001e96bfc5a39ba46297c8",
+      "matched": true
+    }
+  ]
+}

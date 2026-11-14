@@ -10,10 +10,22 @@ Rom 10 gir dermed fullførte lanterner i rom 1–9. Valgt rom og senere rom
 beholder lanternene sine. Dette er en uttrykkelig Amiga-cheat, ikke en
 påstand om at C64 hadde et tilsvarende brettvalg eller en lineær romrute.
 
-F1/F2-brettbytte under testing bruker samme forberedelse og beholder
+Åpne Shift+D og slå på `F3 ROOM SELECT`. F9 velger forrige rom og F10 neste,
+med omslag mellom 1 og 20. Kartet viser rommets grunnoppsett. Under spilling
+står både kildeklokken og aktørene stille mens du blar. Slipp skyteknappen
+hvis du holder den inne, og trykk den på nytt for å gå inn. F8 går tilbake
+til menyen. I vanlig spill åpner F10 menyen som før.
+
+Det bekreftede brettbyttet bruker samme forberedelse og beholder
 innsamlinger som allerede er gjort. Et hopp bakover fyller ikke opp eldre
 rom igjen. Et nytt spill begynner med den valgte testtilstanden fra bunnen.
 Vanlig start i rom 1 og de rå rominspeksjonene i kildeverktøyene er uendret.
+
+Forhåndsvisningen leser romstrømmen via `$4B34/$4B49` uten å kjøre
+rominitialisering. Ved Fire går hoppet via eksisterende `$2F9A/$09BC`.
+Kildens `$0A2A–$0A69` setter de to inngangstellerne fra `$130B/$1347`
+og fienderegelen fra `$4C9E`. Dermed kommer Kage og Yamo inn etter rommets
+egne tider der originalen tillater dem. [Fiendeinntreden](ENEMY_SPAWNS.md).
 
 Forberedelsen gir ingen poeng, bonusliv eller falske pickup-lyder. Ved
 to spillere får begge samme startgrunnlag, men videre innsamling og
@@ -45,6 +57,14 @@ Forberedelsen stopper når den faktiske telleren er null og lar disse
 oppføringene stå slik kildekoden gjør. Den nullstiller ikke hele tabellen.
 
 ## Kontroller
+
+Kontrollen av brettvelgeren på PAL A500 i WinUAE sammenligner kartene med
+de dekodede 8×16-cellene. Under blaing med Fire holdt inne, inkludert omslag
+fra 1 til 20 og tilbake, var alle 65 536 byte av spillets C64-minne identiske
+før og etter. Etter et nytt Fire-trykk fortsatte spillet i det valgte rommet.
+I rom 13 ble både Kage og Yamo aktive etter bekreftelsen. En separat
+vertskontroll sammenlignet fiendesperren og begge starttellerne etter et
+testhopp med kandidatens tabeller for hvert av de 20 rommene.
 
 Alle 20 startvalg sammenlignes med **1075 faktiske kjøringer av `$331C`**
 fordelt over starttilstandene. De opprinnelige instruksjonene gjør bare

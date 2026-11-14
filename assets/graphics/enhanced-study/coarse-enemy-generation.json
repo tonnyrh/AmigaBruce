@@ -1,0 +1,65 @@
+{
+  "generator": "OpenAI image_gen",
+  "date": "2026-11-01",
+  "candidate_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "template": "The original C64 pose masks were centered in a 4 by 2 grid of 32 by 32 cells and magnified 12 times with nearest-neighbor sampling. Use the build script's --guide-dir option to reproduce the reference images.",
+  "conversion": "tools/build_enemy_ink_masters.py",
+  "game_projection": "tools/enhanced_enemies.py",
+  "comparison": "../../../reference/analysis/enhanced-2026-11-01/enemy-coarse-comparison.png",
+  "studies": [
+    {
+      "actor": "yamo",
+      "prompt": "EDIT the supplied 4-column × 2-row sprite template. It is an enlargement of a real 128 × 64 pixel sprite sheet. Treat it like a tiny indexed bitmap displayed at 1200% nearest-neighbor zoom. Each square logical pixel is a single flat ink: roughly 12×12 output pixels per one input pixel. Preserve the EXACT 8 occupied silhouettes, bounding boxes, facing, and cell centers. Repaint their interiors only. They must look deliberately CHUNKY, crude and pixelated, as if someone drew on graph paper with a fat square marker; 16×21 logical pixels per standing body! The face fits in 5×5 dots, an eye slit is a short bar. Limit a body to 4 or 5 solid colors with one readable connected patch for each material; one rectangular accent at most per limb. Hard stair-step edges, no gradients, no intermediate shades, no grain, NO dithering, no outlines inside outlines, no single-dot all-over decorations. No resized high-resolution illustration. Think actual early coin-op coin-slot arcade sprite data with strongly readable hand-placed clusters. Existing solid background is only a mask guide; deliver transparent outside each figure, no labels, no grid, retain regular atlas layout. All poses fit safely within their original cells. Stocky GREEN sumo, Yamo. Large mid-green belly and head (#669933), a SINGLE attached yellow-green highlight (#BBDD77) across the lit cheek/shoulder, dark ink near-black hair/topknot and lower shadow (#111111), a simple two-pixel tall continuous pale mawashi belt (#99BBCC). A black brow on the front of the head. Keep a great deal of solid green. In the seated fall pose the head remains high; underline the waist on the belly, not the face. Broad silhouette. No tiny abs or scales.",
+      "guide_sha256": "b4b29c57359ae9b33b8a2be952ba8b2af4ff217fd023e7079430d7b2aee597a2",
+      "generated": "yamo-coarse-source.png",
+      "generated_sha256": "b3999b5c676dac20adfbe29c1c7b88eb0218c4944550af2ebf18001a99088900",
+      "native_master": "yamo-coarse-native.png",
+      "native_sha256": "b94e91da7c01f9c955ed7f738ac9b0ed0d20d811b4be3d8eba20dadccc90ac8a",
+      "inks": [
+        "#111",
+        "#9BC",
+        "#693",
+        "#BD7"
+      ],
+      "facing": 1,
+      "source_pose_hex": [
+        "02",
+        "12",
+        "0A",
+        "1A",
+        "06",
+        "1C",
+        "3A",
+        "2E"
+      ]
+    },
+    {
+      "actor": "kage",
+      "prompt": "EDIT the supplied 4-column × 2-row sprite template. It is an enlargement of a real 128 × 64 pixel sprite sheet. Treat it like a tiny indexed bitmap displayed at 1200% nearest-neighbor zoom. Each square logical pixel is a single flat ink: roughly 12×12 output pixels per one input pixel. Preserve the EXACT 8 occupied silhouettes, bounding boxes, facing, and cell centers. Repaint their interiors only. They must look deliberately CHUNKY, crude and pixelated, as if someone drew on graph paper with a fat square marker; 16×21 logical pixels per standing body! The face fits in 5×5 dots, an eye slit is a short bar. Limit a body to 4 or 5 solid colors with one readable connected patch for each material; one rectangular accent at most per limb. Hard stair-step edges, no gradients, no intermediate shades, no grain, NO dithering, no outlines inside outlines, no single-dot all-over decorations. No resized high-resolution illustration. Think actual early coin-op coin-slot arcade sprite data with strongly readable hand-placed clusters. Existing solid background is only a mask guide; deliver transparent outside each figure, no labels, no grid, retain regular atlas layout. All poses fit safely within their original cells. Kage, masked ninja with one straight bamboo kendo staff. Large dark navy outfit (#223355), one contiguous lighter slate shoulder/hood plane (#778899), near-black trim/boots (#111111), two adjacent warm amber pixels (#DD9966) for the exposed eyes. Paint the staff medium rust (#AA4433) with one continuous light edge shared with the eye color. Guard has the straight vertical staff on the LEFT behind his head; the bottom-left lunge has the staff extended to the RIGHT. Only paint the existing projections. No extra stick or new limbs. Distinct hood, upper arm, boot, easy to read on a blue wall.",
+      "guide_sha256": "8a76ae50a24d76acb1e002d4ce841f763bf4d902756bbea6ccf9852480157fab",
+      "generated": "kage-coarse-source.png",
+      "generated_sha256": "bcc35ea22ac2fff7ee168e5e4f158e3d907fd68fc7d0da5f7f13311a433ba68e",
+      "native_master": "kage-coarse-native.png",
+      "native_sha256": "1660b54e8ff29628aedf3b72128bd89a10e08af7db6b4061b9eaa593895f926d",
+      "inks": [
+        "#111",
+        "#A43",
+        "#9BC",
+        "#235",
+        "#D96"
+      ],
+      "facing": 1,
+      "source_pose_hex": [
+        "02",
+        "12",
+        "0A",
+        "34",
+        "36",
+        "14",
+        "3A",
+        "38"
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 static unsigned char bitmap[40960];
 static void interleaved_tile(const BlC64Paint *q){
  unsigned short r,p,cy=cell_y[q->cell],column=(unsigned short)(q->cell%40);
- for(r=0;r<8;r++)for(p=0;p<4;p++)q->bitmap[(q->scene_top+cy+r)*160+p*40+column]=q->planes[p*8+r];
+ for(r=0;r<8;r++)if(q->rows&(1u<<r))for(p=0;p<4;p++)q->bitmap[(q->scene_top+cy+r)*160+p*40+column]=q->planes[p*8+r];
 }
 #define CHECK(q) do{if(!(q))return __LINE__;}while(0)
 long bl_paint_requeue_contract(void){
@@ -51,6 +51,33 @@ static void block_copy(const BlC64Block *q){
 }
 
 static unsigned char animation_test_cache[106496];
+static long room14_trap_contract(void){
+ unsigned short step,i,count,cell;
+ unsigned char saw_top=0,saw_bottom=0,saw_identical=0;
+ bl_c64_reset();bl_c64_load(13);bl_c64_set_trap_row_reuse(1);
+ bl_c64_paint_room(bitmap,0);bl_c64_clear_dirty();
+ for(step=0;step<96;step++){
+  for(i=120;i<1000;i++)contact_cells[i]=0;
+  execute(0x104b);
+  for(i=0;i<paint_count;i++){
+   cell=paint_list[i];
+   CHECK(contact_cells[cell]);
+   switch(paint_rows[cell]){
+    case 3:saw_top=1;break;
+    case 192:saw_bottom=1;break;
+    case 0:saw_identical=1;break;
+    default:CHECK(0);
+   }
+  }
+  do{(void)bl_c64_paint_part(bitmap,0,5,&count);}while(!bl_c64_paint_done());
+  CHECK(bl_c64_check_interleaved(bitmap,0)==0);
+  bl_c64_clear_dirty();
+ }
+ bl_c64_set_trap_row_reuse(0);
+ CHECK(saw_top && saw_bottom && saw_identical);
+ return 0;
+}
+
 long bl_paint_frame_contract(void){
  unsigned short room,step,i,count,loops;unsigned long before;unsigned char saw_split=0;
  bl_c64_set_block_painter(block_copy);bl_c64_set_painter(interleaved_tile);
@@ -90,5 +117,5 @@ long bl_paint_frame_contract(void){
   if(bl_c64_paint_done())bl_c64_clear_dirty();
  }
  CHECK(!bl_c64_has_dirty());CHECK(bl_c64_check_interleaved(bitmap,0)==0);
- return 0;
+ return room14_trap_contract();
 }

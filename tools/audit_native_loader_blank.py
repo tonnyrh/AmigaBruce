@@ -1,7 +1,7 @@
 """Controlled native death: inspect display-off and first complete publication."""
 import argparse,hashlib,json,re,struct,time
 from pathlib import Path
-from winuae_ipc import command
+from winuae_ipc import command, tap_fire
 from capture_paula_stream import elf_symbols
 from audit_vic_native_kernels import sections
 from rip_c64_room_graphics import render as source_render
@@ -27,10 +27,11 @@ def main():
  def key(k):cmd('EVT KEY_'+k+' 1');time.sleep(.5);cmd('EVT KEY_'+k+' 0');time.sleep(.3)
  if a.start:
   cmd('EVT KEY_SHIFT_LEFT 1');key('D');cmd('EVT KEY_SHIFT_LEFT 0')
-  for k in ['F1','F2']+['F4']*(a.room-1)+['RETURN']:key(k)
+  for k in ['F1','F2','F3']+['F10']*(a.room-1):key(k)
+  tap_fire(cmd)
   time.sleep(8)
- for _ in range(a.next_rooms):key('F2');time.sleep(3)
- for _ in range(a.previous_rooms):key('F1');time.sleep(3)
+ for _ in range(a.next_rooms):key('F10');tap_fire(cmd);time.sleep(3)
+ for _ in range(a.previous_rooms):key('F9');tap_fire(cmd);time.sleep(3)
  elf=ROOT/'amiga/out/bruce_amiga.elf';_,ss=sections(elf);_,syms=elf_symbols(elf);labels=['.text','.rodata','.data','.bss'];s=[next(q for k,q in ss if k==name) for name in labels]
  task=long(long(4)+276);node=long(long(task+172)*4+60)*4;hunks=[]
  while node:hunks.append(node+4);node=long(node)*4;assert len(hunks)<=8

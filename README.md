@@ -1,171 +1,102 @@
-# Bruce for Amiga 500
+# Bruce for Amiga
 
-Amiga-spillet heter **Bruce**. Navnet Bruce Lee brukes fortsatt om C64-originalen
-og i eksisterende repo-/referansebaner. Oppstart: [tittel og karateskrik](docs/BRUCE_STARTUP.md).
-Musikk og effekter følger nå [C64-koden med kompakt Paula-avspilling](docs/SOURCE_AUDIO.md).
-Etter skriket spiller tittellåten fram til ild trykkes. Bølgeformbanken bruker2260 byte Chip RAM;
-de tidligere genererte kamplydene er erstattet av kildens15 effektsekvenser.
-Lydavspillingen bruker nå [faste Paula-buffere og PAL-styrt service](docs/PAULA_STREAM.md).
+**Bruce** brings the rooms and fighting of the Commodore 64 game *Bruce Lee* to the Amiga. It includes **Classic** graphics and an optional **Enhanced** presentation, with a shared game engine.
 
-Gjeldende prioritet: **C64-kildedata og disassembly før grafikk og lyd**.
+[Download the release candidate](https://github.com/tonnyrh/AmigaBruce/releases) · [Active tests](docs/ACTIVE_TESTS.md) · [Project plan](docs/PROJECT_PLAN.md)
 
-27. oktober: [hele kildekjeden er koblet inn](docs/MILESTONE_COMPLETION.md):
-alle aktørtilstander, pikselkontakt, samtidige treff, AI, liv, turbytte og
-24-bits poeng.3 034 kontroller sammenligner hele RAM/registre mot faktiske
-C64-bytes. A500-feltkadens, rasterfase og naturlig gjennomspilling er fortsatt
-åpne akseptanseporter. Se [aktive tester](docs/ACTIVE_TESTS.md).
+![Bruce title screen](docs/Startup%20Screen.png)
 
-Samlet maskinkontroll: `./test-source-world.ps1` (PAL A500, 512+512).
-Vertskontroller og verifikasjon av levert bygg: `./test-parity.ps1`.
-De gamle separate adaptertestene beholdes som historikk; de godkjenner ikke
-den nye motoren. Milepæler lukkes etter faktisk akseptanse, ikke bare bygg.
+## Classic and Enhanced
 
-Kage/Yamos innganger, romspesifikke tellere og retur følger nå
-[C64-kildens spawn-rutiner](docs/ENEMY_SPAWNS.md). Full aktørparitet og
-naturlig gjennomspilling er fortsatt åpne.
+- **Classic** uses extracted C64 character graphics and sprites, with source-driven music and sound effects adapted to Paula.
+- **Enhanced** adds new fighters, scenery, animation artwork and short combat samples. Select it with **F4** on the main menu.
+- Both modes use the same reconstructed movement, combat, enemy AI and progression. Enhanced artwork does not define collision geometry.
+- All **20 rooms** use decoded C64 room data and translated room routines.
+- The main menu includes player count, Yamo control and optional test settings. **P** pauses both gameplay and sound.
 
-[Cheat-brettvalg](docs/CHEAT_PROGRESS.md) fullfører nå lanterner i tidligere
-romnumre, med separat spillerlagring og valgt roms lanterner beholdt.
+![Classic gameplay](docs/Game%20Standard.png)
+![Enhanced gameplay](docs/Game%20Extended.png)
 
-[Rom 10 og elektrisk felle](docs/ROOM10_ELECTRIC.md): prioritert kopiering av
-feller og rettferdig fordeling av tegnearbeidet på store rullende nett.
+This is a work in progress. Source comparisons and controlled tests support individual rules; they do not certify complete original-game parity or a complete natural playthrough. The frozen Remember/T64 reference candidate has **not** been confirmed as the selected untouched 1984 release.
 
-[Rom8-eksplosjoner mot skadde fiender](docs/ROOM8_BLASTS.md): NPC-objektkontakt
-bruker nå kildeposituren for treffreaksjon og nedslag, med egne regresjonskontroller.
+## Playing
 
-[Fiendeinnganger og bomber](docs/BOMBS_ENTRY.md): kildevalget mellom
-inngangspunkter, NPC-utløsning og Bruces stille dødsreaksjon er nå koblet inn.
+The target configuration is a **PAL Amiga 500, 68000, OCS, Kickstart 1.3, 512 KiB Chip RAM and 512 KiB expansion RAM**. The release page provides a bootable ADF and a package containing the Amiga executable and instructions. Kickstart ROMs and emulator software are not included.
 
-[Kages stikk ved vegger](docs/NINJA_WALL.md) bruker nå kildebasert spritekontakt
-og felles vegghistorikk; den gamle avstandsboksen er fjernet for dette angrepet.
+For WinUAE, use the target configuration above. Mix all three audio voices to both outputs if you listen through only one speaker or channel. See the [audio setup notes](docs/AUDIO_PLAYBACK.md).
 
-[Rombytte er optimalisert](docs/ROOM_LOAD_PERFORMANCE.md): omtrent 21% mindre
-forberedelsesarbeid i to A500-kjøringer med alle 20 rom og uendrede bildepiksler.
-Fargetabellene bruker 23 KiB mindre CPU-RAM. Denne målingen gjelder det
-tidligere adapterbygget. [Gjeldende milepælstatus](docs/MILESTONE_COMPLETION.md).
+### Controls
 
-[Bevegelig nett i rom5](docs/MOVING_NET.md): kontakt med tegn `$62` bruker
-nå C64-tilstand23 og nettets egen transport, i stedet for en feilaktig
-treffreaksjon som kastet Bruce bakover.
+| Control | Action |
+| --- | --- |
+| Joystick | Move; up jumps or climbs when the source rules permit |
+| Fire 0 / primary button | Attack; confirm a selected room |
+| Fire 1 / second button | Same input as up: jump or climb |
+| P | Pause / resume |
+| F10 | Main menu during ordinary play |
+| Esc | Exit to AmigaDOS |
 
-Ny [døds-/livs- og veggrettelse med hovedmeny](docs/SESSION_WALLS.md):
-faredødens stillstand/lyd, synlige reservefall, separate NPC-kontaktmasker
-og korrigert hopp/fall i rom6. Menyen har F3 for spillere og F5 for Yamo;
-Shift+D åpner uendelige liv, udødelighet og startrom. P pauser spillet og lyden.
-Trykk P igjen for å fortsette, F10 for menyen eller Esc for AmigaDOS.
-[Tittelbilde, pause og skjermskift ved nytt liv](docs/TITLE_PAUSE_RESPAWN.md).
+On the main menu, **F3** changes the player count, **F5** changes Yamo control, and **F4** switches between Classic and Enhanced. Fire or Return starts the game, except that room selection requires the primary Fire button.
 
-Ny rettelse: [NPC-rekyl og uventet romstart i rom2](docs/NPC_RECOIL.md).
-Se [prosjektreglene](AGENTS.md) og [gjennomgangen av rombyggingen](docs/ROOM_RECONSTRUCTION.md).
-Alle20 rom bruker nå dekodede C64-romdata, rippede tegn og oversatte
-init-/løprutiner. De håndlagde blokkrommene og den felles fjellbakgrunnen er
-byttet ut. [Figurene bruker nå også rippede C64-sprites](docs/C64_SPRITES.md).
-Lasteskjermen og menyen har en egen fjellillustrasjon med Bruces rippede kamppositur.
-Figurer og rom i selve spillet følger fortsatt C64-utgaven.
-Vanlig spill bruker nå den komplette kildekjeden. Gamle adapterfunksjoner
-beholdes for historiske kontroller og brukes ikke som motor i vanlig spill.
-Klatringen er nå [rettet mot C64-koden](docs/C64_CLIMB.md): aktuell nettmaske,
-grep i rom5, sidefart4/6 piksler per oppdatering og separate vertikale ventesteg.
-Full C64-paritet og naturlig gjennomspilling er ikke godkjent.
-De tidligere testene er gjennomgått mot kandidatens maskinkode i
-[T01–T18: rettelser og åpne funn](docs/TEST_AUDIT_2026-10-25.md).
-Nettinput/-grep og rekkefølgen kamp/aktøroppdatering er rettet;
-61 kontrollerte kilde-CPU-fixtures kontrollerer tolkningene.
-[Kage og Yamos AI er nå gjennomgått mot originalbytene](docs/C64_AI.md):
-4578 kontrollerte kildekjøringer, med588 samsvarende ordinære angreps-/bevegelsesvalg
-i adapteren. Venting, inntreden, stikkavslutning, retrettstøtte og NPC-utganger
-har fortsatt dokumenterte avvik. AI-gjennomgangen er kodeverifikasjon;
-disse motoravvikene er ikke rettet av spriteskiftet.
-Ny [bevegelsesgjennomgang](docs/C64_MOVEMENT.md) porter svart veggkontakt og
-retter spark-/hopp-/fallfaser og masker.500 historikk-,480 spark- og54 hopp-/fall-
-kontroller følger faktisk6502-kode. Full landing, aktørmaskin og kamp gjenstår.
-Se også [lanterner og romgrensene i rom 1](docs/C64_CONTACTS.md):
-kildepositur for stille ståing uten nett, boksing og liggestilling, enkeltinnsamling
-med125 poeng/lyd og høyre utgang ved kilde-X≥300. Gang-/reaksjonssekvenser
-og full aktørmotor gjenstår; hopp-/spark-/fallmasker er korrigert separat.
-Den tidligere native inspeksjonen dekket alle20 rom uten avvik i kontrollerte
-rompiksler. Den strenge A500-ytelsesporten er fortsatt åpen, med tidsavvik i
-blant annet rom 14 og sluttrommet; romlasting tar også flere sekunder.
-Native målinger må gjelde kildene som ble bygget; eldre rom-/aktørmålinger
-er historiske etter aktørrettelsene. Måling av vanligbyggets Chip-reserve gjenstår.
-De tidligere6000-felts målingene gjelder den gamle adapterbanen. Gjeldende
-kildeport er kontrollert med53 native RAM-/registertilfeller og1 200
-repriseløkker på A500 OCS/KS1.3 med512+512KiB. Full sanntidsfart er fortsatt
-åpen. [Siste optimaliseringsrapport](docs/CONTACT_REGISTERS_OPTIMIZATION.md)
-og `reference/validation/source-world-delivery.json` binder dagens kode,
-normalbygg og kontroller. Naturlig gjennomspilling, lydtiming og fysisk
-A500 er egne akseptanser.
+### Test options
 
-Uttrekk, kildeadresser, tester og avgrensninger er dokumentert i
-[romrekonstruksjonen](docs/ROOM_RECONSTRUCTION.md).
-F1/F2 velger rom for inspeksjon når Shift+D-testmodus er aktivert.
-Dører, åpninger og romendringer følger
-kandidatens maskinkode. Referansekandidaten er fortsatt ikke bekreftet som
-valgt, urørt1984-utgave.
+Press **Shift+D** on the main menu to open test options:
 
-Bygg med `.\amiga-build.ps1` og spill med `.\amiga-run.ps1`.
-For vanlig WinUAE kan `amiga/out/bruce-a500.uae` lastes med gjeldende ADF.
-Profilen samler alle tre lydstemmer på begge utganger; se
-[lydoppsett og native musikkopptak](docs/AUDIO_PLAYBACK.md).
-Se [M3: Ninja, Yamo, skade og respawn](docs/M3_COMBAT.md).
-Se [M4: lanterner og første romovergang](docs/M4_ROOMS.md).
-Se [20-romsutgaven og begrensningene](docs/M4_ROOM_EXPLORER.md),
-[aktive tester](docs/ACTIVE_TESTS.md) og [grafikkflyten](docs/AMIGA_ART_PIPELINE.md).
-Se [prototypestatus, kontroller og testing](docs/PROTOTYPE.md).
-Se [korte kamplyder og minnebudsjett](docs/COMBAT_AUDIO.md).
-Se også [arbeidsleveranse, målte resultater og neste spilltest](docs/NIGHT_HANDOFF.md).
+| Key | Option |
+| --- | --- |
+| F1 | Infinite falls |
+| F2 | Invincibility |
+| F3 | Enable room selection |
+| F9 / F10 | Previous / next room |
+| F5 | Back to the main menu |
 
-![Alle20 rom med rippet C64-grafikk](assets/c64/rooms-v1/all-rooms.png)
+With room selection enabled, **F9/F10** browse rooms during play and **F8** opens the main menu. Browsing pauses the game; press **Fire 0** to enter the selected room and start its normal enemy timers. Earlier rooms' lanterns are marked as collected for this test route. It is not a normal progression playthrough. See [room selection and saved progress](docs/CHEAT_PROGRESS.md).
 
-- [Prosjektplan](docs/PROJECT_PLAN.md)
-- [M0-status og neste steg](docs/M0_STATUS.md)
-- [C64-referanse og opptaksprosedyre](docs/reference/C64_REFERENCE.md)
-- [Kilderegister](docs/reference/SOURCES.md)
-- [Paritetsmetode](docs/parity/README.md)
-- [Paritetsregister](docs/parity/register.csv)
-- [Romregister](docs/parity/rooms.csv)
-- [Referansemanifest](reference/manifest.json)
+## Building and testing
 
-Originale diskbilder, snapshots, ROM-er og lokale referanseutsjekkinger ligger
-under Git-ignorert `.reference/`. De lokale originalfilene inngår ikke i kildekoden eller utgivelser. Det
-separate, brukerbestilte uttrekket av romgrafikk og sprites ligger i
-`assets/c64/rooms-v1/` og `assets/c64/sprites-v1/`,
-med adresser og kildehash.
-Referansefiler kan verifiseres med `python tools/c64_reference.py verify`.
-Tilgjengelig T64-kandidat verifiseres med
-`python tools/c64_reference.py verify --candidate`.
-En valgt original registreres med
-`python tools/c64_reference.py register "C:/path/to/BruceLee_rakki_s0.g64"`.
-Kommandoen beregner identitet, men bekrefter ikke utgave eller spilloppførsel.
+The Windows build uses PowerShell, Python 3.10+ with Pillow, and the toolchain bundled with the BartmanAbyss Amiga Debug VS Code extension. Some extraction and reference checks also require the local frozen C64 reference files, which are not distributed in this repository.
 
-Nyeste ytelsesrunde: [native kontakt, objekter og poeng](docs/NATIVE_ENGINE_OPTIMIZATION.md).
-Git-merke før løftet: `milestone/c64-source-2026-10-27` (`26fb6d1`).
+```powershell
+.\amiga-build.ps1
+.\amiga-run.ps1
+```
 
-Neste ytelsesrunde: [kontakt-/VIC-kjerner og faste kildespillsteg](docs/CONTACT_KERNEL_OPTIMIZATION.md).
+The build produces `amiga/out/bruce_amiga.exe` and `amiga/out/bruce_amiga.adf`. The run script configures WinUAE; supply your own Kickstart ROM. Start a new game when testing a new build: old `.uss` saves contain the old program.
 
-Videre optimalisering: [pakkede kontaktmasker, 28. oktober](docs/PACKED_MASK_OPTIMIZATION.md).
+Useful validation entry points:
 
-Siste kontaktløft: [pekeroppsett, klassifisering og kildebasert fellerettelse](docs/CONTACT_PREPARATION_OPTIMIZATION.md).
+```powershell
+.\test-parity.ps1
+.\test-source-world.ps1
+.\test-enhanced-audio.ps1
+```
 
-Siste VIC-løft: [gjenbruk av uendret pikselkontakt på 68000](docs/VIC_REPEAT_OPTIMIZATION.md).
+These checks have different scopes. Source comparisons check documented interpretations against the frozen binary. Native tests check the Amiga implementation. Neither replaces natural playtesting, listening tests or physical-machine acceptance. [Validation method](docs/parity/README.md) · [Current performance evidence](docs/OP_A500_ACCEPTANCE.md).
 
-Siste måleøkt: [tre kontaktsegment-varianter forkastet uten samlet gevinst](docs/CONTACT_SEGMENT_OPTIMIZATION.md); den validerte motoren er beholdt.
+## Graphics editor
 
-Ny CPU-margin: [native spritekopiering](docs/SPRITE_COPY_OPTIMIZATION.md) reduserer målt kopieringskostnad23,14 %. Samlet feltkadens og lydservice er fortsatt åpne.
+Launch [GraphicsEditor.cmd](GraphicsEditor.cmd) to edit Enhanced fighters and scenery. The editor provides pixel editing, previews, PNG import/export, AI suggestion support, graphics packing and Amiga builds. Its interface and tool messages are in English.
 
-29. oktober: [retting av trappefaser, første buffer og HUD-overlapp ved gjenopptegning](docs/RENDER_COHERENCE.md). C64-reglene beholdes; naturlig spilling og full PAL-akseptanse står fortsatt åpne.
+[Graphics editor guide](docs/GRAPHICS_EDITOR.md) · [Enhanced graphics and audio](docs/ENHANCED.md) · [Artwork pipeline](docs/AMIGA_ART_PIPELINE.md).
 
-OP4: [raskere lesing av levende lanternetilstand](docs/VIEW_PROJECTION_OPTIMIZATION.md), med bevart maskerepresentasjon og egne før/etter-målinger.
+## Reconstruction and evidence
 
-VIC-cache: [målt enkeltlesing og avviste varianter](docs/VIC_CACHE_OPTIMIZATION.md).
+Game rules are derived from the frozen C64 binary, its tables and documented disassembly. Uncertain behavior stays open until the relevant branches are traced. A browser reconstruction or a newly invented collision model is not treated as evidence of C64 behavior.
 
-Meny og oppstart: [skjult publisering og native bufferkontroller](docs/MENU_PUBLICATION.md).
+- [Room reconstruction](docs/ROOM_RECONSTRUCTION.md)
+- [Source engine integration and milestone status](docs/MILESTONE_COMPLETION.md)
+- [Movement](docs/C64_MOVEMENT.md), [climbing](docs/C64_CLIMB.md), [lanterns and room boundaries](docs/C64_CONTACTS.md)
+- [Enemy AI](docs/C64_AI.md), [enemy spawning](docs/ENEMY_SPAWNS.md), [wall contact](docs/NINJA_WALL.md)
+- [Bombs and enemy entry](docs/BOMBS_ENTRY.md), [death, lives and menus](docs/SESSION_WALLS.md)
+- [Extracted sprites](docs/C64_SPRITES.md), [source audio](docs/SOURCE_AUDIO.md), [Paula playback](docs/PAULA_STREAM.md)
+- [Earlier T01–T18 test review](docs/TEST_AUDIT_2026-10-25.md)
+- [Source register](docs/reference/SOURCES.md), [parity register](docs/parity/register.csv), [room register](docs/parity/rooms.csv)
+- [Project rules](AGENTS.md)
 
-30. oktober: [målt R20-fargeskriver og kompilatorvakt](docs/FINAL_COLOR_OPTIMIZATION.md) i lokal EXE/ADF. Kontrollert20-romspar: R20-13,236 %, samlet arbeid-1,275 %; ingen ekstra produksjons-BSS.53 native fixturer og oppstarts-/renderkontroller består. R01-lydservice, IRQ/input, sanntid og fysisk A500 er fortsatt åpne porter.
+Some detailed development documents remain in Norwegian. Dated measurements describe their recorded builds, not automatically the current release. The [active test list](docs/ACTIVE_TESTS.md) records outstanding timing, rendering, sound and gameplay acceptance work.
 
+![All 20 rooms with extracted C64 graphics](assets/c64/rooms-v1/all-rooms.png)
 
-30. oktober: [bufferpublisering](docs/BUFFER_PUBLICATION.md) og samlet
-trappefase er rettet i ny EXE/ADF.12+12 kontrollerte rom12-/døds-/rombyttebilder
-har null fase- eller statiske grafikkavvik; menyens78 bilder består også.
-Ny naturlig prøve av OP3-R12 og OP3-REDRAW står åpen. Samlet A500-tempo er
-fortsatt under målet; ingen full sanntids- eller originalparitet hevdes.
+Original disk images, snapshots, ROMs and local upstream checkouts are kept outside the published source under ignored reference directories. The separate extracted room and sprite assets in `assets/c64/rooms-v1/` and `assets/c64/sprites-v1/` record their source addresses and hashes. Enhanced asset folders retain generation and conversion metadata.
+
+The name *Bruce Lee* is retained when referring to the C64 original and in existing reference filenames. The Amiga game is named **Bruce**. Bruce Lee II is not included.

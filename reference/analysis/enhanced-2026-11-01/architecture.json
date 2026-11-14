@@ -1,0 +1,132 @@
+{
+  "machine": "WinUAE PAL 68000 cycle-exact OCS, Kickstart 1.3, 512 KiB Chip + 512 KiB slow",
+  "artifacts": {
+    "amiga/out/bruce_amiga.exe": "802fbb089fee6f031e360004734b07fbd3469a3b2cb851bc21e766f825f551ba",
+    "amiga/out/bruce_amiga.adf": "a3e5fb2f58825d1b0f6235848df64749c1cb257b050679efba04cf9592040503"
+  },
+  "scope": "Room tour via F2 debug navigation; static backplates and live Copper palette, not a natural playthrough. Gallery trap and lantern phases may be in flight; a matching complete snapshot is required.",
+  "floppy": "Normal read-only ADF boot to room 2 for the screenshot; same image with 800% floppy access for the full debug tour.",
+  "classic_r01_background_sha256_matches_previous_cli_tour": {
+    "classic": "e08dcd912d111028644c42ed4ddc7e46cda7ef46e0eda5c101bf52bc0c4244bd",
+    "restored": "446d5f492a1c2cb92c58ca20e001ceea2cf8a811339be91a55d25ecca7530d92"
+  },
+  "host_fixture": [
+    "classic: 800 full-RAM checks, 1 steps with both NPCs, room mask c0823, 9948 tiles, final display e66e4a89",
+    "enhanced: 800 full-RAM checks, 1 steps with both NPCs, room mask c0823, 9948 tiles, final display e66e4a89",
+    "R02: four wick phases per lantern, 6 pickups with intact brackets and restored masonry"
+  ],
+  "measurements": [
+    {
+      "look": "classic",
+      "state": {
+        "field": 1218,
+        "steps": 3,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 11,
+        "room": 1
+      },
+      "fixed_pixels": 11740,
+      "background_sha256": "e08dcd912d111028644c42ed4ddc7e46cda7ef46e0eda5c101bf52bc0c4244bd"
+    },
+    {
+      "both_start": {
+        "field": 2382,
+        "steps": 241,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      },
+      "both_end": {
+        "field": 2461,
+        "steps": 268,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      }
+    },
+    {
+      "room": 2,
+      "fixed_pixels": 35712
+    },
+    {
+      "room": 6,
+      "fixed_pixels": 28672
+    },
+    {
+      "room": 12,
+      "fixed_pixels": 15488
+    },
+    {
+      "debug_room_visits": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "look": "enhanced",
+      "state": {
+        "field": 1670,
+        "steps": 4,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      },
+      "fixed_pixels": 35584,
+      "background_sha256": "69231c16a08da360e2cff365cb9d0069ade585471cd2e88b2f8e17d8c45a29b5"
+    },
+    {
+      "look": "restored",
+      "state": {
+        "field": 7065,
+        "steps": 5,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 103,
+        "room": 1
+      },
+      "fixed_pixels": 11752,
+      "background_sha256": "446d5f492a1c2cb92c58ca20e001ceea2cf8a811339be91a55d25ecca7530d92"
+    }
+  ]
+}

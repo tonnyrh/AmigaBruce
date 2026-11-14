@@ -4,7 +4,7 @@ its measured interval. Debug invincibility/start-room are explicit controls.
 """
 import argparse,hashlib,json,re,struct,time
 from pathlib import Path
-from winuae_ipc import command
+from winuae_ipc import command, tap_fire
 from capture_paula_stream import elf_symbols
 ROOT=Path(__file__).resolve().parents[1]
 def main():
@@ -22,7 +22,8 @@ def main():
  def key(event):
   cmd('EVT KEY_'+event+' 1');time.sleep(.35);cmd('EVT KEY_'+event+' 0');time.sleep(.4)
  cmd('EVT KEY_SHIFT_LEFT 1');key('D');cmd('EVT KEY_SHIFT_LEFT 0');time.sleep(.3)
- for event in ['F1','F2']+['F4']*(a.room-1)+['RETURN']:key(event)
+ for event in ['F1','F2','F3']+['F10']*(a.room-1):key(event)
+ tap_fire(cmd)
  time.sleep(15)
  task=long(long(4)+276);cli=long(task+172)*4;node=long(cli+60)*4;hunks=[]
  while node:hunks.append(node+4);node=long(node)*4;assert len(hunks)<=8

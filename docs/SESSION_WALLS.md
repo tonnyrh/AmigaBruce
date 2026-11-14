@@ -85,9 +85,9 @@ tilstandsparitet er ikke bekreftet av menyen.
 
 - F1: uendelige reservefall. Dette hindrer livtrekk, men lar Bruce dø.
 - F2: udødelighet mot kamp og faredød.
-- F3/F4: startrom1–20, med omslag ved endene.
-- F5: tilbake til hovedmenyen. Ild/Return starter med valgene.
-- F1/F2 under spilling skifter rom når testmodus er aktivert.
+- F3 slår brettvalg på eller av. F9/F10 blar mellom rom 1–20 i menyen og under spilling.
+- F5 tar deg tilbake til hovedmenyen. Med brettvalg på kreves Fire for å starte.
+- Fire bekrefter et rom etter blaing. F8 åpner menyen når brettvalg er på.
 
 Brettvalg fullfører nå lanterner i lavere romnumre før valgt rom lastes.
 Valgt rom beholder sine lanterner; poeng og reservefall gis ikke for

@@ -1,0 +1,234 @@
+{
+  "machine": "WinUAE PAL, cycle-exact 68000, OCS, Kickstart 1.3, 512 KiB Chip + 512 KiB slow, read-only ADF",
+  "candidate_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "exe_sha256": "c9c422df2d1b729678e253ec772453b0991f95542d16e42f4bf396a55fc1d4ae",
+  "adf_sha256": "c99d3e25b348262220a364970de51e6a611e619a4ed205bc2d04bf25e1a3ca38",
+  "hardware_capture": "Normal Enhanced build. Bruce punch and kick via joystick. For the isolated 16-clip recording: P pauses actors; debugger enables only audio service, injects presentation cue IDs on voice 0, verifies its Chip page byte-for-byte. The stereo capture payload has identical left/right samples at 48 kHz despite a mono 44.1 kHz AVI label. One real channel was extracted and resampled to 16 kHz.",
+  "packed_bytes": 6950,
+  "additional_chip_bytes": 0,
+  "largest_clip_bytes": 992,
+  "host_scope": "PASS 16 samples, polyphony, priority, short swings, silence reload, SID restore and Yamo victim routing",
+  "classic_audio_fields": 7540,
+  "recording_sha256": "a2007ddde7d0f038b8cd420d08f1b19201f63b7dec9fef0183048d89ae387c57",
+  "voice_matches": [
+    {
+      "name": "bruce_punch_0",
+      "paula_period": 452,
+      "seconds": 0.3764,
+      "measured_active_ms": 76,
+      "peak_normalized_correlation": 0.99
+    },
+    {
+      "name": "bruce_punch_1",
+      "paula_period": 435,
+      "seconds": 0.7771,
+      "measured_active_ms": 84,
+      "peak_normalized_correlation": 0.978
+    },
+    {
+      "name": "bruce_kick_0",
+      "paula_period": 452,
+      "seconds": 1.1586,
+      "measured_active_ms": 100,
+      "peak_normalized_correlation": 0.996
+    },
+    {
+      "name": "bruce_kick_1",
+      "paula_period": 435,
+      "seconds": 1.5391,
+      "measured_active_ms": 112,
+      "peak_normalized_correlation": 0.984
+    },
+    {
+      "name": "yamo_punch_0",
+      "paula_period": 503,
+      "seconds": 1.9391,
+      "measured_active_ms": 108,
+      "peak_normalized_correlation": 0.995
+    },
+    {
+      "name": "yamo_punch_1",
+      "paula_period": 483,
+      "seconds": 2.2797,
+      "measured_active_ms": 68,
+      "peak_normalized_correlation": 0.999
+    },
+    {
+      "name": "yamo_kick_0",
+      "paula_period": 503,
+      "seconds": 2.6411,
+      "measured_active_ms": 136,
+      "peak_normalized_correlation": 0.997
+    },
+    {
+      "name": "yamo_kick_1",
+      "paula_period": 483,
+      "seconds": 3.0216,
+      "measured_active_ms": 124,
+      "peak_normalized_correlation": 0.998
+    },
+    {
+      "name": "kage_punch_0",
+      "paula_period": 452,
+      "seconds": 3.3811,
+      "measured_active_ms": 88,
+      "peak_normalized_correlation": 0.967
+    },
+    {
+      "name": "kage_punch_1",
+      "paula_period": 435,
+      "seconds": 3.7618,
+      "measured_active_ms": 80,
+      "peak_normalized_correlation": 0.993
+    },
+    {
+      "name": "kage_kick_0",
+      "paula_period": 452,
+      "seconds": 4.1631,
+      "measured_active_ms": 112,
+      "peak_normalized_correlation": 0.981
+    },
+    {
+      "name": "kage_kick_1",
+      "paula_period": 435,
+      "seconds": 4.5438,
+      "measured_active_ms": 108,
+      "peak_normalized_correlation": 0.999
+    },
+    {
+      "name": "kage_blade_0",
+      "paula_period": 452,
+      "seconds": 4.7845,
+      "measured_active_ms": 124,
+      "peak_normalized_correlation": 0.937
+    },
+    {
+      "name": "kage_blade_1",
+      "paula_period": 435,
+      "seconds": 5.0649,
+      "measured_active_ms": 120,
+      "peak_normalized_correlation": 0.952
+    },
+    {
+      "name": "yamo_cry_0",
+      "paula_period": 584,
+      "seconds": 5.4856,
+      "measured_active_ms": 160,
+      "peak_normalized_correlation": 0.999,
+      "voiced_period_estimate_hz": 79,
+      "periodicity": 0.946
+    },
+    {
+      "name": "yamo_cry_1",
+      "paula_period": 561,
+      "seconds": 5.9062,
+      "measured_active_ms": 156,
+      "peak_normalized_correlation": 0.998,
+      "voiced_period_estimate_hz": 79,
+      "periodicity": 0.24
+    }
+  ],
+  "mode_checks": [
+    {
+      "look": "classic",
+      "state": {
+        "field": 1236,
+        "steps": 7,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 11,
+        "room": 1
+      },
+      "fixed_pixels": 11740,
+      "background_sha256": "e08dcd912d111028644c42ed4ddc7e46cda7ef46e0eda5c101bf52bc0c4244bd"
+    },
+    {
+      "joystick_foley_mask": 15
+    },
+    {
+      "controlled_foley_bank": [
+        "bruce_punch_0",
+        "bruce_punch_1",
+        "bruce_kick_0",
+        "bruce_kick_1",
+        "yamo_punch_0",
+        "yamo_punch_1",
+        "yamo_kick_0",
+        "yamo_kick_1",
+        "kage_punch_0",
+        "kage_punch_1",
+        "kage_kick_0",
+        "kage_kick_1",
+        "kage_blade_0",
+        "kage_blade_1",
+        "yamo_cry_0",
+        "yamo_cry_1"
+      ],
+      "recording": "output_2.avi"
+    },
+    {
+      "both_start": {
+        "field": 2782,
+        "steps": 243,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 103,
+        "room": 1
+      },
+      "both_end": {
+        "field": 2955,
+        "steps": 301,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 103,
+        "room": 1
+      }
+    },
+    {
+      "look": "enhanced",
+      "state": {
+        "field": 1724,
+        "steps": 5,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      },
+      "fixed_pixels": 35584,
+      "background_sha256": "5ef5f2da5b4747fd10a1efc092ed1a9b46cb89b3ffa3bd74f7649ad85dbf5785"
+    },
+    {
+      "look": "restored",
+      "state": {
+        "field": 3230,
+        "steps": 6,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 125,
+        "room": 1
+      },
+      "fixed_pixels": 11752,
+      "background_sha256": "446d5f492a1c2cb92c58ca20e001ceea2cf8a811339be91a55d25ecca7530d92"
+    }
+  ]
+}

@@ -77,6 +77,143 @@ Brukerens konkrete passering der eksplosjonen uteble står åpen i
 [testlisten](ACTIVE_TESTS.md). Et lagringspunkt før kontakt kan vise om
 bomben var ledig, om Yamo fikk kontakt, og hva som faktisk ble tegnet.
 
+### Intermittent contacts reported in Enhanced, 9 November 2026
+
+The new report concerns the middle platform in room 11 and may also affect
+Bruce and Kage. It remains open. The current normal ADF was tested in
+cycle-exact PAL A500 WinUAE with 512 KiB Chip and 512 KiB slow RAM.
+
+Controlled Yamo walks triggered both middle-platform bombs, at columns 21
+and 34, in Classic and Enhanced. Three walking routes in each mode showed
+both blast shapes and the restored floor. The 24 × 32 background regions
+matched the corresponding source pixels or Enhanced artwork. An additional
+rightward approach to column 34 changed into a flying kick before the bomb
+and stopped near Bruce, so it does not establish a completed walking crossing.
+The initial positions were set in the debugger. These are controlled tests,
+not a replay of the user's physical-Amiga session.
+
+There is a source-defined reason why a contact can sometimes be ignored.
+`$307A–$30B3` checks only three global timers, `$4FDE–$4FE0`. When all are
+occupied, `$30B3` branches directly to `$30CC` without setting the new
+bomb's attribute or remembering the contact. The first visible blast is
+delayed until old counter 8. Old counter 20 restores the graphic, while
+the timer remains occupied until old counter 24. Thus neither a quiet bomb
+nor a restored floor proves that a timer is available.
+
+`python tools/audit_bomb_capacity.py`, after `test-c64-actors.ps1 -CompileOnly`,
+compares all source RAM against the actual candidate instructions for
+Bruce, Yamo and Kage on both middle bombs with every occupied-slot
+combination. All 48 contact cases and 1,152 timer calls matched, including
+release and attribute restoration. A separate controlled native Enhanced
+test occupied all three timers. Bruce's contact was ignored while they
+were busy, then armed the middle bomb and produced the explosion after
+they were released. This confirms that boundary in the current ADF, but
+does not establish the cause of the user's intermittent case.
+
+No game rules or executable were changed for this investigation.
+[Native traces and source evidence](../reference/analysis/r11-yamo-enhanced-2026-11-09/report.json)
+and [the two middle bombs in Enhanced](../reference/analysis/r11-yamo-enhanced-2026-11-09/middle-bombs.png).
+
+### Bomb contact at an object-row boundary, 9 November 2026
+
+The follow-up report includes Bruce walking over bombs in several rooms.
+There is a second, source-derived explanation independent of timer capacity:
+pixel contact and the object search must agree during the same game step.
+
+`$5212–$52AC` calculates contact classes from the original pose-mask pointers
+at `$1167/$1239` and the room glyph pixels. The bomb path requires bit 1
+of `$B6+actor`. Enhanced artwork is not an input to this calculation.
+`$2E39–$2E88` then searches three columns in two object rows for each active
+actor, excluding death state 25. `$1C39–$1C5A` derives the first row from
+`(source_y - 12) >> 4`, using byte arithmetic. The next row is first + 1.
+Room 14 has a separate +4 adjustment; it is outside the bomb controls here.
+Finding `$60` with the contact bit enabled leads to `$306B`, which still
+requires an unarmed attribute and a free timer.
+
+For the room 11 middle bomb at column 21, object row 9, a controlled Bruce
+walk from the right demonstrates the boundary:
+
+| Initial source Y | Rows searched during contact | Result |
+| --- | --- | --- |
+| 139 | 7 and 8 | Contact mask becomes 3, but bomb row 9 is excluded. No timer starts. |
+| 140 | 8 and 9 | Contact mask becomes 3 and the bomb arms, then explodes. |
+
+In the first walk Bruce subsequently drops to Y140, but by then the contact
+mask has lost the hazard bit. Searching the correct row at that later time
+does not recover the missed contact. All three bomb timers started free in
+both controls. This therefore establishes a missed-contact mechanism, not
+only the separate three-timer limit described above.
+
+`python tools/audit_bomb_walk_contacts.py`, after
+`test-c64-actors.ps1 -CompileOnly`, checks paired starting heights for all
+27 bombs in rooms 11, 12, 13, 15 and 17. All 54 leftward walks matched the
+actual frozen 6502 instructions at all 3,472 full-RAM comparison boundaries
+(5,027,178 instructions executed). The starts are injected; the subsequent
+walking uses normal input. Field scheduling and VIC inputs are modeled,
+so this is not a raster-exact or natural C64 playthrough.
+
+The unchanged normal ADF reproduces both room 11 outcomes in Classic and
+Enhanced on cycle-exact PAL A500 WinUAE, 512 KiB Chip + 512 KiB slow RAM.
+Native controls inject the starting position, disable the enemies, then
+use normal left joystick input. They do not force contact masks or timers.
+All four controls passed. This is not a replay of the physical-Amiga report.
+
+The shared source routine applies to all actors; these new walking controls
+specifically exercise Bruce. How often normal play reaches the missed-contact
+height, and whether it explains every reported enemy or Bruce crossing,
+remain open. No hitbox, source rule, graphics or executable was changed.
+The source remains the unverified Remember/T64 candidate identified above.
+[Traces, build identities and disassembly](../reference/analysis/bomb-contact-2026-11-09/report.json).
+
+### Explicit Amiga bomb margin, user decision 9 November 2026
+
+After confirming missed crossings on both WinUAE and a physical Amiga, the
+user requested a more forgiving bomb contact. This is an intentional exception
+to strict C64 parity, enabled in normal Classic and Enhanced games.
+
+The original object pass still runs first. For an active, non-dying actor,
+a supplemental pass checks only live, unarmed `$60` charges against the
+original pose mask. It expands the charge's class-2 pixels by one display
+pixel upward and one to either side, including the upper corners. It does
+not expand downward. This bomb-only check also bypasses the coarse object-row
+rejection that lost the Y139 crossing; it does not change the source contact
+bits, actor position, wall collision, melee hitboxes or explosion damage area.
+
+Allocation retains `$306B–$30D3`: first free slot among `$4FDE–$4FE0`, column
+and object row minus one, attribute `$FD`. Already armed charges, inactive
+actors and death state 25 cannot re-arm a charge. The source's three-slot
+limit and explosion timing remain. A charge can still be ignored when all
+three slots are occupied; this change does not introduce a waiting queue.
+
+`bl_c64_set_bomb_contact_margin(1)` explicitly enables the policy in the
+normal Amiga UI. It survives source room/life resets. Source-only comparison
+fixtures and the older native parity harness leave it disabled; they must
+not be presented as tests of the added policy. The separate
+`tools/verify_bomb_margin.py` enables it and checks 8,424 contacts against an
+independent pixel-set oracle for Bruce, Yamo and Kage, covering both charge
+glyph banks. This includes 1,080 contacts introduced solely by the pixel
+margin. All 54 paired-height walking controls now arm their target bomb.
+Fifteen additional controls cover disabling, death, capacity and repeat
+contacts. Rooms without charges skip the supplemental scan, using presence
+recorded from source screen bytes, independently of the artwork.
+
+Enhanced charges now have a rounded upper casing and a flat base at the
+platform lip. The floor continues immediately below; there is no rounded
+lower half. This applies to both gallery and vault art in
+`tools/enhanced_bombs.py`. Classic graphics and both explosion drawings are
+unchanged. [Margin controls](../reference/analysis/bomb-margin-2026-11-09/host.json).
+
+The final normal ADF passed four controlled room 11 walks in cycle-exact
+WinUAE (Classic/Enhanced, starting Y139/Y140). All four armed and exploded
+without injected contacts or timers. Twelve idle charge regions in rooms 8
+and 11 matched all 9,216 expected pixels, including the continuing floor.
+The source-only regression also passed 3,034 actor-chain controls and 48
+bomb-capacity cases with 1,152 timer calls, with the margin disabled as
+documented above. EXE size is 377,296 bytes; ADF size is 901,120 bytes.
+[Final build and native evidence](../reference/analysis/bomb-margin-2026-11-09/report.json)
+and [actual WinUAE charge crops](../reference/analysis/bomb-margin-2026-11-09/charges.png).
+The physical-Amiga retest remains open.
+
 ### Felles rutiner
 
 `$2E39–$2E6D` behandler Kage, Yamo og Bruce i den rekkefølgen; bare
@@ -99,6 +236,47 @@ inkludert de selvmodifiserte tabelloperandene ved `$0D55/$0D85`.
 En lokal tellekompensasjon hindrer Amiga-adapteren i å trekke den nye
 returventingen allerede i samme steg som eksplosjonen fjerner fienden.
 
+### Bombegrafikk i Enhanced
+
+I den frosne C64-kandidaten peker tabellen ved `$43BE` på tegnstrengene ved
+`$4612/$4616/$461A/$461E/$4622`. Rutinen ved `$3228` tegner den lille
+eksplosjonen med `$71–$76` og den store med `$77–$7C`. Begge opptar
+tre kolonner og to 8 × 16-celler. Ved teller 20 kommer gulvrekken
+`$7D,$60,$7D` tilbake. `$306B` endrer bare øvre tegns fargeattributt
+ved tenning. Ingen piksel i øvre `$60` bruker det endrede fargeparet i
+de to bombetegnsettene.
+
+Enhanced bruker egne pikseltegninger i `tools/enhanced_bombs.py` for
+metalladningen og de to eksplosjonsformene. Tegningene følger gulvhøyden
+i begge tegnbanker. Rom 7 og 8 bruker `$A000`. Rom 11, 12, 13, 15 og 17
+bruker `$A800`. Fargene kommer fra spillets eksisterende OCS-palett.
+Kollisjon og lyd styres fremdeles av spillmotorens bombeteller.
+
+Den vanlige ADF-en ble startet i WinUAE med PAL OCS, Kickstart 1.3,
+512 KiB Chip og 512 KiB utvidelse. I rom 8 og 11 ble en ledig bombeteller
+startet i debuggeren. For hver fase ble de 24 × 32 pikslene i den viste
+skjermbufferen sammenlignet med tegningen for den faktiske C64-tegnstrengen.
+Etter smellet ble både gulvet og ladningen gjenopprettet i begge rom.
+[Bildeutsnitt fra WinUAE](../reference/analysis/enhanced-bombs-2026-11-04/bombs.png)
+
+### Gulvbombene i rom 12
+
+Romstrømmen ved `$774C–$7842` i den samme kandidaten plasserer fire
+ladninger som `$70,$60,$70`. Kolonnene er 10 og 29 på romrad 5,
+og 15 og 24 på romrad 12. Gulvtegn `$70` og gjenopprettingstegn
+`$7D` har identiske tegnrader i banken ved `$A800`.
+
+I Enhanced begynner gulvleppen fire piksler under toppen av ladningens
+celle. Den øvre halvdelen på 8 × 8 piksler har derfor et sammenhengende
+lyst metallbånd over leppen og et lite lyspunkt på lunta. Denne tegningen
+brukes også av bombene i rom 11, 13, 15 og 17 som deler samme tegnbank.
+
+På PAL A500 i WinUAE (512 + 512 KiB) ble de to diskettutgavene
+sammenlignet i rom 12. For hver av de fire ladningene startet prøven en
+ledig bombeteller i debuggeren. Begge eksplosjonsbilder og det
+gjenopprettede gulvet stemte med C64-tegnstrengen og de pakkede
+Enhanced-flisene. [Rom 12 med utsnitt før og etter](../reference/analysis/room12-bombs-2026-11-04/room-12.png)
+
 ## Bruce skriker, står stille og mister et liv
 
 `$3057` ber om effekt`$8C`; `$3068 → $407D` velger tilstand25/teller16.
@@ -119,6 +297,27 @@ Grunnforløpet fantes allerede. To Amiga-avvik er rettet:
 
 Udødelighet i testmenyen undertrykker fortsatt død med hensikt. For vanlig
 lytte-/dødstest må denne være av; uendelige liv lar dødssekvensen gå normalt.
+
+### Enhanced death pose correction, 12 November 2026
+
+The frozen candidate's `$27B8–$27BE` selects pose `$08` for death state
+25, independent of facing. `$407D–$4085` sets state 25 and counter 16;
+`$216B–$217C` holds position and reaches the life-loss branch on the last
+update. The source identity and edition caveat at the top of this document
+still apply.
+
+Enhanced already contains the matching stiff `$08` silhouette in art slot
+14. However, `enhanced_frame()` overrode that selection with slot 12 whenever
+`source_state == 25`. Slot 12 is the directional hit reaction (`$2C/$2E`),
+so the correct source death state was displayed with the wrong body pose.
+The override is removed. The display now follows the source-selected pose;
+no death timer, sound, life count, collision rule or Classic sprite changes.
+
+`tools/check_death_pose.py` exercises bomb deaths from controlled initial
+placements in the normal ADF, in both modes and both facings. It checks
+published `$08` pixels during state 25, fixed coordinates, and one lost life.
+Bomb arming, explosion and death state are not injected.
+[Source disassembly and native verification](../reference/analysis/enhanced-death-2026-11-12/report.json).
 
 ## Kontroller
 

@@ -1,0 +1,86 @@
+[
+  {
+    "room": 11,
+    "column": 19,
+    "row": 6,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 11,
+    "column": 24,
+    "row": 6,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 11,
+    "column": 21,
+    "row": 9,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 11,
+    "column": 34,
+    "row": 9,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 11,
+    "column": 9,
+    "row": 12,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 11,
+    "column": 21,
+    "row": 12,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 11,
+    "column": 34,
+    "row": 12,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 8,
+    "column": 7,
+    "row": 4,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 8,
+    "column": 29,
+    "row": 4,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 8,
+    "column": 3,
+    "row": 7,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 8,
+    "column": 17,
+    "row": 7,
+    "pixels": 768,
+    "match": true
+  },
+  {
+    "room": 8,
+    "column": 21,
+    "row": 7,
+    "pixels": 768,
+    "match": true
+  }
+]

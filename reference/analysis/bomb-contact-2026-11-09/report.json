@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-09",
+  "source": {
+    "path": ".reference/c64/work/untrained-memory.bin",
+    "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+    "edition_verified": false
+  },
+  "finding": "A source object-row boundary can miss bomb contacts despite a set hazard contact bit and three free timers. A room 11 walk at initial source Y139 misses; Y140 arms and explodes.",
+  "rules_changed": false,
+  "executable_changed": false,
+  "source_walks": {
+    "path": "source-walks.json",
+    "tool": "tools/audit_bomb_walk_contacts.py",
+    "cases": 54,
+    "bombs": 27,
+    "rooms": [
+      11,
+      12,
+      13,
+      15,
+      17
+    ],
+    "full_ram_comparisons": 3472,
+    "original_instructions": 5027178,
+    "natural_playthrough": false,
+    "raster_exact": false
+  },
+  "native": {
+    "path": "native-walks.json",
+    "adf": {
+      "path": "amiga/out/bruce_amiga.adf",
+      "bytes": 901120,
+      "sha256": "3dd41eefde9388fbe257174c5c8cdac94e6a0dbba30da5f575748107bdd0de7d"
+    },
+    "tested_copy": {
+      "path": ".tmp/bomb-contact-2026-11-09/test.adf",
+      "bytes": 901120,
+      "sha256": "3dd41eefde9388fbe257174c5c8cdac94e6a0dbba30da5f575748107bdd0de7d"
+    },
+    "elf": {
+      "path": ".tmp/bomb-contact-2026-11-09/release.elf",
+      "bytes": 1967492,
+      "sha256": "9203e2b778884523a601317acd0e3ab8fdc2f29239c8fbf278637d3f6d178eaa"
+    },
+    "emulator": {
+      "path": ".tmp/bomb-contact-2026-11-09/winuae64.exe",
+      "bytes": 29372368,
+      "sha256": "f3e55700fd811cd543fdfebf6c3221cfaa3d385828f110c6d3eb534c64503123"
+    },
+    "config": "boot.uae",
+    "method": "Normal ADF, controlled initial coordinates and enemies disabled, normal joystick left input; no forced contacts or bomb timers. Debugger samples pause emulation; not a timing benchmark.",
+    "cases": [
+      {
+        "mode": "enhanced",
+        "initial_y": 139,
+        "armed": false,
+        "blast": false,
+        "captured": true
+      },
+      {
+        "mode": "enhanced",
+        "initial_y": 140,
+        "armed": true,
+        "blast": true,
+        "captured": true
+      },
+      {
+        "mode": "classic",
+        "initial_y": 139,
+        "armed": false,
+        "blast": false,
+        "captured": true
+      },
+      {
+        "mode": "classic",
+        "initial_y": 140,
+        "armed": true,
+        "blast": true,
+        "captured": true
+      }
+    ]
+  },
+  "limitations": [
+    "Starting positions are injected, not a replay of user play.",
+    "The 54 walking cases cover Bruce; the object routine is shared by all actors.",
+    "Frequency and reachability of the missed-contact height in natural play remain unverified.",
+    "The frozen Remember/T64 candidate is not certified as the pristine 1984 release."
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/bomb-contact-2026-11-09/source-walks.json",
+      "bytes": 336064,
+      "sha256": "f4ce61559e1359f6a5a06cf73388a841bf8012eaeb0c7df704dbad8f9bbe581b"
+    },
+    {
+      "path": "reference/analysis/bomb-contact-2026-11-09/source-disassembly.txt",
+      "bytes": 6207,
+      "sha256": "bf4510675ced64b5ab2002db73a226d09b0301c987bf2786ef6d3cf0de26eb85"
+    },
+    {
+      "path": "reference/analysis/bomb-contact-2026-11-09/native-walks.json",
+      "bytes": 16587,
+      "sha256": "3517121b40e2a9d108c1d00daf060e5725291d93cc478612c872ba5ee0dab65a"
+    },
+    {
+      "path": "reference/analysis/bomb-contact-2026-11-09/check.py",
+      "bytes": 3049,
+      "sha256": "cfa1cf175396735fd2ea840a3fdb887b8027b0f4f1c639783b9c90826671b011"
+    },
+    {
+      "path": "reference/analysis/bomb-contact-2026-11-09/native.py",
+      "bytes": 1911,
+      "sha256": "27c43527670147e90cc7008c6f1ce5f05e838809a735ae6edeab697f298e486a"
+    },
+    {
+      "path": "reference/analysis/bomb-contact-2026-11-09/boot.uae",
+      "bytes": 787,
+      "sha256": "373e747dbb26bddd48f9eb62592830865f7fa195db0c15b5b1d1aab3b7f1fce7"
+    }
+  ]
+}

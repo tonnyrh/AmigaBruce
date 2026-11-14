@@ -1,4 +1,4 @@
-"""All-RAM/register control for a candidate native $169D-$1702 slot.
+"""All-RAM/register control for the production native $169D-$1702 slot.
 
 Executes frozen original instructions at a controlled entry. This proves
 neither a complete IRQ nor the physical input sampling phase.
@@ -19,6 +19,10 @@ def main():
     lib.bl_input_slot_seed.argtypes=[P,P];lib.bl_input_slot_run.argtypes=[ctypes.c_long,ctypes.c_long]
     lib.bl_input_slot_copy.argtypes=[P];lib.bl_input_slot_regs.argtypes=[P]
     rng=random.Random(2026103004);cases=instructions=0;writes=set()
+    class SlotBus:
+        def __init__(self,ram):self.ram=ram;self.written=set()
+        def __getitem__(self,at):return self.ram[at]
+        def __setitem__(self,at,value):self.ram[at]=value;self.written.add(at)
     def check(active,current,human,flag0,flag1,port0,port1,sp,status):
         nonlocal cases,instructions
         m=bytearray(source);m[0x100:0x200]=rng.randbytes(256)
@@ -26,7 +30,7 @@ def main():
         m[0xdc00]=port0;m[0xdc01]=port1
         m[0x98],m[0x9b],m[0x99],m[0x9c]=10,1,5,0
         before=bytes(m);r=[rng.randrange(256) for _ in range(3)]+[status&1,status>>1&1,status>>7&1,status>>6&1,status>>3&1,sp,status>>2&1]
-        cpu=MPU(memory=m,pc=0x169d);cpu.a,cpu.x,cpu.y=r[:3];cpu.sp=sp;cpu.p=status
+        bus=SlotBus(m);cpu=MPU(memory=bus,pc=0x169d);cpu.a,cpu.x,cpu.y=r[:3];cpu.sp=sp;cpu.p=status
         for _ in range(100):
             if cpu.pc==0x1703:break
             cpu.step();instructions+=1
@@ -36,7 +40,7 @@ def main():
         lib.bl_input_slot_copy(ram);lib.bl_input_slot_regs(regs)
         assert bytes(ram)==bytes(m),('RAM',cases,active,current,human,flag0,flag1,port0,port1,sp,status)
         assert list(regs)==wanted,('registers',cases,list(regs),wanted)
-        writes.update(i for i,(a,b) in enumerate(zip(before,m)) if a!=b)
+        writes.update(at for at in bus.written if before[at]!=m[at])
         cases+=1
     for active,current,human,f0,f1 in itertools.product(range(2),repeat=5):
         for p0,p1 in itertools.product(range(32),repeat=2):
@@ -50,11 +54,11 @@ def main():
     for current in range(256):
         for human in [0,1,255]:
             check(255,current,human,255,255,rng.randrange(256),rng.randrange(256),rng.randrange(256),rng.randrange(256))
-    report=dict(status='passed_candidate_source_input_slot_all_ram_and_registers',source_sha256=SHA,edition_verified=False,natural_playthrough=False,production_changed=False,
+    report=dict(status='passed_production_input_slot_all_ram_and_registers',source_sha256=SHA,edition_verified=False,natural_playthrough=False,production_enabled=True,
         source_entry='$169D',source_stop='$1703',exhaustive_input_cases=exhaustive,stack_status_cases=stack_status,nonstandard_player_cases=cases-exhaustive-stack_status,
         cases=cases,instructions=instructions,all_ram_and_registers=True,changed_addresses=['$%04X'%a for a in sorted(writes)],
-        limits=['Fixed pin bytes, controlled source entry; not natural CIA sampling','No full IRQ, raster prologue or caller-PC equivalence claim','Candidate is not integrated into source_actor_field'],
-        artifacts=[item(p) for p in [BASE+'/candidate/input_slot.h','tests/source_input_slot_bridge.c','tools/verify_source_input_slot.py','test-source-input-slot.ps1','core/c64_rooms.c']])
-    (ROOT/BASE/'input-slot-candidate.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
-    print('PASS native input candidate:',cases,'whole-RAM/register cases;',instructions,'frozen instructions; production unchanged')
+        limits=['Fixed pin bytes, controlled source entry; not natural CIA sampling','No full IRQ, raster prologue or caller-PC equivalence claim','Physical arrival phase under natural Amiga and C64 play remains open'],
+        artifacts=[item(p) for p in ['tests/source_input_slot_bridge.c','tools/verify_source_input_slot.py','test-source-input-slot.ps1','core/c64_rooms.c']])
+    (ROOT/'reference/validation/source-input-slot.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+    print('PASS production input slot:',cases,'whole-RAM/register cases;',instructions,'frozen instructions')
 if __name__=='__main__':main()

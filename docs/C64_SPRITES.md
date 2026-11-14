@@ -10,6 +10,30 @@ Frossen kilde: `.reference/c64/work/untrained-memory.bin`, SHA256
 Dette er Remember/T64-kandidaten, ikke en bekreftet urørt1984-utgave.
 Originalen og kildeutsjekkingene er uendret.
 
+## Bruce hopper rett opp og legger seg flatt
+
+Ved ren opp på vanlig gulv velger `$1DD0–$1E10` hopptilstand 5 når
+kontaktflaggene tillater det. Når positurvalget er åpent, leser
+`$2903–$292F` telleren `$CE,X` og velger fem faser med tre ulike bilder:
+
+| Teller | 15 eller mer | 14–12 | 11–2 | 1 | 0 |
+| --- | --- | --- | --- | --- | --- |
+| Positur | `$08` | `$1E` | `$20` | `$1E` | `$08` |
+
+Ren ned med gulvkontakt og uten klatrekontakt går via `$1E13–$1E21`
+og `$1E49–$1E58` til liggestilling i Bruces ståretning, dersom X-grensen
+tillater det. I tilstand 26 velger `$27A6–$27B7` deretter `$40` mot
+venstre eller `$42` mot høyre. Begge omrissene er 30 × 7 piksler og
+begynner på rad 14 i 48 × 21-lerretet. De har ulike horisontale ankre.
+
+Classic bruker de rippede bildene. I Enhanced var hoppefasene tilordnet
+sidehopp/løp og liggestilling tilordnet nedslag. De nye Enhanced-fargene er
+tegnet i `tools/coarse_bruce.py` innenfor kandidatenes eksakte omriss.
+68 kontrollerte kjøringer av `$2780` dekket begge retninger og tellerne
+0–16 i begge tilstandene. Med vanlig joystick i rom 1 på PAL A500 i WinUAE
+stemte de viste pikslene i positurene `$20/$40/$42` med de respektive bildene
+i begge moduser. [Utsnitt fra WinUAE](../reference/analysis/bruce-poses-2026-11-04/winuae-actions.png)
+
 ## Uttrekk fra faktisk kode
 
 `python tools/build_c64_sprites.py` kjører originalens `$2584` og `$25E2`

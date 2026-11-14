@@ -11,15 +11,15 @@
   "source_files": [
     {
       "path": "core/c64_rooms.c",
-      "sha256": "e3f93a9f6d4512d69c5ee31642f2f0f6270e197812fb15a62e5805c910c79839"
+      "sha256": "76e3a9ae5b654e3afa442170905c3c2f1cb94fa7864f65e3315b25af73574cb2"
     },
     {
       "path": "core/c64_actor_programs.h",
-      "sha256": "7875f0f710691ae837116d7cb82cf0f73a92b4a1650e7a78fae8dfcdc9434c2d"
+      "sha256": "d5499ec0d5ef5add4eb884a1c9b44f157d4cd8c00565067c0de40688061e116a"
     },
     {
       "path": "tools/build_c64_rooms.py",
-      "sha256": "d7a2ccd075496c5fd46fffee0e0c991c444c0ffc514579aa5100aff312f0f4bb"
+      "sha256": "9181cd2e29109ea58c0495e6d21c0c91d2220ccf560291033763b941cc2f548d"
     },
     {
       "path": "tools/verify_source_sprite_copy.py",

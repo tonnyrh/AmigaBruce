@@ -1,0 +1,439 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "method": "Controlled host engine compared with actual 6502 instructions, all 65536 RAM bytes at each call boundary. This is not a natural C64 playthrough.",
+  "checks": [
+    {
+      "actor": 0,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 0,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 1,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 2,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 3,
+      "contact": 7,
+      "allocated_slot": 2,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 4,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 5,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 6,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 7,
+      "contact": 7,
+      "allocated_slot": null,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 0,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 1,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 2,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 3,
+      "contact": 7,
+      "allocated_slot": 2,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 4,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 5,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 6,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 0,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 7,
+      "contact": 7,
+      "allocated_slot": null,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 0,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 1,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 2,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 3,
+      "contact": 7,
+      "allocated_slot": 2,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 4,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 5,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 6,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 7,
+      "contact": 7,
+      "allocated_slot": null,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 0,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 1,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 2,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 3,
+      "contact": 7,
+      "allocated_slot": 2,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 4,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 5,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 6,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 1,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 7,
+      "contact": 7,
+      "allocated_slot": null,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 0,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 1,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 2,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 3,
+      "contact": 7,
+      "allocated_slot": 2,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 4,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 5,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 6,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 21,
+      "object_row": 9,
+      "occupied_mask": 7,
+      "contact": 7,
+      "allocated_slot": null,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 0,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 1,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 2,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 3,
+      "contact": 7,
+      "allocated_slot": 2,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 4,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 5,
+      "contact": 7,
+      "allocated_slot": 1,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 6,
+      "contact": 7,
+      "allocated_slot": 0,
+      "released_after_calls": 24
+    },
+    {
+      "actor": 2,
+      "column": 34,
+      "object_row": 9,
+      "occupied_mask": 7,
+      "contact": 7,
+      "allocated_slot": null,
+      "released_after_calls": 24
+    }
+  ]
+}

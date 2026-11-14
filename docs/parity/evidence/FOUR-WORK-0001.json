@@ -1,0 +1,29 @@
+{
+  "capture_id": "FOUR-WORK-0001",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "addresses": [
+    "$331C\u2013$336D",
+    "$4CE2",
+    "$183B",
+    "$0FED",
+    "$5380\u2013$53CE"
+  ],
+  "status": "candidate_code_and_scoped_amiga_measurements",
+  "edition_verified": false,
+  "full_original_parity": false,
+  "artifacts": [
+    {
+      "path": "reference/analysis/four-work-2026-11-01/delivery.json",
+      "sha256": "8fd2d31a497634f9d5704a9ca28f6fb483b476fd6f0ab239a1df5d28f6d8d07f"
+    },
+    {
+      "path": "reference/analysis/four-work-2026-11-01/runs/lamp-checks.json",
+      "sha256": "5009c28cf6f78310b753e5d30d7d04d6030873102cb098c056213c46df230d91"
+    },
+    {
+      "path": "reference/analysis/four-work-2026-11-01/runs/rows.bin",
+      "sha256": "617ad7a5a5852ad8d01d3e024a52dfeab59ba15edc197fd65bfbcc144f75f33d"
+    }
+  ]
+}

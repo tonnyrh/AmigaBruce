@@ -1,9 +1,9 @@
 # Grafikkflyt for tiles og figurer
 
-**Oppdatert25. oktober:** egenlaget grafikk og AI-forbedring er satt til side
-etter brukerens beslutning. Standardbygget bruker [rippede C64-sprites](C64_SPRITES.md)
-og C64-romtegn. Flyten under er bevart for en senere enhanced-utgave og skal
-ikke kjøres mens kildebasert spilloppførsel er prioritert.
+**1. november 2026.** Classic bruker [rippede C64-sprites](C64_SPRITES.md)
+og C64-romtegn. Nye grafikkforsøk for Enhanced lagres separat med prompt og
+opprinnelse. [Prosjektplanen](PROJECT_PLAN.md) beskriver figurprøven, det
+foreslåtte menyvalget og kontrollene mot Classic.
 
 Brukerens beslutning 24. oktober: hver grafikkdel skal kunne spores fra
 C64-referansen gjennom en lagret AI-prompt til validert Amiga-grafikk.

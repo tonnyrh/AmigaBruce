@@ -1,0 +1,102 @@
+{
+  "machine": "WinUAE PAL A500 OCS, 68000, 512 KiB chip + 512 KiB trapdoor, Kickstart 1.3",
+  "disk_sha256": "2004dd1dd8c99fec885a95b974e3fac12d67f81d422f2dd31d3b6ae6fb8fdf40",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "scope": "35 source poses per enemy in both facings and 16 alternate stride lookups checked in expanded Chip RAM. Live play was checked in room 1.",
+  "cache_sha256": "23882f887038d182857fdda7a3d11533920d57d2b81da3287f7c54c52fa6b340",
+  "results": [
+    {
+      "look": "classic",
+      "state": {
+        "field": 1248,
+        "steps": 3,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 11,
+        "room": 1
+      },
+      "fixed_pixels": 11740,
+      "background_sha256": "e08dcd912d111028644c42ed4ddc7e46cda7ef46e0eda5c101bf52bc0c4244bd"
+    },
+    {
+      "bruce_strike_poses": [
+        4,
+        6,
+        22,
+        26,
+        24,
+        28
+      ],
+      "enemy_source_views": 156
+    },
+    {
+      "joystick_visible_punch": 6,
+      "joystick_visible_kick": 28
+    },
+    {
+      "both_start": {
+        "field": 2452,
+        "steps": 244,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 78,
+        "room": 1
+      },
+      "both_end": {
+        "field": 2640,
+        "steps": 306,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 78,
+        "room": 1
+      }
+    },
+    {
+      "look": "enhanced",
+      "state": {
+        "field": 1733,
+        "steps": 4,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 78,
+        "room": 1
+      },
+      "fixed_pixels": 35584,
+      "background_sha256": "5ef5f2da5b4747fd10a1efc092ed1a9b46cb89b3ffa3bd74f7649ad85dbf5785"
+    },
+    {
+      "look": "restored",
+      "state": {
+        "field": 2927,
+        "steps": 7,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 100,
+        "room": 1
+      },
+      "fixed_pixels": 11752,
+      "background_sha256": "446d5f492a1c2cb92c58ca20e001ceea2cf8a811339be91a55d25ecca7530d92"
+    }
+  ]
+}

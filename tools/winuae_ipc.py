@@ -38,6 +38,12 @@ def command(pipe,text,timeout=5,expected_pid=None):
         raise TimeoutError(text)
     finally:k.CloseHandle(h)
 
+def tap_fire(cmd):
+    cmd('EVT JOY2_FIRE_BUTTON 1')
+    try:time.sleep(.3)
+    finally:cmd('EVT JOY2_FIRE_BUTTON 0')
+
+
 if __name__=='__main__':
     import argparse
     p=argparse.ArgumentParser();p.add_argument('--pipe',required=True);p.add_argument('command')

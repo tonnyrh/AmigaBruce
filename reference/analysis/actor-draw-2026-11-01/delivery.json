@@ -1,0 +1,207 @@
+{
+  "predecessor": {
+    "path": "reference/analysis/field-work-2026-11-01/delivery.json",
+    "sha256": "da23c13ed218a739362f0b4f1e3774223df6fadad829eb6e9c14d5d663c2e0aa"
+  },
+  "production_mode": "direct",
+  "engine_sections": "24becc4aa9cd66cf43703368e2a245327191c162fdc8f25733026d68230fbc27",
+  "image_bytes": 40960,
+  "image_sha256": "1391230165f1c6fd5232e88423c816def89ffdf8586a9c93588e431d1a9ccfe6",
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "0ce5e958a2e69bd1cbc529096e06f5ec904a124280dc7ee2a317a0508f074d1c"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "7a47f278cbc7ae099588a1812d88c7b33f485d33f3bedf632a1fe763395e095e"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "2039f7876ab84886dccaf70a51528651d9d8ee374e967b115e55ade8d10affe2"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "0ce5e958a2e69bd1cbc529096e06f5ec904a124280dc7ee2a317a0508f074d1c"
+    }
+  ],
+  "diagnostic_exe": "c62215e1711fc71d958b643ce145f93b0772e8d41a89bfbce7da29341a91e5a5",
+  "runs": {
+    "direct-a": {
+      "raw": {
+        "path": "reference/analysis/actor-draw-2026-11-01/runs/direct-a.txt",
+        "sha256": "5cb47818ec27b828d14ccce50ca7db0b8e6ce1427f43688a053be06afc9b64ba"
+      },
+      "exe": "c62215e1711fc71d958b643ce145f93b0772e8d41a89bfbce7da29341a91e5a5",
+      "route": "0003020000f000f0"
+    },
+    "direct-b": {
+      "raw": {
+        "path": "reference/analysis/actor-draw-2026-11-01/runs/direct-b.txt",
+        "sha256": "5cb47818ec27b828d14ccce50ca7db0b8e6ce1427f43688a053be06afc9b64ba"
+      },
+      "exe": "c62215e1711fc71d958b643ce145f93b0772e8d41a89bfbce7da29341a91e5a5",
+      "route": "0003020000f000f0"
+    },
+    "direct-still-a": {
+      "raw": {
+        "path": "reference/analysis/actor-draw-2026-11-01/runs/direct-still-a.txt",
+        "sha256": "50bb1abafdf8404a0ba6506feb12d79efbc09e83442d470dd00ef61d4da5aefb"
+      },
+      "exe": "c62215e1711fc71d958b643ce145f93b0772e8d41a89bfbce7da29341a91e5a5",
+      "route": "0003000000f000f0"
+    },
+    "direct-still-b": {
+      "raw": {
+        "path": "reference/analysis/actor-draw-2026-11-01/runs/direct-still-b.txt",
+        "sha256": "58342a35fb960dfa4d126d667df8602f0a3734418a80fdb5a082ced842877ebd"
+      },
+      "exe": "c62215e1711fc71d958b643ce145f93b0772e8d41a89bfbce7da29341a91e5a5",
+      "route": "0003000000f000f0"
+    },
+    "long-direct-a": {
+      "raw": {
+        "path": "reference/analysis/actor-draw-2026-11-01/runs/long-direct-a.txt",
+        "sha256": "dacbe5ac9a1624a9da669fb4435a9f5959f2c36a6d9d7fe06ec04c54ee5318bb"
+      },
+      "exe": "429a17f75f4e0ac795bcc403e693a32743cc304e1bf9f4b57fef1485161fe105",
+      "route": "0003020000f000f0"
+    },
+    "long-direct-b": {
+      "raw": {
+        "path": "reference/analysis/actor-draw-2026-11-01/runs/long-direct-b.txt",
+        "sha256": "a04631c3423825f80a1adf993288d49edbabd3b6ea6c5b05b8ab24f504ce0ac3"
+      },
+      "exe": "429a17f75f4e0ac795bcc403e693a32743cc304e1bf9f4b57fef1485161fe105",
+      "route": "0003020000f000f0"
+    },
+    "direct-stairs": {
+      "raw": {
+        "path": "reference/analysis/actor-draw-2026-11-01/runs/direct-stairs.txt",
+        "sha256": "1d150bd2acad45c2089606d1306006f745977fee3d4b648d209eaa23a1a63e9a"
+      },
+      "exe": "c62215e1711fc71d958b643ce145f93b0772e8d41a89bfbce7da29341a91e5a5",
+      "route": "0b03010000f000f0"
+    },
+    "direct-yamo": {
+      "raw": {
+        "path": "reference/analysis/actor-draw-2026-11-01/runs/direct-yamo.txt",
+        "sha256": "87d934a59f939de2ef9478be232d3f74c10bbef763dff415010ab1c5b78943e6"
+      },
+      "exe": "c62215e1711fc71d958b643ce145f93b0772e8d41a89bfbce7da29341a91e5a5",
+      "route": "0c01000000f000f0"
+    }
+  },
+  "ui": {
+    "cli": {
+      "path": "reference/analysis/actor-draw-2026-11-01/runs/normal-cli.json",
+      "sha256": "53901cc53cd92633cf6772130501425d31b018adbeee270e8458543bdbded796"
+    },
+    "adf": {
+      "path": "reference/analysis/actor-draw-2026-11-01/runs/normal-adf.json",
+      "sha256": "35f0e844661d4c8d81cf1999fea791ca68aa192dad46e0572ebfc32599a5b55d"
+    }
+  },
+  "proofs": [
+    {
+      "path": "amiga/main.c",
+      "sha256": "8e3353a54afb830d126eb78639457cddf71a8b347764c844ddfd3630087a4bea"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "a6fbac8c2fa63576d780ce1bf39c8deec3e5025dc73f47328264bc4afd1cf4af"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "d5499ec0d5ef5add4eb884a1c9b44f157d4cd8c00565067c0de40688061e116a"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "76e3a9ae5b654e3afa442170905c3c2f1cb94fa7864f65e3315b25af73574cb2"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "1ebd05a45220c517fa911c689b7ce68a7f8a653202e6ba0d91a0e49645aa5181"
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "79eac621c6b5338c8670c9443fb1a861f71f1b5fd33fc39cb02b08b8d01326ab"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "4a9b6d0b2a75c69472381541bda059be5e5648643465dcaa330ff74f6bd933de"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "0362fc276990791b178102f1a3503122ce609abb86b635bdb43b7929b2c47998"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "8c00e76e0d129865b5e97bc27472524eaacb6f4a04e75f345385bb434c4d7547"
+    },
+    {
+      "path": "reference/analysis/irq-input-2026-10-30/report.json",
+      "sha256": "836b0a0842a96b02a4be5aa7aeeb172184697b2cb16abdcd97266b3b49a36148"
+    },
+    {
+      "path": "reference/validation/source-input-slot.json",
+      "sha256": "b139a269efd6d6d604cc02b0d723fa7086af48517b8e36c06c829e10fe3e47d3"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "6a2d917330703ad01d42fa31775b717acc9475214d0643ee383ba4d91f976e9c"
+    },
+    {
+      "path": "tools/audit_c64_world.py",
+      "sha256": "9e11933b374da85ef1735704e7165e9cf0f5668affd575fe932d84566f8d48c3"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "9181cd2e29109ea58c0495e6d21c0c91d2220ccf560291033763b941cc2f548d"
+    }
+  ],
+  "field_evidence": {
+    "stairs": {
+      "path": "reference/analysis/actor-draw-2026-11-01/runs/render-stairs.json",
+      "sha256": "25bc91fcb01355064a8ba6a9907534eac4243d0abe823bd242cc4f04108bee7d"
+    },
+    "death": {
+      "path": "reference/analysis/actor-draw-2026-11-01/runs/render-death.json",
+      "sha256": "338ff2a83344427c4950f4677e8fc78e25070ba90eec603507b9ee5d4525b479"
+    },
+    "alloc-release/allocation.json": {
+      "path": "reference/analysis/actor-draw-2026-11-01/runs/allocation.json",
+      "sha256": "a99248ae10fb6d38fbed3d4b2898ef2deb68bd05ede3bcdf3260e2a56457b003"
+    }
+  },
+  "prior_replay": {
+    "path": "reference/analysis/actor-draw-2026-11-01/runs/previous-replay.json",
+    "sha256": "c4bdcf2def35e796aa9440ffd6eec5a0a692a23f08bed378deab2cc42cf4686a"
+  },
+  "profile": {
+    "path": "reference/analysis/actor-draw-2026-11-01/runs/profile.txt",
+    "sha256": "e4a236677fa92e8fb9bba2f8cf286f5ec6fd81e5bcaac28dc4a72a726f1b759c"
+  },
+  "interpolation_only": {
+    "path": "reference/analysis/actor-draw-2026-11-01/runs/interpolation-only.txt",
+    "sha256": "9f57e7cc83b971745f68d52be3f1d0fbe87cffe225fe8035f30c8b0ad671caae"
+  },
+  "audio_seams": {
+    "path": "reference/analysis/actor-draw-2026-11-01/runs/audio-seams.json",
+    "sha256": "4eb64e51f9de311159251cc4e9c1a57393213bcf06a0b757878740aae725f540"
+  },
+  "traced_miss": {
+    "path": "reference/analysis/actor-draw-2026-11-01/runs/traced-miss.txt",
+    "sha256": "744df60ca203a7daf32141c5a862f6db32af0c1250406e5c97b2bb9ec617ed48"
+  },
+  "without_audio_checks": [
+    {
+      "path": "reference/analysis/actor-draw-2026-11-01/runs/before-audio-a.txt",
+      "sha256": "a16c5ec95a574c1f724dcd66b2d60a8d22cd62483a69fb753977582e6414d08d"
+    },
+    {
+      "path": "reference/analysis/actor-draw-2026-11-01/runs/before-audio-b.txt",
+      "sha256": "a16c5ec95a574c1f724dcd66b2d60a8d22cd62483a69fb753977582e6414d08d"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "look": "classic",
+    "buttons": [
+      "FIRE_BUTTON"
+    ],
+    "direction": 15,
+    "fire_pin": 0,
+    "state": 17
+  },
+  {
+    "look": "classic",
+    "buttons": [
+      "2ND_BUTTON"
+    ],
+    "direction": 14,
+    "fire_pin": 1,
+    "state": 5
+  },
+  {
+    "look": "classic",
+    "buttons": [
+      "RIGHT",
+      "2ND_BUTTON"
+    ],
+    "direction": 6,
+    "fire_pin": 1,
+    "state": 7
+  },
+  {
+    "look": "classic",
+    "buttons": [
+      "LEFT",
+      "2ND_BUTTON"
+    ],
+    "direction": 10,
+    "fire_pin": 1,
+    "state": 6
+  },
+  {
+    "look": "classic",
+    "buttons": [
+      "UP"
+    ],
+    "direction": 14,
+    "fire_pin": 1,
+    "state": 5
+  },
+  {
+    "look": "classic",
+    "buttons": [
+      "2ND_BUTTON",
+      "FIRE_BUTTON"
+    ],
+    "direction": 14,
+    "fire_pin": 0,
+    "state": null
+  },
+  {
+    "look": "classic",
+    "state": {
+      "field": 1253,
+      "steps": 5,
+      "flags": [
+        1,
+        0,
+        0
+      ],
+      "fault": 0,
+      "missed": 11,
+      "room": 1
+    },
+    "fixed_pixels": 11740,
+    "background_sha256": "777cca5a2e87972f13018f467b5be2312a2c93b213076792e407c2191ae4c451"
+  },
+  {
+    "look": "enhanced",
+    "buttons": [
+      "FIRE_BUTTON"
+    ],
+    "direction": 15,
+    "fire_pin": 0,
+    "state": 17
+  },
+  {
+    "look": "enhanced",
+    "buttons": [
+      "2ND_BUTTON"
+    ],
+    "direction": 14,
+    "fire_pin": 1,
+    "state": 5
+  },
+  {
+    "look": "enhanced",
+    "buttons": [
+      "RIGHT",
+      "2ND_BUTTON"
+    ],
+    "direction": 6,
+    "fire_pin": 1,
+    "state": 7
+  },
+  {
+    "look": "enhanced",
+    "buttons": [
+      "LEFT",
+      "2ND_BUTTON"
+    ],
+    "direction": 10,
+    "fire_pin": 1,
+    "state": 6
+  },
+  {
+    "look": "enhanced",
+    "buttons": [
+      "UP"
+    ],
+    "direction": 14,
+    "fire_pin": 1,
+    "state": 5
+  },
+  {
+    "look": "enhanced",
+    "buttons": [
+      "2ND_BUTTON",
+      "FIRE_BUTTON"
+    ],
+    "direction": 14,
+    "fire_pin": 0,
+    "state": null
+  },
+  {
+    "bruce_editor_views": 27,
+    "bruce_strike_poses": [
+      4,
+      6,
+      24,
+      28,
+      22,
+      26
+    ],
+    "enemy_source_views": 156
+  },
+  {
+    "joystick_visible_punch": 4,
+    "joystick_visible_kick": 28
+  },
+  {
+    "both_start": {
+      "field": 2765,
+      "steps": 243,
+      "flags": [
+        1,
+        129,
+        65
+      ],
+      "fault": 0,
+      "missed": 84,
+      "room": 1
+    },
+    "both_end": {
+      "field": 2952,
+      "steps": 304,
+      "flags": [
+        1,
+        129,
+        65
+      ],
+      "fault": 0,
+      "missed": 84,
+      "room": 1
+    }
+  },
+  {
+    "look": "enhanced",
+    "state": {
+      "field": 2053,
+      "steps": 6,
+      "flags": [
+        1,
+        0,
+        0
+      ],
+      "fault": 0,
+      "missed": 84,
+      "room": 1
+    },
+    "fixed_pixels": 35584,
+    "background_sha256": "6473fb5410a04a093442748e7359a576672e25adbcf66e77b6510375e04e82d1"
+  },
+  {
+    "look": "restored",
+    "state": {
+      "field": 3224,
+      "steps": 4,
+      "flags": [
+        1,
+        0,
+        0
+      ],
+      "fault": 0,
+      "missed": 107,
+      "room": 1
+    },
+    "fixed_pixels": 11752,
+    "background_sha256": "1edd97713af046dcd072386b8cce8e7710321f344d975da52ce3ba5554305057"
+  },
+  {
+    "room_picker_confirmed_only_by_primary": true
+  }
+]

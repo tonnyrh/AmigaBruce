@@ -1,0 +1,239 @@
+Source: .reference\c64\work\untrained-memory.bin
+SHA256: 092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8
+Edition: unverified Remember/T64 candidate; original bytes unchanged.
+
+1C39: B5 9E     LDA $9e,X
+1C3B: 38        SEC
+1C3C: E9 0C     SBC #$0c
+1C3E: 4A        LSR A
+1C3F: 4A        LSR A
+1C40: 95 E6     STA $e6,X
+1C42: A5 29     LDA $29
+1C44: C9 0D     CMP #$0d
+1C46: D0 07     BNE $1c4f
+1C48: B5 A1     LDA $a1,X
+1C4A: 18        CLC
+1C4B: 69 04     ADC #$04
+1C4D: D0 02     BNE $1c51
+1C4F: B5 A1     LDA $a1,X
+1C51: 38        SEC
+1C52: E9 0C     SBC #$0c
+1C54: 4A        LSR A
+1C55: 4A        LSR A
+1C56: 4A        LSR A
+1C57: 4A        LSR A
+1C58: 95 E9     STA $e9,X
+1C5A: 60        RTS
+
+2E39: A9 00     LDA #$00
+2E3B: 8D 00 01  STA $0100
+2E3E: A2 02     LDX #$02
+2E40: 86 51     STX $51
+2E42: B5 95     LDA $95,X
+2E44: 29 01     AND #$01
+2E46: F0 20     BEQ $2e68
+2E48: B5 BF     LDA $bf,X
+2E4A: C9 19     CMP #$19
+2E4C: F0 1A     BEQ $2e68
+2E4E: C9 17     CMP #$17
+2E50: D0 03     BNE $2e55
+2E52: 20 10 2E  JSR $2e10
+2E55: B5 B6     LDA $b6,X
+2E57: 29 02     AND #$02
+2E59: 85 53     STA $53
+2E5B: 20 39 1C  JSR $1c39
+2E5E: 20 6E 2E  JSR $2e6e
+2E61: A6 51     LDX $51
+2E63: F6 E9     INC $e9,X
+2E65: 20 6E 2E  JSR $2e6e
+2E68: A6 51     LDX $51
+2E6A: CA        DEX
+2E6B: 10 D3     BPL $2e40
+2E6D: 60        RTS
+2E6E: B5 E9     LDA $e9,X
+2E70: AA        TAX
+2E71: 20 67 1A  JSR $1a67
+2E74: A6 51     LDX $51
+2E76: B4 E6     LDY $e6,X
+2E78: A9 02     LDA #$02
+2E7A: 85 4C     STA $4c
+2E7C: B1 04     LDA ($04),Y
+2E7E: 29 7F     AND #$7f
+2E80: 20 89 2E  JSR $2e89
+2E83: C8        INY
+2E84: C6 4C     DEC $4c
+2E86: 10 F4     BPL $2e7c
+2E88: 60        RTS
+2E89: C9 05     CMP #$05
+2E8B: D0 03     BNE $2e90
+2E8D: 4C 7B 2F  JMP $2f7b
+2E90: C9 02     CMP #$02
+2E92: D0 03     BNE $2e97
+2E94: 4C 3C 2F  JMP $2f3c
+2E97: C9 03     CMP #$03
+2E99: D0 03     BNE $2e9e
+2E9B: 4C 51 2F  JMP $2f51
+2E9E: C9 04     CMP #$04
+2EA0: D0 03     BNE $2ea5
+2EA2: 4C 66 2F  JMP $2f66
+2EA5: C9 62     CMP #$62
+2EA7: F0 4B     BEQ $2ef4
+2EA9: C9 2D     CMP #$2d
+2EAB: F0 3D     BEQ $2eea
+2EAD: C9 2E     CMP #$2e
+2EAF: F0 39     BEQ $2eea
+2EB1: 06 53     ASL $53
+2EB3: F0 34     BEQ $2ee9
+2EB5: C9 13     CMP #$13
+2EB7: F0 4B     BEQ $2f04
+2EB9: C9 14     CMP #$14
+2EBB: F0 47     BEQ $2f04
+2EBD: C9 31     CMP #$31
+2EBF: F0 43     BEQ $2f04
+2EC1: C9 64     CMP #$64
+2EC3: F0 3C     BEQ $2f01
+2EC5: C9 66     CMP #$66
+2EC7: F0 31     BEQ $2efa
+2EC9: C9 0F     CMP #$0f
+2ECB: F0 34     BEQ $2f01
+2ECD: C9 40     CMP #$40
+2ECF: F0 30     BEQ $2f01
+2ED1: C9 57     CMP #$57
+2ED3: F0 08     BEQ $2edd
+2ED5: C9 54     CMP #$54
+2ED7: 90 10     BCC $2ee9
+2ED9: C9 5B     CMP #$5b
+2EDB: 90 24     BCC $2f01
+2EDD: C9 71     CMP #$71
+2EDF: 90 04     BCC $2ee5
+2EE1: C9 7D     CMP #$7d
+2EE3: 90 1C     BCC $2f01
+2EE5: C9 60     CMP #$60
+2EE7: F0 0E     BEQ $2ef7
+2EE9: 60        RTS
+2EEA: A5 29     LDA $29
+2EEC: C9 10     CMP #$10
+2EEE: F0 01     BEQ $2ef1
+2EF0: 60        RTS
+2EF1: 4C D6 2F  JMP $2fd6
+2EF4: 4C 0C 31  JMP $310c
+2EF7: 4C 6B 30  JMP $306b
+2EFA: A5 29     LDA $29
+
+306B: A5 05     LDA $05
+306D: 18        CLC
+306E: 69 4C     ADC #$4c
+3070: 85 05     STA $05
+3072: B1 04     LDA ($04),Y
+3074: 29 07     AND #$07
+3076: C9 05     CMP #$05
+3078: F0 52     BEQ $30cc
+307A: AD DE 4F  LDA $4fde
+307D: D0 16     BNE $3095
+307F: A9 01     LDA #$01
+3081: 8D DE 4F  STA $4fde
+3084: B5 E9     LDA $e9,X
+3086: 8D E4 4F  STA $4fe4
+3089: 8C E1 4F  STY $4fe1
+308C: CE E1 4F  DEC $4fe1
+308F: CE E4 4F  DEC $4fe4
+3092: 4C C8 30  JMP $30c8
+3095: AD DF 4F  LDA $4fdf
+3098: D0 16     BNE $30b0
+309A: A9 01     LDA #$01
+309C: 8D DF 4F  STA $4fdf
+309F: B5 E9     LDA $e9,X
+30A1: 8D E5 4F  STA $4fe5
+30A4: 8C E2 4F  STY $4fe2
+30A7: CE E2 4F  DEC $4fe2
+30AA: CE E5 4F  DEC $4fe5
+30AD: 4C C8 30  JMP $30c8
+30B0: AD E0 4F  LDA $4fe0
+30B3: D0 17     BNE $30cc
+30B5: A9 01     LDA #$01
+30B7: 8D E0 4F  STA $4fe0
+30BA: B5 E9     LDA $e9,X
+30BC: 8D E6 4F  STA $4fe6
+30BF: 8C E3 4F  STY $4fe3
+30C2: CE E3 4F  DEC $4fe3
+30C5: CE E6 4F  DEC $4fe6
+30C8: A9 FD     LDA #$fd
+30CA: 91 04     STA ($04),Y
+30CC: A5 05     LDA $05
+30CE: 38        SEC
+30CF: E9 4C     SBC #$4c
+30D1: 85 05     STA $05
+30D3: 60        RTS
+
+5212: A2 02     LDX #$02
+5214: 86 50     STX $50
+5216: B5 95     LDA $95,X
+5218: 29 01     AND #$01
+521A: D0 03     BNE $521f
+521C: 4C A4 52  JMP $52a4
+521F: B5 9E     LDA $9e,X
+5221: 38        SEC
+5222: E9 0C     SBC #$0c
+5224: 95 E6     STA $e6,X
+5226: 29 03     AND #$03
+5228: 85 1B     STA $1b
+522A: B5 A1     LDA $a1,X
+522C: 38        SEC
+522D: E9 1D     SBC #$1d
+522F: 95 E9     STA $e9,X
+5231: 29 07     AND #$07
+5233: 85 1C     STA $1c
+5235: BD 4E 4F  LDA $4f4e,X
+5238: AA        TAX
+5239: BD 67 11  LDA $1167,X
+523C: 8D CC 52  STA $52cc
+523F: BD 39 12  LDA $1239,X
+5242: 8D CD 52  STA $52cd
+5245: 20 AD 52  JSR $52ad
+5248: A5 1C     LDA $1c
+524A: 18        CLC
+524B: 69 15     ADC #$15
+524D: 8D 39 4F  STA $4f39
+5250: 38        SEC
+5251: E9 06     SBC #$06
+5253: 8D 38 4F  STA $4f38
+5256: 20 AB 55  JSR $55ab
+5259: A6 50     LDX $50
+525B: B5 E6     LDA $e6,X
+525D: 4A        LSR A
+525E: 4A        LSR A
+525F: 95 E6     STA $e6,X
+5261: B5 E9     LDA $e9,X
+5263: 4A        LSR A
+5264: 4A        LSR A
+5265: 4A        LSR A
+5266: 95 E9     STA $e9,X
+5268: A0 00     LDY #$00
+526A: 84 52     STY $52
+526C: A9 08     LDA #$08
+526E: 8D 3A 4F  STA $4f3a
+5271: 20 0A 53  JSR $530a
+5274: 20 7E 53  JSR $537e
+5277: A6 50     LDX $50
+5279: F6 E9     INC $e9,X
+527B: A9 10     LDA #$10
+527D: 8D 3A 4F  STA $4f3a
+5280: 20 0A 53  JSR $530a
+5283: 20 7E 53  JSR $537e
+5286: A6 50     LDX $50
+5288: F6 E9     INC $e9,X
+528A: A9 18     LDA #$18
+528C: 8D 3A 4F  STA $4f3a
+528F: 20 0A 53  JSR $530a
+5292: 20 7E 53  JSR $537e
+5295: A6 50     LDX $50
+5297: F6 E9     INC $e9,X
+5299: A9 20     LDA #$20
+529B: 8D 3A 4F  STA $4f3a
+529E: 20 0A 53  JSR $530a
+52A1: 20 7E 53  JSR $537e
+52A4: A6 50     LDX $50
+52A6: CA        DEX
+52A7: 30 03     BMI $52ac
+52A9: 4C 14 52  JMP $5214
+52AC: 60        RTS

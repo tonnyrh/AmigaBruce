@@ -1,0 +1,40 @@
+{
+  "capture_id": "FIELD-WORK-0001",
+  "date": "2026-11-01",
+  "reference_id": "c64-local-t64-remember-no-trainers",
+  "source_ids": [
+    "SRC-007",
+    "SRC-008"
+  ],
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "addresses": [
+    "$169D-$1702",
+    "$4A85-$4A88",
+    "$2BF9-$2C51",
+    "$312C-$3183"
+  ],
+  "status": "candidate_code_vice_and_scoped_a500_measurements",
+  "limits": [
+    "The VICE joystick trials start at the frozen snapshot and control the input boundary.",
+    "Visible response latency on a physical controller and the complete IRQ raster schedule remain open.",
+    "The Amiga combat routes and publication counts cover the recorded configurations and durations."
+  ],
+  "artifacts": [
+    {
+      "path": "reference/analysis/field-work-2026-11-01/delivery.json",
+      "sha256": "da23c13ed218a739362f0b4f1e3774223df6fadad829eb6e9c14d5d663c2e0aa"
+    },
+    {
+      "path": "reference/analysis/field-work-2026-11-01/runs/vice-slots.json",
+      "sha256": "8c61f85d9a3371e4051fc79fd4b34a88b3f0d618e2518f69ae6dc9c7ef2590d8"
+    },
+    {
+      "path": "reference/analysis/field-work-2026-11-01/runs/fall-proof-result.json",
+      "sha256": "3a23b6f886e02a2bca63007f89f5d5af65388cde32f0f0d3785de015051828b9"
+    },
+    {
+      "path": "reference/analysis/field-work-2026-11-01/runs/dma-proof-proof.bin",
+      "sha256": "c13f317af103c0a6ddde7d7885a92bd3bea81304e87cc93708fca5923f6090b9"
+    }
+  ]
+}

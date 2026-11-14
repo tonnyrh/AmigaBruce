@@ -1,0 +1,108 @@
+{
+  "machine": "WinUAE PAL A500 OCS, 68000, 512 KiB Chip + 512 KiB trapdoor, Kickstart 1.3",
+  "adf_sha256": "f53963ab4344f022e2cfc9f76a7e0c45d36feda9cf24d619ea1612ea298bf504",
+  "expanded_cache_sha256": "77dad1b04eb5f8a104c1edff6d6540a3d515b9f9e5fb3a628527bd2eec57f310",
+  "scope": "All 22 editable Bruce views compared with C64 source alpha and Enhanced editor colors in expanded Amiga memory. Joystick punch and flying kick observed on the published playfield in room 1.",
+  "candidate_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "previous_edit_files_preserved": {
+    "fighter-2-07-1": "c5bc3f024504e5605efb6d5bcf7f1957c20f7b84c0e37d601008e3970ec67ffa",
+    "fighter-2-07-0": "333547682da8bfe77b6eaabdf9446b45d3f88fbee3e9f48ffa4fcd742ebee026",
+    "fighter-2-11-1": "8be45888c889739baa31e422d38d0619627c2f3ba5169e4a4a7e22647319f409"
+  },
+  "results": [
+    {
+      "look": "classic",
+      "state": {
+        "field": 1247,
+        "steps": 7,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 11,
+        "room": 1
+      },
+      "fixed_pixels": 11740,
+      "background_sha256": "e08dcd912d111028644c42ed4ddc7e46cda7ef46e0eda5c101bf52bc0c4244bd"
+    },
+    {
+      "bruce_editor_views": 22,
+      "bruce_strike_poses": [
+        4,
+        6,
+        22,
+        26,
+        24,
+        28
+      ],
+      "enemy_source_views": 156
+    },
+    {
+      "joystick_visible_punch": 6,
+      "joystick_visible_kick": 28
+    },
+    {
+      "both_start": {
+        "field": 2460,
+        "steps": 243,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      },
+      "both_end": {
+        "field": 2647,
+        "steps": 304,
+        "flags": [
+          1,
+          129,
+          65
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      }
+    },
+    {
+      "look": "enhanced",
+      "state": {
+        "field": 1747,
+        "steps": 5,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 77,
+        "room": 1
+      },
+      "fixed_pixels": 35584,
+      "background_sha256": "5ef5f2da5b4747fd10a1efc092ed1a9b46cb89b3ffa3bd74f7649ad85dbf5785"
+    },
+    {
+      "look": "restored",
+      "state": {
+        "field": 2923,
+        "steps": 4,
+        "flags": [
+          1,
+          0,
+          0
+        ],
+        "fault": 0,
+        "missed": 100,
+        "room": 1
+      },
+      "fixed_pixels": 11752,
+      "background_sha256": "446d5f492a1c2cb92c58ca20e001ceea2cf8a811339be91a55d25ecca7530d92"
+    }
+  ]
+}

@@ -17,6 +17,17 @@ void bl_c64_tick_room(void);
 void bl_c64_field(void);
 /* Optional cooperative I/O checkpoint. Must not call room/actor routines. */
 void bl_c64_set_service(void (*service)(void));
+/* Service Paula between source operations. Must not advance actors or sample input. */
+void bl_c64_set_audio_poll(void (*poll)(void));
+/* Presentation observer for an accepted $2509 request. Never edits source RAM. */
+typedef void (*BlSoundObserver)(long voice,long effect,long actor,long callsite);
+void bl_c64_set_sound_observer(BlSoundObserver observer);
+/* Presentation only: source punch damage made an enemy's health negative,
+ * and actor 0 was a confirmed punch attacker. Never edits source RAM. */
+typedef void (*BlFinisherObserver)(long victim);
+void bl_c64_set_finisher_observer(BlFinisherObserver observer);
+/* Read decoded active/other sticks (low/high byte) at the C64 game IRQ input slot. */
+void bl_c64_set_control_reader(unsigned long (*reader)(long player,long human_yamo));
 void bl_c64_set_load_service(void (*service)(long loading));
 /* Presentation events at the VIC display-disable stores, before the
  * announcement overwrites screen RAM. These do not stop the source IRQ. */
@@ -47,9 +58,11 @@ const unsigned short *bl_c64_offsets(void);
 const unsigned char *bl_c64_cell_y(void);
 void bl_c64_paint_room(unsigned char *planes,long scene_top);
 unsigned char bl_c64_needs_full_paint(void);
-typedef struct {unsigned char *bitmap;const unsigned char *planes;unsigned long cell,slot,changed,scene_top;} BlC64Paint;
+typedef struct {unsigned char *bitmap;const unsigned char *planes;unsigned long cell,slot,changed,scene_top;unsigned char rows;} BlC64Paint;
 typedef void (*BlC64Painter)(const BlC64Paint *request);
 void bl_c64_set_painter(BlC64Painter painter);
+/* Opt in when room 14 trap pixels depend only on the live glyph and ink. */
+void bl_c64_set_trap_row_reuse(long enabled);
 typedef struct {unsigned char *bitmap;const unsigned char *pixels;unsigned long left,top,width,height,first_mask,last_mask;} BlC64Block;
 typedef void (*BlC64BlockPainter)(const BlC64Block *request);
 void bl_c64_set_block_painter(BlC64BlockPainter painter);
@@ -69,6 +82,7 @@ const unsigned char *bl_c64_part_priority_rows(void);
 unsigned char bl_c64_screen(long cell);
 unsigned char bl_c64_screen_color(long cell);
 unsigned char bl_c64_glyph(long code,long row);
+const unsigned char *bl_c64_display_glyph(long code);
 unsigned char bl_c64_has_dirty(void);
 unsigned char bl_c64_cell_dirty(long cell);
 void bl_c64_clear_dirty(void);
@@ -104,6 +118,8 @@ void bl_c64_collected_all(unsigned short *out);
 /* Explicit cheat preparation: complete lower numbered rooms, then reload.
  * Writes source lamp records/counts only; no pickup sound, score or bonus. */
 void bl_c64_debug_complete_before(long room);
+/* Deliberate Amiga bomb-only margin; source parity fixtures leave it disabled. */
+void bl_c64_set_bomb_contact_margin(long enabled);
 unsigned char bl_c64_remaining(long room);
 void bl_c64_object(long tile,long column,long row);
 /* Actual $0BFA entry selection, using $1159's existing source-memory reader. */

@@ -115,7 +115,7 @@ def main():
         while a<end:
             n,t=dis.instruction_at(a);lines.append(f'{a:04X} {b[a:a+n].hex(" "):8} {t}');a+=n
     (OUT/'source-disassembly.txt').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-    rows=['| Rom | Standard X/Y | Alternativ X/Y | Første Kage/Yamo | Retur Kage/Yamo | Stengt |','| --- | --- | --- | --- | --- | --- |']
+    rows=['| Room | Default X/Y | Alternate X/Y | First spawn (Kage/Yamo) | Respawn (Kage/Yamo) | Closed |','| --- | --- | --- | --- | --- | --- |']
     for room in range(20):
         rows.append(f'| {room+1} | {b[0x4bae+room]*2-24}, {b[0x4bc2+room]} | {b[0x4bd6+room]*2-24}, {b[0x4bea+room]} | {b[0x130b+room]}/{b[0x1347+room]} | {b[0x131f+room]}/{b[0x135b+room]} | {b[0x4c9e+room]} |')
     (OUT/'room-table.md').write_text('\n'.join(rows)+'\n',encoding='utf-8')

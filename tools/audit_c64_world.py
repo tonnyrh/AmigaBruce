@@ -75,9 +75,10 @@ def main():
             else:
                 saved=(cpu.a,cpu.x,cpu.y,cpu.p,cpu.sp,cpu.pc);m[0x44]=0;cpu.p&=~8
                 run(0x15b8,{0x169d})
-                m[0x98]=15^((1 if input_&4 else 0)|(2 if input_&8 else 0)|(4 if input_&1 else 0)|(8 if input_&2 else 0))
-                m[0x9b]=not(input_&16)
-                if m[0x42ca]:m[0x99]=15;m[0x9c]=1
+                pins=31^((1 if input_&4 else 0)|(2 if input_&8 else 0)|(4 if input_&1 else 0)|
+                         (8 if input_&2 else 0)|(16 if input_&16 else 0))
+                m[0xdc00],m[0xdc01]=(pins,31) if m[3] else (31,pins)
+                run(0x169d,{0x1703})
                 m[0xdc00]=m[0xdc01]=255
                 run(0x1703,{0x179d});m[0xd01e]|=vic(m)
                 cpu.a,cpu.x,cpu.y,cpu.p,cpu.sp,cpu.pc=saved
@@ -96,7 +97,7 @@ def main():
     for item in identity:assert hashlib.sha256((ROOT/item['path']).read_bytes()).hexdigest()==item['sha256'],item['path']
     report=dict(source_sha256=hashlib.sha256((ROOT/'.reference/c64/work/untrained-memory.bin').read_bytes()).hexdigest(),
         edition_verified=False,natural_playthrough=False,raster_exact=False,checks=rows,instructions=instructions,source_files=identity,
-        seams=['Decoded CIA input','Field-sampled VIC opaque pixels and read-cleared latch','Main/announcement/Game Over field waits; CPU delay loops and raster IRQ stack phase are not certified'])
+        seams=['Fixed external CIA pins; original $169D-$1702 executes in each game field','Field-sampled VIC opaque pixels and read-cleared latch','Main/announcement/Game Over field waits; CPU delay loops and raster IRQ stack phase are not certified'])
     out=ROOT/'reference/analysis/actor-chain-2026-10-26/integrated-controls.json';out.write_text(json.dumps(report,indent=2)+'\n')
     print('PASS integrated source world:',len(rows),'modes;',instructions,'original instructions; all RAM at field/main boundaries')
 if __name__=='__main__':main()

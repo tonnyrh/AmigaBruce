@@ -1,7 +1,8 @@
 param([Parameter(Mandatory)][ValidatePattern('^[a-z0-9-]+$')][string]$Mode,
       [Parameter(Mandatory)][ValidatePattern('^[a-z0-9-]+$')][string]$Label,
       [ValidateRange(1,20)][int]$Room=1,[ValidateRange(0,3)][int]$Mask=3,[ValidateRange(0,2)][int]$Route=0,
-      [ValidatePattern('^[a-z0-9-]+$')][string]$StageName='op-score')
+      [ValidatePattern('^[a-z0-9-]+$')][string]$StageName='op-score',
+      [ValidateRange(0,255)][int]$Probe=0)
 $ErrorActionPreference='Stop'
 if(($Room -eq 12 -and $Mask -ne 3) -or ($Room -eq 13 -and $Mask -ne 1)){throw 'Use the standard stair and Yamo routes'}
 $root=(Resolve-Path (Join-Path $PSScriptRoot '../../..')).Path
@@ -15,7 +16,7 @@ if($isProof){
     Copy-Item -LiteralPath "$stage/$Mode/cases.bin" -Destination $out
     $report=Join-Path $out 'proof.bin'
 }else{
-    [IO.File]::WriteAllBytes("$out/op0-route.bin",[byte[]]@(($Room-1),$Mask,$Route,0,0,240,0,240))
+    [IO.File]::WriteAllBytes("$out/op0-route.bin",[byte[]]@(($Room-1),$Mask,$Route,$Probe,0,240,0,240))
     $report=Join-Path $out 'op0-light.txt'
 }
 (Get-Content "$root/.tmp/bruce-a500.uae") -replace '^filesystem2=rw,dh1:.+$',("filesystem2=rw,dh1:dh1:"+$out+",-128")|Set-Content -Encoding ascii "$out/a500.uae"

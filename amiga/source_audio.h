@@ -22,6 +22,7 @@ static ULONG field_clock(void);
 static ULONG line_clock(void);
 static void source_audio_service(void);
 static UBYTE *source_audio_images(void){return sfx_pcm+bl_source_audio_chip_bytes();}
+#include "enhanced_audio.h"
 static void source_audio_copy(void){
     bl_source_audio_copy(sfx_pcm);bl_source_audio_reset(&source_audio);bl_source_dma_reset(&source_dma);
 }
@@ -36,7 +37,10 @@ static void source_audio_begin(void){
 static void source_audio_mute(void){
     UWORD c;if(source_audio_active){source_clock_pause_start=field_clock();++source_clock_pauses;}
     source_audio_active=0;
-    for(c=0;c<3;c++)hw->aud[c].ac_vol=0;
+    for(c=0;c<3;c++){
+        hw->aud[c].ac_vol=0;
+        if(foley_active)foley_voice[c].pending=FOLEY_RESTORE;
+    }
 }
 static void source_audio_resume(void){
     ULONG now=field_clock();
@@ -48,11 +52,12 @@ static void source_audio_load(long loading){
     else if(source_audio_load_resume){source_audio_load_resume=0;source_audio_resume();}
 }
 static void source_audio_output(UBYTE music){
-    UWORD c,changed;ULONG *hash=music?&source_music_hash:&source_audio_hash;
+    UWORD c,changed,reserved=0,restart=0;ULONG *hash=music?&source_music_hash:&source_audio_hash;
     PERF_BEGIN(BL_PERF_AUDIO_RENDER);
     bl_source_audio_render(&source_audio,source_registers,source_voices);
     PERF_END(BL_PERF_AUDIO_RENDER);
     PERF_BEGIN(BL_PERF_AUDIO_DMA);
+    if(foley_active)reserved=foley_tick(&restart);
     changed=bl_source_dma_update(&source_dma,source_audio_images(),sfx_pcm,
                                 bl_source_audio_chip_bytes(),source_voices);
     PERF_END(BL_PERF_AUDIO_DMA);
@@ -61,6 +66,7 @@ static void source_audio_output(UBYTE music){
     else for(c=0;c<3;c++)if(changed&(1<<c))++source_dma_changes;
     for(c=0;c<3;c++){
         const BlPaulaVoice *p=&source_voices[c];
+        if(reserved&(1u<<c))continue;
         /* LC/LEN stay fixed until shutdown. The already prefetched Paula
          * word may contain old samples; there is no long block reload wait. */
         hw->aud[c].ac_per=p->period;hw->aud[c].ac_vol=(changed&0x8000)?0:p->volume;
@@ -73,6 +79,7 @@ static void source_audio_output(UBYTE music){
             *hash=fighter_fnv(*hash,(UBYTE)p->volume);
         }
     }
+    if(restart)hw->dmacon=(UWORD)(DMAF_SETCLR|DMAF_MASTER|restart);
     if(music)++source_music_fields;else ++source_audio_fields;
     PERF_END(BL_PERF_AUDIO_PUBLISH);
 }
@@ -89,10 +96,9 @@ static void source_audio_start(UBYTE music){
     source_audio_mode=music;source_clock_last=field_clock();++source_clock_starts;
     source_audio_active=1;source_audio_busy=1;source_audio_tick();source_audio_busy=0;
 }
-static void source_audio_service(void){
-    ULONG now,gap;
-    if(!source_audio_active || source_audio_busy)return;
-    now=field_clock();gap=(now-source_clock_last)&0xffffffUL;if(!gap)return;
+static UBYTE source_audio_service_at(ULONG now){
+    ULONG gap=(now-source_clock_last)&0xffffffUL;
+    if(!gap)return 0;
     source_clock_last=now;source_clock_elapsed+=gap;
     if(gap>source_clock_max_gap)source_clock_max_gap=gap;
     if(gap>1){
@@ -105,4 +111,8 @@ static void source_audio_service(void){
     /* Never compress missed ticks into a burst. Keep source order and expose
      * any missed field; frequent safe draw/wait checkpoints bound normal work. */
     source_audio_busy=1;source_audio_tick();source_audio_busy=0;
+    return 1;
+}
+static void source_audio_service(void){
+    if(source_audio_active && !source_audio_busy)source_audio_service_at(field_clock());
 }

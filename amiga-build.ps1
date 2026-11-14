@@ -1,23 +1,30 @@
 #Requires -Version 5.1
 [CmdletBinding()]
-param([ValidateRange(0,3)][int]$PerfEnemies=3,[ValidateRange(0,30000)][int]$PerfSourceSteps=0,[switch]$Autotest,[switch]$SourceWorldTest,[switch]$SourcePerfTest,[switch]$SourceProfile,[switch]$SeparateContactTest,[switch]$SpriteCopyTest,[switch]$CollectFrameDrops,[switch]$CombatTest,[switch]$RoomsTest,[switch]$EnemyEdgeTest,[switch]$RoomTour,[switch]$GateTest,[switch]$RoomLoadTest,[switch]$RoomLoadBaseline,[switch]$ElectricTest,[ValidateRange(0,19)][int]$TestStartRoom=0,[ValidateRange(0,2000)][int]$CombatWarmupSteps=0,[ValidateRange(360,30000)][int]$TestFrames=360)
+param([ValidateRange(0,3)][int]$PerfEnemies=3,[ValidateRange(0,30000)][int]$PerfSourceSteps=0,[switch]$Autotest,[switch]$SourceWorldTest,[switch]$SourcePerfTest,[switch]$SourceProfile,[switch]$SeparateContactTest,[switch]$SpriteCopyTest,[switch]$CollectFrameDrops,[switch]$CombatTest,[switch]$RoomsTest,[switch]$EnemyEdgeTest,[switch]$RoomTour,[switch]$GateTest,[switch]$RoomLoadTest,[switch]$RoomLoadBaseline,[switch]$ElectricTest,[ValidateRange(0,19)][int]$TestStartRoom=0,[ValidateRange(0,2000)][int]$CombatWarmupSteps=0,[ValidateRange(360,30000)][int]$TestFrames=360,
+      [string]$PythonExecutable)
 $ErrorActionPreference='Stop'
 if($PerfSourceSteps -and !$SourcePerfTest){throw 'PerfSourceSteps requires SourcePerfTest'}
 if($RoomsTest -or $EnemyEdgeTest -or $RoomTour -or $GateTest -or $RoomLoadTest){$CombatTest=$true}
 $taskRoot=$PSScriptRoot
-& python (Join-Path $taskRoot 'tools/build_contact_class_kernel.py')
+$buildPython = & (Join-Path $taskRoot 'tools/resolve-art-python.ps1') -PythonExecutable $PythonExecutable
+Write-Host "Build Python: $buildPython"
+& $buildPython (Join-Path $taskRoot 'tools/build_contact_class_kernel.py')
 if($LASTEXITCODE){throw 'Source contact class kernel generation failed'}
-& python (Join-Path $taskRoot 'tools/build_c64_audio.py')
+& $buildPython (Join-Path $taskRoot 'tools/build_c64_audio.py')
 if($LASTEXITCODE){throw 'Source audio extraction failed'}
-& python (Join-Path $taskRoot 'tools/build_c64_sprites.py')
+& $buildPython (Join-Path $taskRoot 'tools/build_enhanced_audio.py')
+if($LASTEXITCODE){throw 'Enhanced combat sample packing failed'}
+& $buildPython (Join-Path $taskRoot 'tools/build_c64_sprites.py')
 if($LASTEXITCODE){throw 'C64 sprite extraction failed'}
-& python (Join-Path $taskRoot 'tools/build_title_art.py')
+& $buildPython (Join-Path $taskRoot 'tools/build_enhanced_art.py')
+if($LASTEXITCODE){throw 'Enhanced artwork preparation failed'}
+& $buildPython (Join-Path $taskRoot 'tools/build_title_art.py')
 if($LASTEXITCODE){throw 'Title art packing failed'}
-& python (Join-Path $taskRoot 'tools/build_c64_hit_masks.py')
+& $buildPython (Join-Path $taskRoot 'tools/build_c64_hit_masks.py')
 if($LASTEXITCODE){throw 'C64 combat mask extraction failed'}
-& python (Join-Path $taskRoot 'tools/build_c64_rooms.py')
+& $buildPython (Join-Path $taskRoot 'tools/build_c64_rooms.py')
 if($LASTEXITCODE){throw 'C64 room compilation failed'}
-& python (Join-Path $taskRoot 'tools/build_c64_actors.py')
+& $buildPython (Join-Path $taskRoot 'tools/build_c64_actors.py')
 if($LASTEXITCODE){throw 'C64 actor compilation failed'}
 $extension=Get-ChildItem -Directory (Join-Path $env:USERPROFILE '.vscode/extensions') -Filter 'bartmanabyss.amiga-debug-*' |
     Sort-Object Name -Descending | Select-Object -First 1
@@ -57,7 +64,7 @@ foreach($source in $sources){
 $program=Join-Path $out $(if($Autotest){'bruce_test'}else{'bruce_amiga'})
 & $compiler @flags '-Wl,--emit-relocs,--gc-sections,-Ttext=0,-e,_start' "-Wl,-Map=$program.map" @objects -o "$program.elf"
 if($LASTEXITCODE){throw 'Link failed'}
-& python (Join-Path $taskRoot 'tools/verify_amiga_entry.py') "$program.elf"
+& $buildPython (Join-Path $taskRoot 'tools/verify_amiga_entry.py') "$program.elf"
 if($LASTEXITCODE){throw 'AmigaDOS entry validation failed'}
 & $converter "$program.elf" "$program.exe"
 if($LASTEXITCODE){throw 'ELF to Hunk conversion failed'}

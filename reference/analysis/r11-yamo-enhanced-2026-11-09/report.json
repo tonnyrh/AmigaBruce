@@ -1,0 +1,2529 @@
+{
+  "status": "User report remains open; no runtime behavior changed.",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "adf_sha256": "3dd41eefde9388fbe257174c5c8cdac94e6a0dbba30da5f575748107bdd0de7d",
+  "elf_sha256": "9203e2b778884523a601317acd0e3ab8fdc2f29239c8fbf278637d3f6d178eaa",
+  "configuration": "PAL A500 OCS, cycle-exact 68000, Kickstart 1.3, 512 KiB Chip + 512 KiB slow RAM. Current normal release ADF, no test-only runtime.",
+  "source_walk_controls": 28,
+  "source_capacity_controls": 48,
+  "source_capacity_timer_calls": 1152,
+  "conditions": [
+    "Room 11 entered through the test menu, infinite falls and invincibility enabled.",
+    "Natural enemy entry was observed first. Targeted controls then placed actors with the debugger and disabled Kage. No bomb timer or contact mask was forced in the walking controls.",
+    "Snapshots were paused debugger samples. Pixel controls compare the 24x32 bomb area against its expected glyphs or Enhanced art. No frame-rate or physical-Amiga claim."
+  ],
+  "enhanced_walks": [
+    {
+      "col": 21,
+      "direction": 1,
+      "observed": {
+        "idle": 1731,
+        "flash": 1748,
+        "plume": 1752
+      },
+      "events": [
+        {
+          "step": 1731,
+          "x": 78,
+          "y": 140,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            0,
+            0,
+            0,
+            23,
+            18,
+            0,
+            5,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1733,
+          "x": 82,
+          "y": 140,
+          "state": 20,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            23,
+            18,
+            0,
+            5,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1735,
+          "x": 88,
+          "y": 140,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            23,
+            18,
+            0,
+            5,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1737,
+          "x": 92,
+          "y": 140,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            23,
+            18,
+            0,
+            5,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1740,
+          "x": 96,
+          "y": 140,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            2,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1742,
+          "x": 100,
+          "y": 140,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            4,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1744,
+          "x": 104,
+          "y": 140,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            6,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1746,
+          "x": 106,
+          "y": 138,
+          "state": 13,
+          "contact": 3,
+          "timers": [
+            8,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1748,
+          "x": 107,
+          "y": 137,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            10,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1750,
+          "x": 107,
+          "y": 137,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            12,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1752,
+          "x": 107,
+          "y": 137,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            14,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1755,
+          "x": 107,
+          "y": 137,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            17,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1757,
+          "x": 107,
+          "y": 137,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            19,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1759,
+          "x": 107,
+          "y": 137,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            21,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1761,
+          "x": 107,
+          "y": 137,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            23,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        }
+      ]
+    },
+    {
+      "col": 34,
+      "direction": -1,
+      "observed": {
+        "idle": 1766,
+        "flash": 1782,
+        "plume": 1785
+      },
+      "events": [
+        {
+          "step": 1766,
+          "x": 156,
+          "y": 141,
+          "state": 14,
+          "contact": 0,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1769,
+          "x": 155,
+          "y": 141,
+          "state": 0,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1771,
+          "x": 151,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1773,
+          "x": 147,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            1,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1775,
+          "x": 143,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            3,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1777,
+          "x": 137,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            5,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1780,
+          "x": 133,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            8,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1782,
+          "x": 129,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            9,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1783,
+          "x": 127,
+          "y": 141,
+          "state": 12,
+          "contact": 3,
+          "timers": [
+            11,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1785,
+          "x": 125,
+          "y": 139,
+          "state": 12,
+          "contact": 3,
+          "timers": [
+            13,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1788,
+          "x": 124,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            16,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1790,
+          "x": 124,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            18,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1792,
+          "x": 124,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            20,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1794,
+          "x": 124,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            22,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        }
+      ]
+    },
+    {
+      "col": 21,
+      "direction": -1,
+      "observed": {
+        "idle": 1799,
+        "flash": 1815,
+        "plume": 1820,
+        "in_flight": 1822
+      },
+      "events": [
+        {
+          "step": 1799,
+          "x": 104,
+          "y": 141,
+          "state": 14,
+          "contact": 0,
+          "timers": [
+            0,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1802,
+          "x": 103,
+          "y": 141,
+          "state": 0,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1804,
+          "x": 99,
+          "y": 141,
+          "state": 20,
+          "contact": 0,
+          "timers": [
+            0,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1806,
+          "x": 95,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            1,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1808,
+          "x": 89,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            3,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1811,
+          "x": 85,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            6,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1813,
+          "x": 79,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            8,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1815,
+          "x": 75,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            10,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1818,
+          "x": 74,
+          "y": 140,
+          "state": 12,
+          "contact": 3,
+          "timers": [
+            13,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1820,
+          "x": 72,
+          "y": 138,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            15,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1822,
+          "x": 69,
+          "y": 138,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            17,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "in_flight"
+        },
+        {
+          "step": 1824,
+          "x": 68,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            19,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1826,
+          "x": 68,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            21,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        }
+      ]
+    },
+    {
+      "col": 34,
+      "direction": 1,
+      "observed": {
+        "idle": 1831
+      },
+      "events": [
+        {
+          "step": 1831,
+          "x": 127,
+          "y": 141,
+          "state": 0,
+          "contact": 3,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1834,
+          "x": 131,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1835,
+          "x": 135,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1838,
+          "x": 139,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1840,
+          "x": 141,
+          "y": 139,
+          "state": 13,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1842,
+          "x": 143,
+          "y": 138,
+          "state": 13,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1844,
+          "x": 145,
+          "y": 138,
+          "state": 13,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1847,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1849,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1851,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1853,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1856,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1858,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1860,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1863,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1865,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1867,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1869,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1872,
+          "x": 146,
+          "y": 138,
+          "state": 0,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1874,
+          "x": 146,
+          "y": 139,
+          "state": 14,
+          "contact": 2,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        }
+      ]
+    }
+  ],
+  "classic_walks": [
+    {
+      "col": 21,
+      "direction": 1,
+      "observed": {
+        "idle": 1867,
+        "flash": 1885,
+        "plume": 1888
+      },
+      "events": [
+        {
+          "step": 1867,
+          "x": 80,
+          "y": 140,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            0,
+            0,
+            0,
+            23,
+            18,
+            0,
+            5,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1870,
+          "x": 84,
+          "y": 140,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            23,
+            18,
+            0,
+            5,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1872,
+          "x": 88,
+          "y": 140,
+          "state": 20,
+          "contact": 0,
+          "timers": [
+            0,
+            0,
+            0,
+            23,
+            18,
+            0,
+            5,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1874,
+          "x": 94,
+          "y": 140,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            23,
+            18,
+            0,
+            5,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1876,
+          "x": 98,
+          "y": 140,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            2,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1879,
+          "x": 102,
+          "y": 140,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            5,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1881,
+          "x": 104,
+          "y": 140,
+          "state": 13,
+          "contact": 1,
+          "timers": [
+            7,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1883,
+          "x": 106,
+          "y": 138,
+          "state": 13,
+          "contact": 2,
+          "timers": [
+            9,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1885,
+          "x": 109,
+          "y": 137,
+          "state": 13,
+          "contact": 2,
+          "timers": [
+            11,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1888,
+          "x": 111,
+          "y": 137,
+          "state": 13,
+          "contact": 2,
+          "timers": [
+            14,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1890,
+          "x": 113,
+          "y": 137,
+          "state": 13,
+          "contact": 2,
+          "timers": [
+            16,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1892,
+          "x": 116,
+          "y": 139,
+          "state": 13,
+          "contact": 2,
+          "timers": [
+            18,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1894,
+          "x": 117,
+          "y": 140,
+          "state": 4,
+          "contact": 3,
+          "timers": [
+            20,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1896,
+          "x": 118,
+          "y": 141,
+          "state": 4,
+          "contact": 3,
+          "timers": [
+            22,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        }
+      ]
+    },
+    {
+      "col": 34,
+      "direction": -1,
+      "observed": {
+        "idle": 1902,
+        "flash": 1919,
+        "plume": 1921
+      },
+      "events": [
+        {
+          "step": 1902,
+          "x": 156,
+          "y": 141,
+          "state": 14,
+          "contact": 0,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1904,
+          "x": 155,
+          "y": 141,
+          "state": 3,
+          "contact": 0,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1906,
+          "x": 153,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1908,
+          "x": 149,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1910,
+          "x": 143,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            2,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1912,
+          "x": 139,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            4,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1915,
+          "x": 135,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            7,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1917,
+          "x": 131,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            9,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1919,
+          "x": 127,
+          "y": 141,
+          "state": 12,
+          "contact": 3,
+          "timers": [
+            11,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1921,
+          "x": 125,
+          "y": 139,
+          "state": 12,
+          "contact": 3,
+          "timers": [
+            13,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1924,
+          "x": 123,
+          "y": 138,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            16,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1926,
+          "x": 121,
+          "y": 138,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            18,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1928,
+          "x": 118,
+          "y": 138,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            20,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1930,
+          "x": 116,
+          "y": 139,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            22,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        }
+      ]
+    },
+    {
+      "col": 21,
+      "direction": -1,
+      "observed": {
+        "idle": 1936,
+        "flash": 1953,
+        "plume": 1957
+      },
+      "events": [
+        {
+          "step": 1936,
+          "x": 104,
+          "y": 141,
+          "state": 14,
+          "contact": 0,
+          "timers": [
+            0,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1939,
+          "x": 103,
+          "y": 141,
+          "state": 0,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1941,
+          "x": 99,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            0,
+            0,
+            0,
+            33,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1943,
+          "x": 93,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            1,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1945,
+          "x": 89,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            3,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1948,
+          "x": 85,
+          "y": 141,
+          "state": 20,
+          "contact": 1,
+          "timers": [
+            6,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1950,
+          "x": 79,
+          "y": 141,
+          "state": 20,
+          "contact": 3,
+          "timers": [
+            8,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        },
+        {
+          "step": 1953,
+          "x": 75,
+          "y": 141,
+          "state": 20,
+          "contact": 2,
+          "timers": [
+            11,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1955,
+          "x": 73,
+          "y": 139,
+          "state": 12,
+          "contact": 3,
+          "timers": [
+            13,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1957,
+          "x": 71,
+          "y": 138,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            15,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "plume"
+        },
+        {
+          "step": 1960,
+          "x": 69,
+          "y": 138,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            18,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1962,
+          "x": 67,
+          "y": 138,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            20,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "flash"
+        },
+        {
+          "step": 1964,
+          "x": 64,
+          "y": 139,
+          "state": 12,
+          "contact": 2,
+          "timers": [
+            22,
+            0,
+            0,
+            20,
+            18,
+            0,
+            8,
+            5,
+            0
+          ],
+          "visible": "idle"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "The fourth Enhanced setup, column 34 toward the right, changed to flying kick state 13 before the bomb, then stopped near Bruce. It was not a completed walking crossing and did not arm the bomb.",
+    "The real-user intermittent missed contact for all three actors has not been reproduced. A successful controlled crossing does not close that report."
+  ],
+  "source_rules": [
+    {
+      "address": "$2E39-$2E6D",
+      "effect": "All three active actors run object contact in Kage, Yamo, Bruce order; death state 25 is skipped."
+    },
+    {
+      "address": "$306B-$30D3",
+      "effect": "Attribute class 5 is already armed. Otherwise reserve the first zero timer at $4FDE-$4FE0. If none is free, return without arming."
+    },
+    {
+      "address": "$3228-$32CB",
+      "effect": "Old counter 8 starts the blast, 12 changes its shape, 16 changes back, 20 restores the floor and attribute, and 24 releases the timer."
+    }
+  ],
+  "native_capacity": {
+    "full_rejected": true,
+    "rearmed": true,
+    "blast": true,
+    "events": [
+      {
+        "step": 12,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          3,
+          3,
+          3,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 14,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          5,
+          5,
+          5,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 16,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          7,
+          7,
+          7,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 18,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          9,
+          9,
+          9,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 20,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          11,
+          11,
+          11,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 22,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          13,
+          13,
+          13,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 24,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 0,
+        "timers": [
+          15,
+          15,
+          15,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 26,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          17,
+          17,
+          17,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 28,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          19,
+          19,
+          19,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 30,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          21,
+          21,
+          21,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 32,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          23,
+          23,
+          23,
+          8,
+          20,
+          33,
+          11,
+          11,
+          11
+        ],
+        "target_attr": 248,
+        "target_code": 96
+      },
+      {
+        "step": 34,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          1,
+          0,
+          0,
+          20,
+          20,
+          33,
+          8,
+          11,
+          11
+        ],
+        "target_attr": 253,
+        "target_code": 96
+      },
+      {
+        "step": 37,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          4,
+          0,
+          0,
+          20,
+          20,
+          33,
+          8,
+          11,
+          11
+        ],
+        "target_attr": 253,
+        "target_code": 96
+      },
+      {
+        "step": 39,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          6,
+          0,
+          0,
+          20,
+          20,
+          33,
+          8,
+          11,
+          11
+        ],
+        "target_attr": 253,
+        "target_code": 96
+      },
+      {
+        "step": 41,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 3,
+        "timers": [
+          8,
+          0,
+          0,
+          20,
+          20,
+          33,
+          8,
+          11,
+          11
+        ],
+        "target_attr": 253,
+        "target_code": 96
+      },
+      {
+        "step": 44,
+        "actors": [
+          1,
+          0,
+          0
+        ],
+        "x": 96,
+        "y": 140,
+        "contact": 7,
+        "timers": [
+          11,
+          0,
+          0,
+          20,
+          20,
+          33,
+          8,
+          11,
+          11
+        ],
+        "target_attr": 253,
+        "target_code": 117
+      }
+    ],
+    "method": "Debugger-controlled three occupied bottom-bomb timers and stationary Bruce on a free middle bomb. Actual object contact, timer release and blast use the unchanged normal Enhanced executable."
+  },
+  "host_build_sources": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "9631de92691bb2cfe582e76ed2bc3785305d66c794cb9aab1dd9c282ecd90955"
+    },
+    {
+      "path": "tests/source_actor_bridge.c",
+      "sha256": "9548f50571ede97c0ba8df23d9612aa3a09ac328ed87b69f161a51bc49c26356"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "1e46be938a09f8ed8f9f7b3c56fc0bcd2463bbce0eca823c17244bdc4c4c1259"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "d5499ec0d5ef5add4eb884a1c9b44f157d4cd8c00565067c0de40688061e116a"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "29d9e01f497a2dce96f9ce24900a10b71871639f27e5c4673fdb9cf1659093ca"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "tools/build_c64_actors.py",
+      "sha256": "4761e14f38fe762840bb12e6da73de610f3b7b6185cfc8271b11319fd7fa9824"
+    },
+    {
+      "path": "tools/native_actor_continuations.py",
+      "sha256": "b1721f8fb468d77c70c57eb99fa56955586d5a0413970b3a41613f985cd922b1"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "9181cd2e29109ea58c0495e6d21c0c91d2220ccf560291033763b941cc2f548d"
+    },
+    {
+      "path": "test-c64-actors.ps1",
+      "sha256": "33099c5e5ab6d4130a2869a5326945adf3f0c70f807e316d3337a7ec951afc97"
+    }
+  ]
+}

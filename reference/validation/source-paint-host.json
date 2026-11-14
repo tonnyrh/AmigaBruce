@@ -6,29 +6,30 @@
     "60_full_room_loads_exact_pixels",
     "96_room12_source_steps_single_phase_overlay",
     "source_ram_unchanged_by_overlay",
-    "changed_cell_invalidates_overlay_rectangle"
+    "changed_cell_invalidates_overlay_rectangle",
+    "96_room14_trap_moves_exact_pixels_and_contact_invalidation"
   ],
   "natural_playthrough": false,
   "source_files": [
     {
       "path": "amiga/main.c",
-      "sha256": "aa0895b9aada12d384ce34c31810fd5c283d5a3bf580cd39093ced655ab15c89"
+      "sha256": "73bbd14a2b1902f273653d5f9df75c8a23b97ea5708f7edd0fca4be47c53e8f9"
     },
     {
       "path": "core/c64_rooms.c",
-      "sha256": "e3f93a9f6d4512d69c5ee31642f2f0f6270e197812fb15a62e5805c910c79839"
+      "sha256": "9631de92691bb2cfe582e76ed2bc3785305d66c794cb9aab1dd9c282ecd90955"
     },
     {
       "path": "core/c64_rooms.h",
-      "sha256": "e8d502daf803685c2c77c75a3846732e8f02001fcf6a2b17c14434935f93044f"
+      "sha256": "1e46be938a09f8ed8f9f7b3c56fc0bcd2463bbce0eca823c17244bdc4c4c1259"
     },
     {
       "path": "tests/source_paint_bridge.c",
-      "sha256": "71ab69cc2ec5fc91027619913992bdb1affe678d88ee8ee2e3f19df1758e7443"
+      "sha256": "6da410c9cb73f084ecb88815f6878f13d553d2df11db74d733bb5fb4ddb49b18"
     },
     {
       "path": "tools/verify_source_paint.py",
-      "sha256": "6aa9ad89c6477cffe8a6a8d25412f5c99809d8cd23f7f0688b0108d0f121f330"
+      "sha256": "c293eacffbba0d1a9be83107fc9cae1dc251b49b3ee591d147f517cd0ae0b4d8"
     },
     {
       "path": "test-source-paint.ps1",

@@ -11,7 +11,7 @@
   "source_files": [
     {
       "path": "core/source_dma.c",
-      "sha256": "cbcca1655d1d1941a2f1b1c5c02c31f03df657dbc76229a48978994822604dcf"
+      "sha256": "79eac621c6b5338c8670c9443fb1a861f71f1b5fd33fc39cb02b08b8d01326ab"
     },
     {
       "path": "core/source_dma.h",

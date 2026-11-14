@@ -16,9 +16,10 @@ from audit_vic_native_kernels import sections
 
 def main():
     folder,pid,mode=Path(sys.argv[1]),int(sys.argv[2]),sys.argv[3]
+    build=Path(sys.argv[4]) if len(sys.argv)>4 else ROOT/"amiga/out"
     log=folder/"winuaebootlog.txt"
     pipe=re.findall(r"IPC: Named Pipe '([^']+)' open",log.read_text(errors="replace"))[-1]
-    def cmd(s):return command(pipe,s,expected_pid=pid)
+    def cmd(s):return command(pipe,s,timeout=15,expected_pid=pid)
     def mem(at,size):
         s=cmd(f"DBG m {at:x} {(size+15)//16:x}");data=b"".join(bytes.fromhex(m[1]) for m in re.finditer(r"(?m)^[0-9a-fA-F]{8}\s+((?:[0-9a-fA-F]{4}\s+){1,8})",s))
         assert len(data)>=size
@@ -45,8 +46,8 @@ def main():
             picture=folder/"menu.bpl"
             return "Wrote " in cmd(f"DBG S {picture} {front:x} a000") and picture.read_bytes()==expected
         except (IndexError,TypeError,AssertionError,ValueError):return False
-    wait(menu,180)
-    elf=ROOT/"amiga/out/bruce_amiga.elf";_,symbols=elf_symbols(elf)
+    wait(menu,300 if mode=="adf" else 180)
+    elf=build/"bruce_amiga.elf";_,symbols=elf_symbols(elf)
     _,ss=sections(elf);segs=[dict(ss)[s] for s in (".text",".rodata",".data",".bss")]
     def addr(name):
         at=symbols[name];i=next(i for i,s in enumerate(segs) if s[3]<=at<s[3]+s[5])
@@ -78,7 +79,7 @@ def main():
     fields=(after["field"]-before["field"])&0xffffff
     steps=(after["steps"]-before["steps"])&65535
     assert fields>=duration and steps>0 and not(before["fault"] or after["fault"])
-    data=dict(mode=mode,normal_exe_sha256=hashlib.sha256((ROOT/"amiga/out/bruce_amiga.exe").read_bytes()).hexdigest(),
+    data=dict(mode=mode,normal_exe_sha256=hashlib.sha256((build/"bruce_amiga.exe").read_bytes()).hexdigest(),
               complete_menu=True,menu_sha256=hashlib.sha256(expected).hexdigest(),layout=layout,dma=dma,
               before=before,after=after,fields=fields,steps=steps,misses=after["misses"]-before["misses"])
     data["pause_preserved"]=True

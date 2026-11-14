@@ -1,7 +1,11 @@
 # Local reference media, upstream checkouts and capture evidence.
 /.reference/
+/.BruceLeeSources/
+/.BruceLeeII/
 /.tmp/
 __pycache__/
 *.pyc
 /amiga/out/
 /amiga/obj/
+/assets/graphics/enhanced-edits/*.lock
+/assets/graphics/enhanced-edits/.*.tmp

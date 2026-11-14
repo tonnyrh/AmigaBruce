@@ -13,6 +13,7 @@ $vcvars=Join-Path $vs 'VC/Auxiliary/Build/vcvars64.bat'
 $out=Join-Path $actorRoot '.tmp/source-actor-test';New-Item -ItemType Directory -Force $out | Out-Null
 $sources=@('core/c64_rooms.c','tests/source_actor_bridge.c')
 $exports=@('bl_actor_copy','bl_actor_prepare','bl_c64_reset','bl_c64_load','bl_c64_actor_seed','bl_c64_actor_test_call','bl_c64_actor_registers','bl_c64_actor_return','bl_c64_read','bl_c64_test_write','bl_c64_fault','bl_c64_field','bl_c64_world_start','bl_c64_world_input','bl_c64_world_ready','bl_c64_world_step','bl_c64_world_jump','bl_c64_world_stat')
+$exports+='bl_c64_set_bomb_contact_margin'
 $quoted=($sources | ForEach-Object {'"'+(Join-Path $actorRoot $_)+'"'}) -join ' '
 $command='call "'+$vcvars+'" >nul && cl /nologo /LD /O2 /W3 /Fe:"'+$out+'\actors.dll" /Fo"'+$out+'\\" '+$quoted+' /link '+(($exports|ForEach-Object {'/EXPORT:'+$_}) -join ' ')
 & $env:ComSpec /d /s /c $command

@@ -1,0 +1,538 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "deliberate_amiga_rule": true,
+  "margin": {
+    "up": 1,
+    "left": 1,
+    "right": 1,
+    "down": 0
+  },
+  "pixel_cases": 8424,
+  "pixel_hits": 2731,
+  "expanded_only_hits": 1080,
+  "walks": [
+    {
+      "room": 11,
+      "column": 19,
+      "row": 6,
+      "height": 91,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 19,
+      "row": 6,
+      "height": 92,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 24,
+      "row": 6,
+      "height": 91,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 24,
+      "row": 6,
+      "height": 92,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 21,
+      "row": 9,
+      "height": 139,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 21,
+      "row": 9,
+      "height": 140,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 34,
+      "row": 9,
+      "height": 139,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 34,
+      "row": 9,
+      "height": 140,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 9,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 9,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 21,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 21,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 34,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 11,
+      "column": 34,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 12,
+      "column": 10,
+      "row": 5,
+      "height": 75,
+      "armed_field": 15
+    },
+    {
+      "room": 12,
+      "column": 10,
+      "row": 5,
+      "height": 76,
+      "armed_field": 15
+    },
+    {
+      "room": 12,
+      "column": 29,
+      "row": 5,
+      "height": 75,
+      "armed_field": 15
+    },
+    {
+      "room": 12,
+      "column": 29,
+      "row": 5,
+      "height": 76,
+      "armed_field": 15
+    },
+    {
+      "room": 12,
+      "column": 15,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 12,
+      "column": 15,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 12,
+      "column": 24,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 12,
+      "column": 24,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 15,
+      "row": 6,
+      "height": 91,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 15,
+      "row": 6,
+      "height": 92,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 19,
+      "row": 6,
+      "height": 91,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 19,
+      "row": 6,
+      "height": 92,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 15,
+      "row": 9,
+      "height": 139,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 15,
+      "row": 9,
+      "height": 140,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 19,
+      "row": 9,
+      "height": 139,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 19,
+      "row": 9,
+      "height": 140,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 15,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 15,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 19,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 13,
+      "column": 19,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 15,
+      "column": 14,
+      "row": 9,
+      "height": 139,
+      "armed_field": 15
+    },
+    {
+      "room": 15,
+      "column": 14,
+      "row": 9,
+      "height": 140,
+      "armed_field": 15
+    },
+    {
+      "room": 15,
+      "column": 25,
+      "row": 9,
+      "height": 139,
+      "armed_field": 15
+    },
+    {
+      "room": 15,
+      "column": 25,
+      "row": 9,
+      "height": 140,
+      "armed_field": 15
+    },
+    {
+      "room": 15,
+      "column": 14,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 15,
+      "column": 14,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 15,
+      "column": 25,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 15,
+      "column": 25,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 10,
+      "row": 6,
+      "height": 91,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 10,
+      "row": 6,
+      "height": 92,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 28,
+      "row": 6,
+      "height": 91,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 28,
+      "row": 6,
+      "height": 92,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 16,
+      "row": 9,
+      "height": 139,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 16,
+      "row": 9,
+      "height": 140,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 25,
+      "row": 9,
+      "height": 139,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 25,
+      "row": 9,
+      "height": 140,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 16,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 16,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 25,
+      "row": 12,
+      "height": 187,
+      "armed_field": 15
+    },
+    {
+      "room": 17,
+      "column": 25,
+      "row": 12,
+      "height": 188,
+      "armed_field": 15
+    }
+  ],
+  "guards": [
+    {
+      "actor": 0,
+      "case": "active",
+      "armed": true
+    },
+    {
+      "actor": 0,
+      "case": "inactive",
+      "armed": false
+    },
+    {
+      "actor": 0,
+      "case": "dying",
+      "armed": false
+    },
+    {
+      "actor": 0,
+      "case": "all_slots_busy",
+      "armed": false
+    },
+    {
+      "actor": 0,
+      "case": "disabled",
+      "armed": false
+    },
+    {
+      "actor": 1,
+      "case": "active",
+      "armed": true
+    },
+    {
+      "actor": 1,
+      "case": "inactive",
+      "armed": false
+    },
+    {
+      "actor": 1,
+      "case": "dying",
+      "armed": false
+    },
+    {
+      "actor": 1,
+      "case": "all_slots_busy",
+      "armed": false
+    },
+    {
+      "actor": 1,
+      "case": "disabled",
+      "armed": false
+    },
+    {
+      "actor": 2,
+      "case": "active",
+      "armed": true
+    },
+    {
+      "actor": 2,
+      "case": "inactive",
+      "armed": false
+    },
+    {
+      "actor": 2,
+      "case": "dying",
+      "armed": false
+    },
+    {
+      "actor": 2,
+      "case": "all_slots_busy",
+      "armed": false
+    },
+    {
+      "actor": 2,
+      "case": "disabled",
+      "armed": false
+    }
+  ],
+  "method": "Injected starts; independent pixel-set oracle; host engine with the production bomb margin enabled. Not a natural C64 playthrough.",
+  "host_sources": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "72c8a10ebd5d2a272d7ad00c9cd0a33a3b46aaca146fa7842ec195eb7d8015fe"
+    },
+    {
+      "path": "tests/source_actor_bridge.c",
+      "sha256": "9548f50571ede97c0ba8df23d9612aa3a09ac328ed87b69f161a51bc49c26356"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "b4ca73431b96f396fee5533a057d70bfe7286b1322b4c5db39d4ddeeaf3346e7"
+    },
+    {
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
+    },
+    {
+      "path": "core/game.h",
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
+    },
+    {
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
+    },
+    {
+      "path": "core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "d5499ec0d5ef5add4eb884a1c9b44f157d4cd8c00565067c0de40688061e116a"
+    },
+    {
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
+    },
+    {
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
+    },
+    {
+      "path": "core/c64_sfx.h",
+      "sha256": "29d9e01f497a2dce96f9ce24900a10b71871639f27e5c4673fdb9cf1659093ca"
+    },
+    {
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
+    },
+    {
+      "path": "tools/build_c64_actors.py",
+      "sha256": "4761e14f38fe762840bb12e6da73de610f3b7b6185cfc8271b11319fd7fa9824"
+    },
+    {
+      "path": "tools/native_actor_continuations.py",
+      "sha256": "b1721f8fb468d77c70c57eb99fa56955586d5a0413970b3a41613f985cd922b1"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "9181cd2e29109ea58c0495e6d21c0c91d2220ccf560291033763b941cc2f548d"
+    },
+    {
+      "path": "test-c64-actors.ps1",
+      "sha256": "8a8d9051b84d59b0f839665e1c93d409b535aaec28b232817a58ce6dbadc6dbd"
+    }
+  ]
+}

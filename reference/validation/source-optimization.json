@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-31",
-  "status": "measured_op_room_actor_delivery",
+  "date": "2026-11-01",
+  "status": "measured_lamp_background_and_contact_updates",
   "converted_jsrs": 444,
   "pairs": [
     {
@@ -23,19 +23,19 @@
   "normal_build": [
     {
       "path": "amiga/out/bruce_amiga.exe",
-      "sha256": "1b6e00855e6f8a7482265b2f5af69f4101529335b81eb428513e5923350d743d"
+      "sha256": "d9af5937382e79f2f992d5c25bf3116b0538ce384903fdee0f7289184026d5f1"
     },
     {
       "path": "amiga/out/bruce_amiga.elf",
-      "sha256": "377958e63d7f19573945a0c08ad82fc85925d6e4650bb89bf92c15223bae50da"
+      "sha256": "1b22982fcc76f24db7c81d79df1088d8a24f794d6e0d4708cd50a03cf1ee3d10"
     },
     {
       "path": "amiga/out/bruce_amiga.adf",
-      "sha256": "9c4b315370e5e1bf7cd58d7db9961ed43f5e7459e343b0eaa14c2813e0729425"
+      "sha256": "d62c80a0b7bcb395bd70223e1313b5b77731dcfd012bebb643d017f6d983783c"
     },
     {
       "path": ".tmp/amiga-boot/c/start",
-      "sha256": "1b6e00855e6f8a7482265b2f5af69f4101529335b81eb428513e5923350d743d"
+      "sha256": "d9af5937382e79f2f992d5c25bf3116b0538ce384903fdee0f7289184026d5f1"
     }
   ],
   "realtime_accepted": false,
@@ -48,15 +48,15 @@
   "artifacts": [
     {
       "path": "reference/validation/compact-actor-delivery.json",
-      "sha256": "bfea7631fd2b1ad10698bd5388013a3b54541375d49b45feca374427fd6160d8"
+      "sha256": "e1377ad884f0d9d952488a6987b4cec8ade8d4a408762494097c026d63c247cc"
     },
     {
       "path": "reference/validation/source-world-delivery.json",
-      "sha256": "7e8478409cfbb58b959897b3b2421f4a9f07f7c7b445d3e8ec368919d8c0dbe1"
+      "sha256": "2df2766f329e66154db5249607d339fcb5b0d842360125abc725b3ee5218a2ea"
     },
     {
       "path": "tools/verify_source_optimization.py",
-      "sha256": "aedeb5c10d877f2401d341fcbdc98f6cfba17d17f59f2ca8d80d21cd842c7370"
+      "sha256": "0336b01c3e38f12ad3f53bdba2ea8d62bd986c840094af723d90550fc99e1e23"
     },
     {
       "path": "reference/analysis/flat-control-compact-2026-10-30/delivery-before/reference/validation/source-optimization.json",
@@ -93,8 +93,8 @@
     "method": "Existing audio service polled after complete field calls; same game-field count; SID guards/order/data unchanged"
   },
   "immediate_parent_history": {
-    "path": "reference/analysis/op-finish-2026-10-31/previous-delivery.json",
-    "sha256": "7109f7c6400217c31932a9fc37a908024bccb78ad857afa03f90e65835dfbb56"
+    "path": "reference/analysis/actor-draw-2026-11-01/delivery.json",
+    "sha256": "b5ac9de30b8debf5ba09d4dafc6b2aa758cb1611a39c08d4a8662e7142137670"
   },
   "loader_blank": {
     "source_disable": "$09BC-$09C1",
@@ -443,40 +443,45 @@
     ]
   ],
   "op_measured": {
-    "final-still": [
+    "direct-a": [
       240,
-      766,
+      752,
       0
     ],
-    "final-move": [
+    "direct-b": [
       240,
-      821,
-      6
-    ],
-    "final-move2": [
-      240,
-      823,
-      6
-    ],
-    "final-stairs": [
-      240,
-      779,
+      748,
       0
     ],
-    "final-yamo": [
+    "direct-still-a": [
+      240,
+      728,
+      0
+    ],
+    "direct-still-b": [
+      240,
+      728,
+      0
+    ],
+    "direct-stairs": [
+      240,
+      784,
+      0
+    ],
+    "direct-yamo": [
       240,
       720,
       0
     ],
-    "long-release-a": [
-      1833,
+    "long-direct-a": [
+      1943,
       6000,
-      19
+      0
     ],
-    "long-release-b": [
-      1834,
+    "long-direct-b": [
+      1945,
       6000,
-      9
+      0
     ]
   }
 }

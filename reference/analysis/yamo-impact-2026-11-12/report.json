@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-12",
+  "change": "Replace Enhanced Yamo victim grunts with two local AudioGen object-impact samples. No Classic or gameplay change.",
+  "source_sites": {
+    "2E30": "Yamo victim effect 86",
+    "2A93": "Yamo victim effect 87",
+    "3059": "Saved Yamo victim in 51, trap effect 8C"
+  },
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "sources": "assets/audio/enhanced-yamo-hit-v2/sources.json",
+  "generation": "Local AudioGen medium; three 1-second candidates, first two selected; raw selected takes preserved.",
+  "bank": {
+    "samples": 16,
+    "packed_bytes_before": 6950,
+    "packed_bytes_after": 6870,
+    "chip_ram_added": 0,
+    "voice_page_bytes": 1024,
+    "new_sample_pcm_bytes": 880
+  },
+  "host": "PASS all 16 sample pages, polyphony, queue priority, short swings, silence reload, SID restore and Yamo victim routing via test-enhanced-audio.ps1",
+  "native": {
+    "method": "Check both Enhanced Yamo impacts in an owned normal-ADF WinUAE instance.\n\nActors are paused and the real Paula service is given controlled cue requests.\nThis checks asset delivery, not a naturally played combat encounter.\n",
+    "checks": [
+      {
+        "variant": 0,
+        "pcm_bytes": 880,
+        "period": 452,
+        "pcm_sha256": "912e55e19de8bf285c32b552e5749a72f7785e30ae2479cab1b12d300e61cd0f",
+        "matched": true
+      },
+      {
+        "variant": 1,
+        "pcm_bytes": 880,
+        "period": 435,
+        "pcm_sha256": "a1610a07298fff44de7749d0985d4f03817d6594c0001e96bfc5a39ba46297c8",
+        "matched": true
+      }
+    ]
+  },
+  "build": {
+    "bruce_amiga.adf": {
+      "bytes": 901120,
+      "sha256": "8b4a6d86d17472f822988519afe749b03439d7e20c39152abc0814837e9b2a76"
+    },
+    "bruce_amiga.elf": {
+      "bytes": 1982320,
+      "sha256": "86837eb1226c68e68cbfcf4342505f03b0226f09c9da8265f59b9ff51662e9bc"
+    },
+    "bruce_amiga.exe": {
+      "bytes": 377664,
+      "sha256": "2b6115967d4fdbce6acb8ec72ad775aa99c179dacd5b6e600e335b18825d9173"
+    }
+  },
+  "limits": [
+    "Native audio check uses controlled cue requests with paused actors, not natural combat.",
+    "Generated clips were checked numerically and a packed-playback preview was exported; no model-side listening was available.",
+    "Physical Amiga listening remains a user retest."
+  ],
+  "preview": "assets/audio/enhanced-yamo-hit-v2/preview.wav"
+}

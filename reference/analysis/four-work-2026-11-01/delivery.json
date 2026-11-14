@@ -1,0 +1,265 @@
+{
+  "predecessor": {
+    "path": "reference/analysis/actor-draw-2026-11-01/delivery.json",
+    "sha256": "b5ac9de30b8debf5ba09d4dafc6b2aa758cb1611a39c08d4a8662e7142137670"
+  },
+  "production_mode": "direct",
+  "session_variant": "all",
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "d9af5937382e79f2f992d5c25bf3116b0538ce384903fdee0f7289184026d5f1"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "1b22982fcc76f24db7c81d79df1088d8a24f794d6e0d4708cd50a03cf1ee3d10"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "d62c80a0b7bcb395bd70223e1313b5b77731dcfd012bebb643d017f6d983783c"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "d9af5937382e79f2f992d5c25bf3116b0538ce384903fdee0f7289184026d5f1"
+    }
+  ],
+  "diagnostic_exe": "38197066091286d996c8a4853e475e1aa5b4231c250db316b01fbfd0169d47e0",
+  "proofs": [
+    {
+      "path": "amiga/contact_rows.s",
+      "sha256": "f0dd02809ec2bcd4b3ff6071ae074078612b625022407bce71b99817fa6f570b"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "44ff41e04696aecf5132c59592ae92ea0c65eddd56984331e24f80bc1546f323"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "a6fbac8c2fa63576d780ce1bf39c8deec3e5025dc73f47328264bc4afd1cf4af"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "d5499ec0d5ef5add4eb884a1c9b44f157d4cd8c00565067c0de40688061e116a"
+    },
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "76e3a9ae5b654e3afa442170905c3c2f1cb94fa7864f65e3315b25af73574cb2"
+    },
+    {
+      "path": "core/c64_rooms.h",
+      "sha256": "1ebd05a45220c517fa911c689b7ce68a7f8a653202e6ba0d91a0e49645aa5181"
+    },
+    {
+      "path": "core/scene_copy.h",
+      "sha256": "5a09053558b66d8c453ad8c58a058fb44752967bbd900f74a54593c3e6678cc3"
+    },
+    {
+      "path": "core/session.c",
+      "sha256": "9999ec344eeba513878dfe165303af952bc8352206a9b019eb972d5a50ec06bb"
+    },
+    {
+      "path": "core/source_dma.c",
+      "sha256": "79eac621c6b5338c8670c9443fb1a861f71f1b5fd33fc39cb02b08b8d01326ab"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "179978575efb4b07888a378436b1c077034f8f9b8f113ce9f1a6284763d213a8"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "1d2cde1c2efee2a9353a3181a03db7dd4799ca96c092259b2e171582d32d514e"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "8c00e76e0d129865b5e97bc27472524eaacb6f4a04e75f345385bb434c4d7547"
+    },
+    {
+      "path": "reference/analysis/four-work-2026-11-01/check_lamps.c",
+      "sha256": "10e9a4d6e2306e6b0b599c1305922747c96b7ccea95a879692a03d6cd8dcd01c"
+    },
+    {
+      "path": "reference/analysis/four-work-2026-11-01/check_queue.c",
+      "sha256": "95f07fd1c289c00edd94f9aa418e324fba04e38a3caec0575e6ad2f62cf795f5"
+    },
+    {
+      "path": "reference/analysis/irq-input-2026-10-30/report.json",
+      "sha256": "836b0a0842a96b02a4be5aa7aeeb172184697b2cb16abdcd97266b3b49a36148"
+    },
+    {
+      "path": "reference/validation/source-input-slot.json",
+      "sha256": "b139a269efd6d6d604cc02b0d723fa7086af48517b8e36c06c829e10fe3e47d3"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "2b03ce41b4bc56e8084cf2b6dd23dfc7f04d7101f4676794fdba876b311e4b64"
+    },
+    {
+      "path": "tools/audit_c64_world.py",
+      "sha256": "9e11933b374da85ef1735704e7165e9cf0f5668affd575fe932d84566f8d48c3"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "9181cd2e29109ea58c0495e6d21c0c91d2220ccf560291033763b941cc2f548d"
+    }
+  ],
+  "runs": {
+    "direct-a": {
+      "raw": {
+        "path": "reference/analysis/four-work-2026-11-01/runs/a.txt",
+        "sha256": "3812946b9e7b1f7c8df08ffc0d08867b34c16d47314e66cd731e66911a1c2f93"
+      },
+      "exe": "38197066091286d996c8a4853e475e1aa5b4231c250db316b01fbfd0169d47e0",
+      "route": "0003020000f000f0"
+    },
+    "direct-b": {
+      "raw": {
+        "path": "reference/analysis/four-work-2026-11-01/runs/b.txt",
+        "sha256": "0f814067d8541e0a5fe91e208887b6985a2648a7a4b0f53a14390a2407e3923e"
+      },
+      "exe": "38197066091286d996c8a4853e475e1aa5b4231c250db316b01fbfd0169d47e0",
+      "route": "0003020000f000f0"
+    },
+    "direct-still-a": {
+      "raw": {
+        "path": "reference/analysis/four-work-2026-11-01/runs/still-a.txt",
+        "sha256": "8e36213bad9500bd3c45fcb2c06765800ad769da2ce9dc84e45648a3a28a32cc"
+      },
+      "exe": "38197066091286d996c8a4853e475e1aa5b4231c250db316b01fbfd0169d47e0",
+      "route": "0003000000f000f0"
+    },
+    "direct-still-b": {
+      "raw": {
+        "path": "reference/analysis/four-work-2026-11-01/runs/still-b.txt",
+        "sha256": "301dfbb8e1bfbb6bd2d6b9a22af9fc4558d0ed80d902012bc88712efc30d4da7"
+      },
+      "exe": "38197066091286d996c8a4853e475e1aa5b4231c250db316b01fbfd0169d47e0",
+      "route": "0003000000f000f0"
+    },
+    "direct-stairs": {
+      "raw": {
+        "path": "reference/analysis/four-work-2026-11-01/runs/stairs.txt",
+        "sha256": "b82a8eb828018991c7bdb5ff489c1c43d06c560f5c80b98ed3fdff17c15fbfd8"
+      },
+      "exe": "38197066091286d996c8a4853e475e1aa5b4231c250db316b01fbfd0169d47e0",
+      "route": "0b03010000f000f0"
+    },
+    "direct-yamo": {
+      "raw": {
+        "path": "reference/analysis/four-work-2026-11-01/runs/yamo.txt",
+        "sha256": "cfb302bf63696dc61e75db7844eb88fe591dd100bf3f40aef9f4c502af99b0da"
+      },
+      "exe": "38197066091286d996c8a4853e475e1aa5b4231c250db316b01fbfd0169d47e0",
+      "route": "0c01000000f000f0"
+    },
+    "long-direct-a": {
+      "raw": {
+        "path": "reference/analysis/four-work-2026-11-01/runs/long-a.txt",
+        "sha256": "012ea57c7a8c8d2c22465eeceee5e9d63cf887128f9dcde7d66dfbc942f72dbc"
+      },
+      "exe": "3b8865c47b7fe755d2437207b57a4a19c452262a08a363575ede257f8dce97de",
+      "route": "0003020000f000f0"
+    },
+    "long-direct-b": {
+      "raw": {
+        "path": "reference/analysis/four-work-2026-11-01/runs/long-b.txt",
+        "sha256": "f71e9a929dde80db62f2df5110513660d1b8343d66b98099bc451e97e1f369e5"
+      },
+      "exe": "3b8865c47b7fe755d2437207b57a4a19c452262a08a363575ede257f8dce97de",
+      "route": "0003020000f000f0"
+    }
+  },
+  "ui": {
+    "cli": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/normal-cli.json",
+      "sha256": "ce456a92fd27f227400d21406839dc8328745773bd775029feb3db0c8ff70a82"
+    },
+    "adf": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/normal-adf.json",
+      "sha256": "3837776de7933cf6c7e21ab5919403e9ccb4b75060874c8cc423c5175cff52ec"
+    }
+  },
+  "field_evidence": {
+    "stairs": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/render-stairs.json",
+      "sha256": "528e2a06b86fd9fac2892eb8bce8b91bbb57e21b3b5e83b3c2a5329e44db5775"
+    },
+    "death": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/render-death.json",
+      "sha256": "0fee6a3a1326f9029f199656a67b242a84225adc5fffbe84cf341ecb37791521"
+    },
+    "alloc-release/allocation.json": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/allocation.json",
+      "sha256": "7b6c39722fabf42f79a440abf163ce7e8e9cd7c17cac62b50a2e313d2244cde1"
+    }
+  },
+  "modules": {
+    "session": "34d3bdac0e8942458cacfdb2536b10cdbff39b4226e673ca414e03f3cd7c915a",
+    "contact_rows": "fe3faecabbecc4e65896f2241b26b8b5290703344465411dfc3922ca0782311b"
+  },
+  "controls": {
+    "lamps": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/lamp-checks.json",
+      "sha256": "5009c28cf6f78310b753e5d30d7d04d6030873102cb098c056213c46df230d91"
+    },
+    "queue": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/queue-checks.json",
+      "sha256": "02d17378e87ce4bac50e4370b580e26f4980c21179bc41584ba99f02ff89a1e2"
+    },
+    "rows": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/rows.bin",
+      "sha256": "617ad7a5a5852ad8d01d3e024a52dfeab59ba15edc197fd65bfbcc144f75f33d"
+    },
+    "timings": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/row-times.bin",
+      "sha256": "700da602f7d7a898715471e19d9dbb6a3e16c38b8494c189c9de86d52f3130dd"
+    },
+    "lamp-a": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/lamp-a.txt",
+      "sha256": "0adaf9749b4c373ec5ff60e95b07012b66296bfceaf6e676549b0dc20f9dec2e"
+    },
+    "paint-a": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/paint-a.txt",
+      "sha256": "cf5111490624fc22cfb5a12cee0d40f7bffe9bb950cf9169829da84f6a984810"
+    },
+    "queue-a": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/queue-a.txt",
+      "sha256": "9cc963afd57260cfe25cdcb7611b91ee6afaa318ebcecf93f31668a13ec4183f"
+    },
+    "rows-a": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/rows-a.txt",
+      "sha256": "7b7c677ea424ec4c7b7d26373a7d233a7c4fd0d19d66adb90a2d2de445afb3bc"
+    },
+    "meter-lamp": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/meter-lamp.txt",
+      "sha256": "a6fe3c5e6f8b6aa16519a698ec26dbc27b8247fbf78e5547708ce682d72d4592"
+    },
+    "meter-all": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/meter-all.txt",
+      "sha256": "a9a8b2221d3d44760468d675d5300e01928bb9947996ce29920068e2abc1eb2f"
+    },
+    "base-move": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/base-move.txt",
+      "sha256": "114a23462e00f29d90862063421fc1c33f3bbdf458ca7d024e8f1d2dea80f198"
+    },
+    "base-stairs": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/base-stairs.txt",
+      "sha256": "3a087cc602c19ebc110a3c3e6ea9ba7d7bad4b2c6ddbf27c11c15219212c53e8"
+    },
+    "pilot-best-stairs": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/pilot-best-stairs.txt",
+      "sha256": "c8840066af3faa724d55ec8e9b18da50a1edcfa16dabd2570938a3f4aa8b0f48"
+    },
+    "pilot-best-long-b": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/pilot-best-long-b.txt",
+      "sha256": "8d71eaa0937050ac877f172e5f5d214536e9c9ffff9fa7fe743e9605b1b895e1"
+    },
+    "pilot-splitqueue-stairs": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/pilot-splitqueue-stairs.txt",
+      "sha256": "9b866244bcbf02fdeae96a85aee8970569b8e7b9e90c962c8b1584798a01f2ab"
+    },
+    "pilot-splitqueue-long-b": {
+      "path": "reference/analysis/four-work-2026-11-01/runs/pilot-splitqueue-long-b.txt",
+      "sha256": "02b79639c8ac530a3240eba391aa75b87f530ace61245fe980740ffdc52034eb"
+    }
+  }
+}

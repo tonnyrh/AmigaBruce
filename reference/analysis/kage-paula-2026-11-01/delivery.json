@@ -1,0 +1,372 @@
+{
+  "parent_commit": "5ed53f670f0c434905b1d8eea1fd97e3739ea9bc",
+  "parent": {
+    "path": "reference/analysis/op-finish-2026-10-31/pipeline-result.json",
+    "sha256": "15719354ce3900756863f23fec85cc52bb73a0d1b325144b5b8ce6562247a4cb"
+  },
+  "production_mode": "polled-hud",
+  "diagnostic_exe": "f52d7a274a5597f1d9e81763117535bd50282de62c9a74e3aeddd4eac7f42de1",
+  "engine_sections": "ef09954ee325306cf269b7ec65db77d88c775f39196421bf7db334cd4a32bb1b",
+  "normal_build": [
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "sha256": "d1df21b3f41234dfec6f7c7786ea68cd9bff42977412ed34c3da36abcb99c528"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.elf",
+      "sha256": "92a21b2b53d2038f4d84b7aa889499fb14bc725dc4f77d6d1cc146ff915e246d"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "sha256": "5cd94f13d262ff2febf7ef28819372a072751cbf2e34b5153e9449f68af969e3"
+    },
+    {
+      "path": ".tmp/amiga-boot/c/start",
+      "sha256": "d1df21b3f41234dfec6f7c7786ea68cd9bff42977412ed34c3da36abcb99c528"
+    }
+  ],
+  "ui": {
+    "cli": {
+      "path": "reference/analysis/kage-paula-2026-11-01/runs/normal-cli.json",
+      "sha256": "e2d421c40a50905c209d07750fb123ed93459bdc3765ee08a977207649e7680f"
+    },
+    "adf": {
+      "path": "reference/analysis/kage-paula-2026-11-01/runs/normal-adf.json",
+      "sha256": "89aa4c385a11b4f939167e39b68aaf43b5fc22cf3f85d7eaa1bbb0a145576de2"
+    }
+  },
+  "runs": {
+    "polled-hud-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/polled-hud-a.txt",
+        "sha256": "13385c35a1ed8862cdf5fade8df22f49c10e5ec942a258f4a1d11eb958fa02d0"
+      },
+      "exe": "f52d7a274a5597f1d9e81763117535bd50282de62c9a74e3aeddd4eac7f42de1",
+      "route": "0003020000f000f0"
+    },
+    "polled-hud-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/polled-hud-b.txt",
+        "sha256": "68c2d1e792fe6be705c7ac7a66ff5951ed944220acfe53f9c6cd9dd23ce24648"
+      },
+      "exe": "f52d7a274a5597f1d9e81763117535bd50282de62c9a74e3aeddd4eac7f42de1",
+      "route": "0003020000f000f0"
+    },
+    "long-polled-hud-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/long-polled-hud-a.txt",
+        "sha256": "ff5adf53bb6950be393b82ae530bb7b827c0295902a4072b62dbfe260938ce7a"
+      },
+      "exe": "3fb58b1bc040547ba2f5d5a4636b4ddafc9a520e5b416684069fbf668f785b29",
+      "route": "0003020000f000f0"
+    },
+    "long-polled-hud-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/long-polled-hud-b.txt",
+        "sha256": "a44bd644ea2a049462c29d06b809577be3010ca4af950cad974c9d03296a3084"
+      },
+      "exe": "3fb58b1bc040547ba2f5d5a4636b4ddafc9a520e5b416684069fbf668f785b29",
+      "route": "0003020000f000f0"
+    },
+    "polled-still": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/polled-still.txt",
+        "sha256": "5734ac61b39eff2302e324409c7859aa56ea6af14cf0f56679aaa833d6f98bab"
+      },
+      "exe": "f52d7a274a5597f1d9e81763117535bd50282de62c9a74e3aeddd4eac7f42de1",
+      "route": "0003000000f000f0"
+    },
+    "polled-still-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/polled-still-b.txt",
+        "sha256": "cd3706fb8eb35547c1caa2667de648e34725e628b6e412b8e7b7a470a0657397"
+      },
+      "exe": "f52d7a274a5597f1d9e81763117535bd50282de62c9a74e3aeddd4eac7f42de1",
+      "route": "0003000000f000f0"
+    },
+    "polled-stairs": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/polled-stairs.txt",
+        "sha256": "15b7c298387a5b03d75aa2806c0492723daaa1df44670512c001f9e8b25712e6"
+      },
+      "exe": "f52d7a274a5597f1d9e81763117535bd50282de62c9a74e3aeddd4eac7f42de1",
+      "route": "0b03010000f000f0"
+    },
+    "polled-yamo": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/polled-yamo.txt",
+        "sha256": "c96df6d0fc6bb051479c9bec95cc582f95315749ffedc585383b04274e3d3964"
+      },
+      "exe": "f52d7a274a5597f1d9e81763117535bd50282de62c9a74e3aeddd4eac7f42de1",
+      "route": "0c01000000f000f0"
+    }
+  },
+  "witness": {
+    "award-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/award-a.txt",
+        "sha256": "44e835dd25238b1ccfbb72e57fb6820ac630156b270dba99b5c750ac41ff1d05"
+      },
+      "route": "0003020000f000f0",
+      "exe": "77a050f78f3a2a0b0ef5386fff91ae13a179a383641ee12c2a1f60a5189025c3"
+    },
+    "award-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/award-b.txt",
+        "sha256": "6363375eba65db4c998900230184b6150a48343e1d9514999724acc0318bceca"
+      },
+      "route": "0003020000f000f0",
+      "exe": "77a050f78f3a2a0b0ef5386fff91ae13a179a383641ee12c2a1f60a5189025c3"
+    },
+    "fold-long-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/fold-long-a.txt",
+        "sha256": "c9fb2436e75c3d89d3bb37fa7dee55ee930cc0dd7b6c90e2e30d7c31b0e6df4e"
+      },
+      "route": "0003020000f000f0",
+      "exe": "c9d52e82bcbb43eff6165a78ceff416d04fe6cea9df592d8541095b1a4187a21"
+    },
+    "fold-long-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/fold-long-b.txt",
+        "sha256": "8d7b347022fcfade15353819e5d8fd8e46b17708bc87500c0264d00524590795"
+      },
+      "route": "0003020000f000f0",
+      "exe": "c9d52e82bcbb43eff6165a78ceff416d04fe6cea9df592d8541095b1a4187a21"
+    },
+    "long-hud-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/long-hud-a.txt",
+        "sha256": "1a87a6f9e5cb2b620a24ebfc1f1268164572d636ceafd13d3762ee8ac14199f6"
+      },
+      "route": "0003020000f000f0",
+      "exe": "648d66e70abecf4ca3e19ed514a24e041ba3aa349989c016c2031b172539b036"
+    },
+    "long-hud-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/long-hud-b.txt",
+        "sha256": "5d8ec954a412f87acbef3a245e45e0f9479ada8c4bf00aff1bbc589b22754606"
+      },
+      "route": "0003020000f000f0",
+      "exe": "648d66e70abecf4ca3e19ed514a24e041ba3aa349989c016c2031b172539b036"
+    },
+    "long-irq-polled-hud-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/long-irq-polled-hud-a.txt",
+        "sha256": "7fe22f326624eea70cf679606932ccf782f74b135a2aeb158b36fb1800876bf6"
+      },
+      "route": "0003020000f000f0",
+      "exe": "4f7d429935fafe5e0232f8e9026bdcfce87f16de68e1dc4f7821af62a78508d3"
+    },
+    "long-irq-polled-hud-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/long-irq-polled-hud-b.txt",
+        "sha256": "14c133734a9de91a5bb55bf822a85ca39bcf8b5eecd1e4a88efcd5713a8f91f0"
+      },
+      "route": "0003020000f000f0",
+      "exe": "4f7d429935fafe5e0232f8e9026bdcfce87f16de68e1dc4f7821af62a78508d3"
+    },
+    "long-sliced-polled-hud-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/long-sliced-polled-hud-a.txt",
+        "sha256": "b27ecbf3c64f2acfa83adb6558dbbb6f21e34f96d489bb1b4bf2951b805e6fad"
+      },
+      "route": "0003020000f000f0",
+      "exe": "1c3b9850bc4d69320054cb750040cc2fc0f1cc2376def31403059639b48f684c"
+    },
+    "long-sliced-polled-hud-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/long-sliced-polled-hud-b.txt",
+        "sha256": "035c5c770a6ad54dcefbcdf917d2c19bc21ba5fb76193ba589207d6d638d5d66"
+      },
+      "route": "0003020000f000f0",
+      "exe": "1c3b9850bc4d69320054cb750040cc2fc0f1cc2376def31403059639b48f684c"
+    },
+    "old-still-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/old-still-a.txt",
+        "sha256": "ea42e9b105cc7b62d47c0391f56217e45fc6fb4decf2d4944660e83aab9bae3c"
+      },
+      "route": "0003000000f000f0",
+      "exe": "556b448a18aed147247cca68684c838aa42e50ab24e23a1fc5fe062865f5d8ea"
+    },
+    "old-still-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/old-still-b.txt",
+        "sha256": "5050bbfeb0ac65c9bd2898f4829e902d76e4bcebcff7056a8c80ab23d919c733"
+      },
+      "route": "0003000000f000f0",
+      "exe": "556b448a18aed147247cca68684c838aa42e50ab24e23a1fc5fe062865f5d8ea"
+    },
+    "published-168-left": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/published-168-left.txt",
+        "sha256": "8be83199556ab2a47f70f712175014a20afcf1d4b7d60db956e6e9f0f2c5e83c"
+      },
+      "route": "0003020100f000f0",
+      "exe": "a11ba3aa9d1998751e4ca521a2fc3ddd74d5403971c36638b3efa7292d88b22e"
+    },
+    "published-168-right": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/published-168-right.txt",
+        "sha256": "0b14f5db26c5136a526106e09fc4005cacffa7b2e09cdba2f9487a2aedd50b45"
+      },
+      "route": "0003020200f000f0",
+      "exe": "a11ba3aa9d1998751e4ca521a2fc3ddd74d5403971c36638b3efa7292d88b22e"
+    },
+    "published-207-left": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/published-207-left.txt",
+        "sha256": "6f26b4bd3858c460b54e2d5c9146a7ccc70d216e05021db9a052641e1ac24c37"
+      },
+      "route": "0003020500f000f0",
+      "exe": "a11ba3aa9d1998751e4ca521a2fc3ddd74d5403971c36638b3efa7292d88b22e"
+    },
+    "published-207-right": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/published-207-right.txt",
+        "sha256": "0a3013a7ae4dc64b49a9989d69f5b535204bfda597c77f660e6e8420363203b7"
+      },
+      "route": "0003020600f000f0",
+      "exe": "a11ba3aa9d1998751e4ca521a2fc3ddd74d5403971c36638b3efa7292d88b22e"
+    },
+    "response-168-left": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/response-168-left.txt",
+        "sha256": "1900025eaac9a4763d1e8c42af2bafdfe9530b0fa068cdecca046c4a94688d7a"
+      },
+      "route": "0003020100f000f0",
+      "exe": "d050d0bf8fa1ea62e2b2d8645fdab0bc084f991c967c6bdc9546848f4dcf56cd"
+    },
+    "response-168-right": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/response-168-right.txt",
+        "sha256": "d52c016eaafdd487fe395ce580ae8e7089bc787ccaf27e8a1bd3058608d524b7"
+      },
+      "route": "0003020200f000f0",
+      "exe": "d050d0bf8fa1ea62e2b2d8645fdab0bc084f991c967c6bdc9546848f4dcf56cd"
+    },
+    "response-full-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/response-full-a.txt",
+        "sha256": "763998d5025dd8c8a89d92c5610529f2253306ce98bc6ebb50bcabf971cf0910"
+      },
+      "route": "0003020500f000f0",
+      "exe": "d7aebfa0721d0dfeb44f72750596b1f8db21a5c6ba1cd5c31e7dd1311e27dadf"
+    },
+    "response-full-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/response-full-b.txt",
+        "sha256": "eaca990bcaa17b1fdbb450d9f5b5c8944c08f45e7be95ab8c5563773a9a70292"
+      },
+      "route": "0003020600f000f0",
+      "exe": "d7aebfa0721d0dfeb44f72750596b1f8db21a5c6ba1cd5c31e7dd1311e27dadf"
+    },
+    "response-old-168-left": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/response-old-168-left.txt",
+        "sha256": "3d7284d15f837c27b9907b205a6abcd1100d87f4d003425c672439057f4ca129"
+      },
+      "route": "0003020100f000f0",
+      "exe": "1756641e5af0081faad38270c7b0162ca6fe731651465a4ac42e8cedddd5fcb9"
+    },
+    "response-old-168-right": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/response-old-168-right.txt",
+        "sha256": "822e19547d6842e951113e6b6ab11c2f5ffb4df6d9f76ed197243ea24aaf7d40"
+      },
+      "route": "0003020200f000f0",
+      "exe": "1756641e5af0081faad38270c7b0162ca6fe731651465a4ac42e8cedddd5fcb9"
+    },
+    "response-old-full-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/response-old-full-a.txt",
+        "sha256": "2275c203ccd48bb08d3b64a55850cb71b77d112d1792c4217277a12cda026664"
+      },
+      "route": "0003020500f000f0",
+      "exe": "923408e4613d46ed4126e7ab9772dcb80be8b0512b274e7e24523aa3523c57f6"
+    },
+    "response-old-full-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/response-old-full-b.txt",
+        "sha256": "bcf969ddfa9349f74a02755cb49dd47dd45c66fedf27785a7b6dfb0ca59e07e8"
+      },
+      "route": "0003020600f000f0",
+      "exe": "923408e4613d46ed4126e7ab9772dcb80be8b0512b274e7e24523aa3523c57f6"
+    },
+    "trace-a": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/trace-a.txt",
+        "sha256": "9f24f2c1f6ba91d143423e18cd47c930a9bb615e243e7432481a8c36cfcc9095"
+      },
+      "route": "0003020000f000f0",
+      "exe": "00f0735277e0aae6f8f8740508499cd267a755fcf68dd88184ad6fb993928702"
+    },
+    "trace-b": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/trace-b.txt",
+        "sha256": "00acafeb84f870d2539a4e9187f1b6aed3f29a4443a9ad068cc44211e6f85743"
+      },
+      "route": "0003020000f000f0",
+      "exe": "00f0735277e0aae6f8f8740508499cd267a755fcf68dd88184ad6fb993928702"
+    },
+    "trace-long-1": {
+      "raw": {
+        "path": "reference/analysis/kage-paula-2026-11-01/runs/trace-long-1.txt",
+        "sha256": "30bcf41fba5e70bf51264989ef8638f791db4017fcc95a45c84222cd34f94c9f"
+      },
+      "route": "0003020000f000f0",
+      "exe": "bfcc7937cdc914e05e2b7f7b32075d34a2b03707f0bd402c9037441d2851c74d"
+    }
+  },
+  "comparison": {
+    "path": "reference/analysis/kage-paula-2026-11-01/runs/input-and-combat.json",
+    "sha256": "c7350abe1466b103cd466fc6c6c88848061facf552453406ea394c1e81e46229"
+  },
+  "cpu": {
+    "path": "reference/analysis/kage-paula-2026-11-01/runs/combat-cpu.json",
+    "sha256": "895c30225ce528460515af9369cd972fe72e4ebe0d4e924116baf102bb029612"
+  },
+  "native": {
+    "path": "reference/analysis/kage-paula-2026-11-01/runs/combat-68000.bin",
+    "sha256": "ff16d3f4be56745866d30f5295f2d9c013a90acd3bb44fbd3c8f3425c700d5da"
+  },
+  "proofs": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "ac8c653dde0ca9a397c633fdd16653ab074dfe180578fa8b9224eedf5eb0cb94"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "34f6ce55d363e7d286f1861afb40535e1abaf23c7fc05745a48a08c2b9cacb1c"
+    },
+    {
+      "path": "amiga/main.c",
+      "sha256": "e9a6f4669266aa9feddcc5c2844dd4b2f93cd3f619bd41e88ecbb31c44a44d7d"
+    },
+    {
+      "path": "amiga/source_audio.h",
+      "sha256": "87af9a37bf2b5336e3cc96820d4e73710ec92e1f702becbbe9d4f54594ef01f1"
+    },
+    {
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "36afe2af4d41bf17e9f889a9ce7ab9665f80d5bd35a374dd800eb44b599d0576"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/report.json",
+      "sha256": "8427ebccea50fc86bea01d27bb34144260abf2d9a0d8345ab02266822e8b2a9d"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/integrated-controls.json",
+      "sha256": "c58ae17640211b41c6456cc7f66e8b0c9ae0ece1023c40a03d83b53bd64f16ce"
+    },
+    {
+      "path": "reference/analysis/actor-chain-2026-10-26/translation.json",
+      "sha256": "776291f28518ee3c38f36a49ab851c85b9b0b210bbc6ecdfad26089217df8b4b"
+    },
+    {
+      "path": "reference/validation/source-world-native.json",
+      "sha256": "c9d058227a51c5dd4650f1dacfd613344640fb51a786473e1c893cb03273764c"
+    }
+  ]
+}

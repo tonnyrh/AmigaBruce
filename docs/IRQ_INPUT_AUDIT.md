@@ -1,5 +1,10 @@
 # OP4: original CIA input slot, 30 October 2026
 
+**1 November update.** The production field now reads the controllers at
+`$169D`. All 32,768 input-buffer comparisons pass. The previously observed
+25,304 mismatches below describe the October build. Full IRQ raster timing
+remains open. [Source and target checks](FIELD_WORK.md).
+
 Frozen candidate SHA256:
 `092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8`.
 Remember/T64 remains unverified as the untouched 1984 edition.

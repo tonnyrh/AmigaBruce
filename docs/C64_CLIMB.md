@@ -1,4 +1,27 @@
-# Klatring: rom5 og sidefart
+# Klatring i rom 2 og rom 5
+
+## Rom 2, toppen av det midtre blå nettet
+
+Fra `01.11.2026.uss` står Bruce og stepper hvis man holder rett opp. Slipp
+opp, ta ett lite steg til høyre og hold deretter rett opp igjen. Fra denne
+stillingen var fire skjermpiksler til høyre nok. I WinUAE gikk kilde-Y fra
+140 til 103, og i PAL VICE fra 140 til 99.
+
+C64-kandidaten beregner kontakt med den aktuelle figurmasken ved
+`$5212–$52AC`. På den lagrede posisjonen gir maske 10 bare støtte
+(`$B6=$01`). Med opp velger `$1DEC–$1E10` da et loddrett hopp.
+Hoppets første positur bruker maske 8, som gir både støtte og nett
+(`$B6=$05`). Ved neste oppdatering avbryter `$2010–$2014` hoppet
+via `$2080 → $20F3 → $2504` før første Y-bevegelse. Bruce får igjen
+maske 10. I VICE gjentok disse to stegene seg 28 ganger på samme piksel.
+En annen positur på samme sted kan gi et annet utfall.
+
+VICE bygde rommet etter vanlig innmarsj. For sammenligningen satte vi
+Bruces posisjon og positurtilstand fra USS-filen. På Amiga ble en kopi
+av lagringen gjenopptatt med joystick i WinUAE. Funn og kontrolloppskrift
+ligger i [paritetsregisterets bevis for rom 2](parity/evidence/CLIMB-R02-0001.json).
+
+## Tidligere gjennomgang av rom 5
 
 27. oktober: [Samlet kildeport](MILESTONE_COMPLETION.md) erstatter den delvise
 aktøradapteren i vanlig spill, også støtte/landing og aktuell positurmaske.

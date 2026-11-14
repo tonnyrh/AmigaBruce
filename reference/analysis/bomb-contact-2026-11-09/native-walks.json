@@ -1,0 +1,1004 @@
+[
+  {
+    "mode": "enhanced",
+    "initial_y": 139,
+    "armed": false,
+    "blast": false,
+    "captured": true,
+    "events": [
+      {
+        "step": 12,
+        "x": 176,
+        "y": 139,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 8,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 14,
+        "x": 168,
+        "y": 139,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 8,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 16,
+        "x": 160,
+        "y": 139,
+        "state": 3,
+        "pose": 14,
+        "contact": 3,
+        "object_row": 8,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 18,
+        "x": 154,
+        "y": 140,
+        "state": 14,
+        "pose": 68,
+        "contact": 0,
+        "object_row": 8,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 20,
+        "x": 150,
+        "y": 140,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 23,
+        "x": 146,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 25,
+        "x": 138,
+        "y": 141,
+        "state": 3,
+        "pose": 16,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 27,
+        "x": 130,
+        "y": 141,
+        "state": 3,
+        "pose": 16,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 29,
+        "x": 122,
+        "y": 141,
+        "state": 3,
+        "pose": 16,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      }
+    ]
+  },
+  {
+    "mode": "enhanced",
+    "initial_y": 140,
+    "armed": true,
+    "blast": true,
+    "captured": true,
+    "events": [
+      {
+        "step": 34,
+        "x": 180,
+        "y": 140,
+        "state": 3,
+        "pose": 16,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 36,
+        "x": 172,
+        "y": 140,
+        "state": 3,
+        "pose": 16,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 38,
+        "x": 164,
+        "y": 140,
+        "state": 3,
+        "pose": 16,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          1,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 41,
+        "x": 154,
+        "y": 140,
+        "state": 3,
+        "pose": 16,
+        "contact": 0,
+        "object_row": 16,
+        "timers": [
+          4,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 43,
+        "x": 150,
+        "y": 141,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          6,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 45,
+        "x": 142,
+        "y": 141,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          8,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 48,
+        "x": 134,
+        "y": 141,
+        "state": 3,
+        "pose": 14,
+        "contact": 2,
+        "object_row": 15,
+        "timers": [
+          11,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 117
+      },
+      {
+        "step": 50,
+        "x": 126,
+        "y": 141,
+        "state": 3,
+        "pose": 14,
+        "contact": 3,
+        "object_row": 8,
+        "timers": [
+          13,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 123
+      },
+      {
+        "step": 52,
+        "x": 108,
+        "y": 141,
+        "state": 3,
+        "pose": 16,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          15,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 123
+      },
+      {
+        "step": 54,
+        "x": 108,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          17,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 117
+      },
+      {
+        "step": 57,
+        "x": 108,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          20,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 117
+      },
+      {
+        "step": 59,
+        "x": 108,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 8,
+        "timers": [
+          22,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 61,
+        "x": 108,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          24,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 63,
+        "x": 108,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      }
+    ]
+  },
+  {
+    "mode": "classic",
+    "initial_y": 139,
+    "armed": false,
+    "blast": false,
+    "captured": true,
+    "events": [
+      {
+        "step": 23,
+        "x": 176,
+        "y": 139,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 8,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 25,
+        "x": 168,
+        "y": 139,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 8,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 27,
+        "x": 160,
+        "y": 139,
+        "state": 3,
+        "pose": 14,
+        "contact": 3,
+        "object_row": 8,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 29,
+        "x": 154,
+        "y": 140,
+        "state": 14,
+        "pose": 68,
+        "contact": 0,
+        "object_row": 8,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 32,
+        "x": 150,
+        "y": 140,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 34,
+        "x": 146,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 36,
+        "x": 138,
+        "y": 141,
+        "state": 3,
+        "pose": 16,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 38,
+        "x": 130,
+        "y": 141,
+        "state": 3,
+        "pose": 14,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 40,
+        "x": 122,
+        "y": 141,
+        "state": 3,
+        "pose": 16,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      }
+    ]
+  },
+  {
+    "mode": "classic",
+    "initial_y": 140,
+    "armed": true,
+    "blast": true,
+    "captured": true,
+    "events": [
+      {
+        "step": 45,
+        "x": 180,
+        "y": 140,
+        "state": 3,
+        "pose": 16,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 47,
+        "x": 172,
+        "y": 140,
+        "state": 3,
+        "pose": 16,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 50,
+        "x": 164,
+        "y": 140,
+        "state": 3,
+        "pose": 16,
+        "contact": 3,
+        "object_row": 8,
+        "timers": [
+          2,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 52,
+        "x": 154,
+        "y": 141,
+        "state": 14,
+        "pose": 68,
+        "contact": 0,
+        "object_row": 9,
+        "timers": [
+          4,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 54,
+        "x": 150,
+        "y": 141,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          6,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 56,
+        "x": 142,
+        "y": 141,
+        "state": 3,
+        "pose": 14,
+        "contact": 1,
+        "object_row": 9,
+        "timers": [
+          8,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 59,
+        "x": 134,
+        "y": 141,
+        "state": 3,
+        "pose": 14,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          11,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 117
+      },
+      {
+        "step": 61,
+        "x": 120,
+        "y": 141,
+        "state": 3,
+        "pose": 16,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          13,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 123
+      },
+      {
+        "step": 63,
+        "x": 120,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          15,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 123
+      },
+      {
+        "step": 65,
+        "x": 120,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          17,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 117
+      },
+      {
+        "step": 67,
+        "x": 120,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          19,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 117
+      },
+      {
+        "step": 70,
+        "x": 120,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          22,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 72,
+        "x": 120,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          24,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      },
+      {
+        "step": 74,
+        "x": 120,
+        "y": 141,
+        "state": 0,
+        "pose": 0,
+        "contact": 3,
+        "object_row": 9,
+        "timers": [
+          0,
+          0,
+          0,
+          20,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        "code": 96
+      }
+    ]
+  }
+]

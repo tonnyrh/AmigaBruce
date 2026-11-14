@@ -10,14 +10,12 @@ bl_contact_rows8:
     moveq #0,%d0
     move.b 9(%a1),%d0
     beq 9f
-    movem.l %d2-%d3/%d5/%a2-%a6,-(%sp)
+    movem.l %d2-%d3/%d5/%a2-%a5,-(%sp)
     move.l %d0,%d3
     subq.w #1,%d3
     moveq #0,%d2
     move.b 8(%a1),%d2
-    moveq #0,%d5
     move.b 7(%a1),%d5
-    move.l %a0,%a6
     move.l %a0,%a2
     move.l %a0,%a3
     move.l %a0,%a4
@@ -32,11 +30,12 @@ bl_contact_rows8:
     adda.l #0xcae0,%a5
     adda.w #0x4eed,%a0
 1:
-    moveq #0,%d0
+    /* D0 was zero-extended for count and stays in 0..255. A0 now
+     * points at $4EED, so $4E is reachable without a second RAM base. */
     move.b (%a2,%d2.w),%d0
     and.b (%a5,%d2.w),%d0
     beq.s 2f
-    move.b %d0,0x4e(%a6)
+    move.b %d0,0x4e-0x4eed(%a0)
     move.l %d0,%d1
     lsr.w #4,%d1
     move.b %d1,(%a0,%d1.w)
@@ -44,11 +43,10 @@ bl_contact_rows8:
     move.b %d0,(%a0,%d0.w)
     move.b %d0,%d5
 2:
-    moveq #0,%d0
     move.b (%a3,%d2.w),%d0
     and.b 32(%a5,%d2.w),%d0
     beq.s 3f
-    move.b %d0,0x4e(%a6)
+    move.b %d0,0x4e-0x4eed(%a0)
     move.l %d0,%d1
     lsr.w #4,%d1
     move.b %d1,23(%a0,%d1.w)
@@ -56,11 +54,10 @@ bl_contact_rows8:
     move.b %d0,23(%a0,%d0.w)
     move.b %d0,%d5
 3:
-    moveq #0,%d0
     move.b (%a4,%d2.w),%d0
     and.b 64(%a5,%d2.w),%d0
     beq.s 4f
-    move.b %d0,0x4e(%a6)
+    move.b %d0,0x4e-0x4eed(%a0)
     move.l %d0,%d1
     lsr.w #4,%d1
     move.b %d1,46(%a0,%d1.w)
@@ -73,7 +70,7 @@ bl_contact_rows8:
     move.b %d0,6(%a1)
     move.b %d5,7(%a1)
     move.b %d2,8(%a1)
-    movem.l (%sp)+,%d2-%d3/%d5/%a2-%a6
+    movem.l (%sp)+,%d2-%d3/%d5/%a2-%a5
 9:
     rts
 /* GENERATED_CONTACT_CLASSES_BEGIN */

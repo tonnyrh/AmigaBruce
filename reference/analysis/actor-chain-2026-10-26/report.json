@@ -5,68 +5,68 @@
   "production_enabled": true,
   "source_files": [
     {
-      "sha256": "e3f93a9f6d4512d69c5ee31642f2f0f6270e197812fb15a62e5805c910c79839",
-      "path": "core/c64_rooms.c"
+      "path": "core/c64_rooms.c",
+      "sha256": "72c8a10ebd5d2a272d7ad00c9cd0a33a3b46aaca146fa7842ec195eb7d8015fe"
     },
     {
-      "sha256": "9548f50571ede97c0ba8df23d9612aa3a09ac328ed87b69f161a51bc49c26356",
-      "path": "tests/source_actor_bridge.c"
+      "path": "tests/source_actor_bridge.c",
+      "sha256": "9548f50571ede97c0ba8df23d9612aa3a09ac328ed87b69f161a51bc49c26356"
     },
     {
-      "sha256": "e8d502daf803685c2c77c75a3846732e8f02001fcf6a2b17c14434935f93044f",
-      "path": "core/c64_rooms.h"
+      "path": "core/c64_rooms.h",
+      "sha256": "b4ca73431b96f396fee5533a057d70bfe7286b1322b4c5db39d4ddeeaf3346e7"
     },
     {
-      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd",
-      "path": "core/source_perf.h"
+      "path": "core/source_perf.h",
+      "sha256": "6c3eabb3d1e923949828b59c1dd38300a32aa2d35b7ad2bc88b65758bbd256fd"
     },
     {
-      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c",
-      "path": "core/game.h"
+      "path": "core/game.h",
+      "sha256": "a84138691bae31d4c7bce3e941dfb042ae7ad6582936324f76829b89cfbdb46c"
     },
     {
-      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd",
-      "path": "core/combat.h"
+      "path": "core/combat.h",
+      "sha256": "8334bc450f0213afbea428ea179b111838871040f643fa78581ad41f0461f5bd"
     },
     {
-      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae",
-      "path": "core/c64_actor_data.h"
+      "path": "core/c64_actor_data.h",
+      "sha256": "cae45f910fca289e314fd890c1845e2fcec2029e6f0a395bb069b8ef28ffbcae"
     },
     {
-      "sha256": "7875f0f710691ae837116d7cb82cf0f73a92b4a1650e7a78fae8dfcdc9434c2d",
-      "path": "core/c64_actor_programs.h"
+      "path": "core/c64_actor_programs.h",
+      "sha256": "d5499ec0d5ef5add4eb884a1c9b44f157d4cd8c00565067c0de40688061e116a"
     },
     {
-      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00",
-      "path": "core/c64_room_data.h"
+      "path": "core/c64_room_data.h",
+      "sha256": "7b19369e8f21887f4cc9042c8dcc4f7afc4af14c8fbde43f817f34704ffd4d00"
     },
     {
-      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3",
-      "path": "core/c64_room_programs.h"
+      "path": "core/c64_room_programs.h",
+      "sha256": "0841ba350db15ef23f5698064aff03b33f697643a26cd1bc7c4fe9725841b8d3"
     },
     {
-      "sha256": "dd935e163a6d27ebee54db24de508e6b5dbb55bd670088379ca2b38f011d3b8c",
-      "path": "core/c64_sfx.h"
+      "path": "core/c64_sfx.h",
+      "sha256": "29d9e01f497a2dce96f9ce24900a10b71871639f27e5c4673fdb9cf1659093ca"
     },
     {
-      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd",
-      "path": "core/c64_sound_data.h"
+      "path": "core/c64_sound_data.h",
+      "sha256": "a0b1ecda62820db0bc800af2afb3ffca7ec46131c5e600cbfc189c06a3d9efcd"
     },
     {
-      "sha256": "4761e14f38fe762840bb12e6da73de610f3b7b6185cfc8271b11319fd7fa9824",
-      "path": "tools/build_c64_actors.py"
+      "path": "tools/build_c64_actors.py",
+      "sha256": "4761e14f38fe762840bb12e6da73de610f3b7b6185cfc8271b11319fd7fa9824"
     },
     {
-      "sha256": "b1721f8fb468d77c70c57eb99fa56955586d5a0413970b3a41613f985cd922b1",
-      "path": "tools/native_actor_continuations.py"
+      "path": "tools/native_actor_continuations.py",
+      "sha256": "b1721f8fb468d77c70c57eb99fa56955586d5a0413970b3a41613f985cd922b1"
     },
     {
-      "sha256": "d7a2ccd075496c5fd46fffee0e0c991c444c0ffc514579aa5100aff312f0f4bb",
-      "path": "tools/build_c64_rooms.py"
+      "path": "tools/build_c64_rooms.py",
+      "sha256": "9181cd2e29109ea58c0495e6d21c0c91d2220ccf560291033763b941cc2f548d"
     },
     {
-      "sha256": "33099c5e5ab6d4130a2869a5326945adf3f0c70f807e316d3337a7ec951afc97",
-      "path": "test-c64-actors.ps1"
+      "path": "test-c64-actors.ps1",
+      "sha256": "8a8d9051b84d59b0f839665e1c93d409b535aaec28b232817a58ce6dbadc6dbd"
     }
   ],
   "section": "all",
@@ -57718,5 +57718,7 @@
         253
       ]
     }
-  ]
+  ],
+  "bomb_contact_margin": false,
+  "scope": "Source actor chain; the normal Amiga UI separately enables the user-approved bomb margin."
 }

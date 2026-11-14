@@ -11,6 +11,9 @@ def check(entries):
     for e in entries:assert item(ROOT/e["path"])==e,e["path"]
 
 def verify_current():
+    if (STAGE.parent/"kage-paula-2026-11-01/delivery.json").is_file():
+        from verify_kage_delivery import verify_current as verify_kage
+        return verify_kage()
     pipeline=(STAGE/"pipeline-result.json").is_file()
     manifest=STAGE/("pipeline-result.json" if pipeline else "result.json")
     record=read(manifest);parent=read(STAGE/"previous-delivery.json")
@@ -97,5 +100,8 @@ if __name__=="__main__":
     for name,(steps,fields,empty) in report["op_measured"].items():
         print(f"{name}: {fields} PAL fields / {steps} steps, {empty} fields without a Paula publication")
     if not report["realtime_gate_passed"]:
-        print("OPEN three-field cadence and continuous audio")
+        if report.get("continuous_long_audio"):
+            print("PASS continuous Paula publications in both long combat trials")
+            print("OPEN three-field combat cadence")
+        else:print("OPEN three-field cadence and continuous audio")
         if args.require_realtime:raise SystemExit(1)

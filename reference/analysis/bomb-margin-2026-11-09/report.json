@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-09",
+  "user_approved_exception": true,
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "edition_verified": false,
+  "rule": "Supplement original bomb arming with original pose-mask overlap against live bomb class-2 pixels, dilated up/left/right by one display pixel. No downward expansion. Coarse object-row rejection is bypassed for this bomb-only check.",
+  "enabled_in": [
+    "Normal Classic game",
+    "Normal Enhanced game"
+  ],
+  "source_parity_controls_margin_enabled": false,
+  "unchanged": [
+    "Explosion timing and damage",
+    "Three simultaneous source timers",
+    "Walls, movement and melee hitboxes",
+    "Classic artwork"
+  ],
+  "host": {
+    "report": "host.json",
+    "pixel_cases": 8424,
+    "expanded_only_hits": 1080,
+    "walks": 54,
+    "guards": 15
+  },
+  "original_rule_regression": {
+    "actor_chain_cases": 3034,
+    "bomb_capacity_cases": 48,
+    "timer_calls": 1152,
+    "margin_enabled": false
+  },
+  "native": {
+    "adf": {
+      "path": "amiga/out/bruce_amiga.adf",
+      "bytes": 901120,
+      "sha256": "07db95397a1142e530e6ade6be50d260dd14285053d8e568cddc5992d1ce82ac"
+    },
+    "elf": {
+      "path": "amiga/out/bruce_amiga.elf",
+      "bytes": 1978024,
+      "sha256": "406bb7c05224fd88683f6cb7681739d0086e009513c1b9d9429ca6afb0c340e0"
+    },
+    "executable": {
+      "path": "amiga/out/bruce_amiga.exe",
+      "bytes": 377296,
+      "sha256": "78b434d79340358f3e5ff00d64cc3840e11958d60f9d97daf52bed6967f13644"
+    },
+    "winuae": {
+      "path": ".tmp/bomb-margin-2026-11-09/winuae64.exe",
+      "bytes": 29372368,
+      "sha256": "f3e55700fd811cd543fdfebf6c3221cfaa3d385828f110c6d3eb534c64503123"
+    },
+    "config": "boot.uae",
+    "method": "Cycle-exact PAL A500 OCS, Kickstart 1.3, 512 KiB Chip plus 512 KiB slow RAM. Normal shipping ADF. Injected initial coordinates, normal joystick input. No forced contact masks or bomb timers.",
+    "contact_cases": [
+      {
+        "mode": "enhanced",
+        "initial_y": 139,
+        "armed": true,
+        "blast": true,
+        "captured": true
+      },
+      {
+        "mode": "enhanced",
+        "initial_y": 140,
+        "armed": true,
+        "blast": true,
+        "captured": true
+      },
+      {
+        "mode": "classic",
+        "initial_y": 139,
+        "armed": true,
+        "blast": true,
+        "captured": true
+      },
+      {
+        "mode": "classic",
+        "initial_y": 140,
+        "armed": true,
+        "blast": true,
+        "captured": true
+      }
+    ],
+    "contact_trace": "native-walks.json",
+    "art_trace": "art.json",
+    "art_regions": 12,
+    "art_pixels": 9216
+  },
+  "limitations": [
+    "Physical Amiga playtest remains for the user.",
+    "Full timer capacity still rejects a new bomb; no pending queue was added.",
+    "Controlled tests are not natural C64 playthroughs."
+  ],
+  "assets": [
+    {
+      "path": "tools/enhanced_bombs.py",
+      "bytes": 2511,
+      "sha256": "31d656ed3868bbb022a40fabfe9a0d2b9eb50663aaa67c3ee226d31d57668dc1"
+    },
+    {
+      "path": "amiga/enhanced_art.h",
+      "bytes": 73825,
+      "sha256": "186139214ea232bc1b5b5f3128c26e948f9ac5b52f5a9617ae77362e6d1ad454"
+    }
+  ]
+}
