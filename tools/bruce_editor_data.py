@@ -188,7 +188,7 @@ def planar_pixels(w, h, raw):
 @lru_cache(maxsize=1)
 def catalog():
     from build_enhanced_art import base_pixels, base_scenery
-    from enhanced_architecture import PAGODA_INDEX, TOWER_INDEX, VAULT_LAMP_INDEX, stamps
+    from enhanced_architecture import PAGODA_INDEX, VAULT_DETAIL_INDEX, TOWER_INDEX, VAULT_LAMP_INDEX, stamps
     from enhanced_fighters import BRUCE_SOURCE_POSES, BRUCE_UNDIRECTED
     assets = []
     for actor in (2,0,1):
@@ -209,9 +209,14 @@ def catalog():
         elif not uses and i+1 in lookup[VAULT_LAMP_INDEX:PAGODA_INDEX]:
             side,phase=divmod(lookup.index(i+1,VAULT_LAMP_INDEX)-VAULT_LAMP_INDEX,4)
             label=f'Vault lantern · {"right" if side else "left"} · flame {phase+1}'
-        elif not uses and i+1 in lookup[PAGODA_INDEX:]:
+        elif not uses and i+1 in lookup[PAGODA_INDEX:VAULT_DETAIL_INDEX]:
             tile,half=divmod(lookup.index(i+1,PAGODA_INDEX)-PAGODA_INDEX,2)
             label=f'Room 16 roof · tile ${tile+128*half:02X}'
+        elif not uses and i+1 in lookup[VAULT_DETAIL_INDEX:]:
+            at=lookup.index(i+1,VAULT_DETAIL_INDEX)-VAULT_DETAIL_INDEX
+            name=('Vault cap' if at<4 else 'White yin-yang' if at<8 else 'Extra-life gold yin-yang')
+            tile=(0x43,0x45)[at//2] if at<4 else 0x2d+(at%4)//2
+            label=f'{name} · tile ${tile+128*(at%2):02X}'
         assets.append(stamp_asset(i+1,raw[i*48:(i+1)*48],label))
     return tuple(assets)
 

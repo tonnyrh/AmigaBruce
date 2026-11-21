@@ -1,0 +1,62 @@
+{
+  "version": "v1.0.0",
+  "display_version": "1.0",
+  "date": "2026-11-21",
+  "prerelease": false,
+  "source_parent_commit": "b949058bca3cafff1097b65779175e27f8676efb",
+  "program_sha256": "4895545082d53b3373307011500a3eada14303cdc5c9d951574b112849ed9125",
+  "tested_adf_sha256": "ae7c87a08fe5710a9df4279881154ce59411a8a4536eba01b1bec5600fa85051",
+  "normal_elf_sha256": "49758e752ce863c6a9a44aa8fb617cc266c8a9705e05649f012af86f7ad779b6",
+  "target": "PAL A500, 68000, OCS, Kickstart 1.3, 512 KiB Chip + 512 KiB slow; cycle-exact WinUAE 6.0.3",
+  "checks": {
+    "editor_integration_tests": 17,
+    "source_combat_cases": 32,
+    "source_ram_bytes_per_case": 65536,
+    "independent_knockout_draws": 65535,
+    "selected_draws": 21845,
+    "native_audio": "native-audio.json",
+    "native_graphics": "../yin-yang-2026-11-21/report.json",
+    "enhanced_graphics_pixels": 64512,
+    "classic_graphics_pixels": 2560,
+    "audio_test_entries": 21,
+    "audio_test_validated_wavs": 42,
+    "audio_test_javascript_syntax": "passed",
+    "zip_entries": 6,
+    "zip_integrity": "passed"
+  },
+  "source_gameplay_code_changed_since_rc2": false,
+  "classic_sound_mapping_changed": false,
+  "limits": [
+    "Controlled native cases are not a natural full-game playthrough.",
+    "Physical-machine visual/listening acceptance of every new change and all-room timing remain open.",
+    "The frozen C64 candidate is not certified as an untouched 1984 edition.",
+    "Earlier room-12 and source-recovery reports describe their own recorded builds."
+  ],
+  "historical_evidence": [
+    "../room12-spears-2026-11-21/report.json",
+    "../yamo-kick-hold-2026-11-21/report.json",
+    "../knockout-audio-2026-11-19/report.json"
+  ],
+  "downloads": [
+    {
+      "name": "Bruce-v1.0.0.adf",
+      "bytes": 901120,
+      "sha256": "ae7c87a08fe5710a9df4279881154ce59411a8a4536eba01b1bec5600fa85051"
+    },
+    {
+      "name": "Bruce-v1.0.0.zip",
+      "bytes": 607820,
+      "sha256": "60741fa748921c2902716295125e129ba48452a9d2a0c6a411ec86d821038c9c"
+    },
+    {
+      "name": "Bruce-v1.0.0-sound-test.html",
+      "bytes": 452199,
+      "sha256": "f3ae61c0bac97122b95b7b22cc9ac68d6ac807bc5bab8cc86f76048f5659dbcb"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 264,
+      "sha256": "22b4550a8445425d0dd680f6e4d5bb7da94ae6f940bb4b6e859d82b2b3ad9444"
+    }
+  ]
+}

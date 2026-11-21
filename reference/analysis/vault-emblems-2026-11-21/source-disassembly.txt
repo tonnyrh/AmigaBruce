@@ -1,0 +1,77 @@
+Frozen candidate SHA256: 092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8
+$17E2: 48       PHA
+$17E3: 20 67 1a JSR $1a67
+$17E6: 68       PLA
+$17E7: 0a       ASL A
+$17E8: aa       TAX
+$17E9: 84 06    STY $06
+$17EB: bd be 43 LDA $43be,X
+$17EE: 38       SEC
+$17EF: e5 06    SBC $06
+$17F1: 85 06    STA $06
+$17F3: bd bf 43 LDA $43bf,X
+$17F6: e9 00    SBC #$00
+$17F8: 85 07    STA $07
+$17FA: b1 06    LDA ($06),Y
+$17FC: 38       SEC
+$17FD: e9 20    SBC #$20
+$17FF: c9 80    CMP #$80
+$1801: f0 14    BEQ $1817
+$1803: 29 7f    AND #$7f
+$1805: 91 04    STA ($04),Y
+$1807: 09 80    ORA #$80
+$1809: 91 08    STA ($08),Y
+$180B: c8       INY
+$180C: d0 ec    BNE $17fa
+$180E: e6 05    INC $05
+$1810: e6 07    INC $07
+$1812: e6 09    INC $09
+$1814: 4c fa 17 JMP $17fa
+$1817: 60       RTS
+$2EEA: a5 29    LDA $29
+$2EEC: c9 10    CMP #$10
+$2EEE: f0 01    BEQ $2ef1
+$2EF0: 60       RTS
+$2EF1: 4c d6 2f JMP $2fd6
+$2FD6: 8a       TXA
+$2FD7: f0 01    BEQ $2fda
+$2FD9: 60       RTS
+$2FDA: a5 a1    LDA $a1
+$2FDC: c9 a0    CMP #$a0
+$2FDE: 90 f9    BCC $2fd9
+$2FE0: a6 03    LDX $03
+$2FE2: de 95 4e DEC $4e95,X
+$2FE5: e6 28    INC $28
+$2FE7: 20 ed 1a JSR $1aed
+$2FEA: a0 8e    LDY #$8e
+$2FEC: 20 09 25 JSR $2509
+$2FEF: a9 56    LDA #$56
+$2FF1: a2 0a    LDX #$0a
+$2FF3: a0 24    LDY #$24
+$2FF5: 20 e2 17 JSR $17e2
+$2FF8: a9 56    LDA #$56
+$2FFA: a2 0b    LDX #$0b
+$2FFC: a0 24    LDY #$24
+$2FFE: 4c e2 17 JMP $17e2
+$359F: a9 ff    LDA #$ff
+$35A1: 8d 1c db STA $db1c
+$35A4: 8d 1d db STA $db1d
+$35A7: 8d 44 db STA $db44
+$35AA: 8d 45 db STA $db45
+$35AD: 8d 6c db STA $db6c
+$35B0: 8d 6d db STA $db6d
+$35B3: 8d 94 db STA $db94
+$35B6: 8d 95 db STA $db95
+$35B9: a6 03    LDX $03
+$35BB: bd 95 4e LDA $4e95,X
+$35BE: d0 03    BNE $35c3
+$35C0: 20 ef 2f JSR $2fef
+$35C3: 60       RTS
+Glyph $43 at $AA18: fc fc fc fc cc cc cf cf
+Glyph $C3 at $AE18: cf cf cf cf cf cf ff ff
+Glyph $45 at $AA28: 3f 3f 3f 3f 33 33 f3 f3
+Glyph $C5 at $AE28: f3 f3 f3 f3 f3 f3 ff ff
+Glyph $2D at $A968: 02 02 2b 2b af af ab ab
+Glyph $AD at $AD68: aa aa af af 2a 2a 02 02
+Glyph $2E at $A970: c0 c0 fc fc af af ff ff
+Glyph $AE at $AD70: bf bf af af bc bc c0 c0

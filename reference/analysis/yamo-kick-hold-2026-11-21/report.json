@@ -1,0 +1,5957 @@
+{
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "certified_original_edition": false,
+  "natural_playthrough": false,
+  "method": "Trace post-hit Yamo recovery in frozen C64 bytes and the current native port.\n\nPositions, contact latch and health are controlled fixtures, not natural play.\nThe original instructions decide hit acceptance, recovery counters and falling.\n",
+  "cases": 40,
+  "ram_and_register_comparisons": 696,
+  "gameplay_changed": false,
+  "rows": [
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 0,
+      "round": 0,
+      "first_vertical_move_step": 29,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 23,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 22,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 21,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 20,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 19,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 18,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 17,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 16,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 15,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 14,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 13,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 12,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 11,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 0,
+      "round": 1,
+      "first_vertical_move_step": 8,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 24,
+      "round": 0,
+      "first_vertical_move_step": 29,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 23,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 22,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 21,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 20,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 19,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 18,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 17,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 16,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 15,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 14,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 13,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 12,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 11,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 24,
+      "round": 1,
+      "first_vertical_move_step": 8,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 25,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 25,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 31,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 31,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 32,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 0,
+      "age": 32,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 0,
+      "round": 0,
+      "first_vertical_move_step": 29,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 23,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 22,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 21,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 20,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 19,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 18,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 17,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 16,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 15,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 14,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 13,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 12,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 11,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 0,
+      "round": 1,
+      "first_vertical_move_step": 8,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 24,
+      "round": 0,
+      "first_vertical_move_step": 29,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 23,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 22,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 21,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 20,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 19,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 18,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 17,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 16,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 15,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 14,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 13,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 12,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 11,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 24,
+      "round": 1,
+      "first_vertical_move_step": 8,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 25,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 25,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 31,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 31,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 32,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": false,
+      "victim": 2,
+      "age": 32,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 0,
+      "round": 0,
+      "first_vertical_move_step": 29,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 23,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 22,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 21,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 20,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 19,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 18,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 17,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 16,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 15,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 14,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 13,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 12,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 11,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 0,
+      "round": 1,
+      "first_vertical_move_step": 8,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 24,
+      "round": 0,
+      "first_vertical_move_step": 29,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 23,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 22,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 21,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 20,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 19,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 18,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 17,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 16,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 15,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 14,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 13,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 12,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 11,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 24,
+      "round": 1,
+      "first_vertical_move_step": 8,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 25,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 25,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 31,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 31,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 32,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 0,
+      "age": 32,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 0,
+      "round": 0,
+      "first_vertical_move_step": 29,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 23,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 22,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 21,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 20,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 19,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 18,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 17,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 16,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 15,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 14,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 13,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 12,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 11,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 0,
+      "round": 1,
+      "first_vertical_move_step": 8,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 24,
+      "round": 0,
+      "first_vertical_move_step": 29,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 24,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 23,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 22,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 21,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 20,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 19,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 18,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 17,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 16,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 15,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 14,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 13,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 12,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 11,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 24,
+      "round": 1,
+      "first_vertical_move_step": 8,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 25,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 25,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 31,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 31,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 32,
+      "round": 0,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    },
+    {
+      "human_yamo": true,
+      "victim": 2,
+      "age": 32,
+      "round": 1,
+      "first_vertical_move_step": 15,
+      "steps": [
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 4,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 3,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 2,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 1,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 10,
+          "wait": 0,
+          "pose_lock": 1
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 9,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 8,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 7,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 6,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 5,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 4,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 3,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 2,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 1,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 150,
+          "state": 0,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        },
+        {
+          "x": 60,
+          "y": 151,
+          "state": 14,
+          "counter": 0,
+          "wait": 0,
+          "pose_lock": 0
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "core/c64_rooms.c",
+      "sha256": "a638082bbaa718726c0988c14801311eb329882ca0e52a8e569e4b6dd09bf4f1"
+    },
+    {
+      "path": "core/c64_actor_programs.h",
+      "sha256": "91a5ad979ee6bfecd6c70f23b7001fe957c5abddb548ad17e262751d7ea3e8f8"
+    },
+    {
+      "path": "tests/source_actor_bridge.c",
+      "sha256": "9548f50571ede97c0ba8df23d9612aa3a09ac328ed87b69f161a51bc49c26356"
+    },
+    {
+      "path": "tools/audit_yamo_kick_hold.py",
+      "sha256": "5e5f5bce6a6a72a3e105713573bbb619780a0166c671415eb63dd20007d27580"
+    }
+  ]
+}

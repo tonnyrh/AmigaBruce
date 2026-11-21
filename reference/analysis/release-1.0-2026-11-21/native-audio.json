@@ -1,0 +1,48 @@
+{
+  "method": "Verify Bruce's finishing cry in an owned normal-ADF WinUAE instance.\n\nPositions and enemy health are controlled starting conditions. Ordinary Fire\nthen drives source punch/contact/damage; no hit, kill or cry event is injected.\nA winning or losing sound-choice seed is set before each knockout. Ordinary\nempty swings must not advance that generator. A final isolated sample check\nis explicitly a controlled playback request.\n",
+  "checks": [
+    {
+      "case": "Ordinary empty swings",
+      "shout": false,
+      "random_unchanged": true
+    },
+    {
+      "victim": 1,
+      "input": "Fire only",
+      "starting_health": 2,
+      "controlled_random_seed": 2,
+      "shout": false,
+      "observed_mask": 16385,
+      "observed_health": 191
+    },
+    {
+      "victim": 1,
+      "input": "Fire only",
+      "starting_health": 2,
+      "controlled_random_seed": 6,
+      "shout": true,
+      "observed_mask": 81921,
+      "observed_health": 191
+    },
+    {
+      "victim": 2,
+      "input": "Fire only",
+      "starting_health": 2,
+      "controlled_random_seed": 2,
+      "shout": false,
+      "observed_mask": 1,
+      "observed_health": 135
+    },
+    {
+      "victim": 2,
+      "input": "Fire only",
+      "starting_health": 2,
+      "controlled_random_seed": 6,
+      "shout": true,
+      "observed_mask": 65537,
+      "observed_health": 135
+    }
+  ],
+  "pcm_bytes_matched": 8000,
+  "classic_observer_detached": true
+}

@@ -1,0 +1,62 @@
+{
+  "method": "Check room 12 ceiling spear pixels in an owned normal-ADF WinUAE boot.",
+  "checks": [
+    {
+      "look": "classic",
+      "ceiling_cells": 58,
+      "blade_pixels": 1044,
+      "blade_inks": [
+        11
+      ],
+      "structure_pixels": 1044
+    },
+    {
+      "look": "enhanced",
+      "ceiling_cells": 58,
+      "blade_pixels": 1044,
+      "blade_inks": [
+        1
+      ],
+      "structure_pixels": 21888
+    }
+  ],
+  "source_ceiling_geometry_and_attributes_unchanged": true,
+  "tested_adf_sha256": "e18d7f96125f02822609491f42f1772f4c84a5e2de975ff3e7b5ef5fd252b052",
+  "date": "2026-11-21",
+  "program_sha256": "2792df7d9014b3179118ec399b98a7da50c68db1c9ab1883c34b98e547971cf7",
+  "normal_elf_sha256": "0e61f6c6116e41f0da4bb197eae05072e5fb998f117f82376b2960a7403d203f",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "source_addresses": {
+    "blade_glyphs": [
+      "$AA00",
+      "$AE00"
+    ],
+    "room_palette_pointer": "$4821",
+    "pair_2_source_ink": 11,
+    "enhanced_blade_ink": 1
+  },
+  "target": "WinUAE 6.0.3, PAL A500 OCS, cycle-exact 68000, Kickstart 1.3, 512 KiB Chip + 512 KiB slow",
+  "source_files": [
+    {
+      "path": "amiga/enhanced.h",
+      "sha256": "49e83fb16c7f95e6c08ae1b88803381b83246387de7fd1eda30624242d43e875"
+    },
+    {
+      "path": "tools/check_room12_spears.py",
+      "sha256": "645bba0abaeca49a407e28bd6c7022109e6e24b0718deb3e430d4bf9b3b9eebc"
+    },
+    {
+      "path": "tools/check_enhanced_mode.py",
+      "sha256": "a0d479e6e56ccfc2b02feaac5f9379274f8d9009d5922dbf734e4d50c71e4ca3"
+    }
+  ],
+  "visual_frame_inspected": true,
+  "gameplay_changed": false,
+  "classic_changed": false,
+  "limits": [
+    "Physical Amiga visual acceptance pending.",
+    "Room selection and pixel checks are not a natural full-game playthrough.",
+    "The frozen C64 candidate is not certified untouched 1984 original.",
+    "GitHub RC2 downloads are unchanged."
+  ]
+}

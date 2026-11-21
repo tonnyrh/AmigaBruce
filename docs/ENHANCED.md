@@ -213,3 +213,20 @@ The former lethal-punch-only cry described above is superseded. Each Bruce punch
 The two swishes and full one-second shout are quantized identically to the approved Amiga preview and placed in a dedicated 13,600-byte Chip-memory hunk. Paula plays them directly. The other samples retain the packed bank and existing 1024-byte source-voice pages. Long clips cannot be cut short by footsteps and Bruce's voice cannot overlap itself. No source gameplay routine or Classic sound mapping changes.
 
 Use `test-enhanced-audio.ps1` for the routing, full-period probability and source-state checks; `tools/check_rc2_audio.py` checks the owned WinUAE normal disk. The current native checks resolve the BSS hunk from ELF rather than assuming four hunks. Historical diagnostics tied to older four-hunk probe builds should be used with those matching builds.
+
+
+## Knockout-only cry correction, 19 November 2026
+
+The current working build corrects RC2's interpretation: a one-in-three random draw happens only when Bruce knocks out Kage or Yamo with a fist. Ordinary swings, surviving hits, kicks and deaths caused by traps or other fighters cannot trigger or advance the cry selection. Existing cries cannot overlap and pending requests are discarded on room changes. The browser test still plays each selected sound unconditionally.
+
+This reuses the existing source observer. Frozen candidate SHA256 `092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8`: an accepted Bruce punch passes `$2AC3` with Y=0 and X=1/2. The `$2BC4-$2BC9` sequence is `B5 D1 38 E9 03 95 D1`, subtracting three health points. `$2BCB: 30 57` takes the negative branch to `$2C24`; health 0-2 crosses into death, whereas 3 becomes zero and survives that hit. The existing observer additionally excludes already-negative health. These source branches are unchanged; the chance draw is an Enhanced presentation rule requested by the user, not a C64 game rule.
+
+The host tests exercise both chance outcomes across 32 source combat cases, compare all 65,536 bytes and source registers, and count 21,845 selections over 65,535 knockout draws. The native check is `tools/check_finisher_audio.py`: controlled positions, health and sound-choice seeds followed by ordinary Fire input, plus empty swings and Classic observer removal. RC2 artifacts and their historical evidence are left unchanged.
+
+## Vault spear visibility, 21 November 2026
+
+The vault spear `$40/$C0` now uses light ink for its blade pixels. Room 12's original colour 11 matched the Enhanced masonry and concealed the hazard. Mounting caps, source geometry and Classic remain unchanged. The normal ADF passes 1,044 ceiling-blade pixel checks per mode and 21,888 Enhanced structure pixel checks. [Evidence and the separate C64-derived Yamo recovery finding](ROOM12_SPEARS_YAMO_RECOVERY.md).
+
+## Vault caps and emblems, 21 November 2026
+
+The white top fittings in rooms 15 and 17 now use blue steel and bronze trim. Vault emblems retain the original yin-yang motif, with black/white and black/yellow variants; extra-life yellow follows live C64 colour RAM. The initial coin design was replaced following user feedback. Classic, source collision and pickup rules remain unchanged. The new assets are also available in the graphics editor. [Source conditions and validation](VAULT_EMBLEMS.md).

@@ -1,0 +1,169 @@
+{
+  "method": "Check caps and live-colour emblems in an owned normal-ADF A500 boot.\n\nRooms are entered with the built-in room selector, not a natural playthrough.\nClassic pixels are checked against live C64 data; Enhanced against the masters.\n",
+  "checks": [
+    {
+      "room": 15,
+      "enhanced": false,
+      "cap_halves": 8,
+      "silver_halves": 8,
+      "gold_halves": 0,
+      "checked_pixels": 1024,
+      "pens": {
+        "caps": [
+          1,
+          6
+        ],
+        "silver": [
+          1,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "room": 15,
+      "enhanced": true,
+      "cap_halves": 8,
+      "silver_halves": 8,
+      "gold_halves": 0,
+      "checked_pixels": 30720,
+      "pens": {
+        "caps": [
+          3,
+          6,
+          9,
+          10,
+          11,
+          12
+        ],
+        "silver": [
+          1,
+          3,
+          6,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "room": 17,
+      "enhanced": true,
+      "cap_halves": 8,
+      "silver_halves": 8,
+      "gold_halves": 8,
+      "checked_pixels": 33792,
+      "pens": {
+        "caps": [
+          3,
+          6,
+          9,
+          10,
+          11,
+          12
+        ],
+        "silver": [
+          1,
+          3,
+          6,
+          11,
+          12
+        ],
+        "gold": [
+          4,
+          6,
+          7,
+          10,
+          11,
+          12,
+          15
+        ]
+      }
+    },
+    {
+      "room": 17,
+      "enhanced": false,
+      "cap_halves": 8,
+      "silver_halves": 8,
+      "gold_halves": 8,
+      "checked_pixels": 1536,
+      "pens": {
+        "caps": [
+          1,
+          6
+        ],
+        "silver": [
+          1,
+          11,
+          12
+        ],
+        "gold": [
+          7,
+          11,
+          12
+        ]
+      }
+    }
+  ],
+  "source_cells_attributes_and_glyphs_unchanged": true,
+  "tested_adf_sha256": "f60b620fa0e952fe1b2d7cf67e31a08a2b990ae702cecb94f1801bd2ee1ce5fd",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "existing_stamp_ids_and_art_preserved": 256,
+  "new_stamps": 12,
+  "editor_integration_tests": 17,
+  "chip_graphics_buffer_growth_bytes": 0,
+  "executable_growth_bytes": 1000,
+  "environment": "WinUAE 6.0.3, cycle-exact PAL A500, OCS, Kickstart 1.3, 512 KiB Chip + 512 KiB slow",
+  "limits": [
+    "Rooms entered through the debug room selector, not natural play.",
+    "No physical-Amiga visual acceptance or frame-time benchmark.",
+    "Published RC2 is unchanged."
+  ],
+  "artifacts": [
+    {
+      "path": "amiga/enhanced.h",
+      "bytes": 8389,
+      "sha256": "fb3cd6af0275c73dfddfbe963052a1db261526bfa017e905207271a0827d8c12"
+    },
+    {
+      "path": "amiga/enhanced_art.h",
+      "bytes": 75828,
+      "sha256": "5d4f5e9519f46570b28d730ffe9265fff0b17cd85ee1a06571596ec009e52d71"
+    },
+    {
+      "path": "tools/enhanced_architecture.py",
+      "bytes": 17388,
+      "sha256": "15446fd959daf591a2a371097c759c9a5dc250e8f1a26594132bff5537a97d36"
+    },
+    {
+      "path": "tools/build_enhanced_art.py",
+      "bytes": 11089,
+      "sha256": "d3a6935e98098bbfb75de9d1a3361c3bd2e1a7c61804d5b47606cb411d22e046"
+    },
+    {
+      "path": "tools/bruce_editor_data.py",
+      "bytes": 11649,
+      "sha256": "59119ef24c60b2a817c75c26a88ccbd78f6b3b043b9879badef2d489c059df16"
+    },
+    {
+      "path": "tools/check_enhanced_mode.py",
+      "bytes": 32709,
+      "sha256": "255c0bb483f15dfaec218d99cff0d2fef9d2ca16543b0ae9fc2c24907e38cbae"
+    },
+    {
+      "path": "tools/check_vault_emblems.py",
+      "bytes": 6622,
+      "sha256": "33ff7f13afb2bacbdb084808b941538bfe07201c1808757d6bd95511a76de028"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "bytes": 390952,
+      "sha256": "1753b4193e2ec8da25ce52d47ad9ec256022a7591a63ff389d4c261ef7d957ad"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "bytes": 901120,
+      "sha256": "f60b620fa0e952fe1b2d7cf67e31a08a2b990ae702cecb94f1801bd2ee1ce5fd"
+    }
+  ]
+}

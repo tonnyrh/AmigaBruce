@@ -105,6 +105,15 @@ static void paint_enhanced_tile(const BlC64Paint *original){
          * uses some of the very same character codes above that row. */
         UWORD bank=(enhanced_room==3 && row>=7)?ENHANCED_TOWER_INDEX:group;
         UWORD id=enhanced_arch_index[bank+code];
+        if(group==512){
+            /* $2D/$2E share their glyphs. Room 17 init $359F writes
+             * colour 7 at the two extra-life emblems; other copies are
+             * white. Read live colour RAM, including each lower half. */
+            if(tile==0x2d || tile==0x2e)
+                id=enhanced_vault_detail_index[4+(bl_c64_screen_color(cell)==7?4:0)+2*(tile-0x2d)+(code>>7)];
+            else if((enhanced_room==14 || enhanced_room==16) && row<=4 && (tile==0x43 || tile==0x45))
+                id=enhanced_vault_detail_index[(tile==0x45?2:0)+(code>>7)];
+        }
         /* The central crown, its brackets and the two side eaves. The same
          * $0C and $2F also occur on the side platforms and bottom floor. */
         if(enhanced_room==15 && row<=14 && col>=13 && col<=27 && tile<=0x2f){
@@ -138,6 +147,15 @@ static void paint_enhanced_tile(const BlC64Paint *original){
                 for(UWORD p=0;p<4;p++){
                     UWORD i=p*8+y+dy;
                     UBYTE ink=painted?pair[4+p*2+dy]:original->planes[i];
+                    /* Vault spear $40/$C0 ($AA00/$AE00): source pair 2
+                     * is colour 11 in room 12, also our masonry body ink.
+                     * Lighten only its blade pixels; keep the live mounting
+                     * cap, background and source contact mask unchanged. */
+                    if(!painted && group==512 && tile==0x40){
+                        UBYTE blade=(bits&~(bits<<1))&0xaa;
+                        blade|=blade>>1;
+                        ink=(ink&~blade)|(p==0?blade:0);
+                    }
                     stamp[i]=(ink&keep)|(art[i]&~keep);
                 }
             }

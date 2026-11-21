@@ -32,6 +32,41 @@ VAULT_LAMP_INDEX = TOWER_INDEX+256
 VAULT_LAMPS = (0x13,0x14,0x1e,0x1f)
 PAGODA_INDEX = VAULT_LAMP_INDEX+8
 PAGODA_TILES = (0x0a,0x0b,0x0c,0x0d,0x19,0x23,0x2f)
+VAULT_DETAIL_INDEX = PAGODA_INDEX+2*(max(PAGODA_TILES)+1)
+VAULT_DETAIL_COUNT = 12  # two caps, white yin-yang, gold yin-yang; two halves each
+
+
+def vault_cap(tile,x,y,pair):
+    """Blue steel cornice with brass trim; retain the source apertures."""
+    if not pair:
+        return None
+    if y in (0,14):
+        return 10
+    if y in (1,15):
+        return 9
+    # Mirror the fluted faces across the two source cap tiles.
+    u=7-x if tile==0x45 else x
+    return (12,3,11,6,12,11,6,6)[u]
+
+
+def vault_emblem(tile,x,y,pair,gold=False):
+    """Yin-yang with opposing dots, in the source two-cell 16 x 16 bounds."""
+    x+=8*(tile-0x2d)
+    # Hand-authored integer silhouette: no resampling, gradients or new palette.
+    edge=(6,4,3,2,1,1,0,0,0,0,1,1,2,3,4,6)[y]
+    if x<edge or x>15-edge:
+        return None
+    # The source $2D/$2E has a light upper lobe and dark lower lobe.
+    # Use single-pixel steps for the S curve, with a contrasting dot in each.
+    divide=(8,6,5,4,4,4,5,6,9,10,11,11,11,10,9,8)[y]
+    light=x>=divide
+    if 7<=x<=8:
+        if 3<=y<=4:light=False
+        elif 11<=y<=12:light=True
+    body,lip,shade=(7,15,10) if gold else (1,3,12)
+    if x==edge or x==15-edge or y in (0,15):
+        return (lip if y<8 else shade) if light else 6
+    return body if light else 0
 
 
 def pagoda_roof(tile,x,y,pair):
@@ -370,6 +405,17 @@ def stamps(charset):
             offset=2048+code*8
             roof[2*tile+half]=intern(15,code,charset[offset:offset+8],pagoda_roof)
     lookup.extend(roof)
+    # Append only: graphics-editor overrides address existing stamp IDs.
+    for tile in (0x43,0x45):
+        for half in (0,1):
+            code=tile|(half<<7);offset=2048+code*8
+            lookup.append(intern(16,code,charset[offset:offset+8],vault_cap))
+    for gold in (False,True):
+        for tile in (0x2d,0x2e):
+            for half in (0,1):
+                code=tile|(half<<7);offset=2048+code*8
+                lookup.append(intern(16,code,charset[offset:offset+8],
+                                     lambda t,x,y,p,g=gold:vault_emblem(t,x,y,p,g)))
     return lookup, b''.join(unique)
 
 

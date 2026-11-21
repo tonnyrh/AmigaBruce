@@ -2,7 +2,7 @@
 
 **Bruce** brings the rooms and fighting of the Commodore 64 game *Bruce Lee* to the Amiga. It includes **Classic** graphics and an optional **Enhanced** presentation, with a shared game engine.
 
-[Download the release candidate](https://github.com/tonnyrh/AmigaBruce/releases) · [Active tests](docs/ACTIVE_TESTS.md) · [Project plan](docs/PROJECT_PLAN.md)
+[Download Bruce 1.0](https://github.com/tonnyrh/AmigaBruce/releases/tag/v1.0.0) · [Release notes](docs/RELEASE_1_0.md) · [Active tests](docs/ACTIVE_TESTS.md) · [Project plan](docs/PROJECT_PLAN.md)
 
 ![Bruce title screen](docs/Startup%20Screen.png)
 
@@ -17,7 +17,7 @@
 ![Classic gameplay](docs/Game%20Standard.png)
 ![Enhanced gameplay](docs/Game%20Extended.png)
 
-This is a work in progress. Source comparisons and controlled tests support individual rules; they do not certify complete original-game parity or a complete natural playthrough. The frozen Remember/T64 reference candidate has **not** been confirmed as the selected untouched 1984 release.
+Version **1.0** is available. Source comparisons and controlled tests support individual rules; they do not certify complete original-game parity or a complete natural playthrough. The frozen Remember/T64 reference candidate has **not** been confirmed as the selected untouched 1984 release. Outstanding acceptance work remains documented in the active test list.
 
 ## Playing
 
@@ -81,7 +81,7 @@ Launch [GraphicsEditor.cmd](GraphicsEditor.cmd) to edit Enhanced fighters and sc
 
 ## Sound test
 
-Launch [AudioTest.cmd](AudioTest.cmd) to hear Enhanced combat samples in your browser. Switch between Selected takes and Current game to hear the four sounds selected for RC2 or the complete installed sound bank. Bruce has a one-in-three chance of shouting on a punch while no shout is playing; the test page always plays the selected sound. The offline page has individual playback, Play all, volume control, WAV downloads and a before/after compression comparison. Each sound also shows its recorded generator and original generation prompt, with a Copy prompt button. It rebuilds the listening page without changing the game's sound bank. You can also run `python tools/build_audio_test_page.py --open`.
+Launch [AudioTest.cmd](AudioTest.cmd) to hear Enhanced combat samples in your browser. Switch between Selected takes and Current game to hear the four selected replacement sounds or the complete installed sound bank. Bruce has a one-in-three chance of shouting only when his punch knocks out Kage or Yamo; ordinary punches and kicks cannot trigger it, and cries cannot overlap; the test page always plays the selected sound. The offline page has individual playback, Play all, volume control, WAV downloads and a before/after compression comparison. Each sound also shows its recorded generator and original generation prompt, with a Copy prompt button. It rebuilds the listening page without changing the game's sound bank. You can also run `python tools/build_audio_test_page.py --open`.
 
 ## Reconstruction and evidence
 

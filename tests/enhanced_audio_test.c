@@ -41,12 +41,11 @@ static UWORD tick(UWORD *restart){
     for(c=0;c<3;c++){source_voices[c].period=450;source_voices[c].volume=40;}
     *restart=0;return foley_tick(restart);
 }
-static UBYTE observed_finisher;
-static void observe_finisher(long victim){assert(victim==1 || victim==2);++observed_finisher;}
-static void finisher_case(UBYTE attacker,UBYTE victim,UBYTE hp,UBYTE state,UBYTE latch,UBYTE expected){
+static void finisher_case(UBYTE attacker,UBYTE victim,UBYTE hp,UBYTE state,UBYTE latch,UBYTE expected,UBYTE choose){
     static UBYTE seed[65536],baseline[65536];
     UBYTE before_regs[13]={0},after_regs[13]={0};
-    UWORD i;
+    UWORD i,restart;
+    BlCombat world={0};
     bl_c64_reset();bl_c64_actor_seed();bl_c64_actor_test_call(0x0f72,0);
     bl_c64_load(0);bl_c64_actor_test_call(0x0b30,0);
     for(i=0;i<5;i++)m[0x4f40+i]=(UBYTE)(i/2);
@@ -64,11 +63,23 @@ static void finisher_case(UBYTE attacker,UBYTE victim,UBYTE hp,UBYTE state,UBYTE
     bl_c64_actor_test_call(0x29c3,0);assert(!source_fault);
     memcpy(baseline,m,65536);bl_c64_actor_registers(before_regs);
     memcpy(m,seed,65536);foley_begin();
-    assert(!finisher_observer);observed_finisher=0;bl_c64_set_finisher_observer(observe_finisher);
+    assert(finisher_observer==foley_finisher);foley_random=(UWORD)(choose?6:2);
     bl_c64_actor_test_call(0x29c3,0);assert(!source_fault);
     bl_c64_actor_registers(after_regs);
     assert(!memcmp(m,baseline,65536) && !memcmp(before_regs,after_regs,13));
-    assert(observed_finisher==expected); /* Source event remains independent of audio selection. */
+    assert(foley_finisher_pending==(expected && choose));
+    assert(foley_random==(expected?(choose?3:1):(choose?6:2)));
+    foley_actions(&world,1);
+    if(expected && choose){
+        UWORD channel=3;
+        for(i=0;i<3;i++)if(foley_voice[i].pending==FOLEY_FIRST_CUE+FX_BRUCE_SHOUT)channel=i;
+        assert(channel<3 && !foley_finisher_pending);
+        tick(&restart);line+=1000;tick(&restart);
+        assert(hw->aud[channel].ac_len==4000 && hw->aud[channel].ac_per==443);
+        assert(foley_played_mask&(3UL<<(2*FX_BRUCE_SHOUT)));
+        foley_actions(&world,1);
+    }
+    for(i=0;i<3;i++)assert(foley_voice[i].pending!=FOLEY_FIRST_CUE+FX_BRUCE_SHOUT);
     foley_end();assert(!finisher_observer);
 }
 int main(void){
@@ -80,7 +91,7 @@ int main(void){
     for(cue=0;cue<8;cue++)for(v=0;v<2;v++){
         UWORD id=2*cue+v;ch=(cue+v)%3;
         UWORD *page=chip_words+2+ch*512;
-        foley_random=2; /* Next LFSR value 1: ordinary Bruce punch. */
+        foley_random=6; /* Even a winning seed cannot turn an ordinary swing into a cry. */
         request(ch,effects[cue],actors[cue],sites[cue]);
         assert(foley_voice[ch].pending==FOLEY_FIRST_CUE+cue);
         mask=tick(&restart);
@@ -99,7 +110,7 @@ int main(void){
         assert(!mask && restart==(1u<<ch) && source_dma.offset[ch]==65535);
         assert(hw->aud[ch].ac_ptr==page && hw->aud[ch].ac_len==512);
     }
-    assert(foley_played_mask==65535 && chip_words[2+3*512]==0x5aa5);
+    assert(foley_random==6 && foley_played_mask==65535 && chip_words[2+3*512]==0x5aa5);
     foley_random=2;
     request(0,0x85,0,0x227c);request(1,0x84,1,0x205a);request(2,0x85,2,0x22d2);
     assert(tick(&restart)==7);line+=1000;assert(tick(&restart)==7);
@@ -127,29 +138,40 @@ int main(void){
         assert(foley_voice[0].pending==FOLEY_FIRST_CUE+FX_BRUCE_KICK && !foley_voice[1].pending);
         foley_end();
     }
-    for(i=1;i<3;i++){
+    for(ch=0;ch<2;ch++)for(i=1;i<3;i++){
         UBYTE latch=(UBYTE)(i==1?15:51);
-        for(v=0;v<5;v++)finisher_case(0,(UBYTE)i,(UBYTE)v,17,latch,(UBYTE)(v<3));
-        finisher_case(0,(UBYTE)i,2,12,latch,0); /* A lethal kick is not a punch. */
-        finisher_case(0,(UBYTE)i,2,17,0,0); /* A missed punch cannot finish. */
+        for(v=0;v<5;v++)finisher_case(0,(UBYTE)i,(UBYTE)v,17,latch,(UBYTE)(v<3),(UBYTE)ch);
+        finisher_case(0,(UBYTE)i,2,12,latch,0,(UBYTE)ch); /* A lethal kick is not a punch. */
+        finisher_case(0,(UBYTE)i,2,17,0,0,(UBYTE)ch); /* A missed punch cannot finish. */
     }
-    finisher_case(1,2,2,17,60,0); /* Yamo kills Kage: no Bruce cry. */
-    finisher_case(1,0,2,17,15,0); /* Bruce is the victim. */
+    for(ch=0;ch<2;ch++)finisher_case(1,2,2,17,60,0,(UBYTE)ch); /* Yamo kills Kage: no Bruce cry. */
+    for(ch=0;ch<2;ch++)finisher_case(1,0,2,17,15,0,(UBYTE)ch); /* Bruce is the victim. */
     {
         unsigned long trials,cries=0;
         static UBYTE original[65536];
+        BlCombat world={0};
         foley_begin();foley_random=1;memcpy(original,m,65536);
-        for(trials=0;trials<65535;trials++)cries+=foley_shout_chance();
+        foley_finisher(0);foley_finisher(3);assert(foley_random==1 && !foley_finisher_pending);
+        for(trials=0;trials<65535;trials++){
+            foley_finisher(1);cries+=foley_finisher_pending;foley_finisher_pending=0;
+        }
         assert(cries==21845 && foley_random==1 && !memcmp(original,m,65536));
         for(v=0;v<2;v++){
             UWORD id=2*FX_BRUCE_SHOUT+v;
             foley_random=6; /* Next value 3: shout. */
-            foley_start_sample(0,FX_BRUCE_PUNCH,source_audio_images());
+            foley_finisher(1);foley_actions(&world,1);
+            /* Busy source queues choose voice 2; the direct playback below
+             * isolates its full-length DMA contract from channel selection. */
+            for(i=0;i<3;i++)foley_voice[i].pending=0;
+            foley_start_sample(0,FX_BRUCE_SHOUT,source_audio_images());
             assert(foley_voice[0].next==FOLEY_FIRST_CUE+FX_BRUCE_SHOUT);
             assert(hw->aud[0].ac_ptr==(volatile UWORD*)(foley_long_pcm+foley_samples[id].offset));
             assert(hw->aud[0].ac_len==4000 && hw->aud[0].ac_per==443);
             assert(foley_samples[id].offset+8000<=sizeof(foley_long_pcm));
+            foley_random=6;foley_finisher(2);foley_actions(&world,1);
+            for(i=0;i<3;i++)assert(foley_voice[i].pending!=FOLEY_FIRST_CUE+FX_BRUCE_SHOUT);
             foley_random=6;foley_start_sample(1,FX_BRUCE_PUNCH,source_audio_images()+1024);
+            assert(foley_random==6);
             assert(foley_voice[1].next==FOLEY_FIRST_CUE+FX_BRUCE_PUNCH); /* No overlapping cry. */
             request(0,0x8e,0,0);tick(&restart);
             assert(!restart && foley_voice[0].pending==FOLEY_RESTORE);
@@ -160,9 +182,12 @@ int main(void){
             assert(restart==1 && foley_voice[0].mode==FOLEY_SID);
             assert(foley_played_mask&(1UL<<id));
         }
+        foley_random=6;foley_finisher(1);foley_actions(&world,0);
+        assert(!foley_finisher_pending);
+        for(i=0;i<3;i++)assert(foley_voice[i].pending!=FOLEY_FIRST_CUE+FX_BRUCE_SHOUT);
         assert(chip_words[2+3*512]==0x5aa5);
         foley_end();
     }
-    puts("PASS 17 unique samples, queue routing, 16 source combat cases, exact RAM/register preservation, 65535 independent chance draws, full-length Chip clips, no overlap, DMA handoff and page bounds");
+    puts("PASS 17 unique samples, queue routing, 32 source combat cases, exact RAM/register preservation, 65535 knockout-only chance draws, full-length Chip clips, no overlap, DMA handoff and page bounds");
     return 0;
 }

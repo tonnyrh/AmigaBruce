@@ -5,7 +5,11 @@ Start et nytt spill; gamle USS-filer inneholder gammel kode.
 
 ## Maskinkontroll før endelig godkjenning
 
-- **RC2 Enhanced combat audio (14 November).** Listen on physical Amiga to the imported Bruce shout (one-in-three chance on punches while no shout is playing), both Kage weapon swishes and Kage Kick Variant 2. Check that long clips finish cleanly and that Classic keeps its source audio. Host probability/source-state checks and the normal-ADF WinUAE playback checks pass; physical listening acceptance remains open. [RC2 evidence](../reference/analysis/release-rc2-2026-11-14/report.json). The RC1 lethal-punch-only cry has been replaced.
+- **Enhanced vault caps and emblems (21 November).** Check the top fittings in rooms 15 and 17 on CRT, and distinguish the white yin-yang ornaments from the yellow extra-life yin-yang symbols in room 17. Source collision and pickup conditions are retained. [Source conditions and validation](VAULT_EMBLEMS.md).
+
+- **Room 12 spears and Yamo recovery (21 November).** The local build now separates the Enhanced spear blades from the blue masonry; Classic geometry and inks are unchanged. Native room checks pass. The post-hit Yamo suspension matches the frozen C64 recovery counters and is retained, including for human Yamo. Physical-Amiga visual acceptance remains open. [Source findings and checks](ROOM12_SPEARS_YAMO_RECOVERY.md).
+
+- **Enhanced knockout cry correction (19 November).** Listen on physical Amiga: the imported Bruce cry has a one-in-three chance only when his fist knocks out Kage or Yamo. Ordinary hits, missed punches, kicks, trap deaths and other attackers must not trigger it. Existing cries must finish without overlap. The sound-test Play button always plays its chosen clip. The published RC2 predates this correction. [Correction evidence](../reference/analysis/knockout-audio-2026-11-19/report.json).
 
 - **Enhanced death and Yamo impacts (12 November).** On physical Amiga, verify that bomb death holds Bruce's stiff pose in both facing directions and that Yamo's two new impact samples are audible and comfortable in combat. The four controlled WinUAE death cases and host audio checks pass. [Death evidence](../reference/analysis/enhanced-death-2026-11-12/report.json) · [Audio evidence](../reference/analysis/yamo-impact-2026-11-12/report.json).
 

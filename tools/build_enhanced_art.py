@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 from PIL import Image
 from build_fighter_dma import pack, unpack
-from enhanced_architecture import PAGODA_INDEX, PAGODA_TILES, TOWER_INDEX, VAULT_LAMP_INDEX, masonry, runtime_stamp_index, stamps
+from enhanced_architecture import PAGODA_INDEX, VAULT_DETAIL_INDEX, VAULT_DETAIL_COUNT, TOWER_INDEX, VAULT_LAMP_INDEX, masonry, runtime_stamp_index, stamps
 from coarse_bruce import bruce_pixels
 from enhanced_fighters import BRUCE_SOURCE_POSES, BRUCE_UNDIRECTED
 from enhanced_enemies import enemy_pixels, reference_pose, source_shape
@@ -177,7 +177,7 @@ def compile_art(edits=EDIT_DIR):
                 repainted.add(i//48+1)
             edited_stamps.extend(stamp_bytes(asset,stamp,pens))
         architecture=edited_stamps
-    assert len(lookup)==PAGODA_INDEX+2*(max(PAGODA_TILES)+1) and len(architecture)==48*max(lookup)
+    assert len(lookup)==VAULT_DETAIL_INDEX+VAULT_DETAIL_COUNT and len(architecture)==48*max(lookup)
     lookup=runtime_stamp_index(lookup,repainted)
     trap_codes=(0x64,0x65,0x66,0x67,0xe4,0xe5,0xe6,0xe7)
     source_traps=not any(lookup[512+code] for code in trap_codes)
@@ -216,7 +216,8 @@ def compile_art(edits=EDIT_DIR):
             f'#define ENHANCED_SKY_BYTES {len(sky)}\n#define ENHANCED_WALL_BYTES {len(wall)}\n#define ENHANCED_TILE_BYTES {len(scenery)}\n'+
             array('enhanced_wall_map',wall_map)+array('enhanced_wall_tiles',b''.join(wall_tiles))+
             array('enhanced_arch_index',bytes(lookup[:PAGODA_INDEX]))+
-            table('UWORD','enhanced_pagoda_index',[lookup[PAGODA_INDEX:]],flat=True)+
+            table('UWORD','enhanced_pagoda_index',[lookup[PAGODA_INDEX:VAULT_DETAIL_INDEX]],flat=True)+
+            table('UWORD','enhanced_vault_detail_index',[lookup[VAULT_DETAIL_INDEX:]],flat=True)+
             table('UWORD','enhanced_pair_offsets',[pair_offsets],flat=True)+
             array('enhanced_arch_pairs',b''.join(pairs))+
             array('enhanced_packed',encoded))

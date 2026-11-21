@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-19",
+  "change": "Enhanced Bruce cry: one-in-three selection only on a confirmed Bruce fist knockout of Kage or Yamo.",
+  "program_sha256": "7ae4b1ca52c4917818c06e03552c4d706655403755bb6e9beef9295bffd629f4",
+  "tested_adf_sha256": "4b2385c861a886e5f8944b0bee6042e4be1d27a21f2c1eb03dbd2d4c91546ecc",
+  "normal_elf_sha256": "eea6e61b255d3840b3c43c6c9136c08cadb3f7092196b54621ea8fdd5e5c7058",
+  "source": {
+    "sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+    "status": "Frozen Remember/T64 candidate; not certified untouched 1984 original.",
+    "accepted_punch": "$2AC3 with Y=0 and X=1 or 2",
+    "damage_bytes": "$2BC4-$2BC9: B5 D1 38 E9 03 95 D1",
+    "lethal_branch": "$2BCB: 30 57 -> $2C24; health 0-2 underflows; health 3 becomes 0 and survives this hit.",
+    "presentation": "The existing observer excludes already-negative health. Probability is a user-requested Enhanced sound rule, not a C64 gameplay rule."
+  },
+  "checks": {
+    "host_result": "PASS 17 unique samples, queue routing, 32 source combat cases, exact RAM/register preservation, 65535 knockout-only chance draws, full-length Chip clips, no overlap, DMA handoff and page bounds",
+    "source_combat_cases": 32,
+    "source_ram_bytes_compared_per_case": 65536,
+    "source_registers_compared_per_case": 13,
+    "knockout_chance_draws": 65535,
+    "selected_draws": 21845,
+    "native": "native.json",
+    "target": "WinUAE 6.0.3, PAL A500 OCS, 68000 cycle exact, Kickstart 1.3, 512 KiB Chip + 512 KiB slow"
+  },
+  "source_gameplay_code_changed": false,
+  "classic_mapping_changed": false,
+  "sample_data_changed": false,
+  "test_fixture_notes": [
+    "Native cases wait for normal source enemy spawning before changing positions and health. Activating an unspawned enemy alone leaves its VIC-to-actor mapping unset and is not a valid combat fixture.",
+    "The native test observes the durable sound RNG transition; the transient negative health byte can be replaced by the death handler before IPC reads it.",
+    "Ordinary Fire drives source contact and damage. No hit, kill or cry event is injected in those cases. Controlled sound-choice seeds exercise both outcomes.",
+    "The separate final direct playback request checks all 8000 PCM bytes and Paula completion."
+  ],
+  "limits": [
+    "Controlled WinUAE checks are not a natural full-game playthrough or a physical Amiga listening test.",
+    "RC2 downloads predate this local correction and are unchanged.",
+    "Room 12 Enhanced ceiling spear visibility remains an open separate report."
+  ]
+}

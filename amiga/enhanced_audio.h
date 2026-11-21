@@ -9,7 +9,7 @@ typedef struct {
     ULONG stopped;
 } FoleyVoice;
 static FoleyVoice foley_voice[3];
-static UBYTE foley_active,foley_variant[FX_COUNT];
+static UBYTE foley_active,foley_variant[FX_COUNT],foley_finisher_pending;
 static UWORD foley_random;
 static UBYTE foley_last_action[3],foley_last_counter[3],foley_announced;
 static ULONG foley_played_mask;
@@ -19,6 +19,12 @@ static UBYTE foley_shout_chance(void){
      * Presentation-only randomness, independent of C64 RAM and RNG. */
     foley_random=(UWORD)((foley_random>>1)^((foley_random&1)?0xb400:0));
     return foley_random%3==0;
+}
+
+static void foley_finisher(long victim){
+    /* Source observer: Bruce's accepted punch at $2AC3 and the lethal
+     * health subtraction at $2BCB. Draw once per knockout, never per swing. */
+    if((victim==1 || victim==2) && foley_shout_chance())foley_finisher_pending=1;
 }
 
 static UBYTE foley_long_playing(const FoleyVoice *voice){
@@ -78,7 +84,26 @@ static void foley_actions(const BlCombat *world,UBYTE same_room){
         }
         foley_last_action[actor]=action;foley_last_counter[actor]=timer;
     }
-    foley_announced=0;
+    if(foley_finisher_pending && same_room){
+        int c;
+        /* Do not layer a second knockout cry over one already playing. */
+        for(c=0;c<3;c++)if(foley_voice[c].pending==FOLEY_FIRST_CUE+FX_BRUCE_SHOUT ||
+            (foley_voice[c].next==FOLEY_FIRST_CUE+FX_BRUCE_SHOUT &&
+             foley_long_playing(&foley_voice[c])))break;
+        if(c==3){
+            /* Prefer a free voice, otherwise replace an ordinary effect.
+             * Source priority queues and gameplay state are not modified. */
+            for(c=2;c>=0;c--){
+                FoleyVoice *v=&foley_voice[c];
+                if(!v->pending && (v->mode==FOLEY_SID || (v->mode==FOLEY_PCM && v->armed==2)) &&
+                   !bl_c64_read(queue[c]))break;
+            }
+            if(c<0)for(c=2;c>=0;c--)if(!foley_long_playing(&foley_voice[c]))break;
+            if(c<0)c=2;
+            foley_voice[c].pending=FOLEY_FIRST_CUE+FX_BRUCE_SHOUT;
+        }
+    }
+    foley_finisher_pending=0;foley_announced=0;
 }
 
 static void foley_begin(void){
@@ -87,12 +112,12 @@ static void foley_begin(void){
         foley_voice[c]=(FoleyVoice){.period=400};
         foley_last_action[c]=foley_last_counter[c]=0;
     }
-    foley_announced=0;
+    foley_finisher_pending=0;foley_announced=0;
     foley_random=(UWORD)line_clock();if(!foley_random)foley_random=1;
     for(c=0;c<FX_COUNT;c++)foley_variant[c]=0;
     foley_played_mask=0;foley_active=1;
     bl_c64_set_sound_observer(foley_request);
-    bl_c64_set_finisher_observer(0); /* Cries now belong to ordinary punches. */
+    bl_c64_set_finisher_observer(foley_finisher);
 }
 
 static void foley_stop_voice(UWORD c){
@@ -109,7 +134,7 @@ static void foley_end(void){
     UWORD c;
     if(!foley_active)return;
     bl_c64_set_sound_observer(0);
-    bl_c64_set_finisher_observer(0);
+    bl_c64_set_finisher_observer(0);foley_finisher_pending=0;
     for(c=0;c<3;c++)if(foley_voice[c].mode!=FOLEY_SID){
         FoleyVoice *v=&foley_voice[c];
         if(v->mode!=FOLEY_STOPPED)foley_stop_voice(c);
@@ -121,14 +146,8 @@ static void foley_end(void){
 
 static void foley_start_sample(UWORD c,UWORD cue,UBYTE *page){
     FoleyVoice *v=&foley_voice[c];
-    UWORD id,n,i;
+    UWORD id,n;
     const UBYTE *play=page;
-    if(cue==FX_BRUCE_PUNCH && foley_shout_chance()){
-        /* Do not layer Bruce's one-second voice over itself. */
-        for(i=0;i<3;i++)if(foley_voice[i].next==FOLEY_FIRST_CUE+FX_BRUCE_SHOUT &&
-                           foley_long_playing(&foley_voice[i]))break;
-        if(i==3)cue=FX_BRUCE_SHOUT;
-    }
     v->next=(UBYTE)(FOLEY_FIRST_CUE+cue);
     id=(UWORD)(cue*2+foley_variant[cue]);n=foley_samples[id].words;
     foley_variant[cue]^=1;

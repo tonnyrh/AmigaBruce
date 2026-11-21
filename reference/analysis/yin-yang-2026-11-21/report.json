@@ -1,0 +1,158 @@
+{
+  "method": "Check caps and live-colour emblems in an owned normal-ADF A500 boot.\n\nRooms are entered with the built-in room selector, not a natural playthrough.\nClassic pixels are checked against live C64 data; Enhanced against the masters.\n",
+  "checks": [
+    {
+      "room": 15,
+      "enhanced": false,
+      "cap_halves": 8,
+      "white_halves": 8,
+      "gold_halves": 0,
+      "checked_pixels": 1024,
+      "pens": {
+        "caps": [
+          1,
+          6
+        ],
+        "white": [
+          1,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "room": 15,
+      "enhanced": true,
+      "cap_halves": 8,
+      "white_halves": 8,
+      "gold_halves": 0,
+      "checked_pixels": 30720,
+      "pens": {
+        "caps": [
+          3,
+          6,
+          9,
+          10,
+          11,
+          12
+        ],
+        "white": [
+          0,
+          1,
+          3,
+          6,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "room": 17,
+      "enhanced": true,
+      "cap_halves": 8,
+      "white_halves": 8,
+      "gold_halves": 8,
+      "checked_pixels": 33792,
+      "pens": {
+        "caps": [
+          3,
+          6,
+          9,
+          10,
+          11,
+          12
+        ],
+        "white": [
+          0,
+          1,
+          3,
+          6,
+          11,
+          12
+        ],
+        "gold": [
+          0,
+          6,
+          7,
+          10,
+          11,
+          12,
+          15
+        ]
+      }
+    },
+    {
+      "room": 17,
+      "enhanced": false,
+      "cap_halves": 8,
+      "white_halves": 8,
+      "gold_halves": 8,
+      "checked_pixels": 1536,
+      "pens": {
+        "caps": [
+          1,
+          6
+        ],
+        "white": [
+          1,
+          11,
+          12
+        ],
+        "gold": [
+          7,
+          11,
+          12
+        ]
+      }
+    }
+  ],
+  "source_cells_attributes_and_glyphs_unchanged": true,
+  "tested_adf_sha256": "ae7c87a08fe5710a9df4279881154ce59411a8a4536eba01b1bec5600fa85051",
+  "source_sha256": "092c50dbc997e301c75c7860a3c84026a93a7aaf543968ae36f1ffa19d0800b8",
+  "primary_edition_verified": false,
+  "editor_integration_tests": 17,
+  "artwork": "Native-resolution black/white and black/yellow yin-yang; replaces the rejected pierced coins.",
+  "environment": "WinUAE 6.0.3, cycle-exact PAL A500 OCS, Kickstart 1.3, 512 KiB Chip + 512 KiB slow",
+  "limits": [
+    "Debug room entry, not a natural playthrough.",
+    "No physical-Amiga visual acceptance or frame-time benchmark.",
+    "Published RC2 is unchanged."
+  ],
+  "artifacts": [
+    {
+      "path": "amiga/enhanced.h",
+      "bytes": 8388,
+      "sha256": "67b2df0c992062becd49df8a29492f33b8e41dac53b244684092cb20b50c2b1a"
+    },
+    {
+      "path": "amiga/enhanced_art.h",
+      "bytes": 75683,
+      "sha256": "1929a83ffe3b97bedcdb96c4c3e01afb80b2f4996f913e29aa53a5cbae381946"
+    },
+    {
+      "path": "tools/enhanced_architecture.py",
+      "bytes": 17278,
+      "sha256": "cbefc015436783347dfc8d47ab8fbb6c4daf9907856fd5fcebcd72f03854945b"
+    },
+    {
+      "path": "tools/bruce_editor_data.py",
+      "bytes": 11652,
+      "sha256": "b823f1d51126d60a3a18e534858bf1aad33deb0f1bc51122f32deabce4816161"
+    },
+    {
+      "path": "tools/check_vault_emblems.py",
+      "bytes": 6750,
+      "sha256": "754d3310496924f5f56ee6123d202a8e8f0ff0566a59d67c3df9d69b09a4b16c"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.exe",
+      "bytes": 390928,
+      "sha256": "4895545082d53b3373307011500a3eada14303cdc5c9d951574b112849ed9125"
+    },
+    {
+      "path": "amiga/out/bruce_amiga.adf",
+      "bytes": 901120,
+      "sha256": "ae7c87a08fe5710a9df4279881154ce59411a8a4536eba01b1bec5600fa85051"
+    }
+  ]
+}

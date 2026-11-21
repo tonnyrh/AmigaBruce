@@ -11,7 +11,7 @@ from PIL import Image
 
 from build_enhanced_art import PALETTE, display_pixels, EDIT_DIR
 from enhanced_architecture import COURTYARD, GALLERY, VAULT, TOWER_INDEX, TOWER_TILES, foreground, masonry
-from enhanced_architecture import PAGODA_INDEX, PAGODA_TILES, VAULT_LAMP_INDEX, VAULT_LAMPS
+from enhanced_architecture import PAGODA_INDEX, PAGODA_TILES, VAULT_LAMP_INDEX, VAULT_LAMPS, VAULT_DETAIL_INDEX
 from capture_paula_stream import elf_symbols, elf_hunk_index
 from title_reference import picker_reference, reference
 from winuae_ipc import command, tap_fire
@@ -106,7 +106,7 @@ def check_structure(ram,bitmap,enhanced=False):
     structures=COURTYARD if room<3 else GALLERY if room<10 else VAULT
     from bruce_editor_data import EDIT_DIR
     if enhanced and 10<=room<18:
-        return check_edited_structure(ram,bitmap,bank,colors,raster,structures+VAULT_LAMPS,charset,EDIT_DIR)
+        return check_edited_structure(ram,bitmap,bank,colors,raster,structures+VAULT_LAMPS+(0x40,0x2d,0x2e),charset,EDIT_DIR)
     if enhanced and (room==3 or any(EDIT_DIR.glob('stamp-*.png')) or any(EDIT_DIR.glob('wall-*.png'))):
         return check_edited_structure(ram,bitmap,bank,colors,raster,structures,charset,EDIT_DIR)
     def pixel(at,x):
@@ -186,14 +186,21 @@ def check_edited_structure(ram,bitmap,bank,colors,raster,structures,charset,edit
             tower=fixed_tower(room,col,top,tile)
             vault_lamp=10<=room<18 and tile in VAULT_LAMPS
             pagoda=room==15 and top<120 and 13<=col<=27 and tile in PAGODA_TILES
-            if top<88 and not ((group==1 and tile==0x40) or room5_lamp or panorama or vault_lamp or pagoda):continue
-            if tile not in structures and tile!=0 and not tower and not panorama and not pagoda:continue
+            cap=room in (14,16) and top<40 and tile in (0x43,0x45)
+            emblem=group==2 and tile in (0x2d,0x2e)
+            if top<88 and not ((group>=1 and tile==0x40) or room5_lamp or panorama or vault_lamp or pagoda or cap or emblem):continue
+            if tile not in structures and tile!=0 and not tower and not panorama and not pagoda and not cap:continue
             lamp=room<10 and (code in (0x93,0x94,0xb1) or (group==1 and code==0xe7))
             phase_offset=8 if code==0xe7 else 4 if code==0x94 else 0
             offset=TOWER_INDEX if tower else group*256
             ids=(lookup[768+phase_offset:][:4] if lamp else [lookup[offset+code]])
             if pagoda:
                 ids=[lookup[PAGODA_INDEX+2*tile+(code>>7)]]
+            if cap:
+                ids=[lookup[VAULT_DETAIL_INDEX+(2 if tile==0x45 else 0)+(code>>7)]]
+            if emblem:
+                gold=(ram[0xd800+cell]&7)==7
+                ids=[lookup[VAULT_DETAIL_INDEX+4+4*gold+2*(tile-0x2d)+(code>>7)]]
             if vault_lamp and code in (0x93,0x94):
                 lamp=True
                 start=VAULT_LAMP_INDEX+phase_offset
@@ -218,6 +225,7 @@ def check_edited_structure(ram,bitmap,bank,colors,raster,structures,charset,edit
                         elif tile:
                             pair=(bits>>(6-2*(x//2)))&3
                             if pair:pen=ram[0xd800+cell]&7 if pair==3 else ram[colors+band*3+pair]&15
+                            if group==2 and tile==0x40 and pair==2:pen=1
                         if pen==ALPHA:
                             pen=masters['sky'][(y-24)*320+col*8+x] if panorama else wall[y%32*64+(col*8+x)%64]
                         expected.append(pen)
